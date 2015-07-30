@@ -1,0 +1,21 @@
+#login {
+border: 3px solid;
+width: 360px;
+margin: auto;
+background-color: white;
+}
+
+body {
+    background: #F0F0F0 none;
+    font-family: "Times New Roman", Times, serif;;
+    font-size: 13px;
+    line-height: 1.4em;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    background: black;
+    color: white;
+    padding: 10px;
+}

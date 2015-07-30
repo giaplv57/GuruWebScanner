@@ -1,0 +1,14 @@
+.daterangepicker{
+	&:before, &:after{
+		border:0 !important;
+	}
+
+	th, td, td:hover, td.active, .calendar{
+		@include border-radius(0);
+	}
+
+	.active{
+		background: $blue;
+		background-image:none !important;
+	}
+}

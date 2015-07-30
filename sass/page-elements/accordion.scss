@@ -1,0 +1,27 @@
+.accordion-widget{
+	.accordion-group{
+		border:2px solid #eee;
+
+		&:hover{
+			border-color: darken(#f6f6f6, 10%) !important;
+		}
+
+		.accordion-heading{
+			.accordion-toggle{
+				padding: 13px 0 13px 13px;
+				font-size:20px;
+				color:#333;
+				position: relative;
+
+				&:hover{
+					text-decoration: none;
+					background: darken(#f6f6f6, 10%) !important;
+				}
+			}
+		}
+
+		.accordion-inner{
+			border:0;
+		}
+	}
+}
