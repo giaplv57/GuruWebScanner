@@ -137,7 +137,7 @@
             }
             if (file_exists($uncompressFolder) && dirSize($uncompressFolder) > 0){ //Ready for scan
             	$resultFile = "./userFiles/".$fileCheckSum.".result";
-				$command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php /home/ubuntu/scanner/Main.php \$f; done > ".$resultFile;
+				$command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f; done > ".$resultFile;
 				system($command);
 				$resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); //nl2br function to end line as proper
 

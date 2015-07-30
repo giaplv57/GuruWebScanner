@@ -1,0 +1,10 @@
+{
+    "model": "wordpress.php",
+    "pluginFolder": "wp-content/plugins/",
+    "constants": {
+        "WP_CONTENT_DIR": "!Dwp-content/"
+    },
+    "functionCallWrappers": {
+        "add_action": [ 1 ]
+    }
+}

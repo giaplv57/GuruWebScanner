@@ -1,0 +1,9 @@
+{
+    "model": "typo3.php",
+    "pluginFolder": "plugins/",
+    "constants": {
+    },
+    "functionCallWrappers": {
+    },
+    "callAllClassMembers": "extends tslib_pibase"
+}
