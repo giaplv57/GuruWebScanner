@@ -1,1 +1,1 @@
-DirectoryIndex default.php
+deny from all
