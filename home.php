@@ -42,6 +42,19 @@
 		<!-- Apple devices Homescreen icon -->
 		<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
 
+		<script type="text/javascript">
+
+		    function PreviewImage() {
+		        var oFReader = new FileReader();
+		        oFReader.readAsDataURL(document.getElementById("sourcecode").files[0]);
+
+		        oFReader.onload = function (oFREvent) {
+		            document.getElementById("uploadPreview").value = oFREvent.target.result;
+		        };
+		    };
+
+		</script>
+
 	</head>
 	<body class='error'>
 		<div class="container-fluid" id="content">
@@ -57,8 +70,13 @@
 				<hr/>
 				<form action="result.php" class='form-horizontal' method="post" enctype="multipart/form-data">
 					<div class="input-append">
-						<input type="text" name="search" placeholder="Select a compressed file...">						
-						<span class="btn btn-file"><span class="fileupload-new"><i class="icon-folder-close"></i></span><input type="file" name="userFile" id="userFile"/></span>
+						<input type="text" name="search" id="uploadPreview" placeholder="Select a compressed file...">						
+						<span class="btn btn-file">
+							<span class="fileupload-new">
+								<i class="icon-folder-close"></i>
+							</span>
+							<input type="file" name="userFile" id="sourcecode" onchange="PreviewImage();" />
+						</span>
 					</div>
 					<br><br>
 					<div class="buttons" align="center">
