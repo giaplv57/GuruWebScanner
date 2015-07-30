@@ -24,72 +24,30 @@
     	return $size;
 	} 
 	//////////////////////////////////
-	$report 	  = 0;
-    if (isset($_POST["submit"])) {
-    	$scanTime 	  = 0;
-        $target_dir   = "./userFiles/";
-        $filename 	  = $_FILES["userFile"]["name"];
-        $compressType = pathinfo($filename, PATHINFO_EXTENSION);
-		$fileCheckSum = sha1_file($_FILES["userFile"]["tmp_name"]);
-		$resultId  	  = "";
-		$newFilename  = sha1($fileCheckSum.round(microtime(true) * 1000));
-        $target_file  = $target_dir . $newFilename . "." . $compressType;
-        $uploadOk     = 1;
 
-        // Check if file already exists
-        if (file_exists($target_file)) {
-            echo '<div class="alert alert-warning col-md-4" role="alert">Error! File already exists.</div>';
-            $uploadOk = 0;
-        }
-        // Check file size
-        if ($_FILES["userFile"]["size"] > 104857600) { //100MB limited
-        	echo '<div class="alert alert-warning col-md-4" role="alert">Error! Your file is too large.</div>';
-            $uploadOk = 0;
-        }
-        // Allow certain file formats
-        if ($compressType != "tar" && $compressType != "zip" && $compressType != "rar") {
-        	echo '<div class="alert alert-warning col-md-4" role="alert">Error! Only tar, zip or rar file is allowed.</div>';
-            $uploadOk = 0;
-        }
-        // Check if $uploadOk is set to 0 by an error
+	$report = 0;
 
-        if ($uploadOk == 0 || !move_uploaded_file($_FILES["userFile"]["tmp_name"], $target_file)){
-        	echo '<div class="alert alert-danger" role="alert">Sorry, there was errors while uploading your file.</div>';
-        }else{
-        	mkdir("userFiles/" . $newFilename, 0777); //can't create contain folder and extract tar file in 1 command
-        	$uncompressFolder = "./userFiles/".$newFilename."/";
-            if($compressType == "tar"){ 	
-				exec("tar -xf ".$target_file." -C ".$uncompressFolder);
-            }else if($compressType == "zip"){
-            	exec("unzip ".$target_file." -d ".$uncompressFolder);
-            }else if($compressType == "rar"){
-            	exec("unrar -x ".$target_file." ".$uncompressFolder);
-            }else{
-            	die();
-            }
-            if (file_exists($uncompressFolder) && dirSize($uncompressFolder) > 0){ //Ready for scan
-            	$startTime = round(microtime(true) * 1000);
-            	$resultFile = "./userFiles/".$newFilename.".result";
-				$command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f; done > ".$resultFile;
-				system($command);
-				$stopTime = round(microtime(true) * 1000);
-				$scanTime = $stopTime - $startTime;
+    if (isset($_GET["id"])) {
+    	$con = ConnectDB() or die("can't connect to DB");
+    	$id = mysqli_real_escape_string($con, preg_replace('/\s+/', '', $_GET["id"])); //preg_replace to remove all space
+    	$query = mysqli_query($con,"SELECT * FROM reports WHERE id='$id'") or die(mysqli_error($con));
+    	$row = mysqli_fetch_array($query);
+        if(!empty($row['newFilename'])){
+        	$filename = $row['filename'];
+        	$fileCheckSum = $row['sha1hash'];
+        	$scanTime = $row['scantime'];
+        	$newFilename = $row['newFilename'];
 
-				//nl2br function to end line as proper
-				$resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); 
+        	$resultFile = "./userFiles/".$newFilename.".result";
 
-				//The PREG_SET_ORDER flag to ensure result appropriately distribute to array
-				preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);
-				$report = 1;
-				$con = ConnectDB() or die("can't connect to DB");
-				$resultId = sha1($newFilename);
-				$filename = mysqli_escape_string($con, $filename);
-				mysqli_query($con,"INSERT INTO reports (id, filename, sha1hash, scantime, newFilename) VALUES ('$resultId', '$filename', '$fileCheckSum', '$scanTime', '$newFilename')") or die(mysqli_error($con));
-			}else{
-				echo "There are problems with your compress file or it's empty.</br>";
-			}
-        }
-    }
+			//nl2br function to end line as proper
+			$resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); 
+
+			//The PREG_SET_ORDER flag to ensure result appropriately distribute to array
+			preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);
+			$report = 1;
+		}
+	}
 	?>
 	<?php if($report == 1){ ?>
 	<div class="container-fluid" id="content">		
@@ -159,10 +117,9 @@
 											<td>[+] Link to share:</td>											
 											<td>
 												<font face="Consolas"><b>
-													<a href="./share.php?id=<?php echo $resultId ?> " >http://guru.ws/share.php?id=<?php echo $resultId ?>
+													<a href="./share.php?id=<?php echo $id ?> " >http://guru.ws/share.php?id=<?php echo $id ?>
 												</b></font>
 											</td>											
-
 										</tr>
 									</tbody>
 								</table>								

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 30, 2015 at 01:40 AM
+-- Generation Time: Jul 30, 2015 at 03:19 AM
 -- Server version: 5.5.43-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.11
 
@@ -23,12 +23,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `resultLinks`
+-- Table structure for table `reports`
 --
 
-CREATE TABLE IF NOT EXISTS `resultLinks` (
+CREATE TABLE IF NOT EXISTS `reports` (
   `id` varchar(40) NOT NULL,
-  `checksum` varchar(40) NOT NULL,
+  `filename` varchar(128) NOT NULL,
+  `sha1hash` varchar(40) NOT NULL,
+  `scantime` int(11) NOT NULL,
+  `newFilename` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
