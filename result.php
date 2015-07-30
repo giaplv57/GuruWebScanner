@@ -1,75 +1,6 @@
 <!doctype html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<!-- Apple devices fullscreen -->
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<!-- Apple devices fullscreen -->
-	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	
-	<title>GuruWS :: Free online greybox web scanner</title>
-
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- Bootstrap responsive -->
-	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-	<!-- jQuery UI -->
-	<link rel="stylesheet" href="css/plugins/jquery-ui/smoothness/jquery-ui.css">
-	<link rel="stylesheet" href="css/plugins/jquery-ui/smoothness/jquery.ui.theme.css">
-	<!-- Theme CSS -->
-	<link rel="stylesheet" href="css/style.css">
-	<!-- Color CSS -->
-	<link rel="stylesheet" href="css/themes.css">
-
-
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	
-	<!-- Nice Scroll -->
-	<script src="js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
-	<!-- imagesLoaded -->
-	<script src="js/plugins/imagesLoaded/jquery.imagesloaded.min.js"></script>
-	<!-- jQuery UI -->
-	<script src="js/plugins/jquery-ui/jquery.ui.core.min.js"></script>
-	<script src="js/plugins/jquery-ui/jquery.ui.widget.min.js"></script>
-	<script src="js/plugins/jquery-ui/jquery.ui.mouse.min.js"></script>
-	<script src="js/plugins/jquery-ui/jquery.ui.resizable.min.js"></script>
-	<script src="js/plugins/jquery-ui/jquery.ui.sortable.min.js"></script>
-	<!-- slimScroll -->
-	<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Bootbox -->
-	<script src="js/plugins/bootbox/jquery.bootbox.js"></script>
-	<!-- Bootbox -->
-	<script src="js/plugins/form/jquery.form.min.js"></script>
-	<!-- Validation -->
-	<script src="js/plugins/validation/jquery.validate.min.js"></script>
-	<script src="js/plugins/validation/additional-methods.min.js"></script>
-
-	<!-- Theme framework -->
-	<script src="js/eakroko.min.js"></script>
-	<!-- Theme scripts -->
-	<script src="js/application.min.js"></script>
-	<!-- Just for demonstration -->
-	<script src="js/demonstration.min.js"></script>
-
-	<!--[if lte IE 9]>
-		<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('input, textarea').placeholder();
-			});
-		</script>
-	<![endif]-->
-	
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="img/favicon.ico" />
-	<!-- Apple devices Homescreen icon -->
-	<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
-
-</head>
+<?php include("heading.php"); ?>
 <body>
 	<div id="navigation">
 		<div class="container-fluid">
@@ -123,7 +54,6 @@
         if ($uploadOk == 0 || !move_uploaded_file($_FILES["userFile"]["tmp_name"], $target_file)){
         	echo '<div class="alert alert-danger" role="alert">Sorry, there was errors while uploading your file.</div>';
         }else{
-        	$startTime = round(microtime(true) * 1000);
         	mkdir("userFiles/" . $fileCheckSum, 0777); //can't create contain folder and extract tar file in 1 command
         	$uncompressFolder = "./userFiles/".$fileCheckSum."/";
             if($compressType == "tar"){ 	
@@ -136,16 +66,22 @@
             	die();
             }
             if (file_exists($uncompressFolder) && dirSize($uncompressFolder) > 0){ //Ready for scan
+            	$startTime = round(microtime(true) * 1000);
             	$resultFile = "./userFiles/".$fileCheckSum.".result";
 				$command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f; done > ".$resultFile;
 				system($command);
-				$resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); //nl2br function to end line as proper
+				$stopTime = round(microtime(true) * 1000);
+				$scanTime = $stopTime - $startTime;
+
+				//nl2br function to end line as proper
+				$resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); 
 
 				//The PREG_SET_ORDER flag to ensure result appropriately distribute to array
 				preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);
 				$report = 1;
-				$stopTime = round(microtime(true) * 1000);
-				$scanTime = $stopTime - $startTime;
+				$con = ConnectDB() or die("cannot");
+				$resultId = sha1($fileCheckSum);
+				mysqli_query($con,"INSERT INTO resultLinks (id, checksum) VALUES ('$resultId', '$fileCheckSum')") or die(mysqli_error($con));
 			}else{
 				echo "There are problems with your compress file or it's empty.</br>";
 			}
