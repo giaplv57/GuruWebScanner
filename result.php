@@ -99,7 +99,7 @@
     	$scanTime 	  = 0;
         $target_dir   = "./userFiles/";
         $compressType = pathinfo($_FILES["userFile"]["name"], PATHINFO_EXTENSION);
-		$fileCheckSum = sha1_file($_FILES["userFile"]["tmp_name"]);
+		$fileCheckSum = sha1(sha1_file($_FILES["userFile"]["tmp_name"]).round(microtime(true) * 1000));
         $target_file  = $target_dir . $fileCheckSum . "." . $compressType;
         $uploadOk     = 1;
 
