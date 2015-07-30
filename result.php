@@ -166,7 +166,7 @@
 									</center>
 								</h3>								
 							</div>
-							<font size="3px" face="Verdana">
+							<font size="2px" face="Verdana">
 							<div class="box-content nopadding">
 								<table class="table table-hover table-nomargin">
 									<thead>
