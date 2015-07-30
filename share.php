@@ -4,7 +4,7 @@
 <body>
 	<div id="navigation">
 		<div class="container-fluid">
-			<img src="img/logowhite.png" alt="" class='retina-ready' width="200px">						
+			<a href="./"><img src="img/logowhite.png" alt="" class='retina-ready' width="200px"></a>				
 		</div>
 	</div>
 	<hr/>
