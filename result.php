@@ -41,19 +41,7 @@
 		<link rel="shortcut icon" href="img/favicon.ico" />
 		<!-- Apple devices Homescreen icon -->
 		<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
-
-		<script type="text/javascript">
-
-		    function PreviewImage() {
-		        var oFReader = new FileReader();
-		        oFReader.readAsDataURL(document.getElementById("sourcecode").files[0]);
-
-		        oFReader.onload = function (oFREvent) {
-		            document.getElementById("uploadPreview").value = oFREvent.target.result;
-		        };
-		    };
-
-		</script>
+		
 	</head>
 
 	<body>
