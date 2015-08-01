@@ -49,7 +49,7 @@
 		        oFReader.readAsDataURL(document.getElementById("sourcecode").files[0]);
 
 		        oFReader.onload = function (oFREvent) {
-		            document.getElementById("uploadPreview").value = oFREvent.target.result;
+		            document.getElementById("uploadPreview").value = "Press scan button..." //oFREvent.target.result;
 		        };
 		    };
 

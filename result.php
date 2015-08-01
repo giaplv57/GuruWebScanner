@@ -203,7 +203,7 @@
 												<td>[+] Link to share:</td>											
 												<td>
 													<font face="Consolas"><b>
-														<a href="./share.php?id=<?php echo $resultId ?> " >http://guru.ws/share.php?id=<?php echo $resultId ?>
+														<a href="./share.php?id=<?php echo $resultId ?> " >http://guru.wsaaaaaaaaaaaaaa aaaaaa aaaaaaa aaaaaaa aaaaaaaaaaaaaaaaaa/share.php?id=<?php echo $resultId ?>
 													</b></font>
 												</td>											
 
@@ -211,12 +211,12 @@
 										</tbody>
 									</table>								
 									<hr/>
-									<!-- <div align="center">
+									<div align="center">
 										<form action="" class='form-horizontal'>									
 										<button name="rescan" type='submit' class='btn btn btn-success'><i class="icon-search"></i> RESCAN</button>								
 										<button name="print" type='submit' class='btn btn btn-primary'>PRINT <i class="icon-print"></i></button>				
-										</form>
-									</div> -->
+									</form>
+								</div>
 								</div>							
 							</div>
 							</font>
