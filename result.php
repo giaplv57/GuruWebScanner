@@ -127,7 +127,7 @@
 					$report = 1;
 					$con = ConnectDB() or die("can't connect to DB");
 					$resultId = sha1($newFilename);
-					$filename = mysqli_escape_string($con, $filename);
+					$filename = mysqli_escape_string($con, $filename);					
 					mysqli_query($con,"INSERT INTO reports (id, filename, sha1hash, scantime, newFilename) VALUES ('$resultId', '$filename', '$fileCheckSum', '$scanTime', '$newFilename')") or die(mysqli_error($con));
 				}else{
 					echo "There are problems with your compress file or it's empty.</br>";

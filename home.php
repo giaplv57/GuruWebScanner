@@ -55,8 +55,7 @@
 
 		</script>
 	</head>
-	<body class='error'>
-		<?php include("connectdb.php"); ?>
+	<body class='error'>		
 		<div class="container-fluid" id="content">
 			<div class="wrapper">		
 				<div class="code" align="center">
