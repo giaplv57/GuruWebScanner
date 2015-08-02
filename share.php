@@ -150,7 +150,7 @@
 											foreach ($matches as $value) {
 	    										echo '<tr>
 														<td></td>
-														<td>
+														<td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
 														<font face="Consolas"><b>';
 	    										echo $value[0];
 	    										echo '</b></font>
