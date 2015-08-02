@@ -152,7 +152,7 @@
 														<td></td>
 														<td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
 														<font face="Consolas"><b>';
-	    										echo $value[0];
+	    										echo substr(preg_replace('/\/var(.*?)'.$newFilename.'/m', '', $value[0]), 0, -13); 
 	    										echo '</b></font>
 	    												</td>											
 														</tr>';
