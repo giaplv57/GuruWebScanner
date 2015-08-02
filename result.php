@@ -213,11 +213,13 @@
 										</tbody>
 									</table>								
 									<hr/>
+									<!--
 									<div align="center">
 										<form action="" class='form-horizontal'>									
 										<button name="rescan" type='submit' class='btn btn btn-success'><i class="icon-search"></i> RESCAN</button>								
 										<button name="print" type='submit' class='btn btn btn-primary'>PRINT <i class="icon-print"></i></button>				
 									</form>
+									-->
 								</div>
 								</div>							
 							</div>
