@@ -220,6 +220,7 @@
 										<button name="print" type='submit' class='btn btn btn-primary'>PRINT <i class="icon-print"></i></button>				
 									</form>
 									-->
+									
 								</div>
 								</div>							
 							</div>
