@@ -73,7 +73,7 @@
 	    	$scanTime 	  = 0;
 	        $target_dir   = "./userFiles/";
 	        $filename 	  = $_FILES["userFile"]["name"];
-	        $compressType = pathinfo($filename, PATHINFO_EXTENSION);
+	        $compressType = pathinfo($filename, PATHINFO_EXTENSION);				        
 			$fileCheckSum = sha1_file($_FILES["userFile"]["tmp_name"]);
 			$resultId  	  = "";
 			$newFilename  = sha1($fileCheckSum.round(microtime(true) * 1000));
@@ -107,7 +107,7 @@
 	            }else if($compressType == "zip"){
 	            	exec("unzip ".$target_file." -d ".$uncompressFolder);
 	            }else if($compressType == "rar"){
-	            	exec("unrar -x ".$target_file." ".$uncompressFolder);
+	            	exec("unrar x ".$target_file." ".$uncompressFolder);
 	            }else{
 	            	die();
 	            }
@@ -202,8 +202,8 @@
 											<tr>
 												<td>[+] Link to share:</td>											
 												<td>
-													<font face="Consolas"><b>
-														<a href="./share.php?id=<?php echo $resultId ?> " >http://guru.wsaaaaaaaaaaaaaa aaaaaa aaaaaaa aaaaaaa aaaaaaaaaaaaaaaaaa/share.php?id=<?php echo $resultId ?>
+													<font face="Consolas"><b>x
+														<a href="./share.php?id=<?php echo $resultId ?> " >http://guru.ws/share.php?id=<?php echo $resultId ?>
 													</b></font>
 												</td>											
 
