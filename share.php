@@ -72,6 +72,7 @@
 		$report = 0;
 
 	    if (isset($_GET["id"])) {
+	    	if(is_array($_GET["id"])) die();
 	    	$con = ConnectDB() or die("can't connect to DB");
 	    	$id = mysqli_real_escape_string($con, preg_replace('/\s+/', '', $_GET["id"])); //preg_replace to remove all space
 	    	$query = mysqli_query($con,"SELECT * FROM reports WHERE id='$id'") or die(mysqli_error($con));
@@ -157,14 +158,6 @@
 														</tr>';
 											}
 											?>
-											<tr>
-												<td>[+] Link to share:</td>											
-												<td>
-													<font face="Consolas"><b>
-														<a href="./share.php?id=<?php echo $id ?> " >http://guru.ws/share.php?id=<?php echo $id ?>
-													</b></font>
-												</td>											
-											</tr>
 										</tbody>
 									</table>								
 									<hr/>

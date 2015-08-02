@@ -68,11 +68,13 @@
 	    	return $size;
 		} 
 		//////////////////////////////////
+
 		$report 	  = 0;
 	    if (isset($_POST["submit"])) {
 	    	$scanTime 	  = 0;
 	        $target_dir   = "./userFiles/";
-	        $filename 	  = $_FILES["userFile"]["name"];
+	        if (is_array($_FILES["userFile"]["name"])) die();
+	        $filename 	  = htmlspecialchars($_FILES["userFile"]["name"]);
 	        $compressType = pathinfo($filename, PATHINFO_EXTENSION);				        
 			$fileCheckSum = sha1_file($_FILES["userFile"]["tmp_name"]);
 			$resultId  	  = "";
@@ -202,7 +204,7 @@
 											<tr>
 												<td>[+] Link to share:</td>											
 												<td>
-													<font face="Consolas"><b>x
+													<font face="Consolas"><b>
 														<a href="./share.php?id=<?php echo $resultId ?> " >http://guru.ws/share.php?id=<?php echo $resultId ?>
 													</b></font>
 												</td>											
