@@ -115,17 +115,25 @@
 	            }
 	            if (file_exists($uncompressFolder) && dirSize($uncompressFolder) > 0){ //Ready for scan
 	            	$startTime = round(microtime(true) * 1000);
+
+	            	/* vul result */
 	            	$resultFile = "./userFiles/".$newFilename.".result";
 					$command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f; done > ".$resultFile;
+					system($command);												
+					$resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); //nl2br function to end line as proper					
+					preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array
+
+					/* wshell result */
+					$wshellResultFile = "./userFiles/".$newFilename."-wshell.result";
+					$command = "php ./webShellDetector/signatureIdentifier/shelldetect.php > ".$wshellResultFile;
 					system($command);
+					$wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper					
+					preg_match_all('/Suspicious behavior found in:(.*?)\/dl/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array										
+					echo count($wshellmatches);
+					/* Calculate scan time */
 					$stopTime = round(microtime(true) * 1000);
-					$scanTime = $stopTime - $startTime;
-
-					//nl2br function to end line as proper
-					$resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); 
-
-					//The PREG_SET_ORDER flag to ensure result appropriately distribute to array
-					preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);
+					$scanTime = $stopTime - $startTime;		
+															
 					$report = 1;
 					$con = ConnectDB() or die("can't connect to DB");
 					$resultId = sha1($newFilename);
@@ -197,6 +205,28 @@
 														<font face="Consolas"><b>';
 	    										// echo $value[0];
 												echo substr(preg_replace('/\/var(.*?)'.$newFilename.'/m', '', $value[0]), 0, -13); 
+	    										echo '</b></font>
+	    												</td>											
+														</tr>';
+											}
+											?>
+											<tr>
+												<td>[+] Total Found Webshell:</td>
+												<td>
+													<font face="Consolas"><b>
+														<?php echo count($wshellmatches); ?> webshell
+													</b></font>
+												</td>											
+											</tr>
+											<?php 
+											foreach ($wshellmatches as $wshellvalue) {
+	    										echo '<tr>
+														<td></td>
+														<td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
+														<font face="Consolas"><b>';
+	    										// echo $value[0];
+												echo $wshellvalue[0];
+												//echo substr(preg_replace('/\/var(.*?)'.$newFilename.'/m', '', $wshellvalue[0]), 0, -13); 
 	    										echo '</b></font>
 	    												</td>											
 														</tr>';
