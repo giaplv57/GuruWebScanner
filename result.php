@@ -128,7 +128,7 @@
 					$command = "php ./webShellDetector/signatureIdentifier/shelldetect.php > ".$wshellResultFile;
 					system($command);
 					$wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper					
-					preg_match_all('/Suspicious behavior found in:(.*?)\/dl/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array										
+					preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array										
 					echo count($wshellmatches);
 					/* Calculate scan time */
 					$stopTime = round(microtime(true) * 1000);
@@ -225,6 +225,21 @@
 														<td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
 														<font face="Consolas"><b>';
 	    										// echo $value[0];
+												$wshellvalue[0] = preg_replace('/&lt;dt&gt;/', '<br>', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;\/dt&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;dd&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;\/dd&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;dl&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;\/dl&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;div&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;\/div&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;span(.*?)\/span&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;div(.*?)\/&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;small&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;\/small&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/Submit file/', '', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/\(&lt;a(.*?)&quot;&gt;/', '', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;\/a&gt;\)(.*?)st&quot;&gt;/', '', $wshellvalue[0]);
 												echo $wshellvalue[0];
 												//echo substr(preg_replace('/\/var(.*?)'.$newFilename.'/m', '', $wshellvalue[0]), 0, -13); 
 	    										echo '</b></font>
