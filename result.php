@@ -240,8 +240,7 @@
 												$wshellvalue[0] = preg_replace('/Submit file/', '', $wshellvalue[0]);
 												$wshellvalue[0] = preg_replace('/\(&lt;a(.*?)&quot;&gt;/', '', $wshellvalue[0]);
 												$wshellvalue[0] = preg_replace('/&lt;\/a&gt;\)(.*?)st&quot;&gt;/', '', $wshellvalue[0]);
-												echo $wshellvalue[0];
-												//echo substr(preg_replace('/\/var(.*?)'.$newFilename.'/m', '', $wshellvalue[0]), 0, -13); 
+												echo $wshellvalue[0];												
 	    										echo '</b></font>
 	    												</td>											
 														</tr>';
