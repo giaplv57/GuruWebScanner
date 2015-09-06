@@ -129,7 +129,42 @@
 					system($command);
 					$wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper					
 					preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array										
-					echo count($wshellmatches);
+					// echo count($wshellmatches);
+					/* Analytics result*/
+					include("./webShellDetector/shellRanker.php"); 
+
+					$fileList = fileIterator($uncompressFolder, "");
+					$EntropyTest = new Entropy();
+					$LanguageICTest = new LanguageIC();
+					$LongestWordTest = new LongestWord();
+					$SignatureNastyTest = new SignatureNasty();
+				    $SignatureSuperNastyTest = new SignatureSuperNasty();
+				    // $UsesEvalTest = new UsesEval();
+				    // $CompressionTest = new Compression();
+				    
+					foreach ($fileList as $filename){
+						$data = file_get_contents($filename);
+						$EntropyTest->calculate($filename, $data);
+						$LanguageICTest->calculate($filename, $data);
+						$LongestWordTest->calculate($filename, $data);
+						$SignatureNastyTest->calculate($filename, $data);
+				        $SignatureSuperNastyTest->calculate($filename, $data);
+				        // $UsesEvalTest->calculate($filename, $data);
+				        // $CompressionTest->calculate($filename, $data);
+					}
+					$EntropyTest->sort();
+					$LanguageICTest->sort();
+					$LongestWordTest->sort();
+					$SignatureNastyTest->sort();
+				    $SignatureSuperNastyTest->sort();
+				    // $UsesEvalTest->sort();
+				    // $CompressionTest->sort();
+
+				    asort($GLOBALS['rank_list']);
+				    $count = 10;
+				    if(count($fileList) < $count){
+				    	$count = count($fileList);
+				    }
 					/* Calculate scan time */
 					$stopTime = round(microtime(true) * 1000);
 					$scanTime = $stopTime - $startTime;		
@@ -215,7 +250,221 @@
 												<td>
 													<font face="Consolas"><b>
 														<?php echo count($wshellmatches); ?> webshell
-													</b></font>
+													</b>
+													(<a href="#" data-toggle="modal" data-target="#myModal">More advanced analytics</a>)</font>
+													<!-- Modal -->
+													<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+														<div class="modal-dialog" role="document">
+															<div class="modal-content">
+																<div class="modal-header">
+																	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+																	<h4 class="modal-title" id="myModalLabel">More advanced analytics</h4>
+																</div>
+																<div class="modal-body">
+																	<div class="box box-color box-bordered">
+		<!-- 																<div class="box-title">								
+																			<h3><center>
+																				<i class="icon-table"></i>
+																				REPORT
+																				</center>
+																			</h3>								
+																		</div> -->
+																		<font size="2px" face="Verdana">
+																		<div class="box-content nopadding">
+																			<table class="table table-hover table-nomargin">
+																				<thead>
+																					<tr>
+																						<th>[+] Average IC for Search:</th>
+																						<th>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</th>											
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td><?php echo $LanguageICTest->ic_total_results ?></td>
+																						<td>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</td>											
+																					</tr>
+																				</tbody>
+
+																				<thead>
+																					<tr>
+																						<th>[+] Top <?php echo $count ?> lowest IC files:</th>
+																						<th>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</th>											
+																					</tr>
+																				</thead>
+																				<?php
+																				$temp = 0;
+																				foreach ($LanguageICTest->results as $key=>$value){
+																					if ($temp == $count) break;
+																					echo '<tbody>
+																							<tr>
+																								<td>'.$value.'</td>
+																								<td>
+																									<font face="Consolas"><b>
+																										'.str_replace($uncompressFolder, "./", $key).'
+																									</b></font>
+																								</td>									
+																							</tr>
+																						</tbody>';
+																					$temp++;
+																				}
+																				?>
+
+																				<thead>
+																					<tr>
+																						<th>[+] Top <?php echo $count ?> entropic files for a given search:</th>
+																						<th>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</th>											
+																					</tr>
+																				</thead>
+																				<?php
+																				$temp = 0;
+																				foreach ($EntropyTest->results as $key=>$value){
+																					if ($temp == $count) break;
+																					echo '<tbody>
+																							<tr>
+																								<td>'.$value.'</td>
+																								<td>
+																									<font face="Consolas"><b>
+																										'.str_replace($uncompressFolder, "./", $key).'
+																									</b></font>
+																								</td>									
+																							</tr>
+																						</tbody>';
+																					$temp++;
+																				}
+																				?>
+
+																				<thead>
+																					<tr>
+																						<th>[+] Top <?php echo $count ?> longest word files:</th>
+																						<th>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</th>											
+																					</tr>
+																				</thead>
+																				<?php
+																				$temp = 0;
+																				foreach ($LongestWordTest->results as $key=>$value){
+																					if ($temp == $count) break;
+																					echo '<tbody>
+																							<tr>
+																								<td>'.$value.'</td>
+																								<td>
+																									<font face="Consolas"><b>
+																										'.str_replace($uncompressFolder, "./", $key).'
+																									</b></font>
+																								</td>									
+																							</tr>
+																						</tbody>';
+																					$temp++;
+																				}
+																				?>
+
+																				<thead>
+																					<tr>
+																						<th>[+] Top <?php echo $count ?> signature match counts:</th>
+																						<th>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</th>											
+																					</tr>
+																				</thead>
+																				<?php
+																				$temp = 0;
+																				foreach ($SignatureNastyTest->results as $key=>$value){
+																					if ($temp == $count) break;
+																					echo '<tbody>
+																							<tr>
+																								<td>'.$value.'</td>
+																								<td>
+																									<font face="Consolas"><b>
+																										'.str_replace($uncompressFolder, "./", $key).'
+																									</b></font>
+																								</td>									
+																							</tr>
+																						</tbody>';
+																					$temp++;
+																				}
+																				?>
+
+																				<thead>
+																					<tr>
+																						<th>[+] Top <?php echo $count ?> SUPER-signature match counts (These are usually bad!):</th>
+																						<th>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</th>											
+																					</tr>
+																				</thead>
+																				<?php
+																				$temp = 0;
+																				foreach ($SignatureSuperNastyTest->results as $key=>$value){
+																					if ($temp == $count) break;
+																					echo '<tbody>
+																							<tr>
+																								<td>'.$value.'</td>
+																								<td>
+																									<font face="Consolas"><b>
+																										'.str_replace($uncompressFolder, "./", $key).'
+																									</b></font>
+																								</td>									
+																							</tr>
+																						</tbody>';
+																					$temp++;
+																				}
+																				?>
+
+																				<thead>
+																					<tr>
+																						<th>[+] Top cumulative ranked files:</th>
+																						<th>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</th>											
+																					</tr>
+																				</thead>
+																				<?php
+																				$temp = 0;
+																				foreach ($GLOBALS['rank_list'] as $key=>$value){
+																					if ($temp == $count) break;
+																					echo '<tbody>
+																							<tr>
+																								<td>'.$value.'</td>
+																								<td>
+																									<font face="Consolas"><b>
+																										'.str_replace($uncompressFolder, "./", $key).'
+																									</b></font>
+																								</td>									
+																							</tr>
+																						</tbody>';
+																					$temp++;
+																				}
+																				?>
+
+																			</table>
+																		</div>
+																		</font>
+																	</div>
+																</div>
+																<div class="modal-footer">
+																	<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																</div>
+															</div>
+														</div>
+													</div>
+
 												</td>											
 											</tr>
 											<?php 
@@ -246,6 +495,7 @@
 														</tr>';
 											}
 											?>
+
 											<tr>
 												<td>[+] Link to share:</td>											
 												<td>
