@@ -132,39 +132,17 @@
 					// echo count($wshellmatches);
 					/* Analytics result*/
 					include("./webShellDetector/shellRanker.php"); 
+					$rankResult = shellRankerMain($uncompressFolder);
 
-					$fileList = fileIterator($uncompressFolder, "");
-					$EntropyTest = new Entropy();
-					$LanguageICTest = new LanguageIC();
-					$LongestWordTest = new LongestWord();
-					$SignatureNastyTest = new SignatureNasty();
-				    $SignatureSuperNastyTest = new SignatureSuperNasty();
-				    // $UsesEvalTest = new UsesEval();
-				    // $CompressionTest = new Compression();
-				    
-					foreach ($fileList as $filename){
-						$data = file_get_contents($filename);
-						$EntropyTest->calculate($filename, $data);
-						$LanguageICTest->calculate($filename, $data);
-						$LongestWordTest->calculate($filename, $data);
-						$SignatureNastyTest->calculate($filename, $data);
-				        $SignatureSuperNastyTest->calculate($filename, $data);
-				        // $UsesEvalTest->calculate($filename, $data);
-				        // $CompressionTest->calculate($filename, $data);
-					}
-					$EntropyTest->sort();
-					$LanguageICTest->sort();
-					$LongestWordTest->sort();
-					$SignatureNastyTest->sort();
-				    $SignatureSuperNastyTest->sort();
-				    // $UsesEvalTest->sort();
-				    // $CompressionTest->sort();
+					$EntropyTest = $rankResult['EntropyTest'];
+					$LanguageICTest = $rankResult['LanguageICTest'];
+					$LongestWordTest = $rankResult['LongestWordTest'];
+					$SignatureNastyTest = $rankResult['SignatureNastyTest'];
+				    $SignatureSuperNastyTest = $rankResult['SignatureSuperNastyTest'];
+				    $listLength = $rankResult['listLength'];
+				    $rankedList = $rankResult['ranked_list']; 
 
-				    asort($GLOBALS['rank_list']);
-				    $count = 10;
-				    if(count($fileList) < $count){
-				    	$count = count($fileList);
-				    }
+
 					/* Calculate scan time */
 					$stopTime = round(microtime(true) * 1000);
 					$scanTime = $stopTime - $startTime;		
@@ -246,10 +224,10 @@
 											}
 											?>
 											<tr>
-												<td>[+] Total Found Webshell:</td>
+												<td>[+] Total Found Webshells:</td>
 												<td>
 													<font face="Consolas"><b>
-														<?php echo count($wshellmatches); ?> webshell
+														<?php echo count($wshellmatches); ?> suspicious files
 													</b>
 													(<a href="#" data-toggle="modal" data-target="#myModal">More advanced analytics</a>)</font>
 													<!-- Modal -->
@@ -274,11 +252,7 @@
 																			<table class="table table-hover table-nomargin">
 																				<thead>
 																					<tr>
-																						<th>[+] Average IC for Search:</th>
-																						<th>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</th>											
+																						<th colspan=2>[+] Average IC for Search:</th>
 																					</tr>
 																				</thead>
 																				<tbody>
@@ -289,170 +263,121 @@
 																							</b></font>
 																						</td>											
 																					</tr>
+																					<tr>
+																						<th colspan=2>[+] Top <?php echo $listLength ?> lowest IC files:</th>
+																																
+																					</tr>
+																					<?php
+																					$temp = 0;
+																					foreach ($LanguageICTest->results as $key=>$value){
+																						if ($temp == $listLength) break;
+																						echo '<tr>
+																									<td class="">'.$value.'</td>
+																									<td class="">
+																										<font face="Consolas"><b>
+																											'.str_replace($uncompressFolder, "./", $key).'
+																										</b></font>
+																									</td>									
+																								</tr>';
+																						$temp++;
+																					}
+																					?>
+																					<tr>
+																						<th colspan=2>[+] Top <?php echo $listLength ?> entropic files for a given search:</th>
+																															
+																					</tr>
+																					<?php
+																					$temp = 0;
+																					foreach ($EntropyTest->results as $key=>$value){
+																						if ($temp == $listLength) break;
+																						echo '<tr>
+																									<td class="">'.$value.'</td>
+																									<td class="">
+																										<font face="Consolas"><b>
+																											'.str_replace($uncompressFolder, "./", $key).'
+																										</b></font>
+																									</td>									
+																								</tr>';
+																						$temp++;
+																					}
+																					?>
+																					<tr>
+																						<th colspan=2>[+] Top <?php echo $listLength ?> longest word files:</th>
+																																
+																					</tr>
+																					<?php
+																					$temp = 0;
+																					foreach ($LongestWordTest->results as $key=>$value){
+																						if ($temp == $listLength) break;
+																						echo '<tr>
+																									<td class="">'.$value.'</td>
+																									<td class="">
+																										<font face="Consolas"><b>
+																											'.str_replace($uncompressFolder, "./", $key).'
+																										</b></font>
+																									</td>									
+																								</tr>';
+																						$temp++;
+																					}
+																					?>
+																					<tr>
+																						<th colspan=2>[+] Top <?php echo $listLength ?> signature match counts:</th>
+																																
+																					</tr>
+																					<?php
+																					$temp = 0;
+																					foreach ($SignatureNastyTest->results as $key=>$value){
+																						if ($temp == $listLength) break;
+																						echo '<tr>
+																									<td class="">'.$value.'</td>
+																									<td class="">
+																										<font face="Consolas"><b>
+																											'.str_replace($uncompressFolder, "./", $key).'
+																										</b></font>
+																									</td>									
+																								</tr>';
+																						$temp++;
+																					}
+																					?>
+																					<tr>
+																						<th colspan=2>[+] Top <?php echo $listLength ?> SUPER-signature match counts (These are usually bad!):</th>
+																																
+																					</tr>
+																					<?php
+																					$temp = 0;
+																					foreach ($SignatureSuperNastyTest->results as $key=>$value){
+																						if ($temp == $listLength) break;
+																						echo '<tr>
+																									<td class="">'.$value.'</td>
+																									<td class="">
+																										<font face="Consolas"><b>
+																											'.str_replace($uncompressFolder, "./", $key).'
+																										</b></font>
+																									</td>									
+																								</tr>';
+																						$temp++;
+																					}
+																					?>
+																					<tr>
+																						<th colspan=2	>[+] Top cumulative ranked files:</th>
+																																
+																					</tr>
+																					<?php
+																					$temp = 0;
+																					foreach ($rankedList as $key=>$value){
+																						if ($temp == $listLength) break;
+																						echo '<tr>
+																									<td class="">'.$value.'</td>
+																									<td class="">
+																										<font face="Consolas"><b>
+																											'.str_replace($uncompressFolder, "./", $key).'
+																										</b></font>
+																									</td>									
+																								</tr>';
+																						$temp++;
+																					}
+																					?>
 																				</tbody>
-
-																				<thead>
-																					<tr>
-																						<th>[+] Top <?php echo $count ?> lowest IC files:</th>
-																						<th>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</th>											
-																					</tr>
-																				</thead>
-																				<?php
-																				$temp = 0;
-																				foreach ($LanguageICTest->results as $key=>$value){
-																					if ($temp == $count) break;
-																					echo '<tbody>
-																							<tr>
-																								<td>'.$value.'</td>
-																								<td>
-																									<font face="Consolas"><b>
-																										'.str_replace($uncompressFolder, "./", $key).'
-																									</b></font>
-																								</td>									
-																							</tr>
-																						</tbody>';
-																					$temp++;
-																				}
-																				?>
-
-																				<thead>
-																					<tr>
-																						<th>[+] Top <?php echo $count ?> entropic files for a given search:</th>
-																						<th>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</th>											
-																					</tr>
-																				</thead>
-																				<?php
-																				$temp = 0;
-																				foreach ($EntropyTest->results as $key=>$value){
-																					if ($temp == $count) break;
-																					echo '<tbody>
-																							<tr>
-																								<td>'.$value.'</td>
-																								<td>
-																									<font face="Consolas"><b>
-																										'.str_replace($uncompressFolder, "./", $key).'
-																									</b></font>
-																								</td>									
-																							</tr>
-																						</tbody>';
-																					$temp++;
-																				}
-																				?>
-
-																				<thead>
-																					<tr>
-																						<th>[+] Top <?php echo $count ?> longest word files:</th>
-																						<th>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</th>											
-																					</tr>
-																				</thead>
-																				<?php
-																				$temp = 0;
-																				foreach ($LongestWordTest->results as $key=>$value){
-																					if ($temp == $count) break;
-																					echo '<tbody>
-																							<tr>
-																								<td>'.$value.'</td>
-																								<td>
-																									<font face="Consolas"><b>
-																										'.str_replace($uncompressFolder, "./", $key).'
-																									</b></font>
-																								</td>									
-																							</tr>
-																						</tbody>';
-																					$temp++;
-																				}
-																				?>
-
-																				<thead>
-																					<tr>
-																						<th>[+] Top <?php echo $count ?> signature match counts:</th>
-																						<th>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</th>											
-																					</tr>
-																				</thead>
-																				<?php
-																				$temp = 0;
-																				foreach ($SignatureNastyTest->results as $key=>$value){
-																					if ($temp == $count) break;
-																					echo '<tbody>
-																							<tr>
-																								<td>'.$value.'</td>
-																								<td>
-																									<font face="Consolas"><b>
-																										'.str_replace($uncompressFolder, "./", $key).'
-																									</b></font>
-																								</td>									
-																							</tr>
-																						</tbody>';
-																					$temp++;
-																				}
-																				?>
-
-																				<thead>
-																					<tr>
-																						<th>[+] Top <?php echo $count ?> SUPER-signature match counts (These are usually bad!):</th>
-																						<th>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</th>											
-																					</tr>
-																				</thead>
-																				<?php
-																				$temp = 0;
-																				foreach ($SignatureSuperNastyTest->results as $key=>$value){
-																					if ($temp == $count) break;
-																					echo '<tbody>
-																							<tr>
-																								<td>'.$value.'</td>
-																								<td>
-																									<font face="Consolas"><b>
-																										'.str_replace($uncompressFolder, "./", $key).'
-																									</b></font>
-																								</td>									
-																							</tr>
-																						</tbody>';
-																					$temp++;
-																				}
-																				?>
-
-																				<thead>
-																					<tr>
-																						<th>[+] Top cumulative ranked files:</th>
-																						<th>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</th>											
-																					</tr>
-																				</thead>
-																				<?php
-																				$temp = 0;
-																				foreach ($GLOBALS['rank_list'] as $key=>$value){
-																					if ($temp == $count) break;
-																					echo '<tbody>
-																							<tr>
-																								<td>'.$value.'</td>
-																								<td>
-																									<font face="Consolas"><b>
-																										'.str_replace($uncompressFolder, "./", $key).'
-																									</b></font>
-																								</td>									
-																							</tr>
-																						</tbody>';
-																					$temp++;
-																				}
-																				?>
-
 																			</table>
 																		</div>
 																		</font>
@@ -472,25 +397,22 @@
 	    										echo '<tr>
 														<td></td>
 														<td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
-														<font face="Consolas"><b>';
-	    										// echo $value[0];
-												$wshellvalue[0] = preg_replace('/&lt;dt&gt;/', '<br>', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;\/dt&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;dd&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;\/dd&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;dl&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;\/dl&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;div&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;\/div&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;span(.*?)\/span&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;div(.*?)\/&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;small&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;\/small&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/Submit file/', '', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/\(&lt;a(.*?)&quot;&gt;/', '', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;\/a&gt;\)(.*?)st&quot;&gt;/', '', $wshellvalue[0]);
-												echo $wshellvalue[0];												
-	    										echo '</b></font>
+														<font face="Consolas">';
+
+												preg_match('/Suspicious behavior found in: (.*?)&lt;span/', $wshellvalue[0], $shellName);
+												preg_match('/Full path:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellPath);
+												preg_match('/hash:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellMd5);
+												preg_match('/Filesize:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellSize);
+												preg_match('/suspicious functions used:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellFunctions);
+												preg_match('/green&quot;&gt;(.*?)&lt;small/', $wshellvalue[0], $shellFingerPrint);
+
+												echo '<b>Suspicious behavior found in: <a>'.$shellName[1].'</a></b><br>';
+												echo 'Full path: '.$shellPath[1].'<br>';
+												echo 'MD5 hash: '.$shellMd5[1].'<br>';
+												echo 'Filesize: '.$shellSize[1].'<br>';
+												echo 'Suspicious functions used: '.html_entity_decode($shellFunctions[1]).'<br>';
+												echo 'Fingerprint: <a>'.$shellFingerPrint[1].'</a>';
+	    										echo '</font>
 	    												</td>											
 														</tr>';
 											}

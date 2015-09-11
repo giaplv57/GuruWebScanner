@@ -226,33 +226,45 @@
 		return $files;
 	}
 
-	// $fileList = fileIterator("abc", "abc");
-	// $EntropyTest = new Entropy();
-	// $LanguageICTest = new LanguageIC();
-	// $LongestWordTest = new LongestWord();
-	// $SignatureNastyTest = new SignatureNasty();
- //    $SignatureSuperNastyTest = new SignatureSuperNasty();
- //    $UsesEvalTest = new UsesEval();
- //    $CompressionTest = new Compression();
-    
-	// foreach ($fileList as $filename){
-	// 	$data = file_get_contents($filename);
-	// 	$EntropyTest->calculate($filename, $data);
-	// 	$LanguageICTest->calculate($filename, $data);
-	// 	$LongestWordTest->calculate($filename, $data);
-	// 	$SignatureNastyTest->calculate($filename, $data);
- //        $SignatureSuperNastyTest->calculate($filename, $data);
- //        $UsesEvalTest->calculate($filename, $data);
- //        $CompressionTest->calculate($filename, $data);
-	// }
-	// $EntropyTest->sort();
-	// $LanguageICTest->sort();
-	// $LongestWordTest->sort();
-	// $SignatureNastyTest->sort();
- //    $SignatureSuperNastyTest->sort();
- //    $UsesEvalTest->sort();
- //    $CompressionTest->sort();
+	function shellRankerMain($path){
+		$fileList = fileIterator($path, "");
+		$EntropyTest = new Entropy();
+		$LanguageICTest = new LanguageIC();
+		$LongestWordTest = new LongestWord();
+		$SignatureNastyTest = new SignatureNasty();
+	    $SignatureSuperNastyTest = new SignatureSuperNasty();
+	    // $UsesEvalTest = new UsesEval();
+	    // $CompressionTest = new Compression();
+	    
+		foreach ($fileList as $filename){
+			$data = file_get_contents($filename);
+			$EntropyTest->calculate($filename, $data);
+			$LanguageICTest->calculate($filename, $data);
+			$LongestWordTest->calculate($filename, $data);
+			$SignatureNastyTest->calculate($filename, $data);
+	        $SignatureSuperNastyTest->calculate($filename, $data);
+	        // $UsesEvalTest->calculate($filename, $data);
+	        // $CompressionTest->calculate($filename, $data);
+		}
+		$EntropyTest->sort();
+		$LanguageICTest->sort();
+		$LongestWordTest->sort();
+		$SignatureNastyTest->sort();
+	    $SignatureSuperNastyTest->sort();
+	    // $UsesEvalTest->sort();
+	    // $CompressionTest->sort();
+	    asort($GLOBALS['rank_list']);
 
- //    asort($GLOBALS['rank_list']);
- //    var_dump($GLOBALS['rank_list']);
+	    $count = 10;
+	    if(count($fileList) < $count){
+	    	$count = count($fileList);
+	    }
+
+	    $rankerResult = array('EntropyTest' => $EntropyTest, 'LanguageICTest' => $LanguageICTest, 'LongestWordTest' => 
+	    		$LongestWordTest, 'SignatureNastyTest' => $SignatureNastyTest, 'SignatureSuperNastyTest' => $SignatureSuperNastyTest,
+	    		'ranked_list' => $GLOBALS['rank_list'], 'listLength' => $count);
+
+	    return $rankerResult;
+	}
+
 ?>

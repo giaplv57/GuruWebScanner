@@ -357,8 +357,12 @@ class shellDetector {
             for ($line = 0; $line < count($_content); $line++) {
               if (preg_match_all($this->_regex, $_content[$line], $matches)) {
                 $lineid = md5($line . $file);
-                self::output($this->_implode($matches) . ' (<a href="#" class="showline" id="ne_' . $lineid . '">' . $this->t('line:') . ($line + 1) . '</a>);', null, false);
-                self::output('<div class="hidden source" id="line_' . $lineid . '"><code>' . htmlentities($_content[$line]) . '</code></div>', null, false);
+                // self::output($this->_implode($matches) . ' (<a href="#" class="showline" id="ne_' . $lineid . '">' . $this->t('line:') . ($line + 1) . '</a>);', null, false);
+                // self::output('<div class="hidden source" id="line_' . $lineid . '"><code>' . htmlentities($_content[$line]) . '</code></div>', null, false);
+                
+                //Modify for proper print
+                self::output($this->_implode($matches) . ' (<a>' . $this->t('line:') . ($line + 1) . '</a>);', null, false);
+                // self::output('<div class="hidden source" id="line_' . $lineid . '"><code>' . htmlentities($_content[$line]) . '</code></div>', null, false);
               }
             }
             self::output('&nbsp;</dd>', null, false);
