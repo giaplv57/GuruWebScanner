@@ -28,6 +28,19 @@
 		<!-- Bootstrap -->
 		<script src="js/bootstrap.min.js"></script>
 
+		<!-- Innitial popover of bootstrap -->
+		<style type="text/css">
+		/* The max width is dependant on the container */
+			.popover{
+			    max-width: 100%; /* Max Width of the popover (depending on the container!) */
+			}
+		</style>
+		<script>
+	        $(document).ready(function(){
+	        	$('[data-toggle="popover"]').popover({animation: true, placement: "top", delay: {show: 100, hide: 100}});   
+	    	});
+	    </script>
+
 		<!--[if lte IE 9]>
 			<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
 			<script>
@@ -229,7 +242,7 @@
 													<font face="Consolas"><b>
 														<?php echo count($wshellmatches); ?> suspicious files
 													</b>
-													(<a href="#" data-toggle="modal" data-target="#myModal">More advanced analytics</a>)</font>
+													(<a type="button" href="#" data-toggle="modal" data-target="#myModal">More advanced analytics</a>)</font>
 													<!-- Modal -->
 													<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 														<div class="modal-dialog" role="document">
