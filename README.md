@@ -13,8 +13,8 @@ An On-The-Cloud free "greybox" box scanner for various purposes.
 * Increase the max file size for upload file as well as max size of post request in php.ini (optional)
 
 ## Screenshot
-(home page)[https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/img/screenshot/home.jpg?token=AE0vQvA4-EiGkFjOlf7yfDHnRkFcBM8jks5WAck6wA%3D%3D]
-(result page)[https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/img/screenshot/result.JPG?token=AE0vQjgCbOwsGx3sy-U9fpTH-BYYq7yQks5WAcliwA%3D%3D]
+!(home page)[https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/img/screenshot/home.jpg?token=AE0vQvA4-EiGkFjOlf7yfDHnRkFcBM8jks5WAck6wA%3D%3D]
+!(result page)[https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/img/screenshot/result.JPG?token=AE0vQjgCbOwsGx3sy-U9fpTH-BYYq7yQks5WAcliwA%3D%3D]
 
 ## Changelog
 * Not yet released
