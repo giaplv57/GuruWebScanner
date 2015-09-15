@@ -1,1 +1,4 @@
-deny from all
+order allow,deny
+<Files ~ "\.(analytics)$">
+   allow from all
+</Files>

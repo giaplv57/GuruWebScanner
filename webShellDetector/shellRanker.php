@@ -3,6 +3,11 @@
 	define("SMALLEST", 60);
     $GLOBALS['rank_list'] = array();
 
+	//For DEBUG purpose
+	ini_set('display_errors',1); 
+	error_reporting(E_ALL);
+    //////////////////////////////////
+
 	class LanguageIC{
 		var $char_count = array();
 		var $total_char_count = 0;
@@ -226,8 +231,10 @@
 		return $files;
 	}
 
-	function shellRankerMain($path){
+	function shellRankerMain($newFilename){
+		$path = "./userFiles/".$newFilename."/";
 		$fileList = fileIterator($path, "");
+
 		$EntropyTest = new Entropy();
 		$LanguageICTest = new LanguageIC();
 		$LongestWordTest = new LongestWord();
@@ -260,11 +267,144 @@
 	    	$count = count($fileList);
 	    }
 
-	    $rankerResult = array('EntropyTest' => $EntropyTest, 'LanguageICTest' => $LanguageICTest, 'LongestWordTest' => 
-	    		$LongestWordTest, 'SignatureNastyTest' => $SignatureNastyTest, 'SignatureSuperNastyTest' => $SignatureSuperNastyTest,
-	    		'ranked_list' => $GLOBALS['rank_list'], 'listLength' => $count);
+	    writeReportToFile($newFilename, $EntropyTest, $LanguageICTest, $LongestWordTest, $SignatureNastyTest, $SignatureSuperNastyTest, $GLOBALS['rank_list'], $count);
+	    // $rankerResult = array('EntropyTest' => $EntropyTest, 'LanguageICTest' => $LanguageICTest, 'LongestWordTest' => 
+	    // 		$LongestWordTest, 'SignatureNastyTest' => $SignatureNastyTest, 'SignatureSuperNastyTest' => $SignatureSuperNastyTest,
+	    // 		'ranked_list' => $GLOBALS['rank_list'], 'listLength' => $count);
 
-	    return $rankerResult;
+	    // return $rankerResult;
+	}
+
+	function writeReportToFile($newFilename, $EntropyTest, $LanguageICTest, $LongestWordTest, $SignatureNastyTest, $SignatureSuperNastyTest, $rankedList, $listLength){
+		$path = "./userFiles/".$newFilename."/";
+		$reportContent = '<div class="box box-color box-bordered">
+							<font size="2px" face="Verdana">
+							<div class="box-content nopadding">
+								<table class="table table-hover table-nomargin">
+									<thead>
+										<tr>
+											<th colspan=2>[+] Average IC for Search:</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>'.$LanguageICTest->ic_total_results.'</td>
+											<td>
+												<font face="Consolas"><b>
+												</b></font>
+											</td>											
+										</tr>
+										<tr>
+											<th colspan=2>[+] Top '.$listLength.'lowest IC files:</th>
+										</tr>';
+
+		$temp = 0;
+		foreach ($LanguageICTest->results as $key=>$value){
+			if ($temp == $listLength) break;
+			$reportContent = $reportContent.'<tr>
+						<td class="">'.$value.'</td>
+						<td class="">
+							<font face="Consolas"><b>
+								'.str_replace($path, "./", $key).'
+							</b></font>
+						</td>									
+					</tr>';
+			$temp++;
+		}
+
+		$reportContent= $reportContent.'<tr>
+											<th colspan=2>[+] Top '.$listLength.'entropic files for a given search:</th>
+										</tr>';
+
+		$temp = 0;
+		foreach ($EntropyTest->results as $key=>$value){
+			if ($temp == $listLength) break;
+			$reportContent = $reportContent.'<tr>
+						<td class="">'.$value.'</td>
+						<td class="">
+							<font face="Consolas"><b>
+								'.str_replace($path, "./", $key).'
+							</b></font>
+						</td>									
+					</tr>';
+			$temp++;
+		}
+		$reportContent = $reportContent.'<tr>
+											<th colspan=2>[+] Top '.$listLength.'longest word files:</th>
+										</tr>';
+		$temp = 0;
+		foreach ($LongestWordTest->results as $key=>$value){
+			if ($temp == $listLength) break;
+			$reportContent = $reportContent.'<tr>
+						<td class="">'.$value.'</td>
+						<td class="">
+							<font face="Consolas"><b>
+								'.str_replace($path, "./", $key).'
+							</b></font>
+						</td>									
+					</tr>';
+			$temp++;
+		}
+
+		$reportContent = $reportContent.'<tr>
+											<th colspan=2>[+] Top '.$listLength.'signature match counts:</th>
+										</tr>';
+		$temp = 0;
+		foreach ($SignatureNastyTest->results as $key=>$value){
+			if ($temp == $listLength) break;
+			$reportContent = $reportContent.'<tr>
+						<td class="">'.$value.'</td>
+						<td class="">
+							<font face="Consolas"><b>
+								'.str_replace($path, "./", $key).'
+							</b></font>
+						</td>									
+					</tr>';
+			$temp++;
+		}
+		$reportContent = $reportContent.'<tr>
+											<th colspan=2>[+] Top '.$listLength.'SUPER-signature match counts (These are usually bad!):</th>
+										</tr>';
+
+		$temp = 0;
+		foreach ($SignatureSuperNastyTest->results as $key=>$value){
+			if ($temp == $listLength) break;
+			$reportContent = $reportContent.'<tr>
+						<td class="">'.$value.'</td>
+						<td class="">
+							<font face="Consolas"><b>
+								'.str_replace($path, "./", $key).'
+							</b></font>
+						</td>									
+					</tr>';
+			$temp++;
+		}
+		$reportContent = $reportContent.'<tr>
+											<th colspan=2>[+] Top cumulative ranked files:</th>											
+										</tr>';
+		$temp = 0;
+		foreach ($rankedList as $key=>$value){
+			if ($temp == $listLength) break;
+			$reportContent = $reportContent.'<tr>
+						<td class="">'.$value.'</td>
+						<td class="">
+							<font face="Consolas"><b>
+								'.str_replace($path, "./", $key).'
+							</b></font>
+						</td>									
+					</tr>';
+			$temp++;
+		}
+		$reportContent = $reportContent.'</tbody>
+										</table>
+									</div>
+									</font>
+								</div>';
+
+		$report = fopen("./userFiles/".$newFilename.".analytics","w");
+		fwrite($report, $reportContent);
+		fclose($report);
+		// echo $reportContent;
 	}
 
 ?>

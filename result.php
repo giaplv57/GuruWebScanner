@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<!-- Bootstrap responsive -->
 		<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+		
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="css/style.css">
 		<!-- Color CSS -->
@@ -27,6 +28,10 @@
 		<script src="js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
 		<!-- Bootstrap -->
 		<script src="js/bootstrap.min.js"></script>
+		<!-- font-awesome -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!-- Easy Modal for bootstrap -->
+		<script src="//rawgit.com/saribe/eModal/master/dist/eModal.min.js"></script>
 
 		<!-- Innitial popover of bootstrap -->
 		<style type="text/css">
@@ -142,19 +147,10 @@
 					system($command);
 					$wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper					
 					preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array										
-					// echo count($wshellmatches);
+
 					/* Analytics result*/
 					include("./webShellDetector/shellRanker.php"); 
-					$rankResult = shellRankerMain($uncompressFolder);
-
-					$EntropyTest = $rankResult['EntropyTest'];
-					$LanguageICTest = $rankResult['LanguageICTest'];
-					$LongestWordTest = $rankResult['LongestWordTest'];
-					$SignatureNastyTest = $rankResult['SignatureNastyTest'];
-				    $SignatureSuperNastyTest = $rankResult['SignatureSuperNastyTest'];
-				    $listLength = $rankResult['listLength'];
-				    $rankedList = $rankResult['ranked_list']; 
-
+					shellRankerMain($newFilename);
 
 					/* Calculate scan time */
 					$stopTime = round(microtime(true) * 1000);
@@ -236,173 +232,25 @@
 														</tr>';
 											}
 											?>
+
+											<!-- Innitial ajax analytic modal -->
+										    <script>
+										       var options = {
+										            url: "./userFiles/<?php echo $newFilename; ?>.analytics",
+										            title:'Result',
+										            size: 'lg',
+										            loadingHtml: '<span class="fa fa-circle-o-notch fa-spin fa-3x text-primary"></span><span class="h4">Loading</span>',
+										            subtitle: 'More advanced analytics',
+										        };
+										    </script>
+
 											<tr>
 												<td>[+] Total Found Webshells:</td>
 												<td>
 													<font face="Consolas"><b>
 														<?php echo count($wshellmatches); ?> suspicious files
 													</b>
-													(<a type="button" href="#" data-toggle="modal" data-target="#myModal">More advanced analytics</a>)</font>
-													<!-- Modal -->
-													<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-														<div class="modal-dialog" role="document">
-															<div class="modal-content">
-																<div class="modal-header">
-																	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-																	<h4 class="modal-title" id="myModalLabel">More advanced analytics</h4>
-																</div>
-																<div class="modal-body">
-																	<div class="box box-color box-bordered">
-		<!-- 																<div class="box-title">								
-																			<h3><center>
-																				<i class="icon-table"></i>
-																				REPORT
-																				</center>
-																			</h3>								
-																		</div> -->
-																		<font size="2px" face="Verdana">
-																		<div class="box-content nopadding">
-																			<table class="table table-hover table-nomargin">
-																				<thead>
-																					<tr>
-																						<th colspan=2>[+] Average IC for Search:</th>
-																					</tr>
-																				</thead>
-																				<tbody>
-																					<tr>
-																						<td><?php echo $LanguageICTest->ic_total_results ?></td>
-																						<td>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</td>											
-																					</tr>
-																					<tr>
-																						<th colspan=2>[+] Top <?php echo $listLength ?> lowest IC files:</th>
-																																
-																					</tr>
-																					<?php
-																					$temp = 0;
-																					foreach ($LanguageICTest->results as $key=>$value){
-																						if ($temp == $listLength) break;
-																						echo '<tr>
-																									<td class="">'.$value.'</td>
-																									<td class="">
-																										<font face="Consolas"><b>
-																											'.str_replace($uncompressFolder, "./", $key).'
-																										</b></font>
-																									</td>									
-																								</tr>';
-																						$temp++;
-																					}
-																					?>
-																					<tr>
-																						<th colspan=2>[+] Top <?php echo $listLength ?> entropic files for a given search:</th>
-																															
-																					</tr>
-																					<?php
-																					$temp = 0;
-																					foreach ($EntropyTest->results as $key=>$value){
-																						if ($temp == $listLength) break;
-																						echo '<tr>
-																									<td class="">'.$value.'</td>
-																									<td class="">
-																										<font face="Consolas"><b>
-																											'.str_replace($uncompressFolder, "./", $key).'
-																										</b></font>
-																									</td>									
-																								</tr>';
-																						$temp++;
-																					}
-																					?>
-																					<tr>
-																						<th colspan=2>[+] Top <?php echo $listLength ?> longest word files:</th>
-																																
-																					</tr>
-																					<?php
-																					$temp = 0;
-																					foreach ($LongestWordTest->results as $key=>$value){
-																						if ($temp == $listLength) break;
-																						echo '<tr>
-																									<td class="">'.$value.'</td>
-																									<td class="">
-																										<font face="Consolas"><b>
-																											'.str_replace($uncompressFolder, "./", $key).'
-																										</b></font>
-																									</td>									
-																								</tr>';
-																						$temp++;
-																					}
-																					?>
-																					<tr>
-																						<th colspan=2>[+] Top <?php echo $listLength ?> signature match counts:</th>
-																																
-																					</tr>
-																					<?php
-																					$temp = 0;
-																					foreach ($SignatureNastyTest->results as $key=>$value){
-																						if ($temp == $listLength) break;
-																						echo '<tr>
-																									<td class="">'.$value.'</td>
-																									<td class="">
-																										<font face="Consolas"><b>
-																											'.str_replace($uncompressFolder, "./", $key).'
-																										</b></font>
-																									</td>									
-																								</tr>';
-																						$temp++;
-																					}
-																					?>
-																					<tr>
-																						<th colspan=2>[+] Top <?php echo $listLength ?> SUPER-signature match counts (These are usually bad!):</th>
-																																
-																					</tr>
-																					<?php
-																					$temp = 0;
-																					foreach ($SignatureSuperNastyTest->results as $key=>$value){
-																						if ($temp == $listLength) break;
-																						echo '<tr>
-																									<td class="">'.$value.'</td>
-																									<td class="">
-																										<font face="Consolas"><b>
-																											'.str_replace($uncompressFolder, "./", $key).'
-																										</b></font>
-																									</td>									
-																								</tr>';
-																						$temp++;
-																					}
-																					?>
-																					<tr>
-																						<th colspan=2	>[+] Top cumulative ranked files:</th>
-																																
-																					</tr>
-																					<?php
-																					$temp = 0;
-																					foreach ($rankedList as $key=>$value){
-																						if ($temp == $listLength) break;
-																						echo '<tr>
-																									<td class="">'.$value.'</td>
-																									<td class="">
-																										<font face="Consolas"><b>
-																											'.str_replace($uncompressFolder, "./", $key).'
-																										</b></font>
-																									</td>									
-																								</tr>';
-																						$temp++;
-																					}
-																					?>
-																				</tbody>
-																			</table>
-																		</div>
-																		</font>
-																	</div>
-																</div>
-																<div class="modal-footer">
-																	<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-																</div>
-															</div>
-														</div>
-													</div>
-
+													(<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a>)</font>
 												</td>											
 											</tr>
 											<?php 
@@ -424,7 +272,11 @@
 												echo 'MD5 hash: '.$shellMd5[1].'<br>';
 												echo 'Filesize: '.$shellSize[1].'<br>';
 												echo 'Suspicious functions used: '.html_entity_decode($shellFunctions[1]).'<br>';
-												echo 'Fingerprint: <a>'.$shellFingerPrint[1].'</a>';
+												if ($shellFingerPrint[1] === 'Negative '){
+													echo '<p>Fingerprint: <b style="color:rgb(0, 153, 51)">'.$shellFingerPrint[1].'</b></p>';
+												}else{
+													echo '<p>Fingerprint: <b style="color:red">'.$shellFingerPrint[1].'</b></p>';
+												}
 	    										echo '</font>
 	    												</td>											
 														</tr>';

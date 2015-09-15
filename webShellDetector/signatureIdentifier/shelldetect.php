@@ -364,7 +364,7 @@ class shellDetector {
                 // self::output($this->_implode($matches) . ' (<a>' . $this->t('line:') . ($line + 1) . '</a>);', null, false);
                 // self::output('<div class="hidden source" id="line_' . $lineid . '"><code>' . htmlentities($_content[$line]) . '</code></div>', null, false);
 
-              	self::output($this->_implode($matches) . ' (<a tabindex="0" class="" role="button" data-toggle="popover" data-trigger="focus" title="Line content" data-content="'.htmlentities($_content[$line]).'">' . $this->t('line:') . ($line + 1) . '</a>);', null, false);
+              	self::output($this->_implode($matches) . ' (<a tabindex="0" style="cursor:pointer;" class="" role="button" data-toggle="popover" data-trigger="focus" title="Line content" data-content="'.htmlentities($_content[$line]).'">' . $this->t('line:') . ($line + 1) . '</a>);', null, false);
                 // self::output('<div class="hidden source" id="line_' . $lineid . '"><code>' . htmlentities($_content[$line]) . '</code></div>', null, false);
              
               }
