@@ -295,7 +295,7 @@
 											</td>											
 										</tr>
 										<tr>
-											<th colspan=2>[+] Top '.$listLength.'lowest IC files:</th>
+											<th colspan=2>[+] Top '.$listLength.' lowest IC files:</th>
 										</tr>';
 
 		$temp = 0;
@@ -313,7 +313,7 @@
 		}
 
 		$reportContent= $reportContent.'<tr>
-											<th colspan=2>[+] Top '.$listLength.'entropic files for a given search:</th>
+											<th colspan=2>[+] Top '.$listLength.' entropic files for a given search:</th>
 										</tr>';
 
 		$temp = 0;
@@ -330,7 +330,7 @@
 			$temp++;
 		}
 		$reportContent = $reportContent.'<tr>
-											<th colspan=2>[+] Top '.$listLength.'longest word files:</th>
+											<th colspan=2>[+] Top '.$listLength.' longest word files:</th>
 										</tr>';
 		$temp = 0;
 		foreach ($LongestWordTest->results as $key=>$value){
@@ -347,7 +347,7 @@
 		}
 
 		$reportContent = $reportContent.'<tr>
-											<th colspan=2>[+] Top '.$listLength.'signature match counts:</th>
+											<th colspan=2>[+] Top '.$listLength.' signature match counts:</th>
 										</tr>';
 		$temp = 0;
 		foreach ($SignatureNastyTest->results as $key=>$value){
@@ -363,7 +363,7 @@
 			$temp++;
 		}
 		$reportContent = $reportContent.'<tr>
-											<th colspan=2>[+] Top '.$listLength.'SUPER-signature match counts (These are usually bad!):</th>
+											<th colspan=2>[+] Top '.$listLength.' SUPER-signature match counts (These are usually bad!):</th>
 										</tr>';
 
 		$temp = 0;
