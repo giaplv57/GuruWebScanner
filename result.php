@@ -14,7 +14,6 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<!-- Bootstrap responsive -->
 		<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-		
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="css/style.css">
 		<!-- Color CSS -->
@@ -28,23 +27,6 @@
 		<script src="js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
 		<!-- Bootstrap -->
 		<script src="js/bootstrap.min.js"></script>
-		<!-- font-awesome -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<!-- Easy Modal for bootstrap -->
-		<script src="//rawgit.com/saribe/eModal/master/dist/eModal.min.js"></script>
-
-		<!-- Innitial popover of bootstrap -->
-		<style type="text/css">
-		/* The max width is dependant on the container */
-			.popover{
-			    max-width: 100%; /* Max Width of the popover (depending on the container!) */
-			}
-		</style>
-		<script>
-	        $(document).ready(function(){
-	        	$('[data-toggle="popover"]').popover({animation: true, placement: "top", delay: {show: 100, hide: 100}});   
-	    	});
-	    </script>
 
 		<!--[if lte IE 9]>
 			<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
@@ -143,15 +125,47 @@
 
 					/* wshell result */
 					$wshellResultFile = "./userFiles/".$newFilename."-wshell.result";
-					$command = "php ./webShellDetector/signatureIdentifier/shelldetect.php > ".$wshellResultFile;
+					$command = "php ./webShellDetector/signatureIdentifier/shelldetect.php -d \"userFiles/".$newFilename."/\" > ".$wshellResultFile;
+
 					system($command);
 					$wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper					
 					preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array										
-
+					// echo count($wshellmatches);
 					/* Analytics result*/
 					include("./webShellDetector/shellRanker.php"); 
-					shellRankerMain($newFilename);
 
+					$fileList = fileIterator($uncompressFolder, "");
+					$EntropyTest = new Entropy();
+					$LanguageICTest = new LanguageIC();
+					$LongestWordTest = new LongestWord();
+					$SignatureNastyTest = new SignatureNasty();
+				    $SignatureSuperNastyTest = new SignatureSuperNasty();
+				    // $UsesEvalTest = new UsesEval();
+				    // $CompressionTest = new Compression();
+				    
+					foreach ($fileList as $filename){
+						$data = file_get_contents($filename);
+						$EntropyTest->calculate($filename, $data);
+						$LanguageICTest->calculate($filename, $data);
+						$LongestWordTest->calculate($filename, $data);
+						$SignatureNastyTest->calculate($filename, $data);
+				        $SignatureSuperNastyTest->calculate($filename, $data);
+				        // $UsesEvalTest->calculate($filename, $data);
+				        // $CompressionTest->calculate($filename, $data);
+					}
+					$EntropyTest->sort();
+					$LanguageICTest->sort();
+					$LongestWordTest->sort();
+					$SignatureNastyTest->sort();
+				    $SignatureSuperNastyTest->sort();
+				    // $UsesEvalTest->sort();
+				    // $CompressionTest->sort();
+
+				    asort($GLOBALS['rank_list']);
+				    $count = 10;
+				    if(count($fileList) < $count){
+				    	$count = count($fileList);
+				    }
 					/* Calculate scan time */
 					$stopTime = round(microtime(true) * 1000);
 					$scanTime = $stopTime - $startTime;		
@@ -232,25 +246,226 @@
 														</tr>';
 											}
 											?>
-
-											<!-- Innitial ajax analytic modal -->
-										    <script>
-										       var options = {
-										            url: "./userFiles/<?php echo $newFilename; ?>.analytics",
-										            title:'Result',
-										            size: 'lg',
-										            loadingHtml: '<span class="fa fa-circle-o-notch fa-spin fa-3x text-primary"></span><span class="h4">Loading</span>',
-										            subtitle: 'More advanced analytics',
-										        };
-										    </script>
-
 											<tr>
-												<td>[+] Total Found Webshells:</td>
+												<td>[+] Total Found Webshell:</td>
 												<td>
 													<font face="Consolas"><b>
-														<?php echo count($wshellmatches); ?> suspicious files
+														<?php echo count($wshellmatches); ?> webshell
 													</b>
-													(<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a>)</font>
+													(<a href="#" data-toggle="modal" data-target="#myModal">More advanced analytics</a>)</font>
+													<!-- Modal -->
+													<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+														<div class="modal-dialog" role="document">
+															<div class="modal-content">
+																<div class="modal-header">
+																	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+																	<h4 class="modal-title" id="myModalLabel">More advanced analytics</h4>
+																</div>
+																<div class="modal-body">
+																	<div class="box box-color box-bordered">
+		<!-- 																<div class="box-title">								
+																			<h3><center>
+																				<i class="icon-table"></i>
+																				REPORT
+																				</center>
+																			</h3>								
+																		</div> -->
+																		<font size="2px" face="Verdana">
+																		<div class="box-content nopadding">
+																			<table class="table table-hover table-nomargin">
+																				<thead>
+																					<tr>
+																						<th>[+] Average IC for Search:</th>
+																						<th>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</th>											
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td><?php echo $LanguageICTest->ic_total_results ?></td>
+																						<td>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</td>											
+																					</tr>
+																				</tbody>
+
+																				<thead>
+																					<tr>
+																						<th>[+] Top <?php echo $count ?> lowest IC files:</th>
+																						<th>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</th>											
+																					</tr>
+																				</thead>
+																				<?php
+																				$temp = 0;
+																				foreach ($LanguageICTest->results as $key=>$value){
+																					if ($temp == $count) break;
+																					echo '<tbody>
+																							<tr>
+																								<td>'.$value.'</td>
+																								<td>
+																									<font face="Consolas"><b>
+																										'.str_replace($uncompressFolder, "./", $key).'
+																									</b></font>
+																								</td>									
+																							</tr>
+																						</tbody>';
+																					$temp++;
+																				}
+																				?>
+
+																				<thead>
+																					<tr>
+																						<th>[+] Top <?php echo $count ?> entropic files for a given search:</th>
+																						<th>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</th>											
+																					</tr>
+																				</thead>
+																				<?php
+																				$temp = 0;
+																				foreach ($EntropyTest->results as $key=>$value){
+																					if ($temp == $count) break;
+																					echo '<tbody>
+																							<tr>
+																								<td>'.$value.'</td>
+																								<td>
+																									<font face="Consolas"><b>
+																										'.str_replace($uncompressFolder, "./", $key).'
+																									</b></font>
+																								</td>									
+																							</tr>
+																						</tbody>';
+																					$temp++;
+																				}
+																				?>
+
+																				<thead>
+																					<tr>
+																						<th>[+] Top <?php echo $count ?> longest word files:</th>
+																						<th>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</th>											
+																					</tr>
+																				</thead>
+																				<?php
+																				$temp = 0;
+																				foreach ($LongestWordTest->results as $key=>$value){
+																					if ($temp == $count) break;
+																					echo '<tbody>
+																							<tr>
+																								<td>'.$value.'</td>
+																								<td>
+																									<font face="Consolas"><b>
+																										'.str_replace($uncompressFolder, "./", $key).'
+																									</b></font>
+																								</td>									
+																							</tr>
+																						</tbody>';
+																					$temp++;
+																				}
+																				?>
+
+																				<thead>
+																					<tr>
+																						<th>[+] Top <?php echo $count ?> signature match counts:</th>
+																						<th>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</th>											
+																					</tr>
+																				</thead>
+																				<?php
+																				$temp = 0;
+																				foreach ($SignatureNastyTest->results as $key=>$value){
+																					if ($temp == $count) break;
+																					echo '<tbody>
+																							<tr>
+																								<td>'.$value.'</td>
+																								<td>
+																									<font face="Consolas"><b>
+																										'.str_replace($uncompressFolder, "./", $key).'
+																									</b></font>
+																								</td>									
+																							</tr>
+																						</tbody>';
+																					$temp++;
+																				}
+																				?>
+
+																				<thead>
+																					<tr>
+																						<th>[+] Top <?php echo $count ?> SUPER-signature match counts (These are usually bad!):</th>
+																						<th>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</th>											
+																					</tr>
+																				</thead>
+																				<?php
+																				$temp = 0;
+																				foreach ($SignatureSuperNastyTest->results as $key=>$value){
+																					if ($temp == $count) break;
+																					echo '<tbody>
+																							<tr>
+																								<td>'.$value.'</td>
+																								<td>
+																									<font face="Consolas"><b>
+																										'.str_replace($uncompressFolder, "./", $key).'
+																									</b></font>
+																								</td>									
+																							</tr>
+																						</tbody>';
+																					$temp++;
+																				}
+																				?>
+
+																				<thead>
+																					<tr>
+																						<th>[+] Top cumulative ranked files:</th>
+																						<th>
+																							<font face="Consolas"><b>
+																							</b></font>
+																						</th>											
+																					</tr>
+																				</thead>
+																				<?php
+																				$temp = 0;
+																				foreach ($GLOBALS['rank_list'] as $key=>$value){
+																					if ($temp == $count) break;
+																					echo '<tbody>
+																							<tr>
+																								<td>'.$value.'</td>
+																								<td>
+																									<font face="Consolas"><b>
+																										'.str_replace($uncompressFolder, "./", $key).'
+																									</b></font>
+																								</td>									
+																							</tr>
+																						</tbody>';
+																					$temp++;
+																				}
+																				?>
+
+																			</table>
+																		</div>
+																		</font>
+																	</div>
+																</div>
+																<div class="modal-footer">
+																	<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																</div>
+															</div>
+														</div>
+													</div>
+
 												</td>											
 											</tr>
 											<?php 
@@ -258,26 +473,25 @@
 	    										echo '<tr>
 														<td></td>
 														<td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
-														<font face="Consolas">';
-
-												preg_match('/Suspicious behavior found in: (.*?)&lt;span/', $wshellvalue[0], $shellName);
-												preg_match('/Full path:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellPath);
-												preg_match('/hash:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellMd5);
-												preg_match('/Filesize:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellSize);
-												preg_match('/suspicious functions used:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellFunctions);
-												preg_match('/green&quot;&gt;(.*?)&lt;small/', $wshellvalue[0], $shellFingerPrint);
-
-												echo '<b>Suspicious behavior found in: <a>'.$shellName[1].'</a></b><br>';
-												echo 'Full path: '.$shellPath[1].'<br>';
-												echo 'MD5 hash: '.$shellMd5[1].'<br>';
-												echo 'Filesize: '.$shellSize[1].'<br>';
-												echo 'Suspicious functions used: '.html_entity_decode($shellFunctions[1]).'<br>';
-												if ($shellFingerPrint[1] === 'Negative '){
-													echo '<p>Fingerprint: <b style="color:rgb(0, 153, 51)">'.$shellFingerPrint[1].'</b></p>';
-												}else{
-													echo '<p>Fingerprint: <b style="color:red">'.$shellFingerPrint[1].'</b></p>';
-												}
-	    										echo '</font>
+														<font face="Consolas"><b>';
+	    										// echo $value[0];
+												$wshellvalue[0] = preg_replace('/&lt;dt&gt;/', '<br>', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;\/dt&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;dd&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;\/dd&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;dl&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;\/dl&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;div&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;\/div&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;span(.*?)\/span&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;div(.*?)\/&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;small&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;\/small&gt;/', ' ', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/Submit file/', '', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/\(&lt;a(.*?)&quot;&gt;/', '', $wshellvalue[0]);
+												$wshellvalue[0] = preg_replace('/&lt;\/a&gt;\)(.*?)st&quot;&gt;/', '', $wshellvalue[0]);
+												echo $wshellvalue[0];												
+	    										echo '</b></font>
 	    												</td>											
 														</tr>';
 											}

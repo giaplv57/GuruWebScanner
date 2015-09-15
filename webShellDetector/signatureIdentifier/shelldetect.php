@@ -24,6 +24,7 @@ shellDetector::$_settings = $params;
 $shelldetector = new shellDetector($params);
 
 if ($shelldetector->isConsole()) {
+
   $options = getopt("d:hcb");
   if (array_key_exists("d",$options)) {
     $shelldetector->setDir($options["d"]);
@@ -54,7 +55,7 @@ class shellDetector {
   private $language = '';
 
   //settings: if console used
-  private $console = false;
+  private $console = true;
 
   //settings: if brief info is needed
   private $brief = false;
