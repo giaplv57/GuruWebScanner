@@ -2,7 +2,7 @@
 An On-The-Cloud free "greybox" box scanner for various purposes.
 
 ## Requirements:
-`php 5.6.12` , `mysql`, `Apache/2.4.16`, 'unzip`, `unrar`
+`php 5.6.12` , `mysql`, `Apache/2.4.16`, `unzip`, `unrar`
 
 ## Usage:
 * Create a database named guruWS and import guruWS.sql
