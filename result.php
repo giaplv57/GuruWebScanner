@@ -1,542 +1,317 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<!-- Apple devices fullscreen -->
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<!-- Apple devices fullscreen -->
-		<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		
-		<title>GuruWS :: Free online greybox web scanner</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Apple devices fullscreen -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Apple devices fullscreen -->
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <title>GuruWS :: Free online greybox web scanner</title>
 
-		<!-- Bootstrap -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<!-- Bootstrap responsive -->
-		<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-		<!-- Theme CSS -->
-		<link rel="stylesheet" href="css/style.css">
-		<!-- Color CSS -->
-		<link rel="stylesheet" href="css/themes.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap responsive -->
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="css/themes.css">
 
 
-		<!-- jQuery -->
-		<script src="js/jquery.min.js"></script>
-		
-		<!-- Nice Scroll -->
-		<script src="js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
-		<!-- Bootstrap -->
-		<script src="js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    
+    <!-- Nice Scroll -->
+    <script src="js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Easy Modal for bootstrap -->
+    <script src="//rawgit.com/saribe/eModal/master/dist/eModal.min.js"></script>
 
-		<!--[if lte IE 9]>
-			<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
-			<script>
-				$(document).ready(function() {
-					$('input, textarea').placeholder();
-				});
-			</script>
-		<![endif]-->
-		
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="img/favicon.ico" />
-		<!-- Apple devices Homescreen icon -->
-		<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
-		
-	</head>
+    <!-- Innitial popover of bootstrap -->
+    <style type="text/css">
+    /* The max width is dependant on the container */
+      .popover{
+          max-width: 100%; /* Max Width of the popover (depending on the container!) */
+      }
+    </style>
+    <script>
+          $(document).ready(function(){
+            $('[data-toggle="popover"]').popover({animation: true, placement: "top", delay: {show: 100, hide: 100}});   
+        });
+      </script>
 
-	<body>
-		<?php include("connectdb.php"); ?>
-		<div id="navigation">
-			<div class="container-fluid">
-				<a href="./"><img src="img/logowhite.png" alt="" class='retina-ready' width="200px"></a>					
-			</div>
-		</div>
-		<hr/>
-		
-		<?php
-		//For DEBUG purpose
-		ini_set('display_errors',1); 
-		error_reporting(E_ALL);
-	    //////////////////////////////////
+    <!--[if lte IE 9]>
+      <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          $('input, textarea').placeholder();
+        });
+      </script>
+    <![endif]-->
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <!-- Apple devices Homescreen icon -->
+    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
+    
+  </head>
 
-	    //Calculate folder size
-	    function dirSize($directory) {
-	    $size = 0;
-	    foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory)) as $file){
-	        $size+=$file->getSize();
-	    }
-	    	return $size;
-		} 
-		//////////////////////////////////
+  <body>
+    <?php include("connectdb.php"); ?>
+    <div id="navigation">
+      <div class="container-fluid">
+        <a href="./"><img src="img/logowhite.png" alt="" class='retina-ready' width="200px"></a>          
+      </div>
+    </div>
+    <hr/>
+    
+    <?php
+    //For DEBUG purpose
+    ini_set('display_errors',1); 
+    error_reporting(E_ALL);
+      //////////////////////////////////
+      //Calculate folder size
+      function dirSize($directory) {
+      $size = 0;
+      foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory)) as $file){
+          $size+=$file->getSize();
+      }
+        return $size;
+    } 
+    //////////////////////////////////
+    $report     = 0;
+      if (isset($_POST["submit"])) {
+        $scanTime     = 0;
+          $target_dir   = "./userFiles/";
+          if (is_array($_FILES["userFile"]["name"])) die();
+          $filename     = htmlspecialchars($_FILES["userFile"]["name"]);
+          $compressType = pathinfo($filename, PATHINFO_EXTENSION);                
+      $fileCheckSum = sha1_file($_FILES["userFile"]["tmp_name"]);
+      $resultId     = "";
+      $newFilename  = sha1($fileCheckSum.round(microtime(true) * 1000));
+          $target_file  = $target_dir . $newFilename . "." . $compressType;
+          $uploadOk     = 1;
+          // Check if file already exists
+          if (file_exists($target_file)) {
+              echo '<div class="alert alert-warning col-md-4" role="alert">Error! File already exists.</div>';
+              $uploadOk = 0;
+          }
+          // Check file size
+          if ($_FILES["userFile"]["size"] > 104857600) { //100MB limited
+            echo '<div class="alert alert-warning col-md-4" role="alert">Error! Your file is too large.</div>';
+              $uploadOk = 0;
+          }
+          // Allow certain file formats
+          if ($compressType != "tar" && $compressType != "zip" && $compressType != "rar") {
+            echo '<div class="alert alert-warning col-md-4" role="alert">Error! Only tar, zip or rar file is allowed.</div>';
+              $uploadOk = 0;
+          }
+          // Check if $uploadOk is set to 0 by an error
+          if ($uploadOk == 0 || !move_uploaded_file($_FILES["userFile"]["tmp_name"], $target_file)){
+            echo '<div class="alert alert-danger" role="alert">Sorry, there was errors while uploading your file.</div>';
+          }else{
+            mkdir("userFiles/" . $newFilename, 0777); //can't create contain folder and extract tar file in 1 command
+            $uncompressFolder = "./userFiles/".$newFilename."/";
+              if($compressType == "tar"){   
+          exec("tar -xf ".$target_file." -C ".$uncompressFolder);
+              }else if($compressType == "zip"){
+                exec("unzip ".$target_file." -d ".$uncompressFolder);
+              }else if($compressType == "rar"){
+                exec("unrar x ".$target_file." ".$uncompressFolder);
+              }else{
+                die();
+              }
+              if (file_exists($uncompressFolder) && dirSize($uncompressFolder) > 0){ //Ready for scan
+                $startTime = round(microtime(true) * 1000);
+                /* vul result */
+                $resultFile = "./userFiles/".$newFilename.".result";
+          $command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f; done > ".$resultFile;
+          system($command);                       
+          $resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); //nl2br function to end line as proper          
+          preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array
+          /* wshell result */
+          $wshellResultFile = "./userFiles/".$newFilename."-wshell.result";
+          $command = "php ./webShellDetector/signatureIdentifier/shelldetect.php -d \"userFiles/".$newFilename."/\" > ".$wshellResultFile;
+          system($command);
+          $wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper          
+          preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
+          /* Analytics result*/
+          include("./webShellDetector/shellRanker.php"); 
+          shellRankerMain($newFilename);
+          /* Calculate scan time */
+          $stopTime = round(microtime(true) * 1000);
+          $scanTime = $stopTime - $startTime;   
+                              
+          $report = 1;
+          $con = ConnectDB() or die("can't connect to DB");
+          $resultId = sha1($newFilename);
+          $filename = mysqli_escape_string($con, $filename);          
+          mysqli_query($con,"INSERT INTO reports (id, filename, sha1hash, scantime, newFilename) VALUES ('$resultId', '$filename', '$fileCheckSum', '$scanTime', '$newFilename')") or die(mysqli_error($con));
+        }else{
+          echo "There are problems with your compress file or it's empty.</br>";
+        }
+          }
+      }
+    ?>
+    <?php if($report == 1){ ?>
+    <div class="container-fluid" id="content">    
+      <div id="main">
+        <div class="container-fluid">       
+          <div class="row-fluid">
+            <div class="span10">
+              <div class="box box-color box-bordered">
+                <div class="box-title">               
+                  <h3><center>
+                    <i class="icon-table"></i>
+                    REPORT
+                    </center>
+                  </h3>               
+                </div>
+                <font size="2px" face="Verdana">
+                <div class="box-content nopadding">
+                  <table class="table table-hover table-nomargin">
+                    <thead>
+                      <tr>
+                        <th>[+] File name:</th>
+                        <th>
+                          <font face="Consolas"><b>
+                            <?php echo $filename; ?>
+                          </b></font>
+                        </th>                     
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>[+] SHA-1 hash:</td>
+                        <td>
+                          <font face="Consolas"><b>
+                            <?php echo $fileCheckSum; ?>
+                          </b></font>
+                        </td>                     
+                      </tr>
+                      <tr>
+                        <td>[+] Total scaned time:</td>
+                        <td>
+                          <font face="Consolas"><b>
+                            <?php echo $scanTime/1000; ?> second
+                          </b></font>
+                        </td>                     
+                      </tr>                   
+                      <tr>
+                        <td>[+] Total Found Vulnerabilities:</td>
+                        <td>
+                          <font face="Consolas"><b>
+                            <?php echo count($matches); ?> vulnerabilities
+                          </b></font>
+                        </td>                     
+                      </tr>
+                      <?php 
+                      foreach ($matches as $value) {
+                          echo '<tr>
+                            <td></td>
+                            <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
+                            <font face="Consolas"><b>';
+                          // echo $value[0];
+                        echo substr(preg_replace('/\/var(.*?)'.$newFilename.'/m', '', $value[0]), 0, -13); 
+                          echo '</b></font>
+                              </td>                     
+                            </tr>';
+                      }
+                      ?>
 
-		$report 	  = 0;
-	    if (isset($_POST["submit"])) {
-	    	$scanTime 	  = 0;
-	        $target_dir   = "./userFiles/";
-	        if (is_array($_FILES["userFile"]["name"])) die();
-	        $filename 	  = htmlspecialchars($_FILES["userFile"]["name"]);
-	        $compressType = pathinfo($filename, PATHINFO_EXTENSION);				        
-			$fileCheckSum = sha1_file($_FILES["userFile"]["tmp_name"]);
-			$resultId  	  = "";
-			$newFilename  = sha1($fileCheckSum.round(microtime(true) * 1000));
-	        $target_file  = $target_dir . $newFilename . "." . $compressType;
-	        $uploadOk     = 1;
+                      <!-- Innitial ajax analytic modal -->
+                        <script>
+                           var options = {
+                                url: "./userFiles/<?php echo $newFilename; ?>.analytics",
+                                title:'Result',
+                                size: 'lg',
+                                loadingHtml: '<span class="fa fa-circle-o-notch fa-spin fa-3x text-primary"></span><span class="h4">Loading</span>',
+                                subtitle: 'More advanced analytics',
+                            };
+                        </script>
 
-	        // Check if file already exists
-	        if (file_exists($target_file)) {
-	            echo '<div class="alert alert-warning col-md-4" role="alert">Error! File already exists.</div>';
-	            $uploadOk = 0;
-	        }
-	        // Check file size
-	        if ($_FILES["userFile"]["size"] > 104857600) { //100MB limited
-	        	echo '<div class="alert alert-warning col-md-4" role="alert">Error! Your file is too large.</div>';
-	            $uploadOk = 0;
-	        }
-	        // Allow certain file formats
-	        if ($compressType != "tar" && $compressType != "zip" && $compressType != "rar") {
-	        	echo '<div class="alert alert-warning col-md-4" role="alert">Error! Only tar, zip or rar file is allowed.</div>';
-	            $uploadOk = 0;
-	        }
-	        // Check if $uploadOk is set to 0 by an error
+                      <tr>
+                        <td>[+] Total Found Webshells:</td>
+                        <td>
+                          <font face="Consolas"><b>
+                            <?php echo count($wshellmatches); ?> suspicious files
+                          </b>
+                          (<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a>)</font>
+                        </td>                     
+                      </tr>
+                      <?php 
+                      foreach ($wshellmatches as $wshellvalue) {
+                          echo '<tr>
+                            <td></td>
+                            <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
+                            <font face="Consolas">';
+                        preg_match('/Suspicious behavior found in: (.*?)&lt;span/', $wshellvalue[0], $shellName);
+                        preg_match('/Full path:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellPath);
+                        preg_match('/hash:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellMd5);
+                        preg_match('/Filesize:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellSize);
+                        preg_match('/suspicious functions used:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellFunctions);
+                        preg_match('/green&quot;&gt;(.*?)&lt;small/', $wshellvalue[0], $shellFingerPrint);
+                        echo '<b>Suspicious behavior found in: <a>'.$shellName[1].'</a></b><br>';
+                        echo 'Full path: '.$shellPath[1].'<br>';
+                        echo 'MD5 hash: '.$shellMd5[1].'<br>';
+                        echo 'Filesize: '.$shellSize[1].'<br>';
+                        echo 'Suspicious functions used: '.html_entity_decode($shellFunctions[1]).'<br>';
+                        if ($shellFingerPrint[1] === 'Negative '){
+                          echo '<p>Fingerprint: <b style="color:rgb(0, 153, 51)">'.$shellFingerPrint[1].'</b></p>';
+                        }else{
+                          echo '<p>Fingerprint: <b style="color:red">'.$shellFingerPrint[1].'</b></p>';
+                        }
+                          echo '</font>
+                              </td>                     
+                            </tr>';
+                      }
+                      ?>
 
-	        if ($uploadOk == 0 || !move_uploaded_file($_FILES["userFile"]["tmp_name"], $target_file)){
-	        	echo '<div class="alert alert-danger" role="alert">Sorry, there was errors while uploading your file.</div>';
-	        }else{
-	        	mkdir("userFiles/" . $newFilename, 0777); //can't create contain folder and extract tar file in 1 command
-	        	$uncompressFolder = "./userFiles/".$newFilename."/";
-	            if($compressType == "tar"){ 	
-					exec("tar -xf ".$target_file." -C ".$uncompressFolder);
-	            }else if($compressType == "zip"){
-	            	exec("unzip ".$target_file." -d ".$uncompressFolder);
-	            }else if($compressType == "rar"){
-	            	exec("unrar x ".$target_file." ".$uncompressFolder);
-	            }else{
-	            	die();
-	            }
-	            if (file_exists($uncompressFolder) && dirSize($uncompressFolder) > 0){ //Ready for scan
-	            	$startTime = round(microtime(true) * 1000);
+                      <tr>
+                        <td>[+] Link to share:</td>                     
+                        <td>
+                          <font face="Consolas"><b>
+                            <a href="./share.php?id=<?php echo $resultId ?> " >http://guru.ws/share.php?id=<?php echo $resultId ?>
+                          </b></font>
+                        </td>                     
 
-	            	/* vul result */
-	            	$resultFile = "./userFiles/".$newFilename.".result";
-					$command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f; done > ".$resultFile;
-					system($command);												
-					$resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); //nl2br function to end line as proper					
-					preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array
-
-					/* wshell result */
-					$wshellResultFile = "./userFiles/".$newFilename."-wshell.result";
-					$command = "php ./webShellDetector/signatureIdentifier/shelldetect.php -d \"userFiles/".$newFilename."/\" > ".$wshellResultFile;
-
-					system($command);
-					$wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper					
-					preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array										
-					// echo count($wshellmatches);
-					/* Analytics result*/
-					include("./webShellDetector/shellRanker.php"); 
-
-					$fileList = fileIterator($uncompressFolder, "");
-					$EntropyTest = new Entropy();
-					$LanguageICTest = new LanguageIC();
-					$LongestWordTest = new LongestWord();
-					$SignatureNastyTest = new SignatureNasty();
-				    $SignatureSuperNastyTest = new SignatureSuperNasty();
-				    // $UsesEvalTest = new UsesEval();
-				    // $CompressionTest = new Compression();
-				    
-					foreach ($fileList as $filename){
-						$data = file_get_contents($filename);
-						$EntropyTest->calculate($filename, $data);
-						$LanguageICTest->calculate($filename, $data);
-						$LongestWordTest->calculate($filename, $data);
-						$SignatureNastyTest->calculate($filename, $data);
-				        $SignatureSuperNastyTest->calculate($filename, $data);
-				        // $UsesEvalTest->calculate($filename, $data);
-				        // $CompressionTest->calculate($filename, $data);
-					}
-					$EntropyTest->sort();
-					$LanguageICTest->sort();
-					$LongestWordTest->sort();
-					$SignatureNastyTest->sort();
-				    $SignatureSuperNastyTest->sort();
-				    // $UsesEvalTest->sort();
-				    // $CompressionTest->sort();
-
-				    asort($GLOBALS['rank_list']);
-				    $count = 10;
-				    if(count($fileList) < $count){
-				    	$count = count($fileList);
-				    }
-					/* Calculate scan time */
-					$stopTime = round(microtime(true) * 1000);
-					$scanTime = $stopTime - $startTime;		
-															
-					$report = 1;
-					$con = ConnectDB() or die("can't connect to DB");
-					$resultId = sha1($newFilename);
-					$filename = mysqli_escape_string($con, $filename);					
-					mysqli_query($con,"INSERT INTO reports (id, filename, sha1hash, scantime, newFilename) VALUES ('$resultId', '$filename', '$fileCheckSum', '$scanTime', '$newFilename')") or die(mysqli_error($con));
-				}else{
-					echo "There are problems with your compress file or it's empty.</br>";
-				}
-	        }
-	    }
-		?>
-		<?php if($report == 1){ ?>
-		<div class="container-fluid" id="content">		
-			<div id="main">
-				<div class="container-fluid">				
-					<div class="row-fluid">
-						<div class="span10">
-							<div class="box box-color box-bordered">
-								<div class="box-title">								
-									<h3><center>
-										<i class="icon-table"></i>
-										REPORT
-										</center>
-									</h3>								
-								</div>
-								<font size="2px" face="Verdana">
-								<div class="box-content nopadding">
-									<table class="table table-hover table-nomargin">
-										<thead>
-											<tr>
-												<th>[+] File name:</th>
-												<th>
-													<font face="Consolas"><b>
-														<?php echo $filename; ?>
-													</b></font>
-												</th>											
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>[+] SHA-1 hash:</td>
-												<td>
-													<font face="Consolas"><b>
-														<?php echo $fileCheckSum; ?>
-													</b></font>
-												</td>											
-											</tr>
-											<tr>
-												<td>[+] Total scaned time:</td>
-												<td>
-													<font face="Consolas"><b>
-														<?php echo $scanTime/1000; ?> second
-													</b></font>
-												</td>											
-											</tr>										
-											<tr>
-												<td>[+] Total Found Vulnerabilities:</td>
-												<td>
-													<font face="Consolas"><b>
-														<?php echo count($matches); ?> vulnerabilities
-													</b></font>
-												</td>											
-											</tr>
-											<?php 
-											foreach ($matches as $value) {
-	    										echo '<tr>
-														<td></td>
-														<td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
-														<font face="Consolas"><b>';
-	    										// echo $value[0];
-												echo substr(preg_replace('/\/var(.*?)'.$newFilename.'/m', '', $value[0]), 0, -13); 
-	    										echo '</b></font>
-	    												</td>											
-														</tr>';
-											}
-											?>
-											<tr>
-												<td>[+] Total Found Webshell:</td>
-												<td>
-													<font face="Consolas"><b>
-														<?php echo count($wshellmatches); ?> webshell
-													</b>
-													(<a href="#" data-toggle="modal" data-target="#myModal">More advanced analytics</a>)</font>
-													<!-- Modal -->
-													<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-														<div class="modal-dialog" role="document">
-															<div class="modal-content">
-																<div class="modal-header">
-																	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-																	<h4 class="modal-title" id="myModalLabel">More advanced analytics</h4>
-																</div>
-																<div class="modal-body">
-																	<div class="box box-color box-bordered">
-		<!-- 																<div class="box-title">								
-																			<h3><center>
-																				<i class="icon-table"></i>
-																				REPORT
-																				</center>
-																			</h3>								
-																		</div> -->
-																		<font size="2px" face="Verdana">
-																		<div class="box-content nopadding">
-																			<table class="table table-hover table-nomargin">
-																				<thead>
-																					<tr>
-																						<th>[+] Average IC for Search:</th>
-																						<th>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</th>											
-																					</tr>
-																				</thead>
-																				<tbody>
-																					<tr>
-																						<td><?php echo $LanguageICTest->ic_total_results ?></td>
-																						<td>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</td>											
-																					</tr>
-																				</tbody>
-
-																				<thead>
-																					<tr>
-																						<th>[+] Top <?php echo $count ?> lowest IC files:</th>
-																						<th>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</th>											
-																					</tr>
-																				</thead>
-																				<?php
-																				$temp = 0;
-																				foreach ($LanguageICTest->results as $key=>$value){
-																					if ($temp == $count) break;
-																					echo '<tbody>
-																							<tr>
-																								<td>'.$value.'</td>
-																								<td>
-																									<font face="Consolas"><b>
-																										'.str_replace($uncompressFolder, "./", $key).'
-																									</b></font>
-																								</td>									
-																							</tr>
-																						</tbody>';
-																					$temp++;
-																				}
-																				?>
-
-																				<thead>
-																					<tr>
-																						<th>[+] Top <?php echo $count ?> entropic files for a given search:</th>
-																						<th>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</th>											
-																					</tr>
-																				</thead>
-																				<?php
-																				$temp = 0;
-																				foreach ($EntropyTest->results as $key=>$value){
-																					if ($temp == $count) break;
-																					echo '<tbody>
-																							<tr>
-																								<td>'.$value.'</td>
-																								<td>
-																									<font face="Consolas"><b>
-																										'.str_replace($uncompressFolder, "./", $key).'
-																									</b></font>
-																								</td>									
-																							</tr>
-																						</tbody>';
-																					$temp++;
-																				}
-																				?>
-
-																				<thead>
-																					<tr>
-																						<th>[+] Top <?php echo $count ?> longest word files:</th>
-																						<th>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</th>											
-																					</tr>
-																				</thead>
-																				<?php
-																				$temp = 0;
-																				foreach ($LongestWordTest->results as $key=>$value){
-																					if ($temp == $count) break;
-																					echo '<tbody>
-																							<tr>
-																								<td>'.$value.'</td>
-																								<td>
-																									<font face="Consolas"><b>
-																										'.str_replace($uncompressFolder, "./", $key).'
-																									</b></font>
-																								</td>									
-																							</tr>
-																						</tbody>';
-																					$temp++;
-																				}
-																				?>
-
-																				<thead>
-																					<tr>
-																						<th>[+] Top <?php echo $count ?> signature match counts:</th>
-																						<th>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</th>											
-																					</tr>
-																				</thead>
-																				<?php
-																				$temp = 0;
-																				foreach ($SignatureNastyTest->results as $key=>$value){
-																					if ($temp == $count) break;
-																					echo '<tbody>
-																							<tr>
-																								<td>'.$value.'</td>
-																								<td>
-																									<font face="Consolas"><b>
-																										'.str_replace($uncompressFolder, "./", $key).'
-																									</b></font>
-																								</td>									
-																							</tr>
-																						</tbody>';
-																					$temp++;
-																				}
-																				?>
-
-																				<thead>
-																					<tr>
-																						<th>[+] Top <?php echo $count ?> SUPER-signature match counts (These are usually bad!):</th>
-																						<th>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</th>											
-																					</tr>
-																				</thead>
-																				<?php
-																				$temp = 0;
-																				foreach ($SignatureSuperNastyTest->results as $key=>$value){
-																					if ($temp == $count) break;
-																					echo '<tbody>
-																							<tr>
-																								<td>'.$value.'</td>
-																								<td>
-																									<font face="Consolas"><b>
-																										'.str_replace($uncompressFolder, "./", $key).'
-																									</b></font>
-																								</td>									
-																							</tr>
-																						</tbody>';
-																					$temp++;
-																				}
-																				?>
-
-																				<thead>
-																					<tr>
-																						<th>[+] Top cumulative ranked files:</th>
-																						<th>
-																							<font face="Consolas"><b>
-																							</b></font>
-																						</th>											
-																					</tr>
-																				</thead>
-																				<?php
-																				$temp = 0;
-																				foreach ($GLOBALS['rank_list'] as $key=>$value){
-																					if ($temp == $count) break;
-																					echo '<tbody>
-																							<tr>
-																								<td>'.$value.'</td>
-																								<td>
-																									<font face="Consolas"><b>
-																										'.str_replace($uncompressFolder, "./", $key).'
-																									</b></font>
-																								</td>									
-																							</tr>
-																						</tbody>';
-																					$temp++;
-																				}
-																				?>
-
-																			</table>
-																		</div>
-																		</font>
-																	</div>
-																</div>
-																<div class="modal-footer">
-																	<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-																</div>
-															</div>
-														</div>
-													</div>
-
-												</td>											
-											</tr>
-											<?php 
-											foreach ($wshellmatches as $wshellvalue) {
-	    										echo '<tr>
-														<td></td>
-														<td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
-														<font face="Consolas"><b>';
-	    										// echo $value[0];
-												$wshellvalue[0] = preg_replace('/&lt;dt&gt;/', '<br>', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;\/dt&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;dd&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;\/dd&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;dl&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;\/dl&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;div&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;\/div&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;span(.*?)\/span&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;div(.*?)\/&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;small&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;\/small&gt;/', ' ', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/Submit file/', '', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/\(&lt;a(.*?)&quot;&gt;/', '', $wshellvalue[0]);
-												$wshellvalue[0] = preg_replace('/&lt;\/a&gt;\)(.*?)st&quot;&gt;/', '', $wshellvalue[0]);
-												echo $wshellvalue[0];												
-	    										echo '</b></font>
-	    												</td>											
-														</tr>';
-											}
-											?>
-
-											<tr>
-												<td>[+] Link to share:</td>											
-												<td>
-													<font face="Consolas"><b>
-														<a href="./share.php?id=<?php echo $resultId ?> " >http://guru.ws/share.php?id=<?php echo $resultId ?>
-													</b></font>
-												</td>											
-
-											</tr>
-										</tbody>
-									</table>								
-									<hr/>
-									<!--
-									<div align="center">
-										<form action="" class='form-horizontal'>									
-										<button name="rescan" type='submit' class='btn btn btn-success'><i class="icon-search"></i> RESCAN</button>								
-										<button name="print" type='submit' class='btn btn btn-primary'>PRINT <i class="icon-print"></i></button>				
-									</form>
-									-->
-									
-								</div>
-								</div>							
-							</div>
-							</font>
-						</div>
-					</div>				
-				</div>
-			</div>
-		</div>
-		<?php } ?>
-		<hr/>
-		<div id="footer">
-			<div class="container">
-			<p>Powered by GuruWS Team<span class="font-grey-4">|</span> <a href="#">Contact</a> <span class="font-grey-4">|</span> <a href="#">Donate</a> 
-			</p>
-			</div>
-			<a href="#" class="gototop"><i class="icon-arrow-up"></i></a>
-		</div>
-		
-	</body>
+                      </tr>
+                    </tbody>
+                  </table>                
+                  <hr/>
+                  <!--
+                  <div align="center">
+                    <form action="" class='form-horizontal'>                  
+                    <button name="rescan" type='submit' class='btn btn btn-success'><i class="icon-search"></i> RESCAN</button>               
+                    <button name="print" type='submit' class='btn btn btn-primary'>PRINT <i class="icon-print"></i></button>        
+                  </form>
+                  -->
+                  
+                </div>
+                </div>              
+              </div>
+              </font>
+            </div>
+          </div>        
+        </div>
+      </div>
+    </div>
+    <?php } ?>
+    <hr/>
+    <div id="footer">
+      <div class="container">
+      <p>Powered by GuruWS Team<span class="font-grey-4">|</span> <a href="#">Contact</a> <span class="font-grey-4">|</span> <a href="#">Donate</a> 
+      </p>
+      </div>
+      <a href="#" class="gototop"><i class="icon-arrow-up"></i></a>
+    </div>
+    
+  </body>
 
 </html>
-
