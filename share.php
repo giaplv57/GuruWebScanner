@@ -201,7 +201,7 @@
                         preg_match('/suspicious functions used:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellFunctions);
                         preg_match('/green&quot;&gt;(.*?)&lt;small/', $wshellvalue[0], $shellFingerPrint);
                         echo '<b>Suspicious behavior found in: <a>'.$shellName[1].'</a></b><br>';
-                        echo 'Full path: '.$shellPath[1].'<br>';
+                        echo 'Full path: '.preg_replace('/userFiles(.*?)\/\//m', './', $shellPath[1]).'<br>';
                         echo 'MD5 hash: '.$shellMd5[1].'<br>';
                         echo 'Filesize: '.$shellSize[1].'<br>';
                         echo 'Suspicious functions used: '.html_entity_decode($shellFunctions[1]).'<br>';
