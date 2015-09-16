@@ -27,7 +27,8 @@
 		<script src="js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
 		<!-- Bootstrap -->
 		<script src="js/bootstrap.min.js"></script>
-
+    <!-- Easy Modal for bootstrap -->
+    <script src="//rawgit.com/saribe/eModal/master/dist/eModal.min.js"></script>
 		<!--[if lte IE 9]>
 			<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
 			<script>
@@ -90,11 +91,20 @@
 
 				//The PREG_SET_ORDER flag to ensure result appropriately distribute to array
 				preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);
+
+
+				$wshellResultFile = "./userFiles/".$newFilename."-wshell.result";
+				$wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper          
+				preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
+
 				$report = 1;
 			}
 		}
 		?>
 		<?php if($report == 1){ ?>
+
+
+
 		<div class="container-fluid" id="content">		
 			<div id="main">
 				<div class="container-fluid">				
@@ -158,6 +168,64 @@
 														</tr>';
 											}
 											?>
+											<!-- Innitial ajax analytic modal -->
+                        <script>
+                           var options = {
+                                url: "./userFiles/<?php echo $newFilename; ?>.analytics",
+                                title:'Result',
+                                size: 'lg',
+                                loadingHtml: '<span class="fa fa-circle-o-notch fa-spin fa-3x text-primary"></span><span class="h4">Loading</span>',
+                                subtitle: 'More advanced analytics',
+                            };
+                        </script>
+
+                      <tr>
+                        <td>[+] Total Found Webshells:</td>
+                        <td>
+                          <font face="Consolas"><b>
+                            <?php echo count($wshellmatches); ?> suspicious files
+                          </b>
+                          (<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a>)</font>
+                        </td>                     
+                      </tr>
+                        <?php 
+                      foreach ($wshellmatches as $wshellvalue) {
+                          echo '<tr>
+                            <td></td>
+                            <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
+                            <font face="Consolas">';
+                        preg_match('/Suspicious behavior found in: (.*?)&lt;span/', $wshellvalue[0], $shellName);
+                        preg_match('/Full path:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellPath);
+                        preg_match('/hash:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellMd5);
+                        preg_match('/Filesize:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellSize);
+                        preg_match('/suspicious functions used:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellFunctions);
+                        preg_match('/green&quot;&gt;(.*?)&lt;small/', $wshellvalue[0], $shellFingerPrint);
+                        echo '<b>Suspicious behavior found in: <a>'.$shellName[1].'</a></b><br>';
+                        echo 'Full path: '.$shellPath[1].'<br>';
+                        echo 'MD5 hash: '.$shellMd5[1].'<br>';
+                        echo 'Filesize: '.$shellSize[1].'<br>';
+                        echo 'Suspicious functions used: '.html_entity_decode($shellFunctions[1]).'<br>';
+                        if ($shellFingerPrint[1] === 'Negative '){
+                          echo '<p>Fingerprint: <b style="color:rgb(0, 153, 51)">'.$shellFingerPrint[1].'</b></p>';
+                        }else{
+                          echo '<p>Fingerprint: <b style="color:red">'.$shellFingerPrint[1].'</b></p>';
+                        }
+                          echo '</font>
+                              </td>                     
+                            </tr>';
+                      }
+                      ?>
+
+                      <tr>
+                        <td>[+] Link to share:</td>                     
+                        <td>
+                          <font face="Consolas"><b>
+                            <a href="./share.php?id=<?php echo $id ?> " >http://guru.ws/share.php?id=<?php echo $id ?>
+                          </b></font>
+                        </td>                     
+
+                      </tr>
+
 										</tbody>
 									</table>								
 									<hr/>
