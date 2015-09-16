@@ -73,9 +73,9 @@
     
     <?php
     //For DEBUG purpose
-    ini_set('display_errors',1); 
-    error_reporting(E_ALL);
-      //////////////////////////////////
+    // ini_set('display_errors',1); 
+    // error_reporting(E_ALL);
+    //////////////////////////////////
       //Calculate folder size
       function dirSize($directory) {
       $size = 0;
@@ -131,7 +131,7 @@
                 $startTime = round(microtime(true) * 1000);
                 /* vul result */
                 $resultFile = "./userFiles/".$newFilename.".result";
-          $command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f; done > ".$resultFile;
+          $command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f & PID=\$!; sleep 3s; kill \$PID; done > ".$resultFile;
           system($command);                       
           $resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); //nl2br function to end line as proper          
           preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array
