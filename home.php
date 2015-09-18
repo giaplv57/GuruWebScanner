@@ -55,6 +55,13 @@
 		    };
 
 		</script>
+		<style type="text/css">
+			#footer {
+				position: fixed;
+				width: 100%;
+				bottom: 0;
+			}
+		</style>
 	</head>
 	<body class='error'>		
 		<div class="container-fluid" id="content">
