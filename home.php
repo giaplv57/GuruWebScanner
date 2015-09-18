@@ -49,7 +49,8 @@
 		        oFReader.readAsDataURL(document.getElementById("sourcecode").files[0]);
 
 		        oFReader.onload = function (oFREvent) {
-		            document.getElementById("uploadPreview").value = "Press scan button..." //oFREvent.target.result;
+		            document.getElementById("uploadPreview").value = "Press scan button..."; //oFREvent.target.result;
+		            $("#scanbutton").removeClass('hidden'); //oFREvent.target.result;
 		        };
 		    };
 
@@ -80,7 +81,7 @@
 					<br><br>
 					<div class="buttons" align="center">
 						<div class="pull-center">
-							<button class="btn btn-success btn" type="submit" name="submit">SCAN <i class="icon-search"></i></button>
+							<button class="btn btn-success btn hidden" id="scanbutton" type="submit" name="submit">SCAN <i class="icon-search"></i></button>
 						</div>
 					</div>
 				</form>			
