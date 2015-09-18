@@ -61,6 +61,7 @@
 				width: 100%;
 				bottom: 0;
 			}
+			body { background:  url("img/bg.png") !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
 		</style>
 	</head>
 	<body class='error'>		
