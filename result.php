@@ -72,92 +72,63 @@
     <hr/>
     
     <?php
-    //For DEBUG purpose
+    // For DEBUG purpose
     // ini_set('display_errors',1); 
     // error_reporting(E_ALL);
-    //////////////////////////////////
+    ////////////////////////////////
       //Calculate folder size
-      function dirSize($directory) {
+    function dirSize($directory) {
       $size = 0;
       foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory)) as $file){
-          $size+=$file->getSize();
+        $size+=$file->getSize();
       }
-        return $size;
+      return $size;
     } 
     //////////////////////////////////
-    $report     = 0;
-      if (isset($_POST["submit"])) {
-        $scanTime     = 0;
-          $target_dir   = "./userFiles/";
-          if (is_array($_FILES["userFile"]["name"])) die();
-          $filename     = htmlspecialchars($_FILES["userFile"]["name"]);
-          $compressType = pathinfo($filename, PATHINFO_EXTENSION);                
-      $fileCheckSum = sha1_file($_FILES["userFile"]["tmp_name"]);
+    $report = 0;
+    if (isset($_COOKIE["fileID"]) && isset($_COOKIE["fileName"])) {
+      $scanTime     = 0;
+      $target_dir   = "./userFiles/";
+      $filename     = $_COOKIE["fileName"];
+      $compressType = pathinfo($filename, PATHINFO_EXTENSION);                
       $resultId     = "";
-      $newFilename  = sha1($fileCheckSum.round(microtime(true) * 1000));
-          $target_file  = $target_dir . $newFilename . "." . $compressType;
-          $uploadOk     = 1;
-          // Check if file already exists
-          if (file_exists($target_file)) {
-              echo '<div class="alert alert-warning col-md-4" role="alert">Error! File already exists.</div>';
-              $uploadOk = 0;
-          }
-          // Check file size
-          if ($_FILES["userFile"]["size"] > 104857600) { //100MB limited
-            echo '<div class="alert alert-warning col-md-4" role="alert">Error! Your file is too large.</div>';
-              $uploadOk = 0;
-          }
-          // Allow certain file formats
-          if ($compressType != "tar" && $compressType != "zip" && $compressType != "rar") {
-            echo '<div class="alert alert-warning col-md-4" role="alert">Error! Only tar, zip or rar file is allowed.</div>';
-              $uploadOk = 0;
-          }
-          // Check if $uploadOk is set to 0 by an error
-          if ($uploadOk == 0 || !move_uploaded_file($_FILES["userFile"]["tmp_name"], $target_file)){
-            echo '<div class="alert alert-danger" role="alert">Sorry, there was errors while uploading your file.</div>';
-          }else{
-            mkdir("userFiles/" . $newFilename, 0777); //can't create contain folder and extract tar file in 1 command
-            $uncompressFolder = "./userFiles/".$newFilename."/";
-              if($compressType == "tar"){   
-          exec("tar -xf ".$target_file." -C ".$uncompressFolder);
-              }else if($compressType == "zip"){
-                exec("unzip ".$target_file." -d ".$uncompressFolder);
-              }else if($compressType == "rar"){
-                exec("unrar x ".$target_file." ".$uncompressFolder);
-              }else{
-                die();
-              }
-              if (file_exists($uncompressFolder) && dirSize($uncompressFolder) > 0){ //Ready for scan
-                $startTime = round(microtime(true) * 1000);
-                /* vul result */
-                $resultFile = "./userFiles/".$newFilename.".result";
-          $command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f & PID=\$!; sleep 3s; kill \$PID; done > ".$resultFile;
-          exec($command);                       
-          $resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); //nl2br function to end line as proper          
-          preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array
-          /* wshell result */
-          $wshellResultFile = "./userFiles/".$newFilename."-wshell.result";
-          $command = "php ./webShellDetector/signatureIdentifier/shelldetect.php -d \"userFiles/".$newFilename."/\" > ".$wshellResultFile;
-          system($command);
-          $wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper          
-          preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
-          /* Analytics result*/
-          include("./webShellDetector/shellRanker.php"); 
-          shellRankerMain($newFilename);
-          /* Calculate scan time */
-          $stopTime = round(microtime(true) * 1000);
-          $scanTime = $stopTime - $startTime;   
-                              
-          $report = 1;
-          $con = ConnectDB() or die("can't connect to DB");
-          $resultId = sha1($newFilename);
-          $filename = mysqli_escape_string($con, $filename);          
-          mysqli_query($con,"INSERT INTO reports (id, filename, sha1hash, scantime, newFilename) VALUES ('$resultId', '$filename', '$fileCheckSum', '$scanTime', '$newFilename')") or die(mysqli_error($con));
-        }else{
-          echo "There are problems with your compress file or it's empty.</br>";
-        }
-          }
+      $newFilename  = $_COOKIE["fileID"];
+      $fileCheckSum = sha1_file($target_dir.$newFilename.".".$compressType);
+      $uncompressFolder = $target_dir.$newFilename."/";
+
+      if (file_exists($uncompressFolder) && dirSize($uncompressFolder) > 0){ //Ready for scan
+        $startTime = round(microtime(true) * 1000);
+        /* vul result */
+        $resultFile = "./userFiles/".$newFilename.".result";
+
+        // DON'T DELETE THIS LINE
+        // $command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f & PID=\$!; sleep 2s; kill \$PID; done > ".$resultFile;
+        $command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f; done > ".$resultFile;
+        exec($command);                       
+        $resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); //nl2br function to end line as proper          
+        preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array
+        /* wshell result */
+        $wshellResultFile = "./userFiles/".$newFilename."-wshell.result";
+        $command = "php ./webShellDetector/signatureIdentifier/shelldetect.php -d \"userFiles/".$newFilename."/\" > ".$wshellResultFile;
+        system($command);
+        $wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper          
+        preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
+        /* Analytics result*/
+        include("./webShellDetector/shellRanker.php"); 
+        shellRankerMain($newFilename);
+        /* Calculate scan time */
+        $stopTime = round(microtime(true) * 1000);
+        $scanTime = $stopTime - $startTime;   
+
+        $report = 1;
+        $con = ConnectDB() or die("can't connect to DB");
+        $resultId = sha1($newFilename);
+        $filename = mysqli_escape_string($con, $filename);          
+        mysqli_query($con,"INSERT INTO reports (id, filename, sha1hash, scantime, newFilename) VALUES ('$resultId', '$filename', '$fileCheckSum', '$scanTime', '$newFilename')") or die(mysqli_error($con));
+      }else{
+        echo "There are problems with your compress file or it's empty.</br>";
       }
+    }
     ?>
     <?php if($report == 1){ ?>
     <div class="container-fluid" id="content">    

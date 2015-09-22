@@ -22,7 +22,7 @@
 
 		<!-- jQuery -->
 		<script src="js/jquery.min.js"></script>
-		
+		<script src="http://malsup.github.com/jquery.form.js"></script>
 		<!-- Nice Scroll -->
 		<script src="js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
 		<!-- Bootstrap -->
@@ -43,7 +43,6 @@
 		<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
 
 		<script type="text/javascript">
-
 		    function PreviewImage() {
 		        var oFReader = new FileReader();
 		        oFReader.readAsDataURL(document.getElementById("sourcecode").files[0]);
@@ -54,6 +53,9 @@
 		        };
 		    };
 
+		    function showUploadBar(){
+		    	$("#uploadBar").removeClass('hidden');
+		    }
 		</script>
 		<style type="text/css">
 			#footer {
@@ -63,6 +65,17 @@
 			}
 			body { background:  url("img/bg.png") !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
 		</style>
+
+		<!-- FOR UPLOAD BAR -->
+		<style>
+/*			body { padding: 30px }
+			form { display: block; margin: 20px auto; background: #eee; border-radius: 10px; padding: 15px }
+*/
+			.progress { position:relative; width:300px; border: 1px solid #FF7800; padding: 1px; border-radius: 3px; }
+			.bar { background-color: #FF7800; width:0%; height:20px; border-radius: 3px; }
+			.percent { position:absolute; display:inline-block; top:2px; left:48%; }
+		</style>
+
 	</head>
 	<body class='error'>		
 		<div class="container-fluid" id="content">
@@ -76,7 +89,7 @@
 					</font>
 				</div>
 				<hr/>
-				<form action="result.php" class='form-horizontal' method="post" enctype="multipart/form-data">
+				<form action="upload.php" class='form-horizontal' method="post" enctype="multipart/form-data">
 					<div class="input-append">
 						<input type="text" name="search" id="uploadPreview" placeholder="Select a compressed file...">						
 						<span class="btn btn-file">
@@ -89,10 +102,15 @@
 					<br><br>
 					<div class="buttons" align="center">
 						<div class="pull-center">
-							<button class="btn btn-success btn hidden" id="scanbutton" type="submit" name="submit">SCAN <i class="icon-search"></i></button>
+							<button class="btn btn-success btn hidden" onclick="showUploadBar()" id="scanbutton" type="submit" name="submit">SCAN <i class="icon-search"></i></button>
 						</div>
 					</div>
 				</form>			
+				<div class="progress hidden" id="uploadBar"> <!-- hidden -->
+	        <div class="bar"></div >
+	        <div class="percent">0%</div >
+			  </div>
+			  <p id="errorMessage" class="hidden"></p>
 			</div>
 		</div>
 		<div id="footer">
@@ -103,4 +121,46 @@
 			<a href="#" class="gototop"><i class="icon-arrow-up"></i></a>
 		</div>
 	</body>
+
+	<!-- FOR UPLOAD BAR -->
+	<script src="http://malsup.github.com/jquery.form.js"></script>
+	<script>
+		(function() {
+		var bar = $('.bar');
+		var percent = $('.percent');
+		var status = $('#status');
+		   
+		$('form').ajaxForm({
+		    beforeSend: function() {
+		        status.empty();
+		        var percentVal = '0%';
+		        bar.width(percentVal)
+		        percent.html(percentVal);
+		    },
+		    uploadProgress: function(event, position, total, percentComplete) {
+		        var percentVal = percentComplete + '%';
+		        bar.width(percentVal)
+		        percent.html(percentVal);
+		    //console.log(percentVal, position, total);
+		    },
+		    success: function() {
+		        var percentVal = '100%';
+		        bar.width(percentVal)
+		        percent.html(percentVal);
+		        // window.location.href = "/376"; 
+		    },
+		  complete: function(xhr) {
+		    if (xhr.responseText == "1") {
+		    	window.location.href = "./result.php";
+		    }else{
+		    	// $("#uploadBar").addClass('hidden');
+		    	$("#errorMessage").removeClass('hidden');
+		    	document.getElementById("errorMessage").innerHTML = xhr.responseText;
+		    }
+		    // console.log(xhr.responseText);
+		  }
+		}); 
+
+		})();       
+	</script>
 </html>
