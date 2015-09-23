@@ -22,7 +22,6 @@
 
 		<!-- jQuery -->
 		<script src="js/jquery.min.js"></script>
-		<script src="http://malsup.github.com/jquery.form.js"></script>
 		<!-- Nice Scroll -->
 		<script src="js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
 		<!-- Bootstrap -->
@@ -68,9 +67,6 @@
 
 		<!-- FOR UPLOAD BAR -->
 		<style>
-/*			body { padding: 30px }
-			form { display: block; margin: 20px auto; background: #eee; border-radius: 10px; padding: 15px }
-*/
 			.progress { position:relative; width:300px; border: 1px solid #FF7800; padding: 1px; border-radius: 3px; }
 			.bar { background-color: #FF7800; width:0%; height:20px; border-radius: 3px; }
 			.percent { position:absolute; display:inline-block; top:2px; left:48%; }
@@ -123,7 +119,7 @@
 	</body>
 
 	<!-- FOR UPLOAD BAR -->
-	<script src="http://malsup.github.com/jquery.form.js"></script>
+	<script src="js/jquery.form.js"></script>
 	<script>
 		(function() {
 		var bar = $('.bar');
@@ -150,7 +146,8 @@
 		        // window.location.href = "/376"; 
 		    },
 		  complete: function(xhr) {
-		    if (xhr.responseText == "1") {
+		  	// console.log(xhr.responseText);
+		    if ($.trim(xhr.responseText) == "1") {
 		    	window.location.href = "./result.php";
 		    }else{
 		    	// $("#uploadBar").addClass('hidden');

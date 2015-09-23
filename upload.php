@@ -1,6 +1,5 @@
+
 <?php 
-  // session_start();
-// var_dump($_POST["submit"]);
   if (isset($_POST["submit"])) {
     if (is_array($_FILES["userFile"]["name"])) die();
     $filename     = htmlspecialchars($_FILES["userFile"]["name"]);  
@@ -39,8 +38,8 @@
         // die();
       }
       // setcookie("checksum", $fileCheckSum, time() + (86400), "/"); #ONE DAY COOKIE
-      setcookie("fileID", $newFilename, time() + (86400), "/"); #ONE DAY COOKIE
-      setcookie("fileName", $filename, time() + (86400), "/"); #ONE DAY COOKIE
+      setcookie("fileID", $newFilename, time() + (86400/2), "/"); #HALF DAY COOKIE
+      setcookie("fileName", $filename, time() + (86400/2), "/"); #HALF DAY COOKIE
       echo $uploadOk;
     }
   }

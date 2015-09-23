@@ -31,7 +31,7 @@
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Easy Modal for bootstrap -->
-    <script src="//rawgit.com/saribe/eModal/master/dist/eModal.min.js"></script>
+    <script src="js/eModal.min.js"></script>
 
     <!-- Innitial popover of bootstrap -->
     <style type="text/css">
@@ -41,10 +41,11 @@
       }
     </style>
     <script>
-          $(document).ready(function(){
-            $('[data-toggle="popover"]').popover({animation: true, placement: "top", delay: {show: 100, hide: 100}});   
-        });
-      </script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover({animation: true, placement: "top", delay: {show: 100, hide: 100}});   
+        $("html").niceScroll();
+      });
+    </script>
 
     <!--[if lte IE 9]>
       <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
