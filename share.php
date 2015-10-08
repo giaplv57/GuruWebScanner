@@ -56,50 +56,43 @@
 		
 		<?php
 		//For DEBUG purpose
-		ini_set('display_errors',1); 
-		error_reporting(E_ALL);
+		// ini_set('display_errors',1); 
+		// error_reporting(E_ALL);
 	    //////////////////////////////////
 
-	    //Calculate folder size
-	    function dirSize($directory) {
-	    $size = 0;
-	    foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory)) as $file){
-	        $size+=$file->getSize();
-	    }
-	    	return $size;
-		} 
-		//////////////////////////////////
-
-		$report = 0;
+		  $report = 0;
 
 	    if (isset($_GET["id"])) {
 	    	if(is_array($_GET["id"])) die();
 	    	$con = ConnectDB() or die("can't connect to DB");
 	    	$id = mysqli_real_escape_string($con, preg_replace('/\s+/', '', $_GET["id"])); //preg_replace to remove all space
-	    	$query = mysqli_query($con,"SELECT * FROM reports WHERE id='$id'") or die(mysqli_error($con));
+	    	$query = mysqli_query($con,"SELECT * FROM reports WHERE shareID='$id'") or die(mysqli_error($con));
 	    	$row = mysqli_fetch_array($query);
-	        if(!empty($row['newFilename'])){
-	        	$filename = $row['filename'];
-	        	$fileCheckSum = $row['sha1hash'];
-	        	$scanTime = $row['scantime'];
-	        	$newFilename = $row['newFilename'];
+        
+        if(!empty($row['newFilename'])){
+          $newFilename = $row['newFilename'];
+          $query = mysqli_query($con,"SELECT status FROM vulScanProgress WHERE newFilename='$newFilename'") or die(mysqli_error($con));
+          $scanStatus = mysqli_fetch_row($query)[0];
+        	$filename = $row['filename'];
+        	$fileCheckSum = $row['sha1hash'];
+        	$scanTime = $row['scantime'];
+        	$newFilename = $row['newFilename'];
 
-	        	$resultFile = "./userFiles/".$newFilename.".result";
+        	$resultFile = "./userFiles/".$newFilename.".result";
 
-				//nl2br function to end line as proper
-				$resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); 
+  				//nl2br function to end line as proper
+  				$resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); 
 
-				//The PREG_SET_ORDER flag to ensure result appropriately distribute to array
-				preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);
+  				//The PREG_SET_ORDER flag to ensure result appropriately distribute to array
+  				preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);
 
+  				$wshellResultFile = "./userFiles/".$newFilename.".wshell";
+  				$wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper          
+  				preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
 
-				$wshellResultFile = "./userFiles/".$newFilename."-wshell.result";
-				$wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper          
-				preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
-
-				$report = 1;
-			}
-		}
+  				$report = 1;
+  			}
+		  }
 		?>
 		<?php if($report == 1){ ?>
 
@@ -152,20 +145,28 @@
 												<td>[+] Total Found Vulnerabilities:</td>
 												<td>
 													<font face="Consolas"><b>
-														<?php echo count($matches); ?> vulnerabilities
-													</b></font>
+                            <?php if($scanStatus == 0 or $scanStatus == -1){
+                                    echo "On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)";
+                                  }else{
+                                    echo count($matches);
+                                    echo " vulnerabilities";  
+                                  }
+                            ?>
+                          </b></font>
 												</td>											
 											</tr>
 											<?php 
-											foreach ($matches as $value) {
-	    										echo '<tr>
-														<td></td>
-														<td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
-														<font face="Consolas"><b>';
-	    										echo substr(preg_replace('/\/var(.*?)'.$newFilename.'/m', '', $value[0]), 0, -13); 
-	    										echo '</b></font>
-	    												</td>											
-														</tr>';
+                      if($scanStatus == 1){
+  											foreach ($matches as $value) {
+  	    										echo '<tr>
+  														<td></td>
+  														<td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
+  														<font face="Consolas"><b>';
+  	    										echo substr(preg_replace('/\/var(.*?)'.$newFilename.'/m', '', $value[0]), 0, -13); 
+  	    										echo '</b></font>
+  	    												</td>											
+  														</tr>';
+                        }
 											}
 											?>
 											<!-- Innitial ajax analytic modal -->

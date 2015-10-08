@@ -43,7 +43,7 @@
     <script>
       $(document).ready(function(){
         $('[data-toggle="popover"]').popover({animation: true, placement: "top", delay: {show: 100, hide: 100}});   
-        $("html").niceScroll();
+        // $("html").niceScroll();
       });
     </script>
 
@@ -77,7 +77,8 @@
     // ini_set('display_errors',1); 
     // error_reporting(E_ALL);
     ////////////////////////////////
-      //Calculate folder size
+
+    //Calculate folder size
     function dirSize($directory) {
       $size = 0;
       foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory)) as $file){
@@ -86,46 +87,64 @@
       return $size;
     } 
     //////////////////////////////////
+
     $report = 0;
     if (isset($_COOKIE["fileID"]) && isset($_COOKIE["fileName"])) {
-      $scanTime     = 0;
-      $target_dir   = "./userFiles/";
-      $filename     = $_COOKIE["fileName"];
-      $compressType = pathinfo($filename, PATHINFO_EXTENSION);                
-      $resultId     = "";
-      $newFilename  = $_COOKIE["fileID"];
-      $fileCheckSum = sha1_file($target_dir.$newFilename.".".$compressType);
-      $uncompressFolder = $target_dir.$newFilename."/";
+      $con = ConnectDB() or die("can't connect to DB");
+      $newFilename  = mysqli_escape_string($con, $_COOKIE["fileID"]);
+      $uncompressFolder = "./userFiles/".$newFilename."/";
 
       if (file_exists($uncompressFolder) && dirSize($uncompressFolder) > 0){ //Ready for scan
+        $scanTime     = 0;
+        $filename     = mysqli_escape_string($con, $_COOKIE["fileName"]);
+        $compressType = pathinfo($filename, PATHINFO_EXTENSION);                
+        $resultId     = "";
+        $fileCheckSum = sha1_file("./userFiles/".$newFilename.".".$compressType);
         $startTime = round(microtime(true) * 1000);
+        
+        $vulScanProgress = 0;
+        $query = mysqli_query($con,"SELECT status FROM vulScanProgress WHERE newFilename='$newFilename'") or die(mysqli_error($con));
+        $scanStatus = mysqli_fetch_row($query)[0];
+        if ($scanStatus == NULL){
+          mysqli_query($con,"INSERT INTO vulScanProgress (newFilename, status) VALUES ('$newFilename', '-1')") or die(mysqli_error($con));
+        }else if($scanStatus == 1){
+          $vulScanProgress = 1;
+        }
         /* vul result */
-        $resultFile = "./userFiles/".$newFilename.".result";
-
-        // DON'T DELETE THIS LINE
-        // $command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f & PID=\$!; sleep 2s; kill \$PID; done > ".$resultFile;
-        $command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f; done > ".$resultFile;
-        exec($command);                       
-        $resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); //nl2br function to end line as proper          
-        preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array
+        if($scanStatus == 1){
+          $resultFile = "./userFiles/".$newFilename.".result";
+          // DON'T DELETE THIS LINE
+          // $command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f & PID=\$!; sleep 2s; kill \$PID; done > ".$resultFile;
+          // $command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f; done > ".$resultFile;
+          // exec($command);                       
+          $resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); //nl2br function to end line as proper          
+          preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array  
+        }
+        
         /* wshell result */
-        $wshellResultFile = "./userFiles/".$newFilename."-wshell.result";
-        $command = "php ./webShellDetector/signatureIdentifier/shelldetect.php -d \"userFiles/".$newFilename."/\" > ".$wshellResultFile;
-        system($command);
+        $wshellResultFile = "./userFiles/".$newFilename.".wshell";
+        if($scanStatus==NULL){
+          $command = "php ./webShellDetector/signatureIdentifier/shelldetect.php -d \"userFiles/".$newFilename."/\" > ".$wshellResultFile;
+          system($command);
+        }
         $wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper          
         preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
+        
         /* Analytics result*/
-        include("./webShellDetector/shellRanker.php"); 
-        shellRankerMain($newFilename);
+        if($scanStatus==NULL){
+          include("./webShellDetector/shellRanker.php"); 
+          shellRankerMain($newFilename);
+        }
+
         /* Calculate scan time */
         $stopTime = round(microtime(true) * 1000);
         $scanTime = $stopTime - $startTime;   
 
         $report = 1;
-        $con = ConnectDB() or die("can't connect to DB");
         $resultId = sha1($newFilename);
-        $filename = mysqli_escape_string($con, $filename);          
-        mysqli_query($con,"INSERT INTO reports (id, filename, sha1hash, scantime, newFilename) VALUES ('$resultId', '$filename', '$fileCheckSum', '$scanTime', '$newFilename')") or die(mysqli_error($con));
+        if($scanStatus==NULL){
+          mysqli_query($con,"INSERT INTO reports (shareID, filename, sha1hash, scantime, newFilename) VALUES ('$resultId', '$filename', '$fileCheckSum', '$scanTime', '$newFilename')") or die(mysqli_error($con));
+        }
       }else{
         echo "There are problems with your compress file or it's empty.</br>";
       }
@@ -179,22 +198,30 @@
                         <td>[+] Total Found Vulnerabilities:</td>
                         <td>
                           <font face="Consolas"><b>
-                            <?php echo count($matches); ?> vulnerabilities
+                            <?php if($scanStatus == 0 or $scanStatus == -1){
+                                    echo "On scanning progress, comeback later to see your result.<br>(Keep that under share link to view result later)";
+                                  }else{
+                                    echo count($matches);
+                                    echo " vulnerabilities";  
+                                  }
+                            ?>
                           </b></font>
                         </td>                     
                       </tr>
-                      <?php 
-                      foreach ($matches as $value) {
-                          echo '<tr>
-                            <td></td>
-                            <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
-                            <font face="Consolas"><b>';
-                          // echo $value[0];
-                        echo substr(preg_replace('/\/var(.*?)'.$newFilename.'/m', '', $value[0]), 0, -13); 
-                          echo '</b></font>
-                              </td>                     
-                            </tr>';
-                      }
+                      <?php
+                        if($scanStatus == 1){
+                          foreach ($matches as $value) {
+                              echo '<tr>
+                                <td></td>
+                                <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
+                                <font face="Consolas"><b>';
+                              // echo $value[0];
+                            echo substr(preg_replace('/\/var(.*?)'.$newFilename.'/m', '', $value[0]), 0, -13); 
+                              echo '</b></font>
+                                  </td>                     
+                                </tr>';
+                          }
+                        }
                       ?>
 
                       <!-- Innitial ajax analytic modal -->
