@@ -53,6 +53,7 @@
 		    };
 
 		    function showUploadBar(){
+		    	$("#scanbutton").addClass('hidden');
 		    	$("#uploadBar").removeClass('hidden');
 		    }
 		</script>
@@ -68,7 +69,7 @@
 		<!-- FOR UPLOAD BAR -->
 		<style>
 			.progress { position:relative; width:300px; border: 1px solid #FF7800; padding: 1px; border-radius: 3px; }
-			.bar { background-color: #FF7800; width:0%; height:20px; border-radius: 3px; }
+			.bar { width:0%; height:20px; border-radius: 3px; }
 			.percent { position:absolute; display:inline-block; top:2px; left:48%; }
 		</style>
 
@@ -102,11 +103,11 @@
 						</div>
 					</div>
 				</form>			
-				<div class="progress hidden" id="uploadBar"> <!-- hidden -->
-	        <div class="bar"></div >
-	        <div class="percent">0%</div >
-			  </div>
-			  <p id="errorMessage" class="hidden"></p>
+				<div class="progress hidden" id="uploadBar" style="margin-top:-20px;"> <!-- hidden -->
+			        <div class="bar"></div >
+			        <div class="percent">0%</div >
+			  	</div>
+			 	<p id="errorMessage" class="hidden"></p>
 			</div>
 		</div>
 		<div id="footer">

@@ -199,7 +199,7 @@
                         <td>
                           <font face="Consolas"><b>
                             <?php if($scanStatus == 0 or $scanStatus == -1){
-                                    echo "On scanning progress, comeback later to see your result.<br>(Keep that under share link to view result later)";
+                                    echo "On scanning progress, comeback later to see your result.<br>(Keep that below share link to view result later)";
                                   }else{
                                     echo count($matches);
                                     echo " vulnerabilities";  

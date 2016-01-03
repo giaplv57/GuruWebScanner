@@ -4,8 +4,8 @@
     $GLOBALS['rank_list'] = array();
 
 	//For DEBUG purpose
-	ini_set('display_errors',1); 
-	error_reporting(E_ALL);
+	// ini_set('display_errors',1); 
+	// error_reporting(E_ALL);
     //////////////////////////////////
 
 	class LanguageIC{
