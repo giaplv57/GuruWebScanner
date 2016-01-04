@@ -11,9 +11,18 @@ An On-The-Cloud free "greybox" box scanner for various purposes.
 ## Usage:
 * Install requirements
 * Create a database named guruWS and import guruWS.sql
+```
+$ mysql -uUSERNAME -pPASSWORD
+(mysql) CREATE database guruWS
+(mysql) exit
+$ mysql -uUSERNAME -pPASSWORD DATABASE < database/guruWS.sql
+```
 * Change user and password of mysql in connectdb.php and scanner/jobAllocate.py files
 * chmod 777 -R userFiles/
 * Run jobAllocate.py as a service
+```
+python jobAllocate.py &
+```
 * Increase the max file size for upload file as well as max size of post request in php.ini (optional)
 
 ## Screenshot
