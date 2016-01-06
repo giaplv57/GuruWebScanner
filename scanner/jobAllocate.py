@@ -15,7 +15,6 @@ def vulScan(newFilename):
     cursor = childConnection.cursor()
     uncompressFolder = "./../userFiles/" + newFilename + "/"
     resultFile = "./../userFiles/" + newFilename + ".result"
-    # $command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f & PID=\$!; sleep 2s; kill \$PID; done > ".$resultFile;
     command = r"""for f in $(find {0} -name '*.php'); do php ./Main.php $f & PID=$!; sleep 3s; kill $PID; done > {1}""".format(uncompressFolder, resultFile)
     subprocess.call(command,shell=True)
     cursor.execute('UPDATE vulScanProgress SET status = "1" WHERE newFilename="'+newFilename+'"')
