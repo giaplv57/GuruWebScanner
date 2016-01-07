@@ -123,16 +123,16 @@
         
         /* wshell result */
         $wshellResultFile = "./userFiles/".$newFilename.".wshell";
-        if($scanStatus==NULL){
-          $command = "php ./webShellDetector/signatureIdentifier/shelldetect.php -d \"userFiles/".$newFilename."/\" > ".$wshellResultFile;
-          system($command);
+        if($scanStatus==NULL){          
+          include("./webShellDetector/signatureIdentifier/shelldetect.php");
+          shellDetectorMain("userFiles/".$newFilename, $wshellResultFile);          
         }
         $wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper          
         preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
         
         /* Analytics result*/
         if($scanStatus==NULL){
-          include("./webShellDetector/shellRanker.php"); 
+          include("./webShellDetector/shellRanker.php");           
           shellRankerMain($newFilename);
         }
 
