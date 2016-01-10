@@ -27,8 +27,21 @@
 		<script src="js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
 		<!-- Bootstrap -->
 		<script src="js/bootstrap.min.js"></script>
-    <!-- Easy Modal for bootstrap -->
-    <script src="//rawgit.com/saribe/eModal/master/dist/eModal.min.js"></script>
+    	<!-- Easy Modal for bootstrap -->
+    	<script src="//rawgit.com/saribe/eModal/master/dist/eModal.min.js"></script>
+    	 <!-- Innitial popover of bootstrap -->
+	    <style type="text/css">
+	    /* The max width is dependant on the container */
+	      .popover{
+	          max-width: 100%; /* Max Width of the popover (depending on the container!) */
+	      }
+	    </style>
+	    <script>
+	      $(document).ready(function(){
+	        $('[data-toggle="popover"]').popover({animation: true, placement: "top", delay: {show: 100, hide: 100}});   
+	        // $("html").niceScroll();
+	      });
+	    </script>
 		<!--[if lte IE 9]>
 			<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
 			<script>

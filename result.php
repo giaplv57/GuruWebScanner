@@ -190,7 +190,10 @@
                         <td>[+] Total scaned time:</td>
                         <td>
                           <font face="Consolas"><b>
-                            <?php echo $scanTime/1000; ?> second
+                            <?php 
+                            $getScanTime = mysqli_query($con,"SELECT scanTime FROM reports WHERE shareID='$resultId'") or die(mysqli_error($con));
+                            $ScanTime = mysqli_fetch_row($getScanTime)[0];
+                            echo $ScanTime/1000; ?> second
                           </b></font>
                         </td>                     
                       </tr>                   
@@ -199,7 +202,7 @@
                         <td>
                           <font face="Consolas"><b>
                             <?php if($scanStatus == 0 or $scanStatus == -1){
-                                    echo "On scanning progress, comeback later to see your result.<br>(Keep that below share link to view result later)";
+                                    echo "On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)";
                                   }else{
                                     echo count($matches);
                                     echo " vulnerabilities";  
