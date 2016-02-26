@@ -22,7 +22,7 @@ $ mysql -uUSERNAME -pPASSWORD DATABASE < database/guruWS.sql
 ```
 chmod 777 -R userFiles/
 ```
-* Run jobAllocate.py as a service
+* Run jobAllocate.py in scanner/ as a service
 ```
 python jobAllocate.py &
 ```
