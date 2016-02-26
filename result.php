@@ -8,6 +8,8 @@
     <!-- Apple devices fullscreen -->
     <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     
+    <meta http-equiv="refresh" content="5">
+
     <title>GuruWS :: Free online greybox web scanner</title>
 
     <!-- Bootstrap -->
