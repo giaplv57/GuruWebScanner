@@ -1,4 +1,5 @@
 ![](https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/img/logo.png?token=AE0vQt_IIAU2FXj9-WfYHMNRVOyRGND6ks5W4TZPwA%3D%3D)
+
 An On-The-Cloud free "greybox" box scanner for various purposes.
 
 ## Key Features
