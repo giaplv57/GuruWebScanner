@@ -35,9 +35,9 @@ post_max_size = 800M
 ```
 
 ## Screenshot
-![home page](http://i.imgur.com/DhPTNwM.png)
+![home page](https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/img/home.JPG?token=AE0vQj9zpTozY8zQnFEi5gpXc7aCQxEsks5W4TenwA%3D%3D)
 
-![result page](http://i.imgur.com/Zr4JJHP.png)
+![result page](https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/img/result.JPG?token=AE0vQmmugAqIS9khd_6NG9RpAVbuJBAVks5W4TetwA%3D%3D)
 
 ## Changelog
 * Not yet released
