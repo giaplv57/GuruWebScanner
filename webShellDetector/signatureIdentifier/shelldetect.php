@@ -547,7 +547,7 @@ class shellDetector {
         }
         
         foreach ($fingerprint_cache as $fingerprint => $shell) {
-            if (preg_match($fingerprint, $content)) {
+            if (preg_match($fingerprint, $content)) {    
                 # [version] => 1359928984 db content FIXME?!?!?
                 if ($fingerprint == "version") break;
                 $key = $shell;

@@ -8,7 +8,6 @@
     <!-- Apple devices fullscreen -->
     <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     
-    <meta http-equiv="refresh" content="5">
 
     <title>GuruWS :: Free online greybox web scanner</title>
 
@@ -204,7 +203,7 @@
                         <td>
                           <font face="Consolas"><b>
                             <?php if($scanStatus == 0 or $scanStatus == -1){
-                                    echo "On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)";
+                                    echo "<div id='wait'>On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)</div>";
                                   }else{
                                     echo count($matches);
                                     echo " vulnerabilities";  
@@ -315,7 +314,15 @@
       </div>
       <a href="#" class="gototop"><i class="icon-arrow-up"></i></a>
     </div>
-    
+    <script>
+      var x = document.getElementById('wait');
+      if (x != null) {        
+        document.write("<meta name='autoreload' http-equiv='refresh' content='5'>");
+      }
+      else {
+        console.log("Scan completed!");
+      }
+    </script>
   </body>
 
 </html>
