@@ -130,7 +130,8 @@
         }
         $wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper          
         preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
-        
+        preg_match_all('/suspicious files found and (.*) shells found/', $wshellResultContent, $trueWshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
+        preg_match_all('!\d+!', $trueWshellmatches[0][1], $numberOfWshell);
         /* Analytics result*/
         if($scanStatus==NULL){
           include("./webShellDetector/shellRanker.php");           
@@ -243,7 +244,7 @@
                         <td>[+] Total Found Webshells:</td>
                         <td>
                           <font face="Consolas"><b>
-                            <?php echo count($wshellmatches); ?> suspicious files
+                            <?php echo count($wshellmatches); ?> suspicious files and <?php echo $numberOfWshell[0][0]; ?> shells found!
                           </b>
                           (<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a>)</font>
                         </td>                     
