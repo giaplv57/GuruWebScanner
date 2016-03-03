@@ -68,7 +68,7 @@
     <?php include("connectdb.php"); ?>
     <div id="navigation">
       <div class="container-fluid">
-        <a href="./"><img src="img/logowhite.png" alt="" class='retina-ready' width="200px"></a>          
+        <a href="./"><img src="img/logowhite.jpg" alt="" class='retina-ready' width="200px"></a>          
       </div>
     </div>
     <hr/>
