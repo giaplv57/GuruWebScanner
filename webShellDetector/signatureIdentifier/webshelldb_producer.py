@@ -30,7 +30,20 @@ if __name__ == '__main__':
         'signature': '', 'name': ''
     }   
 
-    add_pattern("version", "1405674947")
+    """
+    |+                               +|
+    |+      GuruWS's Signatures      +|
+    |+                               +|
+    """ 
+    add_pattern("$b374k=$func", "b374k[3][0][php]")
+
+    """
+    |+                               +|
+    |+         SHELL DETECTOR        +|
+    |+                               +|
+    """ 
+
+    add_pattern("version", "1405674947")                # attach version information
     add_pattern("XRpbyAqIC43NSk7DQoNCiAgICBmb3IgKCRpID0gMDsgJGkgPCAkbWJfbGVuZ3RoO", "phpemailer[0][2][php]")
     add_pattern("GCnzDlvt6Uon3mS0d4QQ826bCkJw8f6CFFrEZK9hpm6fqH626nrvc9VKESlQYYxy", "b374k[28][0][php]")
     add_pattern("OwkJCQoKCWRlZmF1bHQ6CgkJc2hvd19scygpOwp9CgpmdW5jdGlvbiBzaG93X2xz", "cmd[31][0][php]")
