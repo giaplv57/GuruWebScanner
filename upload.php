@@ -20,8 +20,8 @@
       $uploadOk = 0;
     }
     // Allow certain file formats
-    if ($compressType != "tar" && $compressType != "zip" && $compressType != "rar") {
-      echo '<div class="alert alert-warning col-md-4" role="alert">Error! Only tar, zip or rar file is allowed.</div>';
+    if ($compressType != "tar" && $compressType != "zip" && $compressType != "rar" && $compressType != "7z" && $compressType != "php") {
+      echo '<div class="alert alert-warning col-md-4" role="alert">Error! Only tar, zip, 7z, rar or php file is allowed.</div>';
       $uploadOk = 0;
     }
     // Check if $uploadOk is set to 0 by an error
@@ -34,6 +34,10 @@
         exec("unzip ".$target_file." -d ".$uncompressFolder);
       }else if($compressType == "rar"){
         exec("unrar x ".$target_file." ".$uncompressFolder);
+      }else if($compressType == "7z"){
+        exec("7z x ".$target_file." -o".$uncompressFolder);
+      }else if($compressType == "php"){
+        exec("mkdir ".$uncompressFolder."; cp ".$target_file." ".$uncompressFolder);
       }else{
         // die();
       }
