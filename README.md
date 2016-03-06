@@ -7,7 +7,7 @@ An On-The-Cloud free "greybox" box scanner for various purposes.
 * Detect WebShell
 
 ## Requirements:
-`php 5.6.12` , `mysql`, `Apache/2.4.16`, `unzip`, `unrar`, `python-mysqldb`
+`php 5.6.12` , `mysql`, `Apache/2.4.16`, `unzip`, `unrar`, `7z`, `python-mysqldb`
 
 ## Usage:
 * Install [requirements](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu)
