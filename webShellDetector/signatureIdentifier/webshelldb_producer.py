@@ -36,6 +36,7 @@ if __name__ == '__main__':
     |+                               +|
     """ 
     add_pattern("$b374k=$func", "b374k[3][0][php]")
+    add_pattern("openssl_seal", "CryptoPHP[0][0][php]")
 
     """
     |+                               +|
@@ -45,7 +46,7 @@ if __name__ == '__main__':
 
     add_pattern("version", "1405674947")                # attach version information
     add_pattern("XRpbyAqIC43NSk7DQoNCiAgICBmb3IgKCRpID0gMDsgJGkgPCAkbWJfbGVuZ3RoO", "phpemailer[0][2][php]")
-    add_pattern("GCnzDlvt6Uon3mS0d4QQ826bCkJw8f6CFFrEZK9hpm6fqH626nrvc9VKESlQYYxy", "b374k[28][0][php]")
+    add_pattern("GCnzDlvt6Uon3mS0d4QQ826bCkJw8f6CFFrEZK9hpm6fqH626nrvc9VKESlQYYxy", "my-b374k[28][0][php]")
     add_pattern("OwkJCQoKCWRlZmF1bHQ6CgkJc2hvd19scygpOwp9CgpmdW5jdGlvbiBzaG93X2xz", "cmd[31][0][php]")
     add_pattern("Zdko5TTNUR3JIL2RvV0M0WG1BRWtZVndBQ1VQUWQwR2w0N3VEalIiLCJjMkdybVR", "noname[1][0][php]")
     add_pattern("2hvICINCgkJCQkNCgkJICAgIAk8dHI+DQoJCQkgICAgICA8dGQgd2lkdGg9JzEwJ", "hiddenshell[0][0][php]")

@@ -132,9 +132,9 @@ class ShellDetector:
             except IOError as e:
                 print("({})".format(e))
         else:
-            if os.path.isfile("shelldetect.db"):
+            if os.path.isfile("../shelldetect.db"):
                 try:
-                    self._fingerprints = base64.decodestring(str(open('shelldetect.db', 'r').read()))
+                    self._fingerprints = base64.decodestring(str(open('../shelldetect.db', 'r').read()))
                     serial = PhpSerializer()
                     self._fingerprints = serial.unserialize(str(self._fingerprints))
                 except IOError as e:
