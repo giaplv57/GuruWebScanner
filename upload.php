@@ -1,5 +1,6 @@
 
 <?php 
+
   if (isset($_POST["submit"])) {
     if (is_array($_FILES["userFile"]["name"])) die();
     $filename     = htmlspecialchars($_FILES["userFile"]["name"]);  
@@ -37,7 +38,8 @@
       }else if($compressType == "7z"){
         exec("7z x ".$target_file." -o".$uncompressFolder);
       }else if($compressType == "php"){
-        exec("mkdir ".$uncompressFolder."; cp ".$target_file." ".$uncompressFolder);
+        $safefilename = str_replace(" ", "\ ", $filename);  
+        exec("mkdir ".$uncompressFolder."; cp ".$target_file." ".$uncompressFolder."/".$safefilename);        
       }else{
         // die();
       }

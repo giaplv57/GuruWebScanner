@@ -35,8 +35,22 @@ if __name__ == '__main__':
     |+      GuruWS's Signatures      +|
     |+                               +|
     """ 
-    add_pattern("$b374k=$func", "b374k[3][0][php]")
+    add_pattern("$b374k=$func", "b374k-3.2[3][0][php]")
     add_pattern("openssl_seal", "CryptoPHP[0][0][php]")
+    add_pattern("36EOWCoo6hGr5gXRRPPT+nXmW+RvJwQpBjuYCe308rnRDjGUFPf75DTYpqfYe+U2", "b374k-2.3-min[2][0][php]")
+    add_pattern("setcookie(\"b374k\",$login,time()", "b374k-2.x-source[2][0][php]")
+    add_pattern("HJ3HjuvcckZf5cLwwAYHzAmGAYs55zz5wSiKOaenv2zPTuu0muTeVV+tpVguy7j8s5TTuGy/4f", "b374k-2.3-poly[2][0][php]")
+    add_pattern("zYG328K5KQl7wXWo7dIXthtpsZ0crwVKhq3PPJpNkWEWYUmQS3qSyTTjxxiRtlE6RlcAEv", "b374k-2.3-poly[2][0][php]")
+    add_pattern("lfQhJXbB2AU1m0i8AVYoimTy2VefNmeAX6OcIyoRbg9yAMpqFqwUtdQcw4le7gBsteQu6CfIxr9AuyDYUHbABPvUFGodQZnAgwgXw", "b374k-2.4-min[2][0][php]")
+    add_pattern("xIonXAS1Sew86NfrT1jNkDpeEQJKGEYa2KT1RaZiJQUKEevyZhZBrpJU0+HfJXMIu66qngGgtcL0rRfoGBvuWAMrj4TZwKE7/Zw5+L8Ydxux9PX4nTw8", "b374k-2.4-poly[2][0][php]")
+    add_pattern("ACwr3dwSlmn8Zmgi6/i9aJx0J/GtIlq79ZbKqTP5F6rQg2uxfpk7Su78MRVW1419b0ib/khztLwdU4S8aSPVftCSCavylHU1BVf6SRMpxHEK8", "b374k-2.5[2][0][php]")
+    add_pattern("I31bNv1+5df+m+wBfJV4+cZODmRT8vphLcb4X9ML1xwYSH2KfkWBFw2/c/df/ppn732MPifunfz0AyP9", "b374k-2.5[2][0][php]")
+    add_pattern("ugCTf4Aa2qyt2MJdIPMUjqXgq0tWsSFWzVTR0XYgRmHNs8/05gNcETi/+7fV2+MGEYScBUZUjz1F52d6v0p1drbEk5ttY67CdkKO2uMrF952pLDO1", "b374k-2.6[2][0][php]")
+    add_pattern("htX987GNqqNvf5oazilGJjszIY9mpltqzV5x1pv3I5jiu4BJvja+5KMpbziclN5tXBtu4aYospeNXBpjx3pgd83mEbjDT0mkdrI", "b374k-2.7[2][0][php]")
+    add_pattern("8kEwwYj3Bp5tMkOPGd5PEz0dhXjHKPMu4wkLDhr2a80lJ2a01Ch7NIHjcl3B0PT3Lbrza5sHfOm2BB40q3xq/yOlqsER3ZIpMD3OLzCM9", "b374k-2.7[2][0][php]")
+    add_pattern("setcookie(\"b374k\",$s_login,time() + $s_login_time);", "b374k-2.7-source[2][0][php]")
+    add_pattern("+0IP7qeaxl6SNW+sWVL5FHNovjNlqk+V0uPwYjxxxqqYjnBUA+0gbmH1/F3Cy1MNfVlD1v66cHYyz21xiwyxh8DXoq1VR3F656JXhXS++a8DVM", "b374k-2.8[2][0][php]")
+    add_pattern("7sk7NuUel9LJf8nRsRGM9Owj85fmADe0pfByM5KwukvNVLY0SZL/mt9UMjh7Q3IU5VOaMpPT9yG0y8drvPZIROhU9k3V7fYzYcNrnhbBhUXgeFzj2ig+39rK0beuwGiKF5YvMZ1uOIaLABQQ", "b374k-2.8[2][0][php]")
 
     """
     |+                               +|
