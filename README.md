@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/img/logo.png?token=AE0vQt_IIAU2FXj9-WfYHMNRVOyRGND6ks5W4TZPwA%3D%3D)
+![](https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/assets/img/logo.png?token=AE0vQt_IIAU2FXj9-WfYHMNRVOyRGND6ks5W4TZPwA%3D%3D)
 
 An On-The-Cloud free "greybox" box scanner for various purposes.
 
@@ -7,7 +7,7 @@ An On-The-Cloud free "greybox" box scanner for various purposes.
 * Detect WebShell
 
 ## Requirements:
-`php 5.6.12` , `mysql`, `Apache/2.4.16`, `unzip`, `unrar`, `7z`, `python-mysqldb`
+`php 5.6.12` , `mysql`, `Apache/2.4.16`, `unzip`, `unrar`, `7z`, `python-mysqldb`, `yara`
 
 ## Usage:
 * Install [requirements](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu)
@@ -18,12 +18,12 @@ $ mysql -uUSERNAME -pPASSWORD
 (mysql) exit
 $ mysql -uUSERNAME -pPASSWORD DATABASE < database/guruWS.sql
 ```
-* Change user and password of mysql in `connectdb.php` and `scanner/jobAllocate.py` files
+* Change user and password of mysql in `connectdb.php` and `core/grVulnScanner/jobAllocate.py` files
 * chmod upload directory
 ```
 chmod 777 -R userFiles/
 ```
-* Run jobAllocate.py in `scanner/` as a service
+* Run jobAllocate.py in `core/grVulnScanner/` as a service
 ```
 python jobAllocate.py &
 ```
@@ -35,9 +35,9 @@ post_max_size = 800M
 ```
 
 ## Screenshot
-![home page](https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/img/home.JPG?token=AE0vQj9zpTozY8zQnFEi5gpXc7aCQxEsks5W4TenwA%3D%3D)
+![home page](https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/assets/img/home.JPG?token=AE0vQj9zpTozY8zQnFEi5gpXc7aCQxEsks5W4TenwA%3D%3D)
 
-![result page](https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/img/result.JPG?token=AE0vQmmugAqIS9khd_6NG9RpAVbuJBAVks5W4TetwA%3D%3D)
+![result page](https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/assets/img/result.JPG?token=AE0vQmmugAqIS9khd_6NG9RpAVbuJBAVks5W4TetwA%3D%3D)
 
 ## Changelog
 * Not yet released
