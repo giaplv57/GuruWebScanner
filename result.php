@@ -12,27 +12,27 @@
     <title>GuruWS :: Free online greybox web scanner</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Bootstrap responsive -->
-    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css">
     
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Color CSS -->
-    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
 
 
     <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
     
     <!-- Nice Scroll -->
-    <script src="js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="assets/js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
     <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Easy Modal for bootstrap -->
-    <script src="js/eModal.min.js"></script>
+    <script src="assets/js/eModal.min.js"></script>
 
     <!-- Innitial popover of bootstrap -->
     <style type="text/css">
@@ -49,7 +49,7 @@
     </script>
 
     <!--[if lte IE 9]>
-      <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+      <script src="assets/js/plugins/placeholder/jquery.placeholder.min.js"></script>
       <script>
         $(document).ready(function() {
           $('input, textarea').placeholder();
@@ -58,9 +58,9 @@
     <![endif]-->
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
     <!-- Apple devices Homescreen icon -->
-    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-precomposed.png" />
     
   </head>
 
@@ -68,7 +68,7 @@
     <?php include("connectdb.php"); ?>
     <div id="navigation">
       <div class="container-fluid">
-        <a href="./"><img src="img/logowhite.jpg" alt="" class='retina-ready' width="200px"></a>          
+        <a href="./"><img src="assets/img/logowhite.jpg" alt="" class='retina-ready' width="200px"></a>          
       </div>
     </div>
     <hr/>
@@ -125,7 +125,7 @@
         /* wshell result */
         $wshellResultFile = "./userFiles/".$newFilename.".wshell";
         if($scanStatus==NULL){          
-          include("./webShellDetector/signatureIdentifier/shelldetect.php");
+          include("./core/webShellDetector/signatureIdentifier/shelldetect.php");
           shellDetectorMain("userFiles/".$newFilename, $wshellResultFile);          
         }
         $wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper          
@@ -136,7 +136,7 @@
         // var_dump($wshellmatches);
         /* Analytics result*/
         if($scanStatus==NULL){
-          include("./webShellDetector/shellRanker.php");           
+          include("./core/webShellDetector/shellRanker.php");           
           shellRankerMain($newFilename);
         }
 

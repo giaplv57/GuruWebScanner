@@ -159,9 +159,9 @@ class shellDetector {
             $this->hidesuspicious = false;
         }
 
-        if (file_exists('webShellDetector/signatureIdentifier/shelldetect.db')) {
+        if (file_exists('core/webShellDetector/signatureIdentifier/shelldetect.db')) {
             $context = stream_context_create(array('http' => array('timeout' => 30)));
-            $this->fingerprints = unserialize(base64_decode(file_get_contents('webShellDetector/signatureIdentifier/shelldetect.db', 0, $context)));
+            $this->fingerprints = unserialize(base64_decode(file_get_contents('core/webShellDetector/signatureIdentifier/shelldetect.db', 0, $context)));
         }
 
         if ($this->remotefingerprint) {
@@ -224,18 +224,7 @@ class shellDetector {
      * Update function get latest update
      */
     private function update() {
-        if ($this->version()) {
-            $context = stream_context_create(array('http' => array('timeout' => 30)));
-            $content = file_get_contents('https://raw.github.com/emposha/PHP-Shell-Detector/master/shelldetect.db', 0, $context);
-            chmod('shelldetect.db', 0777);
-            if (file_put_contents('shelldetect.db', $content)) {
-                self::output($this->t('Shells signature database updated succesfully!'));
-            } else {
-                self::output($this->t('Cant save shells signature database please check permissions'), 'error');
-            }
-        } else {
-            self::output($this->t('Your shells signatures database already updated!'));
-        }
+       
     }
 
     /**

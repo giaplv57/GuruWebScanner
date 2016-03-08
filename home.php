@@ -11,24 +11,24 @@
 		<title>GuruWS :: Free online greybox web scanner</title>
 
 		<!-- Bootstrap -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 		<!-- Bootstrap responsive -->
-		<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+		<link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css">
 		<!-- Theme CSS -->
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="assets/css/style.css">
 		<!-- Color CSS -->
-		<link rel="stylesheet" href="css/themes.css">
+		<link rel="stylesheet" href="assets/css/themes.css">
 
 
 		<!-- jQuery -->
-		<script src="js/jquery.min.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
 		<!-- Nice Scroll -->
-		<script src="js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+		<script src="assets/js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
 		<!-- Bootstrap -->
-		<script src="js/bootstrap.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
 
 		<!--[if lte IE 9]>
-			<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+			<script src="assets/js/plugins/placeholder/jquery.placeholder.min.js"></script>
 			<script>
 				$(document).ready(function() {
 					$('input, textarea').placeholder();
@@ -37,9 +37,9 @@
 		<![endif]-->
 		
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="img/favicon.ico" />
+		<link rel="shortcut icon" href="assets/img/favicon.ico" />
 		<!-- Apple devices Homescreen icon -->
-		<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
+		<link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-precomposed.png" />
 
 		<script type="text/javascript">
 		    function PreviewImage() {
@@ -63,7 +63,7 @@
 				width: 100%;
 				bottom: 0;
 			}
-			body { background:  url("img/bg.png") !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+			body { background:  url("assets/img/bg.png") !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
 		</style>
 
 		<!-- FOR UPLOAD BAR -->
@@ -78,7 +78,7 @@
 		<div class="container-fluid" id="content">
 			<div class="wrapper">		
 				<div class="code" align="center">
-					<img src="img/logo.png" alt="" class='retina-ready' width="380">
+					<img src="assets/img/logo.png" alt="" class='retina-ready' width="380">
 				</div>				
 				<div class="desc" align="center">
 					<font size="3px">
@@ -120,7 +120,7 @@
 	</body>
 
 	<!-- FOR UPLOAD BAR -->
-	<script src="js/jquery.form.js"></script>
+	<script src="assets/js/jquery.form.js"></script>
 	<script>
 		(function() {
 		var bar = $('.bar');

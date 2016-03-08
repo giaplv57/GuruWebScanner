@@ -13,8 +13,8 @@ def vulScan(newFilename):
     # of race condition when dbName.commit() function is excuted
     childConnection = MySQLdb.connect("localhost","root","root","guruWS")
     cursor = childConnection.cursor()
-    uncompressFolder = "./../userFiles/" + newFilename + "/"
-    resultFile = "./../userFiles/" + newFilename + ".result"
+    uncompressFolder = "./../../userFiles/" + newFilename + "/"
+    resultFile = "./../../userFiles/" + newFilename + ".result"
     command = r"""for f in $(find {0} -name '*.php'); do php ./Main.php $f & PID=$!; sleep 3s; kill $PID; done > {1}""".format(uncompressFolder, resultFile)
     subprocess.call(command,shell=True)
     cursor.execute('UPDATE vulScanProgress SET status = "1" WHERE newFilename="'+newFilename+'"')
