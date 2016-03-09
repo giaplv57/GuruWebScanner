@@ -94,11 +94,16 @@ def scanfile(filename):
         d = f.read()
     n = len(d)
     
-    if n < 400:             # if file two small, ignore
+    if n < 50 or filename.lower()[-3:] == '.md':             # if file is too small or readme.md, ignore ... avoid False Positive
         print red("[+] Ignoring...\t"), red(filename), red(str(n))
         return []
 
     strings = []
+
+    if n < 300:                 # if file small, get whole of content
+        strings.append(d)
+        return strings
+    
     for i in range(SIGNATURE_NUMBER):
         block = (n / (SIGNATURE_NUMBER + 1)) * (i + 1)
         pat = substr(d, block - SIGNATURE_LENGTH, SIGNATURE_LENGTH)
