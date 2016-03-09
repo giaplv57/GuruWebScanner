@@ -113,11 +113,7 @@
         }
         /* vul result */
         if($scanStatus == 1){
-          $resultFile = "./userFiles/".$newFilename.".result";
-          // DON'T DELETE THIS LINE
-          // $command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f & PID=\$!; sleep 2s; kill \$PID; done > ".$resultFile;
-          // $command = "for f in \$(find ".$uncompressFolder." -name '*.php'); do php ./scanner/Main.php \$f; done > ".$resultFile;
-          // exec($command);                       
+          $resultFile = "./userFiles/".$newFilename.".result";                      
           $resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); //nl2br function to end line as proper          
           preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array  
         }
@@ -129,11 +125,10 @@
           shellDetectorMain("userFiles/".$newFilename, $wshellResultFile);          
         }
         $wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper          
-        // preg_match_all('/Suspicious behavior found in:(.*?)Submit file/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
         preg_match_all('/behavior found in:(.*?)(Suspicious|clearer)/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
         preg_match_all('/suspicious files found and (.*) shells found/', $wshellResultContent, $trueWshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
         preg_match_all('!\d+!', $trueWshellmatches[0][1], $numberOfWshell);
-        // var_dump($wshellmatches);
+
         /* Analytics result*/
         if($scanStatus==NULL){
           include("./core/webShellDetector/shellRanker.php");           
