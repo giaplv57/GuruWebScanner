@@ -18,7 +18,8 @@ KGREEN = '\x1B[32m'
 KYELLOW = '\x1B[33m'
 KNORM = '\033[0m'
 
-QUITEMODE = False
+QUITEMODE   = False
+PATTERNDB   = 'patterndb.yara'
 
 def bold(text):
     return KBOLD + text + KNORM
@@ -57,7 +58,7 @@ def gateway():
 if __name__ == '__main__':
     options, args, QUITEMODE = gateway()
 
-    rules = yara.compile('patterndb.yara')
+    rules = yara.compile(PATTERNDB)
     
     file_count = 0
     shell_count = 0
