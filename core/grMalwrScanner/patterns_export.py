@@ -9,6 +9,7 @@ import optparse
 import sys
 import os
 import hashlib
+import base64
 
 SIGNATURE_LENGTH = 64
 SIGNATURE_NUMBER = 5
@@ -160,12 +161,11 @@ def export(shellname, strings):
             continue    
         out('\t\t$ = {' + tohex(s)+ '}\n')
     out('\tcondition:\n')
-    out('\t\t' + str(SIGNATURE_NUMBER/2) + ' of them\n')
+    out('\t\t' + str(len(strings)/2 + 1) + ' of them\n')
     out('}\n\n')
 
 
-if __name__ == '__main__':
-
+def export_from_webshell():
     options, args = gateway()
     if options.filename != None:
         strings = scanfile(options.filename)
@@ -178,6 +178,41 @@ if __name__ == '__main__':
                 filename = dirName + '/' + fname      # get absolute filename
                 strings = scanfile(filename)
                 export(filename, strings)
+
+
+def export_from_shelldetectdb():
+    def tohex(s):
+        return " ".join("{:02x}".format(ord(c)) for c in s)
+
+    with open('res/shelldetect.db', 'rb') as f:
+        d = f.read()
+
+    d = base64.b64decode(d)
+
+    lines = d.split(']\"')
+    
+    for line in lines:
+        b = line.split('\"')
+        try:
+            sign = b[1]
+            shellname = b[3]
+            if shellname == 'version' or len(sign) < 12:
+                continue
+        except:
+            continue
+
+        shellname = 'SHELLDETECT_' + shellname
+        export(shellname, [sign])
+
+
+    f.close()
+
+
+
+if __name__ == '__main__':
+
+    export_from_webshell()
+    export_from_shelldetectdb()
 
     print cyan('[+] ' + str(len(shelllib)) + " patterns were exported !")
     
