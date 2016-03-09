@@ -106,7 +106,7 @@
         $vulScanProgress = 0;
         $query = mysqli_query($con,"SELECT status FROM vulScanProgress WHERE newFilename='$newFilename'") or die(mysqli_error($con));
         $scanStatus = mysqli_fetch_row($query)[0];
-        if ($scanStatus == NULL){
+        if ($scanStatus == NULL){   
           mysqli_query($con,"INSERT INTO vulScanProgress (newFilename, status) VALUES ('$newFilename', '-1')") or die(mysqli_error($con));
         }else if($scanStatus == 1){
           $vulScanProgress = 1;

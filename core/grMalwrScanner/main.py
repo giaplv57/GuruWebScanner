@@ -55,6 +55,7 @@ def gateway():
     parser.add_option('--directory', '-d', type="string", help="specify directory to scan")
     parser.add_option('--filename', '-f', type="string", help="specify file to scan")
     parser.add_option('--outfile', '-o', type="string", help="specify outfile to write result using JSON")
+    parser.add_option('--patterndb', '-p', type="string", help="specify patterndb file")
     parser.add_option('--quite', '-q', default=False, action="store_true", help="enable quite mode")
     
     (options, args) = parser.parse_args()
@@ -89,6 +90,9 @@ def export_to_outfile(outfile):
 
 if __name__ == '__main__':
     options, args, QUITEMODE = gateway()
+
+    if options.patterndb != None:
+        PATTERNDB = options.patterndb
 
     rules = yara.compile(PATTERNDB)
     
