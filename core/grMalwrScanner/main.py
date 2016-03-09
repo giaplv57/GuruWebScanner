@@ -20,6 +20,7 @@ KNORM = '\033[0m'
 
 QUITEMODE   = False
 PATTERNDB   = 'patterndb.yara'
+dfuncs      = ["preg_replace", "passthru", "shell_exec", "exec", "base64_decode", "eval", "system", "proc_open", "popen", "curl_exec", "curl_multi_exec", "parse_ini_file", "show_source"]
 
 def bold(text):
     return KBOLD + text + KNORM
@@ -39,6 +40,11 @@ def yellow(text):
 def nocolor(text):
     return text
 
+def hide(filename):     # hide /user/Files in filanem
+    if not 'userFiles' in filename:
+        return filename
+    return filename.split('userFiles')[1]
+
 
 def gateway():
     parser = optparse.OptionParser()
@@ -53,6 +59,14 @@ def gateway():
         exit()
 
     return options, args, options.quite
+
+def scan_dangerous_function(content, filename):
+    lines = content.split('\n')
+    for lineno in range(0, len(lines)):
+        for dfunc in dfuncs:
+            if dfunc in lines[lineno]:
+                print red( "[+] Found dangerous function\t: " + dfunc + " in " + hide(filename) + "[" + str(lineno) + "]" )
+    return 0
 
 
 if __name__ == '__main__':
@@ -70,7 +84,7 @@ if __name__ == '__main__':
             
         matches = rules.match(filename)
         if matches != []:
-            print red("[+] Found...\t"), red(str(matches[0])), red("\tin (") + red(filename) + red(")")
+            print red("[+] Found...\t"), red(str(matches[0])), red("\tin (") + red(hide(filename)) + red(")")
         else:
             print yellow("[+] Great ! Nothing found, or something went wrong :)")
     if options.directory != None:
@@ -80,17 +94,22 @@ if __name__ == '__main__':
                 filename = dirName + '/' + fname      # get absolute filename
                 file_count += 1
                 if not QUITEMODE:
-                    print cyan("[+] Scanning...\t"), cyan(filename)            
+                    print cyan("[+] Scanning...\t"), cyan(hide(filename))
                 with open(filename, 'rb') as f:
                     d = f.read()
                 if len(d) == 0:
                     continue
+                
                 matches = rules.match(filename)
                 if matches != []: 
                     shell_count += 1
-                    print red("[+] Found...\t"), red(str(matches[0])), red("\tin (") + red(filename) + red(")")
+                    print red("[+] Found...\t"), red(str(matches[0])), red("\tin (") + red(hide(filename)) + red(")")
+                else:
+                    scan_dangerous_function(d, filename)            # just scan dangerous function with the file, which is not be detect as shellcode
         print green("[+] Analized\t: " + str(file_count) + " files ")
         if shell_count != 0:
             print green("[+] Found\t: " + str(shell_count) + " shells ")
         else:
             print yellow("[+] Great ! Nothing found, or something went wrong :)")
+
+
