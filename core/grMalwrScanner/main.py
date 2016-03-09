@@ -10,6 +10,7 @@ import sys
 import os
 import hashlib
 import yara
+import json
 
 KBOLD = '\033[1m'
 KRED = '\x1B[31m'
@@ -21,6 +22,9 @@ KNORM = '\033[0m'
 QUITEMODE   = False
 PATTERNDB   = 'patterndb.yara'
 dfuncs      = ["preg_replace", "passthru", "shell_exec", "exec", "base64_decode", "eval", "system", "proc_open", "popen", "curl_exec", "curl_multi_exec", "parse_ini_file", "show_source"]
+
+_shells     = []
+_dfuncs     = []
 
 def bold(text):
     return KBOLD + text + KNORM
@@ -50,6 +54,7 @@ def gateway():
     parser = optparse.OptionParser()
     parser.add_option('--directory', '-d', type="string", help="specify directory to scan")
     parser.add_option('--filename', '-f', type="string", help="specify file to scan")
+    parser.add_option('--outfile', '-o', type="string", help="specify outfile to write result using JSON")
     parser.add_option('--quite', '-q', default=False, action="store_true", help="enable quite mode")
     
     (options, args) = parser.parse_args()
@@ -66,7 +71,20 @@ def scan_dangerous_function(content, filename):
         for dfunc in dfuncs:
             if dfunc in lines[lineno]:
                 print red( "[+] Found dangerous function\t: " + dfunc + " in " + hide(filename) + "[" + str(lineno) + "]" )
+                tfunc = {
+                    "function": dfunc,
+                    "filename": filename,
+                    "line": lineno
+                }
+                _dfuncs.append(tfunc)
     return 0
+
+
+def export_to_outfile(outfile):
+    with open(outfile, "wb") as f:
+        f.write(json.dumps({"webshell":_shells, "dfunc":_dfuncs}))
+    print green("[+] Saved results to:\t" + outfile)
+
 
 
 if __name__ == '__main__':
@@ -103,7 +121,13 @@ if __name__ == '__main__':
                 matches = rules.match(filename)
                 if matches != []: 
                     shell_count += 1
-                    print red("[+] Found...\t"), red(str(matches[0])), red("\tin (") + red(hide(filename)) + red(")")
+                    shellname = str(matches[0])
+                    print red("[+] Found...\t"), red(shellname), red("\tin (") + red(hide(filename)) + red(")")
+                    tshell = {
+                        "shellname": shellname,
+                        "filename": filename
+                    }
+                    _shells.append(tshell)
                 else:
                     scan_dangerous_function(d, filename)            # just scan dangerous function with the file, which is not be detect as shellcode
         print green("[+] Analized\t: " + str(file_count) + " files ")
@@ -111,5 +135,28 @@ if __name__ == '__main__':
             print green("[+] Found\t: " + str(shell_count) + " shells ")
         else:
             print yellow("[+] Great ! Nothing found, or something went wrong :)")
+        
+        if options.outfile != None:
+            export_to_outfile(options.outfile)     # just export when scan directory
 
 
+""" JSON struct:
+
+    {
+        "dangeroud_function":
+            [{
+                "function": "lolololol",
+                "filename": "/etc/passwd",
+                "line": 0
+                }]
+        ,
+        "webshell":
+            [{
+                "shellname": "lololol0l",
+                "filename": "filename"
+                }]
+
+        }
+
+
+"""
