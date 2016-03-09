@@ -12,6 +12,7 @@ import hashlib
 
 SIGNATURE_LENGTH = 64
 SIGNATURE_NUMBER = 5
+MIN_UNIQUE_CHARACTER = 5
 
 KBOLD = '\033[1m'
 KRED = '\x1B[31m'
@@ -71,7 +72,7 @@ def is_whitelist(s):
                 uc.append(c)
         return len(uc)
 
-    if get_unique_character(s) < 5:            
+    if get_unique_character(s) < MIN_UNIQUE_CHARACTER:            
         return True
     return False
 
