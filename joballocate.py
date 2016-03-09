@@ -16,7 +16,7 @@ def vulScan(newFilename):
     uncompressFolder = "./userFiles/" + newFilename + "/"
     resultFile = "./userFiles/" + newFilename + ".result"
     print uncompressFolder
-    command = r"""for f in $(find {0} -name '*.php'); do php ./core/grVulnScanner/Main.php $f & PID=$!; sleep 3s; kill $PID; done > {1}""".format(uncompressFolder, resultFile)
+    command = r"""find {0} -name '*.php' | while read LINE; do php ./core/grVulnScanner/Main.php "$LINE" & PID=$!; sleep 3s; kill $PID; done > {1}""".format(uncompressFolder, resultFile)
     subprocess.call(command,shell=True)
 
     command = r"""python ./core/grMalwrScanner/main.py -q -p ./core/grMalwrScanner/patterndb.yara -d {0} -o {1}.gms""".format(uncompressFolder, resultFile)
