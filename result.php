@@ -192,7 +192,7 @@
                         </td>                     
                       </tr>                   
                       <tr>
-                        <td>[+] Total Found Vulnerabilities:</td>
+                        <td>[+] Vulnerabilities Scanner:</td>
                         <td>
                           <font face="Consolas"><b>
                             <?php if($scanStatus == 0 or $scanStatus == -1){
@@ -233,7 +233,7 @@
                         </script>
 
                       <tr>
-                        <td>[+] Total Found Webshells:</td>
+                        <td>[+] Malware Scanner:</td>
                         <td>
                           <font face="Consolas"><b>
                             <?php
@@ -273,7 +273,7 @@
                             <font face="Consolas">';                     
                           echo '<b>Suspicious behavior found in:</b><br>';
                           echo 'Full path: ' . $grDfunc['url'] . ' <b>[' . $grDfunc['line'] . ']</b> ' . '<br>';              
-                          echo 'Function: <b style="color:green">' . $grDfunc['function'] . '</b><br>';                                                                       
+                          echo 'Function: <b style="color:orange">' . $grDfunc['function'] . '</b><br>';                                                                       
                           echo '</font>
                               </td>                     
                             </tr>';
