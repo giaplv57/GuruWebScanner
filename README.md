@@ -23,7 +23,7 @@ $ mysql -uUSERNAME -pPASSWORD DATABASE < database/guruWS.sql
 ```
 chmod 777 -R userFiles/
 ```
-* Run jobAllocate.py in `core/grVulnScanner/` as a service
+* Run `jobAllocate.py` as a service
 ```
 sudo python jobAllocate.py &
 ```
