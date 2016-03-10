@@ -15,11 +15,12 @@ def vulScan(newFilename):
     cursor = childConnection.cursor()
     uncompressFolder = "./userFiles/" + newFilename + "/"
     resultFile = "./userFiles/" + newFilename + ".result"
-    print uncompressFolder
-    command = r"""find {0} -name '*.php' | while read LINE; do php ./core/grVulnScanner/Main.php "$LINE" & PID=$!; sleep 3s; kill $PID; done > {1}""".format(uncompressFolder, resultFile)
+    gmsFile = "./userFiles/" + newFilename + ".gms"
+
+    command = r"""python ./core/grMalwrScanner/main.py -q -p ./core/grMalwrScanner/patterndb.yara -d {0} -o {1}""".format(uncompressFolder, gmsFile)
     subprocess.call(command,shell=True)
 
-    command = r"""python ./core/grMalwrScanner/main.py -q -p ./core/grMalwrScanner/patterndb.yara -d {0} -o {1}.gms""".format(uncompressFolder, resultFile)
+    command = r"""find {0} -name '*.php' | while read LINE; do php ./core/grVulnScanner/Main.php "$LINE" & PID=$!; sleep 3s; kill $PID; done > {1}""".format(uncompressFolder, resultFile)
     subprocess.call(command,shell=True)
 
     cursor.execute('UPDATE vulScanProgress SET status = "1" WHERE newFilename="'+newFilename+'"')

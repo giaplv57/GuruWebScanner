@@ -159,13 +159,20 @@
 												<td>[+] Total Found Vulnerabilities:</td>
 												<td>
 													<font face="Consolas"><b>
-                            <?php if($scanStatus == 0 or $scanStatus == -1){
+                            <?php
+                                if($scanStatus == 0 or $scanStatus == -1) {
                                     echo "On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)";
-                                  }else{
+                                } else {
                                     echo count($matches);
                                     echo " vulnerabilities";  
-                                  }
+                                }
+                                
+                                /* grMalwrScanner here */
+                                $grGmsFile = $wshellResultFile = "./userFiles/".$newFilename.".gms";
+                                $grGmsContent = file_get_contents($grGmsFile);
+                                $grShellResult = json_decode($grGmsContent, true);
                             ?>
+                            
                           </b></font>
 												</td>											
 											</tr>
@@ -193,44 +200,54 @@
                                 subtitle: 'More advanced analytics',
                             };
                         </script>
+                        
+                        <tr>
+                            <td>[+] Total Found Webshells:</td>
+                            <td>
+                              <font face="Consolas"><b>
+                                <?php
+                                  if($scanStatus == 0 or $scanStatus == -1){
+                                    echo "<div id='wait'>On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)</div>";
+                                  }
+                                  else {
+                                    echo count($grShellResult['dfunc']);
+                                    echo " suspicious files, ";
+                                    echo count($grShellResult['webshell']); 
+                                    echo " shells found!";
+                                  }
+                                ?>
+                              </b>
+                              (<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a>)</font>
+                            </td>                     
+                          </tr>
+                          <?php 
+                            foreach ($grShellResult['webshell'] as $grShell) {
+                              echo '<tr>
+                                <td></td>
+                                <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
+                                <font face="Consolas">';                     
+                              echo '<b>Webshell found in: <a>' . $grShell['filename'] . '</a></b><br>';
+                              echo 'Full path: ' . $grShell['url'] . '</b><br>';                      
+                              echo 'Fingerprint: <b style="color:red">'. $grShell['shellname'] .'</b>';
+                            
+                              echo '</font>
+                                  </td>                     
+                                </tr>';
+                            }
 
-                      <tr>
-                        <td>[+] Total Found Webshells:</td>
-                        <td>
-                          <font face="Consolas"><b>
-                            <?php echo count($wshellmatches); ?> suspicious files, <?php echo $numberOfWshell[0][0]; ?> shells found!
-                          </b>
-                          (<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a>)</font>
-                        </td>                   
-                      </tr>
-                      <?php 
-                      foreach ($wshellmatches as $wshellvalue) {
-                          echo '<tr>
-                            <td></td>
-                            <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
-                            <font face="Consolas">';
-                        preg_match('/behavior found in: (.*?)&lt;span/', $wshellvalue[0], $shellName);
-                        preg_match('/Full path:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellPath);
-                        preg_match('/hash:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellMd5);
-                        preg_match('/Filesize:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellSize);
-                        preg_match('/suspicious functions used:&lt;\/dt&gt;&lt;dd&gt;(.*?)&lt;\/dd&gt;&lt;dt&gt;/', $wshellvalue[0], $shellFunctions);
-                        preg_match('/(green|red)&quot;&gt;(.*?)(&lt;small|&lt;\/dd&gt;)/', $wshellvalue[0], $shellFingerPrint);
-                        echo '<b>Suspicious behavior found in: <a>'.$shellName[1].'</a></b><br>';
-                        echo 'Full path: '.preg_replace('/userFiles\/'.$newFilename.'/', '.', $shellPath[1]).'<br>';
-                        echo 'MD5 hash: '.$shellMd5[1].'<br>';
-                        echo 'Filesize: '.$shellSize[1].'<br>';
-                        echo 'Suspicious functions used: '.html_entity_decode($shellFunctions[1]).'<br>';
-                        if ($shellFingerPrint[2] === 'Negative '){
-                          echo '<p>Fingerprint: <b style="color:rgb(0, 153, 51)">'.$shellFingerPrint[2].'</b></p>';
-                        }else{
-                          echo '<p>Fingerprint: <b style="color:red">'.$shellFingerPrint[2].'</b></p>';
-                        }
-                          echo '</font>
-                              </td>                     
-                            </tr>';
-                      }
-                      ?>
-
+                            foreach ($grShellResult['dfunc'] as $grDfunc) {
+                              echo '<tr>
+                                <td></td>
+                                <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
+                                <font face="Consolas">';                     
+                              echo '<b>Suspicious behavior found in:</b><br>';
+                              echo 'Full path: ' . $grDfunc['url'] . ' <b>[' . $grDfunc['line'] . ']</b> ' . '<br>';              
+                              echo 'Function: <b style="color:green">' . $grDfunc['function'] . '</b><br>';                                                                       
+                              echo '</font>
+                                  </td>                     
+                                </tr>';
+                            }
+                        ?>
                       <tr>
                         <td>[+] Link to share:</td>                     
                         <td>

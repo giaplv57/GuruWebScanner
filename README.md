@@ -25,7 +25,7 @@ chmod 777 -R userFiles/
 ```
 * Run jobAllocate.py in `core/grVulnScanner/` as a service
 ```
-python jobAllocate.py &
+sudo python jobAllocate.py &
 ```
 * Increase the max file size for upload file as well as max size of post request in php.ini (optional)
 ```

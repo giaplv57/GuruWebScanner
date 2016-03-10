@@ -74,7 +74,7 @@ def scan_dangerous_function(content, filename):
                 print red( "[+] Found dangerous function\t: " + dfunc + " in " + hide(filename) + "[" + str(lineno) + "]" )
                 tfunc = {
                     "function": dfunc,
-                    "filename": filename,
+                    "url": filename[53:],
                     "line": lineno
                 }
                 _dfuncs.append(tfunc)
@@ -109,11 +109,13 @@ if __name__ == '__main__':
             print red("[+] Found...\t"), red(str(matches[0])), red("\tin (") + red(hide(filename)) + red(")")
         else:
             print yellow("[+] Great ! Nothing found, or something went wrong :)")
+
     if options.directory != None:
         rootDir = options.directory
         for dirName, subdirList, fileList in os.walk(rootDir):            
             for fname in fileList:
-                filename = dirName + '/' + fname      # get absolute filename
+                filename = dirName + '/' + fname      # get absolute filename                
+
                 file_count += 1
                 if not QUITEMODE:
                     print cyan("[+] Scanning...\t"), cyan(hide(filename))
@@ -126,10 +128,11 @@ if __name__ == '__main__':
                 if matches != []: 
                     shell_count += 1
                     shellname = str(matches[0])
-                    print red("[+] Found...\t"), red(shellname), red("\tin (") + red(hide(filename)) + red(")")
+                    print red("[+] Found...\t"), red(shellname), red("\tin (") + red(hide(filename)) + red(")")                    
                     tshell = {
                         "shellname": shellname,
-                        "filename": filename
+                        "url": filename[53:],
+                        "filename": fname                        
                     }
                     _shells.append(tshell)
                 else:
@@ -147,10 +150,10 @@ if __name__ == '__main__':
 """ JSON struct:
 
     {
-        "dangeroud_function":
+        "dfunc":
             [{
                 "function": "lolololol",
-                "filename": "/etc/passwd",
+                "url": "/etc/passwd",
                 "line": 0
                 }]
         ,
