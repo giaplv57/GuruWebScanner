@@ -259,6 +259,7 @@
                             <font face="Consolas">';                     
                           echo '<b>Webshell found in: <a>' . $grShell['filename'] . '</a></b><br>';
                           echo 'Full path: ' . $grShell['url'] . '</b><br>';                      
+                          echo 'Filesize: ' . $grShell['filesize'] . ' bytes <br>';  
                           echo 'Fingerprint: <b style="color:red">'. $grShell['shellname'] .'</b>';
                         
                           echo '</font>
@@ -273,6 +274,7 @@
                             <font face="Consolas">';                     
                           echo '<b>Suspicious behavior found in: ' . $grDfunc['filename'] . '</b><br>';
                           echo 'Full path: ' . $grDfunc['url'] . ' <b>[' . $grDfunc['lineno'] . '] (' . $grDfunc['line'] . ')</b> ' . '<br>';              
+                          echo 'Filesize: ' . $grDfunc['filesize'] . ' bytes <br>';              
                           echo 'Function: <b style="color:orange">' . $grDfunc['function'] . '</b><br>';                                                                       
                           echo '</font>
                               </td>                     

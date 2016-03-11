@@ -77,7 +77,8 @@ def scan_dangerous_function(content, url, filename):
                     "url": url[53:],
                     "lineno": lineno,
                     "line": lines[lineno],
-                    "filename": filename
+                    "filename": filename,
+                    "filesize": len(content)
                 }
                 _dfuncs.append(tfunc)
     return 0
@@ -134,7 +135,8 @@ if __name__ == '__main__':
                     tshell = {
                         "shellname": shellname,
                         "url": filename[53:],
-                        "filename": fname                        
+                        "filename": fname,
+                        "filesize": len(d)
                     }
                     _shells.append(tshell)
                 else:
@@ -158,14 +160,16 @@ if __name__ == '__main__':
                 "filename": "passwd",
                 "url": "/etc/passwd",
                 "lineno": 0,
-                "line": 0
+                "line": 0,
+                "filesize": 122
                 }]
         ,
         "webshell":
             [{
                 "shellname": "lololol0l",
                 "url": "/bin/sh",
-                "filename": "sh"
+                "filename": "sh",
+                "filesize": 11
                 }]
 
         }
