@@ -1,13 +1,12 @@
+ble File  410 lines (375 sloc)  12.3 KB
 <?php
 	# Smallest filesize to checkfor in bytes.  
 	define("SMALLEST", 60);
     $GLOBALS['rank_list'] = array();
-
 	//For DEBUG purpose
 	// ini_set('display_errors',1); 
 	// error_reporting(E_ALL);
     //////////////////////////////////
-
 	class LanguageIC{
 		var $char_count = array();
 		var $total_char_count = 0;
@@ -19,7 +18,6 @@
 				$this->char_count[chr($x)] = 0;
 			}
 		}
-
 		function calculate_char_count($data){
 			// """Method to calculate character counts for a particular data file."""
 			if (!$data){
@@ -48,7 +46,6 @@
 			}
 			$this->ic_total_results = $ic_total;
 		}
-
 		function calculate($filename,$data){
 			// """Calculate the Index of Coincidence for a file and append to self.ic_results array"""
 			if (!$data){
@@ -56,7 +53,6 @@
 			}
 			$char_count = 0;
 			$total_char_count = 0;
-
 			for($x = 0; $x < 256; $x++){
 				$char = chr($x);
 			   	$charcount = substr_count($data, $char);
@@ -69,7 +65,6 @@
 			$this->calculate_char_count($data);
 			return $ic;
 		}
-
 		function sort(){
 			asort($this->results);
 			$this->calculate_IC();
@@ -78,7 +73,6 @@
 	}
 	class Entropy{
 		var $results = array();
-
 		function calculate($filename, $data){
 			if (!$data) {
           		return 0;
@@ -105,7 +99,6 @@
 	class LongestWord{
 		// """Class that determines the longest word for a particular file."""
 		var $results = array();
-
 		function calculate($filename, $data){
 			// """Find the longest word in a string and append to longestword_results array"""
 			if (!$data){
@@ -126,7 +119,6 @@
 			$this->results[$filename] = $longest;
 			return $longest;
 		}
-
 		function sort(){
 			arsort($this->results);
             resultsAddRank($this->results);
@@ -135,7 +127,6 @@
 	class SignatureNasty{
 		// """Generator that searches a given file for nasty expressions"""
 		var $results = array();
-
 		function calculate($filename, $data){
 			if(!$data){
 				return "";
@@ -144,7 +135,6 @@
 			preg_match_all('/(eval\(|file_put_contents|base64_decode|python_eval|exec\(|passthru|popen|proc_open|pcntl|assert\(|system\(|shell)/i', $data, $matches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array
 			$this->results[$filename] = count($matches);	
 		}
-
 		function sort(){
 			arsort($this->results);
             resultsAddRank($this->results);
@@ -152,7 +142,6 @@
 	}
 	class SignatureSuperNasty{
 		var $results = array();
-
 		function calculate($filename, $data){
 			if(!$data){
 				return "";
@@ -161,7 +150,6 @@
 			preg_match_all('/(@\$_\[\]=|\$_=@\$_GET|\$_\[\+""\]=)/i', $data, $matches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array , i flag to perform case-insensitive
 			$this->results[$filename] = count($matches);				
 		}
-
 		function sort(){
 			arsort($this->results);
             resultsAddRank($this->results);
@@ -170,7 +158,6 @@
 	class UsesEval{
 	   // """Generator that searches a given file for nasty eval with variable"""
 		var $results = array();
-
 		function calculate($filename, $data){
 			if(!$data){
 				return "";
@@ -179,14 +166,12 @@
 			preg_match_all('/(eval\(\$(\w|\d))/i', $data, $matches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array , i flag to perform case-insensitive
 			$this->results[$filename] = count($matches);				
 		}
-
 		function sort(){
 			arsort($this->results);
 		}
 	}
 	class Compression{
 		var $results = array();
-
 		function calculate($filename, $data){
 			if(!$data){
 				return "";
@@ -195,17 +180,14 @@
 			$ratio = strlen($compressed)/strlen($data);
 			$this->results[$filename] = $ratio;
 		}
-
 		function sort(){
 			arsort($this->results);
 		}
 	}
-
 	function resultsAddRank($results){
         $rank = 1;
 		$previousValue = false;
         $offset = 1;
-
         foreach ($results as $key=>$value){
             if ($previousValue and $previousValue != $value){
                 $rank = $offset;
@@ -216,7 +198,6 @@
         }
         return $GLOBALS['rank_list'];
 	}
-
 	function fileIterator ($path, $patern){
 		$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
 		$filter = new RegexIterator($iterator, '/(.*)\.(php|asp|aspx|scath|bash|zsh|csh|tsch|pl|py|txt|cgi|cfm)$/');
@@ -230,11 +211,9 @@
 		}
 		return $files;
 	}
-
 	function shellRankerMain($newFilename){
 		$path = "./userFiles/".$newFilename."/";
 		$fileList = fileIterator($path, "");
-
 		$EntropyTest = new Entropy();
 		$LanguageICTest = new LanguageIC();
 		$LongestWordTest = new LongestWord();
@@ -261,20 +240,16 @@
 	    // $UsesEvalTest->sort();
 	    // $CompressionTest->sort();
 	    asort($GLOBALS['rank_list']);
-
 	    $count = 10;
 	    if(count($fileList) < $count){
 	    	$count = count($fileList);
 	    }
-
 	    writeReportToFile($newFilename, $EntropyTest, $LanguageICTest, $LongestWordTest, $SignatureNastyTest, $SignatureSuperNastyTest, $GLOBALS['rank_list'], $count);
 	    // $rankerResult = array('EntropyTest' => $EntropyTest, 'LanguageICTest' => $LanguageICTest, 'LongestWordTest' => 
 	    // 		$LongestWordTest, 'SignatureNastyTest' => $SignatureNastyTest, 'SignatureSuperNastyTest' => $SignatureSuperNastyTest,
 	    // 		'ranked_list' => $GLOBALS['rank_list'], 'listLength' => $count);
-
 	    // return $rankerResult;
 	}
-
 	function writeReportToFile($newFilename, $EntropyTest, $LanguageICTest, $LongestWordTest, $SignatureNastyTest, $SignatureSuperNastyTest, $rankedList, $listLength){
 		$path = "./userFiles/".$newFilename."/";
 		$reportContent = '<div class="box box-color box-bordered">
@@ -297,7 +272,6 @@
 										<tr>
 											<th colspan=2>[+] Top '.$listLength.' lowest IC files:</th>
 										</tr>';
-
 		$temp = 0;
 		foreach ($LanguageICTest->results as $key=>$value){
 			if ($temp == $listLength) break;
@@ -311,11 +285,9 @@
 					</tr>';
 			$temp++;
 		}
-
 		$reportContent= $reportContent.'<tr>
 											<th colspan=2>[+] Top '.$listLength.' entropic files for a given search:</th>
 										</tr>';
-
 		$temp = 0;
 		foreach ($EntropyTest->results as $key=>$value){
 			if ($temp == $listLength) break;
@@ -345,7 +317,6 @@
 					</tr>';
 			$temp++;
 		}
-
 		$reportContent = $reportContent.'<tr>
 											<th colspan=2>[+] Top '.$listLength.' signature match counts:</th>
 										</tr>';
@@ -365,7 +336,6 @@
 		$reportContent = $reportContent.'<tr>
 											<th colspan=2>[+] Top '.$listLength.' SUPER-signature match counts (These are usually bad!):</th>
 										</tr>';
-
 		$temp = 0;
 		foreach ($SignatureSuperNastyTest->results as $key=>$value){
 			if ($temp == $listLength) break;
@@ -400,11 +370,9 @@
 									</div>
 									</font>
 								</div>';
-
 		$report = fopen("./userFiles/".$newFilename.".analytics","w");
 		fwrite($report, $reportContent);
 		fclose($report);
 		// echo $reportContent;
 	}
-
 ?>

@@ -66,16 +66,17 @@ def gateway():
 
     return options, args, options.quite
 
-def scan_dangerous_function(content, filename):
+def scan_dangerous_function(content, url, filename):
     lines = content.split('\n')
     for lineno in range(0, len(lines)):
         for dfunc in dfuncs:
             if dfunc in lines[lineno]:
-                print red( "[+] Found dangerous function\t: " + dfunc + " in " + hide(filename) + "[" + str(lineno) + "]" )
+                print red( "[+] Found dangerous function\t: " + dfunc + " in " + hide(url) + "[" + str(lineno) + "]" )
                 tfunc = {
                     "function": dfunc,
-                    "url": filename[53:],
-                    "line": lineno
+                    "url": url[53:],
+                    "line": lineno,
+                    "filename": filename
                 }
                 _dfuncs.append(tfunc)
     return 0
@@ -136,7 +137,7 @@ if __name__ == '__main__':
                     }
                     _shells.append(tshell)
                 else:
-                    scan_dangerous_function(d, filename)            # just scan dangerous function with the file, which is not be detect as shellcode
+                    scan_dangerous_function(d, filename, fname)            # just scan dangerous function with the file, which is not be detect as shellcode
         print green("[+] Analized\t: " + str(file_count) + " files ")
         if shell_count != 0:
             print green("[+] Found\t: " + str(shell_count) + " shells ")
@@ -153,6 +154,7 @@ if __name__ == '__main__':
         "dfunc":
             [{
                 "function": "lolololol",
+                "filename": "passwd",
                 "url": "/etc/passwd",
                 "line": 0
                 }]
@@ -161,7 +163,7 @@ if __name__ == '__main__':
             [{
                 "shellname": "lololol0l",
                 "url": "/bin/sh",
-                "filename": "filename"
+                "filename": "sh"
                 }]
 
         }
