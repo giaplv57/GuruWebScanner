@@ -44,7 +44,7 @@ def yellow(text):
 def nocolor(text):
     return text
 
-def hide(filename):     # hide /user/Files in filanem
+def hide(filename): 
     if not 'userFiles' in filename:
         return filename
     return filename.split('userFiles')[1]
@@ -160,6 +160,7 @@ if __name__ == '__main__':
         "webshell":
             [{
                 "shellname": "lololol0l",
+                "url": "/bin/sh",
                 "filename": "filename"
                 }]
 
