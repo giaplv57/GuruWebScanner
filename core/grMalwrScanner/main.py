@@ -75,7 +75,8 @@ def scan_dangerous_function(content, url, filename):
                 tfunc = {
                     "function": dfunc,
                     "url": url[53:],
-                    "line": lineno,
+                    "lineno": lineno,
+                    "line": lines[lineno],
                     "filename": filename
                 }
                 _dfuncs.append(tfunc)
@@ -156,6 +157,7 @@ if __name__ == '__main__':
                 "function": "lolololol",
                 "filename": "passwd",
                 "url": "/etc/passwd",
+                "lineno": 0,
                 "line": 0
                 }]
         ,

@@ -272,7 +272,7 @@
                             <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
                             <font face="Consolas">';                     
                           echo '<b>Suspicious behavior found in: ' . $grDfunc['filename'] . '</b><br>';
-                          echo 'Full path: ' . $grDfunc['url'] . ' <b>[' . $grDfunc['line'] . ']</b> ' . '<br>';              
+                          echo 'Full path: ' . $grDfunc['url'] . ' <b>[' . $grDfunc['lineno'] . '] (' . $grDfunc['line'] . ')</b> ' . '<br>';              
                           echo 'Function: <b style="color:orange">' . $grDfunc['function'] . '</b><br>';                                                                       
                           echo '</font>
                               </td>                     
