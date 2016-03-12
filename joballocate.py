@@ -14,7 +14,6 @@ def vulScan(projectID):
     childConnection = MySQLdb.connect("localhost","root","root","guruWS")
     cursor = childConnection.cursor()
     uncompressFolder = "./userProjects/" + projectID + "/"
-    resultFile = "./userProjects/" + projectID + ".result"
     gmsFile = "./userProjects/" + projectID + ".gms"
 
     command = r"""python ./core/grMalwrScanner/main.py -q -p ./core/grMalwrScanner/patterndb.yara -d {0} -o {1}""".format(uncompressFolder, gmsFile)
@@ -22,7 +21,7 @@ def vulScan(projectID):
     cursor.execute('UPDATE scanProgress SET sigStatus = "1" WHERE projectID="'+projectID+'"')
     childConnection.commit()
 
-    command = r"""find {0} -name '*.php' | while read LINE; do php ./core/grVulnScanner/Main.php "$LINE" & PID=$!; sleep 3s; kill $PID; done > {1}""".format(uncompressFolder, resultFile)
+    command = r"""find {0} -name '*.php' | while read LINE; do php ./core/grVulnScanner/Main.php "$LINE" "{1}" & PID=$!; sleep 3s; kill $PID; done""".format(uncompressFolder, projectID)
     subprocess.call(command,shell=True)
     cursor.execute('UPDATE scanProgress SET vulStatus = "1" WHERE projectID="'+projectID+'"')
     

@@ -92,19 +92,6 @@
           $fileCheckSum = $row['sha1Hash'];
           $scanTime = $row['scanTime'];
           $projectID = $row['projectID'];
-
-          $resultFile = "./userProjects/".$projectID.".result";
-  				//nl2br function to end line as proper
-          $resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); 
-
-  				//The PREG_SET_ORDER flag to ensure result appropriately distribute to array
-          preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);
-
-          $wshellResultFile = "./userProjects/".$projectID.".wshell";
-  		    $wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper          
-          preg_match_all('/behavior found in:(.*?)(Suspicious|clearer)/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
-          preg_match_all('/suspicious files found and (.*) shells found/', $wshellResultContent, $trueWshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
-          preg_match_all('!\d+!', $trueWshellmatches[0][1], $numberOfWshell);
   				$report = 1;
   			}
 		  }
@@ -163,9 +150,10 @@
                             <?php
                                 if($vulStatus != 1) {
                                     echo "On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)";
-                                } else {
-                                    echo count($matches);
-                                    echo " vulnerabilities";  
+                                }else{
+                                  $numberOfVul = mysqli_query($con,"SELECT count(fileName) FROM vulResult WHERE projectID='$projectID'") or die(mysqli_error($con));
+                                  echo mysqli_fetch_row($numberOfVul)[0];
+                                  echo " vulnerabilities";  
                                 }
                                 
                                 /* grMalwrScanner here */
@@ -177,20 +165,25 @@
                           </b></font>
 												</td>											
 											</tr>
-											<?php 
-                      if($vulStatus == 1){
-  											foreach ($matches as $value) {
-  	    										echo '<tr>
-  														<td></td>
-  														<td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
-  														<font face="Consolas"><b>';
-  	    										echo substr(preg_replace('/\/var(.*?)'.$projectID.'/m', '', $value[0]), 0, -13); 
-  	    										echo '</b></font>
-  	    												</td>											
-  														</tr>';
+											<?php
+                        if($vulStatus == 1){
+                          $vulResult = mysqli_query($con,"SELECT * FROM vulResult WHERE projectID='$projectID'") or die(mysqli_error($con));
+                          foreach ($vulResult as $vul) {
+                              echo '<tr>
+                                <td></td>
+                                <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
+                                <font face="Consolas"><b>';
+                              echo $vul['description']; echo '<br><br>';
+                              echo 'FLOWPATH:'; echo '<br>';
+                              echo $vul['flowpath']; echo '<br><br>';
+                              echo 'DEPENDENCIES:'; echo '<br>';
+                              echo $vul['dependencies']; echo '<br><br>';                           
+                              echo '</b></font>
+                                  </td>                     
+                                </tr>';
+                          }
                         }
-											}
-											?>
+                      ?>
 											<!-- Innitial ajax analytic modal -->
                         <script>
                            var options = {

@@ -1,0 +1,221 @@
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 12:20:28 - 2/185
+Progress @ 12:20:28 - 10/185
+Progress @ 12:20:28 - 12/185
+Progress @ 12:20:28 - 16/185
+Progress @ 12:20:28 - 18/185
+Progress @ 12:20:28 - 20/185
+Progress @ 12:20:28 - 22/185
+Progress @ 12:20:28 - 24/185
+Progress @ 12:20:28 - 30/185
+Progress @ 12:20:28 - 32/185
+Progress @ 12:20:28 - 38/185
+Progress @ 12:20:28 - 40/185
+Progress @ 12:20:28 - 46/185
+Progress @ 12:20:28 - 48/185
+Progress @ 12:20:28 - 54/185
+Progress @ 12:20:28 - 56/185
+Progress @ 12:20:28 - 62/185
+Progress @ 12:20:28 - 68/185
+Progress @ 12:20:28 - 70/185
+Progress @ 12:20:28 - 62/185
+Progress @ 12:20:28 - 68/185
+Progress @ 12:20:28 - 70/185
+Progress @ 12:20:28 - 62/185
+Progress @ 12:20:28 - 68/185
+Progress @ 12:20:28 - 70/185
+Progress @ 12:20:28 - 62/185
+Progress @ 12:20:28 - 68/185
+Progress @ 12:20:28 - 70/185
+Progress @ 12:20:28 - 76/185
+Progress @ 12:20:28 - 78/185
+Progress @ 12:20:28 - 76/185
+Progress @ 12:20:28 - 78/185
+Progress @ 12:20:28 - 80/185
+Progress @ 12:20:28 - 82/185
+Progress @ 12:20:28 - 86/185
+Progress @ 12:20:28 - 88/185
+Progress @ 12:20:28 - 90/185
+Progress @ 12:20:28 - 94/185
+Progress @ 12:20:28 - 96/185
+Progress @ 12:20:28 - 98/185
+Progress @ 12:20:28 - 94/185
+Progress @ 12:20:28 - 96/185
+Progress @ 12:20:28 - 98/185
+Progress @ 12:20:28 - 104/185
+Progress @ 12:20:28 - 106/185
+Progress @ 12:20:28 - 114/185
+Progress @ 12:20:28 - 116/185
+Progress @ 12:20:28 - 118/185
+Progress @ 12:20:28 - 120/185
+Progress @ 12:20:28 - 122/185
+Progress @ 12:20:28 - 124/185
+Progress @ 12:20:28 - 126/185
+Progress @ 12:20:28 - 128/185
+Progress @ 12:20:28 - 136/185
+Progress @ 12:20:28 - 138/185
+Progress @ 12:20:28 - 144/185
+Progress @ 12:20:28 - 146/185
+Progress @ 12:20:28 - 150/185
+Progress @ 12:20:28 - 152/185
+----------------------------------
+-----------------------------------------------------------------------------------
+SQL VULNERABILITY FOUND AT mysql_query (DEBUG A2) WITH MISSING QUOTING IN FILE /var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php LINE 66
+
+FLOWPATH:
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php:66:mysql_query("INSERT INTO users (username, fullname, age, RSApass, hashPass, role) VALUES ('{$username}', '{$fullname}', {$age}, '{$RSApass}', '{$hashPass}', '0')")
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php:57:$username = mysql_real_escape_string($_POST['username'])
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php:55:$fullname = mysql_real_escape_string($_POST['fullname'])
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php:56:$age = mysql_real_escape_string($_POST['age'])
+
+DEPENDENCIES:
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php:52:if (((isset($_POST['username']) && isset($_POST['password'])) && isset($_POST['fullname'])) && isset($_POST['age']))
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php:63:if ((($username != '' && $password != '') && $fullname != '') && $age != '')
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php:65:if (mysql_num_rows($check) == 0)
+
+
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php LINE 71
+
+FLOWPATH:
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php:71:echo ((('<div class="alert alert-success col-md-5 col-md-offset-3" role="alert">
+								  	<center>
+								  		<strong>Success!</strong>
+								  	 	 \'' . $username) . '\' (') . $row['fullname']) . ')
+								  	 	 <br>
+								  	 	 You can now login to enjoy our service now!!!
+								  	</center>
+								  </div>'
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php:57:$username = mysql_real_escape_string($_POST['username'])
+
+DEPENDENCIES:
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php:52:if (((isset($_POST['username']) && isset($_POST['password'])) && isset($_POST['fullname'])) && isset($_POST['age']))
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php:63:if ((($username != '' && $password != '') && $fullname != '') && $age != '')
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php:65:if (mysql_num_rows($check) == 0)
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signUp.php:69:if (mysql_num_rows($query) != 0)
+
+
+-----------------------------------------------------------------------------------
+Vulnerabilities: 2
+Seconds: 0.021112203598022
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 12:20:31 - 1/7
+Progress @ 12:20:31 - 2/7
+Progress @ 12:20:31 - 5/7
+Progress @ 12:20:31 - 7/7
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0080080032348633
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 12:20:34 - 2/158
+Progress @ 12:20:34 - 10/158
+Progress @ 12:20:34 - 12/158
+Progress @ 12:20:34 - 16/158
+Progress @ 12:20:34 - 18/158
+Progress @ 12:20:34 - 20/158
+Progress @ 12:20:34 - 22/158
+Progress @ 12:20:34 - 24/158
+Progress @ 12:20:34 - 30/158
+Progress @ 12:20:34 - 32/158
+Progress @ 12:20:34 - 38/158
+Progress @ 12:20:34 - 44/158
+Progress @ 12:20:34 - 50/158
+Progress @ 12:20:34 - 52/158
+Progress @ 12:20:34 - 50/158
+Progress @ 12:20:34 - 52/158
+Progress @ 12:20:34 - 44/158
+Progress @ 12:20:34 - 50/158
+Progress @ 12:20:34 - 52/158
+Progress @ 12:20:34 - 50/158
+Progress @ 12:20:34 - 52/158
+Progress @ 12:20:34 - 56/158
+Progress @ 12:20:34 - 58/158
+Progress @ 12:20:34 - 62/158
+Progress @ 12:20:34 - 64/158
+Progress @ 12:20:34 - 66/158
+Progress @ 12:20:34 - 70/158
+Progress @ 12:20:34 - 72/158
+Progress @ 12:20:34 - 74/158
+Progress @ 12:20:34 - 78/158
+Progress @ 12:20:34 - 84/158
+Progress @ 12:20:34 - 90/158
+Progress @ 12:20:34 - 96/158
+Progress @ 12:20:34 - 98/158
+Progress @ 12:20:34 - 100/158
+Progress @ 12:20:34 - 102/158
+Progress @ 12:20:34 - 104/158
+Progress @ 12:20:34 - 106/158
+Progress @ 12:20:34 - 108/158
+Progress @ 12:20:34 - 110/158
+Progress @ 12:20:34 - 112/158
+Progress @ 12:20:34 - 114/158
+Progress @ 12:20:34 - 116/158
+Progress @ 12:20:34 - 118/158
+Progress @ 12:20:34 - 122/158
+Progress @ 12:20:34 - 124/158
+Progress @ 12:20:34 - 136/158
+Progress @ 12:20:34 - 140/158
+Progress @ 12:20:34 - 142/158
+Progress @ 12:20:34 - 150/158
+----------------------------------
+-----------------------------------------------------------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signIn.php LINE 64
+
+FLOWPATH:
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signIn.php:64:echo ((((('<div class="alert alert-info col-md-6 col-md-offset-3" role="alert">
+                        <center>
+                            <strong>' . $username) . ' ::') . $row['fullname']) . ':: (') . $row['age']) . ' years old)</strong>
+                            <br>
+                            <strong>You must know that you don\'t have enough power to capture the flag!!!</strong>
+                        </center>
+                    </div>'
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signIn.php:44:$username = mysql_real_escape_string($_POST['username'])
+
+DEPENDENCIES:
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signIn.php:42:if (isset($_POST['username']) && isset($_POST['password']))
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signIn.php:47:if ($username != '' && $password != '')
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signIn.php:53:if (!empty($row['fullname']) && !empty($row['age']))
+/var/www/html/GuruWebScanner/userProjects/36968b7e99342c2b45643ca87c405926adb843ba/MyCharm/signIn.php:63:else
+
+
+-----------------------------------------------------------------------------------
+Vulnerabilities: 1
+Seconds: 0.018860101699829
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 12:20:37 - 1/9
+Progress @ 12:20:37 - 3/9
+Progress @ 12:20:37 - 4/9
+Progress @ 12:20:37 - 6/9
+Progress @ 12:20:37 - 7/9
+Progress @ 12:20:37 - 9/9
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0075700283050537
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 12:20:40 - 1/6
+Progress @ 12:20:40 - 2/6
+Progress @ 12:20:40 - 5/6
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.012032032012939
+----------------------------------

@@ -30,8 +30,7 @@ try {
     if (!isset($_GET["file"])) {
 
         $options = getopt("fl:tw:cr:im:",array("fulltree","loop:","showtree","watch:","cleangetpost","requestid:", "ignoreflow","module:"));
-
-        if ((!isset($options["r"]) && !isset($options["requestid"])) && ($argc == 1 || !is_file($file = $argv[$argc - 1]))) {
+        if ((!isset($options["r"]) && !isset($options["requestid"])) && (!is_file($file = $argv[$argc - 2]))) {
             die("Remember the filename!");
         }
     } else {
@@ -284,23 +283,51 @@ try {
     echo 'Parse Error: ',$e->getMessage();
 }
 
+function ConnectDB(){
+    $db_username="root";
+    $db_password="root";
+    $database="guruWS";
+    $con=mysqli_connect('localhost', $db_username, $db_password, $database);
+    return $con;
+}
+
+function resultToDB($projectID, $fileName, $description, $flowpath, $dependencies){
+    $conaa = ConnectDB() or die("can't connect to DB");
+    mysqli_query($conaa,"INSERT INTO vulResult (projectID, fileName, description, flowpath, dependencies) VALUES ('$projectID', '$fileName', '$description', '$flowpath', '$dependencies' )") or die(mysqli_error($conaa));
+}
 
 function vulnerabiltyPrinter($vuln) {
+    echo "-----------------------------------------------------------------------------------\n";
+    $flowpath     = "";
+    $dependencies = "";
     echo $vuln["description"]."\n\n";
     foreach ($vuln["flowanddependencies"] as $flowdeppath) {
         echo "FLOWPATH:\n";
         foreach($flowdeppath["flowpath"] as $flow) {
             echo $flow."\n";
+            $flowpath .= $flow."\n";
         }
 
         echo "\nDEPENDENCIES:\n";
         foreach($flowdeppath["dependencies"] as $dependency) {
             echo $dependency."\n";
+            $dependencies .= $dependency."\n";
         }
         echo "\n";
     }
+    
+    $projectID    = $GLOBALS['argv'][2];
+    $description  = $vuln["description"];
+    $fileName     = preg_replace('/\/var(.*?)'.$projectID.'/m', '', $GLOBALS['file']);
+    $description  = preg_replace('/\/var(.*?)'.$projectID.'/m', '', $description);
+    #Need using htmlentities function to normalize special character like ' and "
+    #Need nl2br to add newline in proper way
+    $flowpath     = preg_replace('/\/var(.*?)'.$projectID.'/m', '', nl2br(htmlentities($flowpath, ENT_QUOTES, 'UTF-8'))); 
+    $dependencies = preg_replace('/\/var(.*?)'.$projectID.'/m', '', nl2br(htmlentities($dependencies, ENT_QUOTES, 'UTF-8'))); 
 
-    echo "-----------------------------------\n";
+    resultToDB($projectID, $fileName, $description, $flowpath, $dependencies);
+    echo PHP_EOL;
+    echo "-----------------------------------------------------------------------------------\n";
 }
 
 ?>

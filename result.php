@@ -114,13 +114,6 @@
           $sigScanProgress = $sigStatus;
         }
 
-        /* vul result */
-        if($vulStatus == 1){
-          $resultFile = "./userProjects/".$projectID.".result";                      
-          $resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); //nl2br function to end line as proper          
-          preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array  
-        }
-
         /* grMalwrScanner here */
         if($sigStatus == 1){
   	      $grGmsFile = $wshellResultFile = "./userProjects/".$projectID.".gms";
@@ -202,7 +195,8 @@
                             <?php if($vulStatus != 1){
                                     echo "<div id='wait'>On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)</div>";
                                   }else{
-                                    echo count($matches);
+                                    $numberOfVul = mysqli_query($con,"SELECT count(fileName) FROM vulResult WHERE projectID='$projectID'") or die(mysqli_error($con));
+                                    echo mysqli_fetch_row($numberOfVul)[0];
                                     echo " vulnerabilities";  
                                   }
                             ?>
@@ -211,13 +205,17 @@
                       </tr>
                       <?php
                         if($vulStatus == 1){
-                          foreach ($matches as $value) {
+                          $vulResult = mysqli_query($con,"SELECT * FROM vulResult WHERE projectID='$projectID'") or die(mysqli_error($con));
+                          foreach ($vulResult as $vul) {
                               echo '<tr>
                                 <td></td>
                                 <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
                                 <font face="Consolas"><b>';
-                              // echo $value[0];
-                            echo substr(preg_replace('/\/var(.*?)'.$projectID.'/m', '', $value[0]), 0, -13); 
+                              echo $vul['description']; echo '<br><br>';
+                              echo 'FLOWPATH:'; echo '<br>';
+                              echo $vul['flowpath']; echo '<br><br>';
+                              echo 'DEPENDENCIES:'; echo '<br>';
+                              echo $vul['dependencies']; echo '<br><br>';                           
                               echo '</b></font>
                                   </td>                     
                                 </tr>';
