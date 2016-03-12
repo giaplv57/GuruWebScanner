@@ -79,28 +79,29 @@
 	    	if(is_array($_GET["id"])) die();
 	    	$con = ConnectDB() or die("can't connect to DB");
 	    	$id = mysqli_real_escape_string($con, preg_replace('/\s+/', '', $_GET["id"])); //preg_replace to remove all space
-	    	$query = mysqli_query($con,"SELECT * FROM reports WHERE shareID='$id'") or die(mysqli_error($con));
+	    	$query = mysqli_query($con,"SELECT * FROM projectInfo WHERE shareID='$id'") or die(mysqli_error($con));
 	    	$row = mysqli_fetch_array($query);
         
-        if(!empty($row['newFilename'])){
-          $newFilename = $row['newFilename'];
-          $query = mysqli_query($con,"SELECT status FROM vulScanProgress WHERE newFilename='$newFilename'") or die(mysqli_error($con));
-          $scanStatus = mysqli_fetch_row($query)[0];
-        	$filename = $row['filename'];
-        	$fileCheckSum = $row['sha1hash'];
-        	$scanTime = $row['scantime'];
-        	$newFilename = $row['newFilename'];
+        if(!empty($row['projectID'])){
+          $projectID = $row['projectID'];
+          $query = mysqli_query($con,"SELECT vulStatus, sigStatus FROM scanProgress WHERE projectID='$projectID'") or die(mysqli_error($con));
+          $status = mysqli_fetch_row($query);
+          $vulStatus = $status[0];
+          $sigStatus = $status[1];;
+          $projectName = $row['projectName'];
+          $fileCheckSum = $row['sha1Hash'];
+          $scanTime = $row['scanTime'];
+          $projectID = $row['projectID'];
 
-        	$resultFile = "./userFiles/".$newFilename.".result";
-
+          $resultFile = "./userProjects/".$projectID.".result";
   				//nl2br function to end line as proper
-  				$resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); 
+          $resultContent = nl2br(htmlspecialchars(file_get_contents($resultFile))); 
 
   				//The PREG_SET_ORDER flag to ensure result appropriately distribute to array
-  				preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);
+          preg_match_all('/^(.*?)VULNERABILITY FOUND ([\s\S]*?)----------/m', $resultContent, $matches, PREG_SET_ORDER);
 
-  				$wshellResultFile = "./userFiles/".$newFilename.".wshell";
-  				$wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper          
+          $wshellResultFile = "./userProjects/".$projectID.".wshell";
+  		    $wshellResultContent = nl2br(htmlspecialchars(file_get_contents($wshellResultFile))); //nl2br function to end line as proper          
           preg_match_all('/behavior found in:(.*?)(Suspicious|clearer)/', $wshellResultContent, $wshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
           preg_match_all('/suspicious files found and (.*) shells found/', $wshellResultContent, $trueWshellmatches, PREG_SET_ORDER);  //The PREG_SET_ORDER flag to ensure result appropriately distribute to array                    
           preg_match_all('!\d+!', $trueWshellmatches[0][1], $numberOfWshell);
@@ -133,7 +134,7 @@
 												<th>[+] File name:</th>
 												<th>
 													<font face="Consolas"><b>
-														<?php echo $filename; ?>
+														<?php echo $projectName; ?>
 													</b></font>
 												</th>											
 											</tr>
@@ -160,7 +161,7 @@
 												<td>
 													<font face="Consolas"><b>
                             <?php
-                                if($scanStatus == 0 or $scanStatus == -1) {
+                                if($vulStatus != 1) {
                                     echo "On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)";
                                 } else {
                                     echo count($matches);
@@ -168,7 +169,7 @@
                                 }
                                 
                                 /* grMalwrScanner here */
-                                $grGmsFile = $wshellResultFile = "./userFiles/".$newFilename.".gms";
+                                $grGmsFile = $wshellResultFile = "./userProjects/".$projectID.".gms";
                                 $grGmsContent = file_get_contents($grGmsFile);
                                 $grShellResult = json_decode($grGmsContent, true);
                             ?>
@@ -177,13 +178,13 @@
 												</td>											
 											</tr>
 											<?php 
-                      if($scanStatus == 1){
+                      if($vulStatus == 1){
   											foreach ($matches as $value) {
   	    										echo '<tr>
   														<td></td>
   														<td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
   														<font face="Consolas"><b>';
-  	    										echo substr(preg_replace('/\/var(.*?)'.$newFilename.'/m', '', $value[0]), 0, -13); 
+  	    										echo substr(preg_replace('/\/var(.*?)'.$projectID.'/m', '', $value[0]), 0, -13); 
   	    										echo '</b></font>
   	    												</td>											
   														</tr>';
@@ -193,7 +194,7 @@
 											<!-- Innitial ajax analytic modal -->
                         <script>
                            var options = {
-                                url: "./userFiles/<?php echo $newFilename; ?>.analytics",
+                                url: "./userProjects/<?php echo $projectID; ?>.analytics",
                                 title:'Result',
                                 size: 'lg',
                                 loadingHtml: '<span class="fa fa-circle-o-notch fa-spin fa-3x text-primary"></span><span class="h4">Loading</span>',
@@ -206,15 +207,16 @@
                             <td>
                               <font face="Consolas"><b>
                                 <?php
-                                  if($scanStatus == 0 or $scanStatus == -1){
+                                  if($sigStatus != 1){
                                     echo "<div id='wait'>On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)</div>";
+                                    echo '<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a></font>';
                                   }
                                   else {
                                     echo count($grShellResult['dfunc']);
                                     echo " suspicious files, ";
                                     echo count($grShellResult['webshell']); 
                                     echo " shells found!";
-                                  }
+                                  
                                 ?>
                               </b>
                               (<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a>)</font>
@@ -226,7 +228,7 @@
                                 <td></td>
                                 <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
                                 <font face="Consolas">';                     
-                              echo '<b>Webshell found in: <a>' . $grShell['filename'] . '</a></b><br>';
+                              echo '<b>Webshell found in: <a>' . $grShell['projectName'] . '</a></b><br>';
                               echo 'Full path: ' . $grShell['url'] . '</b><br>';                      
                               echo 'Filesize: ' . $grShell['filesize'] . ' bytes <br>';  
                               echo 'Fingerprint: <b style="color:red">'. $grShell['shellname'] .'</b>';
@@ -241,15 +243,16 @@
                                 <td></td>
                                 <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
                                 <font face="Consolas">';                     
-                              echo '<b>Suspicious behavior found in: ' . $grDfunc['filename'] . '</b><br>';
-                              echo 'Full path: ' . $grDfunc['url'] . ' <b>[' . $grDfunc['lineno'] . '] (' . $grDfunc['line'] . ')</b> ' . '<br>';              
+                              echo '<b>Suspicious behavior found in: ' . $grDfunc['projectName'] . '</b><br>';
+                              // echo 'Full path: ' . $grDfunc['url'] . ' <b>[' . $grDfunc['lineno'] . '] (' . $grDfunc['line'] . ')</b> ' . '<br>';              
+                              echo 'Full path: ' . $grDfunc['url'] . ' <b>[' . $grDfunc['lineno'] . '] </b> ' . '<br>';              
                               echo 'Filesize: ' . $grDfunc['filesize'] . ' bytes <br>';              
                               echo 'Function: <b style="color:orange">' . $grDfunc['function'] . '</b><br>';                                                                       
                               echo '</font>
                                   </td>                     
                                 </tr>';
                             }
-                  
+                            }
                           ?>
                       <tr>
                         <td>[+] Link to share:</td>                     

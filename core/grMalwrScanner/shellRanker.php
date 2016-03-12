@@ -212,7 +212,7 @@ ble File  410 lines (375 sloc)  12.3 KB
 		return $files;
 	}
 	function shellRankerMain($newFilename){
-		$path = "./userFiles/".$newFilename."/";
+		$path = "./userProjects/".$newFilename."/";
 		$fileList = fileIterator($path, "");
 		$EntropyTest = new Entropy();
 		$LanguageICTest = new LanguageIC();
@@ -251,7 +251,7 @@ ble File  410 lines (375 sloc)  12.3 KB
 	    // return $rankerResult;
 	}
 	function writeReportToFile($newFilename, $EntropyTest, $LanguageICTest, $LongestWordTest, $SignatureNastyTest, $SignatureSuperNastyTest, $rankedList, $listLength){
-		$path = "./userFiles/".$newFilename."/";
+		$path = "./userProjects/".$newFilename."/";
 		$reportContent = '<div class="box box-color box-bordered">
 							<font size="2px" face="Verdana">
 							<div class="box-content nopadding">
@@ -370,7 +370,7 @@ ble File  410 lines (375 sloc)  12.3 KB
 									</div>
 									</font>
 								</div>';
-		$report = fopen("./userFiles/".$newFilename.".analytics","w");
+		$report = fopen("./userProjects/".$newFilename.".analytics","w");
 		fwrite($report, $reportContent);
 		fclose($report);
 		// echo $reportContent;

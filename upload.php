@@ -3,15 +3,15 @@
 
   if (isset($_POST["submit"])) {
     if (is_array($_FILES["userFile"]["name"])) die();
-    $filename     = htmlspecialchars($_FILES["userFile"]["name"]);  
-    $compressType = pathinfo($filename, PATHINFO_EXTENSION);               
-    $fileCheckSum = sha1_file($_FILES["userFile"]["tmp_name"]);
-    $newFilename  = sha1($fileCheckSum.round(microtime(true) * 1000));
-    $target_file  = "./userFiles/" . $newFilename . "." . $compressType;
+    $projectName     = htmlspecialchars($_FILES["userFile"]["name"]);  
+    $compressType = pathinfo($projectName, PATHINFO_EXTENSION);               
+    $projectCheckSum = sha1_file($_FILES["userFile"]["tmp_name"]);
+    $projectID  = sha1($projectCheckSum.round(microtime(true) * 1000));
+    $targetProject  = "./userProjects/" . $projectID . "." . $compressType;
     $uploadOk     = 1;
 
     // Check if file already exists
-    if (file_exists($target_file)) {
+    if (file_exists($targetProject)) {
       echo '<div class="alert alert-warning col-md-4" role="alert">Error! File already exists.</div>';
       $uploadOk = 0;
     }
@@ -26,26 +26,26 @@
       $uploadOk = 0;
     }
     // Check if $uploadOk is set to 0 by an error
-    if (!($uploadOk == 0 || !move_uploaded_file($_FILES["userFile"]["tmp_name"], $target_file))){
-      mkdir("userFiles/" . $newFilename, 0777); //can't create contain folder and extract tar file in 1 command
-      $uncompressFolder = "./userFiles/".$newFilename."/";
+    if (!($uploadOk == 0 || !move_uploaded_file($_FILES["userFile"]["tmp_name"], $targetProject))){
+      mkdir("userProjects/" . $projectID, 0777); //can't create contain folder and extract tar file in 1 command
+      $uncompressFolder = "./userProjects/".$projectID."/";
       if($compressType == "tar"){   
-        exec("tar -xf ".$target_file." -C ".$uncompressFolder);
+        exec("tar -xf ".$targetProject." -C ".$uncompressFolder);
       }else if($compressType == "zip"){
-        exec("unzip ".$target_file." -d ".$uncompressFolder);
+        exec("unzip ".$targetProject." -d ".$uncompressFolder);
       }else if($compressType == "rar"){
-        exec("unrar x ".$target_file." ".$uncompressFolder);
+        exec("unrar x ".$targetProject." ".$uncompressFolder);
       }else if($compressType == "7z"){
-        exec("7z x ".$target_file." -o".$uncompressFolder);
+        exec("7z x ".$targetProject." -o".$uncompressFolder);
       }else if($compressType == "php"){
         $safefilename = str_replace(" ", "\ ", $filename);  
-        exec("mkdir ".$uncompressFolder."; cp ".$target_file." ".$uncompressFolder."/".$safefilename);        
+        exec("mkdir ".$uncompressFolder."; cp ".$targetProject." ".$uncompressFolder."/".$safefilename);        
       }else{
         // die();
       }
       // setcookie("checksum", $fileCheckSum, time() + (86400), "/"); #ONE DAY COOKIE
-      setcookie("fileID", $newFilename, time() + (86400/2), "/"); #HALF DAY COOKIE
-      setcookie("fileName", $filename, time() + (86400/2), "/"); #HALF DAY COOKIE
+      setcookie("projectID", $projectID, time() + (86400/2), "/"); #HALF DAY COOKIE
+      setcookie("projectName", $projectName, time() + (86400/2), "/"); #HALF DAY COOKIE
       echo $uploadOk;
     }
   }

@@ -8,22 +8,24 @@ import gc
 
 WORKER_NUMBER = 10;
 
-def vulScan(newFilename):
+def vulScan(projectID):
     #Have to make new connection in every thread to avoid 
     # of race condition when dbName.commit() function is excuted
     childConnection = MySQLdb.connect("localhost","root","root","guruWS")
     cursor = childConnection.cursor()
-    uncompressFolder = "./userFiles/" + newFilename + "/"
-    resultFile = "./userFiles/" + newFilename + ".result"
-    gmsFile = "./userFiles/" + newFilename + ".gms"
+    uncompressFolder = "./userProjects/" + projectID + "/"
+    resultFile = "./userProjects/" + projectID + ".result"
+    gmsFile = "./userProjects/" + projectID + ".gms"
 
     command = r"""python ./core/grMalwrScanner/main.py -q -p ./core/grMalwrScanner/patterndb.yara -d {0} -o {1}""".format(uncompressFolder, gmsFile)
     subprocess.call(command,shell=True)
+    cursor.execute('UPDATE scanProgress SET sigStatus = "1" WHERE projectID="'+projectID+'"')
+    childConnection.commit()
 
     command = r"""find {0} -name '*.php' | while read LINE; do php ./core/grVulnScanner/Main.php "$LINE" & PID=$!; sleep 3s; kill $PID; done > {1}""".format(uncompressFolder, resultFile)
     subprocess.call(command,shell=True)
-
-    cursor.execute('UPDATE vulScanProgress SET status = "1" WHERE newFilename="'+newFilename+'"')
+    cursor.execute('UPDATE scanProgress SET vulStatus = "1" WHERE projectID="'+projectID+'"')
+    
     childConnection.commit()
     cursor.close()
     childConnection.close()
@@ -41,15 +43,15 @@ while(True):
     cursor = mainConnection.cursor()
 
     # execute SQL query using execute() method.
-    cursor.execute("SELECT newFilename FROM vulScanProgress WHERE status='-1' LIMIT 1")
+    cursor.execute("SELECT projectID FROM scanProgress WHERE vulStatus='-1' AND sigStatus='-1' LIMIT 1")
     # Fetch a single row using fetchone() method.
     result = cursor.fetchone()
 
     if result != None:
-        newFilename = result[0]
-        cursor.execute('UPDATE vulScanProgress SET status = "0" WHERE newFilename="'+newFilename+'"')
+        projectID = result[0]
+        cursor.execute('UPDATE scanProgress SET vulStatus = "0", sigStatus = "0" WHERE projectID="'+projectID+'"')
         mainConnection.commit()
-        t = threading.Thread(target=vulScan, args=(newFilename,))
+        t = threading.Thread(target=vulScan, args=(projectID,))
         t.start()
     cursor.close()    
     mainConnection.close()

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 08, 2015 at 08:16 AM
+-- Generation Time: Mar 12, 2016 at 10:52 AM
 -- Server version: 5.5.43-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.11
 
@@ -23,27 +23,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reports`
+-- Table structure for table `projectInfo`
 --
 
-CREATE TABLE IF NOT EXISTS `reports` (
-  `shareID` varchar(40) NOT NULL,
-  `filename` varchar(128) NOT NULL,
-  `sha1hash` varchar(40) NOT NULL,
-  `scantime` int(11) NOT NULL,
-  `newFilename` varchar(40) NOT NULL,
-  PRIMARY KEY (`shareID`)
+CREATE TABLE IF NOT EXISTS `projectInfo` (
+  `projectID` varchar(128) NOT NULL,
+  `shareID` varchar(128) NOT NULL,
+  `projectName` varchar(128) NOT NULL,
+  `sha1Hash` varchar(128) NOT NULL,
+  `scanTime` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vulScanProgress`
+-- Table structure for table `scanProgress`
 --
 
-CREATE TABLE IF NOT EXISTS `vulScanProgress` (
-  `newFilename` varchar(128) NOT NULL,
-  `status` int(11) NOT NULL
+CREATE TABLE IF NOT EXISTS `scanProgress` (
+  `projectID` varchar(128) NOT NULL,
+  `vulStatus` int(11) NOT NULL,
+  `sigStatus` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
