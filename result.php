@@ -244,25 +244,33 @@
                               	echo '<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a></font>';
                               }
                               else {
-                                echo count($grShellResult['dfunc']);
+                                $dangerousFunctionSet = $grShellResult['dfunc'];
+                                $webshellSet = $grShellResult['webshell'];
+
+                                $dangerousFunctionByFile = array();
+                                foreach($dangerousFunctionSet as $key => $item){
+                                   $dangerousFunctionByFile[$item['url']][$key] = $item;
+                                }
+                                ksort($dangerousFunctionByFile, SORT_NUMERIC);
+
+                                echo count($dangerousFunctionByFile);
                                 echo " suspicious files, ";
-                                echo count($grShellResult['webshell']); 
+                                echo count($webshellSet);
                                 echo " shells found!";
-                              // }
                             ?>
                           </b>
                           (<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a>)</font>
                         </td>                     
                       </tr>
                       <?php 
-                        foreach ($grShellResult['webshell'] as $grShell) {
+                        foreach ($webshellSet as $grShell) {
                           echo '<tr>
                             <td></td>
                             <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
                             <font face="Consolas">';                     
-                          echo '<b>Webshell found in: <a>' . $grShell['projectName'] . '</a></b><br>';
+                          echo '<b>Webshell found: <a>' . $grShell['filename'] . '</a></b><br>';
                           echo 'Full path: ' . $grShell['url'] . '</b><br>';                      
-                          echo 'Filesize: ' . $grShell['filesize'] . ' bytes <br>';  
+                          echo 'Filesize: ' . round($grShell['filesize']/1024, 2) . ' KB <br>';  
                           echo 'Fingerprint: <b style="color:red">'. $grShell['shellname'] .'</b>';
                         
                           echo '</font>
@@ -270,16 +278,19 @@
                             </tr>';
                         }
 
-                        foreach ($grShellResult['dfunc'] as $grDfunc) {
+                        foreach ($dangerousFunctionByFile as $urlAsKey => $dangerousFile) {
+                          $firstArrayElement = array_shift(array_values($dangerousFile)); 
                           echo '<tr>
                             <td></td>
                             <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
                             <font face="Consolas">';                     
-                          echo '<b>Suspicious behavior found in: ' . $grDfunc['projectName'] . '</b><br>';
-                          // echo 'Full path: ' . $grDfunc['url'] . ' <b>[' . $grDfunc['lineno'] . '] (' . $grDfunc['line'] . ')</b> ' . '<br>';              
-                          echo 'Full path: ' . $grDfunc['url'] . ' <b>[' . $grDfunc['lineno'] . '] </b> ' . '<br>';              
-                          echo 'Filesize: ' . $grDfunc['filesize'] . ' bytes <br>';              
-                          echo 'Function: <b style="color:orange">' . $grDfunc['function'] . '</b><br>';                                                                       
+                          echo '<b>Suspicious behavior found in: ' . $firstArrayElement['filename'] . '</b><br>';
+                          echo 'Full path: ' . $firstArrayElement['url'] . ' <b>[' . $firstArrayElement['lineno'] . '] </b> ' . '<br>';              
+                          echo 'Filesize: ' . round($firstArrayElement['filesize']/1024, 2) . ' KB <br>';
+                          echo 'Function: ';
+                          foreach ($dangerousFile as $dangerousFunction){
+                            echo '<b style="color:orange">' . $dangerousFunction['function'] . '</b> ';   
+                          }                                                                    
                           echo '</font>
                               </td>                     
                             </tr>';
