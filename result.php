@@ -75,8 +75,8 @@
     
     <?php
     // For DEBUG purpose
-    ini_set('display_errors',1); 
-    error_reporting(E_ALL);
+    // ini_set('display_errors',1); 
+    // error_reporting(E_ALL);
     ////////////////////////////////
 
     //Calculate folder size
@@ -269,9 +269,9 @@
                             <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
                             <font face="Consolas">';                     
                           echo '<b>Webshell found: <a>' . $grShell['filename'] . '</a></b><br>';
-                          echo 'Full path: ' . $grShell['url'] . '</b><br>';                      
-                          echo 'Filesize: ' . round($grShell['filesize']/1024, 2) . ' KB <br>';  
-                          echo 'Fingerprint: <b style="color:red">'. $grShell['shellname'] .'</b>';
+                          echo '<b>Full path:</b> ' . $grShell['url'] . '</b><br>';                      
+                          echo '<b>Filesize:</b> ' . round($grShell['filesize']/1024, 2) . ' KB <br>';  
+                          echo '<b>Fingerprint:</b> <b style="color:red">'. $grShell['shellname'] .'</b>';
                         
                           echo '</font>
                               </td>                     
@@ -285,17 +285,22 @@
                             <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
                             <font face="Consolas">';                     
                           echo '<b>Suspicious behavior found in: ' . $firstArrayElement['filename'] . '</b><br>';
-                          echo 'Full path: ' . $firstArrayElement['url'] . ' <b>[' . $firstArrayElement['lineno'] . '] </b> ' . '<br>';              
-                          echo 'Filesize: ' . round($firstArrayElement['filesize']/1024, 2) . ' KB <br>';
-                          echo 'Function: ';
+                          echo '<b>Full path:</b> ' . $firstArrayElement['url']. '<br>';              
+                          echo '<b>Filesize:</b> ' . round($firstArrayElement['filesize']/1024, 2) . ' KB <br>';
+                          echo '<b>Function:</b> ';
                           foreach ($dangerousFile as $dangerousFunction){
-                            echo '<b style="color:orange">' . $dangerousFunction['function'] . '</b> ';   
-                          }                                                                    
+                            if (strlen($dangerousFunction['line']) > 256){
+                              $dangerousFunction['line'] = substr($dangerousFunction['line'], 0, 256) . '...';
+                            }
+                            echo $dangerousFunction["function"];
+                            echo ' (<a tabindex="0" style="cursor:pointer;" role="button" data-toggle="popover" data-trigger="focus" title="Line content" data-content="'.$dangerousFunction["line"].'">'.'line:'.$dangerousFunction["lineno"].'</a>); ';
+                          } 
+                          echo '<br>';                       
+                          echo '<b>Fingerprint:</b> <b style="color:green">Negative</b>'; 
                           echo '</font>
                               </td>                     
                             </tr>';
                         }
-
               			}
                       ?>
 

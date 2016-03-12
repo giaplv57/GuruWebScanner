@@ -246,17 +246,22 @@
                               <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
                               <font face="Consolas">';                     
                             echo '<b>Suspicious behavior found in: ' . $firstArrayElement['filename'] . '</b><br>';
-                            echo 'Full path: ' . $firstArrayElement['url'] . ' <b>[' . $firstArrayElement['lineno'] . '] </b> ' . '<br>';              
-                            echo 'Filesize: ' . round($firstArrayElement['filesize']/1024, 2) . ' KB <br>';
-                            echo 'Function: ';
+                            echo '<b>Full path:</b> ' . $firstArrayElement['url']. '<br>';              
+                            echo '<b>Filesize:</b> ' . round($firstArrayElement['filesize']/1024, 2) . ' KB <br>';
+                            echo '<b>Function:</b> ';
                             foreach ($dangerousFile as $dangerousFunction){
-                              echo '<b style="color:orange">' . $dangerousFunction['function'] . '</b> ';   
-                            }                                                                    
+                              if (strlen($dangerousFunction['line']) > 256){
+                                $dangerousFunction['line'] = substr($dangerousFunction['line'], 0, 256) . '...';
+                              }
+                              echo $dangerousFunction["function"];
+                              echo ' (<a tabindex="0" style="cursor:pointer;" role="button" data-toggle="popover" data-trigger="focus" title="Line content" data-content="'.$dangerousFunction["line"].'">'.'line:'.$dangerousFunction["lineno"].'</a>); ';
+                            } 
+                            echo '<br>';                       
+                            echo '<b>Fingerprint:</b> <b style="color:green">Negative</b>'; 
                             echo '</font>
                                 </td>                     
                               </tr>';
                           }
-
                           }
                       ?>
                       <tr>
