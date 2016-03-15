@@ -1,1 +1,5 @@
-
+Order allow,deny
+Deny from all
+<Files  ~ "\.analytics$">
+        Allow from all
+</Files>
