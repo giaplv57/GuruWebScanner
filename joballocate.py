@@ -54,7 +54,7 @@ def vulScan(projectID):
     uncompressFolder = "./userProjects/" + projectID + "/"
     gmsFile = "./userProjects/" + projectID + ".gms"
 
-    command = r"""python ./core/grMalwrScanner/main.py -q -p ./core/grMalwrScanner/patterndb.yara -d {0} -o {1}""".format(uncompressFolder, gmsFile)
+    command = r"""python ./core/grMalwrScanner/main.py -q -p ./core/grMalwrScanner/patterndb.yara -d {0} --projectid {1}""".format(uncompressFolder, projectID)
     subprocess.call(command,shell=True)
     cursor.execute('UPDATE scanProgress SET sigStatus = "1" WHERE projectID="'+projectID+'"')
     childConnection.commit()

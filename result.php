@@ -114,13 +114,6 @@
           $sigScanProgress = $sigStatus;
         }
 
-        /* grMalwrScanner here */
-        if($sigStatus == 1){
-  	      $grGmsFile = $wshellResultFile = "./userProjects/".$projectID.".gms";
-  	      $grGmsContent = file_get_contents($grGmsFile);
-  	      $grShellResult = json_decode($grGmsContent, true);
-  	    }
-
         /* Analytics result*/
         if($vulStatus == NULL && $sigStatus == NULL){  //If project is not upload to server before then run analytic function
           include("./core/grMalwrScanner/shellRanker.php");           
@@ -244,6 +237,8 @@
                               	echo '<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a></font>';
                               }
                               else {
+                                $query = mysqli_query($con,"SELECT result FROM malResult WHERE projectID='$projectID'") or die(mysqli_error($con));
+                                $grShellResult = json_decode(mysqli_fetch_row($query)[0], true);
                                 $dangerousFunctionSet = $grShellResult['dfunc'];
                                 $webshellSet = $grShellResult['webshell'];
 

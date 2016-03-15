@@ -11,6 +11,12 @@ import os
 import hashlib
 import yara
 import json
+import MySQLdb
+
+#CHANGE ON DEMAND
+DBServer = "localhost"
+DBUsername = "root"
+DBPassword = "root"
 
 KBOLD = '\033[1m'
 KRED = '\x1B[31m'
@@ -56,6 +62,7 @@ def gateway():
     parser.add_option('--filename', '-f', type="string", help="specify file to scan")
     parser.add_option('--outfile', '-o', type="string", help="specify outfile to write result using JSON")
     parser.add_option('--patterndb', '-p', type="string", help="specify patterndb file")
+    parser.add_option('--projectid', '-i', type="string", help="specify project ID")
     parser.add_option('--quite', '-q', default=False, action="store_true", help="enable quite mode")
     
     (options, args) = parser.parse_args()
@@ -89,7 +96,15 @@ def export_to_outfile(outfile):
         f.write(json.dumps({"webshell":_shells, "dfunc":_dfuncs}))
     print green("[+] Saved results to:\t" + outfile)
 
-
+def write_to_DB(projectid):
+    dbConnection = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
+    cursor = dbConnection.cursor()
+    query = "INSERT INTO malResult (projectID, result) VALUES (%s, %s)"
+    cursor.execute(query, (projectid, json.dumps({"webshell":_shells, "dfunc":_dfuncs})))
+    dbConnection.commit()
+    cursor.close()
+    dbConnection.close()
+    print green("[+] Saved results to database")
 
 if __name__ == '__main__':
     options, args, QUITEMODE = gateway()
@@ -149,7 +164,8 @@ if __name__ == '__main__':
         
         if options.outfile != None:
             export_to_outfile(options.outfile)     # just export when scan directory
-
+        if options.projectid != None:
+            write_to_DB(options.projectid)
 
 """ JSON struct:
 
