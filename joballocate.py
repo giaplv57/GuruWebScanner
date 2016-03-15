@@ -6,7 +6,11 @@ import os
 import time
 import gc
 
+#CHANGE ON DEMAND
 WORKER_NUMBER = 10;
+DBServer = "localhost"
+DBUsername = "root"
+DBPassword = "root"
 
 KBOLD = '\033[1m'
 KRED = '\x1B[31m'
@@ -45,7 +49,7 @@ def vulScan(projectID):
 
     #Have to make new connection in every thread to avoid 
     # of race condition when dbName.commit() function is excuted
-    childConnection = MySQLdb.connect("localhost","root","root","guruWS")
+    childConnection = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
     cursor = childConnection.cursor()
     uncompressFolder = "./userProjects/" + projectID + "/"
     gmsFile = "./userProjects/" + projectID + ".gms"
@@ -76,7 +80,7 @@ if __name__ == '__main__':
 
         #Have to make new connection in every while loop because
         # of the connection time limitation of DBMS
-        mainConnection = MySQLdb.connect("localhost","root","root","guruWS")
+        mainConnection = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
         cursor = mainConnection.cursor()
 
         # execute SQL query using execute() method.

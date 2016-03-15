@@ -18,10 +18,10 @@ $ mysql -uUSERNAME -pPASSWORD
 (mysql) exit
 $ mysql -uUSERNAME -pPASSWORD DATABASE < database/guruWS.sql
 ```
-* Change user and password of mysql in `connectdb.php` and `core/grVulnScanner/jobAllocate.py` files
+* Change user and password of mysql in `./connectdb.php`, `./jobAllocate.py` files and `./core/grVulnScanner/Main.php` file (in ConnectDB function)
 * chmod upload directory
 ```
-chmod 777 -R userFiles/
+chmod 777 -R userProjects/
 ```
 * Run `jobAllocate.py` as a service
 ```
