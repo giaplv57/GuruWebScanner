@@ -21,7 +21,7 @@ KCYAN = '\x1B[36m'
 KGREEN = '\x1B[32m'
 KYELLOW = '\x1B[33m'
 KNORM = '\033[0m'
-yarafile = open('patterndb.yara', 'w')
+yarafile = open('blacklist.yara', 'w')
 shelllib = []       # avoid duplicated shellname
 
 
@@ -208,13 +208,27 @@ def export_from_shelldetectdb():
     f.close()
 
 
+def export_from_pmf():
+    with open('res/pmf.yara') as f:
+        pmf_content = f.read()
+    out(pmf_content)  
+    return True
+
+def export_whitelist():
+    out('include "whitelist.yara"\n\n')
+
 
 if __name__ == '__main__':
 
+    export_whitelist()
+
     export_from_webshell()
     export_from_shelldetectdb()
-
-    print cyan('[+] ' + str(len(shelllib)) + " patterns were exported !")
     
+    print cyan('[+] ' + str(len(shelllib)) + " patterns were exported !")
+
+    if export_from_pmf():
+        print cyan('[+] Patterns from php-malware-finder were exported !')        
+
 
 yarafile.close()

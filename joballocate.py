@@ -47,15 +47,15 @@ def vulScan(projectID):
     # of race condition when dbName.commit() function is excuted
     childConnection = MySQLdb.connect("localhost","root","root","guruWS")
     cursor = childConnection.cursor()
-    uncompressFolder = "./userProjects/" + projectID + "/"
-    gmsFile = "./userProjects/" + projectID + ".gms"
+    uncompressFolder = "./../../userProjects/" + projectID + "/"
+    gmsFile = "./../../userProjects/" + projectID + ".gms"
 
-    command = r"""python ./core/grMalwrScanner/main.py -q -p ./core/grMalwrScanner/patterndb.yara -d {0} -o {1}""".format(uncompressFolder, gmsFile)
+    command = r"""cd ./core/grMalwrScanner/ ; python main.py -q -p blacklist.yara -d {0} -o {1}""".format(uncompressFolder, gmsFile)
     subprocess.call(command,shell=True)
     cursor.execute('UPDATE scanProgress SET sigStatus = "1" WHERE projectID="'+projectID+'"')
     childConnection.commit()
 
-    command = r"""find {0} -name '*.php' | while read LINE; do php ./core/grVulnScanner/Main.php "$LINE" "{1}" & PID=$!; sleep 3s; kill $PID; done""".format(uncompressFolder, projectID)
+    command = r"""cd ./core/grVulnScanner/ ; find {0} -name '*.php' | while read LINE; do php Main.php "$LINE" "{1}" & PID=$!; sleep 3s; kill $PID; done""".format(uncompressFolder, projectID)
     subprocess.call(command,shell=True)
     cursor.execute('UPDATE scanProgress SET vulStatus = "1" WHERE projectID="'+projectID+'"')
     

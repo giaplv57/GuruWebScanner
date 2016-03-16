@@ -20,7 +20,7 @@ KYELLOW = '\x1B[33m'
 KNORM = '\033[0m'
 
 QUITEMODE   = False
-PATTERNDB   = 'patterndb.yara'
+PATTERNDB   = 'blacklist.yara'
 dfuncs      = ["preg_replace", "passthru", "shell_exec", "exec", "base64_decode", "eval", "system", "proc_open", "popen", "curl_exec", "curl_multi_exec", "parse_ini_file", "show_source"]
 
 _shells     = []
