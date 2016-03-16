@@ -52,10 +52,8 @@ def vulScan(projectID):
     childConnection = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
     cursor = childConnection.cursor()
     uncompressFolder = "./../../userProjects/" + projectID + "/"
-    gmsFile = "./../../userProjects/" + projectID + ".gms"
-
-
-    command = r"""cd ./core/grMalwrScanner/ ; python main.py -q -p blacklist.yara -d {0} -o {1}""".format(uncompressFolder, gmsFile)
+    
+    command = r"""cd ./core/grMalwrScanner/ ; python main.py -q -p blacklist.yara -d {0} --projectid {1}""".format(uncompressFolder, projectID)
     subprocess.call(command,shell=True)
     cursor.execute('UPDATE scanProgress SET sigStatus = "1" WHERE projectID="'+projectID+'"')
     childConnection.commit()

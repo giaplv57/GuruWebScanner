@@ -81,7 +81,7 @@ def scan_dangerous_function(content, url, filename):
                 print red( "[+] Found dangerous function\t: " + dfunc + " in " + hide(url) + "[" + str(lineno) + "]" )
                 tfunc = {
                     "function": dfunc,
-                    "url": url[55:],
+                    "url": url[61:],
                     "lineno": lineno,
                     "line": lines[lineno],
                     "filename": filename,
@@ -149,7 +149,7 @@ if __name__ == '__main__':
                     print red("[+] Found...\t"), red(shellname), red("\tin (") + red(hide(filename)) + red(")")                    
                     tshell = {
                         "shellname": shellname,
-                        "url": filename[55:],
+                        "url": filename[61:],
                         "filename": fname,
                         "filesize": len(d)
                     }
