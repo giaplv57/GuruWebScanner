@@ -155,11 +155,6 @@
                                   echo mysqli_fetch_row($numberOfVul)[0];
                                   echo " vulnerabilities";  
                                 }
-                                
-                                /* grMalwrScanner here */
-                                $grGmsFile = $wshellResultFile = "./userProjects/".$projectID.".gms";
-                                $grGmsContent = file_get_contents($grGmsFile);
-                                $grShellResult = json_decode($grGmsContent, true);
                             ?>
 
                           </b></font>
@@ -205,6 +200,8 @@
                                     echo '<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a></font>';
                                   }
                                   else {
+                                    $query = mysqli_query($con,"SELECT result FROM malResult WHERE projectID='$projectID'") or die(mysqli_error($con));
+                                    $grShellResult = json_decode(mysqli_fetch_row($query)[0], true);
                                     $dangerousFunctionSet = $grShellResult['dfunc'];
                                     $webshellSet = $grShellResult['webshell'];
 
