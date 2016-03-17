@@ -73,6 +73,15 @@ def gateway():
 
     return options, args, options.quite
 
+
+def line_reduce(linecontent):
+    MAXLINESIZE = 200
+    if len(linecontent) > MAXLINESIZE:
+        return linecontent[:MAXLINESIZE] + "..."
+    else:
+        return linecontent
+
+
 def scan_dangerous_function(content, url, filename):
     lines = content.split('\n')
     for lineno in range(0, len(lines)):
@@ -83,7 +92,7 @@ def scan_dangerous_function(content, url, filename):
                     "function": dfunc,
                     "url": url[61:],
                     "lineno": lineno,
-                    "line": lines[lineno],
+                    "line": line_reduce(lines[lineno]),
                     "filename": filename,
                     "filesize": len(content)
                 }
@@ -92,19 +101,28 @@ def scan_dangerous_function(content, url, filename):
 
 
 def export_to_outfile(outfile):
-    with open(outfile, "wb") as f:
-        f.write(json.dumps({"webshell":_shells, "dfunc":_dfuncs}))
-    print green("[+] Saved results to:\t" + outfile)
+    try:
+        with open(outfile, "wb") as f:
+            f.write(json.dumps({"webshell":_shells, "dfunc":_dfuncs}))
+        print green("[+] Saved results to:\t" + outfile)
+    except Exception, e:
+        print "Error when try to save malResult to " + outfile
+        raise Exception, e
 
 def write_to_DB(projectid):
-    dbConnection = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
-    cursor = dbConnection.cursor()
-    query = "INSERT INTO malResult (projectID, result) VALUES (%s, %s)"
-    cursor.execute(query, (projectid, json.dumps({"webshell":_shells, "dfunc":_dfuncs})))
-    dbConnection.commit()
-    cursor.close()
-    dbConnection.close()
-    print green("[+] Saved results to database")
+    try:
+        dbConnection = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
+        cursor = dbConnection.cursor()
+        query = "INSERT INTO malResult (projectID, result) VALUES (%s, %s)"
+        cursor.execute(query, (projectid, json.dumps({"webshell":_shells, "dfunc":_dfuncs})))
+        dbConnection.commit()
+        cursor.close()
+        dbConnection.close()
+        print green("[+] Saved results to database")
+    except Exception, e:
+        print "Error when try to save malResult to DB"
+        raise Exception, e
+
 
 if __name__ == '__main__':
     options, args, QUITEMODE = gateway()
