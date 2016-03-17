@@ -52,16 +52,16 @@ def welcome():
     else:
         print red("[+] Can't connect to database !")
         exit(0)
-        
+
     print yellow("\n\tWelcome to joballocate module of GuruWS.")
     print yellow("\tYou should run this program with sudo priviledge")
     print yellow("\n\t@GuruWS Team\n\n") 
 
 
-def vulScan(projectID):
+def malwr_scan(projectID):
     print cyan("[+] Scanning project...\t" + projectID)
 
-    #Have to make new connection in every thread to avoid 
+    # Have to make new connection in every thread to avoid 
     # of race condition when dbName.commit() function is excuted
     conn = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
     cursor = conn.cursor()
@@ -71,7 +71,20 @@ def vulScan(projectID):
     subprocess.call(command,shell=True)
     cursor.execute('UPDATE scanProgress SET sigStatus = "1" WHERE projectID="'+projectID+'"')
     conn.commit()
+    
+    cursor.close()
+    conn.close()
 
+
+def vuln_scan(projectID):
+    print cyan("[+] Scanning project...\t" + projectID)
+
+    # Have to make new connection in every thread to avoid 
+    # of race condition when dbName.commit() function is excuted
+    conn = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
+    cursor = conn.cursor()
+    uncompressFolder = "./../../userProjects/" + projectID + "/"
+    
     command = r"""cd ./core/grVulnScanner/ ; find {0} -name '*.php' | while read LINE; do php Main.php "$LINE" "{1}" & PID=$!; sleep 3s; kill $PID; done""".format(uncompressFolder, projectID)
     subprocess.call(command,shell=True)
     cursor.execute('UPDATE scanProgress SET vulStatus = "1" WHERE projectID="'+projectID+'"')
@@ -79,6 +92,12 @@ def vulScan(projectID):
     conn.commit()
     cursor.close()
     conn.close()
+
+
+def scan_func(projectID):
+    malwr_scan(projectID)
+    vuln_scan(projectID)
+
 
 def get_project_to_scan():
     # Have to make new connection in every while loop because
@@ -121,7 +140,7 @@ if __name__ == '__main__':
         if project_to_scan != None:
             projectID = project_to_scan[0]
             update_project_status(projectID)
-            t = threading.Thread(target=vulScan, args=(projectID,))
+            t = threading.Thread(target=scan_func, args=(projectID,))
             t.start()
 
         gc.collect() #For a better garbage all the closed connections
