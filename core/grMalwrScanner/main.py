@@ -12,6 +12,7 @@ import hashlib
 import yara
 import json
 import MySQLdb
+import base64
 
 #CHANGE ON DEMAND
 DBServer = "localhost"
@@ -92,7 +93,7 @@ def scan_dangerous_function(content, url, filename):
                     "function": dfunc,
                     "url": url[61:],
                     "lineno": lineno,
-                    "line": line_reduce(lines[lineno]),
+                    "line": base64.b64encode(line_reduce(lines[lineno])),
                     "filename": filename,
                     "filesize": len(content)
                 }
