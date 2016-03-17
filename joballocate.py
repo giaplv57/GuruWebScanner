@@ -38,7 +38,21 @@ def nocolor(text):
     return text
 
 
+def try_connect():
+    try:
+        conn = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
+    except:
+        return False
+
+    return True;
+
 def welcome():
+    if try_connect():
+        print green("[+] Connected to database !\n\n")
+    else:
+        print red("[+] Can't connect to database !")
+        exit(0)
+        
     print yellow("\n\tWelcome to joballocate module of GuruWS.")
     print yellow("\tYou should run this program with sudo priviledge")
     print yellow("\n\t@GuruWS Team\n\n") 
@@ -49,22 +63,47 @@ def vulScan(projectID):
 
     #Have to make new connection in every thread to avoid 
     # of race condition when dbName.commit() function is excuted
-    childConnection = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
-    cursor = childConnection.cursor()
+    conn = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
+    cursor = conn.cursor()
     uncompressFolder = "./../../userProjects/" + projectID + "/"
     
     command = r"""cd ./core/grMalwrScanner/ ; python main.py -q -p blacklist.yara -d {0} --projectid {1}""".format(uncompressFolder, projectID)
     subprocess.call(command,shell=True)
     cursor.execute('UPDATE scanProgress SET sigStatus = "1" WHERE projectID="'+projectID+'"')
-    childConnection.commit()
+    conn.commit()
 
     command = r"""cd ./core/grVulnScanner/ ; find {0} -name '*.php' | while read LINE; do php Main.php "$LINE" "{1}" & PID=$!; sleep 3s; kill $PID; done""".format(uncompressFolder, projectID)
     subprocess.call(command,shell=True)
     cursor.execute('UPDATE scanProgress SET vulStatus = "1" WHERE projectID="'+projectID+'"')
     
-    childConnection.commit()
+    conn.commit()
     cursor.close()
-    childConnection.close()
+    conn.close()
+
+def get_project_to_scan():
+    # Have to make new connection in every while loop because
+    # of the connection time limitation of DBMS
+    conn = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
+    cursor = conn.cursor()
+
+    # execute SQL query using execute() method.
+    cursor.execute("SELECT projectID FROM scanProgress WHERE vulStatus='-1' AND sigStatus='-1' LIMIT 1")
+
+    # Fetch a single row using fetchone() method.
+    result = cursor.fetchone()
+    cursor.close()
+    conn.close()
+    return result
+
+
+def update_project_status(projectID):
+    conn = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
+    cursor = conn.cursor()
+    cursor.execute('UPDATE scanProgress SET vulStatus = "0", sigStatus = "0" WHERE projectID="'+projectID+'"')
+    conn.commit()
+    cursor.close()
+    conn.close()
+    return True
 
 
 if __name__ == '__main__':
@@ -77,24 +116,12 @@ if __name__ == '__main__':
             time.sleep(5) #ease the fight (although there won't have any race condition here)
         print green("[+] The number of active threads:\t" + str(threading.activeCount()))
 
-        #Have to make new connection in every while loop because
-        # of the connection time limitation of DBMS
-        mainConnection = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
-        cursor = mainConnection.cursor()
+        project_to_scan = get_project_to_scan()
 
-        # execute SQL query using execute() method.
-        cursor.execute("SELECT projectID FROM scanProgress WHERE vulStatus='-1' AND sigStatus='-1' LIMIT 1")
-
-        # Fetch a single row using fetchone() method.
-        result = cursor.fetchone()
-
-        if result != None:
-            projectID = result[0]
-            cursor.execute('UPDATE scanProgress SET vulStatus = "0", sigStatus = "0" WHERE projectID="'+projectID+'"')
-            mainConnection.commit()
+        if project_to_scan != None:
+            projectID = project_to_scan[0]
+            update_project_status(projectID)
             t = threading.Thread(target=vulScan, args=(projectID,))
             t.start()
 
-        cursor.close()    
-        mainConnection.close()
         gc.collect() #For a better garbage all the closed connections
