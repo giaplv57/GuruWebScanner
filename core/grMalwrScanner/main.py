@@ -104,7 +104,7 @@ def scan_dangerous_function(content, url, filename):
 def export_to_outfile(outfile):
     try:
         with open(outfile, "wb") as f:
-            f.write(json.dumps({"webshell":_shells, "dfunc":_dfuncs}))
+            f.write(json.dumps({"webshell":_shells, "dfunc":_dfuncs}, ensure_ascii=False))
         print green("[+] Saved results to:\t" + outfile)
     except Exception, e:
         print "Error when try to save malResult to " + outfile
@@ -115,7 +115,7 @@ def write_to_DB(projectid):
         dbConnection = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
         cursor = dbConnection.cursor()
         query = "INSERT INTO malResult (projectID, result) VALUES (%s, %s)"
-        cursor.execute(query, (projectid, json.dumps({"webshell":_shells, "dfunc":_dfuncs})))
+        cursor.execute(query, (projectid, json.dumps({"webshell":_shells, "dfunc":_dfuncs}, ensure_ascii=False)))
         dbConnection.commit()
         cursor.close()
         dbConnection.close()
