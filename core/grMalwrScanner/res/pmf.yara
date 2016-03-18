@@ -1,4 +1,4 @@
-global private rule IsPhp
+private rule IsPhp
 {
     strings:
         $php = /<\?[^x]/

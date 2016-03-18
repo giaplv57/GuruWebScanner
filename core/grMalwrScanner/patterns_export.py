@@ -161,7 +161,8 @@ def export(shellname, strings):
             continue    
         out('\t\t$ = {' + tohex(s)+ '}\n')
     out('\tcondition:\n')
-    out('\t\t' + str(len(strings)/2 + 1) + ' of them\n')
+    out('\t\t any of them\n')
+    #out('\t\t' + str(len(strings)/2 + 1) + ' of them\n')
     out('}\n\n')
 
 
