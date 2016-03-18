@@ -9,7 +9,7 @@ rule SHELL_cgi_python_py
 		$ = {42 52 3e 22 22 22 0a 62 6f 64 79 65 6e 64 20 3d 20 27 3c 2f 42 4f 44 59 3e 3c 2f 48 54 4d 4c 3e 27 0a 65 72 72 6f 72 6d 65 73 73 20 3d 20 27 3c 43 45 4e 54 45 52 3e 3c 48 32 3e 53 6f 6d 65 74}
 		$ = {74 72 79 3a 0a 20 20 20 20 20 20 20 20 20 20 20 20 63 68 69 6c 64 5f 73 74 64 69 6e 2c 20 63 68 69 6c 64 5f 73 74 64 6f 75 74 20 3d 20 6f 73 2e 70 6f 70 65 6e 32 28 74 68 65 63 6d 64 29 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_smtpd_py
@@ -21,7 +21,7 @@ rule SHELL_smtpd_py
 		$ = {20 70 72 6f 63 65 73 73 5f 6d 65 73 73 61 67 65 28 73 65 6c 66 2c 20 70 65 65 72 2c 20 6d 61 69 6c 66 72 6f 6d 2c 20 72 63 70 74 74 6f 73 2c 20 64 61 74 61 29 3a 0a 20 20 20 20 20 20 20 20 66}
 		$ = {20 20 20 20 65 6c 69 66 20 63 6f 6d 6d 61 6e 64 20 69 6e 20 28 27 6a 6f 69 6e 27 2c 20 27 6c 65 61 76 65 27 29 3a 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 23 20 54 42 44 3a 20 74 68}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_darkBC_py_txt
@@ -33,7 +33,7 @@ rule SHELL_darkBC_py_txt
 		$ = {74 2e 53 4f 43 4b 5f 53 54 52 45 41 4d 29 0a 20 20 20 20 73 6f 6b 2e 63 6f 6e 6e 65 63 74 28 28 68 6f 73 74 2c 70 6f 72 74 29 29 0a 20 20 20 20 73 6f 6b 2e 73 65 6e 64 28 27 27 27 0a 20 20 20}
 		$ = {29 0a 20 20 20 20 6f 73 2e 64 75 70 32 28 73 6f 6b 2e 66 69 6c 65 6e 6f 28 29 2c 32 29 0a 20 20 20 20 6f 73 2e 64 75 70 32 28 73 6f 6b 2e 66 69 6c 65 6e 6f 28 29 2c 33 29 0a 20 20 20 20 73 68}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_d00r_py3_py
@@ -45,7 +45,7 @@ rule SHELL_d00r_py3_py
 		$ = {20 6e 63 20 68 6f 73 74 20 70 6f 72 74 22 29 0a 20 20 20 20 70 72 69 6e 74 28 22 25 20 6e 63 20 2d 6c 20 2d 70 20 70 6f 72 74 20 28 70 6c 65 61 73 65 20 75 73 65 20 6e 65 74 63 61 74 29 22 29}
 		$ = {50 4f 52 54 29 29 0a 20 20 20 20 73 6f 63 6b 2e 6c 69 73 74 65 6e 28 30 29 0a 0a 72 75 6e 20 3d 20 54 72 75 65 0a 77 68 69 6c 65 20 72 75 6e 3a 0a 20 20 20 20 69 66 20 61 72 67 76 5b 31 5d 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_sctp_reverse_py_txt
@@ -57,7 +57,7 @@ rule SHELL_sctp_reverse_py_txt
 		$ = {0a 20 20 20 20 73 61 76 65 20 3d 20 5b 20 6f 73 2e 64 75 70 28 69 29 20 66 6f 72 20 69 20 69 6e 20 72 61 6e 67 65 28 30 2c 33 29 20 5d 0a 20 20 20 20 6f 73 2e 64 75 70 32 28 73 2e 66 69 6c 65}
 		$ = {28 5b 22 2f 62 69 6e 2f 73 68 22 2c 22 2d 69 22 5d 29 0a 20 20 20 20 5b 20 6f 73 2e 64 75 70 32 28 73 61 76 65 5b 69 5d 2c 69 29 20 66 6f 72 20 69 20 69 6e 20 72 61 6e 67 65 28 30 2c 33 29 5d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_xshock_0_1_tar_gz
@@ -69,7 +69,7 @@ rule SHELL_xshock_0_1_tar_gz
 		$ = {c5 0d b1 0b ed c3 bf 4f ce 1a ee 1f b4 39 16 f3 22 39 ec d0 23 fd 27 39 91 38 5a d6 78 8a 50 72 6e 61 0a f7 85 1c a3 e8 3e 35 5c cc 73 a9 bf aa ca 43 5b 1e 03 0a ae c5 ae ee 98 24 85 98 7a 7a}
 		$ = {e1 8b 10 05 47 27 89 08 e9 d0 15 58 9c 33 f4 02 34 75 76 e8 52 21 4e 29 cf 7e 74 50 5d 1e 2a 80 ea 70 b7 75 1b 9f 48 f3 41 4f d9 94 8f f5 06 c9 81 ca ae 42 b2 db a9 e7 9a ba b9 17 9b 72 58 fb}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Phyton_Shell_py
@@ -81,7 +81,7 @@ rule SHELL_Phyton_Shell_py
 		$ = {5b 31 5d 3d 3d 22 2d 62 22 3a 20 0a 09 50 57 3d 61 72 67 76 5b 32 5d 0a 09 50 4f 52 54 3d 61 72 67 76 5b 33 5d 0a 65 6c 69 66 20 61 72 67 76 5b 31 5d 3d 3d 22 2d 72 22 20 61 6e 64 20 6c 65 6e}
 		$ = {69 6e 64 28 28 27 6c 6f 63 61 6c 68 6f 73 74 27 2c 20 50 4f 52 54 29 29 0a 09 73 6f 63 6b 2e 6c 69 73 74 65 6e 28 30 29 0a 0a 72 75 6e 3d 54 72 75 65 0a 77 68 69 6c 65 20 72 75 6e 3a 0a 0a 09}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ColdFusion_chm
@@ -93,7 +93,7 @@ rule SHELL_ColdFusion_chm
 		$ = {01 9f 67 00 51 e6 8a 6a 36 29 26 23 fe 93 bf ea f7 00 92 b9 dc 7a fe 62 7a 1a 08 23 b7 a3 8d d2 c8 b7 20 80 36 8d 75 e1 cd 7e f4 ee 15 cc b3 b9 af 1f 98 2a dc ce 29 d4 a9 68 d4 2e ab e8 e4 79}
 		$ = {c9 80 14 b7 01 6c 2e d1 97 97 4e 7f c1 01 9c aa c7 69 21 9b 46 2d ef f3 03 06 db 45 e3 b2 d8 3a 74 80 93 ed d6 ab 9a 58 ff f6 ac 5c c1 f2 c6 d4 80 90 d4 76 64 38 1c c1 f9 96 7c a6 bb 5b 5e 01}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mycode12_cfm
@@ -105,7 +105,7 @@ rule SHELL_mycode12_cfm
 		$ = {72 6d 3e 0a 3c 63 66 69 66 20 46 69 6c 65 45 78 69 73 74 73 28 22 23 47 65 74 54 65 6d 70 44 69 72 65 63 74 6f 72 79 28 29 23 6b 79 6f 2e 74 78 74 22 29 20 69 73 20 22 59 65 73 22 3e 0a 20 20}
 		$ = {20 20 76 61 72 69 61 62 6c 65 3d 22 72 65 61 64 54 65 78 74 22 3e 0a 3c 74 65 78 74 61 72 65 61 20 72 65 61 64 6f 6e 6c 79 20 63 6f 6c 73 3d 38 30 20 72 6f 77 73 3d 32 30 3e 0a 3c 43 46 4f 55}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmfshell_cmf
@@ -117,7 +117,7 @@ rule SHELL_cmfshell_cmf
 		$ = {62 6d 69 74 20 76 61 6c 75 65 3d 22 72 75 6e 22 3e 0a 3c 2f 66 6f 72 6d 3e 0a 3c 63 66 69 66 20 46 69 6c 65 45 78 69 73 74 73 28 22 23 47 65 74 54 65 6d 70 44 69 72 65 63 74 6f 72 79 28 29 23}
 		$ = {29 23 66 6f 6f 62 61 72 2e 74 78 74 22 0a 76 61 72 69 61 62 6c 65 3d 22 72 65 61 64 54 65 78 74 22 3e 0a 3c 74 65 78 74 61 72 65 61 20 72 65 61 64 6f 6e 6c 79 20 63 6f 6c 73 3d 38 30 20 72 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_list_cfm
@@ -129,7 +129,7 @@ rule SHELL_list_cfm
 		$ = {63 69 6e 67 3d 31 20 63 65 6c 6c 50 61 64 64 69 6e 67 3d 30 20 77 69 64 74 68 3d 22 31 30 30 25 22 20 62 6f 72 64 65 72 3d 30 20 42 47 43 4f 4c 4f 52 3d 22 43 43 43 43 43 43 22 3e 0a 09 3c 54}
 		$ = {6d 65 23 3c 2f 61 3e 3c 2f 54 44 3e 0a 3c 43 46 45 4c 53 45 3e 0a 09 3c 54 52 20 42 47 43 4f 4c 4f 52 3d 22 46 46 46 46 46 46 22 3e 0a 09 09 3c 54 44 3e 3c 61 20 68 72 65 66 3d 22 6a 61 76 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_xl_cfm
@@ -141,7 +141,7 @@ rule SHELL_xl_cfm
 		$ = {6d 20 61 63 74 69 6f 6e 3d 22 22 20 74 61 72 67 65 74 3d 22 5f 62 6c 61 6e 6b 22 20 6d 65 74 68 6f 64 3d 70 6f 73 74 3e 0a d4 b4 ce c4 bc fe a3 ba 3c 69 6e 70 75 74 20 6e 61 6d 65 3d 22 73 6f}
 		$ = {43 4f 4d 5c 57 57 57 52 4f 4f 54 5c 69 6d 61 67 65 73 5c 73 6f 75 72 63 65 2e 68 74 6d 22 20 73 69 7a 65 3d 36 35 3e 3c 62 72 3e 0a d2 c6 b6 af b5 bd a3 ba 3c 69 6e 70 75 74 20 6e 61 6d 65 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cfmShell_cfm
@@ -153,7 +153,7 @@ rule SHELL_cfmShell_cfm
 		$ = {6f 72 6d 3e 0a 3c 63 66 69 66 20 46 69 6c 65 45 78 69 73 74 73 28 22 23 47 65 74 54 65 6d 70 44 69 72 65 63 74 6f 72 79 28 29 23 66 6f 6f 62 61 72 2e 74 78 74 22 29 20 69 73 20 22 59 65 73 22}
 		$ = {20 20 20 20 76 61 72 69 61 62 6c 65 3d 22 72 65 61 64 54 65 78 74 22 3e 0a 3c 74 65 78 74 61 72 65 61 20 72 65 61 64 6f 6e 6c 79 20 63 6f 6c 73 3d 38 30 20 72 6f 77 73 3d 32 30 3e 0a 3c 43 46}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_test3693_war
@@ -165,7 +165,7 @@ rule SHELL_test3693_war
 		$ = {68 74 74 61 62 28 61 6f 62 6a 65 63 74 29 7b 0a 69 66 20 28 74 79 70 65 6f 66 20 74 61 62 6f 62 6a 6c 69 6e 6b 73 3d 3d 22 75 6e 64 65 66 69 6e 65 64 22 29 0a 63 6f 6c 6c 65 63 74 74 61 62 6c}
 		$ = {d6 b7 ce aa a3 ba 3c 61 20 68 72 65 66 3d 22 68 74 74 70 3a 2f 2f 62 6c 6f 67 2e 63 73 64 6e 2e 6e 65 74 2f 63 71 71 2f 61 72 63 68 69 76 65 2f 32 30 30 34 2f 31 31 2f 31 34 2f 31 38 31 37 32}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_no_jsp
@@ -177,7 +177,7 @@ rule SHELL_no_jsp
 		$ = {74 61 62 6c 69 6e 6b 73 28 29 0a 66 6f 72 20 28 69 3d 30 3b 20 69 3c 74 61 62 6f 62 6a 6c 69 6e 6b 73 2e 6c 65 6e 67 74 68 3b 20 69 2b 2b 29 0a 74 61 62 6f 62 6a 6c 69 6e 6b 73 5b 69 5d 2e 73}
 		$ = {a1 a3 3c 2f 70 3e 0a 3c 70 3e 26 6e 62 73 70 3b 3c 2f 70 3e 0a 3c 70 3e b6 fe a1 a2 b2 e2 ca d4 3c 2f 70 3e 0a 3c 70 3e 26 6e 62 73 70 3b 26 6e 62 73 70 3b 26 6e 62 73 70 3b 3c 62 3e c7 eb b4}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_spjspshell_jsp
@@ -189,7 +189,7 @@ rule SHELL_spjspshell_jsp
 		$ = {72 65 61 6b 3b 0a 63 61 73 65 20 53 54 41 54 45 5f 49 41 43 57 4f 4e 54 3a 0a 73 77 69 74 63 68 28 62 29 20 7b 0a 63 61 73 65 20 54 45 4c 4f 50 54 5f 45 43 48 4f 3a 0a 69 66 28 64 65 62 75 67}
 		$ = {3d 20 53 54 41 54 45 5f 44 41 54 41 3b 0a 62 72 65 61 6b 3b 0a 63 61 73 65 20 53 42 3a 0a 68 61 6e 64 6c 65 5f 73 62 28 63 75 72 72 65 6e 74 5f 73 62 2c 73 62 62 75 66 2c 73 62 63 6f 75 6e 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ma4_jsp
@@ -201,7 +201,7 @@ rule SHELL_ma4_jsp
 		$ = {0a 09 3c 2f 74 72 3e 0a 09 3c 74 72 20 62 67 63 6f 6c 6f 72 3d 22 23 46 46 46 46 46 46 22 3e 0a 09 09 3c 74 64 20 77 69 64 74 68 3d 22 33 30 30 22 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22}
 		$ = {65 74 50 61 72 61 6d 65 74 65 72 28 22 64 62 50 6f 72 74 22 29 2e 74 72 69 6d 28 29 3b 0a 09 09 09 09 64 62 55 73 65 72 6e 61 6d 65 20 3d 20 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_silic_webshell_jsp
@@ -213,7 +213,7 @@ rule SHELL_silic_webshell_jsp
 		$ = {70 65 72 74 79 2c 20 63 73 73 70 72 6f 70 65 72 74 79 4e 53 29 7b 0a 69 66 20 28 65 6c 2e 63 75 72 72 65 6e 74 53 74 79 6c 65 29 0a 72 65 74 75 72 6e 20 65 6c 2e 63 75 72 72 65 6e 74 53 74 79}
 		$ = {6c 65 44 65 6c 5b 6c 61 6e 67 75 61 67 65 4e 6f 5d 2b 22 3c 2f 61 3e 20 22 29 3b 0a 09 09 09 73 62 46 69 6c 65 2e 61 70 70 65 6e 64 28 22 20 20 26 6e 62 73 70 3b 3c 61 20 68 72 65 66 3d 5c 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ma3_jsp
@@ -225,7 +225,7 @@ rule SHELL_ma3_jsp
 		$ = {7d 0a 69 6e 2e 63 6c 6f 73 65 28 29 3b 0a 6f 75 74 2e 63 6c 6f 73 65 28 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 73 65 74 41 74 74 72 69 62 75 74 65 28 22 64 6f 6e 65 22 2c 22 64 22 29 3b 0a 69 6e}
 		$ = {75 74 65 28 22 70 6f 72 74 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 72 6f 67 72 61 6d 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_JspSpyJDK5_jsp
@@ -237,7 +237,7 @@ rule SHELL_JspSpyJDK5_jsp
 		$ = {6f 42 65 66 6f 72 65 28 29 7b 72 65 74 75 72 6e 20 74 72 75 65 3b 7d 0a 70 75 62 6c 69 63 20 62 6f 6f 6c 65 61 6e 20 64 6f 41 66 74 65 72 28 29 7b 72 65 74 75 72 6e 20 74 72 75 65 3b 7d 0a 70}
 		$ = {74 20 72 65 71 75 65 73 74 2c 48 74 74 70 53 65 72 76 6c 65 74 52 65 73 70 6f 6e 73 65 20 72 65 73 70 6f 6e 73 65 2c 48 74 74 70 53 65 73 73 69 6f 6e 20 4a 53 65 73 73 69 6f 6e 29 20 74 68 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_in_jsp
@@ -249,7 +249,7 @@ rule SHELL_in_jsp
 		$ = {74 74 69 6e 67 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 0a 0a 66 75 6e 63 74 69 6f 6e 20 63 61 73 63 61 64 65 64 73 74 79 6c 65 28 65 6c 2c 20 63 73 73 70 72 6f 70 65 72 74 79 2c 20 63}
 		$ = {2b 22 27 2c 27 22 2b 6c 69 73 74 5b 69 5d 2e 67 65 74 4e 61 6d 65 28 29 2b 22 27 2c 27 22 2b 73 74 72 43 6d 64 2b 22 27 2c 27 22 2b 74 61 62 49 44 2b 22 27 2c 27 27 29 3b 5c 22 3e 22 29 3b 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ma2_jsp
@@ -261,7 +261,7 @@ rule SHELL_ma2_jsp
 		$ = {6f 66 66 5c 22 20 63 6f 6c 73 3d 5c 22 22 2b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 45 44 49 54 46 49 45 4c 44 5f 43 4f 4c 53 2b 22 5c 22 20 72 6f 77 73 3d 5c 22 22 2b 45 44 49 54 46 49}
 		$ = {6f 72 20 3d 20 74 72 75 65 3b 0a 20 20 7d 0a 20 20 69 66 20 28 28 21 65 72 72 6f 72 29 26 26 28 76 2e 73 69 7a 65 28 29 3e 31 29 29 20 72 65 71 75 65 73 74 2e 73 65 74 41 74 74 72 69 62 75 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ma1_jsp
@@ -273,7 +273,7 @@ rule SHELL_ma1_jsp
 		$ = {74 64 3e 0a 3c 2f 74 72 3e 0a 3c 74 72 20 62 67 63 6f 6c 6f 72 3d 22 23 46 46 46 46 46 46 22 3e 0a 3c 74 64 20 77 69 64 74 68 3d 22 33 30 30 22 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 20}
 		$ = {6e 75 6c 6c 20 7c 7c 0a 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 64 62 55 73 65 72 6e 61 6d 65 22 29 20 3d 3d 20 6e 75 6c 6c 20 7c 7c 0a 72 65 71 75 65 73 74 2e 67 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_JFolder_jsp
@@ -285,7 +285,7 @@ rule SHELL_JFolder_jsp
 		$ = {20 74 61 62 6f 62 6a 3d 64 6f 63 75 6d 65 6e 74 2e 67 65 74 45 6c 65 6d 65 6e 74 42 79 49 64 28 22 74 61 62 6c 69 73 74 22 29 0a 74 61 62 6f 62 6a 6c 69 6e 6b 73 3d 74 61 62 6f 62 6a 2e 67 65}
 		$ = {31 2e 30 b2 e2 ca d4 b0 e6 b7 a2 b2 bc a3 ac d0 de d5 fd c1 cb 4c 69 6e 75 78 cf b5 cd b3 c9 cf b5 c4 d2 bb d0 a9 ce ca cc e2 a3 ac d4 da 4c 69 6e 75 78 cf b5 cd b3 c9 cf d2 b2 bf c9 d2 d4 ca}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_job_jsp
@@ -297,7 +297,7 @@ rule SHELL_job_jsp
 		$ = {c3 fb 3c 2f 74 64 3e 0a 09 09 3c 74 64 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 20 63 6c 61 73 73 3d 22 64 61 74 61 72 6f 77 73 22 3e 3c 25 3d 53 79 73 74 65 6d 2e 67 65 74 50 72 6f 70 65}
 		$ = {64 62 50 6f 72 74 22 29 20 3d 3d 20 6e 75 6c 6c 20 7c 7c 0a 09 09 09 09 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 64 62 55 73 65 72 6e 61 6d 65 22 29 20 3d 3d 20 6e 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Browser_jsp
@@ -309,7 +309,7 @@ rule SHELL_Browser_jsp
 		$ = {77 20 53 74 72 69 6e 67 52 65 61 64 65 72 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 74 65 78 74 22 29 29 3b 0a 09 09 09 09 09 69 6e 74 20 69 3b 0a 09 09 09 09 09 62}
 		$ = {20 28 21 66 2e 65 78 69 73 74 73 28 29 20 7c 7c 20 21 69 73 41 6c 6c 6f 77 65 64 28 66 2c 20 66 61 6c 73 65 29 29 20 7b 0a 09 09 09 09 69 66 20 28 21 66 2e 65 78 69 73 74 73 28 29 29 7b 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_example_css_css
@@ -321,7 +321,7 @@ rule SHELL_example_css_css
 		$ = {20 48 65 6c 76 65 74 69 63 61 2c 20 73 61 6e 73 2d 73 65 72 69 66 3b 20 0a 09 20 66 6f 6e 74 2d 73 69 7a 65 3a 20 37 70 74 3b 20 0a 09 20 63 6f 6c 6f 72 3a 20 23 46 46 46 35 45 38 3b 20 7d 0a}
 		$ = {3b 20 62 6f 72 64 65 72 3a 31 70 78 20 73 6f 6c 69 64 20 23 30 30 30 30 30 30 3b 7d 0a 2e 66 6f 72 6d 75 6c 61 72 32 20 7b 6d 61 72 67 69 6e 3a 20 31 70 78 3b 7d 0a 0a 41 20 7b 20 74 65 78 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_1_jsp
@@ -333,7 +333,7 @@ rule SHELL_1_jsp
 		$ = {74 70 75 74 53 74 72 65 61 6d 20 6f 75 74 20 3d 20 6e 65 77 20 42 75 66 66 65 72 65 64 4f 75 74 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 6e}
 		$ = {6f 67 72 61 6d 22 29 3b 0a 4f 62 6a 65 63 74 20 64 6f 6e 65 20 3d 20 4a 53 65 73 73 69 6f 6e 2e 67 65 74 41 74 74 72 69 62 75 74 65 28 22 64 6f 6e 65 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_2_jsp
@@ -345,7 +345,7 @@ rule SHELL_2_jsp
 		$ = {6c 6f 72 3d 22 23 46 46 46 46 46 46 22 3e 0a 09 09 3c 74 64 20 77 69 64 74 68 3d 22 33 30 30 22 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 20 63 6c 61 73 73 3d 22 64 61 74 61 72 6f 77 73 22}
 		$ = {29 2e 74 72 69 6d 28 29 3b 0a 09 09 09 09 64 62 53 65 72 76 65 72 20 3d 20 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 64 62 53 65 72 76 65 72 22 29 2e 74 72 69 6d 28 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_google_jpg
@@ -357,7 +357,7 @@ rule SHELL_google_jpg
 		$ = {5b d5 29 e3 0b bd 6f ee 96 25 fa 96 4d 8d 73 f5 bd 9f b7 6b 71 65 fd 56 31 7f 18 37 06 bf e5 30 7c 1f 37 c9 76 db 32 c7 33 cc 3e c1 ca cc 97 15 b6 8d 6f 55 2d 04 f6 07 a3 ab f8 91 a4 a3 90 1f}
 		$ = {91 ed c6 b3 fd 42 94 65 b1 b4 2b 8c 7b 51 b8 92 f9 f1 ff 00 23 46 e8 77 15 29 76 cd bd 6c 5b f6 2a 58 d3 97 c3 0a 8b 5f e6 66 ad f8 6d 6f dc 8d a7 ea 23 11 c2 ad d8 fc 43 02 dd bb ea 9c 4a de}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_1_asp
@@ -369,7 +369,7 @@ rule SHELL_1_asp
 		$ = {a2 a3 a4 a5 a6 a7 a8 a9 aa b2 b3 b4 b5 b6 b7 b8 b9 ba c2 c3 c4 c5 c6 c7 c8 c9 ca d2 d3 d4 d5 d6 d7 d8 d9 da e2 e3 e4 e5 e6 e7 e8 e9 ea f2 f3 f4 f5 f6 f7 f8 f9 fa ff 3f 20 0c 03 01 20 02 11 03}
 		$ = {a7 a8 a9 aa b2 b3 b4 b5 b6 b7 b8 b9 ba c2 c3 c4 c5 c6 c7 c8 c9 ca d2 d3 d4 d5 d6 d7 d8 d9 da e1 e2 e3 e4 e5 e6 e7 e8 e9 ea f1 f2 f3 f4 f5 f6 f7 f8 f9 3f 3f 20 1f 01 20 03 01 01 01 01 01 01 01}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_92e912fbdc
@@ -381,7 +381,7 @@ rule SHELL_unknown_92e912fbdc
 		$ = {62 75 74 65 73 3d 53 68 75 58 69 6e 67 0a 4e 65 78 74 0a 52 65 73 70 6f 6e 73 65 2e 57 52 49 74 45 22 d0 de b8 c4 20 22 26 70 61 74 68 26 22 20 cf c2 b5 c4 ce c4 bc fe ca f4 d0 d4 b3 c9 b9 a6}
 		$ = {22 22 20 74 68 65 6e 20 27 c5 d0 b6 cf ca c7 d0 de b8 c4 c8 ab b2 bf 20 bb b9 ca c7 b5 a5 b8 f6 0a 53 65 74 20 6f 62 6a 46 6f 6c 64 65 72 3d 46 53 4f 2e 47 65 74 46 6f 6c 64 65 72 28 50 61 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_9cb682799a
@@ -393,7 +393,7 @@ rule SHELL_unknown_9cb682799a
 		$ = {22 61 64 64 22 2c 22 22 2c 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 73 75 62 6d 69 74 20 76 61 6c 75 65 3d b1 a3 b4 e6 20 6f 6e 63 6c 69 63 6b 3d 74 68 69 73 2e 66 6f 72 6d 2e 61 63 74 69 6f 6e}
 		$ = {20 69 66 20 28 4c 43 61 73 65 28 6c 65 66 74 28 73 71 6c 2c 6c 65 6e 28 22 73 65 6c 65 63 74 22 29 29 29 20 3d 20 22 73 65 6c 65 63 74 22 29 20 61 6e 64 20 69 6e 73 74 72 28 73 71 6c 2c 22 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_121_jpg
@@ -405,7 +405,7 @@ rule SHELL_121_jpg
 		$ = {24 c5 56 d2 88 c0 19 73 69 e8 9b a7 80 73 9c 7e 78 56 e3 64 d9 3c 98 5b a9 50 81 e0 17 89 65 8e 06 97 4b 23 22 03 9b c8 1f 9a 9a 57 7b 32 b6 52 5f 6a 2d d3 dd 6e b2 c4 ea 0f 78 8e 59 2a 03 4b}
 		$ = {05 35 8a 36 c1 0b 23 60 00 35 a0 05 1b 44 27 a7 96 9a 5e ce 56 ee b8 6b e0 47 55 85 6a 89 f3 42 44 4c 73 8c 92 c8 e6 34 74 de 3a ad be d5 4f ee e0 c8 0e ad 84 ee f9 92 40 fa ac ed 9a a2 6d 25}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_ea4c325192
@@ -417,7 +417,7 @@ rule SHELL_unknown_ea4c325192
 		$ = {fb 31 8b 9f 40 ff a7 a2 ef dc 4e d9 33 a7 b1 85 a9 70 a3 ef a7 5c 95 44 ca 55 11 b1 c0 3c 56 85 d3 d3 b1 41 e5 77 f6 a4 92 6b b2 26 79 b4 a0 2e 8e 5d b8 56 bf 3c f2 1e 99 a3 85 c1 bc 1c 3c 9a}
 		$ = {42 e9 51 2b ae 64 ca 11 28 67 49 f6 46 43 aa 3c fb 25 8d 51 d3 c9 96 ce c6 76 35 72 f8 b4 46 1e db f0 28 4b cc f6 fd 2a 98 cb 7f cd c5 a4 f4 e2 3e 55 85 92 97 e3 30 e9 b8 92 59 93 7d b2 28 91}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_finaly_aspx
@@ -427,7 +427,7 @@ rule SHELL_finaly_aspx
 		$ = {20 20 20 20 20 20 20 20 73 61 63 6b 2e 50 75 73 68 28 52 65 67 69 73 74 72 79 2e 43 75 72 72 65 6e 74 43 6f 6e 66 69 67 29 3b 0a 20 20 20 20 20 20 20 20 73 61 63 6b 2e 50 75 73 68 28 52 65 67}
 		$ = {61 2d 7a 7c 41 2d 5a 5d 7b 31 7d 3a 5c 5c 5c 5c 5b 61 2d 7a 7c 41 2d 5a 7c 20 7c 30 2d 39 7c 5c 75 34 65 30 30 2d 5c 75 39 66 61 35 7c 5c 5c 7e 7c 5c 5c 5c 5c 7c 5f 7c 7b 7c 7d 7c 5c 5c 2e 5d}
 	condition:
-		 any of them
+		2 of them
 }
 
 rule SHELL_wt_aspx
@@ -438,7 +438,7 @@ rule SHELL_wt_aspx
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 52 65 73 70 6f 6e 73 65 2e 57 72 69 74 65 28 22 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 72 65 64 3e b8 c3 c4 bf c2 bc bf c9 d0 b4 3c 2f 66 6f 6e 74 3e}
 		$ = {20 20 46 69 6c 65 41 74 74 72 69 62 75 74 65 73 20 64 49 6e 66 6f 20 3d 20 46 69 6c 65 2e 47 65 74 41 74 74 72 69 62 75 74 65 73 28 74 65 6d 70 29 3b 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_1_aspx
@@ -448,7 +448,7 @@ rule SHELL_1_aspx
 		$ = {20 20 20 20 20 20 20 20 73 61 63 6b 2e 50 75 73 68 28 52 65 67 69 73 74 72 79 2e 43 75 72 72 65 6e 74 43 6f 6e 66 69 67 29 3b 0a 20 20 20 20 20 20 20 20 73 61 63 6b 2e 50 75 73 68 28 52 65 67}
 		$ = {61 2d 7a 7c 41 2d 5a 5d 7b 31 7d 3a 5c 5c 5c 5c 5b 61 2d 7a 7c 41 2d 5a 7c 20 7c 30 2d 39 7c 5c 75 34 65 30 30 2d 5c 75 39 66 61 35 7c 5c 5c 7e 7c 5c 5c 5c 5c 7c 5f 7c 7b 7c 7d 7c 5c 5c 2e 5d}
 	condition:
-		 any of them
+		2 of them
 }
 
 rule SHELL_wt_asp
@@ -460,7 +460,7 @@ rule SHELL_wt_asp
 		$ = {3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 0a 53 65 74 20 46 53 4f 20 3d 20 4e 6f 74 68 69 6e 67 0a 73 65 74 20 66 20 3d 20 4e 6f 74 68}
 		$ = {74 65 20 22 3c 6c 61 62 65 6c 20 66 6f 72 3d 27 53 68 6f 77 4e 6f 57 72 69 74 65 27 3e 22 0a 09 52 65 73 70 6f 6e 73 65 2e 57 72 69 74 65 20 22 3c 69 6e 70 75 74 20 6e 61 6d 65 3d 27 53 68 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_01_aspx
@@ -470,7 +470,7 @@ rule SHELL_01_aspx
 		$ = {20 20 20 20 20 20 20 20 73 61 63 6b 2e 50 75 73 68 28 52 65 67 69 73 74 72 79 2e 43 75 72 72 65 6e 74 43 6f 6e 66 69 67 29 3b 0a 20 20 20 20 20 20 20 20 73 61 63 6b 2e 50 75 73 68 28 52 65 67}
 		$ = {61 2d 7a 7c 41 2d 5a 5d 7b 31 7d 3a 5c 5c 5c 5c 5b 61 2d 7a 7c 41 2d 5a 7c 20 7c 30 2d 39 7c 5c 75 34 65 30 30 2d 5c 75 39 66 61 35 7c 5c 5c 7e 7c 5c 5c 5c 5c 7c 5f 7c 7b 7c 7d 7c 5c 5c 2e 5d}
 	condition:
-		 any of them
+		2 of them
 }
 
 rule SHELL_indexx_asp
@@ -482,7 +482,7 @@ rule SHELL_indexx_asp
 		$ = {28 63 6f 6e 74 65 6e 74 2c 22 5c 2e 22 26 73 75 62 46 75 6e 63 26 22 5c 62 22 29 20 54 68 65 6e 0a 09 09 09 09 09 09 09 64 6f 53 63 61 6e 52 65 70 6f 72 74 20 6f 62 6a 46 69 6c 65 2c 22 43 61}
 		$ = {09 09 44 69 6d 20 6f 62 6a 55 73 65 72 2c 6f 62 6a 47 72 6f 75 70 0a 09 09 53 65 74 20 6f 62 6a 55 73 65 72 3d 67 65 74 4f 62 6a 28 22 57 69 6e 4e 54 3a 2f 2f 2e 2f 22 26 73 74 72 55 73 65 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cscript_exe
@@ -493,7 +493,7 @@ rule SHELL_cscript_exe
 		$ = {04 e9 08 14 ff ff 90 90 90 90 90 83 6c 24 04 08 e9 f9 13 ff ff 90 90 90 90 90 8b ff 55 8b ec 83 ec 18 8b 45 14 53 33 db 89 18 8b 45 18 3b c3 56 57 89 5d f8 89 5d fc c7 45 f0 ff fe 00 00 74 02}
 		$ = {00 00 00 00 1c 10 00 00 0a 00 00 00 30 00 06 00 19 00 19 80 00 00 00 00 34 00 5c 00 09 44 06 00 02 00 00 00 08 00 08 80 90 00 00 00 01 00 00 00 00 00 00 00 1c 10 00 00 0a 00 00 00 30 00 07 00}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_dabao_asp
@@ -505,7 +505,7 @@ rule SHELL_dabao_asp
 		$ = {23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 0d 0a 52 65 6d 20 23 20 e5 8f 96 e5 be 97 e6 96 87 e4 bb b6 e5 88 97 e8 a1 a8 20 46 6f 72 20 53 65 6c 65 63 74 0d 0a 52 65 6d 20}
 		$ = {20 61 28 69 29 20 26 20 22 2a 22 0d 0a 0d 0a 20 45 63 68 6f 20 22 3c 73 63 72 69 70 74 20 6c 61 6e 67 75 61 67 65 3d 22 22 6a 61 76 61 73 63 72 69 70 74 22 22 20 3e 22 0d 0a 20 20 20 20 20 45}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unpack_vbs
@@ -517,7 +517,7 @@ rule SHELL_unpack_vbs
 		$ = {74 65 4f 62 6a 65 63 74 28 22 41 44 4f 44 42 2e 53 74 72 65 61 6d 22 29 0a 20 20 20 20 20 20 73 6d 2e 4f 70 65 6e 0a 20 20 20 20 20 20 73 6d 2e 54 79 70 65 20 3d 20 32 0a 20 20 20 20 20 20 73}
 		$ = {22 5c 22 29 0a 20 20 20 20 46 6f 72 20 69 20 3d 20 30 20 54 6f 20 55 42 6f 75 6e 64 28 70 61 74 68 73 29 20 2d 31 0a 20 20 20 20 20 20 73 75 62 70 61 74 68 20 3d 20 73 75 62 70 61 74 68 20 26}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_moon_php
@@ -529,7 +529,7 @@ rule SHELL_moon_php
 		$ = {38 33 34 37 63 30 66 38 31 66 33 31 34 63 35 65 38 31 65 39 37 38 32 36 64 32 30 35 64 34 37 61 39 31 31 34 37 31 62 36 33 63 32 35 30 31 39 65 33 35 32 37 62 61 39 66 32 63 38 33 35 62 63 35}
 		$ = {39 64 32 36 38 37 62 32 63 64 66 33 62 63 34 63 35 35 33 37 62 63 63 31 33 62 30 34 33 39 32 30 32 39 32 39 30 38 34 64 31 36 30 38 35 35 32 35 31 64 64 30 35 37 33 30 62 30 65 36 38 38 38 31}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_2cf738900f
@@ -541,7 +541,7 @@ rule SHELL_unknown_2cf738900f
 		$ = {eb a3 ba 0a 0a 3c 3f 70 68 70 20 73 75 62 73 74 72 28 6d 64 35 28 24 5f 52 45 51 55 45 53 54 5b 27 78 27 5d 29 2c 32 38 29 3d 3d 27 61 63 64 30 27 26 26 65 76 61 6c 28 24 5f 52 45 51 55 45 53}
 		$ = {29 3b 3f 3e 20 20 20 20 20 2f 2f b2 cb b5 b6 c1 ac bd d3 20 b6 e3 b1 dc bc ec b2 e2 20 c3 dc c2 eb 63 20 0a 0a 0a 0a cf c2 d4 d8 d4 b6 b3 cc 73 68 65 6c 6c 0a 0a 3c 3f 70 68 70 0a 65 63 68 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_s_u_php
@@ -553,7 +553,7 @@ rule SHELL_s_u_php
 		$ = {5d 2c 24 75 70 66 69 6c 65 29 29 7b 0a 65 63 68 6f 20 27 3c 63 65 6e 74 65 72 3e 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 22 72 65 64 22 3e c9 cf b4 ab ca a7 b0 dc 3c 2f 66 6f 6e 74 3e 3c 2f 63 65}
 		$ = {20 66 70 75 74 73 20 28 24 66 70 2c 20 22 2d 43 68 61 6e 67 65 50 61 73 73 77 6f 72 64 3d 31 5c 72 5c 6e 22 29 3b 0a 20 20 20 20 66 70 75 74 73 20 28 24 66 70 2c 20 22 2d 51 75 6f 74 61 45 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_29a8f3a1f6
@@ -565,7 +565,7 @@ rule SHELL_unknown_29a8f3a1f6
 		$ = {73 65 64 22 2e 27 3c 2f 62 72 3e 27 3b 0a 20 20 20 20 20 20 7d 0a 0a 20 20 20 20 20 20 66 6f 72 65 61 63 68 20 28 24 6f 62 6a 33 77 2d 3e 53 65 72 76 65 72 42 69 6e 64 69 6e 67 73 20 61 73 20}
 		$ = {53 69 74 65 2d 3e 41 6e 6f 6e 79 6d 6f 75 73 55 73 65 72 4e 61 6d 65 2e 27 3c 2f 62 72 3e 27 3b 0a 20 20 20 20 20 20 65 63 68 6f 20 22 5b 50 41 53 53 20 20 5d 20 22 20 2e 20 24 77 65 62 53 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_zip_php
@@ -577,7 +577,7 @@ rule SHELL_zip_php
 		$ = {6b 28 22 56 22 2c 30 29 2e 70 61 63 6b 28 22 56 22 2c 30 29 2e 70 61 63 6b 28 22 76 22 2c 20 73 74 72 6c 65 6e 28 24 6e 61 6d 65 29 20 29 3b 20 0a 09 09 24 64 69 72 73 74 72 20 2e 3d 20 70 61}
 		$ = {29 29 0a 09 09 09 7b 20 0a 09 09 09 09 24 64 6f 64 6f 7a 69 70 20 2d 3e 20 61 64 64 66 69 6c 65 28 69 6d 70 6c 6f 64 65 28 27 27 2c 66 69 6c 65 28 22 24 64 69 72 2f 24 66 69 6c 65 22 29 29 2c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_d7e3bd945b
@@ -589,7 +589,7 @@ rule SHELL_unknown_d7e3bd945b
 		$ = {54 7b 7f c0 a9 ff 00 6c bb ff 00 9e 90 7f df a3 ff 00 c5 57 3f b2 91 a7 3a 27 d1 ac e4 d3 b4 f8 ac da 65 96 38 00 8e 12 13 69 11 a8 01 43 72 41 6e 39 23 00 fa 0a c8 d4 f4 eb fb 4f 0c c1 61 60}
 		$ = {8d a9 5a 6b fa 9c 82 d9 58 58 5c b9 b6 8c 5c 12 30 d8 c4 07 f7 44 85 e4 82 18 8d c1 48 54 62 73 79 03 c3 2b bf 7b 63 d0 fb d1 c7 e1 5c 6f 87 7f b6 25 9e e2 e5 75 5b 8b d8 a2 85 a2 6b 2b f1 14}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_1cedc285aa
@@ -601,7 +601,7 @@ rule SHELL_unknown_1cedc285aa
 		$ = {6e 65 27 3d 26 67 74 3b 31 29 29 3b 0a 09 70 28 27 26 6c 74 3b 70 26 67 74 3b 49 6e 73 74 65 61 64 20 26 61 6d 70 3b 72 61 71 75 6f 3b 27 29 3b 0a 09 70 28 27 79 65 61 72 3a 27 29 3b 0a 09 6d}
 		$ = {77 6f 72 6c 64 5b 27 65 78 65 63 75 74 65 27 5d 3d 3d 27 78 27 29 20 3f 20 27 74 27 20 3a 20 27 54 27 3b 7d 0a 20 0a 09 72 65 74 75 72 6e 20 24 74 79 70 65 2e 24 6f 77 6e 65 72 5b 27 72 65 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_e44630774c
@@ -613,7 +613,7 @@ rule SHELL_unknown_e44630774c
 		$ = {6c 69 63 61 74 69 6f 6e 20 44 61 74 61 5c 41 64 6f 62 65 0a 43 3a 5c 44 6f 63 75 6d 65 6e 74 73 20 61 6e 64 20 53 65 74 74 69 6e 67 73 5c 41 6c 6c 20 55 73 65 72 73 5c 41 70 70 6c 69 63 61 74}
 		$ = {32 20 41 6e 74 69 76 69 72 75 73 0a 43 3a 5c 44 6f 63 75 6d 65 6e 74 73 20 61 6e 64 20 53 65 74 74 69 6e 67 73 5c 41 6c 6c 20 55 73 65 72 73 5c 41 70 70 6c 69 63 61 74 69 6f 6e 20 44 61 74 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_8fb5619699
@@ -625,7 +625,7 @@ rule SHELL_unknown_8fb5619699
 		$ = {22 3c 62 72 3e 3c 68 72 3e 22 3b 0a 09 09 7d 65 6c 73 65 7b 0a 09 09 69 66 28 69 73 5f 77 72 69 74 61 62 6c 65 28 24 64 69 72 2e 22 2f 22 2e 24 66 69 6c 65 29 29 0a 09 09 7b 0a 20 20 20 20 20}
 		$ = {72 65 64 27 3e ce c4 bc fe c3 fb a3 ba 3c 2f 66 6f 6e 74 3e 3c 2f 62 3e 22 2e 24 64 69 72 2e 24 66 69 6c 65 2e 22 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 27 72 65 64 27 3e 20 bf c9 b6 c1 3c 2f 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_b4a5cfa5a1
@@ -637,7 +637,7 @@ rule SHELL_unknown_b4a5cfa5a1
 		$ = {53 65 74 20 4f 62 6a 73 75 62 66 6f 6c 64 65 72 73 3d 6f 62 6a 66 6f 6c 64 65 72 2e 73 75 62 66 6f 6c 64 65 72 73 0a 20 20 20 20 64 69 6d 20 74 31 3a 74 31 3d 31 0a 20 20 20 20 57 72 69 74 65}
 		$ = {0a 20 20 20 20 69 66 20 49 73 57 72 69 74 65 3d 31 20 74 68 65 6e 20 43 68 65 63 6b 44 69 72 49 73 4f 4b 44 65 6c 28 70 61 74 68 29 0a 20 20 20 20 46 6f 72 20 45 61 63 68 20 4f 62 6a 73 75 62}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_59e369edf0
@@ -649,7 +649,7 @@ rule SHELL_unknown_59e369edf0
 		$ = {27 d4 d9 bc ec b2 e2 cf c2 d2 bb b8 f6 c4 bf c2 bc 0a 09 65 6e 64 20 69 66 0a 6e 65 78 74 0a 27 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d}
 		$ = {63 68 65 63 6b 62 6f 78 27 20 69 64 3d 27 43 68 65 63 6b 46 69 6c 65 27 20 63 68 65 63 6b 65 64 3d 27 63 68 65 63 6b 65 64 27 20 20 2f 3e b2 e2 ca d4 ce c4 bc fe 22 0a 09 52 65 73 70 6f 6e 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_0aba57ff91
@@ -659,7 +659,7 @@ rule SHELL_unknown_0aba57ff91
 		$ = {20 20 20 20 20 20 20 20 73 61 63 6b 2e 50 75 73 68 28 52 65 67 69 73 74 72 79 2e 43 75 72 72 65 6e 74 43 6f 6e 66 69 67 29 3b 0a 20 20 20 20 20 20 20 20 73 61 63 6b 2e 50 75 73 68 28 52 65 67}
 		$ = {61 2d 7a 7c 41 2d 5a 5d 7b 31 7d 3a 5c 5c 5c 5c 5b 61 2d 7a 7c 41 2d 5a 7c 20 7c 30 2d 39 7c 5c 75 34 65 30 30 2d 5c 75 39 66 61 35 7c 5c 5c 7e 7c 5c 5c 5c 5c 7c 5f 7c 7b 7c 7d 7c 5c 5c 2e 5d}
 	condition:
-		 any of them
+		2 of them
 }
 
 rule SHELL_aspxspy_aspx
@@ -671,7 +671,7 @@ rule SHELL_aspxspy_aspx
 		$ = {70 2e 52 65 63 65 69 76 65 42 75 66 66 65 72 53 69 7a 65 20 3d 20 31 30 32 34 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 4e 65 74 77 6f 72 6b 53 74 72 65 61 6d 20 4e 53 20 3d 20 74 63 70 2e 47}
 		$ = {65 6c 22 20 72 75 6e 61 74 3d 22 73 65 72 76 65 72 22 20 57 69 64 74 68 3d 22 37 36 39 70 78 22 20 45 6e 61 62 6c 65 56 69 65 77 53 74 61 74 65 3d 22 46 61 6c 73 65 22 20 56 69 73 69 62 6c 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_1fc6550d67
@@ -683,7 +683,7 @@ rule SHELL_unknown_1fc6550d67
 		$ = {31 35 34 70 78 3b 20 68 65 69 67 68 74 3a 20 33 30 70 78 3b 22 3e 0d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 e4 b8 8a e4 bc a0 e6 96 87 e4 bb b6 e5 9c b0 e5 9d 80 3a 3c}
 		$ = {30 70 78 22 3e 0d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 2f 74 64 3e 0d 0a 20 20 20 20 20 20 20 20 20 20 20 20 3c 2f 74 72 3e 0d 0a 20 20 20 20 20 20 20 20 3c 2f 74 61 62 6c 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_11_aspx
@@ -695,7 +695,7 @@ rule SHELL_11_aspx
 		$ = {53 65 6e 64 28 4e 53 2c 20 6c 6f 67 69 6e 75 73 65 72 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 52 65 73 75 6c 74 20 2b 3d 20 52 65 76 28 4e 53 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20}
 		$ = {69 74 2e 6e 65 74 2e 63 6e 2f 69 6e 64 65 78 2e 61 73 70 78 22 20 74 61 72 67 65 74 3d 22 5f 62 6c 61 6e 6b 22 3e 52 65 76 65 72 73 65 2d 49 50 3c 2f 61 3e 20 3c 2f 61 73 70 3a 4c 61 62 65 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_fb81073cb3
@@ -707,7 +707,7 @@ rule SHELL_unknown_fb81073cb3
 		$ = {53 65 6e 64 28 4e 53 2c 20 6c 6f 67 69 6e 75 73 65 72 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 52 65 73 75 6c 74 20 2b 3d 20 52 65 76 28 4e 53 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20}
 		$ = {69 74 2e 6e 65 74 2e 63 6e 2f 69 6e 64 65 78 2e 61 73 70 78 22 20 74 61 72 67 65 74 3d 22 5f 62 6c 61 6e 6b 22 3e 52 65 76 65 72 73 65 2d 49 50 3c 2f 61 3e 20 3c 2f 61 73 70 3a 4c 61 62 65 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_aspx_aspx
@@ -719,7 +719,7 @@ rule SHELL_aspx_aspx
 		$ = {74 41 63 63 65 73 73 54 69 6d 65 55 74 63 28 70 61 74 68 2c 43 6f 6e 76 65 72 74 2e 54 6f 44 61 74 65 54 69 6d 65 28 61 4c 73 6e 2e 56 61 6c 75 65 29 29 3b 0a 46 69 6c 65 2e 53 65 74 4c 61 73}
 		$ = {6c 65 43 65 6c 6c 3e 50 72 6f 63 65 73 73 3c 2f 61 73 70 3a 54 61 62 6c 65 43 65 6c 6c 3e 3c 61 73 70 3a 54 61 62 6c 65 43 65 6c 6c 3e 54 68 72 65 61 64 43 6f 75 6e 74 3c 2f 61 73 70 3a 54 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_beb2b5135f
@@ -731,7 +731,7 @@ rule SHELL_unknown_beb2b5135f
 		$ = {43 6f 75 6e 74 29 3b 0a 20 20 20 20 20 20 20 20 7d 0a 0a 0a 20 20 20 20 20 20 20 20 70 75 62 6c 69 63 20 76 6f 69 64 20 46 6c 75 73 68 28 29 0a 20 20 20 20 20 20 20 20 7b 0a 20 20 20 20 20 20}
 		$ = {39 39 3b 0a 66 6f 6e 74 2d 73 69 7a 65 3a 20 31 30 70 74 3b 0a 74 65 78 74 2d 61 6c 69 67 6e 3a 20 72 69 67 68 74 3b 0a 7d 0a 23 74 74 20 0a 7b 0a 76 65 72 74 69 63 61 6c 2d 61 6c 69 67 6e 3a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_read_txt
@@ -743,7 +743,7 @@ rule SHELL_read_txt
 		$ = {2e bf c9 d2 d4 b6 d4 b6 cb bf da ca b5 cf d6 b5 a5 cf df b3 cc c9 a8 c3 e8 a1 a3 0a 0a 39 2e bf c9 d2 d4 b6 d4 d7 a2 b2 e1 b1 ed bd f8 d0 d0 bc f2 b5 a5 b5 c4 b6 c1 c8 a1 2e 0a 0a 50 53 3a 20}
 		$ = {a3 ac b9 c0 bc c6 ba dc bf ec be cd bb e1 b1 bb 4b a3 ac b7 a2 cf d6 42 55 47 bf c9 d2 d4 b5 bd 77 77 77 2e 72 6f 6f 74 6b 69 74 2e 6e 65 74 2e 63 6e b7 b4 c0 a1 2e 0a 20 20 20 20 45 2d 6d 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ASP_NET_Web_BackDoor_aspx
@@ -755,7 +755,7 @@ rule SHELL_ASP_NET_Web_BackDoor_aspx
 		$ = {22 3e 0d 0a 20 20 20 20 20 20 20 20 20 20 20 20 3c 74 72 3e 0d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 74 64 20 73 74 79 6c 65 3d 22 77 69 64 74 68 3a 20 31 35 34 70 78 3b 20 68}
 		$ = {20 20 20 20 20 20 20 3c 74 64 20 73 74 79 6c 65 3d 22 77 69 64 74 68 3a 20 31 30 30 70 78 22 3e 0d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 2f 74 64 3e 0d 0a 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_03f4107363
@@ -767,7 +767,7 @@ rule SHELL_unknown_03f4107363
 		$ = {61 72 28 29 3b 0a 20 7d 0a 20 0a 70 72 6f 74 65 63 74 65 64 20 76 6f 69 64 20 42 75 74 74 6f 6e 31 5f 43 6c 69 63 6b 28 6f 62 6a 65 63 74 20 73 65 6e 64 65 72 2c 20 45 76 65 6e 74 41 72 67 73}
 		$ = {74 61 2e 4f 6c 65 44 62 a1 b1 3b 0a 20 20 20 20 20 65 6c 73 65 20 69 66 20 28 44 72 6f 70 44 6f 77 6e 4c 69 73 74 31 2e 53 65 6c 65 63 74 65 64 49 6e 64 65 78 20 3d 3d 20 32 29 0a 20 0a 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_fbadfe2bc6
@@ -779,7 +779,7 @@ rule SHELL_unknown_fbadfe2bc6
 		$ = {20 2f 3e 0a 20 20 20 20 20 20 20 20 3c 62 72 20 2f 3e 0a 20 20 20 20 20 20 20 20 3c 61 73 70 3a 50 61 6e 65 6c 20 69 64 3d 22 55 4c 4f 47 49 4e 22 20 72 75 6e 61 74 3d 22 73 65 72 76 65 72 22}
 		$ = {74 72 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 74 64 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 53 74 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_view_aspx
@@ -791,7 +791,7 @@ rule SHELL_view_aspx
 		$ = {65 74 77 6f 72 6b 20 4e 61 6d 65 3c 2f 74 64 3e 0a 20 20 20 20 3c 74 64 3e 3c 25 3d 45 6e 76 69 72 6f 6e 6d 65 6e 74 2e 55 73 65 72 44 6f 6d 61 69 6e 4e 61 6d 65 2e 54 6f 53 74 72 69 6e 67 28}
 		$ = {3e 3c 2f 69 3e 3c 2f 70 3e 0a 20 20 09 4b 65 79 3a 20 20 0a 09 3c 61 73 70 3a 54 65 78 74 42 6f 78 20 49 44 3d 22 74 78 74 52 65 67 4b 65 79 22 20 72 75 6e 61 74 3d 22 73 65 72 76 65 72 22 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_8965fc1bc6
@@ -803,7 +803,7 @@ rule SHELL_unknown_8965fc1bc6
 		$ = {69 6c 79 3a 54 69 6d 65 73 20 4e 65 77 20 52 6f 6d 61 6e 3b 6c 69 6e 65 2d 68 65 69 67 68 74 3a 31 32 30 25 3b 7d 0a 70 7b 66 6f 6e 74 2d 73 69 7a 65 3a 31 30 70 74 3b 7d 0a 2e 74 78 7b 66 6f}
 		$ = {bb bb b3 c9 cd bc c6 ac b5 c4 55 52 4c b5 d8 d6 b7 5b 2f 69 6d 67 5d 27 22 3e b2 e5 c8 eb cd bc c6 ac 3c 2f 61 3e 3c 2f 70 3e 0a 3c 74 65 78 74 61 72 65 61 20 72 6f 77 73 3d 22 35 22 20 69 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_72cf7e70aa
@@ -815,7 +815,7 @@ rule SHELL_unknown_72cf7e70aa
 		$ = {63 69 64 61 20 48 61 6e 64 77 72 69 74 69 6e 67 2c 54 69 6d 65 73 20 4e 65 77 20 52 6f 6d 61 6e 3b 7d 0a 3c 2f 73 74 79 6c 65 3e 0a 3c 2f 68 65 61 64 3e 0a 3c 63 65 6e 74 65 72 3e 0a 3c 61 20}
 		$ = {3e 3c 2f 70 3e 0a 3c 74 65 78 74 61 72 65 61 20 72 6f 77 73 3d 22 35 22 20 69 64 3d 22 77 68 61 74 22 20 73 74 79 6c 65 3d 22 66 6f 6e 74 2d 66 61 6d 69 6c 79 3a 54 69 6d 65 73 20 4e 65 77 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_WebShell_cgi
@@ -827,7 +827,7 @@ rule SHELL_WebShell_cgi
 		$ = {20 69 6e 64 65 78 20 3d 3e 20 24 69 6e 64 65 78 2c 20 6e 75 6d 62 65 72 20 3d 3e 20 24 69 6e 64 65 78 2b 31 2c 0a 20 20 20 20 20 20 20 20 20 20 20 20 66 69 72 73 74 20 3d 3e 20 24 69 6e 64 65}
 		$ = {20 7d 0a 20 20 20 20 20 20 20 20 69 66 20 28 24 61 6c 6c 6f 77 29 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 24 63 6f 6d 6d 61 6e 64 20 3d 7e 20 2f 5e 28 5c 77 2b 29 2f 3b 0a 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_ebb36299fa
@@ -839,7 +839,7 @@ rule SHELL_unknown_ebb36299fa
 		$ = {6e 20 3d 20 53 65 72 76 65 72 2e 43 72 65 61 74 65 4f 62 6a 65 63 74 28 22 41 44 4f 44 42 2e 63 6f 6e 6e 65 63 74 69 6f 6e 22 29 3a 63 6f 6e 6e 73 74 72 3d 22 50 72 6f 76 69 64 65 72 3d 53 51}
 		$ = {6d 65 74 68 6f 64 3d 27 70 6f 73 74 27 20 61 63 74 69 6f 6e 3d 27 27 3e 22 0a 72 65 73 70 6f 6e 73 65 2e 77 72 69 74 65 22 3c 70 20 61 6c 69 67 6e 3d 27 63 65 6e 74 65 72 27 3e 22 0a 72 65 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_7f98249aec
@@ -851,7 +851,7 @@ rule SHELL_unknown_7f98249aec
 		$ = {6d 65 22 29 0a 49 66 20 66 73 6f 2e 46 69 6c 65 45 78 69 73 74 73 28 73 79 73 64 72 69 76 65 72 26 22 5c 44 6f 63 75 6d 65 6e 74 73 20 41 6e 64 20 53 65 74 74 69 6e 67 73 5c 41 6c 6c 20 55 73}
 		$ = {69 66 20 72 65 71 75 65 73 74 28 22 44 65 6c 43 6f 6e 22 29 3d 31 20 74 68 65 6e 0a 41 70 70 6c 69 63 61 74 69 6f 6e 28 72 65 71 75 65 73 74 28 22 50 72 6f 46 69 6c 65 22 29 26 22 43 6f 6e 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_DOC_ZIBSZXBIEG_php
@@ -863,7 +863,7 @@ rule SHELL_DOC_ZIBSZXBIEG_php
 		$ = {32 43 32 35 36 43 34 34 32 34 36 43 43 44 46 37 45 46 42 31 31 36 32 38 38 42 38 35 32 41 38 39 38 35 41 43 46 36 30 35 41 38 36 36 45 45 45 45 38 43 36 43 35 35 39 43 39 38 35 36 36 38 30 35}
 		$ = {41 31 37 35 39 44 38 38 38 42 36 30 44 42 43 45 42 35 38 34 32 31 33 45 32 31 33 37 43 36 37 37 45 32 35 31 31 33 33 35 36 36 39 41 31 31 36 38 30 37 44 31 33 31 41 31 31 38 32 35 46 31 37 38}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_64f4459789
@@ -875,7 +875,7 @@ rule SHELL_unknown_64f4459789
 		$ = {30 30 34 20 54 68 65 6e 0a 45 72 72 2e 43 6c 65 61 72 0a 67 65 74 66 69 6c 65 4e 61 6d 65 3d 53 70 6c 69 74 28 74 68 65 55 72 6c 2c 20 22 2f 22 29 28 55 42 6f 75 6e 64 28 53 70 6c 69 74 28 74}
 		$ = {74 65 72 3e 22 0a 65 6e 64 20 73 65 6c 65 63 74 0a 66 75 6e 63 74 69 6f 6e 20 47 70 61 74 68 28 29 0a 6f 6e 20 65 72 72 6f 72 20 72 65 73 75 6d 65 20 6e 65 78 74 0a 65 72 72 2e 63 6c 65 61 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_e1ed535509
@@ -887,7 +887,7 @@ rule SHELL_unknown_e1ed535509
 		$ = {58 77 57 85 65 27 43 77 67 41 43 77 67 41 43 2c 25 c8 a1 b6 c1 25 2c 42 6a 7a 71 66 7b 25 79 6e 72 67 7a 78 42 6a 75 7e 79 25 79 7a 75 73 6e 41 25 27 58 77 57 85 65 27 43 35 3d 42 6a 20 6e 78}
 		$ = {5c 22 2c 22 22 2c 31 2c 31 2c 31 29 29 0a 09 09 09 09 53 75 6d 46 69 6c 65 73 20 3d 20 53 75 6d 46 69 6c 65 73 20 2b 20 31 0a 09 09 09 45 6e 64 20 49 66 0a 09 09 4e 65 78 74 0a 09 09 53 65 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_415a897d5f
@@ -899,7 +899,7 @@ rule SHELL_unknown_415a897d5f
 		$ = {30 30 34 20 54 68 65 6e 0a 45 72 72 2e 43 6c 65 61 72 0a 67 65 74 66 69 6c 65 4e 61 6d 65 3d 53 70 6c 69 74 28 74 68 65 55 72 6c 2c 20 22 2f 22 29 28 55 42 6f 75 6e 64 28 53 70 6c 69 74 28 74}
 		$ = {65 72 3e 22 0a 65 6e 64 20 73 65 6c 65 63 74 0a 66 75 6e 63 74 69 6f 6e 20 47 70 61 74 68 28 29 0a 6f 6e 20 65 72 72 6f 72 20 72 65 73 75 6d 65 20 6e 65 78 74 0a 65 72 72 2e 63 6c 65 61 72 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_d24ac905c5
@@ -911,7 +911,7 @@ rule SHELL_unknown_d24ac905c5
 		$ = {6c 65 63 74 74 61 62 6c 69 6e 6b 73 28 29 0a 66 6f 72 20 28 69 3d 30 3b 20 69 3c 74 61 62 6f 62 6a 6c 69 6e 6b 73 2e 6c 65 6e 67 74 68 3b 20 69 2b 2b 29 0a 74 61 62 6f 62 6a 6c 69 6e 6b 73 5b}
 		$ = {73 70 3b 3c 2f 70 3e 0a 3c 70 3e b6 fe a1 a2 b2 e2 ca d4 3c 2f 70 3e 0a 3c 70 3e 26 6e 62 73 70 3b 26 6e 62 73 70 3b 26 6e 62 73 70 3b 3c 62 3e c7 eb b4 f3 bc d2 d4 da ca b9 d3 c3 b9 fd b3 cc}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_558c389267
@@ -923,7 +923,7 @@ rule SHELL_unknown_558c389267
 		$ = {79 65 4b 65 6c 62 61 6e 45 6e 69 67 6f 4c 6f 74 75 61 20 2c 65 6c 62 61 6e 45 6e 69 67 6f 4c 6f 74 75 41 73 69 20 6d 69 44 a9 ef 79 65 4b 73 73 61 50 6e 69 67 6f 4c 6f 74 75 61 20 2c 79 65 4b}
 		$ = {62 72 3e 22 26 41 70 70 6c 69 63 61 74 69 6f 6e 28 72 65 71 75 65 73 74 28 22 50 72 6f 46 69 6c 65 22 29 26 22 43 6f 6e 22 29 0a 74 78 74 2e 63 6c 6f 73 65 0a 65 6e 64 20 69 66 0a 65 6c 73 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_230f52b75d
@@ -935,7 +935,7 @@ rule SHELL_unknown_230f52b75d
 		$ = {20 63 6c 61 73 73 3d 22 62 6c 61 63 6b 22 3e 20 0d 0a 3c 25 23 40 7e 5e 47 77 41 41 41 41 3d 3d 7e 22 2b 64 61 57 09 2f 2b 63 68 4d 72 59 7f 50 45 b1 be ce c4 bc fe be f8 b6 d4 b5 c4 c2 b7 be}
 		$ = {0d 0a 3c 74 72 3e 0d 0a 3c 74 64 20 62 67 63 6f 6c 6f 72 3d 22 23 46 46 46 46 46 46 22 20 63 6c 61 73 73 3d 22 62 6c 61 63 6b 22 3e 0d 0a 3c 25 23 40 7e 5e 47 77 41 41 41 41 3d 3d 7e 22 2b 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_2de171fb11
@@ -947,7 +947,7 @@ rule SHELL_unknown_2de171fb11
 		$ = {2e 52 65 73 70 6f 6e 73 65 42 6f 64 79 0a 2e 50 6f 73 69 74 69 6f 6e 3d 30 0a 2e 53 61 76 65 54 6f 46 69 6c 65 20 74 68 65 50 61 74 68 2c 20 6f 76 65 72 57 72 69 74 65 0a 49 66 20 45 72 72 2e}
 		$ = {3c 2f 63 65 6e 74 65 72 3e 22 0a 65 6e 64 20 73 65 6c 65 63 74 0a 66 75 6e 63 74 69 6f 6e 20 47 70 61 74 68 28 29 0a 6f 6e 20 65 72 72 6f 72 20 72 65 73 75 6d 65 20 6e 65 78 74 0a 65 72 72 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_62efb8145f
@@ -959,7 +959,7 @@ rule SHELL_unknown_62efb8145f
 		$ = {73 74 72 65 61 6d 0a 2e 54 79 70 65 3d 31 0a 2e 4d 6f 64 65 3d 33 0a 2e 4f 70 65 6e 0a 2e 57 72 69 74 65 20 48 74 74 70 2e 52 65 73 70 6f 6e 73 65 42 6f 64 79 0a 2e 50 6f 73 69 74 69 6f 6e 3d}
 		$ = {61 63 74 69 6f 6e 27 20 76 61 6c 75 65 3d 27 31 27 3e 3c 2f 74 64 3e 22 0a 52 52 53 22 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 3c 2f 66 6f 72 6d 3e 3c 2f 63 65 6e 74 65 72 3e 22 0a 65 6e 64 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_5cdd1fb0d8
@@ -971,7 +971,7 @@ rule SHELL_unknown_5cdd1fb0d8
 		$ = {38 30 46 46 36 35 32 46 31 44 43 32 46 39 34 32 44 42 39 35 39 30 43 38 39 30 33 36 41 39 44 35 36 37 39 46 38 43 46 42 45 35 36 34 46 30 31 35 31 35 30 33 30 31 30 38 42 31 33 43 36 30 34 33}
 		$ = {30 31 31 31 39 43 32 43 43 42 43 39 38 33 43 31 45 31 33 34 32 37 31 32 30 38 30 30 36 44 43 43 36 41 43 37 33 38 36 38 32 44 44 39 44 32 44 39 36 36 30 38 43 36 43 33 30 30 30 43 30 38 35 44}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_7acbe39116
@@ -983,7 +983,7 @@ rule SHELL_unknown_7acbe39116
 		$ = {28 72 71 74 4e 75 74 4e 2e 69 6c 4b 3d 6b 7a 6c 55 47 57 a9 ae 60 6b 74 63 6b 74 55 74 64 71 47 5c 60 26 41 72 68 51 26 69 7a 71 59 3d 6e 74 46 55 47 57 a9 ae 79 6f 20 72 66 53 a9 ae 60 3e 6b}
 		$ = {45 6e 64 20 46 75 6e 63 74 69 6f 6e 0a 66 75 6e 63 74 69 6f 6e 20 44 65 6c 70 6f 69 6e 74 66 69 6c 65 28 74 30 29 0a 65 78 65 63 75 74 65 28 6b 69 6e 67 28 22 60 3e 6b 77 3c 21 21 b9 a6 b3 c9}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_9f3c38b233
@@ -995,7 +995,7 @@ rule SHELL_unknown_9f3c38b233
 		$ = {6e 22 29 3a 63 6f 6e 6e 73 74 72 3d 22 50 72 6f 76 69 64 65 72 3d 53 51 4c 4f 4c 45 44 42 2e 31 3b 44 61 74 61 20 53 6f 75 72 63 65 3d 22 20 26 20 74 61 72 67 65 74 69 70 20 26 22 2c 22 26 20}
 		$ = {65 3d 27 66 6f 72 6d 31 27 20 6d 65 74 68 6f 64 3d 27 70 6f 73 74 27 20 61 63 74 69 6f 6e 3d 27 27 3e 22 0a 72 65 73 70 6f 6e 73 65 2e 77 72 69 74 65 22 3c 70 20 61 6c 69 67 6e 3d 27 63 65 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_9aadf6ca7a
@@ -1007,7 +1007,7 @@ rule SHELL_unknown_9aadf6ca7a
 		$ = {3e 72 62 3c 5d b2 e2 cc bd a9 e5 26 a9 e5 bf da b6 cb a9 e5 26 a9 e5 ca e2 cc d8 5b 3e 72 62 3c 3e 72 62 3c a9 e5 6a a9 ef 66 69 20 64 6e 65 a9 ef 74 78 65 4e a9 ef a9 e5 3e 72 62 3c 2d 2d 2d}
 		$ = {6e 28 72 65 71 75 65 73 74 28 22 50 72 6f 46 69 6c 65 22 29 26 22 43 6f 6e 22 29 2c 22 3c 62 72 3e 22 29 28 61 73 68 6f 77 69 29 26 22 3c 62 72 3e 22 0a 6e 65 78 74 0a 41 70 70 6c 69 63 61 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_e75a99f3be
@@ -1019,7 +1019,7 @@ rule SHELL_unknown_e75a99f3be
 		$ = {35 32 46 31 44 43 32 46 39 34 32 44 42 39 35 39 30 43 38 39 30 33 36 41 39 44 35 36 37 39 46 38 43 46 42 45 35 36 34 46 30 31 35 31 35 30 33 30 31 30 38 42 31 33 43 36 30 34 33 41 30 30 30 39}
 		$ = {43 32 43 43 42 43 39 38 33 43 31 45 31 33 34 32 37 31 32 30 38 30 30 36 44 43 43 36 41 43 37 33 38 36 38 32 44 44 39 44 32 44 39 36 36 30 38 43 36 43 33 30 30 30 43 30 38 35 44 43 30 34 39 42}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_1af5444bc1
@@ -1031,7 +1031,7 @@ rule SHELL_unknown_1af5444bc1
 		$ = {3c 3e 72 62 3c 5d b2 e2 cc bd a9 e5 26 a9 e5 bf da b6 cb a9 e5 26 a9 e5 ca e2 cc d8 5b 3e 72 62 3c 3e 72 62 3c a9 e5 6a a9 ef 66 69 20 64 6e 65 a9 ef 74 78 65 4e a9 ef a9 e5 3e 72 62 3c 2d 2d}
 		$ = {6f 6e 28 72 65 71 75 65 73 74 28 22 50 72 6f 46 69 6c 65 22 29 26 22 43 6f 6e 22 29 2c 22 3c 62 72 3e 22 29 28 61 73 68 6f 77 69 29 26 22 3c 62 72 3e 22 0a 6e 65 78 74 0a 41 70 70 6c 69 63 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_fb9ee2a373
@@ -1043,7 +1043,7 @@ rule SHELL_unknown_fb9ee2a373
 		$ = {73 74 72 65 61 6d 0a 2e 54 79 70 65 3d 31 0a 2e 4d 6f 64 65 3d 33 0a 2e 4f 70 65 6e 0a 2e 57 72 69 74 65 20 48 74 74 70 2e 52 65 73 70 6f 6e 73 65 42 6f 64 79 0a 2e 50 6f 73 69 74 69 6f 6e 3d}
 		$ = {27 61 63 74 69 6f 6e 27 20 76 61 6c 75 65 3d 27 31 27 3e 3c 2f 74 64 3e 22 0a 52 52 53 22 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 3c 2f 66 6f 72 6d 3e 3c 2f 63 65 6e 74 65 72 3e 22 0a 65 6e 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_f6a5b0dd04
@@ -1055,7 +1055,7 @@ rule SHELL_unknown_f6a5b0dd04
 		$ = {61 6d 65 29 26 22 22 22 2c 22 22 45 64 69 74 46 69 6c 65 22 22 29 27 20 63 6c 61 73 73 3d 27 61 6d 27 20 74 69 74 6c 65 3d 27 b1 e0 bc ad 27 3e 45 64 69 74 3c 2f 61 3e 20 22 0d 0a 53 69 3d 53}
 		$ = {3d 22 50 4f 53 54 22 20 65 6e 63 74 79 70 65 3d 22 6d 75 6c 74 69 70 61 72 74 2f 66 6f 72 6d 2d 64 61 74 61 22 3e 27 29 3b 0d 0a 09 68 74 6d 6c 5f 69 6e 70 75 74 28 22 74 65 78 74 22 2c 22 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_2676232b21
@@ -1067,7 +1067,7 @@ rule SHELL_unknown_2676232b21
 		$ = {55 72 6c 2c 20 22 2f 22 29 28 55 42 6f 75 6e 64 28 53 70 6c 69 74 28 74 68 65 55 72 6c 2c 20 22 2f 22 29 29 29 0a 49 66 20 67 65 74 66 69 6c 65 4e 61 6d 65 3d 22 22 20 54 68 65 6e 0a 67 65 74}
 		$ = {6e 65 78 74 0a 65 72 72 2e 63 6c 65 61 72 0a 73 65 74 20 66 3d 53 65 72 76 65 72 2e 43 72 65 61 74 65 4f 62 6a 65 63 74 28 22 53 63 72 69 70 74 69 6e 67 2e 46 69 6c 65 53 79 73 74 65 6d 4f 62}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_7c7894dfb9
@@ -1079,7 +1079,7 @@ rule SHELL_unknown_7c7894dfb9
 		$ = {77 57 85 65 27 43 77 67 41 43 77 67 41 43 2c 25 c8 a1 b6 c1 25 2c 42 6a 7a 71 66 7b 25 79 6e 72 67 7a 78 42 6a 75 7e 79 25 79 7a 75 73 6e 41 25 27 58 77 57 85 65 27 43 35 3d 42 6a 20 6e 78 25}
 		$ = {22 22 2c 31 2c 31 2c 31 29 29 0a 09 09 09 09 53 75 6d 46 69 6c 65 73 20 3d 20 53 75 6d 46 69 6c 65 73 20 2b 20 31 0a 09 09 09 45 6e 64 20 49 66 0a 09 09 4e 65 78 74 0a 09 09 53 65 74 20 4d 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_8062a04894
@@ -1091,7 +1091,7 @@ rule SHELL_unknown_8062a04894
 		$ = {20 20 20 20 20 20 20 74 63 70 2e 52 65 63 65 69 76 65 42 75 66 66 65 72 53 69 7a 65 20 3d 20 31 30 32 34 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 4e 65 74 77 6f 72 6b 53 74 72 65 61 6d 20 4e}
 		$ = {56 69 65 77 53 74 61 74 65 3d 22 46 61 6c 73 65 22 20 56 69 73 69 62 6c 65 3d 22 46 61 6c 73 65 22 20 48 65 69 67 68 74 3d 22 32 30 70 78 22 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 3c 64 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_cdb266b198
@@ -1103,7 +1103,7 @@ rule SHELL_unknown_cdb266b198
 		$ = {3e 20 22 0a 52 52 53 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 27 72 65 73 65 74 27 20 6e 61 6d 65 3d 27 53 75 62 6d 69 74 32 27 20 76 61 6c 75 65 3d 27 d6 d8 d6 c3 27 3e 22 0a 52 52 53 22 3c 69}
 		$ = {20 46 75 6e 63 74 69 6f 6e 0a 46 75 6e 63 74 69 6f 6e 20 47 65 74 44 61 74 65 43 72 65 61 74 65 28 66 69 6c 65 70 61 74 68 29 0a 09 53 65 74 20 46 33 53 4f 20 3d 20 43 72 65 61 74 65 4f 62 6a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_389d52cc95
@@ -1115,7 +1115,7 @@ rule SHELL_unknown_389d52cc95
 		$ = {72 65 61 63 68 28 24 66 74 79 70 65 73 20 61 73 20 24 6b 3d 3e 24 76 29 20 7b 69 66 20 28 69 6e 5f 61 72 72 61 79 28 24 65 78 74 2c 24 76 29 29 20 7b 24 72 66 74 20 3d 20 24 6b 3b 20 62 72 65}
 		$ = {6c 41 65 42 69 45 41 47 52 67 58 45 67 30 74 34 53 77 72 6f 43 59 6c 44 52 41 6e 34 53 6d 70 4b 43 6f 51 4a 43 2f 68 71 56 41 75 4e 47 7a 67 38 45 39 52 4b 42 45 6a 59 42 53 30 4a 53 68 47 68}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_8f8fb9bff2
@@ -1127,7 +1127,7 @@ rule SHELL_unknown_8f8fb9bff2
 		$ = {6e 20 3d 20 53 65 72 76 65 72 2e 43 72 65 61 74 65 4f 62 6a 65 63 74 28 22 41 44 4f 44 42 2e 63 6f 6e 6e 65 63 74 69 6f 6e 22 29 3a 63 6f 6e 6e 73 74 72 3d 22 50 72 6f 76 69 64 65 72 3d 53 51}
 		$ = {65 74 68 6f 64 3d 27 70 6f 73 74 27 20 61 63 74 69 6f 6e 3d 27 27 3e 22 0a 72 65 73 70 6f 6e 73 65 2e 77 72 69 74 65 22 3c 70 20 61 6c 69 67 6e 3d 27 63 65 6e 74 65 72 27 3e 22 0a 72 65 73 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_af404cd0bd
@@ -1139,7 +1139,7 @@ rule SHELL_unknown_af404cd0bd
 		$ = {74 79 70 65 3d 27 73 75 62 6d 69 74 27 20 6e 61 6d 65 3d 27 53 75 62 6d 69 74 27 20 76 61 6c 75 65 3d 27 cc e1 bd bb 27 3e 20 22 0a 52 52 53 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 27 72 65 73}
 		$ = {6e 6f 74 68 69 6e 67 0a 09 73 65 74 20 46 32 53 4f 20 3d 20 6e 6f 74 68 69 6e 67 0a 09 47 65 74 44 61 74 65 4d 6f 64 69 66 79 20 3d 20 73 0a 45 6e 64 20 46 75 6e 63 74 69 6f 6e 0a 46 75 6e 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_aspmuma_asp
@@ -1151,7 +1151,7 @@ rule SHELL_aspmuma_asp
 		$ = {20 0a 45 6e 64 20 66 75 6e 63 74 69 6f 6e 0a 0a 64 69 6d 20 20 61 73 70 43 6f 64 65 0a 61 73 70 43 6f 64 65 3d 43 53 74 72 28 53 65 73 73 69 6f 6e 28 22 61 73 70 43 6f 64 65 22 29 29 0a 69 66}
 		$ = {31 31 39 20 29 20 26 20 43 68 72 20 28 20 34 36 20 29 20 26 20 43 68 72 20 28 20 35 35 20 29 20 26 20 43 68 72 20 28 20 31 30 36 20 29 20 26 20 43 68 72 20 28 20 31 32 31 20 29 20 26 20 43 68}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_f560d55c54
@@ -1163,7 +1163,7 @@ rule SHELL_unknown_f560d55c54
 		$ = {73 55 6e 69 67 6f 4c 6f 74 75 61 20 2c 79 65 4b 65 6c 62 61 6e 45 6e 69 67 6f 4c 6f 74 75 61 20 2c 65 6c 62 61 6e 45 6e 69 67 6f 4c 6f 74 75 41 73 69 20 6d 69 44 a9 ef 79 65 4b 73 73 61 50 6e}
 		$ = {20 a1 cc 3c 62 72 3e 22 26 41 70 70 6c 69 63 61 74 69 6f 6e 28 72 65 71 75 65 73 74 28 22 50 72 6f 46 69 6c 65 22 29 26 22 43 6f 6e 22 29 0a 74 78 74 2e 63 6c 6f 73 65 0a 65 6e 64 20 69 66 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_9a57fa3ea8
@@ -1175,7 +1175,7 @@ rule SHELL_unknown_9a57fa3ea8
 		$ = {68 28 24 66 74 79 70 65 73 20 61 73 20 24 6b 3d 3e 24 76 29 20 7b 69 66 20 28 69 6e 5f 61 72 72 61 79 28 24 65 78 74 2c 24 76 29 29 20 7b 24 72 66 74 20 3d 20 24 6b 3b 20 62 72 65 61 6b 3b 7d}
 		$ = {45 41 47 52 67 58 45 67 30 74 34 53 77 72 6f 43 59 6c 44 52 41 6e 34 53 6d 70 4b 43 6f 51 4a 43 2f 68 71 56 41 75 4e 47 7a 67 38 45 39 52 4b 42 45 6a 59 42 53 30 4a 53 68 47 68 34 55 4d 6f 59}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_13af863eed
@@ -1187,7 +1187,7 @@ rule SHELL_unknown_13af863eed
 		$ = {73 75 62 6d 69 74 27 20 6e 61 6d 65 3d 27 53 75 62 6d 69 74 27 20 76 61 6c 75 65 3d 27 cc e1 bd bb 27 3e 20 22 0a 52 52 53 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 27 72 65 73 65 74 27 20 6e 61}
 		$ = {6e 67 0a 09 73 65 74 20 46 32 53 4f 20 3d 20 6e 6f 74 68 69 6e 67 0a 09 47 65 74 44 61 74 65 4d 6f 64 69 66 79 20 3d 20 73 0a 45 6e 64 20 46 75 6e 63 74 69 6f 6e 0a 46 75 6e 63 74 69 6f 6e 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_e23d15a471
@@ -1199,7 +1199,7 @@ rule SHELL_unknown_e23d15a471
 		$ = {72 4e 61 6d 65 22 29 0a 49 66 20 66 73 6f 2e 46 69 6c 65 45 78 69 73 74 73 28 73 79 73 64 72 69 76 65 72 26 22 5c 44 6f 63 75 6d 65 6e 74 73 20 41 6e 64 20 53 65 74 74 69 6e 67 73 5c 41 6c 6c}
 		$ = {53 4f 29 0a 69 66 20 72 65 71 75 65 73 74 28 22 44 65 6c 43 6f 6e 22 29 3d 31 20 74 68 65 6e 0a 41 70 70 6c 69 63 61 74 69 6f 6e 28 72 65 71 75 65 73 74 28 22 50 72 6f 46 69 6c 65 22 29 26 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_a740582b79
@@ -1211,7 +1211,7 @@ rule SHELL_unknown_a740582b79
 		$ = {43 a9 ae 29 6e 74 46 55 47 57 28 72 71 74 4e 75 74 4e 2e 69 6c 4b 3d 6b 7a 6c 55 47 57 a9 ae 60 6b 74 63 6b 74 55 74 64 71 47 5c 60 26 41 72 68 51 26 69 7a 71 59 3d 6e 74 46 55 47 57 a9 ae 79}
 		$ = {71 74 6b 5a 2e 6b 74 63 6b 74 55 3d 67 6c 79 20 7a 74 55 22 29 29 0a 45 6e 64 20 46 75 6e 63 74 69 6f 6e 0a 66 75 6e 63 74 69 6f 6e 20 44 65 6c 70 6f 69 6e 74 66 69 6c 65 28 74 30 29 0a 65 78}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_31e5e01df1
@@ -1223,7 +1223,7 @@ rule SHELL_unknown_31e5e01df1
 		$ = {73 70 61 6e 20 63 6c 61 73 73 3d 22 62 6c 61 63 6b 22 3e 20 0d 0a 3c 25 23 40 7e 5e 47 77 41 41 41 41 3d 3d 7e 22 2b 64 61 57 09 2f 2b 63 68 4d 72 59 7f 50 45 b1 be ce c4 bc fe be f8 b6 d4 b5}
 		$ = {3c 2f 74 72 3e 0d 0a 3c 74 72 3e 0d 0a 3c 74 64 20 62 67 63 6f 6c 6f 72 3d 22 23 46 46 46 46 46 46 22 20 63 6c 61 73 73 3d 22 62 6c 61 63 6b 22 3e 0d 0a 3c 25 23 40 7e 5e 47 77 41 41 41 41 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_small_shell_txt
@@ -1235,7 +1235,7 @@ rule SHELL_small_shell_txt
 		$ = {54 5b 32 5d 29 2e 40 24 5f 28 24 5f 50 4f 53 54 5b 31 5d 29 3f 3e 0a 63 61 69 64 61 6f 3a 20 68 74 74 70 3a 2f 2f 73 69 74 65 2f 31 2e 70 68 70 3f 32 3d 61 73 73 65 72 74 20 50 61 73 73 77 6f}
 		$ = {6d 69 74 28 30 29 3b 0a 66 75 6e 63 74 69 6f 6e 20 64 65 63 72 79 70 74 28 24 63 69 70 68 65 72 74 65 78 74 5f 68 65 78 2c 24 6b 65 79 29 7b 0a 24 6b 65 79 3d 6d 64 35 28 24 6b 65 79 29 3b 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_sshback_v0_1_tar_gz
@@ -1247,7 +1247,7 @@ rule SHELL_sshback_v0_1_tar_gz
 		$ = {93 e7 a7 f9 76 9e 3c 2a 99 70 d0 3e 47 ad de 94 85 9c 30 6f ad 91 c6 3b d7 b8 8a 5b fa 86 5b b0 65 01 bd 0d 0b 38 47 fb d2 71 1f 70 ba 2c e8 db 6b 0c 8d c1 14 ae e8 be 68 51 12 44 f0 0f 46 ee}
 		$ = {77 a0 a7 94 fc 9e 5a f1 7b 62 c1 ef a9 f5 be 0d e5 3e f6 bc 62 df 73 6a 7d cf 2c f5 7d 61 a5 6f 6d c1 4f ad f3 3d b3 cc f7 bc 2a df 93 8a 7c ec f9 25 be e7 54 f8 7e eb 02 1f 3b a3 35 90 43 8a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_webshell_pwd_txt
@@ -1259,7 +1259,7 @@ rule SHELL_webshell_pwd_txt
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 e5 af 86 e7 a0 81 35 32 30 31 33 31 34 0a 0a 46 2e 53 2e 54 20 e8 81}
 		$ = {9c 80 e5 bc ba 41 53 50 e6 9c a8 e9 a9 ac 20 e5 af 86 e7 a0 81 35 31 32 31 37 30 35 0a 0a e5 b0 8f e5 bc ba 61 73 70 e6 9c a8 e9 a9 ac 20 e5 af 86 e7 a0 81 6c 61 6f 64 75 6f 0a 0a e7 bd 91 e7}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_bypass_waf_txt
@@ -1271,7 +1271,7 @@ rule SHELL_bypass_waf_txt
 		$ = {d6 61 73 70 0a 0a 39 30 b7 a2 b5 c4 0a 3c 25 40 20 50 61 67 65 20 4c 61 6e 67 75 61 67 65 20 3d 20 4a 73 63 72 69 70 74 20 25 3e 3c 25 76 61 72 2f 2a 2d 2f 2a 2d 2a 2f 50 2f 2a 2d 2f 2a 2d 2a}
 		$ = {2b 22 66 22 2b 22 65 22 2b 22 5c 22 22 2b 22 29 22 3b 65 76 61 6c 20 28 2f 2a 2d 2f 2a 2d 2a 2f 50 2f 2a 2d 2f 2a 2d 2a 2f 2c 2f 2a 2d 2f 2a 2d 2a 2f 22 75 22 2b 22 6e 22 2b 22 73 22 2f 2a 2d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_pwd_txt
@@ -1283,7 +1283,7 @@ rule SHELL_pwd_txt
 		$ = {69 65 6a 69 65 0a 0a 54 68 a8 a6 a1 a2 45 6e 64 2e a9 61 0a 61 6e 64 bb f2 d5 df 51 51 a3 ba 39 31 33 37 32 30 37 38 37 0a 0a 54 4e 54 48 4b d0 a1 d7 e9 c4 da b2 bf b0 e6 0a 54 4e 54 48 4b 0a}
 		$ = {c2 e7 b9 a4 d7 f7 ca d2 0a 6d 61 79 61 36 36 0a 0a ec 60 bb ea a1 f4 b0 b2 c8 ab d0 a1 d7 e9 2b 22 0a 31 30 30 31 31 43 31 32 30 31 30 35 31 30 31 0a 0a c1 fa d3 ea cd ea c8 ab c8 a5 ba f3 c3}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_icesword_war
@@ -1295,7 +1295,7 @@ rule SHELL_icesword_war
 		$ = {d2 75 fc 7e 52 60 9d e6 d7 df f9 cf 3c e8 05 c3 73 f0 18 b8 af a4 7e 10 b0 d3 f7 f9 59 4d 0b 1a b4 db 4e 9b f8 2a 38 f8 86 82 28 ea 89 48 98 f1 f0 f2 3c be bf 01 e7 bd e3 49 11 cf 23 56 11 c3}
 		$ = {0a 84 94 cb b5 5a 79 62 bf 28 f8 7e ad 5c 45 71 5f fe f2 cd 57 df 58 5f bb b4 f1 77 3f fd fa bd 8f 8f b8 7e ff 1c bf 8e 79 ed 2e 0e 28 97 ea d3 cf b5 8a c7 6f a0 58 71 00 32 83 99 db 64 6d af}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_zs_war
@@ -1307,7 +1307,7 @@ rule SHELL_zs_war
 		$ = {c7 db 53 2c 21 30 45 cc 9b b7 7c c5 eb e8 2f 1a 70 2d 96 8a dd 2d 43 06 92 94 82 3e c4 74 8c 8b 70 83 84 4e ec 45 6e ef 78 b7 4a 33 fb 39 ab 61 65 6e 8e 97 d2 fe 0c 13 31 1f ea aa 39 ff 01 50}
 		$ = {00 00 14 00 00 00 00 00 00 00 00 00 00 00 00 00 3d 00 00 00 4d 45 54 41 2d 49 4e 46 2f 4d 41 4e 49 46 45 53 54 2e 4d 46 50 4b 01 02 0a 00 0a 00 00 00 00 00 5c b7 a5 3c 00 00 00 00 00 00 00 00}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ololo_cfm
@@ -1319,7 +1319,7 @@ rule SHELL_ololo_cfm
 		$ = {65 22 20 66 69 6c 65 3d 22 23 6f 75 74 23 22 3e 0a 09 09 09 09 3c 2f 63 66 69 66 3e 0a 09 09 09 3c 2f 63 66 69 66 3e 0a 09 09 3c 2f 63 66 69 66 3e 0a 09 09 3c 62 72 3e 0a 09 09 3c 61 20 68 72}
 		$ = {74 61 69 6e 66 6f 22 20 74 69 74 6c 65 3d 22 54 68 26 23 23 32 34 34 3b 6e 67 20 74 69 6e 20 43 26 23 23 34 31 37 3b 20 53 26 23 23 37 39 30 33 3b 20 44 26 23 23 37 39 31 39 3b 20 4c 69 26 23}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ACat_jdk1_5_jar
@@ -1331,7 +1331,7 @@ rule SHELL_ACat_jdk1_5_jar
 		$ = {ce e3 ca 73 d3 e7 13 09 05 5d e8 15 cd f5 31 f4 b6 22 50 94 70 9e e1 6c b0 50 f3 2d db 10 e7 14 f4 a3 5d 1c 1d 50 71 09 97 49 37 b3 52 e1 ce 06 83 fe 37 46 a8 6a 8b 26 9a 6c 27 65 5c 61 88 c4}
 		$ = {14 3d db 16 52 42 a0 50 a0 22 8f f2 52 ec 03 1b f1 2d 45 14 11 a4 52 1e 33 75 3a c3 c7 14 97 10 a6 24 35 49 51 fc 19 fe 0e 3f e8 8c 14 47 66 fc 01 fe 28 c7 bb 69 4b 67 da e0 97 dc ee dd 73 cf}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ACat_jar
@@ -1343,7 +1343,7 @@ rule SHELL_ACat_jar
 		$ = {bc 51 f7 dc 06 97 90 60 48 89 49 d3 b1 dc 9a 39 5f 59 e5 d5 80 21 79 cd 76 ed e0 06 43 3c 33 b6 c4 90 98 f3 96 b9 82 38 7a 54 ec 43 92 a1 af 60 bb fc 71 73 ad c2 fd b2 55 71 38 83 5e f0 aa 96}
 		$ = {7c f9 1f 23 c9 34 f8 b2 6c 83 fb fb 21 88 bb 41 de 36 ce 76 b8 cf 99 07 1b b8 6e 1c d1 dd 7e 51 20 54 e7 0b e1 52 9c a2 f0 ff 50 4b 07 08 42 c9 8c 18 d4 08 00 00 1a 11 00 00 50 4b 03 04 14 00}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ACat_src_zip
@@ -1355,7 +1355,7 @@ rule SHELL_ACat_src_zip
 		$ = {51 e8 21 2f 72 29 45 07 7d 92 0c 87 98 a0 9f 6b 95 b5 ca 10 e4 85 33 91 a2 88 48 4a 99 ef 49 34 0a 5c c3 3f b0 45 18 df a3 7b cc be 02 99 e7 84 f8 76 15 48 54 08 66 23 12 a3 18 3f 23 7d a6 5d}
 		$ = {cf c7 4c 1b a4 d8 73 9f 24 bf 03 c5 54 50 05 f7 48 f5 7f c5 a9 56 eb e6 ed 9b eb 5f 2f 6f ae fe bd fe fb 87 65 79 0c 70 d4 a2 05 27 cf 74 11 11 10 85 c9 88 81 dc 55 66 c9 f4 f8 a8 0b 04 0f 1e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_98bafd5f2c
@@ -1367,7 +1367,7 @@ rule SHELL_unknown_98bafd5f2c
 		$ = {4b cb e1 a5 90 92 89 c9 ca bd d0 62 88 ee ba 27 c0 af 44 f5 ea 89 51 de 3f 30 c9 1b ba af 34 f3 52 22 9a a6 64 b9 b7 a6 64 59 8d 19 c7 ac a4 50 60 b5 5a d5 4e 04 5c 61 1a 3b 62 15 93 a7 4f c5}
 		$ = {66 0d a2 28 8a 98 0c 62 4a c4 29 09 d5 98 96 70 1a 67 6a f0 38 ce 4a 08 e0 09 11 5f 0f e2 49 09 cb f0 94 88 a7 25 d4 e2 19 f6 38 17 c4 37 44 3c 2b 21 8c 42 10 df 64 e3 73 ec f1 7c 10 df 62 e3}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_0e8df20711
@@ -1379,7 +1379,7 @@ rule SHELL_unknown_0e8df20711
 		$ = {10 b3 de 65 fc 3f 50 4b 07 08 b0 0c 7c 28 2d 04 00 00 22 08 00 00 50 4b 03 04 14 00 08 08 08 00 a0 a3 b9 44 00 00 00 00 00 00 00 00 00 00 00 00 23 00 00 00 6f 72 61 63 6c 65 2f 6a 64 62 63 2f}
 		$ = {65 73 71 6c 2f 63 6f 72 65 2f 76 32 2f 46 61 73 74 70 61 74 68 50 61 72 61 6d 65 74 65 72 4c 69 73 74 2e 63 6c 61 73 73 ad 56 fb 7b 14 d5 19 7e 67 77 93 d9 0c 4b 08 cb 25 42 02 0c 10 61 b3 b9}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_test_war
@@ -1391,7 +1391,7 @@ rule SHELL_test_war
 		$ = {08 29 90 7b 52 a1 04 5a 03 56 cc 87 50 43 59 21 49 f3 fd 3c 8c 45 47 ab f8 0b 79 08 29 4e 9e 55 89 13 e3 52 89 98 34 05 ff ed 5c 09 7e 5c cb 81 2d 8f ce 3c 3f 49 ea 0e ab a8 13 71 a8 c4 70 58}
 		$ = {07 f7 bc aa 0d e6 07 b4 83 9e 59 65 1e d0 74 0c 63 e7 6b ba a6 4f 06 41 6d d8 30 a6 a6 a6 f2 53 1b f2 ae 37 61 1c dc 6f 1c 43 5c 83 d8 98 3f f6 07 4a cb 7c 29 28 e9 d8 35 f5 78 ac e2 54 fd 42}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_test_ear
@@ -1403,7 +1403,7 @@ rule SHELL_test_ear
 		$ = {48 e2 d4 82 ca 7f 14 3f 2a 95 88 ef e7 d6 03 83 42 dd 50 c4 03 bf c5 c2 d2 f0 6d 99 7f b6 ea fd 44 d6 c1 ff 8b 7f 1f c7 fa 16 dd 64 af dc 29 bd aa d2 8e ce 30 35 b7 db 0a 94 76 aa 27 98 7c 2a}
 		$ = {3b ba cd 4d 10 51 27 af 5f 2e 4b 19 ce 4d 24 e1 a9 e5 4c eb 54 0f f3 20 a4 70 53 13 b0 15 4f ec 9f 65 b7 35 55 31 db 47 79 b2 75 91 c8 91 ae f3 3e 35 61 81 37 ff ad 44 df d1 38 6c 45 53 33 f8}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_config_aar
@@ -1415,7 +1415,7 @@ rule SHELL_config_aar
 		$ = {82 34 7a 06 6e 77 e1 e0 15 d0 42 9f fc 9c 22 15 ba db 5d 98 eb a1 52 e3 6b 2e be 03 c1 15 97 e3 38 92 e0 30 ab 57 41 41 22 6b 00 01 16 a2 e3 40 5f 49 7f 6c 37 5b 7d 4b 98 82 83 bf a2 d1 26 9c}
 		$ = {63 0f 9f 1a c0 8a 0b 7b 3a c9 1a b9 9e b8 2e 97 d2 87 33 1f de 14 59 ac 9e 59 3a 94 f3 c2 53 4e 7a f9 3c 7f 57 06 0f 7c b6 74 a1 7d e5 f7 13 2e 75 69 77 e1 08 b0 75 34 25 3a df a2 69 4d f0 f1}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Utils_java
@@ -1427,7 +1427,7 @@ rule SHELL_Utils_java
 		$ = {22 2f 72 65 73 6f 75 72 63 65 2f 6f 6e 65 2e 74 78 74 22 29 3b 0a 09 09 09 09 42 75 66 66 65 72 65 64 52 65 61 64 65 72 20 72 65 61 64 65 72 20 3d 20 6e 65 77 20 42 75 66 66 65 72 65 64 52 65}
 		$ = {72 69 6d 28 29 2e 6c 65 6e 67 74 68 28 29 3e 30 29 20 7b 0a 09 09 09 09 55 52 4c 43 6f 6e 6e 65 63 74 69 6f 6e 20 63 6f 6e 6e 3d 6e 65 77 20 55 52 4c 28 75 72 6c 29 2e 6f 70 65 6e 43 6f 6e 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_cc3175a862
@@ -1439,7 +1439,7 @@ rule SHELL_unknown_cc3175a862
 		$ = {52 ba b7 9f fc 1f f8 3a f4 d3 c8 93 e1 f7 ec c9 27 83 2e bc 17 aa de 78 82 d6 e2 fb c2 fa be a9 ac 4e 96 1a 3d be 97 67 33 ea 56 4f 64 b6 f6 f6 f6 ed 88 21 81 19 76 6f 69 e4 6d b8 67 39 c8 b3}
 		$ = {59 b8 d1 b9 4a b9 c2 ba 3b ba b5 bb 2e bb a7 bc 21 bc 9b bd 15 bd 8f be 0a be 84 be ff bf 7a bf f5 c0 70 c0 ec c1 67 c1 e3 c2 5f c2 db c3 58 c3 d4 c4 51 c4 ce c5 4b c5 c8 c6 46 c6 c3 c7 41 c7}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_b25097629a
@@ -1451,354 +1451,7 @@ rule SHELL_unknown_b25097629a
 		$ = {63 6b 2b 02 3f 6c d6 b5 ae ab 18 73 fc 70 be 30 a8 b2 47 ae 65 27 40 7b 49 5c 54 68 f2 93 9f 2e f4 8d 7c f7 89 7b d4 16 62 32 0a 8e f3 ba 52 65 29 88 88 7a de 43 ef 9f fa 3a e7 03 1a 6b 86 40}
 		$ = {57 76 eb 97 b9 0e 22 ed 57 85 96 ca 91 af 15 28 1c 8f e8 8a 09 78 68 9f 00 63 f4 4c e7 63 31 49 5b f9 73 a5 6a ea 22 df bf a4 a8 16 f5 9d be f2 a3 a3 cc b7 55 7c 85 cb dd fe b0 6b 8d 28 6c 81}
 	condition:
-		 any of them
-}
-
-rule SHELL_r57_txt
-{
-	strings:
-		$ = {20 61 6c 69 67 6e 3d 63 65 6e 74 65 72 3e 3c 62 3e 27 2e 55 5f 76 61 6c 75 65 28 24 76 61 6c 75 65 5b 27 67 6c 6f 62 61 6c 5f 76 61 6c 75 65 27 5d 29 2e 27 3c 2f 62 3e 3c 2f 64 69 76 3e 3c 2f}
-		$ = {6f 20 24 75 73 65 72 2e 22 3c 62 72 3e 22 3b 20 7d 0a 0a 20 20 65 63 68 6f 20 27 3c 2f 63 65 6e 74 65 72 3e 27 3b 0a 0a 20 20 7d 0a 0a 20 65 63 68 6f 20 22 3c 62 72 3e 3c 64 69 76 20 61 6c 69}
-		$ = {65 63 74 27 29 3b 0a 0a 69 66 28 24 6d 73 73 71 6c 5f 6f 6e 29 7b 65 63 68 6f 20 22 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 72 65 64 3e 4f 4e 3c 2f 66 6f 6e 74 3e 22 3b 7d 65 6c 73 65 7b 65 63 68}
-		$ = {72 65 61 64 28 24 5f 50 4f 53 54 5b 27 74 65 73 74 39 5f 66 69 6c 65 27 5d 29 3b 0a 0a 20 20 65 63 68 6f 20 68 74 6d 6c 73 70 65 63 69 61 6c 63 68 61 72 73 28 24 73 74 72 29 3b 0a 0a 20 20 62}
-		$ = {28 34 29 2e 69 6e 28 27 73 75 62 6d 69 74 27 2c 27 73 75 62 6d 69 74 27 2c 30 2c 24 6c 61 6e 67 5b 24 6c 61 6e 67 75 61 67 65 2e 27 5f 62 75 74 74 38 27 5d 29 29 3b 0a 0a 65 63 68 6f 20 24 74}
-	condition:
-		 any of them
-}
-
-rule SHELL_gazashell_txt
-{
-	strings:
-		$ = {35 63 47 55 6e 58 54 30 39 4a 32 31 35 63 33 46 73 4a 79 6b 67 65 79 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 4a 47 52 69 4c 54 35 78 64 57 56 79 65 53 67 69 55 30 56}
-		$ = {32 68 76 49 43 63 38 63 33 42 68 62 6a 34 6e 49 43 34 67 4a 47 34 67 4c 69 41 6e 4f 69 41 38 4c 33 4e 77 59 57 34 2b 4a 7a 73 67 43 51 6b 4a 61 57 59 6f 63 33 52 79 63 47 39 7a 4b 43 52 32 4c}
-		$ = {56 6b 64 6f 62 45 52 52 62 32 70 4a 52 7a 6b 78 5a 45 68 43 4d 57 52 44 51 6e 5a 61 61 55 49 77 59 55 64 56 5a 31 6b 79 61 47 68 69 62 57 52 73 53 55 64 53 63 47 4e 74 56 6d 70 6b 52 7a 6c 35}
-		$ = {78 51 55 30 70 33 57 56 68 4f 65 6b 6c 70 51 6e 70 6b 53 47 78 7a 57 6c 51 77 61 56 6c 74 4f 58 6c 61 52 31 5a 35 54 32 70 47 64 32 56 44 51 6d 74 69 4d 31 49 77 57 6c 64 52 5a 30 6c 36 51 58}
-		$ = {5b 24 69 5d 3b 0a 09 09 24 74 69 6d 65 73 74 61 6d 70 73 20 20 3d 20 27 6d 74 69 6d 65 3a 20 27 20 2e 20 64 61 74 65 28 24 64 61 74 65 5f 66 6f 72 6d 61 74 2c 20 24 66 69 6c 65 5b 27 6d 74 69}
-	condition:
-		 any of them
-}
-
-rule SHELL_wsoshell_txt
-{
-	strings:
-		$ = {6b 20 2e 20 27 22 20 74 61 72 67 65 74 3d 5f 62 6c 61 6e 6b 3e 5b 65 78 70 6c 6f 69 74 2d 64 62 2e 63 6f 6d 5d 3c 2f 61 3e 3c 2f 6e 6f 62 72 3e 3c 62 72 3e 27 20 2e 20 24 75 69 64 20 2e 20 27}
-		$ = {6f 6e 73 75 62 6d 69 74 3d 22 69 66 28 74 68 69 73 2e 61 6a 61 78 2e 63 68 65 63 6b 65 64 29 7b 61 28 5c 27 50 68 70 5c 27 2c 6e 75 6c 6c 2c 74 68 69 73 2e 63 6f 64 65 2e 76 61 6c 75 65 29 3b}
-		$ = {74 68 27 20 3d 3e 20 27 73 74 72 6c 65 6e 27 2c 0a 09 29 3b 0a 09 69 66 28 69 73 73 65 74 28 24 5f 50 4f 53 54 5b 27 61 6a 61 78 27 5d 29 29 20 7b 0a 09 09 57 53 4f 73 65 74 63 6f 6f 6b 69 65}
-		$ = {68 69 73 2e 63 6d 64 2e 76 61 6c 75 65 29 3b 69 66 28 74 68 69 73 2e 61 6a 61 78 2e 63 68 65 63 6b 65 64 29 7b 61 28 6e 75 6c 6c 2c 6e 75 6c 6c 2c 74 68 69 73 2e 63 6d 64 2e 76 61 6c 75 65 2c}
-		$ = {43 68 61 72 73 65 74 28 27 63 70 38 36 36 27 29 3b 20 62 72 65 61 6b 3b 0a 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 69 66 28 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 66 69 6c 65}
-	condition:
-		 any of them
-}
-
-rule SHELL_kacak_txt
-{
-	strings:
-		$ = {23 30 30 30 30 30 30 22 20 62 67 63 6f 6c 6f 72 3d 22 52 65 64 22 3e 20 0a 20 20 20 20 20 20 20 20 20 20 3c 74 65 78 74 61 72 65 61 20 6e 61 6d 65 3d 22 64 75 7a 65 6e 78 22 20 0a 20 20 20 20}
-		$ = {20 63 65 6c 6c 70 61 64 64 69 6e 67 3d 22 30 22 20 63 65 6c 6c 73 70 61 63 69 6e 67 3d 22 30 22 20 73 74 79 6c 65 3d 22 62 6f 72 64 65 72 2d 63 6f 6c 6c 61 70 73 65 3a 20 63 6f 6c 6c 61 70 73}
-		$ = {26 6e 62 73 70 3b 3c 2f 73 70 61 6e 3e 3c 2f 74 64 3e 0a 20 20 20 20 20 20 20 20 3c 2f 74 72 3e 0a 20 20 20 20 20 20 3c 2f 74 61 62 6c 65 3e 0a 20 20 20 20 20 20 3c 2f 63 65 6e 74 65 72 3e 0a}
-		$ = {69 22 29 0a 65 6e 64 20 69 66 0a 0a 69 66 20 72 65 71 75 65 73 74 2e 71 75 65 72 79 73 74 72 69 6e 67 28 22 73 69 6c 64 6f 73 22 29 20 3c 3e 20 22 22 20 74 68 65 6e 0a 73 69 6c 69 6e 63 65 6b}
-		$ = {6c 6f 72 3d 22 23 39 46 39 46 39 46 22 3e 59 65 6e 69 20 4b 6c 61 73 f6 72 3c 2f 66 6f 6e 74 3e 3c 2f 61 3e 3c 2f 66 6f 6e 74 3e 3c 2f 74 64 3e 0a 20 20 20 20 20 20 20 20 20 20 3c 2f 74 72 3e}
-	condition:
-		 any of them
-}
-
-rule SHELL_c100_txt
-{
-	strings:
-		$ = {5b 22 6e 61 6d 65 5f 72 65 67 65 78 70 22 5d 29 20 61 6e 64 20 73 74 72 70 6f 73 28 24 66 2c 24 61 5b 22 6e 61 6d 65 22 5d 29 20 21 3d 3d 20 46 41 4c 53 45 29 20 7c 7c 20 28 24 61 5b 22 6e 61}
-		$ = {20 72 6f 77 73 29 3c 2f 62 3e 3c 2f 63 65 6e 74 65 72 3e 22 3b 0a 20 20 20 20 20 65 63 68 6f 20 22 3c 61 20 68 72 65 66 3d 5c 22 22 2e 24 73 71 6c 5f 73 75 72 6c 2e 22 73 71 6c 5f 74 62 6c 3d}
-		$ = {5f 69 6e 70 75 74 29 29 2e 22 5c 22 20 72 65 61 64 6f 6e 6c 79 3e 0a 20 3c 62 72 3e 3c 2f 63 65 6e 74 65 72 3e 3c 62 3e 42 61 73 65 36 34 3a 3c 2f 62 3e 3c 63 65 6e 74 65 72 3e 62 61 73 65 36}
-		$ = {72 63 70 61 74 68 29 3b 0a 20 20 20 24 66 70 20 3d 20 66 6f 70 65 6e 28 24 73 72 63 70 61 74 68 2c 22 61 62 2b 22 29 3b 0a 20 20 20 69 66 20 28 21 24 66 70 29 20 7b 65 63 68 6f 20 22 43 61 6e}
-		$ = {37 30 34 36 79 70 36 42 78 73 69 48 45 56 42 45 41 4b 59 43 55 50 72 44 70 37 48 6c 58 52 64 45 6f 4d 71 43 65 62 70 22 2e 0a 22 2f 34 59 63 68 66 66 7a 47 51 68 48 34 59 52 59 50 42 32 44 4f}
-	condition:
-		 any of them
-}
-
-rule SHELL_simattacker_txt
-{
-	strings:
-		$ = {0a 3c 2f 66 6f 72 6d 3e 22 3b 0a 0a 24 63 68 6d 6f 64 30 3d 24 5f 50 4f 53 54 5b 27 63 68 6d 6f 64 30 27 5d 3b 0a 0a 69 66 20 28 24 63 68 6d 6f 64 30 20 3c 3e 20 22 22 29 7b 0a 0a 63 68 6d 6f}
-		$ = {3b 50 72 6f 67 72 61 6d 65 72 20 3a 20 48 6f 73 73 65 69 6e 20 41 73 67 61 72 79 20 3c 62 72 3e 0a 0a 26 6e 62 73 70 3b 4e 6f 74 65 20 3a 20 53 69 6d 41 74 74 61 63 6b 65 72 26 6e 62 73 70 3b}
-		$ = {6f 72 3d 27 23 30 30 38 30 30 30 27 20 73 69 7a 65 3d 27 32 27 3e 3c 62 3e 44 6f 77 6e 6c 6f 61 64 3c 2f 62 3e 3c 2f 66 6f 6e 74 3e 3c 2f 74 64 3e 0a 0a 09 09 3c 74 64 20 68 65 69 67 68 74 3d}
-		$ = {26 66 63 68 6d 6f 64 3d 24 64 69 72 24 66 69 6c 65 27 3e 3c 73 70 61 6e 20 73 74 79 6c 65 3d 27 74 65 78 74 2d 64 65 63 6f 72 61 74 69 6f 6e 3a 20 6e 6f 6e 65 27 3e 3c 66 6f 6e 74 20 73 69 7a}
-	condition:
-		 any of them
-}
-
-rule SHELL_symlink_txt
-{
-	strings:
-		$ = {6f 74 2f 68 6f 6d 65 2f 22 2e 24 75 73 65 72 5b 27 6e 61 6d 65 27 5d 2e 22 2f 70 75 62 6c 69 63 5f 68 74 6d 6c 2f 77 70 2d 63 6f 6e 66 69 67 2e 70 68 70 22 3b 0a 24 77 70 70 3d 40 67 65 74 5f}
-		$ = {28 29 3b 0a 0a 7d 0a 7d 0a 7d 0a 7d 0a 0a 0a 0a 0a 62 72 65 61 6b 3b 0a 0a 0a 2f 2f 2f 20 66 69 6c 65 20 20 73 79 6d 6c 69 6e 6b 20 2f 2f 2f 0a 0a 63 61 73 65 20 27 66 69 6c 65 27 3a 0a 0a 65}
-		$ = {28 24 64 6f 6d 69 6e 29 2e 27 27 3b 0a 0a 24 72 65 61 64 63 6f 6e 66 69 67 20 20 3d 20 40 66 69 6c 65 5f 67 65 74 5f 63 6f 6e 74 65 6e 74 73 28 74 72 69 6d 28 24 63 6f 6e 66 69 67 29 29 3b 0a}
-		$ = {24 64 6f 6d 69 6e 3c 2f 61 3e 3c 2f 74 64 3e 0a 3c 74 64 3e 3c 61 20 74 61 72 67 65 74 3d 27 5f 62 6c 61 6e 6b 27 20 68 72 65 66 3d 27 24 63 6f 6e 66 69 67 27 3e 63 6f 6e 66 69 67 3c 2f 61 3e}
-		$ = {64 3d 27 50 4f 53 54 27 20 61 63 74 69 6f 6e 3d 27 24 70 67 3f 73 77 73 3d 76 62 27 3e 0a 3c 69 6e 70 75 74 20 74 79 70 65 3d 27 73 75 62 6d 69 74 27 20 76 61 6c 75 65 3d 27 49 6e 6a 65 63 74}
-	condition:
-		 any of them
-}
-
-rule SHELL_ernebypass_txt
-{
-	strings:
-		$ = {3d 73 74 72 5f 72 65 70 6c 61 63 65 28 27 5c 5c 27 2c 27 2f 27 2c 64 69 72 6e 61 6d 65 28 5f 5f 46 49 4c 45 5f 5f 29 29 3b 0a 0a 2f 2f 2f 2f 2f 2f 2f 2f 0a 69 66 20 28 21 69 73 73 65 74 28 24}
-		$ = {74 22 29 3b 0a 09 09 09 09 24 77 72 69 74 65 61 62 6c 65 20 3d 20 31 3b 0a 09 09 09 7d 20 65 6c 73 65 20 7b 0a 09 09 09 09 24 77 72 69 74 65 61 62 6c 65 20 3d 20 30 3b 0a 09 09 09 7d 0a 09 09}
-		$ = {3b 0a 09 09 09 09 7d 0a 0a 09 09 09 09 69 66 20 28 21 69 73 73 65 74 28 24 72 6f 77 5b 24 66 69 65 6c 64 63 6f 75 6e 74 65 72 5d 29 29 20 7b 0a 09 09 09 09 09 24 74 61 62 6c 65 64 75 6d 70 20}
-		$ = {20 65 6c 73 65 20 7b 0a 24 45 52 4f 52 52 3d 24 5f 50 4f 53 54 5b 27 45 52 27 5d 3b 0a 65 63 68 6f 20 20 65 72 72 6f 72 5f 6c 6f 67 28 22 0a 3c 68 74 6d 6c 3e 0a 3c 68 65 61 64 3e 0a 3c 74 69}
-		$ = {46 4f 4e 54 3e 3c 73 74 72 6f 6e 67 3e 3c 46 4f 4e 54 20 43 4f 4c 4f 52 3d 23 39 42 39 42 39 42 3e 54 68 65 20 66 6f 6c 64 65 72 73 20 69 73 20 36 34 34 20 3a 3c 2f 73 74 72 6f 6e 67 3e 3c 62}
-	condition:
-		 any of them
-}
-
-rule SHELL_b374k_txt
-{
-	strings:
-		$ = {64 54 7a 6d 48 73 49 55 58 78 4d 37 2b 4c 59 6a 41 39 49 54 6c 5a 42 53 44 6f 76 74 35 6b 42 53 51 6d 34 31 2f 4d 58 34 50 46 50 4e 77 63 2f 5a 4a 2f 44 70 32 64 39 34 54 65 44 57 74 2f 4d 2b}
-		$ = {2b 76 73 4e 45 33 39 65 63 31 61 42 4b 72 4f 62 7a 61 52 79 42 55 62 67 4b 63 35 70 56 68 42 4a 73 5a 72 68 31 51 4a 75 41 76 72 74 59 64 6a 31 5a 67 4b 56 35 69 71 6c 63 6c 32 70 67 54 48 79}
-		$ = {20 22 22 3b 0a 09 73 77 69 74 63 68 28 24 73 5f 6c 61 6e 67 29 7b 0a 09 09 63 61 73 65 20 22 70 79 74 68 6f 6e 22 3a 0a 09 09 09 24 73 5f 63 65 6b 20 3d 20 73 74 72 74 6f 6c 6f 77 65 72 28 65}
-		$ = {6d 65 28 24 73 5f 64 65 6c 29 2e 22 20 3f 20 3c 61 20 68 72 65 66 3d 27 22 2e 24 73 5f 73 65 6c 66 2e 22 64 65 6c 65 74 65 3d 22 2e 70 6c 28 24 73 5f 64 65 6c 29 2e 22 27 3e 59 65 73 3c 2f 61}
-		$ = {72 65 61 63 68 28 24 73 5f 69 5f 62 75 66 66 73 73 20 61 73 20 24 73 5f 69 5f 62 29 7b 0a 09 09 09 09 09 24 73 5f 69 5f 72 6f 77 20 3d 20 65 78 70 6c 6f 64 65 28 22 20 22 2c 20 74 72 69 6d 28}
-	condition:
-		 any of them
-}
-
-rule SHELL_syrianshellv8_txt
-{
-	strings:
-		$ = {63 61 74 65 20 63 6f 6e 66 2e 70 68 70 27 3e 6c 6f 63 61 74 65 20 63 6f 6e 66 2e 70 68 70 20 66 69 6c 65 73 3c 2f 6f 70 74 69 6f 6e 3e 0a 09 09 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 27 6c}
-		$ = {72 65 61 63 68 20 28 24 72 65 61 64 4d 79 46 69 6c 65 20 61 73 20 24 6c 69 6e 65 5f 6e 75 6d 20 3d 3e 20 24 72 65 61 64 4d 79 46 69 6c 65 4c 69 6e 65 29 20 0a 09 09 09 09 09 09 7b 20 0a 09 09}
-		$ = {72 79 20 63 6f 6e 6e 65 63 74 20 74 6f 20 22 2e 24 69 70 2e 22 20 70 6f 72 74 20 22 2e 24 70 6f 72 74 2e 22 20 2e 2e 2e 22 3b 20 0a 09 09 09 09 7d 20 0a 09 09 09 7d 0a 09 09 09 23 20 2d 2d 2d}
-		$ = {65 3c 2f 6f 70 74 69 6f 6e 3e 0a 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 35 22 20 3e 49 20 6a 75 73 74 20 77 61 6e 74 20 74 6f 20 62 65 20 74 68 65 20 62 65 73 74 20 64 65 66 61 63 65 72}
-		$ = {75 74 20 74 79 70 65 3d 5c 22 74 65 78 74 5c 22 20 6e 61 6d 65 3d 5c 22 61 6d 6f 75 6e 74 5c 22 20 76 61 6c 75 65 3d 31 20 73 69 7a 65 3d 31 30 20 2f 3e 3c 62 72 20 2f 3e 0a 4d 61 78 69 6d 75}
-	condition:
-		 any of them
-}
-
-rule SHELL_uploadshell_hima_txt
-{
-	strings:
-		$ = {0a 09 09 7d 20 65 6c 73 65 20 7b 0a 09 09 09 24 64 69 72 5f 65 72 72 6f 72 20 3d 20 22 3c 69 3e 45 72 72 6f 72 3a 20 43 61 6e 6e 6f 74 20 63 68 61 6e 67 65 20 64 69 72 65 63 74 6f 72 79 21 3c}
-		$ = {0a 3c 73 63 72 69 70 74 20 74 79 70 65 3d 22 74 65 78 74 2f 6a 61 76 61 73 63 72 69 70 74 22 20 6c 61 6e 67 75 61 67 65 3d 22 6a 61 76 61 73 63 72 69 70 74 22 3e 0a 3c 21 2d 2d 0a 4d 4c 3d 22}
-		$ = {20 22 27 2c 20 27 74 6f 6f 6c 62 61 72 3d 30 2c 73 63 72 6f 6c 6c 62 61 72 73 3d 31 2c 6c 6f 63 61 74 69 6f 6e 3d 30 2c 73 74 61 74 75 73 62 61 72 3d 30 2c 6d 65 6e 75 62 61 72 3d 30 2c 72 65}
-		$ = {09 65 63 68 6f 20 22 4f 75 74 70 75 74 3a 22 3b 0a 09 09 09 09 09 3f 3e 0a 09 09 09 09 09 3c 62 72 3e 0a 09 09 09 09 09 3c 74 65 78 74 61 72 65 61 20 63 6c 61 73 73 3d 22 6f 75 74 70 75 74 22}
-		$ = {6e 61 6d 65 3d 22 73 75 62 6d 69 74 22 20 63 6c 61 73 73 3d 22 73 75 62 6d 69 74 22 20 76 61 6c 75 65 3d 22 55 70 6c 6f 61 64 22 3e 3c 2f 64 69 76 3e 0a 09 09 09 09 09 09 3c 2f 66 6f 72 6d 3e}
-	condition:
-		 any of them
-}
-
-rule SHELL_zehir4shell_txt
-{
-	strings:
-		$ = {74 29 20 3d 20 6c 6f 62 6a 46 69 65 6c 64 0a 09 09 6d 6c 6e 67 43 6f 75 6e 74 20 3d 20 6d 6c 6e 67 43 6f 75 6e 74 20 2b 20 31 0a 09 45 6e 64 20 53 75 62 0a 0a 09 50 72 69 76 61 74 65 20 46 75}
-		$ = {69 6c 65 28 70 61 74 68 29 0a 09 09 09 09 69 66 20 49 73 4f 62 6a 65 63 74 28 66 29 20 74 68 65 6e 0a 09 09 09 09 09 69 66 20 66 2e 53 69 7a 65 3d 73 69 7a 65 20 74 68 65 6e 20 73 75 63 63 65}
-		$ = {73 65 72 76 65 72 76 61 72 69 61 62 6c 65 73 28 22 41 50 50 4c 5f 4d 44 5f 50 41 54 48 22 29 20 26 20 22 3c 2f 74 64 3e 3c 2f 74 72 3e 22 0a 09 52 65 73 70 6f 6e 73 65 2e 57 72 69 74 65 20 22}
-		$ = {70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 62 6c 61 63 6b 22 3e 53 69 79 61 68 3c 2f 6f 70 74 69 6f 6e 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
-		$ = {2e 57 72 69 74 65 20 22 3c 62 3e 3c 66 6f 6e 74 20 73 69 7a 65 3d 33 3e 54 61 62 6c 6f 6c 61 72 3c 2f 66 6f 6e 74 3e 3c 2f 62 72 3e 3c 62 72 3e 22 0a 09 53 65 74 20 6f 62 6a 43 6f 6e 6e 20 3d}
-	condition:
-		 any of them
-}
-
-rule SHELL_injectionv3_txt
-{
-	strings:
-		$ = {52 35 63 47 55 67 50 54 30 67 49 6d 31 6c 5a 47 6c 31 62 57 6c 75 64 43 49 67 4b 53 42 6c 59 32 68 76 49 43 4a 6a 61 47 56 6a 61 32 56 6b 49 6a 74 6c 59 32 68 76 49 43 63 2b 54 55 56 45 53 56}
-		$ = {72 6e 2e 27 2f 70 75 62 6c 69 63 5f 68 74 6d 6c 2f 63 6f 6e 66 69 67 2e 70 68 70 27 2c 24 70 64 6f 6d 61 69 6e 2e 27 7e 7e 50 68 70 62 62 31 2e 74 78 74 27 29 3b 0a 09 09 73 79 6d 6c 69 6e 6b}
-		$ = {54 6d 38 67 64 32 46 79 63 6d 46 75 64 48 6b 67 5a 58 68 77 63 6d 56 7a 63 79 42 76 63 69 42 70 62 58 42 73 61 57 56 6b 49 47 5a 76 0a 63 69 42 30 61 47 55 67 59 57 4e 6a 64 58 4a 68 59 33 6b}
-		$ = {6e 74 3d 22 2e 24 68 2e 22 26 69 64 3d 22 2e 24 74 65 6d 70 6c 61 74 65 5f 6e 61 6d 65 2e 22 26 63 69 64 5b 5d 3d 22 2e 24 74 65 6d 70 6c 61 74 65 5f 6e 61 6d 65 2e 22 26 22 2e 24 68 69 64 64}
-		$ = {57 56 73 63 32 6c 6d 4b 43 52 6b 49 47 56 78 49 43 49 75 49 69 6b 67 43 67 6b 4a 43 58 73 4b 43 51 6b 4a 43 53 52 6b 49 44 30 67 4a 48 42 68 64 47 67 37 43 67 6b 4a 43 58 30 4b 43 51 6b 4a 5a}
-	condition:
-		 any of them
-}
-
-rule SHELL_sosyeteshell_txt
-{
-	strings:
-		$ = {79 3a 20 76 65 72 64 61 6e 61 2c 20 61 72 69 61 6c 2c 20 73 61 6e 73 2d 73 65 72 69 66 3b 0a 20 20 20 66 6f 6e 74 2d 73 69 7a 65 3a 20 31 31 70 78 3b 0a 20 20 20 63 6f 6c 6f 72 3a 20 23 33 33}
-		$ = {6e 65 6c 22 3e 0a 20 20 3c 54 41 42 4c 45 20 73 74 79 6c 65 3d 22 42 4f 52 44 45 52 2d 43 4f 4c 4c 41 50 53 45 3a 20 63 6f 6c 6c 61 70 73 65 22 20 68 65 69 67 68 74 3d 31 20 63 65 6c 6c 53 70}
-		$ = {61 6c 26 23 33 30 35 3b 26 23 33 35 31 3b 74 26 23 33 30 35 3b 72 22 20 74 79 70 65 3d 22 73 75 62 6d 69 74 22 3e 0a 3c 2f 66 6f 72 6d 3e 0a 3c 66 6f 72 6d 20 6d 65 74 68 6f 64 3d 22 50 4f 53}
-		$ = {69 67 68 6c 69 67 68 74 2d 63 6f 6c 6f 72 3a 20 23 37 35 38 33 39 33 3b 0a 20 20 20 73 63 72 6f 6c 6c 62 61 72 2d 33 64 6c 69 67 68 74 2d 63 6f 6c 6f 72 3a 20 23 30 30 30 30 30 30 3b 0a 20 20}
-		$ = {3e 0a 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 22 23 46 46 46 46 30 30 22 20 66 61 63 65 3d 22 41 72 69 61 6c 22 20 73 69 7a 65 3d 22 37 22 3e 3c 73 70 61 6e 20 6c 61 6e 67 3d 22 65 6e 2d 75 73 22}
-	condition:
-		 any of them
-}
-
-rule SHELL_h4cker_tr_txt
-{
-	strings:
-		$ = {28 24 5f 47 45 54 5b 27 64 66 27 5d 29 29 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 20 3d 20 27 64 66 20 2d 68 27}
-		$ = {56 75 0a 64 47 56 79 5a 57 51 70 4f 32 6b 72 4b 79 6b 67 44 51 70 37 44 51 70 70 5a 69 68 6c 62 6e 52 6c 63 6d 56 6b 57 32 6c 64 49 44 30 39 49 43 64 63 62 69 63 70 44 51 70 6c 62 6e 52 6c 63}
-		$ = {70 61 63 69 6e 67 3d 30 20 62 67 63 6f 6c 6f 72 3d 23 30 30 38 30 30 30 3e 3c 74 72 3e 3c 74 64 20 62 67 63 6f 6c 6f 72 3d 23 33 33 33 33 33 33 3e 3c 64 69 76 20 61 6c 69 67 6e 3d 63 65 6e 74}
-		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 4d 53 47 4b 45 59 20 3d 20 35 31 39 30 35 32 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
-		$ = {20 69 6e 28 27 74 65 78 74 27 2c 20 27 74 65 73 74 31 32 5f 66 69 6c 65 27 2c 20 39 36 2c 20 28 21 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 74 65 73 74 31 32 5f 66 69 6c 65 27 5d 29 20 3f 20}
-	condition:
-		 any of them
-}
-
-rule SHELL_aspxspy_txt
-{
-	strings:
-		$ = {22 3b 0a 57 49 43 78 65 28 29 3b 0a 76 72 46 41 2e 56 69 73 69 62 6c 65 3d 74 72 75 65 3b 0a 69 66 28 70 61 74 68 2e 49 6e 64 65 78 4f 66 28 22 3a 22 29 3c 20 30 29 0a 7b 0a 53 71 6f 6e 2e 56}
-		$ = {49 2c 22 50 72 6f 63 65 73 73 6f 72 4e 61 6d 65 53 74 72 69 6e 67 22 29 3b 0a 57 49 43 78 65 28 29 3b 0a 67 68 61 42 2e 56 69 73 69 62 6c 65 3d 74 72 75 65 3b 0a 42 69 6e 5f 48 32 5f 54 69 74}
-		$ = {47 75 69 64 2e 54 61 62 6c 65 73 2c 6e 65 77 20 4f 62 6a 65 63 74 5b 5d 20 7b 20 6e 75 6c 6c 2c 6e 75 6c 6c 2c 6e 75 6c 6c 2c 22 53 59 53 54 45 4d 20 54 41 42 4c 45 22 20 7d 29 3b 0a 6a 78 46}
-		$ = {72 6f 72 29 0a 7b 0a 78 73 65 75 42 28 65 72 72 6f 72 2e 4d 65 73 73 61 67 65 29 3b 0a 7d 0a 6b 72 49 52 28 41 58 53 62 62 2e 56 61 6c 75 65 29 3b 0a 7d 0a 70 72 6f 74 65 63 74 65 64 20 76 6f}
-		$ = {6c 65 43 65 6c 6c 3e 49 44 3c 2f 61 73 70 3a 54 61 62 6c 65 43 65 6c 6c 3e 3c 61 73 70 3a 54 61 62 6c 65 43 65 6c 6c 3e 50 72 6f 63 65 73 73 3c 2f 61 73 70 3a 54 61 62 6c 65 43 65 6c 6c 3e 3c}
-	condition:
-		 any of them
-}
-
-rule SHELL_c99_txt
-{
-	strings:
-		$ = {78 70 6c 6f 64 65 20 28 22 20 22 2c 24 71 75 65 72 79 29 3b 0a 20 2f 2a 61 72 72 61 79 20 61 72 72 61 79 28 29 0a 20 7b 0a 20 20 22 4d 45 54 48 4f 44 22 3d 3e 61 72 72 61 79 28 6f 75 74 70 75}
-		$ = {20 20 20 20 20 24 73 65 74 5b 22 6f 6e 6c 79 74 61 62 73 22 5d 20 3d 20 61 72 72 61 79 28 29 3b 0a 20 20 20 20 20 69 66 20 28 21 65 6d 70 74 79 28 24 64 6d 70 74 62 6c 73 29 29 20 7b 24 73 65}
-		$ = {22 2f 65 74 63 22 29 2e 22 26 66 74 3d 74 78 74 5c 22 3e 3c 75 3e 3c 62 3e 48 6f 73 74 73 3c 2f 62 3e 3c 2f 75 3e 3c 2f 61 3e 3c 2f 66 6f 6e 74 3e 3c 2f 62 3e 3c 62 72 3e 22 3b 7d 0a 20 66 75}
-		$ = {43 6f 6c 6f 72 4c 69 67 68 74 3d 23 34 33 33 33 33 33 20 62 6f 72 64 65 72 3d 30 3e 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 5c 22 22 2e 24 73 75 72 6c 2e 22 5c 22 20 6d 65 74 68 6f 64 3d 50 4f}
-		$ = {62 6d 69 74 20 76 61 6c 75 65 3d 5c 22 53 61 76 65 5c 22 3e 26 6e 62 73 70 3b 3c 69 6e 70 75 74 20 74 79 70 65 3d 5c 22 72 65 73 65 74 5c 22 20 76 61 6c 75 65 3d 5c 22 52 65 73 65 74 5c 22 3e}
-	condition:
-		 any of them
-}
-
-rule SHELL_g6shell_txt
-{
-	strings:
-		$ = {47 36 20 53 68 65 6c 6c 20 76 31 2e 31 20 2d 20 50 72 69 76 61 74 65 20 2e 3a 3a 4d 61 64 65 20 42 79 20 4d 72 2e 20 50 2d 74 65 6f 3a 3a 2e 3c 2f 74 69 74 6c 65 3e 0a 3c 73 63 72 69 70 74 20}
-		$ = {24 68 61 73 68 72 65 73 75 6c 74 20 3d 20 22 53 48 41 2d 32 35 36 20 48 61 73 68 22 3b 0a 09 09 7d 65 6c 73 65 69 66 28 73 74 72 6c 65 6e 28 24 68 61 73 68 29 3d 3d 39 36 29 7b 0a 09 09 09 24}
-		$ = {20 3d 20 24 66 69 6c 65 5f 65 78 70 6c 6f 72 65 72 3b 0a 09 09 65 63 68 6f 20 27 3c 70 3e 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 22 22 20 6d 65 74 68 6f 64 3d 22 50 4f 53 54 22 3e 3c 74 61 62}
-		$ = {22 20 76 61 6c 75 65 3d 22 55 70 6c 6f 61 64 20 46 69 6c 65 22 20 2f 3e 3c 2f 66 6f 72 6d 3e 3c 2f 64 69 76 3e 0a 09 3c 3f 70 68 70 0a 09 69 66 28 69 73 73 65 74 28 24 5f 50 4f 53 54 5b 27 75}
-		$ = {2c 20 24 73 75 62 6a 65 63 74 2c 20 24 6d 65 73 73 61 67 65 2c 20 22 46 72 6f 6d 3a 20 22 2e 24 66 72 6f 6d 29 3b 09 7d 7d 7d 0a 7d 65 6c 73 65 69 66 28 73 74 72 73 74 72 28 24 43 75 72 72 65}
-	condition:
-		 any of them
-}
-
-rule SHELL_webroot_txt
-{
-	strings:
-		$ = {31 6c 49 20 3e 3e 20 34 29 20 26 20 30 78 33 46 46 43 30 30 29 20 7c 20 28 24 49 49 49 49 49 49 49 49 31 31 6c 49 20 26 20 30 78 33 46 46 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
-		$ = {46 6a 61 7a 74 69 59 57 4e 72 5a 33 4a 76 64 57 35 6b 4c 57 4e 76 62 47 39 79 4f 69 4e 6d 5a 6d 5a 6d 4e 6a 59 69 50 6e 64 6c 0a 59 6e 49 77 4d 48 51 67 59 32 64 70 49 48 4e 6f 5a 57 78 73 50}
-		$ = {30 46 45 52 6b 6c 4d 52 53 6b 67 61 57 59 67 4a 46 64 70 62 6b 35 55 4f 77 6f 4a 43 51 6c 77 63 6d 6c 75 64 43 42 56 55 45 78 50 51 55 52 47 53 55 78 46 49 43 52 70 0a 62 6e 73 6e 5a 6d 6c 73}
-		$ = {53 38 6e 4c 69 52 31 63 32 56 79 4c 69 63 76 63 48 56 69 62 47 6c 6a 0a 58 32 68 30 62 57 77 76 5a 6d 39 79 64 57 30 76 55 32 56 30 64 47 6c 75 5a 33 4d 75 63 47 68 77 4a 79 77 6b 61 32 39 73}
-		$ = {74 65 57 4a 69 5a 47 4a 75 49 48 4e 70 65 6d 55 39 4a 7a 55 77 4a 79 42 7a 64 48 6c 73 5a 54 30 6e 5a 6d 39 75 64 43 31 7a 61 58 70 6c 4f 69 41 34 63 48 51 37 49 47 4e 76 62 47 39 79 0a 4f 69}
-	condition:
-		 any of them
-}
-
-rule SHELL_commandshell_txt
-{
-	strings:
-		$ = {2e 24 66 69 6c 65 5b 31 5d 3b 0a 09 09 09 09 7d 0a 09 09 09 65 6c 73 65 0a 09 09 09 7b 0a 09 09 09 09 70 72 69 6e 74 20 22 44 69 72 65 63 74 6f 72 79 20 6e 6f 74 20 66 6f 75 6e 64 22 3b 0a 09}
-		$ = {09 09 70 72 69 6e 74 20 22 53 61 66 65 20 4d 6f 64 65 3a 20 3c 62 3e 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 72 65 64 3e 45 6e 61 62 6c 65 64 3c 2f 62 3e 3c 2f 66 6f 6e 74 3e 22 3b 0a 09 09 7d 0a}
-		$ = {68 72 75 29 29 0a 09 09 09 7b 0a 09 09 09 09 70 61 73 73 74 68 72 75 28 24 63 6d 64 29 3b 0a 09 09 09 7d 0a 09 09 09 65 6c 73 65 0a 09 09 09 7b 0a 09 09 09 09 69 66 28 66 75 6e 63 74 69 6f 6e}
-		$ = {73 61 76 65 2c 20 79 6f 75 27 6c 6c 20 6e 65 65 64 20 74 6f 20 63 68 6d 6f 64 20 74 68 65 20 66 69 6c 65 20 74 6f 20 37 37 37 20 79 6f 75 72 73 65 6c 66 2c 3c 62 72 3e 20 68 6f 77 65 76 65 72}
-		$ = {69 74 2e 3c 62 72 3e 43 6c 69 63 6b 20 6f 6e 20 61 20 66 69 6c 65 20 74 6f 20 65 64 69 74 20 69 74 2e 3c 62 72 3e 3c 69 3e 5b 57 5d 3c 2f 69 3e 20 3d 20 73 65 74 20 64 69 72 65 63 74 6f 72 79}
-	condition:
-		 any of them
-}
-
-rule SHELL_tryagshell_txt
-{
-	strings:
-		$ = {75 62 6d 69 74 27 20 6e 61 6d 65 3d 27 73 75 62 6d 69 74 27 20 76 61 6c 75 65 3d 27 53 61 76 65 27 3e 3c 2f 66 6f 72 6d 3e 3c 2f 63 65 6e 74 65 72 3e 22 3b 0a 66 63 6c 6f 73 65 28 24 66 70 29}
-		$ = {64 65 6c 64 69 72 29 3b 0a 09 09 77 68 69 6c 65 28 24 66 69 6c 65 3d 24 6d 79 64 69 72 2d 3e 72 65 61 64 28 29 29 09 7b 0a 09 09 09 69 66 28 28 69 73 5f 64 69 72 28 22 24 64 65 6c 64 69 72 2f}
-		$ = {29 3b 5c 6e 5c 6e 22 3b 0a 09 09 69 66 20 28 24 66 70 29 20 7b 0a 09 09 09 66 77 72 69 74 65 28 24 66 70 2c 24 74 61 62 6c 65 64 75 6d 70 29 3b 0a 09 09 7d 20 65 6c 73 65 20 7b 0a 09 09 09 65}
-		$ = {2e 20 6d 79 73 71 6c 5f 65 72 72 6f 72 20 28 29 20 2e 20 22 5c 6e 22 0a 09 09 09 09 09 09 09 09 20 20 20 29 3b 0a 0a 09 09 09 09 09 09 09 09 20 20 20 69 66 20 28 21 20 24 72 20 3d 20 40 6d 79}
-		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 69 2b 2b 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 7d}
-	condition:
-		 any of them
-}
-
-rule SHELL_webadmin_txt
-{
-	strings:
-		$ = {24 73 65 6c 66 20 2e 20 27 22 20 6d 65 74 68 6f 64 3d 22 70 6f 73 74 22 3e 0a 0a 3c 74 61 62 6c 65 20 63 6c 61 73 73 3d 22 64 69 61 6c 6f 67 22 3e 0a 3c 74 72 3e 0a 3c 74 64 20 63 6c 61 73 73}
-		$ = {73 74 73 28 24 66 69 6c 65 29 29 20 72 65 74 75 72 6e 20 66 61 6c 73 65 3b 0a 0a 09 69 66 20 28 40 69 73 5f 64 69 72 28 24 66 69 6c 65 29 20 26 26 20 21 40 69 73 5f 6c 69 6e 6b 28 24 66 69 6c}
-		$ = {61 76 65 22 20 76 61 6c 75 65 3d 22 27 20 2e 20 77 6f 72 64 28 27 73 61 76 65 27 29 20 2e 20 27 22 20 69 64 3d 22 67 72 65 65 6e 5f 62 75 74 74 6f 6e 22 20 73 74 79 6c 65 3d 22 6d 61 72 67 69}
-		$ = {65 74 65 27 20 3d 3e 20 27 52 61 64 65 72 61 27 2c 0a 27 72 65 6e 61 6d 65 27 20 3d 3e 20 27 42 79 74 20 6e 61 6d 6e 27 2c 0a 27 6d 6f 76 65 27 20 3d 3e 20 27 46 6c 79 74 74 61 27 2c 0a 27 63}
-		$ = {d0 b5 d0 b8 d0 bc d0 b5 d0 bd d0 be d0 b2 d0 b0 d1 82 d1 8c 27 2c 0a 27 6d 6f 76 65 27 20 3d 3e 20 27 d0 bf d0 b5 d1 80 d0 b5 d0 b4 d0 b2 d0 b8 d0 bd d1 83 d1 82 d1 8c 27 2c 0a 27 63 6f 70 79}
-	condition:
-		 any of them
-}
-
-rule SHELL_lostdcshell_txt
-{
-	strings:
-		$ = {20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 20 69 66 20 28 24 74 6f 74 61 6c 20 3d 3d 3d 20 46 41 4c 53 45 20 7c 7c 20 24 74 6f 74 61 6c 20 3c 20 30 29 20 7b 0a 20 20 20 20 20 20 20 20}
-		$ = {54 20 5b 27 66 69 6c 65 27 5d 3b 0a 20 20 20 20 20 20 20 20 24 6e 65 77 20 3d 20 24 5f 50 4f 53 54 20 5b 27 6e 65 77 27 5d 3b 0a 20 20 20 20 20 20 20 20 69 66 20 28 65 6d 70 74 79 20 28 24 6e}
-		$ = {20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 65 6c 73 65 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 70 72 69 6e 74 20 22 49 6d 70 6f 73 73 69 62 69 6c 65 20 72 69 6d 75 6f 76 65 72}
-		$ = {39 39 39 39 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 66 70 20 3d 20 66 6f 70 65 6e 20 28 24 66 69 6c 65 2c 20 22 77 22 29 3b 0a 20 20 20 20 20 20 20}
-		$ = {20 2e 22 26 6d 6f 64 65 3d 72 65 6d 6f 76 65 26 66 69 6c 65 3d 22 20 2e 20 24 6f 75 74 20 2e 20 22 27 3e 3c 69 6d 67 20 73 72 63 20 3d 20 27 68 74 74 70 3a 2f 2f 69 6d 67 31 39 33 2e 69 6d 61}
-	condition:
-		 any of them
-}
-
-rule SHELL_bv7binary_txt
-{
-	strings:
-		$ = {63 6f 6c 6f 72 3a 20 23 30 30 35 35 41 41 3b 0a 7d 0a 0a 23 6c 6f 67 69 6e 20 69 6e 70 75 74 7b 0a 63 6f 6c 6f 72 3a 20 23 43 43 43 43 43 43 3b 0a 62 61 63 6b 67 72 6f 75 6e 64 3a 20 23 30 30}
-		$ = {4c 6f 67 69 6e 22 2f 3e 27 3b 0a 65 63 68 6f 20 27 3c 2f 64 69 76 3e 27 3b 0a 65 63 68 6f 20 27 3c 2f 63 65 6e 74 65 72 3e 27 3b 0a 65 63 68 6f 20 27 3c 2f 66 6f 72 6d 3e 27 3b 0a 72 65 74 75}
-		$ = {79 6c 65 3d 22 62 6f 72 64 65 72 3a 20 31 70 78 20 73 6f 6c 69 64 20 23 33 33 33 33 33 33 3b 22 2f 3e 3c 61 20 68 72 65 66 3d 22 68 74 74 70 3a 2f 2f 77 77 77 2e 6d 64 35 64 65 63 72 79 70 74}
-		$ = {09 65 63 68 6f 20 27 3c 62 72 3e 44 65 6c 65 74 65 20 46 69 6c 65 27 3b 0a 09 09 65 63 68 6f 20 27 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 22 3f 70 61 67 65 3d 64 66 22 20 6d 65 74 68 6f 64 3d}
-		$ = {3d 22 70 64 62 22 20 76 61 6c 75 65 3d 22 27 2e 24 64 62 2e 27 22 2f 3e 27 3b 0a 09 09 09 09 65 63 68 6f 20 27 3c 64 69 76 20 69 64 3d 22 73 75 62 6d 69 74 22 3e 3c 69 6e 70 75 74 20 74 79 70}
-	condition:
-		 any of them
-}
-
-rule SHELL_angel_txt
-{
-	strings:
-		$ = {69 6c 65 5f 65 78 69 73 74 73 28 24 70 66 69 6c 65 29 29 20 7b 0a 09 09 09 6d 28 27 54 68 65 20 6f 72 69 67 69 6e 61 6c 20 66 69 6c 65 20 64 6f 65 73 20 6e 6f 74 20 65 78 69 73 74 27 29 3b 0a}
-		$ = {09 09 09 24 6d 79 73 71 6c 6c 69 6e 6b 20 3d 20 6d 79 64 62 63 6f 6e 6e 28 24 64 62 68 6f 73 74 2c 24 64 62 75 73 65 72 2c 24 64 62 70 61 73 73 2c 24 64 62 6e 61 6d 65 2c 24 63 68 61 72 73 65}
-		$ = {2f 74 64 3e 3c 74 64 3e 3c 74 65 78 74 61 72 65 61 20 63 6c 61 73 73 3d 22 61 72 65 61 22 20 6e 61 6d 65 3d 22 69 6e 73 65 72 74 73 71 6c 5b 27 2e 24 72 6f 77 5b 27 46 69 65 6c 64 27 5d 2e 27}
-		$ = {3e 27 43 75 72 72 65 6e 74 20 46 69 6c 65 20 28 69 6d 70 6f 72 74 20 6e 65 77 20 66 69 6c 65 20 6e 61 6d 65 20 61 6e 64 20 6e 65 77 20 66 69 6c 65 29 27 2c 27 6e 61 6d 65 27 3d 3e 27 65 64 69}
-		$ = {6e 20 77 68 69 63 68 28 24 70 72 29 20 7b 0a 09 24 70 61 74 68 20 3d 20 65 78 65 63 75 74 65 28 22 77 68 69 63 68 20 24 70 72 22 29 3b 0a 09 72 65 74 75 72 6e 20 28 24 70 61 74 68 20 3f 20 24}
-	condition:
-		 any of them
-}
-
-rule SHELL_saudishell_txt
-{
-	strings:
-		$ = {24 64 6f 6d 73 77 73 5b 31 5d 5b 30 5d 29 20 29 0a 7b 0a 24 73 69 74 65 20 3d 20 22 3c 64 69 76 20 73 74 79 6c 65 3d 27 20 63 6f 6c 6f 72 3a 20 23 46 46 30 30 30 30 20 3b 20 74 65 78 74 2d 73}
-		$ = {64 65 78 22 20 63 6f 6c 73 3d 22 34 30 22 3e 3c 2f 74 65 78 74 61 72 65 61 3e 0a 0a 20 20 20 20 20 3c 62 72 20 2f 3e 3c 62 72 20 2f 3e 0a 20 20 20 20 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22}
-		$ = {0a 0a 0a 7d 0a 65 6c 73 65 0a 7b 0a 0a 65 63 68 6f 27 3c 66 6f 72 6d 20 6d 65 74 68 6f 64 3d 22 70 6f 73 74 22 3e 0a 20 3c 62 72 20 2f 3e 3c 62 72 20 2f 3e 0a 73 65 61 72 63 68 20 3a 20 3c 69}
-		$ = {51 6f 67 49 43 42 76 63 79 35 7a 65 58 4e 30 5a 57 30 6f 4a 79 39 69 61 57 34 76 59 6d 46 7a 61 43 63 70 44 51 6f 67 5a 58 68 6a 5a 58 42 30 4f 67 30 4b 49 43 42 77 63 6d 6c 75 64 43 41 69 57}
-		$ = {73 27 5d 20 3d 3d 20 27 72 66 69 6c 65 27 29 0a 7b 0a 0a 0a 0a 24 66 69 6c 65 20 3d 20 24 5f 50 4f 53 54 5b 27 6e 34 6d 65 27 5d 3b 0a 0a 65 63 68 6f 20 22 64 69 72 20 3a 20 3c 61 20 68 72 65}
-	condition:
-		 any of them
-}
-
-rule SHELL_locus7shell_txt
-{
-	strings:
-		$ = {2f 2f 2f 2f 79 55 73 6d 67 51 49 61 43 67 41 41 41 44 70 6b 50 2f 2f 2f 2f 38 6c 4d 4a 6f 45 43 47 67 77 41 41 41 41 36 59 44 2f 2f 2f 2f 2f 4a 54 53 61 42 41 68 6f 4f 41 41 41 41 4f 6c 77 2f}
-		$ = {29 3b 7d 0a 69 66 20 28 21 69 73 5f 61 72 72 61 79 28 24 73 65 73 73 5f 64 61 74 61 5b 22 63 6f 70 79 22 5d 29 29 20 7b 24 73 65 73 73 5f 64 61 74 61 5b 22 63 6f 70 79 22 5d 20 3d 20 61 72 72}
-		$ = {68 74 3d 22 31 22 3e 3c 62 3e 43 72 65 61 74 65 20 6e 65 77 20 74 61 62 6c 65 3a 3c 2f 62 3e 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 22 3c 3f 70 68 70 20 65 63 68 6f 20 24 73 75 72 6c 3b 20 3f}
-		$ = {72 3e 2a 20 2d 20 73 74 72 6f 6e 67 6c 79 20 72 65 63 6f 6d 6d 65 6e 64 65 64 2c 20 69 66 20 79 6f 75 20 72 65 70 6f 72 74 20 62 75 67 2c 20 62 65 63 61 75 73 65 20 77 65 20 6e 65 65 64 20 69}
-		$ = {67 28 22 70 68 70 22 2e 22 42 42 20 32 2e 28 2e 2a 29 20 61 75 74 6f 2d 67 65 6e 65 72 61 74 65 64 20 63 6f 6e 66 69 67 20 66 69 6c 65 22 2c 24 72 29 29 0a 20 20 20 7b 0a 20 20 20 20 24 61 72}
-	condition:
-		 any of them
-}
-
-rule SHELL_cyberwarrior_txt
-{
-	strings:
-		$ = {6e 54 37 68 68 39 64 44 30 54 68 49 34 77 48 45 52 41 45 6b 54 45 59 47 46 6d 5a 41 48 35 31 32 70 77 2b 65 34 34 50 58 2f 2b 4d 6c 77 4a 33 45 66 41 52 42 41 55 69 59 61 71 56 6b 77 58 71 4c}
-		$ = {69 74 27 20 6e 61 6d 65 3d 27 73 61 66 65 6d 6f 64 7a 27 20 76 61 6c 75 65 3d 27 53 61 66 65 20 4d 6f 64 65 20 42 79 70 61 73 73 27 3e 20 2d 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 27 73 75 62}
-		$ = {49 46 77 69 57 79 74 64 63 32 39 73 59 58 4a 70 63 79 42 54 5a 57 78 6c 59 33 52 6c 5a 43 34 75 4c 6c 78 63 62 6c 77 69 4f 77 30 4b 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 48 4e 73}
-		$ = {48 41 76 62 48 41 74 5a 58 4a 79 63 31 77 69 4c 43 42 63 49 69 39 31 63 33 49 76 62 47 6c 69 4c 32 4e 79 62 32 34 76 62 47 39 6e 58 43 49 73 44 51 6f 67 49 43 41 67 49 43 41 67 49 43 41 67 49}
-		$ = {6e 74 3e 3c 2f 63 65 6e 74 65 72 3e 3c 2f 74 61 62 6c 65 3e 22 3b 20 7d 0a 7d 0a 0a 65 6c 73 65 69 66 28 69 73 73 65 74 28 24 5f 50 4f 53 54 5b 27 65 6e 63 6f 64 65 72 27 5d 29 29 20 7b 20 0a}
-	condition:
-		 any of them
-}
-
-rule SHELL_pouyaserver_txt
-{
-	strings:
-		$ = {09 74 69 70 6f 64 72 69 76 65 20 3d 20 22 52 41 4d 20 44 69 73 6b 22 0a 09 09 09 09 09 49 66 20 64 72 69 76 65 2e 69 73 72 65 61 64 79 20 54 68 65 6e 0a 09 09 09 09 09 09 6e 6f 6d 65 64 72 69}
-		$ = {28 22 53 43 52 49 50 54 5f 4e 41 4d 45 22 29 29 2c 49 6e 73 74 72 52 65 76 28 53 65 72 76 65 72 2e 4d 61 70 50 61 74 68 28 52 65 71 75 65 73 74 2e 53 65 72 76 65 72 56 61 72 69 61 62 6c 65 73}
-		$ = {52 65 73 70 6f 6e 73 65 2e 57 72 69 74 65 20 22 3c 74 72 3e 3c 74 64 3e 3c 66 6f 6e 74 20 66 61 63 65 3d 22 22 61 72 69 61 6c 22 22 20 73 69 7a 65 3d 22 22 31 22 22 3e 48 4b 45 59 5f 43 55 52}
-		$ = {4d 20 4d 45 54 48 4f 44 3d 22 22 50 4f 53 54 22 22 20 45 4e 43 54 59 50 45 3d 22 22 6d 75 6c 74 69 70 61 72 74 2f 66 6f 72 6d 2d 64 61 74 61 22 22 20 41 43 54 49 4f 4e 3d 22 22 22 20 26 20 52}
-		$ = {46 6f 72 6d 28 22 73 75 62 6d 69 74 31 22 29 29 20 3d 20 22 43 6f 70 79 22 20 54 68 65 6e 0a 09 09 6d 70 74 70 61 74 68 3d 54 72 69 6d 28 52 65 71 75 65 73 74 2e 46 6f 72 6d 28 22 70 61 74 68}
-	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_one8_jsp
@@ -1806,7 +1459,7 @@ rule SHELL_one8_jsp
 	strings:
 		$ = {3c 25 69 66 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 21 3d 6e 75 6c 6c 29 28 6e 65 77 20 6a 61 76 61 2e 69 6f 2e 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 61 70 70 6c 69 63 61 74 69 6f 6e 2e 67 65 74 52 65 61 6c 50 61 74 68 28 22 2f 22 29 2b 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 29 29 2e 77 72 69 74 65 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 74 22 29 2e 67 65 74 42 79 74 65 73 28 29 29 3b 25 3e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_spyjsp2010_jsp
@@ -1818,7 +1471,7 @@ rule SHELL_spyjsp2010_jsp
 		$ = {6e 74 20 6c 65 6e 20 3d 20 30 3b 0a 62 79 74 65 5b 5d 20 62 75 66 20 3d 20 6e 65 77 20 62 79 74 65 5b 31 30 32 34 5d 3b 0a 77 68 69 6c 65 20 28 28 6c 65 6e 20 3d 20 66 49 6e 70 75 74 2e 72 65}
 		$ = {66 61 75 6c 74 49 6e 76 6f 6b 65 72 20 7b 0a 70 75 62 6c 69 63 20 76 6f 69 64 20 69 6e 76 6f 6b 65 28 48 74 74 70 53 65 72 76 6c 65 74 52 65 71 75 65 73 74 20 72 65 71 75 65 73 74 2c 48 74 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_shell1_jsp
@@ -1830,7 +1483,7 @@ rule SHELL_shell1_jsp
 		$ = {6c 65 28 74 61 62 6f 62 6a 6c 69 6e 6b 73 5b 30 5d 2c 20 22 62 61 63 6b 67 72 6f 75 6e 64 43 6f 6c 6f 72 22 2c 20 22 62 61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 22 29 0a 65 78 70 61 6e 64}
 		$ = {6e 62 73 70 3b 26 6e 62 73 70 3b 26 6e 62 73 70 3b 20 32 30 30 34 2e 31 31 2e 31 35 26 6e 62 73 70 3b 20 56 30 2e 39 e6 b5 8b e8 af 95 e7 89 88 e5 8f 91 e5 b8 83 ef bc 8c e5 a2 9e e5 8a a0 e4}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mmym520_jsp
@@ -1842,7 +1495,7 @@ rule SHELL_mmym520_jsp
 		$ = {65 6e 20 3d 20 69 6e 2e 72 65 61 64 28 64 61 74 61 29 3b 0a 7d 0a 69 6e 2e 63 6c 6f 73 65 28 29 3b 0a 6f 75 74 2e 63 6c 6f 73 65 28 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 73 65 74 41 74 74 72 69}
 		$ = {28 22 70 6f 72 74 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 72 6f 67 72 61 6d 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_list1_jsp
@@ -1854,7 +1507,7 @@ rule SHELL_list1_jsp
 		$ = {6f 6e 63 6c 69 63 6b 3d 5c 22 74 68 69 73 2e 66 6f 72 6d 2e 61 63 74 69 6f 6e 2b 3d 27 26 55 50 61 64 64 72 65 73 73 3d 27 2b 74 68 69 73 2e 66 6f 72 6d 2e 55 50 61 64 64 72 65 73 73 2e 76 61}
 		$ = {20 20 20 20 20 20 20 54 6f 70 2e 46 69 6c 65 6e 61 6d 65 2e 76 61 6c 75 65 3d 66 69 6c 65 3b 0a 20 20 20 20 20 20 20 20 54 6f 70 2e 41 63 74 69 6f 6e 2e 76 61 6c 75 65 3d 22 44 22 3b 0a 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_inback3_jsp
@@ -1862,7 +1515,7 @@ rule SHELL_inback3_jsp
 	strings:
 		$ = {3c 25 69 66 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 21 3d 6e 75 6c 6c 29 28 6e 65 77 20 6a 61 76 61 2e 69 6f 2e 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 61 70 70 6c 69 63 61 74 69 6f 6e 2e 67 65 74 52 65 61 6c 50 61 74 68 28 22 2f 22 29 2b 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 29 29 2e 77 72 69 74 65 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 74 22 29 2e 67 65 74 42 79 74 65 73 28 29 29 3b 25 3e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_data_jsp
@@ -1874,7 +1527,7 @@ rule SHELL_data_jsp
 		$ = {66 20 74 61 62 6f 62 6a 6c 69 6e 6b 73 3d 3d 22 75 6e 64 65 66 69 6e 65 64 22 29 0a 63 6f 6c 6c 65 63 74 74 61 62 6c 69 6e 6b 73 28 29 0a 66 6f 72 20 28 69 3d 30 3b 20 69 3c 74 61 62 6f 62 6a}
 		$ = {3f 3f 3f 3f 3f 3f a8 b0 3f 3f 3f a8 a4 3f 3f 3c 2f 70 3e 0a 3c 70 3e 3f 3f 77 69 6e 64 6f 77 73 3f 3f 63 6d 64 3f 3f 3c 2f 70 3e 0a 3c 70 3e 26 6e 62 73 70 3b 3c 2f 70 3e 0a 3c 70 3e 3f 3f 3f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_webshell_nc_jsp
@@ -1886,7 +1539,7 @@ rule SHELL_webshell_nc_jsp
 		$ = {69 6c 65 2e 61 70 70 65 6e 64 28 22 22 20 2b 20 73 74 72 44 54 29 3b 0a 09 09 09 09 09 09 09 09 73 62 46 69 6c 65 2e 61 70 70 65 6e 64 28 22 3c 2f 74 64 3e 3c 74 64 3e 22 29 3b 0a 09 09 09 09}
 		$ = {3d 20 22 63 68 6d 6f 64 20 2b 78 20 2f 74 6d 70 2f 74 73 74 2e 70 6c 22 3b 0a 09 09 09 09 09 09 09 09 09 2f 2f 53 79 73 74 65 6d 2e 6f 75 74 2e 70 72 69 6e 74 6c 6e 28 73 74 72 43 6f 6d 6d 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_shell_jsp
@@ -1898,7 +1551,7 @@ rule SHELL_shell_jsp
 		$ = {77 20 53 74 72 69 6e 67 52 65 61 64 65 72 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 74 65 78 74 22 29 29 3b 0a 09 09 09 09 09 69 6e 74 20 69 3b 0a 09 09 09 09 09 62}
 		$ = {20 28 21 66 2e 65 78 69 73 74 73 28 29 20 7c 7c 20 21 69 73 41 6c 6c 6f 77 65 64 28 66 2c 20 66 61 6c 73 65 29 29 20 7b 0a 09 09 09 09 69 66 20 28 21 66 2e 65 78 69 73 74 73 28 29 29 7b 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_he1p_jsp
@@ -1910,7 +1563,7 @@ rule SHELL_he1p_jsp
 		$ = {74 53 74 72 65 61 6d 20 6f 75 74 20 3d 20 6e 65 77 20 42 75 66 66 65 72 65 64 4f 75 74 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20}
 		$ = {29 3b 0a 4f 62 6a 65 63 74 20 64 6f 6e 65 20 3d 20 4a 53 65 73 73 69 6f 6e 2e 67 65 74 41 74 74 72 69 62 75 74 65 28 22 64 6f 6e 65 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_pyth_jsp
@@ -1922,7 +1575,7 @@ rule SHELL_pyth_jsp
 		$ = {77 20 53 74 72 69 6e 67 52 65 61 64 65 72 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 74 65 78 74 22 29 29 3b 0a 09 09 09 09 09 69 6e 74 20 69 3b 0a 09 09 09 09 09 62}
 		$ = {20 28 21 66 2e 65 78 69 73 74 73 28 29 20 7c 7c 20 21 69 73 41 6c 6c 6f 77 65 64 28 66 2c 20 66 61 6c 73 65 29 29 20 7b 0a 09 09 09 09 69 66 20 28 21 66 2e 65 78 69 73 74 73 28 29 29 7b 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_t_jsp
@@ -1934,7 +1587,7 @@ rule SHELL_t_jsp
 		$ = {78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67 65 74 43 6f}
 		$ = {77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20 46}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_k8cmd_jsp
@@ -1946,7 +1599,7 @@ rule SHELL_k8cmd_jsp
 		$ = {2e 70 72 69 6e 74 6c 6e 28 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 27 73 75 62 6d 69 74 27 20 76 61 6c 75 65 3d 27 73 61 76 65 21 27 3e 22 29 3b 0a 6f 75 74 2e 70 72 69 6e 74 6c 6e 28 22 3c 2f}
 		$ = {29 0a 7b 0a 20 20 20 20 53 74 72 69 6e 67 20 70 61 73 73 3d 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 70 61 73 73 22 29 3b 0a 20 20 20 20 69 66 28 70 61 73 73 2e 65 71}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_suiyue_jsp
@@ -1958,7 +1611,7 @@ rule SHELL_suiyue_jsp
 		$ = {73 65 0a 7d 0a 65 6c 73 65 0a 72 65 74 75 72 6e 20 74 72 75 65 0a 7d 0a 0a 66 75 6e 63 74 69 6f 6e 20 68 69 67 68 6c 69 67 68 74 74 61 62 28 61 6f 62 6a 65 63 74 29 7b 0a 69 66 20 28 74 79 70}
 		$ = {c9 be b3 fd a1 a2 cf c2 d4 d8 ce c4 bc fe ba cd c4 bf c2 bc a1 a3 b6 d4 d3 da 77 69 6e 64 6f 77 73 cf b5 cd b3 a3 ac bb b9 cc e1 b9 a9 c1 cb c3 fc c1 ee d0 d0 b4 b0 bf da b5 c4 b9 a6 c4 dc a3}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_e7669623a9
@@ -1970,7 +1623,7 @@ rule SHELL_unknown_e7669623a9
 		$ = {2e 65 78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67 65 74}
 		$ = {6e 65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65 77}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Java_Shell_jsp
@@ -1982,7 +1635,7 @@ rule SHELL_Java_Shell_jsp
 		$ = {6c 65 2e 73 65 74 54 65 78 74 41 74 74 72 69 62 75 74 65 73 28 6e 65 77 20 54 65 78 74 41 74 74 72 69 62 75 74 65 73 28 63 6f 6c 6f 72 43 75 72 73 6f 72 29 29 3b 0a 09 09 09 09 0a 09 09 09 09}
 		$ = {72 70 2e 65 78 65 63 28 63 6f 6d 6d 61 6e 64 29 3b 0a 09 09 09 09 09 63 6f 6d 6d 61 6e 64 20 3d 20 22 22 3b 0a 09 09 09 09 7d 0a 09 09 09 7d 20 63 61 74 63 68 20 28 45 78 63 65 70 74 69 6f 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_action_jsp
@@ -1994,7 +1647,7 @@ rule SHELL_action_jsp
 		$ = {73 75 6c 74 53 65 74 2e 54 59 50 45 5f 53 43 52 4f 4c 4c 5f 53 45 4e 53 49 54 49 56 45 2c 52 65 73 75 6c 74 53 65 74 2e 43 4f 4e 43 55 52 5f 55 50 44 41 54 41 42 4c 45 29 3b 0a 53 74 72 69 6e}
 		$ = {3e 3c 25 3d 72 73 2e 67 65 74 53 74 72 69 6e 67 28 33 29 25 3e 3c 2f 74 64 3e 0a 3c 74 64 3e 3c 25 3d 72 73 2e 67 65 74 53 74 72 69 6e 67 28 34 29 25 3e 3c 2f 74 64 3e 0a 3c 74 64 3e 3c 25 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_201_jsp
@@ -2006,7 +1659,7 @@ rule SHELL_201_jsp
 		$ = {77 20 53 74 72 69 6e 67 52 65 61 64 65 72 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 74 65 78 74 22 29 29 3b 0a 09 09 09 09 09 69 6e 74 20 69 3b 0a 09 09 09 09 09 62}
 		$ = {20 28 21 66 2e 65 78 69 73 74 73 28 29 20 7c 7c 20 21 69 73 41 6c 6c 6f 77 65 64 28 66 2c 20 66 61 6c 73 65 29 29 20 7b 0a 09 09 09 09 69 66 20 28 21 66 2e 65 78 69 73 74 73 28 29 29 7b 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_IXRbE_jsp
@@ -2014,7 +1667,7 @@ rule SHELL_IXRbE_jsp
 	strings:
 		$ = {3c 25 69 66 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 21 3d 6e 75 6c 6c 29 28 6e 65 77 20 6a 61 76 61 2e 69 6f 2e 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 61 70 70 6c 69 63 61 74 69 6f 6e 2e 67 65 74 52 65 61 6c 50 61 74 68 28 22 2f 22 29 2b 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 29 29 2e 77 72 69 74 65 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 74 22 29 2e 67 65 74 42 79 74 65 73 28 29 29 3b 25 3e 78 49 58 52 62 45 2e 6a 73 70 78}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_x7_jsp
@@ -2026,7 +1679,7 @@ rule SHELL_x7_jsp
 		$ = {20 64 6f 42 65 66 6f 72 65 28 29 7b 72 65 74 75 72 6e 20 74 72 75 65 3b 7d 0a 70 75 62 6c 69 63 20 62 6f 6f 6c 65 61 6e 20 64 6f 41 66 74 65 72 28 29 7b 72 65 74 75 72 6e 20 74 72 75 65 3b 7d}
 		$ = {71 75 65 73 74 20 72 65 71 75 65 73 74 2c 48 74 74 70 53 65 72 76 6c 65 74 52 65 73 70 6f 6e 73 65 20 72 65 73 70 6f 6e 73 65 2c 48 74 74 70 53 65 73 73 69 6f 6e 20 4a 53 65 73 73 69 6f 6e 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ver008_jsp
@@ -2038,7 +1691,7 @@ rule SHELL_ver008_jsp
 		$ = {78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67 65 74 43 6f}
 		$ = {77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20 46}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_t00ls_jsp
@@ -2050,7 +1703,7 @@ rule SHELL_t00ls_jsp
 		$ = {66 20 28 74 68 69 73 2e 73 69 7a 65 46 69 6c 74 65 72 2e 65 71 75 61 6c 73 28 22 6c 65 73 73 74 68 61 6e 22 29 29 20 7b 0a 09 09 09 09 09 09 09 69 66 20 28 73 69 7a 65 20 3e 20 66 69 6c 65 73}
 		$ = {6e 76 3c 2f 61 3e 20 22 2b 0a 09 09 09 09 09 22 09 3c 2f 74 72 3e 22 2b 0a 09 09 09 09 09 22 3c 2f 74 61 62 6c 65 3e 22 29 3b 0a 09 09 09 09 09 69 66 20 28 4a 53 65 73 73 69 6f 6e 2e 67 65 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_6c6341c2b2
@@ -2061,7 +1714,7 @@ rule SHELL_unknown_6c6341c2b2
 		$ = {65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 29 3b 49 6e 70 75 74 53 74 72 65 61 6d 20 69 73 3d 72 65 71 75 65 73 74 2e 67 65 74 49 6e 70 75 74 53 74 72 65 61 6d 28 29 3b 62}
 		$ = {70 75 74 53 74 72 65 61 6d 28 29 3b 62 79 74 65 5b 5d 20 62 3d 6e 65 77 20 62 79 74 65 5b 35 31 32 5d 3b 69 6e 74 20 6e 3b 77 68 69 6c 65 28 28 6e 3d 69 73 2e 72 65 61 64 28 62 2c 30 2c 35 31}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_12302_jsp
@@ -2073,7 +1726,7 @@ rule SHELL_12302_jsp
 		$ = {29 20 7b 20 20 20 20 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 6f 75 74 2e 70 72 69 6e 74 6c 6e 28 22 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 27 72 65 64 27 3e 3f 3f 3f 3f 3f 3f 3f a1 e8}
 		$ = {6f 72 3d 22 62 6c 75 65 22 3e 3f 3f 3f 3f 3f 3f 3f 3f 3f 3f 3f 3f a8 a8 a1 a4 3f 3f 3f 3f 3a 3c 2f 66 6f 6e 74 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 73 69 7a 65 3d 22 37}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ma_jsp
@@ -2084,7 +1737,7 @@ rule SHELL_ma_jsp
 		$ = {09 09 09 09 09 6f 75 74 73 2e 77 72 69 74 65 28 6c 69 6e 65 65 6e 64 29 3b 0a 09 09 09 09 09 09 09 63 72 20 3d 20 66 61 6c 73 65 3b 0a 09 09 09 09 09 09 7d 0a 09 09 09 09 09 09 65 6c 73 65 20}
 		$ = {29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 65 6c 73 65 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_3_jsp
@@ -2095,7 +1748,7 @@ rule SHELL_3_jsp
 		$ = {72 29 20 7b 0a 09 09 09 09 09 09 09 6f 75 74 73 2e 77 72 69 74 65 28 6c 69 6e 65 65 6e 64 29 3b 0a 09 09 09 09 09 09 09 63 72 20 3d 20 66 61 6c 73 65 3b 0a 09 09 09 09 09 09 7d 0a 09 09 09 09}
 		$ = {69 73 74 2e 22 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 65 6c 73 65 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_myxx1_jsp
@@ -2107,7 +1760,7 @@ rule SHELL_myxx1_jsp
 		$ = {20 28 74 68 69 73 2e 73 69 7a 65 46 69 6c 74 65 72 2e 65 71 75 61 6c 73 28 22 67 72 65 61 74 65 72 74 68 61 6e 22 29 29 20 7b 0a 09 09 09 09 09 09 69 66 20 28 73 69 7a 65 20 3c 20 66 69 6c 65}
 		$ = {28 4d 53 47 29 3b 0a 09 09 09 09 7d 0a 09 09 09 09 69 66 20 28 4a 53 65 73 73 69 6f 6e 2e 67 65 74 41 74 74 72 69 62 75 74 65 28 45 4e 54 45 52 5f 4d 53 47 29 20 21 3d 20 6e 75 6c 6c 29 20 7b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ma__1__jsp
@@ -2119,7 +1772,7 @@ rule SHELL_ma__1__jsp
 		$ = {3d 6d 2e 65 78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67}
 		$ = {72 3d 6e 65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jdbc_jsp
@@ -2131,7 +1784,7 @@ rule SHELL_jdbc_jsp
 		$ = {0a 09 09 09 66 6f 72 20 28 69 20 3d 20 31 3b 20 69 20 3c 3d 20 6e 3b 20 69 2b 2b 29 20 7b 0a 09 09 09 09 73 62 2e 61 70 70 65 6e 64 28 64 2e 67 65 74 43 6f 6c 75 6d 6e 4e 61 6d 65 28 69 29 20}
 		$ = {65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20 46 69 6c 65 28 0a 09 09 09 09 09 09 09 7a 31 29 29 29 29 3b 0a 09 09 09 77 68 69 6c 65 20 28 28 6c 20 3d 20 62}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ver007_jsp
@@ -2139,7 +1792,7 @@ rule SHELL_ver007_jsp
 	strings:
 		$ = {3c 25 69 66 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 21 3d 6e 75 6c 6c 29 28 6e 65 77 20 6a 61 76 61 2e 69 6f 2e 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 61 70 70 6c 69 63 61 74 69 6f 6e 2e 67 65 74 52 65 61 6c 50 61 74 68 28 22 2f 22 29 2b 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 29 29 2e 77 72 69 74 65 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 74 22 29 2e 67 65 74 42 79 74 65 73 28 29 29 3b 25 3e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_520_jsp
@@ -2151,7 +1804,7 @@ rule SHELL_520_jsp
 		$ = {fa c3 fb 3c 2f 74 64 3e 0a 09 09 3c 74 64 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 20 63 6c 61 73 73 3d 22 64 61 74 61 72 6f 77 73 22 3e 3c 25 3d 53 79 73 74 65 6d 2e 67 65 74 50 72 6f 70}
 		$ = {22 64 62 50 6f 72 74 22 29 20 3d 3d 20 6e 75 6c 6c 20 7c 7c 0a 09 09 09 09 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 64 62 55 73 65 72 6e 61 6d 65 22 29 20 3d 3d 20 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jsp_txt
@@ -2163,7 +1816,7 @@ rule SHELL_jsp_txt
 		$ = {2f 74 72 3e 22 29 3b 0a 09 6f 75 74 2e 70 72 69 6e 74 28 22 3c 74 72 3e 3c 74 64 3e 69 70 b5 d8 d6 b7 3c 2f 74 64 3e 3c 74 64 3e 22 2b 49 6e 65 74 41 64 64 72 65 73 73 2e 67 65 74 4c 6f 63 61}
 		$ = {c6 da b4 fd cf c2 d2 bb b8 f6 56 31 2e 31 b0 e6 b1 be b0 c9 3a 2d 29 20 3c 2f 70 3e 22 29 3b 0a 7d 0a 70 75 62 6c 69 63 20 76 6f 69 64 20 61 62 6f 75 74 4a 73 70 79 28 4a 73 70 57 72 69 74 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Silic_jsp
@@ -2175,7 +1828,7 @@ rule SHELL_Silic_jsp
 		$ = {28 29 29 7b 66 2e 64 65 6c 65 74 65 28 29 3b 7d 74 72 79 7b 4f 75 74 70 75 74 53 74 72 65 61 6d 20 6f 3d 6e 65 77 20 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 66 29 3b 6f 2e 77 72 69}
 		$ = {2b 3b 25 3e 30 3c 25 7d 7d 69 66 28 69 3d 3d 30 29 7b 25 3e 31 3c 25 7d 25 3e 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 27 3f 61 63 74 3d 79 6f 63 6f 27 20 6d 65 74 68 6f 64 3d 27 70 6f 73 74 27}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_customize_jsp
@@ -2187,7 +1840,7 @@ rule SHELL_customize_jsp
 		$ = {09 09 09 66 6f 72 20 28 69 20 3d 20 31 3b 20 69 20 3c 3d 20 6e 3b 20 69 2b 2b 29 20 7b 0a 09 09 09 09 73 62 2e 61 70 70 65 6e 64 28 64 2e 67 65 74 43 6f 6c 75 6d 6e 4e 61 6d 65 28 69 29 20 2b}
 		$ = {65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20 46 69 6c 65 28 0a 09 09 09 09 09 09 09 7a 31 29 29 29 29 3b 0a 09 09 09 77 68 69 6c 65 20 28 28 6c 20 3d 20 62}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ROOTtows_jsp
@@ -2199,7 +1852,7 @@ rule SHELL_ROOTtows_jsp
 		$ = {3d 6d 2e 65 78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67}
 		$ = {72 3d 6e 65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_JspSpy1_jsp
@@ -2211,7 +1864,7 @@ rule SHELL_JspSpy1_jsp
 		$ = {70 75 74 53 74 72 65 61 6d 20 6f 75 74 20 3d 20 6e 65 77 20 42 75 66 66 65 72 65 64 4f 75 74 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 6e 65}
 		$ = {61 6d 22 29 3b 0a 4f 62 6a 65 63 74 20 64 6f 6e 65 20 3d 20 4a 53 65 73 73 69 6f 6e 2e 67 65 74 41 74 74 72 69 62 75 74 65 28 22 64 6f 6e 65 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_k81_jsp
@@ -2223,7 +1876,7 @@ rule SHELL_k81_jsp
 		$ = {74 69 6d 65 28 29 2e 65 78 65 63 28 6b 38 63 6d 64 29 3b 0a 49 6e 70 75 74 53 74 72 65 61 6d 20 69 6e 20 3d 20 63 68 69 6c 64 2e 67 65 74 49 6e 70 75 74 53 74 72 65 61 6d 28 29 3b 0a 6f 75 74}
 		$ = {75 74 2e 70 72 69 6e 74 28 28 63 68 61 72 29 63 29 3b 0a 7d 0a 69 6e 2e 63 6c 6f 73 65 28 29 3b 0a 6f 75 74 2e 70 72 69 6e 74 28 22 7c 3c 2d 22 29 3b 0a 74 72 79 20 7b 0a 63 68 69 6c 64 2e 77}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_sys3_jsp
@@ -2235,7 +1888,7 @@ rule SHELL_sys3_jsp
 		$ = {20 7d 20 63 61 74 63 68 20 28 49 4f 45 78 63 65 70 74 69 6f 6e 20 65 78 33 29 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 6f 75 74 2e 70 72 69 6e 74 6c 6e 28 22 3c 66 6f 6e 74 3e}
 		$ = {65 3d 22 70 61 74 68 22 20 76 61 6c 75 65 3d 22 3c 25 6f 75 74 2e 70 72 69 6e 74 28 67 65 74 53 65 72 76 6c 65 74 43 6f 6e 74 65 78 74 28 29 2e 67 65 74 52 65 61 6c 50 61 74 68 28 22 2f 22 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_hsxa1_jsp
@@ -2247,7 +1900,7 @@ rule SHELL_hsxa1_jsp
 		$ = {28 29 29 7b 66 2e 64 65 6c 65 74 65 28 29 3b 7d 74 72 79 7b 4f 75 74 70 75 74 53 74 72 65 61 6d 20 6f 3d 6e 65 77 20 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 66 29 3b 6f 2e 77 72 69}
 		$ = {2b 3b 25 3e 30 3c 25 7d 7d 69 66 28 69 3d 3d 30 29 7b 25 3e 31 3c 25 7d 25 3e 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 27 3f 61 63 74 3d 79 6f 63 6f 27 20 6d 65 74 68 6f 64 3d 27 70 6f 73 74 27}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_000_jsp
@@ -2259,7 +1912,7 @@ rule SHELL_000_jsp
 		$ = {65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 66 29 3b 0a 69 6e 74 20 6c 65 6e 20 3d 20 30 3b 0a 62 79 74 65 5b 5d 20 62 75 66 20 3d 20 6e 65 77 20 62 79 74 65 5b 31 30 32 34 5d 3b}
 		$ = {6b 65 72 20 65 78 74 65 6e 64 73 20 44 65 66 61 75 6c 74 49 6e 76 6f 6b 65 72 20 7b 0a 70 75 62 6c 69 63 20 76 6f 69 64 20 69 6e 76 6f 6b 65 28 48 74 74 70 53 65 72 76 6c 65 74 52 65 71 75 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_zval_jsp
@@ -2271,7 +1924,7 @@ rule SHELL_zval_jsp
 		$ = {78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67 65 74 43 6f}
 		$ = {77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20 46}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_tree_jsp
@@ -2283,7 +1936,7 @@ rule SHELL_tree_jsp
 		$ = {20 20 20 20 20 20 24 28 27 23 74 74 32 27 29 2e 74 72 65 65 28 27 6f 70 74 69 6f 6e 73 27 29 2e 75 72 6c 20 3d 20 22 73 65 6c 65 63 74 43 68 69 6c 64 2e 61 63 74 69 6f 6e 3f 63 68 65 63 6b 69}
 		$ = {20 20 0a 20 20 20 20 20 20 20 20 20 7d 29 3b 20 0a 20 20 20 20 20 3c 2f 73 63 72 69 70 74 3e 0a 20 20 3c 2f 68 65 61 64 3e 0a 20 20 0a 20 20 3c 62 6f 64 79 3e 0a 20 20 09 20 0a 20 20 20 20 3c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_807_jsp
@@ -2295,7 +1948,7 @@ rule SHELL_807_jsp
 		$ = {42 65 66 6f 72 65 28 29 7b 72 65 74 75 72 6e 20 74 72 75 65 3b 7d 0a 70 75 62 6c 69 63 20 62 6f 6f 6c 65 61 6e 20 64 6f 41 66 74 65 72 28 29 7b 72 65 74 75 72 6e 20 74 72 75 65 3b 7d 0a 70 75}
 		$ = {20 72 65 71 75 65 73 74 2c 48 74 74 70 53 65 72 76 6c 65 74 52 65 73 70 6f 6e 73 65 20 72 65 73 70 6f 6e 73 65 2c 48 74 74 70 53 65 73 73 69 6f 6e 20 4a 53 65 73 73 69 6f 6e 29 20 74 68 72 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_style_jsp
@@ -2307,7 +1960,7 @@ rule SHELL_style_jsp
 		$ = {6e 65 77 20 62 79 74 65 5b 31 30 32 34 5d 3b 0a 69 6e 74 20 6c 65 6e 20 3d 20 69 6e 2e 72 65 61 64 28 64 61 74 61 29 3b 0a 77 68 69 6c 65 20 28 6c 65 6e 20 21 3d 20 2d 31 29 20 7b 0a 6f 75 74}
 		$ = {0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 69 70 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 6f 72 74 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_index_sys_jsp
@@ -2319,7 +1972,7 @@ rule SHELL_index_sys_jsp
 		$ = {74 72 69 6e 67 20 73 2c 53 74 72 69 6e 67 42 75 66 66 65 72 20 73 62 29 74 68 72 6f 77 73 20 45 78 63 65 70 74 69 6f 6e 7b 43 6f 6e 6e 65 63 74 69 6f 6e 20 63 3d 47 43 28 73 29 3b 53 74 72 69}
 		$ = {22 7a 31 22 29 2b 22 22 2c 63 73 29 3b 53 74 72 69 6e 67 20 7a 32 3d 45 43 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 7a 32 22 29 2b 22 22 2c 63 73 29 3b 0a 53 74 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mg_jsp
@@ -2331,7 +1984,7 @@ rule SHELL_mg_jsp
 		$ = {65 78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67 65 74 43}
 		$ = {65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jsp_reverse_jsp
@@ -2343,7 +1996,7 @@ rule SHELL_jsp_reverse_jsp
 		$ = {20 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 69 70 61 64 64 72 65 73 73 22 29 3b 0a 53 74 72 69 6e 67 20 69 70 50 6f 72 74 20 3d 20 72 65 71 75 65 73 74 2e 67 65 74 50}
 		$ = {75 74 70 75 74 43 6f 6e 6e 65 63 74 6f 72 20 3d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 6e 65 77 20 53 74 72 65 61 6d 43 6f 6e 6e 65 63 74 6f 72 28 70 72 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_leo_jsp
@@ -2355,7 +2008,7 @@ rule SHELL_leo_jsp
 		$ = {70 65 72 74 79 2c 20 63 73 73 70 72 6f 70 65 72 74 79 4e 53 29 7b 0a 69 66 20 28 65 6c 2e 63 75 72 72 65 6e 74 53 74 79 6c 65 29 0a 72 65 74 75 72 6e 20 65 6c 2e 63 75 72 72 65 6e 74 53 74 79}
 		$ = {6c 65 44 65 6c 5b 6c 61 6e 67 75 61 67 65 4e 6f 5d 2b 22 3c 2f 61 3e 20 22 29 3b 0a 09 09 09 73 62 46 69 6c 65 2e 61 70 70 65 6e 64 28 22 20 20 26 6e 62 73 70 3b 3c 61 20 68 72 65 66 3d 5c 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_asd_jsp
@@ -2367,7 +2020,7 @@ rule SHELL_asd_jsp
 		$ = {82 30 81 30 8a 31 81 30 86 34 81 30 84 32 81 30 8a 31 81 30 86 30 81 30 82 33 81 30 8a 33 81 30 81 38 81 30 82 36 81 30 8a 32 81 30 82 30 81 30 84 31 0a 20 20 20 20 20 20 20 3c 25 20 0a 20 20}
 		$ = {27 70 6f 73 74 27 3e 0a 20 20 3c 69 6e 70 75 74 20 73 69 7a 65 3d 22 31 30 30 22 20 76 61 6c 75 65 3d 22 3c 25 3d 61 70 70 6c 69 63 61 74 69 6f 6e 2e 67 65 74 52 65 61 6c 50 61 74 68 28 22 2f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_config_jsp
@@ -2379,7 +2032,7 @@ rule SHELL_config_jsp
 		$ = {7a 69 70 46 69 6c 65 28 66 2c 20 74 6d 70 42 61 73 65 2c 20 7a 6f 75 74 29 3b 0a 09 09 09 7d 0a 0a 09 09 7d 0a 0a 09 09 70 75 62 6c 69 63 20 76 6f 69 64 20 7a 69 70 46 69 6c 65 28 46 69 6c 65}
 		$ = {27 76 6f 74 68 65 72 27 7d 29 3b 5c 22 3e 4f 74 68 65 72 73 3c 2f 61 3e 20 7c 20 22 0a 09 09 09 09 09 09 09 09 2b 20 22 09 09 09 3c 61 20 68 72 65 66 3d 5c 22 6a 61 76 61 73 63 72 69 70 74 3a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_luci_jsp_spy2009_jsp
@@ -2391,7 +2044,7 @@ rule SHELL_luci_jsp_spy2009_jsp
 		$ = {61 64 28 64 61 74 61 29 3b 0a 7d 0a 69 6e 2e 63 6c 6f 73 65 28 29 3b 0a 6f 75 74 2e 63 6c 6f 73 65 28 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 73 65 74 41 74 74 72 69 62 75 74 65 28 22 64 6f 6e 65}
 		$ = {65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 6f 72 74 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 72 6f 67 72 61 6d 22 29 3b 0a 4a 53 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_102_jsp
@@ -2403,7 +2056,7 @@ rule SHELL_102_jsp
 		$ = {75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 63 6d 64 22 29 29 3b 0a 20 20 20 20 20 20 20 20 4f 75 74 70 75 74 53 74 72 65 61 6d 20 6f 73 20 3d 20 70 2e 67 65 74 4f 75 74 70 75 74}
 		$ = {74 72 65 61 6d 20 64 69 73 20 3d 20 6e 65 77 20 44 61 74 61 49 6e 70 75 74 53 74 72 65 61 6d 28 69 6e 29 3b 0a 20 20 20 20 20 20 20 20 53 74 72 69 6e 67 20 64 69 73 72 20 3d 20 64 69 73 2e 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_web02_jsp
@@ -2415,7 +2068,7 @@ rule SHELL_web02_jsp
 		$ = {65 61 6d 28 6e 65 77 20 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 74 29 29 3b 62 79 74 65 5b 5d 20 62 3d 6e 65 77 20 62 79 74 65 5b 34 30 39 36 5d 3b 69 6e 74 20 63 3d 30 3b 77 68 69}
 		$ = {65 28 29 3b 69 2e 63 6c 6f 73 65 28 29 3b 6f 75 74 2e 70 72 69 6e 74 6c 6e 28 22 64 6f 77 6e 2d 6f 6b 22 29 3b 72 65 73 70 6f 6e 73 65 2e 73 65 74 48 65 61 64 65 72 28 22 64 6f 77 6e 2d 6f 6b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_403_jsp
@@ -2427,7 +2080,7 @@ rule SHELL_403_jsp
 		$ = {77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 66 29 3b 0a 69 6e 74 20 6c 65 6e 20 3d 20 30 3b 0a 62 79 74 65 5b 5d 20 62 75 66 20 3d 20 6e 65 77 20 62 79 74 65 5b 31 30 32 34 5d 3b 0a}
 		$ = {72 20 65 78 74 65 6e 64 73 20 44 65 66 61 75 6c 74 49 6e 76 6f 6b 65 72 20 7b 0a 70 75 62 6c 69 63 20 76 6f 69 64 20 69 6e 76 6f 6b 65 28 48 74 74 70 53 65 72 76 6c 65 74 52 65 71 75 65 73 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_dm_jsp
@@ -2439,7 +2092,7 @@ rule SHELL_dm_jsp
 		$ = {20 64 6f 42 65 66 6f 72 65 28 29 7b 72 65 74 75 72 6e 20 74 72 75 65 3b 7d 0a 70 75 62 6c 69 63 20 62 6f 6f 6c 65 61 6e 20 64 6f 41 66 74 65 72 28 29 7b 72 65 74 75 72 6e 20 74 72 75 65 3b 7d}
 		$ = {71 75 65 73 74 20 72 65 71 75 65 73 74 2c 48 74 74 70 53 65 72 76 6c 65 74 52 65 73 70 6f 6e 73 65 20 72 65 73 70 6f 6e 73 65 2c 48 74 74 70 53 65 73 73 69 6f 6e 20 4a 53 65 73 73 69 6f 6e 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_xm_jsp
@@ -2447,7 +2100,7 @@ rule SHELL_xm_jsp
 	strings:
 		$ = {3c 25 69 66 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 21 3d 6e 75 6c 6c 29 28 6e 65 77 20 6a 61 76 61 2e 69 6f 2e 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 61 70 70 6c 69 63 61 74 69 6f 6e 2e 67 65 74 52 65 61 6c 50 61 74 68 28 22 2f 22 29 2b 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 29 29 2e 77 72 69 74 65 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 74 22 29 2e 67 65 74 42 79 74 65 73 28 29 29 3b 25 3e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_x_jsp
@@ -2459,7 +2112,7 @@ rule SHELL_x_jsp
 		$ = {76 65 7c 7c 74 68 69 73 2e 66 69 72 73 74 28 29 3f 22 3a 6c 61 73 74 22 3a 22 3a 66 69 72 73 74 22 29 29 7d 2c 68 61 73 53 63 72 6f 6c 6c 3a 66 75 6e 63 74 69 6f 6e 28 29 7b 72 65 74 75 72 6e}
 		$ = {65 74 75 72 6e 20 65 2e 68 65 69 67 68 74 3d 3d 3d 22 61 75 74 6f 22 3f 65 2e 6d 69 6e 48 65 69 67 68 74 3a 4d 61 74 68 2e 6d 69 6e 28 65 2e 6d 69 6e 48 65 69 67 68 74 2c 65 2e 68 65 69 67 68}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_xx_jsp
@@ -2471,7 +2124,7 @@ rule SHELL_xx_jsp
 		$ = {28 29 29 7b 66 2e 64 65 6c 65 74 65 28 29 3b 7d 74 72 79 7b 4f 75 74 70 75 74 53 74 72 65 61 6d 20 6f 3d 6e 65 77 20 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 66 29 3b 6f 2e 77 72 69}
 		$ = {2b 3b 25 3e 30 3c 25 7d 7d 69 66 28 69 3d 3d 30 29 7b 25 3e 31 3c 25 7d 25 3e 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 27 3f 61 63 74 3d 79 6f 63 6f 27 20 6d 65 74 68 6f 64 3d 27 70 6f 73 74 27}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_t00ls1_jsp
@@ -2483,7 +2136,7 @@ rule SHELL_t00ls1_jsp
 		$ = {73 69 7a 65 46 69 6c 74 65 72 2e 65 71 75 61 6c 73 28 22 6c 65 73 73 74 68 61 6e 22 29 29 20 7b 0a 09 09 09 09 09 09 09 69 66 20 28 73 69 7a 65 20 3e 20 66 69 6c 65 73 69 7a 65 29 0a 09 09 09}
 		$ = {61 3e 20 22 2b 0a 09 09 09 09 09 22 09 3c 2f 74 72 3e 22 2b 0a 09 09 09 09 09 22 3c 2f 74 61 62 6c 65 3e 22 29 3b 0a 09 09 09 09 09 69 66 20 28 4a 53 65 73 73 69 6f 6e 2e 67 65 74 41 74 74 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jfolder01_jsp
@@ -2495,7 +2148,7 @@ rule SHELL_jfolder01_jsp
 		$ = {74 61 62 6c 69 6e 6b 73 28 29 0a 66 6f 72 20 28 69 3d 30 3b 20 69 3c 74 61 62 6f 62 6a 6c 69 6e 6b 73 2e 6c 65 6e 67 74 68 3b 20 69 2b 2b 29 0a 74 61 62 6f 62 6a 6c 69 6e 6b 73 5b 69 5d 2e 73}
 		$ = {a1 a3 3c 2f 70 3e 0a 3c 70 3e 26 6e 62 73 70 3b 3c 2f 70 3e 0a 3c 70 3e b6 fe a1 a2 b2 e2 ca d4 3c 2f 70 3e 0a 3c 70 3e 26 6e 62 73 70 3b 26 6e 62 73 70 3b 26 6e 62 73 70 3b 3c 62 3e c7 eb b4}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_icesword_jsp
@@ -2507,7 +2160,7 @@ rule SHELL_icesword_jsp
 		$ = {76 6d 2e 73 70 65 63 69 66 69 63 61 74 69 6f 6e 2e 76 65 72 73 69 6f 6e 22 29 25 3e 3c 2f 74 64 3e 0a 20 3c 2f 74 72 3e 0a 20 3c 74 72 20 62 67 63 6f 6c 6f 72 3d 22 23 46 46 46 46 46 46 22 3e}
 		$ = {22 26 6e 62 73 70 3b 22 3b 0a 20 20 7d 20 65 6c 73 65 20 69 66 20 28 64 62 41 63 74 69 6f 6e 2e 65 71 75 61 6c 73 28 22 64 62 43 6f 6e 6e 65 63 74 22 29 29 20 7b 0a 20 20 20 69 66 20 28 72 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmdjsp_jsp
@@ -2519,7 +2172,7 @@ rule SHELL_cmdjsp_jsp
 		$ = {2b 20 63 6d 64 29 3b 0a 20 20 20 20 20 20 20 20 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 20 73 49 20 3d 20 6e 65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75}
 		$ = {65 28 28 73 20 3d 20 73 49 2e 72 65 61 64 4c 69 6e 65 28 29 29 20 21 3d 20 6e 75 6c 6c 29 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 6f 75 74 70 75 74 20 2b 3d 20 73 3b 0a 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_9b2d9b1668
@@ -2531,7 +2184,7 @@ rule SHELL_unknown_9b2d9b1668
 		$ = {6d 2e 65 78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67 65}
 		$ = {3d 6e 65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_hsxa_jsp
@@ -2543,7 +2196,7 @@ rule SHELL_hsxa_jsp
 		$ = {28 29 29 7b 66 2e 64 65 6c 65 74 65 28 29 3b 7d 74 72 79 7b 4f 75 74 70 75 74 53 74 72 65 61 6d 20 6f 3d 6e 65 77 20 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 66 29 3b 6f 2e 77 72 69}
 		$ = {2b 3b 25 3e 30 3c 25 7d 7d 69 66 28 69 3d 3d 30 29 7b 25 3e 31 3c 25 7d 25 3e 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 27 3f 61 63 74 3d 79 6f 63 6f 27 20 6d 65 74 68 6f 64 3d 27 70 6f 73 74 27}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cofigrue_jsp
@@ -2555,7 +2208,7 @@ rule SHELL_cofigrue_jsp
 		$ = {65 3b 7d 0a 70 75 62 6c 69 63 20 62 6f 6f 6c 65 61 6e 20 64 6f 41 66 74 65 72 28 29 7b 72 65 74 75 72 6e 20 74 72 75 65 3b 7d 0a 70 75 62 6c 69 63 20 76 6f 69 64 20 69 6e 76 6f 6b 65 28 48 74}
 		$ = {2c 48 74 74 70 53 65 72 76 6c 65 74 52 65 73 70 6f 6e 73 65 20 72 65 73 70 6f 6e 73 65 2c 48 74 74 70 53 65 73 73 69 6f 6e 20 4a 53 65 73 73 69 6f 6e 29 20 74 68 72 6f 77 73 20 45 78 63 65 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_xia_jsp
@@ -2567,7 +2220,7 @@ rule SHELL_xia_jsp
 		$ = {0a 69 6e 2e 63 6c 6f 73 65 28 29 3b 0a 6f 75 74 2e 63 6c 6f 73 65 28 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 73 65 74 41 74 74 72 69 62 75 74 65 28 22 64 6f 6e 65 22 2c 22 64 22 29 3b 0a 69 6e 73}
 		$ = {74 65 28 22 70 6f 72 74 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 72 6f 67 72 61 6d 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_dy_jsp
@@ -2579,7 +2232,7 @@ rule SHELL_dy_jsp
 		$ = {20 20 0a 20 20 20 20 3c 74 72 20 62 67 63 6f 6c 6f 72 3d 22 23 46 46 46 46 46 46 22 3e 20 20 0a 20 20 20 20 20 20 20 20 3c 74 64 20 77 69 64 74 68 3d 22 33 30 30 22 20 61 6c 69 67 6e 3d 22 63}
 		$ = {62 41 63 74 69 6f 6e 2e 65 71 75 61 6c 73 28 22 64 62 43 6f 6e 6e 65 63 74 22 29 29 20 7b 20 20 0a 20 20 20 20 20 20 20 20 20 20 20 20 69 66 20 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_123_jsp
@@ -2591,7 +2244,7 @@ rule SHELL_123_jsp
 		$ = {65 78 33 29 20 7b 20 20 20 20 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 6f 75 74 2e 70 72 69 6e 74 6c 6e 28 22 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 27 72 65 64 27 3e 3f 3f 3f 3f 3f 3f}
 		$ = {6c 6f 72 3d 22 62 6c 75 65 22 3e 3f 3f 3f 3f 3f 3f 3f 3f 3f 3f 3f 3f 3f 3f 3f 3f 3f 3f 3a 3c 2f 66 6f 6e 74 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 73 69 7a 65 3d 22 37 30}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_warn_jsp
@@ -2603,7 +2256,7 @@ rule SHELL_warn_jsp
 		$ = {62 6a 65 63 74 29 7b 0a 69 66 20 28 64 6f 63 75 6d 65 6e 74 2e 67 65 74 45 6c 65 6d 65 6e 74 42 79 49 64 29 7b 0a 68 69 67 68 6c 69 67 68 74 74 61 62 28 61 6f 62 6a 65 63 74 29 0a 69 66 20 28}
 		$ = {28 29 2b 22 3c 2f 66 6f 6e 74 3e 22 29 3b 0a 7d 0a 25 3e 0a 0a 3c 44 49 56 20 69 64 3d 22 74 61 62 63 6f 6e 74 65 6e 74 63 6f 6e 74 61 69 6e 65 72 22 3e 0a 0a 0a 3c 64 69 76 20 69 64 3d 22 6d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_JspWebshell_1_2_jsp
@@ -2615,7 +2268,7 @@ rule SHELL_JspWebshell_1_2_jsp
 		$ = {65 3d 22 66 6f 72 6d 32 22 20 6d 65 74 68 6f 64 3d 22 70 6f 73 74 22 20 61 63 74 69 6f 6e 3d 22 22 3e 0a 20 20 20 20 20 20 20 20 20 20 3c 70 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e 20}
 		$ = {53 74 72 69 6e 67 20 74 65 6d 70 66 69 6c 65 6e 61 6d 65 3d 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 69 6c 65 22 29 3b 0a 20 20 20 20 20 20 20 20 20 20 46 69 6c 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_400_jsp
@@ -2627,7 +2280,7 @@ rule SHELL_400_jsp
 		$ = {6e 74 28 27 6d 65 6e 75 32 27 2c 20 74 68 69 73 29 22 3e 3c 25 3d 73 74 72 43 6f 6d 6d 61 6e 64 5b 6c 61 6e 67 75 61 67 65 4e 6f 5d 25 3e 3c 2f 61 3e 0a 09 09 09 3c 2f 6c 69 3e 0a 09 09 09 3c}
 		$ = {c9 be b3 fd c4 bf c2 bc b9 a6 c4 dc 20 2d 20 48 6d 69 6c 79 6c 64 3c 2f 6c 69 3e 0a 09 09 09 09 09 09 09 3c 6c 69 3e 32 30 30 37 2e 31 32 2e 32 37 26 6e 62 73 70 3b d4 f6 bc d3 b5 c7 c2 bc d1}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_maint_jsp
@@ -2639,7 +2292,7 @@ rule SHELL_maint_jsp
 		$ = {65 78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67 65 74 43}
 		$ = {65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_zend_jsp
@@ -2651,7 +2304,7 @@ rule SHELL_zend_jsp
 		$ = {7a 69 70 46 69 6c 65 28 66 2c 20 74 6d 70 42 61 73 65 2c 20 7a 6f 75 74 29 3b 0a 09 09 09 7d 0a 0a 09 09 7d 0a 0a 09 09 70 75 62 6c 69 63 20 76 6f 69 64 20 7a 69 70 46 69 6c 65 28 46 69 6c 65}
 		$ = {76 6f 74 68 65 72 27 7d 29 3b 5c 22 3e 4f 74 68 65 72 73 3c 2f 61 3e 20 7c 20 22 0a 09 09 09 09 09 09 09 09 2b 20 22 09 09 09 3c 61 20 68 72 65 66 3d 5c 22 6a 61 76 61 73 63 72 69 70 74 3a 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_nogfw_jsp
@@ -2663,7 +2316,7 @@ rule SHELL_nogfw_jsp
 		$ = {70 75 74 53 74 72 65 61 6d 20 6f 75 74 20 3d 20 6e 65 77 20 42 75 66 66 65 72 65 64 4f 75 74 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 6e 65}
 		$ = {67 72 61 6d 22 29 3b 0a 4f 62 6a 65 63 74 20 64 6f 6e 65 20 3d 20 4a 53 65 73 73 69 6f 6e 2e 67 65 74 41 74 74 72 69 62 75 74 65 28 22 64 6f 6e 65 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_7b64b572ff
@@ -2675,7 +2328,7 @@ rule SHELL_unknown_7b64b572ff
 		$ = {74 6c 6e 28 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 27 73 75 62 6d 69 74 27 20 76 61 6c 75 65 3d 27 73 61 76 65 21 27 3e 22 29 3b 0a 6f 75 74 2e 70 72 69 6e 74 6c 6e 28 22 3c 2f 66 6f 72 6d 3e}
 		$ = {20 20 53 74 72 69 6e 67 20 70 61 73 73 3d 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 70 61 73 73 22 29 3b 0a 20 20 20 20 69 66 28 70 61 73 73 2e 65 71 75 61 6c 73 28 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_queryDong_jsp
@@ -2687,7 +2340,7 @@ rule SHELL_queryDong_jsp
 		$ = {6e 65 77 20 62 79 74 65 5b 31 30 32 34 5d 3b 0a 77 68 69 6c 65 20 28 28 6c 65 6e 20 3d 20 66 49 6e 70 75 74 2e 72 65 61 64 28 62 75 66 29 29 20 21 3d 20 2d 31 29 20 7b 0a 7a 6f 75 74 2e 77 72}
 		$ = {7b 0a 70 75 62 6c 69 63 20 76 6f 69 64 20 69 6e 76 6f 6b 65 28 48 74 74 70 53 65 72 76 6c 65 74 52 65 71 75 65 73 74 20 72 65 71 75 65 73 74 2c 48 74 74 70 53 65 72 76 6c 65 74 52 65 73 70 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_myxx_jsp
@@ -2699,7 +2352,7 @@ rule SHELL_myxx_jsp
 		$ = {20 28 74 68 69 73 2e 73 69 7a 65 46 69 6c 74 65 72 2e 65 71 75 61 6c 73 28 22 67 72 65 61 74 65 72 74 68 61 6e 22 29 29 20 7b 0a 09 09 09 09 09 09 69 66 20 28 73 69 7a 65 20 3c 20 66 69 6c 65}
 		$ = {28 4d 53 47 29 3b 0a 09 09 09 09 7d 0a 09 09 09 09 69 66 20 28 4a 53 65 73 73 69 6f 6e 2e 67 65 74 41 74 74 72 69 62 75 74 65 28 45 4e 54 45 52 5f 4d 53 47 29 20 21 3d 20 6e 75 6c 6c 29 20 7b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_zx_jsp
@@ -2707,7 +2360,7 @@ rule SHELL_zx_jsp
 	strings:
 		$ = {3c 25 0a 69 66 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 21 3d 6e 75 6c 6c 29 28 6e 65 77 20 6a 61 76 61 2e 69 6f 2e 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 61 70 70 6c 69 63 61 74 69 6f 6e 2e 67 65 74 52 65 61 6c 50 61 74 68 28 22 5c 5c 22 29 2b 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 29 29 2e 77 72 69 74 65 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 74 22 29 2e 67 65 74 42 79 74 65 73 28 29 29 3b 0a 25 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_0000_jsp
@@ -2719,7 +2372,7 @@ rule SHELL_0000_jsp
 		$ = {65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 66 29 3b 0a 69 6e 74 20 6c 65 6e 20 3d 20 30 3b 0a 62 79 74 65 5b 5d 20 62 75 66 20 3d 20 6e 65 77 20 62 79 74 65 5b 31 30 32 34 5d 3b}
 		$ = {6b 65 72 20 65 78 74 65 6e 64 73 20 44 65 66 61 75 6c 74 49 6e 76 6f 6b 65 72 20 7b 0a 70 75 62 6c 69 63 20 76 6f 69 64 20 69 6e 76 6f 6b 65 28 48 74 74 70 53 65 72 76 6c 65 74 52 65 71 75 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c5_jsp
@@ -2731,7 +2384,7 @@ rule SHELL_c5_jsp
 		$ = {2d 31 29 20 7b 0a 7a 6f 75 74 2e 77 72 69 74 65 28 62 75 66 2c 20 30 2c 20 6c 65 6e 29 3b 0a 7a 6f 75 74 2e 66 6c 75 73 68 28 29 3b 0a 7d 0a 66 49 6e 70 75 74 2e 63 6c 6f 73 65 28 29 3b 0a 7d}
 		$ = {70 53 65 72 76 6c 65 74 52 65 73 70 6f 6e 73 65 20 72 65 73 70 6f 6e 73 65 2c 48 74 74 70 53 65 73 73 69 6f 6e 20 4a 53 65 73 73 69 6f 6e 29 20 74 68 72 6f 77 73 20 45 78 63 65 70 74 69 6f 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_a_jsp
@@ -2743,7 +2396,7 @@ rule SHELL_a_jsp
 		$ = {61 2c 30 2c 6c 65 6e 29 3b 0a 6c 65 6e 20 3d 20 69 6e 2e 72 65 61 64 28 64 61 74 61 29 3b 0a 7d 0a 69 6e 2e 63 6c 6f 73 65 28 29 3b 0a 6f 75 74 2e 63 6c 6f 73 65 28 29 3b 0a 4a 53 65 73 73 69}
 		$ = {69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 6f 72 74 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 72 6f 67 72 61 6d 22 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_web_jsp
@@ -2755,7 +2408,7 @@ rule SHELL_web_jsp
 		$ = {65 61 6d 28 6e 65 77 20 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 74 29 29 3b 62 79 74 65 5b 5d 20 62 3d 6e 65 77 20 62 79 74 65 5b 34 30 39 36 5d 3b 69 6e 74 20 63 3d 30 3b 77 68 69}
 		$ = {65 28 29 3b 69 2e 63 6c 6f 73 65 28 29 3b 6f 75 74 2e 70 72 69 6e 74 6c 6e 28 22 64 6f 77 6e 2d 6f 6b 22 29 3b 72 65 73 70 6f 6e 73 65 2e 73 65 74 48 65 61 64 65 72 28 22 64 6f 77 6e 2d 6f 6b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_yijuhua_jsp
@@ -2767,7 +2420,7 @@ rule SHELL_yijuhua_jsp
 		$ = {3d 3d 2d 31 29 7b 0a 09 09 09 09 09 66 69 6c 65 2e 6d 6b 64 69 72 28 29 3b 0a 09 09 09 09 7d 0a 09 09 09 09 62 77 20 3d 20 6e 65 77 20 42 75 66 66 65 72 65 64 57 72 69 74 65 72 28 6e 65 77 20}
 		$ = {20 6c 20 3d 20 22 22 3b 0a 09 09 09 42 75 66 66 65 72 65 64 52 65 61 64 65 72 20 62 72 20 3d 20 6e 65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_info_jsp
@@ -2779,7 +2432,7 @@ rule SHELL_info_jsp
 		$ = {3d 6d 2e 65 78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67}
 		$ = {72 3d 6e 65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_edit_ot_jsp
@@ -2791,7 +2444,7 @@ rule SHELL_edit_ot_jsp
 		$ = {65 78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67 65 74 43}
 		$ = {65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_50ecae4703
@@ -2803,7 +2456,7 @@ rule SHELL_unknown_50ecae4703
 		$ = {61 63 74 69 6f 6e 3d 22 68 74 74 70 3a 2f 2f 35 39 2e 78 2e 78 2e 78 3a 38 30 38 30 2f 73 63 64 63 2f 62 6f 62 2e 6a 73 70 3f 66 3d 66 75 63 6b 6a 70 2e 6a 73 70 22 20 6d 65 74 68 6f 64 3d 22}
 		$ = {80 e3 80 80 3c 74 65 78 74 61 72 65 61 20 6e 61 6d 65 3d 74 20 63 6f 6c 73 3d 31 32 30 20 72 6f 77 73 3d 31 30 20 77 69 64 74 68 3d 34 35 3e 79 6f 75 72 20 63 6f 64 65 3c 2f 74 65 78 74 61 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_m_jsp
@@ -2815,7 +2468,7 @@ rule SHELL_m_jsp
 		$ = {62 6c 69 63 20 62 6f 6f 6c 65 61 6e 20 64 6f 41 66 74 65 72 28 29 7b 72 65 74 75 72 6e 20 74 72 75 65 3b 7d 0a 70 75 62 6c 69 63 20 76 6f 69 64 20 69 6e 76 6f 6b 65 28 48 74 74 70 53 65 72 76}
 		$ = {2c 48 74 74 70 53 65 73 73 69 6f 6e 20 4a 53 65 73 73 69 6f 6e 29 20 74 68 72 6f 77 73 20 45 78 63 65 70 74 69 6f 6e 7b 0a 74 72 79 20 7b 0a 50 72 69 6e 74 57 72 69 74 65 72 20 6f 75 74 20 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_css_jsp
@@ -2827,7 +2480,7 @@ rule SHELL_css_jsp
 		$ = {64 61 74 61 2c 30 2c 6c 65 6e 29 3b 0a 6c 65 6e 20 3d 20 69 6e 2e 72 65 61 64 28 64 61 74 61 29 3b 0a 7d 0a 69 6e 2e 63 6c 6f 73 65 28 29 3b 0a 6f 75 74 2e 63 6c 6f 73 65 28 29 3b 0a 4a 53 65}
 		$ = {65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 6f 72 74 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 72 6f 67 72 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_index_bak1_jsp
@@ -2839,7 +2492,7 @@ rule SHELL_index_bak1_jsp
 		$ = {65 74 20 72 3d 6d 2e 65 78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e}
 		$ = {20 62 72 3d 6e 65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jsp_jsp
@@ -2851,7 +2504,7 @@ rule SHELL_jsp_jsp
 		$ = {74 61 62 6c 69 6e 6b 73 28 29 0a 66 6f 72 20 28 69 3d 30 3b 20 69 3c 74 61 62 6f 62 6a 6c 69 6e 6b 73 2e 6c 65 6e 67 74 68 3b 20 69 2b 2b 29 0a 74 61 62 6f 62 6a 6c 69 6e 6b 73 5b 69 5d 2e 73}
 		$ = {a1 a3 3c 2f 70 3e 0a 3c 70 3e 26 6e 62 73 70 3b 3c 2f 70 3e 0a 3c 70 3e b6 fe a1 a2 b2 e2 ca d4 3c 2f 70 3e 0a 3c 70 3e 26 6e 62 73 70 3b 26 6e 62 73 70 3b 26 6e 62 73 70 3b 3c 62 3e c7 eb b4}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_data02_jsp
@@ -2863,7 +2516,7 @@ rule SHELL_data02_jsp
 		$ = {66 20 74 61 62 6f 62 6a 6c 69 6e 6b 73 3d 3d 22 75 6e 64 65 66 69 6e 65 64 22 29 0a 63 6f 6c 6c 65 63 74 74 61 62 6c 69 6e 6b 73 28 29 0a 66 6f 72 20 28 69 3d 30 3b 20 69 3c 74 61 62 6f 62 6a}
 		$ = {3f 3f 3f 3f 3f 3f a8 b0 3f 3f 3f a8 a4 3f 3f 3c 2f 70 3e 0a 3c 70 3e 3f 3f 77 69 6e 64 6f 77 73 3f 3f 63 6d 64 3f 3f 3c 2f 70 3e 0a 3c 70 3e 26 6e 62 73 70 3b 3c 2f 70 3e 0a 3c 70 3e 3f 3f 3f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_guige02_jsp
@@ -2875,7 +2528,7 @@ rule SHELL_guige02_jsp
 		$ = {29 3b 6f 75 74 2e 70 72 69 6e 74 6c 6e 28 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 27 73 75 62 6d 69 74 27 20 76 61 6c 75 65 3d 27 73 61 76 65 21 27 3e 22 29 3b 6f 75 74 2e 70 72 69 6e 74 6c 6e}
 		$ = {67 69 6e 22 29 29 7b 20 20 20 20 53 74 72 69 6e 67 20 70 61 73 73 3d 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 70 61 73 73 22 29 3b 20 20 20 20 69 66 28 70 61 73 73 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_u_jsp
@@ -2887,7 +2540,7 @@ rule SHELL_u_jsp
 		$ = {69 74 65 28 64 61 74 61 2c 30 2c 6c 65 6e 29 3b 0a 6c 65 6e 20 3d 20 69 6e 2e 72 65 61 64 28 64 61 74 61 29 3b 0a 7d 0a 69 6e 2e 63 6c 6f 73 65 28 29 3b 0a 6f 75 74 2e 63 6c 6f 73 65 28 29 3b}
 		$ = {3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 6f 72 74 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ks0ljvi9m2_txt
@@ -2899,7 +2552,7 @@ rule SHELL_ks0ljvi9m2_txt
 		$ = {74 68 69 73 2e 73 69 7a 65 46 69 6c 74 65 72 2e 65 71 75 61 6c 73 28 22 6c 65 73 73 74 68 61 6e 22 29 29 20 7b 0a 09 09 09 09 09 09 09 69 66 20 28 73 69 7a 65 20 3e 20 66 69 6c 65 73 69 7a 65}
 		$ = {2f 61 3e 20 22 2b 0a 09 09 09 09 09 22 09 3c 2f 74 72 3e 22 2b 0a 09 09 09 09 09 22 3c 2f 74 61 62 6c 65 3e 22 29 3b 0a 09 09 09 09 09 69 66 20 28 4a 53 65 73 73 69 6f 6e 2e 67 65 74 41 74 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jshell_jsp
@@ -2911,7 +2564,7 @@ rule SHELL_jshell_jsp
 		$ = {28 00 22 00 6a 00 61 00 76 00 61 00 2e 00 69 00 6f 00 2e 00 74 00 6d 00 70 00 64 00 69 00 72 00 22 00 29 00 25 00 3e 00 3c 00 2f 00 74 00 64 00 3e 00 0d 00 0a 00 20 00 3c 00 2f 00 74 00 72 00}
 		$ = {00 20 00 72 00 65 00 71 00 75 00 65 00 73 00 74 00 2e 00 67 00 65 00 74 00 50 00 61 00 72 00 61 00 6d 00 65 00 74 00 65 00 72 00 28 00 22 00 64 00 62 00 53 00 65 00 72 00 76 00 65 00 72 00 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_guige_jsp
@@ -2923,7 +2576,7 @@ rule SHELL_guige_jsp
 		$ = {6c 65 2e 65 78 69 73 74 73 28 29 26 26 20 64 61 6d 61 66 69 6c 65 2e 6c 65 6e 67 74 68 28 29 3e 30 29 2f 2f 81 30 8a 32 81 30 81 38 a1 e8 81 30 8a 33 81 30 83 32 81 30 85 32 64 61 6d 61 66 69}
 		$ = {81 30 8a 31 81 30 86 37 81 30 83 39 81 30 8a 32 81 30 85 32 81 30 83 34 a8 a8 a1 a4 81 30 85 34 81 30 8a 32 81 30 86 36 81 30 81 34 3a 3c 2f 66 6f 6e 74 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_404_jsp
@@ -2935,7 +2588,7 @@ rule SHELL_404_jsp
 		$ = {62 6a 65 63 74 29 7b 0a 69 66 20 28 74 79 70 65 6f 66 20 74 61 62 6f 62 6a 6c 69 6e 6b 73 3d 3d 22 75 6e 64 65 66 69 6e 65 64 22 29 0a 63 6f 6c 6c 65 63 74 74 61 62 6c 69 6e 6b 73 28 29 0a 66}
 		$ = {c4 dc a3 ac bf c9 d2 d4 d4 cb d0 d0 d2 bb d0 a9 b3 cc d0 f2 a3 ac c0 e0 cb c6 3c 2f 70 3e 0a 3c 70 3e d3 eb 77 69 6e 64 6f 77 73 b5 c4 63 6d 64 a1 a3 3c 2f 70 3e 0a 3c 70 3e 26 6e 62 73 70 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_IXRbE02_jsp
@@ -2943,7 +2596,7 @@ rule SHELL_IXRbE02_jsp
 	strings:
 		$ = {3c 25 69 66 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 21 3d 6e 75 6c 6c 29 28 6e 65 77 20 6a 61 76 61 2e 69 6f 2e 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 61 70 70 6c 69 63 61 74 69 6f 6e 2e 67 65 74 52 65 61 6c 50 61 74 68 28 22 2f 22 29 2b 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 22 29 29 29 2e 77 72 69 74 65 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 74 22 29 2e 67 65 74 42 79 74 65 73 28 29 29 3b 25 3e 78 49 58 52 62 45 2e 6a 73 70 78}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_ok_jsp
@@ -2955,7 +2608,7 @@ rule SHELL_ok_jsp
 		$ = {6e 65 77 20 42 75 66 66 65 72 65 64 4f 75 74 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20 46 69 6c 65 28 73 61 76 65 50 61 74 68 29}
 		$ = {73 73 69 6f 6e 2e 67 65 74 41 74 74 72 69 62 75 74 65 28 22 64 6f 6e 65 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 69 70 22 29 3b 0a 4a 53 65 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_JspSpyJDK51_jsp
@@ -2967,7 +2620,7 @@ rule SHELL_JspSpyJDK51_jsp
 		$ = {28 64 61 74 61 2c 30 2c 6c 65 6e 29 3b 0a 6c 65 6e 20 3d 20 69 6e 2e 72 65 61 64 28 64 61 74 61 29 3b 0a 7d 0a 69 6e 2e 63 6c 6f 73 65 28 29 3b 0a 6f 75 74 2e 63 6c 6f 73 65 28 29 3b 0a 4a 53}
 		$ = {73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 6f 72 74 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 72 6f 67 72 61 6d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_date_jsp_txt
@@ -2979,7 +2632,7 @@ rule SHELL_date_jsp_txt
 		$ = {64 61 74 61 2c 30 2c 6c 65 6e 29 3b 0a 6c 65 6e 20 3d 20 69 6e 2e 72 65 61 64 28 64 61 74 61 29 3b 0a 7d 0a 69 6e 2e 63 6c 6f 73 65 28 29 3b 0a 6f 75 74 2e 63 6c 6f 73 65 28 29 3b 0a 4a 53 65}
 		$ = {69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 6f 72 74 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 72 6f 67 72 61 6d 22 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_JspSpy_jsp
@@ -2991,7 +2644,7 @@ rule SHELL_JspSpy_jsp
 		$ = {70 75 74 53 74 72 65 61 6d 20 6f 75 74 20 3d 20 6e 65 77 20 42 75 66 66 65 72 65 64 4f 75 74 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 6e 65}
 		$ = {61 6d 22 29 3b 0a 4f 62 6a 65 63 74 20 64 6f 6e 65 20 3d 20 4a 53 65 73 73 69 6f 6e 2e 67 65 74 41 74 74 72 69 62 75 74 65 28 22 64 6f 6e 65 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_utils_jsp
@@ -3003,7 +2656,7 @@ rule SHELL_utils_jsp
 		$ = {28 29 3b 0a 09 09 09 66 6f 72 20 28 69 20 3d 20 31 3b 20 69 20 3c 3d 20 6e 3b 20 69 2b 2b 29 20 7b 0a 09 09 09 09 73 62 2e 61 70 70 65 6e 64 28 64 2e 67 65 74 43 6f 6c 75 6d 6e 4e 61 6d 65 28}
 		$ = {61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20 46 69 6c 65 28 0a 09 09 09 09 09 09 09 7a 31 29 29 29 29 3b 0a 09 09 09 77 68 69 6c 65 20 28 28 6c 20 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ha_jsp
@@ -3015,7 +2668,7 @@ rule SHELL_ha_jsp
 		$ = {3e 3c 2f 74 64 3e 0a 3c 2f 74 72 3e 0a 3c 74 72 20 62 67 63 6f 6c 6f 72 3d 22 23 46 46 46 46 46 46 22 3e 0a 3c 74 64 20 77 69 64 74 68 3d 22 33 30 30 22 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65}
 		$ = {72 61 6d 65 74 65 72 28 22 64 62 50 6f 72 74 22 29 20 3d 3d 20 6e 75 6c 6c 20 7c 7c 0a 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 64 62 55 73 65 72 6e 61 6d 65 22 29 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_24d1d0f859
@@ -3027,7 +2680,7 @@ rule SHELL_unknown_24d1d0f859
 		$ = {e5 8a 9f e8 83 bd e6 8a a5 e5 ba 9f 20 e5 8e 9f e5 9b a0 e9 83 bd e6 98 af e8 bf 99 e4 b8 aa e7 bb 84 e4 bb b6 20 6f 72 67 2e 61 70 61 63 68 65 2e 6a 61 73 70 65 72 0a 0a e8 bf 98 e6 9c 89 e6}
 		$ = {e8 b4 a5 20 6a 61 76 61 2e 69 6f 2e 49 4f 45 78 63 65 70 74 69 6f 6e 3a 20 e8 bf 99 e5 b0 b1 e6 98 af 49 4f e4 ba 86 0a 6d 61 33 2e 6a 73 70 20 e7 9b b4 e6 8e a5 e6 8a a5 e5 ba 9f 20 e5 9b a0}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_minupload_jsp
@@ -3039,7 +2692,7 @@ rule SHELL_minupload_jsp
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 6f 75 74 2e 70 72 69 6e 74 6c 6e 28 22 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 27 72 65 64 27 3e e4 b8 8a e4 bc a0 e5 a4 b1 e8 b4 a5 21}
 		$ = {e4 b8 8a e4 bc a0 e6 96 87 e4 bb b6 e8 b7 af e5 be 84 3a 3c 2f 66 6f 6e 74 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 73 69 7a 65 3d 22 37 30 22 20 6e 61 6d 65 3d 22 70 61 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Customize_jsp
@@ -3051,7 +2704,7 @@ rule SHELL_Customize_jsp
 		$ = {65 78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67 65 74 43}
 		$ = {65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_85ba9da48f
@@ -3063,7 +2716,7 @@ rule SHELL_unknown_85ba9da48f
 		$ = {ef 6b f7 d4 cf 1d dd 6f 6d 5d bd a6 dd 3d 7b 73 4d a6 7c eb d9 d0 d7 32 11 9c 48 9d 7a bc b9 b8 b7 5d 4f 8a 0e 85 b6 64 24 76 f2 47 2b ee 6e 6d 6d 2c 6b de da 40 27 ff 19 80 dd 35 b1 d1 40 b7}
 		$ = {67 71 dd c1 26 6a 13 92 0a 21 d4 1d 6a c4 04 99 8e dc 42 81 02 05 c9 ef c8 08 f4 c7 1c f8 1c 5e 6f db 5c d7 a7 5d 15 3b ef 42 74 71 4a 86 34 b2 e1 a5 2e 20 2b 8b 89 0d c1 66 c1 e1 67 d8 20 b8}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jspspy_k8_jsp
@@ -3075,7 +2728,7 @@ rule SHELL_jspspy_k8_jsp
 		$ = {6f 73 65 28 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 73 65 74 41 74 74 72 69 62 75 74 65 28 22 64 6f 6e 65 22 2c 22 64 22 29 3b 0a 69 6e 73 2e 67 65 74 28 22 76 64 22 29 2e 69 6e 76 6f 6b 65 28 72}
 		$ = {6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 72 6f 67 72 61 6d 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 64 6f 6e 65 22 29 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jspspy_jsp
@@ -3087,7 +2740,7 @@ rule SHELL_jspspy_jsp
 		$ = {3b 0a 6c 65 6e 20 3d 20 69 6e 2e 72 65 61 64 28 64 61 74 61 29 3b 0a 7d 0a 69 6e 2e 63 6c 6f 73 65 28 29 3b 0a 6f 75 74 2e 63 6c 6f 73 65 28 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 73 65 74 41 74}
 		$ = {74 72 69 62 75 74 65 28 22 70 6f 72 74 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 72 6f 67 72 61 6d 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_download_jsp
@@ -3098,7 +2751,7 @@ rule SHELL_download_jsp
 		$ = {2e 77 72 69 74 65 28 6c 69 6e 65 65 6e 64 29 3b 0a 09 09 09 09 09 09 09 63 72 20 3d 20 66 61 6c 73 65 3b 0a 09 09 09 09 09 09 7d 0a 09 09 09 09 09 09 65 6c 73 65 20 7b 0a 09 09 09 09 09 09 09}
 		$ = {20 20 7d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 65 6c 73 65 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 72 65 71 75 65 73 74 2e 73 65 74 41 74 74 72 69 62 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_thx_jsp
@@ -3110,7 +2763,7 @@ rule SHELL_thx_jsp
 		$ = {65 78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67 65 74 43}
 		$ = {65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65 77 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_CmdServlet_class
@@ -3122,7 +2775,7 @@ rule SHELL_CmdServlet_class
 		$ = {6c 61 6e 67 2f 53 74 72 69 6e 67 3b 29 4c 6a 61 76 61 2f 6c 61 6e 67 2f 53 74 72 69 6e 67 42 75 66 66 65 72 3b 01 00 08 74 6f 53 74 72 69 6e 67 01 00 11 6a 61 76 61 2f 6c 61 6e 67 2f 52 75 6e}
 		$ = {05 2a b7 00 01 b1 00 00 00 01 00 23 00 00 00 06 00 01 00 00 00 0d 00 01 00 24 00 25 00 02 00 22 00 00 01 09 00 04 00 07 00 00 00 b1 2c 12 02 b9 00 03 02 00 2c b9 00 04 01 00 4e 2d 12 05 b6 00}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_list_jsp
@@ -3134,7 +2787,7 @@ rule SHELL_list_jsp
 		$ = {70 72 69 6e 74 28 22 77 22 20 29 3b 20 65 6c 73 65 20 6f 75 74 2e 70 72 69 6e 74 28 22 2d 22 29 3b 0a 09 09 6f 75 74 2e 70 72 69 6e 74 28 22 29 20 3c 41 20 53 74 79 6c 65 3d 27 43 6f 6c 6f 72}
 		$ = {20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 66 29 3b 0a 09 09 53 65 72 76 6c 65 74 4f 75 74 70 75 74 53 74 72 65 61 6d 20 6f 75 74 73 20 3d 20 72 65 73 70 6f 6e 73 65 2e 67 65 74 4f 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_UpServlet_class
@@ -3146,7 +2799,7 @@ rule SHELL_UpServlet_class
 		$ = {2f 6c 61 6e 67 2f 53 74 72 69 6e 67 42 75 66 66 65 72 3b 01 00 08 74 6f 53 74 72 69 6e 67 01 00 06 63 6f 6e 63 61 74 01 00 26 28 4c 6a 61 76 61 2f 6c 61 6e 67 2f 53 74 72 69 6e 67 3b 29 4c 6a}
 		$ = {2c 00 02 00 29 00 00 01 53 00 03 00 0c 00 00 00 eb bb 00 0c 59 b7 00 0d 4e 03 36 04 03 36 05 2b b9 00 0e 01 00 3a 06 bb 00 0f 59 19 06 b7 00 10 3a 07 2c b9 00 04 01 00 3a 08 2c 12 02 b9 00 03}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd_jsp
@@ -3158,7 +2811,7 @@ rule SHELL_cmd_jsp
 		$ = {4f 75 74 70 75 74 53 74 72 65 61 6d 20 6f 73 20 3d 20 70 2e 67 65 74 4f 75 74 70 75 74 53 74 72 65 61 6d 28 29 3b 0a 20 20 20 20 20 20 20 20 49 6e 70 75 74 53 74 72 65 61 6d 20 69 6e 20 3d 20}
 		$ = {0a 20 20 20 20 20 20 20 20 53 74 72 69 6e 67 20 64 69 73 72 20 3d 20 64 69 73 2e 72 65 61 64 4c 69 6e 65 28 29 3b 0a 20 20 20 20 20 20 20 20 77 68 69 6c 65 20 28 20 64 69 73 72 20 21 3d 20 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_UpServlet_java
@@ -3170,7 +2823,7 @@ rule SHELL_UpServlet_java
 		$ = {28 29 29 20 21 3d 20 2d 31 20 26 26 20 63 20 21 3d 20 27 5c 6e 27 29 20 63 6f 6e 74 61 64 6f 72 2b 2b 3b 0a 0a 09 09 2f 2f 20 6f 75 74 2e 70 72 69 6e 74 28 22 43 4f 4e 54 45 4e 54 5f 4c 45 4e}
 		$ = {65 20 6e 65 77 66 69 6c 65 20 3d 20 6e 65 77 20 46 69 6c 65 28 22 63 3a 5c 5c 69 6e 73 74 61 6c 6c 2e 6c 6f 67 22 29 3b 0a 0a 09 09 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ListServlet_java
@@ -3182,7 +2835,7 @@ rule SHELL_ListServlet_java
 		$ = {69 6e 74 77 72 69 74 65 72 2e 77 72 69 74 65 28 22 72 22 29 3b 0a 09 09 09 09 65 6c 73 65 0a 09 09 09 09 09 70 72 69 6e 74 77 72 69 74 65 72 2e 77 72 69 74 65 28 22 2d 22 29 3b 0a 09 09 09 09}
 		$ = {74 65 72 2e 77 72 69 74 65 28 22 3c 68 72 3e 3c 2f 46 4f 4e 54 3e 3c 2f 42 4f 44 59 3e 3c 2f 48 54 4d 4c 3e 22 29 3b 0a 09 09 7d 20 65 6c 73 65 0a 09 09 69 66 28 66 69 6c 65 2e 63 61 6e 52 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_browser_jsp
@@ -3194,7 +2847,7 @@ rule SHELL_browser_jsp
 		$ = {61 6d 73 28 7a 66 2e 67 65 74 49 6e 70 75 74 53 74 72 65 61 6d 28 65 6e 74 72 79 29 2c 20 6e 65 77 20 46 69 6c 65 4f 75 74 70 75 74 53 74 72 65 61 6d 28 6e 29 2c 0a 09 09 09 09 09 09 09 09 09}
 		$ = {20 4d 6f 75 73 65 49 6e 20 25 3e 0a 09 09 69 66 20 28 69 3d 3d 30 29 7b 0a 09 09 09 69 66 20 28 65 72 73 74 2e 63 68 65 63 6b 65 64 20 3d 3d 20 74 72 75 65 29 20 65 6c 65 6d 65 6e 74 2e 63 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_CmdServlet_java
@@ -3206,7 +2859,7 @@ rule SHELL_CmdServlet_java
 		$ = {67 65 74 50 61 72 61 6d 65 74 65 72 28 22 63 6d 64 22 29 20 2b 20 22 5c 6e 3c 2f 62 3e 3c 62 72 3e 3c 62 72 3e 3c 68 72 3e 3c 70 72 65 3e 5c 6e 22 29 3b 0a 09 20 20 20 20 20 20 20 20 50 72 6f}
 		$ = {67 65 74 49 6e 70 75 74 53 74 72 65 61 6d 28 29 29 3b 0a 09 09 09 69 6e 74 20 63 3d 27 5c 30 27 3b 0a 20 20 20 20 20 20 20 20 09 77 68 69 6c 65 20 28 28 63 3d 70 72 6f 63 49 6e 2e 72 65 61 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_up_jsp
@@ -3218,7 +2871,7 @@ rule SHELL_up_jsp
 		$ = {66 69 6e 2e 72 65 61 64 28 29 29 20 21 3d 20 2d 31 20 29 7b 0a 09 69 66 28 20 63 20 3d 3d 20 27 5c 72 27 20 29 20 62 72 65 61 6b 3b 0a 09 73 74 2e 77 72 69 74 65 28 63 29 3b 0a 09 7d 0a 63 3d}
 		$ = {0a 09 72 65 74 75 72 6e 3b 0a 09 7d 0a 0a 62 79 74 65 20 62 5b 5d 20 3d 20 6e 75 6c 6c 3b 0a 77 68 69 6c 65 28 6c 20 3e 20 31 30 32 34 4c 29 7b 0a 09 62 20 3d 20 6e 65 77 20 62 79 74 65 5b 31}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ListServlet_class
@@ -3230,7 +2883,7 @@ rule SHELL_ListServlet_class
 		$ = {28 29 4a 01 00 1b 28 4a 29 4c 6a 61 76 61 2f 6c 61 6e 67 2f 53 74 72 69 6e 67 42 75 66 66 65 72 3b 01 00 11 28 4c 6a 61 76 61 2f 69 6f 2f 46 69 6c 65 3b 29 56 01 00 04 72 65 61 64 01 00 03 28}
 		$ = {14 2d 12 1f b6 00 06 bb 00 12 59 12 20 b7 00 14 3a 0b 19 08 15 09 32 b6 00 21 99 00 0c 2d 12 22 b6 00 06 a7 00 09 2d 12 1d b6 00 06 19 08 15 09 32 b6 00 23 99 00 0c 2d 12 24 b6 00 06 a7 00 09}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd_win32_jsp
@@ -3242,7 +2895,7 @@ rule SHELL_cmd_win32_jsp
 		$ = {75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 63 6d 64 22 29 29 3b 0a 20 20 20 20 20 20 20 20 4f 75 74 70 75 74 53 74 72 65 61 6d 20 6f 73 20 3d 20 70 2e 67 65 74 4f 75 74 70 75 74}
 		$ = {74 72 65 61 6d 20 64 69 73 20 3d 20 6e 65 77 20 44 61 74 61 49 6e 70 75 74 53 74 72 65 61 6d 28 69 6e 29 3b 0a 20 20 20 20 20 20 20 20 53 74 72 69 6e 67 20 64 69 73 72 20 3d 20 64 69 73 2e 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_up_win32_jsp
@@ -3254,7 +2907,7 @@ rule SHELL_up_win32_jsp
 		$ = {66 69 6e 2e 72 65 61 64 28 29 29 20 21 3d 20 2d 31 20 29 7b 0a 09 69 66 28 20 63 20 3d 3d 20 27 5c 72 27 20 29 20 62 72 65 61 6b 3b 0a 09 73 74 2e 77 72 69 74 65 28 63 29 3b 0a 09 7d 0a 63 3d}
 		$ = {0a 09 72 65 74 75 72 6e 3b 0a 09 7d 0a 0a 62 79 74 65 20 62 5b 5d 20 3d 20 6e 75 6c 6c 3b 0a 77 68 69 6c 65 28 6c 20 3e 20 31 30 32 34 4c 29 7b 0a 09 62 20 3d 20 6e 65 77 20 62 79 74 65 5b 31}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_1bb236b5eb
@@ -3266,7 +2919,7 @@ rule SHELL_unknown_1bb236b5eb
 		$ = {72 65 61 64 28 64 61 74 61 29 3b 0a 7d 0a 69 6e 2e 63 6c 6f 73 65 28 29 3b 0a 6f 75 74 2e 63 6c 6f 73 65 28 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 73 65 74 41 74 74 72 69 62 75 74 65 28 22 64 6f}
 		$ = {6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 6f 72 74 22 29 3b 0a 4a 53 65 73 73 69 6f 6e 2e 72 65 6d 6f 76 65 41 74 74 72 69 62 75 74 65 28 22 70 72 6f 67 72 61 6d 22 29 3b 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_java_faces_shell_xhtml
@@ -3278,7 +2931,7 @@ rule SHELL_java_faces_shell_xhtml
 		$ = {65 74 75 72 6e 20 73 74 61 72 74 4d 61 67 69 63 28 29 22 3e 0a 09 09 09 09 09 3c 69 6e 70 75 74 20 61 75 74 6f 63 6f 6d 70 6c 65 74 65 3d 22 6f 66 66 22 20 69 64 3d 27 63 6d 64 27 20 6e 61 6d}
 		$ = {6f 6e 2e 70 61 74 68 6e 61 6d 65 2b 22 3f 64 6f 3d 22 20 2b 20 65 6e 63 6f 64 65 55 52 49 28 64 6f 63 75 6d 65 6e 74 2e 67 65 74 45 6c 65 6d 65 6e 74 42 79 49 64 28 22 63 6d 64 22 29 2e 76 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_netspy_jsp
@@ -3290,7 +2943,7 @@ rule SHELL_netspy_jsp
 		$ = {61 64 50 6f 72 74 52 65 73 75 6c 74 28 73 29 3b 0a 09 69 66 20 28 72 65 73 75 6c 74 20 21 3d 20 6e 75 6c 6c 29 20 7b 0a 09 09 74 72 79 20 7b 0a 09 09 09 70 77 78 2e 70 72 69 6e 74 6c 6e 28 72}
 		$ = {6c 6e 28 61 64 64 72 29 3b 0a 09 09 09 09 09 09 09 09 09 48 74 74 70 55 52 4c 43 6f 6e 6e 65 63 74 69 6f 6e 20 63 6f 6e 6e 20 3d 20 67 65 74 48 54 54 50 43 6f 6e 6e 28 61 64 64 72 29 3b 0a 09}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Jspspyweb_jsp
@@ -3302,7 +2955,7 @@ rule SHELL_Jspspyweb_jsp
 		$ = {28 29 2b 22 3c 2f 74 64 3e 3c 2f 74 72 3e 22 29 3b 0a 20 6f 75 74 2e 70 72 69 6e 74 28 22 3c 74 72 3e 3c 74 64 3e 69 70 b5 d8 d6 b7 3c 2f 74 64 3e 3c 74 64 3e 22 2b 49 6e 65 74 41 64 64 72 65}
 		$ = {c4 dc a3 ac c6 da b4 fd cf c2 d2 bb b8 f6 56 31 2e 31 b0 e6 b1 be b0 c9 3a 2d 29 20 3c 2f 70 3e 22 29 3b 0a 7d 0a 70 75 62 6c 69 63 20 76 6f 69 64 20 61 62 6f 75 74 4a 73 70 79 28 4a 73 70 57}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_f9069509be
@@ -3314,7 +2967,7 @@ rule SHELL_unknown_f9069509be
 		$ = {c8 e7 b9 fb c0 fb d3 c3 b1 be b9 a6 c4 dc c0 b4 c6 f4 b6 af b3 cc d0 f2 a3 ac c4 c7 53 68 65 6c 6c bd ab bb e1 bf a8 d7 a1 20 a3 ac d6 bb d3 d0 b5 c8 b3 cc d0 f2 cd cb b3 f6 d2 d4 ba f3 53 68}
 		$ = {b8 f6 76 65 72 a3 ac b6 e0 ca e4 c8 eb bc b8 b4 ce be cd bf c9 d2 d4 bf b4 b5 bd ca e4 b3 f6 c1 cb a3 ac d5 e2 ca b1 be cd bf c9 d2 d4 bd bb bb a5 c1 cb a1 a3 0a 0a 09 09 09 b5 e3 bb f7 cf c2}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_a2d4db9f4e
@@ -3326,7 +2979,7 @@ rule SHELL_unknown_a2d4db9f4e
 		$ = {32 3a 2f 2f e4 b8 bb e6 9c ba e5 9c b0 e5 9d 80 3a e7 ab af e5 8f a3 2f e6 95 b0 e6 8d ae e5 ba 93 e5 90 8d 20 0a e5 b8 90 e5 8f b7 20 0a e5 af 86 e7 a0 81 20 0a 0a 49 6e 66 6f 72 6d 69 78 ef}
 		$ = {93 e5 90 8d 20 0a e5 b8 90 e5 8f b7 20 0a e5 af 86 e7 a0 81 20 0a 0a 50 6f 73 74 67 72 65 53 51 4c 3a 20 0a 6f 72 67 2e 70 6f 73 74 67 72 65 73 71 6c 2e 44 72 69 76 65 72 20 0a 6a 64 62 63 3a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_477dadd904
@@ -3338,7 +2991,7 @@ rule SHELL_unknown_477dadd904
 		$ = {66 3a 22 29 21 3d 2d 31 29 7b 46 69 6c 65 20 66 69 6c 65 3d 6e 65 77 20 46 69 6c 65 28 70 29 3b 69 66 28 71 2e 69 6e 64 65 78 4f 66 28 22 2d 74 6f 3a 22 29 3d 3d 2d 31 29 7b 66 69 6c 65 2e 6d}
 		$ = {2c 73 62 29 3b 7d 65 6c 73 65 20 69 66 28 5a 2e 65 71 75 61 6c 73 28 22 43 22 29 29 7b 53 74 72 69 6e 67 20 6c 3d 22 22 3b 42 75 66 66 65 72 65 64 52 65 61 64 65 72 20 62 72 3d 6e 65 77 20 42}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_c76c2b27a9
@@ -3350,7 +3003,7 @@ rule SHELL_unknown_c76c2b27a9
 		$ = {28 22 2d 2d 66 3a 22 29 21 3d 2d 31 29 7b 46 69 6c 65 20 66 69 6c 65 3d 6e 65 77 20 46 69 6c 65 28 70 29 3b 69 66 28 71 2e 69 6e 64 65 78 4f 66 28 22 2d 74 6f 3a 22 29 3d 3d 2d 31 29 7b 66 69}
 		$ = {2c 73 62 29 3b 7d 65 6c 73 65 20 69 66 28 5a 2e 65 71 75 61 6c 73 28 22 43 22 29 29 7b 53 74 72 69 6e 67 20 6c 3d 22 22 3b 42 75 66 66 65 72 65 64 52 65 61 64 65 72 20 62 72 3d 6e 65 77 20 42}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_2e6c1ca060
@@ -3362,7 +3015,7 @@ rule SHELL_unknown_2e6c1ca060
 		$ = {2e 69 6e 64 65 78 4f 66 28 22 2d 74 6f 3a 22 29 3d 3d 2d 31 29 7b 0a 09 09 09 09 09 66 69 6c 65 2e 6d 6b 64 69 72 28 29 3b 0a 09 09 09 09 7d 0a 09 09 09 09 62 77 20 3d 20 6e 65 77 20 42 75 66}
 		$ = {7b 0a 09 09 09 53 74 72 69 6e 67 20 6c 20 3d 20 22 22 3b 0a 09 09 09 42 75 66 66 65 72 65 64 52 65 61 64 65 72 20 62 72 20 3d 20 6e 65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Chropper_java
@@ -3374,7 +3027,7 @@ rule SHELL_Chropper_java
 		$ = {77 20 46 69 6c 65 28 70 29 3b 0a 09 09 09 09 69 66 28 71 2e 69 6e 64 65 78 4f 66 28 22 2d 74 6f 3a 22 29 3d 3d 2d 31 29 7b 0a 09 09 09 09 09 66 69 6c 65 2e 6d 6b 64 69 72 28 29 3b 0a 09 09 09}
 		$ = {74 22 29 3b 0a 09 09 09 09 69 66 20 28 21 73 2e 73 75 62 73 74 72 69 6e 67 28 30 2c 20 31 29 2e 65 71 75 61 6c 73 28 22 2f 22 29 29 20 7b 0a 09 09 09 09 09 41 41 28 73 62 29 3b 0a 09 09 09 09}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_6_jpg
@@ -3386,7 +3039,7 @@ rule SHELL_6_jpg
 		$ = {6d 3a e5 f5 5d 43 ed 7a 6d d4 1e 18 3a 5d cc 2f 0d 9c 56 b6 b3 c5 24 b3 e9 56 fb cb dd 4a 02 19 90 00 ce 8f 1f 97 7c 45 d0 6d 3c 01 ad 49 65 25 f7 da ec 64 b3 b0 d4 6d a7 78 fc 99 1e d3 54 b3}
 		$ = {a9 69 56 7a a5 a1 b3 b9 4f 94 7d d2 3a a1 1d 08 a8 f4 bd 22 df 4c 59 1d 00 33 ce 4b 48 e0 63 24 f6 19 24 80 3b 0c d6 7e b7 e2 6b 3d 2e d9 5e 33 e6 4b 29 c2 00 33 80 3a b1 1c 74 f4 c8 cf 4f 71}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cat_jsp
@@ -3398,7 +3051,7 @@ rule SHELL_cat_jsp
 		$ = {63 74 69 6f 6e 29 29 7b 0a 09 09 09 09 72 65 73 70 6f 6e 73 65 2e 73 65 74 43 6f 6e 74 65 6e 74 54 79 70 65 28 22 61 70 70 6c 69 63 61 74 69 6f 6e 2f 78 2d 64 6f 77 6e 6c 6f 61 64 22 29 3b 0a}
 		$ = {3c 2f 73 74 72 6f 6e 67 3e 3c 2f 66 6f 6e 74 3e 3c 2f 74 64 3e 0a 3c 74 64 20 61 6c 69 67 6e 3d 22 72 69 67 68 74 22 3e 3c 66 6f 6e 74 20 73 69 7a 65 3d 22 2b 31 22 3e 3c 73 74 72 6f 6e 67 3e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_2_jpg
@@ -3410,7 +3063,7 @@ rule SHELL_2_jpg
 		$ = {f1 5e be 67 c8 73 78 6a 5f 14 7e d1 7a 0f 82 f4 db 48 34 ad 1f 5e b1 d2 7c 59 e2 ed 05 a6 81 ee b4 bb ff 00 0e 15 5d 3d 2e 16 d1 e5 84 35 dc af 69 82 24 2a e9 a7 b0 4d ea 49 1c 1f c2 ef 86 fe}
 		$ = {bc 0c 5a d2 fe 3c fc 57 fb 65 87 8d e7 d3 b4 6f f8 57 17 de 2c 9f c1 d0 da 07 9d f5 c8 de 1d 42 4d 26 3b f9 2e 5a 53 04 81 ee a2 cb 5b 08 83 ac 4d bf ce 66 52 87 ea fb 5f 04 78 5e ca f3 42 bf}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_3_jpg
@@ -3422,7 +3075,7 @@ rule SHELL_3_jpg
 		$ = {b8 8e d5 ee 4b ca f2 3a c8 23 60 10 ce e0 a8 f7 b8 7c 77 a9 bf c4 ad 4f c0 b7 3e 18 be b7 d2 b4 ed 2e 2d 44 6b ae d1 7d 86 57 92 42 86 d9 40 6f 37 cc 50 a5 89 db b7 00 e4 8f 97 77 0f 3f ec c1}
 		$ = {46 d1 6e fc 38 6d fc 3f e1 8f 17 eb 5e 2d 5d 7d ae 2d 9e de f2 0d 56 ca ee 18 ed 23 85 65 fb 52 5c 24 b7 ec af be 21 17 97 06 e5 90 99 02 2f d8 3a 85 85 ae a9 61 73 a6 5e a9 7b 7b b8 de 19 15}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_5_jpg
@@ -3434,7 +3087,7 @@ rule SHELL_5_jpg
 		$ = {66 44 bb d8 40 92 58 5c 88 88 f2 ed df 62 99 24 54 93 71 93 7b eb ff 00 da db d5 bd 5e 96 49 ee dc 6d 75 14 54 a3 67 a6 9e bf de bf a2 db bd d6 d6 92 39 3f 0a 7f c1 49 f4 4f 1c 78 fb c4 9e 2e}
 		$ = {fd 8d fc 33 f1 47 c4 de 15 f8 c7 e0 48 57 4a f8 8f e0 79 21 7b 4b 85 b9 7b 31 a8 5b c0 36 ad ad cd d2 c5 3b a1 51 fe ae 7f 2e 47 4e 84 10 7e 5e a3 f6 57 fd 95 3c 07 fb 20 7c 32 97 45 f0 c5 b4}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd1_jsp
@@ -3442,7 +3095,7 @@ rule SHELL_cmd1_jsp
 	strings:
 		$ = {3c 25 52 75 6e 74 69 6d 65 2e 67 65 74 52 75 6e 74 69 6d 65 28 29 2e 65 78 65 63 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 69 22 29 29 3b 25 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_test_php
@@ -3454,7 +3107,7 @@ rule SHELL_test_php
 		$ = {73 28 24 66 69 6c 65 6e 61 6d 65 2c 20 24 64 61 74 61 29 3b 0a 20 20 20 20 20 65 63 68 6f 20 22 3c 73 63 72 69 70 74 3e 68 69 73 74 6f 72 79 2e 62 61 63 6b 28 2d 31 29 3b 61 6c 65 72 74 28 27}
 		$ = {68 61 72 73 65 74 27 5d 3a 22 55 54 46 2d 38 22 29 3b 0a 7d 0a 3f 3e 0a 3c 73 63 72 69 70 74 3e 0a 66 75 6e 63 74 69 6f 6e 20 67 65 74 28 70 29 7b 0a 20 20 20 20 20 64 6f 63 75 6d 65 6e 74 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_1_jpg
@@ -3466,7 +3119,7 @@ rule SHELL_1_jpg
 		$ = {c9 75 88 a6 2f 89 c3 47 73 b9 46 c0 9a b8 fd fa 69 d7 5b 7e 5d 42 2a f6 f3 bf e1 7f cc fd 3c a2 be 4a fd 98 75 7f 12 5b eb 5f 12 3e 1c f8 9a f3 54 9f fe 11 9d 52 d6 4d 3a 0d 66 fe 3d 5a f6 df}
 		$ = {7f 6f 7f d3 0f fc 7b ff 00 ad 40 1d 15 15 ce ff 00 6f 7f d3 0f fc 7b ff 00 ad 47 f6 f7 fd 30 ff 00 c7 bf fa d4 01 d1 51 5c ef f6 f7 fd 30 ff 00 c7 bf fa d4 7f 6f 7f d3 0f fc 7b ff 00 ad 40 1d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cat_jar
@@ -3478,7 +3131,7 @@ rule SHELL_cat_jar
 		$ = {05 fa 1b 39 76 f2 bb 7a 06 57 d3 f9 d7 f6 94 3a f1 b0 bb d7 d1 31 09 6f 43 a3 a3 36 81 d7 f9 1a 13 78 c3 50 47 c1 6d 2f bf d0 30 6b f9 12 f2 0c c4 d2 4d 3b 8b 89 e5 7c 3e da ca b1 87 07 f7 f3}
 		$ = {2c e7 c8 c1 fd eb c4 79 e2 7c ba d6 41 47 d8 db 69 b4 47 ac 10 2b d3 ac bd 8f 32 32 95 bb ce 5a 97 c5 aa 1e c7 a6 49 2c 6c 58 7c 61 9f af 29 21 7c 56 b5 72 35 4d 5d 5f 20 16 37 3c 7a fb cb cf}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_4_jpg
@@ -3490,7 +3143,7 @@ rule SHELL_4_jpg
 		$ = {bc 41 86 a3 47 18 e9 d0 4d 43 dd 76 7b ab c5 36 9e 9d 1b 6b b9 ee f0 d6 2e b5 7c 12 a9 89 69 cf de 57 5b 3b 49 a4 d7 aa 49 9e a1 e1 5f da 5e 3f 17 0b 77 d3 b4 7b 7c 36 a5 67 63 22 fd bc ab 84}
 		$ = {ff 00 e4 aa 3f e1 5a 78 77 fe 7f 35 9f fc 1e ea bf fc 95 40 1d fd 15 c0 7f c2 b4 f0 ef fc fe 6b 3f f8 3d d5 7f f9 2a 8f f8 56 9e 1d ff 00 9f cd 67 ff 00 07 ba af ff 00 25 50 07 7f 45 70 1f f0}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Cat_java
@@ -3502,7 +3155,7 @@ rule SHELL_Cat_java
 		$ = {20 49 4f 45 78 63 65 70 74 69 6f 6e 7b 0a 09 09 63 6f 70 79 49 6e 70 75 74 53 74 72 65 61 6d 54 6f 46 69 6c 65 28 6e 65 77 20 55 52 4c 28 75 72 6c 29 2e 6f 70 65 6e 43 6f 6e 6e 65 63 74 69 6f}
 		$ = {6c 66 6f 72 6d 65 64 55 52 4c 45 78 63 65 70 74 69 6f 6e 0a 09 20 2a 20 40 74 68 72 6f 77 73 20 49 4f 45 78 63 65 70 74 69 6f 6e 0a 09 20 2a 2f 0a 09 70 75 62 6c 69 63 20 73 74 61 74 69 63 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd2_jsp
@@ -3513,7 +3166,7 @@ rule SHELL_cmd2_jsp
 		$ = {3b 0a 20 20 20 20 20 20 20 20 62 79 74 65 5b 5d 20 62 20 3d 20 6e 65 77 20 62 79 74 65 5b 32 30 34 38 5d 3b 0a 20 20 20 20 20 20 20 20 6f 75 74 2e 70 72 69 6e 74 28 22 3c 70 72 65 3e 22 29 3b}
 		$ = {3e 22 29 3b 0a 20 20 20 20 20 20 20 20 77 68 69 6c 65 28 28 61 3d 69 6e 2e 72 65 61 64 28 62 29 29 21 3d 2d 31 29 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 6f 75 74 2e 70 72 69 6e 74 6c 6e 28}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_webshell_txt
@@ -3525,7 +3178,7 @@ rule SHELL_webshell_txt
 		$ = {6f 61 64 2e 6a 73 70 0a 30 30 30 2e 6a 73 70 0a 69 6e 66 6f 2e 6a 73 70 0a 6c 6e 64 65 78 2e 6a 73 70 0a 63 2e 6a 73 70 0a 6f 6e 65 2e 6a 73 70 0a 30 2e 6a 73 70 0a 69 6e 62 2e 6a 73 70 0a 74}
 		$ = {6a 73 70 0a 62 61 6e 6e 65 72 33 2e 6a 73 70 0a 6d 31 2e 6a 73 70 0a 6a 34 2e 6a 73 70 0a 6f 62 6a 65 63 74 65 2e 6a 73 70 0a 66 63 6b 2e 6a 73 70 0a 67 65 74 73 2e 6a 73 70 0a 50 61 73 73 77}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_dict_txt
@@ -3537,7 +3190,7 @@ rule SHELL_dict_txt
 		$ = {6f 6d 6f 74 6f 0a 63 69 73 63 6f 0a 35 36 31 39 43 45 4c 4c 0a 72 61 75 6c 72 75 6c 7a 37 0a 66 69 6e 61 6c 77 61 72 0a 63 6f 6f 6e 61 73 73 0a 31 30 31 6d 6c 62 0a 65 64 75 61 72 64 6f 64 6c}
 		$ = {0a 31 31 30 36 36 39 0a 31 37 30 31 37 30 34 0a 76 6f 6c 76 6f 31 0a 73 6d 61 37 33 33 36 0a 62 6c 61 62 6c 61 0a 74 69 67 65 72 38 0a 43 4c 55 42 50 45 49 4e 47 55 49 4e 0a 70 68 69 6b 61 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd_cfm
@@ -3549,7 +3202,7 @@ rule SHELL_cmd_cfm
 		$ = {74 69 6d 65 6f 75 74 22 29 3e 20 76 61 6c 75 65 3d 22 23 66 6f 72 6d 2e 74 69 6d 65 6f 75 74 23 22 20 3c 63 66 65 6c 73 65 3e 20 76 61 6c 75 65 3d 22 35 22 20 3c 2f 63 66 69 66 3e 20 3e 20 3c}
 		$ = {63 66 73 61 76 65 63 6f 6e 74 65 6e 74 20 76 61 72 69 61 62 6c 65 3d 22 6d 79 56 61 72 22 3e 0a 3c 63 66 65 78 65 63 75 74 65 20 6e 61 6d 65 20 3d 20 22 23 46 6f 72 6d 2e 63 6d 64 23 22 20 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cfExec_cfm
@@ -3561,7 +3214,7 @@ rule SHELL_cfExec_cfm
 		$ = {3c 62 72 3e 3c 62 72 3e 3c 62 3e 44 61 74 61 73 6f 75 72 63 65 20 43 72 65 64 65 6e 74 69 61 6c 73 3a 3c 2f 62 3e 3c 62 72 3e 22 29 3b 0a 09 77 72 69 74 65 6f 75 74 70 75 74 28 22 3c 74 61 62}
 		$ = {6f 72 64 22 5d 2c 0a 09 67 65 6e 65 72 61 74 65 33 44 65 73 4b 65 79 28 22 30 79 4a 21 40 31 24 72 38 70 30 4c 40 72 31 24 36 79 4a 21 40 31 72 6a 22 29 2c 20 22 44 45 53 65 64 65 22 2c 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cfSQL_cfm
@@ -3573,7 +3226,7 @@ rule SHELL_cfSQL_cfm
 		$ = {3c 63 66 6c 6f 6f 70 20 66 72 6f 6d 3d 22 30 22 20 74 6f 3d 22 23 72 75 6e 73 71 6c 2e 52 65 63 6f 72 64 43 6f 75 6e 74 23 22 20 69 6e 64 65 78 3d 22 72 6f 77 22 3e 0a 20 20 20 20 20 20 20 20}
 		$ = {70 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 2f 74 72 3e 0a 20 20 20 20 20 20 20 20 3c 63 66 65 6c 73 65 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 74 72 3e 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd_c
@@ -3585,7 +3238,7 @@ rule SHELL_cmd_c
 		$ = {22 29 3b 0a 0a 20 20 63 6d 64 3d 28 63 68 61 72 20 2a 29 67 65 74 65 6e 76 28 22 51 55 45 52 59 5f 53 54 52 49 4e 47 22 29 3b 0a 0a 20 20 69 66 28 21 63 6d 64 20 7c 7c 20 73 74 72 6c 65 6e 28}
 		$ = {5c 22 20 76 61 6c 75 65 3d 5c 22 53 65 6e 64 5c 22 3e 22 29 3b 0a 20 20 20 20 70 72 69 6e 74 66 28 22 3c 62 72 3e 3c 62 72 3e 3c 68 72 3e 3c 2f 66 6f 72 6d 3e 22 29 3b 0a 20 20 20 20 7d 20 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_up_sh
@@ -3597,7 +3250,7 @@ rule SHELL_up_sh
 		$ = {74 65 73 74 0a 0a 6c 69 6e 65 61 73 3d 60 63 61 74 20 2f 74 6d 70 2f 74 65 73 74 20 7c 20 77 63 20 2d 6c 60 0a 23 65 63 68 6f 20 4c 49 4e 3a 20 24 6c 69 6e 65 61 73 0a 6c 69 6e 65 61 73 32 3d}
 		$ = {2d 20 31 60 0a 23 65 63 68 6f 20 4c 49 4e 33 3a 20 24 6c 69 6e 65 61 73 33 0a 0a 23 65 63 68 6f 20 22 3c 68 72 3e 22 0a 0a 74 61 69 6c 20 2d 24 6c 69 6e 65 61 73 32 20 2f 74 6d 70 2f 74 65 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd_sh
@@ -3609,7 +3262,7 @@ rule SHELL_cmd_sh
 		$ = {6e 0a 09 50 41 52 43 3d 22 37 22 0a 65 6c 69 66 20 28 65 76 61 6c 20 24 54 45 53 54 20 5c 22 24 50 41 52 43 5c 22 20 5c 3d 20 5c 22 38 5c 22 20 29 3b 20 74 68 65 6e 0a 09 50 41 52 43 3d 22 38}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3f 3c 2d 20 65 6c 20 72 65 73 74 6f 20 73 65 20 69 67 6e 6f 72 61 6e 2c 20 73 6f 6e 20 3e 31 32 38 20 20 0a 20 20 50 41 52 43 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_list_sh
@@ -3621,7 +3274,7 @@ rule SHELL_list_sh
 		$ = {20 20 20 69 66 20 5b 20 22 24 72 6f 6f 74 22 20 21 3d 20 22 31 22 20 5d 0a 20 20 20 20 20 20 74 68 65 6e 0a 20 20 20 20 20 20 65 63 68 6f 20 22 28 20 29 20 3c 61 20 68 72 65 66 3d 3f 22 24 51}
 		$ = {20 20 20 20 20 64 6f 0a 20 20 20 20 20 20 69 66 20 5b 20 22 24 72 6f 6f 74 22 20 3d 3d 20 22 31 22 20 5d 20 0a 20 20 20 20 20 20 20 20 74 68 65 6e 20 0a 20 20 20 20 20 20 20 20 65 63 68 6f 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ntdaddy_asp
@@ -3633,7 +3286,7 @@ rule SHELL_ntdaddy_asp
 		$ = {65 20 20 33 34 20 20 27 45 78 74 72 61 0a 46 69 6c 65 41 74 74 72 69 62 75 74 65 73 20 20 3d 20 20 22 48 69 64 64 65 6e 2c 20 20 41 72 63 68 69 76 65 22 0a 63 61 73 65 20 20 33 38 20 20 27 45}
 		$ = {28 29 0a 44 69 6d 20 20 52 65 73 75 6c 74 0a 53 65 74 20 20 52 65 73 75 6c 74 20 20 3d 20 20 4e 6f 74 68 69 6e 67 0a 49 66 20 20 52 65 71 75 65 73 74 2e 53 65 72 76 65 72 56 61 72 69 61 62 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_list_txt
@@ -3645,7 +3298,7 @@ rule SHELL_list_txt
 		$ = {74 22 29 0a 09 73 65 74 20 66 6f 6c 64 65 72 20 3d 20 66 73 2e 47 65 74 46 6f 6c 64 65 72 28 70 61 74 68 29 0a 0a 09 52 65 73 70 6f 6e 73 65 2e 57 72 69 74 65 28 22 3c 62 72 3e 28 20 29 20 3c}
 		$ = {65 3d 22 20 26 20 73 65 72 76 65 72 2e 55 52 4c 65 6e 63 6f 64 65 28 69 74 65 6d 2e 70 61 74 68 29 20 26 20 22 5c 3e 22 20 26 20 69 74 65 6d 2e 4e 61 6d 65 20 26 20 22 3c 2f 61 3e 22 20 26 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_list_asp
@@ -3657,7 +3310,7 @@ rule SHELL_list_asp
 		$ = {74 22 29 0a 09 73 65 74 20 66 6f 6c 64 65 72 20 3d 20 66 73 2e 47 65 74 46 6f 6c 64 65 72 28 70 61 74 68 29 0a 0a 09 52 65 73 70 6f 6e 73 65 2e 57 72 69 74 65 28 22 3c 62 72 3e 28 20 29 20 3c}
 		$ = {65 3d 22 20 26 20 73 65 72 76 65 72 2e 55 52 4c 65 6e 63 6f 64 65 28 69 74 65 6d 2e 70 61 74 68 29 20 26 20 22 5c 3e 22 20 26 20 69 74 65 6d 2e 4e 61 6d 65 20 26 20 22 3c 2f 61 3e 22 20 26 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmdasp_aspx
@@ -3669,7 +3322,7 @@ rule SHELL_cmdasp_aspx
 		$ = {49 4e 44 45 58 3a 20 31 30 31 3b 20 4c 45 46 54 3a 20 34 30 35 70 78 3b 20 50 4f 53 49 54 49 4f 4e 3a 20 61 62 73 6f 6c 75 74 65 3b 20 54 4f 50 3a 20 32 30 70 78 22 20 72 75 6e 61 74 3d 22 73}
 		$ = {65 5f 43 6c 69 63 6b 22 3e 3c 2f 61 73 70 3a 42 75 74 74 6f 6e 3e 0a 3c 61 73 70 3a 4c 61 62 65 6c 20 69 64 3d 22 6c 62 6c 54 65 78 74 22 20 73 74 79 6c 65 3d 22 5a 2d 49 4e 44 45 58 3a 20 31}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd_asp
@@ -3681,7 +3334,7 @@ rule SHELL_cmd_asp
 		$ = {20 74 79 70 65 3d 22 74 65 78 74 22 20 6e 61 6d 65 3d 22 63 6d 64 22 20 73 69 7a 65 3d 34 35 20 76 61 6c 75 65 3d 22 3c 25 3d 20 73 7a 43 4d 44 20 25 3e 22 3e 0a 3c 69 6e 70 75 74 20 74 79 70}
 		$ = {65 74 2e 55 73 65 72 4e 61 6d 65 20 25 3e 0a 3c 62 72 3e 0a 3c 25 0a 20 20 49 66 20 28 49 73 4f 62 6a 65 63 74 28 6f 46 69 6c 65 29 29 20 54 68 65 6e 0a 20 20 20 20 4f 6e 20 45 72 72 6f 72 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd_asp_5_1_asp
@@ -3693,7 +3346,7 @@ rule SHELL_cmd_asp_5_1_asp
 		$ = {66 20 0a 25 3e 0a 3c 46 4f 52 4d 20 61 63 74 69 6f 6e 3d 22 3c 25 3d 20 52 65 71 75 65 73 74 2e 53 65 72 76 65 72 56 61 72 69 61 62 6c 65 73 28 22 55 52 4c 22 29 20 25 3e 22 20 6d 65 74 68 6f}
 		$ = {4e 61 6d 65 25 3e 3c 42 52 3e 0a 55 73 65 72 6e 61 6d 65 3a 20 3c 25 3d 6f 53 4e 65 74 2e 55 73 65 72 4e 61 6d 65 25 3e 3c 62 72 3e 0a 3c 25 20 0a 49 66 20 28 49 73 4f 62 6a 65 63 74 28 6f 46}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_up_asp
@@ -3705,7 +3358,7 @@ rule SHELL_up_asp
 		$ = {22 22 0a 20 20 20 20 20 46 6f 72 20 69 6e 74 43 6f 75 6e 74 20 3d 20 31 20 74 6f 20 4c 65 6e 42 28 53 74 72 69 6e 67 42 69 6e 29 0a 20 20 20 20 20 20 20 20 20 20 67 65 74 53 74 72 69 6e 67 20}
 		$ = {6f 61 64 52 65 71 75 65 73 74 2e 49 74 65 6d 28 22 70 61 74 68 22 29 2e 49 74 65 6d 28 22 56 61 6c 75 65 22 29 0a 0a 20 20 20 20 20 20 20 20 20 20 66 69 6c 65 6e 61 6d 65 20 3d 20 70 61 74 68}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd_aspx
@@ -3717,7 +3370,7 @@ rule SHELL_cmd_aspx
 		$ = {20 72 75 6e 61 74 3d 22 73 65 72 76 65 72 22 3e 20 20 20 20 20 20 20 20 0a 3c 70 3e 3c 61 73 70 3a 4c 61 62 65 6c 20 69 64 3d 22 4c 5f 70 22 20 72 75 6e 61 74 3d 22 73 65 72 76 65 72 22 20 77}
 		$ = {3e 41 72 67 75 6d 65 6e 74 73 3c 2f 61 73 70 3a 4c 61 62 65 6c 3e 20 20 20 20 20 20 20 20 0a 3c 61 73 70 3a 54 65 78 74 42 6f 78 20 69 64 3d 22 78 63 6d 64 22 20 72 75 6e 61 74 3d 22 73 65 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmdasp_asp
@@ -3729,7 +3382,7 @@ rule SHELL_cmdasp_asp
 		$ = {3c 48 54 4d 4c 3e 0a 3c 42 4f 44 59 3e 0a 3c 46 4f 52 4d 20 61 63 74 69 6f 6e 3d 22 3c 25 3d 20 52 65 71 75 65 73 74 2e 53 65 72 76 65 72 56 61 72 69 61 62 6c 65 73 28 22 55 52 4c 22 29 20 25}
 		$ = {62 72 3e 0a 3c 25 0a 20 20 49 66 20 28 49 73 4f 62 6a 65 63 74 28 6f 46 69 6c 65 29 29 20 54 68 65 6e 0a 20 20 20 20 27 20 2d 2d 20 52 65 61 64 20 74 68 65 20 6f 75 74 70 75 74 20 66 72 6f 6d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_up_php
@@ -3741,7 +3394,7 @@ rule SHELL_up_php
 		$ = {66 6f 72 6d 3e 3c 62 72 3e 3c 62 72 3e 3c 62 72 3e 0a 0a 3c 3f 0a 0a 69 66 28 69 73 5f 75 70 6c 6f 61 64 65 64 5f 66 69 6c 65 28 24 48 54 54 50 5f 50 4f 53 54 5f 46 49 4c 45 53 5b 27 75 73 65}
 		$ = {45 53 5b 27 75 73 65 72 66 69 6c 65 27 5d 5b 27 74 6d 70 5f 6e 61 6d 65 27 5d 2c 20 24 5f 50 4f 53 54 5b 27 72 65 6d 6f 74 65 66 69 6c 65 27 5d 29 3b 0a 20 20 20 65 63 68 6f 20 22 55 70 6c 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_list_php
@@ -3753,7 +3406,7 @@ rule SHELL_list_php
 		$ = {69 63 68 65 72 6f 20 2e 20 22 2f 22 20 2e 20 24 66 69 6c 65 6e 61 6d 65 20 2e 20 22 3e 22 20 2e 20 24 66 69 6c 65 6e 61 6d 65 20 2e 20 22 3c 2f 61 3e 3c 62 72 3e 22 3b 0a 20 20 20 20 7d 0a 20}
 		$ = {20 7b 0a 20 20 65 63 68 6f 20 22 46 49 4c 45 3a 20 22 20 2e 20 24 66 69 63 68 65 72 6f 20 2e 20 22 3c 62 72 3e 3c 68 72 3e 3c 70 72 65 3e 22 3b 0a 20 20 24 66 70 20 3d 20 66 6f 70 65 6e 28 24}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_php_backdoor_php
@@ -3765,7 +3418,7 @@ rule SHELL_php_backdoor_php
 		$ = {6e 64 3a 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 6e 61 6d 65 3d 22 63 22 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 73 75 62 6d 69 74 22 20 76 61 6c 75 65 3d 22 67 6f 22 3e}
 		$ = {3c 62 72 3e 66 6f 72 20 65 78 61 6d 70 6c 65 3a 0a 68 74 74 70 3a 2f 2f 3c 3f 20 65 63 68 6f 20 24 53 45 52 56 45 52 5f 4e 41 4d 45 2e 24 52 45 51 55 45 53 54 5f 55 52 49 3b 20 3f 3e 3f 64 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_simple_backdoor_php
@@ -3776,7 +3429,7 @@ rule SHELL_simple_backdoor_php
 		$ = {0a 20 20 20 20 20 20 20 20 73 79 73 74 65 6d 28 24 63 6d 64 29 3b 0a 20 20 20 20 20 20 20 20 65 63 68 6f 20 22 3c 2f 70 72 65 3e 22 3b 0a 20 20 20 20 20 20 20 20 64 69 65 3b 0a 7d 0a 0a 3f 3e}
 		$ = {64 69 65 3b 0a 7d 0a 0a 3f 3e 0a 0a 55 73 61 67 65 3a 20 68 74 74 70 3a 2f 2f 74 61 72 67 65 74 2e 63 6f 6d 2f 73 69 6d 70 6c 65 2d 62 61 63 6b 64 6f 6f 72 2e 70 68 70 3f 63 6d 64 3d 63 61 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd_php
@@ -3787,7 +3440,7 @@ rule SHELL_cmd_php
 		$ = {72 6d 22 20 41 43 54 49 4f 4e 3d 22 22 3e 0a 3c 49 4e 50 55 54 20 54 59 50 45 3d 22 74 65 78 74 22 20 4e 41 4d 45 3d 22 63 6d 64 22 3e 0a 3c 49 4e 50 55 54 20 54 59 50 45 3d 22 73 75 62 6d 69}
 		$ = {54 59 50 45 3d 22 73 75 62 6d 69 74 22 20 56 41 4c 55 45 3d 22 53 65 6e 64 22 3e 0a 3c 2f 46 4f 52 4d 3e 0a 3c 70 72 65 3e 0a 3c 3f 0a 69 66 28 24 5f 47 45 54 5b 27 63 6d 64 27 5d 29 20 7b 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_up_pl
@@ -3799,7 +3452,7 @@ rule SHELL_up_pl
 		$ = {61 73 6f 6e 3a 20 24 21 0a 3c 62 72 3e 0a 4d 61 6b 65 20 73 75 72 65 20 74 68 61 74 20 79 6f 75 72 20 77 65 62 20 73 65 72 76 65 72 20 68 61 73 20 72 65 61 64 20 70 65 72 6d 69 73 73 69 6f 6e}
 		$ = {20 77 68 69 6c 65 20 28 24 62 79 74 65 73 5f 72 65 61 64 3d 72 65 61 64 28 24 66 69 6c 65 70 61 74 68 2c 24 62 75 66 66 2c 32 30 39 36 29 29 0a 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 24 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd_pl
@@ -3811,7 +3464,7 @@ rule SHELL_cmd_pl
 		$ = {65 20 63 6f 6d 6d 61 6e 64 22 3b 0a 0a 20 20 77 68 69 6c 65 28 3c 43 4d 44 3e 29 20 7b 0a 20 20 20 20 70 72 69 6e 74 3b 0a 20 20 7d 0a 0a 20 20 63 6c 6f 73 65 28 43 4d 44 29 3b 0a 20 20 70 72}
 		$ = {20 66 6f 72 65 61 63 68 20 6d 79 20 24 70 61 69 72 20 28 73 70 6c 69 74 28 27 26 27 2c 20 24 69 6e 70 75 74 29 29 20 7b 0a 20 20 20 20 6d 79 20 28 24 76 61 72 2c 20 24 76 61 6c 75 65 29 20 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_perlcmd_cgi
@@ -3823,7 +3476,7 @@ rule SHELL_perlcmd_cgi
 		$ = {72 67 65 74 2e 63 6f 6d 2f 70 65 72 6c 63 6d 64 2e 63 67 69 3f 63 61 74 20 2f 65 74 63 2f 70 61 73 73 77 64 22 3b 0a 09 7d 0a 09 65 6c 73 65 20 7b 0a 09 09 70 72 69 6e 74 20 22 45 78 65 63 75}
 		$ = {09 6d 79 20 40 63 6d 64 20 3d 20 60 24 72 65 71 60 3b 0a 09 70 72 69 6e 74 20 22 3c 2f 70 72 65 3e 22 3b 0a 0a 09 66 6f 72 65 61 63 68 20 6d 79 20 24 6c 69 6e 65 20 28 40 63 6d 64 29 20 7b 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_list_pl
@@ -3835,7 +3488,7 @@ rule SHELL_list_pl
 		$ = {68 65 78 28 24 31 29 29 2f 65 67 3b 0a 0a 20 20 20 20 20 20 24 72 65 74 7b 24 76 61 72 7d 20 3d 20 24 76 61 6c 75 65 3b 0a 20 20 20 20 7d 0a 20 20 7d 0a 0a 20 20 72 65 74 75 72 6e 20 25 72 65}
 		$ = {2f 61 3e 22 3b 0a 20 20 7d 20 65 6c 73 65 20 7b 0a 20 20 20 20 24 72 65 74 20 2e 3d 20 22 24 66 69 6c 65 6e 61 6d 65 20 3c 61 20 68 72 65 66 3d 5c 22 3f 70 61 74 68 3d 24 66 69 6c 65 5c 22 3e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_dc33a9fe16
@@ -3847,7 +3500,7 @@ rule SHELL_unknown_dc33a9fe16
 		$ = {0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 6f 75 74 2e 70 72 69 6e 74 28 22 3c 62 72 3e 3c 62 72 3e 3c 62 72 3e 50 6c 65 61 73 65 20 64 6f 77 6e 6c 6f 61 64}
 		$ = {6c 75 6d 6e 5f 6e 75 6d 3d 31 3b 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 77 68 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_MSSQL_asp
@@ -3859,7 +3512,7 @@ rule SHELL_MSSQL_asp
 		$ = {75 74 74 6f 6e 22 22 20 6f 6e 63 6c 69 63 6b 3d 22 22 77 69 6e 64 6f 77 2e 6c 6f 63 61 74 69 6f 6e 2e 68 72 65 66 3d 27 3f 61 63 74 69 6f 6e 3d 6c 69 73 74 73 70 27 22 22 3e 22 20 26 20 5f 0a}
 		$ = {20 20 20 20 20 22 3c 2f 54 41 42 4c 45 3e 3c 62 72 3e 22 29 0a 20 20 20 20 69 66 20 73 53 51 4c 20 3c 3e 20 22 22 20 74 68 65 6e 0a 09 20 20 20 20 6f 6e 20 65 72 72 6f 72 20 72 65 73 75 6d 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_asp_wget_drag_database_asp_txt
@@ -3871,7 +3524,7 @@ rule SHELL_asp_wget_drag_database_asp_txt
 		$ = {a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 52 65 73 70 6f 6e 73 65 2e 46 6c 75 73 68 0a c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0}
 		$ = {c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 52 65 73 70 6f 6e 73 65 2e 57 72 69 74 65 28 76 62 4e 65 77 4c 69 6e 65 29 0a c2 a0 c2 a0 c2 a0 c2 a0 c2 a0 c2 a0}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_5f064a899f
@@ -3883,7 +3536,7 @@ rule SHELL_unknown_5f064a899f
 		$ = {6c 75 73 68 28 29 3b 0a 20 20 20 20 20 20 20 20 62 77 2e 63 6c 6f 73 65 28 29 3b 0a 20 20 20 20 20 20 20 20 6f 73 77 2e 63 6c 6f 73 65 28 29 3b 0a 20 20 20 20 20 20 20 20 72 73 2e 63 6c 6f 73}
 		$ = {62 61 6b 5f 70 61 74 68 22 29 25 3e 2f 3e 3c 2f 70 3e 0a 20 20 3c 70 3e 74 61 62 6c 65 5f 6e 61 6d 65 3a 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 6e 61 6d 65 3d 22 74 61 62 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_system_jsp
@@ -3895,7 +3548,7 @@ rule SHELL_system_jsp
 		$ = {41 53 53 20 72 65 74 75 72 6e 20 76 61 72 63 68 61 72 32 22 2b 22 5c 72 5c 6e 22 3b 0a 09 09 09 09 09 09 73 71 6c 73 74 72 2b 3d 22 61 75 74 68 69 64 20 63 75 72 72 65 6e 74 5f 75 73 65 72 20}
 		$ = {22 20 68 65 69 67 68 74 3d 22 33 39 34 22 20 62 6f 72 64 65 72 3d 22 30 22 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e 0a 09 3c 74 72 3e 0a 09 09 3c 74 64 20 77 69 64 74 68 3d 22 34 39 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_php_wget_drag_database_php_txt
@@ -3907,7 +3560,7 @@ rule SHELL_php_wget_drag_database_php_txt
 		$ = {28 29 3b 0a 20 20 20 20 7d 0a 0a 6d 79 73 71 6c 5f 71 75 65 72 79 28 22 73 65 74 20 6e 61 6d 65 73 20 27 75 74 66 38 27 22 29 3b 0a 24 6e 75 6d 20 3d 20 31 3b 0a 24 6f 75 74 5f 70 75 74 5f 73}
 		$ = {69 74 5f 6e 75 6d 3b 20 2f 2f e9 85 8d e7 bd ae 53 51 4c e8 af ad e5 8f a5 0a 20 20 20 24 72 65 73 20 3d 20 6d 79 73 71 6c 5f 71 75 65 72 79 28 24 73 71 6c 29 20 6f 72 20 64 69 65 28 6d 79 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_f7a9812ac0
@@ -3919,7 +3572,7 @@ rule SHELL_unknown_f7a9812ac0
 		$ = {78 29 2c 20 22 55 54 46 2d 38 22 29 3b 0a 20 20 20 20 20 20 20 20 42 75 66 66 65 72 65 64 57 72 69 74 65 72 20 62 77 3d 6e 65 77 20 42 75 66 66 65 72 65 64 57 72 69 74 65 72 28 6f 73 77 29 3b}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 62 77 2e 61 70 70 65 6e 64 28 72 73 2e 67 65 74 53 74 72 69 6e 67 28 63 6f 6c 29 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jsp_wget_drag_database_jsp_txt
@@ -3931,7 +3584,7 @@ rule SHELL_jsp_wget_drag_database_jsp_txt
 		$ = {89 8d e5 8d 8a e9 83 a8 e5 88 86 73 71 6c 0a 53 74 72 69 6e 67 20 73 71 6c 20 3d 20 22 53 45 4c 45 43 54 20 22 3b 0a 66 6f 72 28 69 6e 74 20 69 3d 30 3b 69 3c 63 6f 6c 75 6d 6e 73 2e 6c 65 6e}
 		$ = {55 4d 3b 0a 20 20 6a 61 76 61 2e 73 71 6c 2e 52 65 73 75 6c 74 53 65 74 20 72 73 20 3d 20 73 74 61 74 65 6d 65 6e 74 2e 65 78 65 63 75 74 65 51 75 65 72 79 28 6e 65 77 53 71 6c 29 3b 0a 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_0b1b24fcc8
@@ -3943,7 +3596,7 @@ rule SHELL_unknown_0b1b24fcc8
 		$ = {20 20 20 20 20 20 20 20 20 20 20 2f 2f 20 4a 44 42 43 20 69 73 20 31 2d 62 61 73 65 64 2c 20 4a 61 76 61 20 69 73 20 6e 6f 74 20 21 3f 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 66 6f 72 20 28}
 		$ = {61 70 70 65 6e 64 28 22 27 22 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 65 6c 73 65 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 62 77 2e 61 70 70 65 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_tuo_aspx
@@ -3955,7 +3608,7 @@ rule SHELL_tuo_aspx
 		$ = {20 7d 0a 3c 2f 73 63 72 69 70 74 3e 0a 0a 3c 68 74 6d 6c 20 78 6d 6c 6e 73 3d 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 31 39 39 39 2f 78 68 74 6d 6c 22 3e 0a 3c 68 65 61 64 20}
 		$ = {3d 22 74 78 74 54 61 62 6c 65 4e 61 6d 65 22 20 72 75 6e 61 74 3d 22 73 65 72 76 65 72 22 20 57 69 64 74 68 3d 22 31 37 32 70 78 22 3e 3c 2f 61 73 70 3a 54 65 78 74 42 6f 78 3e 0a 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_php_wget_drag_database_php_2_txt
@@ -3967,7 +3620,7 @@ rule SHELL_php_wget_drag_database_php_2_txt
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 6f 62 5f 65 6e 64 5f 66 6c 75 73 68 28 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 7d 0a 20 0a 20 20 20 20 20 20 20 20 7d 65 6c 73}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 7d 65 6c 73 65 7b 0a 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mysql_1_php
@@ -3979,7 +3632,7 @@ rule SHELL_mysql_1_php
 		$ = {69 6d 65 73 20 4e 65 77 20 52 6f 6d 61 6e 3b 7d 0a 3c 2f 73 74 79 6c 65 3e 0a 3c 2f 68 65 61 64 3e 0a 3c 62 6f 64 79 3e 3c 63 65 6e 74 65 72 3e 0a 3c 66 6f 72 6d 20 6d 65 74 68 6f 64 3d 22 70}
 		$ = {61 6c 75 65 3d 22 3c 3f 70 68 70 20 65 63 68 6f 20 24 43 4f 44 45 3b 3f 3e 22 20 20 74 79 70 65 3d 22 74 65 78 74 22 20 63 6c 61 73 73 3d 22 74 78 22 20 73 69 7a 65 3d 22 31 35 22 3e 3c 62 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_55e61d8f26
@@ -3991,7 +3644,19 @@ rule SHELL_unknown_55e61d8f26
 		$ = {20 20 20 20 20 42 75 66 66 65 72 65 64 57 72 69 74 65 72 20 62 77 3d 6e 65 77 20 42 75 66 66 65 72 65 64 57 72 69 74 65 72 28 6f 73 77 29 3b 0a 20 20 20 20 20 20 20 20 72 73 20 3d 20 73 74 6d}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 62 77 2e 61 70 70 65 6e 64 28 72 73 2e 67 65 74 53 74 72 69 6e 67 28 63 6f 6c 29 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 69 66 20 28 63 6f 6c}
 	condition:
-		 any of them
+		3 of them
+}
+
+rule SHELL_PHP_7z
+{
+	strings:
+		$ = {7a 86 6d 98 49 eb 0b 73 42 1e 9c 39 71 8f 04 f6 ba b5 f8 88 93 de b3 0d a0 2a 21 35 a9 07 7a 3e 67 79 cd b4 91 3e 36 0c 32 56 71 c7 ad 76 5e d9 9c bc cb 5b 7b e6 be 97 3b 4b 44 26 a3 9b a7 d2}
+		$ = {ab eb 15 76 cd de 07 23 66 65 6e 09 77 06 13 58 5d 95 da 46 59 4d e5 c9 bd 9c 1f 6b 52 6b fb fd 1a 3d fa 45 d8 49 da 02 81 e2 70 f5 ef bc bf a9 29 b4 0b 0f 8b cb 62 5a bb 99 62 51 f1 ab e9 7c}
+		$ = {a6 6c 8b 26 06 02 8b 04 84 b4 26 89 42 7a ed 41 1e f4 ed ee 1d 1d da 29 2e 8f 47 5a a1 ae 23 02 3a c0 fd 89 5d 1b e8 41 00 56 9b 52 f8 72 47 fe 2b 64 b7 47 93 73 23 6a ba 8c 56 a6 2a c7 b7 70}
+		$ = {be fb 32 93 b8 3b 72 47 0d 82 0f 52 b1 da e4 b6 88 f6 f6 a3 7f 3f 70 9a f3 03 92 34 89 dc 1d 59 3b e6 e4 a8 53 79 51 3e 39 6e 9a 63 0a d0 96 c9 7b 8a d6 da 74 29 cc 68 29 01 1c 39 4f e3 41 e4}
+		$ = {58 ff 02 76 1e 80 30 fa 34 1b 83 c2 71 b3 e5 05 92 67 4d 9d 33 fb 4b 5f a1 6b 22 4e cf 7f 27 06 ee fc d3 98 11 0d 9a c8 b7 fd 7d 97 c6 b8 8e 4a 8e 7b f4 0c 94 01 29 7e f3 78 d7 35 7d e8 ef 7f}
+	condition:
+		3 of them
 }
 
 rule SHELL_filesystembrowser_aspx
@@ -4003,7 +3668,7 @@ rule SHELL_filesystembrowser_aspx
 		$ = {65 6e 64 28 22 3c 74 64 3e 44 72 69 76 65 73 3c 2f 74 64 3e 22 29 3b 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 73 74 72 69 6e 67 5b 5d 20 64 72 69 76 65 73 20 3d 20 45 6e 76 69 72 6f 6e 6d 65}
 		$ = {65 3e 3c 74 61 62 6c 65 3e 22 29 3b 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 2f 2f 20 4f 75 74 70 75 74 20 74 68 65 20 64 69 72 65 63 74 6f 72 69 65 73 0a 20 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_aspydrv_asp
@@ -4015,7 +3680,7 @@ rule SHELL_aspydrv_asp
 		$ = {69 6c 65 20 44 65 6c 65 74 65 20 73 74 6f 70 0a 09 09 45 6c 73 65 20 49 66 20 72 65 71 75 65 73 74 2e 66 6f 72 6d 28 22 64 69 72 53 74 75 66 66 22 29 3c 3e 22 22 20 74 68 65 6e 0a 09 09 09 52}
 		$ = {6b 20 3e 3c 61 20 68 72 65 66 3d 22 3c 25 3d 52 65 71 75 65 73 74 2e 53 65 72 76 65 72 76 61 72 69 61 62 6c 65 73 28 22 53 43 52 49 50 54 5f 4e 41 4d 45 22 29 25 3e 3f 67 65 74 44 52 56 73 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_aspSH_v1_txt
@@ -4027,7 +3692,7 @@ rule SHELL_aspSH_v1_txt
 		$ = {0a 09 09 2e 64 65 62 75 67 20 7b 0a 09 09 09 78 64 69 73 70 6c 61 79 3a 20 6e 6f 6e 65 3b 20 2f 2a 20 75 6e 63 6f 6d 6d 65 6e 74 20 69 66 20 79 6f 75 20 77 61 6e 74 20 74 6f 20 73 65 65 20 74}
 		$ = {25 3d 67 73 41 70 70 56 65 72 73 69 6f 6e 25 3e 20 6f 6e 20 22 20 2b 20 0a 09 09 09 09 09 73 53 65 72 76 65 72 56 65 72 73 69 6f 6e 20 2b 20 22 2c 20 22 20 2b 20 73 4f 53 56 65 72 73 69 6f 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Server_Variables_asp
@@ -4039,7 +3704,7 @@ rule SHELL_Server_Variables_asp
 		$ = {20 20 20 20 20 20 20 56 61 72 69 61 62 6c 65 20 56 61 6c 75 65 3c 2f 42 3e 3c 2f 66 6f 6e 74 3e 3c 2f 70 3e 0a 20 20 20 20 20 20 3c 2f 54 44 3e 0a 20 20 3c 2f 54 52 3e 0a 20 20 3c 25 20 46 6f}
 		$ = {61 63 65 3d 22 41 72 69 61 6c 2c 20 48 65 6c 76 65 74 69 63 61 2c 20 73 61 6e 73 2d 73 65 72 69 66 22 3e 3c 25 3d 20 56 61 72 73 20 25 3e 3c 2f 46 4f 4e 54 3e 3c 2f 54 44 3e 0a 20 20 20 20 3c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_zehir_asp
@@ -4051,7 +3716,7 @@ rule SHELL_zehir_asp
 		$ = {6e 64 65 78 5d 2e 76 61 6c 75 65 29 3b 22 20 49 44 3d 22 61 22 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 6f 70 74 69 6f 6e}
 		$ = {52 65 73 69 6d 20 61 e7 0a 09 52 65 73 70 6f 6e 73 65 2e 57 72 69 74 65 20 22 3c 63 65 6e 74 65 72 3e 3c 69 6d 67 20 41 4c 54 3d 27 7a 65 68 69 72 68 61 63 6b 65 72 40 68 6f 74 6d 61 69 6c 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_aspxshell_aspx_txt
@@ -4063,7 +3728,7 @@ rule SHELL_aspxshell_aspx_txt
 		$ = {69 6f 6e 61 6c 2f 2f 45 4e 22 20 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 54 52 2f 78 68 74 6d 6c 31 2f 44 54 44 2f 78 68 74 6d 6c 31 2d 74 72 61 6e 73 69 74 69 6f 6e 61 6c 2e}
 		$ = {20 49 44 3d 22 74 78 74 43 6d 64 49 6e 22 20 57 69 64 74 68 3d 22 33 30 30 22 20 2f 3e 0a 09 09 09 09 3c 61 73 70 3a 42 75 74 74 6f 6e 20 72 75 6e 61 74 3d 22 73 65 72 76 65 72 22 20 49 44 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_fileupload_aspx
@@ -4075,7 +3740,7 @@ rule SHELL_fileupload_aspx
 		$ = {20 62 75 66 66 65 72 20 3d 20 6e 65 77 20 62 79 74 65 5b 66 69 6c 65 4c 65 6e 67 74 68 5d 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 68 74 74 70 50 6f 73 74 65 64 46 69 6c 65 2e 49 6e 70 75 74}
 		$ = {20 20 20 72 65 74 75 72 6e 20 65 78 2e 54 6f 53 74 72 69 6e 67 28 29 3b 0a 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 7d 0a 0a 20 20 20 20 2f 2f 2f 20 3c 73 75 6d 6d 61 72 79 3e 0a 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_tool_asp
@@ -4087,7 +3752,7 @@ rule SHELL_tool_asp
 		$ = {70 75 74 20 74 79 70 65 3d 22 22 73 75 62 6d 69 74 22 22 20 76 61 6c 75 65 3d 22 22 4f 4b 22 22 3e 3c 2f 66 6f 72 6d 3e 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 22 0a 09 09 09 09}
 		$ = {6c 65 20 49 6e 20 55 70 6c 6f 61 64 65 72 2e 46 69 6c 65 73 2e 49 74 65 6d 73 0a 09 09 09 09 09 46 69 6c 65 2e 53 61 76 65 54 6f 44 69 73 6b 20 52 65 70 6c 61 63 65 28 54 72 69 6d 28 52 65 71}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmdexec_aspx
@@ -4099,7 +3764,7 @@ rule SHELL_cmdexec_aspx
 		$ = {65 20 3d 20 66 61 6c 73 65 3b 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 50 72 6f 63 65 73 73 20 70 72 6f 63 65 73 73 20 3d 20 50 72 6f 63 65 73 73 2e 53 74 61 72 74 28 70 72 6f 63 65 73 73 53}
 		$ = {48 65 61 64 31 22 20 72 75 6e 61 74 3d 22 73 65 72 76 65 72 22 3e 0a 20 20 20 20 3c 74 69 74 6c 65 3e 43 6f 6d 6d 61 6e 64 3c 2f 74 69 74 6c 65 3e 0a 3c 2f 68 65 61 64 3e 0a 3c 62 6f 64 79 3e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_3fexe_txt
@@ -4111,7 +3776,7 @@ rule SHELL_3fexe_txt
 		$ = {2f 74 64 3e 3c 2f 74 72 3e 22 0a 09 09 09 52 65 73 70 6f 6e 73 65 2e 57 72 69 74 65 20 22 3c 74 72 3e 3c 74 64 20 61 6c 69 67 6e 3d 22 22 63 65 6e 74 65 72 22 22 3e 3c 66 6f 6e 74 20 66 61 63}
 		$ = {73 74 0a 09 09 09 69 73 6c 3d 22 6d 6f 76 65 2e 2e 22 20 0a 09 09 65 6e 64 20 69 66 0a 0a 09 09 72 65 73 70 6f 6e 73 65 2e 57 72 69 74 65 20 22 43 6f 6d 6d 61 6e 64 3a 20 22 26 69 73 6c 0a 09}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_NTDaddy_v1_9_txt
@@ -4123,7 +3788,7 @@ rule SHELL_NTDaddy_v1_9_txt
 		$ = {76 65 22 0a 63 61 73 65 20 33 34 20 27 45 78 74 72 61 0a 46 69 6c 65 41 74 74 72 69 62 75 74 65 73 20 3d 20 22 48 69 64 64 65 6e 2c 20 41 72 63 68 69 76 65 22 0a 63 61 73 65 20 33 38 20 27 45}
 		$ = {52 55 4e 41 54 3d 53 45 52 56 45 52 20 4c 41 4e 47 55 41 47 45 3d 56 42 53 43 52 49 50 54 3e 0a 43 6f 6e 73 74 20 49 6e 63 6c 75 64 65 54 79 70 65 20 3d 20 32 20 0a 44 69 6d 20 55 70 6c 6f 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_zehir4_txt
@@ -4135,7 +3800,7 @@ rule SHELL_zehir4_txt
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 62 6c 75 65 22 3e 4d 61 76 69 3c 2f 6f 70 74 69 6f 6e 3e 0a 20 20 20 20 20}
 		$ = {65 4f 62 6a 65 63 74 28 22 41 44 4f 58 2e 43 61 74 61 6c 6f 67 22 29 0a 09 6f 62 6a 43 6f 6e 6e 2e 50 72 6f 76 69 64 65 72 20 3d 20 22 4d 69 63 72 6f 73 6f 66 74 2e 4a 65 74 2e 4f 6c 65 64 62}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_elmaliseker_asp
@@ -4147,7 +3812,7 @@ rule SHELL_elmaliseker_asp
 		$ = {6d 6d 61 6e 64 2e 76 61 6c 75 65 20 3d 20 63 6d 64 0a 66 72 6d 46 69 6c 65 2e 73 75 62 6d 69 74 28 29 3b 20 0a 7d 0a 3c 2f 73 63 72 69 70 74 3e 0a 3c 25 0a 65 6e 64 20 73 75 62 0a 0a 73 75 62}
 		$ = {0a 50 72 69 76 61 74 65 20 46 75 6e 63 74 69 6f 6e 20 50 61 72 73 65 42 69 6e 61 72 79 44 61 74 61 28 42 79 52 65 66 20 70 62 69 6e 43 68 75 6e 6b 29 0a 44 69 6d 20 6c 6c 6e 67 53 74 61 72 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_zehir_txt
@@ -4159,7 +3824,7 @@ rule SHELL_zehir_txt
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 6f 72 61 6e 67 65 22 3e 54 75 72 75 6e 63 75 3c 2f 6f 70 74 69 6f}
 		$ = {79 61 50 61 74 68 26 22 3f 73 74 61 74 75 73 3d 32 26 70 61 74 68 3d 22 26 70 61 74 68 26 22 26 54 69 6d 65 3d 22 26 74 69 6d 65 26 22 26 62 79 4d 73 67 3d 22 26 62 79 4d 73 67 0a 43 41 53 45}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_zehir4_asp
@@ -4171,7 +3836,7 @@ rule SHELL_zehir4_asp
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 6f 72 61 6e 67 65 22 3e 54 75 72 75 6e 63 75 3c 2f 6f 70 74 69 6f}
 		$ = {79 61 50 61 74 68 26 22 3f 73 74 61 74 75 73 3d 32 26 70 61 74 68 3d 22 26 70 61 74 68 26 22 26 54 69 6d 65 3d 22 26 74 69 6d 65 26 22 26 62 79 4d 73 67 3d 22 26 62 79 4d 73 67 0a 43 41 53 45}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_RHTools_v1_5_BETA_txt
@@ -4183,7 +3848,7 @@ rule SHELL_RHTools_v1_5_BETA_txt
 		$ = {70 75 74 20 74 79 70 65 3d 22 22 73 75 62 6d 69 74 22 22 20 76 61 6c 75 65 3d 22 22 4f 4b 22 22 3e 3c 2f 66 6f 72 6d 3e 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 22 0a 09 09 09 09}
 		$ = {6c 65 20 49 6e 20 55 70 6c 6f 61 64 65 72 2e 46 69 6c 65 73 2e 49 74 65 6d 73 0a 09 09 09 09 09 46 69 6c 65 2e 53 61 76 65 54 6f 44 69 73 6b 20 52 65 70 6c 61 63 65 28 54 72 69 6d 28 52 65 71}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ASpy_txt
@@ -4195,7 +3860,7 @@ rule SHELL_ASpy_txt
 		$ = {65 20 73 74 6f 70 0a 09 09 45 6c 73 65 20 49 66 20 72 65 71 75 65 73 74 2e 66 6f 72 6d 28 22 64 69 72 53 74 75 66 66 22 29 3c 3e 22 22 20 74 68 65 6e 0a 09 09 09 52 65 73 70 6f 6e 73 65 2e 57}
 		$ = {61 20 68 72 65 66 3d 22 3c 25 3d 52 65 71 75 65 73 74 2e 53 65 72 76 65 72 76 61 72 69 61 62 6c 65 73 28 22 53 43 52 49 50 54 5f 4e 41 4d 45 22 29 25 3e 3f 67 65 74 44 52 56 73 3d 40 26 74 78}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_EFSO_txt
@@ -4207,7 +3872,7 @@ rule SHELL_EFSO_txt
 		$ = {73 65 2e 57 72 69 74 65 20 22 3c 73 63 72 69 70 74 20 6c 61 6e 67 75 61 67 65 3d 6a 61 76 61 73 63 72 69 70 74 3e 61 6c 65 72 74 28 27 4d 61 73 73 20 44 65 66 61 63 65 64 20 54 61 6d 61 6d 61}
 		$ = {22 29 0a 72 65 73 70 6f 6e 73 65 2e 77 72 69 74 65 20 22 3c 62 72 3e 3c 63 65 6e 74 65 72 3e 3c 74 61 62 6c 65 20 62 67 63 6f 6c 6f 72 3d 23 30 30 30 30 30 30 20 63 65 6c 6c 70 61 64 64 69 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ELMALISEKER_Backd00r_asp
@@ -4219,7 +3884,7 @@ rule SHELL_ELMALISEKER_Backd00r_asp
 		$ = {3d 63 65 6e 74 65 72 20 6e 6f 77 72 61 70 3e 22 20 26 20 66 31 2e 64 61 74 65 6c 61 73 74 6d 6f 64 69 66 69 65 64 20 26 20 22 3c 2f 74 64 3e 22 29 0a 65 6e 64 20 69 66 0a 72 65 73 70 6f 6e 73}
 		$ = {20 3d 20 4e 6f 74 68 69 6e 67 0a 49 66 20 52 65 71 75 65 73 74 2e 53 65 72 76 65 72 56 61 72 69 61 62 6c 65 73 28 22 52 45 51 55 45 53 54 5f 4d 45 54 48 4f 44 22 29 20 3d 20 22 50 4f 53 54 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_sql_aspx
@@ -4231,7 +3896,7 @@ rule SHELL_sql_aspx
 		$ = {74 69 6f 6e 20 21 3d 20 6e 75 6c 6c 29 0a 20 20 20 20 20 20 20 20 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 73 71 6c 43 6f 6e 6e 65 63 74 69 6f 6e 2e 44 69 73 70 6f 73}
 		$ = {78 74 42 6f 78 20 49 44 3d 22 74 78 74 43 6f 6e 6e 65 63 74 69 6f 6e 22 20 72 75 6e 61 74 3d 22 73 65 72 76 65 72 22 20 48 65 69 67 68 74 3d 22 31 35 70 78 22 20 57 69 64 74 68 3d 22 31 30 30}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_spexec_aspx
@@ -4243,7 +3908,7 @@ rule SHELL_spexec_aspx
 		$ = {20 20 69 66 20 28 28 28 54 61 62 6c 65 43 65 6c 6c 29 64 61 74 61 47 72 69 64 49 74 65 6d 2e 43 6f 6e 74 72 6f 6c 73 5b 35 5d 29 2e 54 65 78 74 20 3d 3d 20 22 32 22 29 0a 20 20 20 20 20 20 20}
 		$ = {20 20 20 20 20 20 3c 2f 74 72 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 74 72 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 74 64 3e 0a 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_aspydrv_txt
@@ -4255,7 +3920,7 @@ rule SHELL_aspydrv_txt
 		$ = {22 38 22 3e 3c 74 72 3e 0a 20 20 20 20 3c 74 64 20 62 67 63 6f 6c 6f 72 3d 22 23 30 30 30 30 30 30 22 20 76 61 6c 69 67 6e 3d 22 62 6f 74 74 6f 6d 22 3e 0a 09 3c 46 6f 6e 74 20 66 61 63 65 3d}
 		$ = {69 67 68 74 3e 3c 41 20 48 52 45 46 3d 22 3c 25 3d 52 65 71 75 65 73 74 2e 53 65 72 76 65 72 76 61 72 69 61 62 6c 65 73 28 22 53 43 52 49 50 54 5f 4e 41 4d 45 22 29 25 3e 3f 6c 6f 67 6f 66 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_toolaspshell_txt
@@ -4267,7 +3932,7 @@ rule SHELL_toolaspshell_txt
 		$ = {3d 20 22 79 65 73 22 20 54 68 65 6e 0a 09 09 09 09 09 52 65 73 70 6f 6e 73 65 2e 57 72 69 74 65 20 22 3c 66 6f 6e 74 20 66 61 63 65 3d 22 22 61 72 69 61 6c 22 22 20 73 69 7a 65 3d 22 22 32 22}
 		$ = {74 2e 6c 6f 63 61 74 69 6f 6e 2e 72 65 6c 6f 61 64 28 29 3b 3c 2f 53 43 52 49 50 54 3e 22 0a 09 09 09 09 4e 65 78 74 0a 09 09 09 45 6e 64 20 49 66 0a 09 09 45 6e 64 20 49 66 0a 09 43 61 73 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_RemExp_asp
@@ -4279,7 +3944,7 @@ rule SHELL_RemExp_asp
 		$ = {74 68 45 6e 63 6f 64 65 28 46 6f 6c 64 65 72 50 61 74 68 29 25 3e 22 20 74 61 72 67 65 74 3d 22 5f 62 6c 61 6e 6b 22 3e 3c 66 6f 6e 74 20 66 61 63 65 3d 22 77 69 6e 67 64 69 6e 67 73 22 20 73}
 		$ = {73 75 6c 74 0a 45 6e 64 20 46 75 6e 63 74 69 6f 6e 0a 0a 50 72 69 76 61 74 65 20 53 75 62 20 42 67 54 6f 67 67 6c 65 28 29 0a 20 42 61 63 6b 67 72 6f 75 6e 64 43 6f 6c 6f 72 20 3d 20 4e 6f 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_aspxSH_txt
@@ -4291,7 +3956,7 @@ rule SHELL_aspxSH_txt
 		$ = {3b 0a 78 73 65 75 42 28 22 46 69 6c 65 20 61 74 74 72 69 62 75 74 65 73 20 6d 6f 64 69 66 79 20 73 75 63 63 65 73 73 21 22 29 3b 0a 7d 0a 63 61 74 63 68 28 45 78 63 65 70 74 69 6f 6e 20 65 72}
 		$ = {3a 54 61 62 6c 65 43 65 6c 6c 3e 3c 61 73 70 3a 54 61 62 6c 65 43 65 6c 6c 3e 50 72 6f 63 65 73 73 3c 2f 61 73 70 3a 54 61 62 6c 65 43 65 6c 6c 3e 3c 61 73 70 3a 54 61 62 6c 65 43 65 6c 6c 3e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_php
@@ -4303,7 +3968,7 @@ rule SHELL_r57_php
 		$ = {29 0a 7b 0a 20 63 66 28 22 2f 74 6d 70 2f 64 70 63 2e 63 22 2c 24 64 61 74 61 70 69 70 65 5f 63 29 3b 0a 20 24 62 6c 61 68 20 3d 20 65 78 28 22 67 63 63 20 2d 6f 20 2f 74 6d 70 2f 64 70 63 20}
 		$ = {22 3c 62 3e 22 2e 24 6c 61 6e 67 5b 24 6c 61 6e 67 75 61 67 65 2e 27 5f 74 65 78 74 33 30 27 5d 2e 24 61 72 72 6f 77 2e 22 3c 2f 62 3e 22 2c 69 6e 28 27 74 65 78 74 27 2c 27 74 65 73 74 33 5f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_pHpINJ_txt
@@ -4315,7 +3980,7 @@ rule SHELL_pHpINJ_txt
 		$ = {45 4c 46 5d 22 20 3b 20 3f 3e 22 20 6d 65 74 68 6f 64 20 3d 20 22 70 6f 73 74 22 3e 0a 3c 69 6e 70 75 74 20 74 79 70 65 20 3d 20 22 74 65 78 74 22 20 6e 61 6d 65 20 3d 20 22 75 72 6c 22 20 76}
 		$ = {20 66 69 6c 65 20 77 68 69 63 68 20 77 69 6c 6c 20 63 6f 6e 74 61 69 6e 20 74 68 65 20 50 68 70 20 53 68 65 6c 6c 20 3c 62 72 20 2f 3e 0a 3c 69 6e 70 75 74 20 74 79 70 65 20 3d 20 22 74 65 78}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mini_j0s_ali_j0e_v27_9_txt
@@ -4327,7 +3992,7 @@ rule SHELL_mini_j0s_ali_j0e_v27_9_txt
 		$ = {28 24 75 70 6c 6f 61 64 70 61 74 68 2e 24 64 65 73 74 69 6e 2c 24 73 74 61 74 5b 39 5d 2c 24 73 74 61 74 5b 38 5d 29 3b 7d 0a 20 20 20 20 20 7d 0a 20 20 20 20 7d 0a 20 20 20 7d 0a 20 20 7d 0a}
 		$ = {29 29 2e 22 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 3c 62 72 3e 22 3b 0a 20 20 20 24 66 69 20 3d 20 66 6f 70 65 6e 28 24 64 2e 24 66 2c 22 72 62 22 29 3b 0a 20 20 20 69 66 20 28}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_fx_txt
@@ -4339,7 +4004,7 @@ rule SHELL_fx_txt
 		$ = {6f 64 65 28 24 64 29 2e 22 5c 22 3e 44 65 63 6f 64 65 3c 2f 61 3e 5d 26 6e 62 73 70 3b 3c 2f 6e 6f 62 72 3e 0a 20 20 20 20 20 20 20 20 3c 50 3e 22 3b 0a 20 20 7d 0a 20 20 65 6c 73 65 69 66 20}
 		$ = {6e 22 3b 0a 20 20 7d 0a 20 20 69 66 20 28 6e 75 6d 3c 3d 31 29 20 7b 0a 20 20 20 20 64 6f 63 75 6d 65 6e 74 2e 66 6f 72 6d 73 2e 66 70 68 70 66 73 79 73 2e 61 72 67 32 2e 74 79 70 65 20 3d 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHP_Shell_txt
@@ -4351,7 +4016,7 @@ rule SHELL_PHP_Shell_txt
 		$ = {65 64 69 74 22 20 29 20 7b 20 2f 2a 3c 21 2d 2d 20 45 64 69 74 20 61 20 66 69 6c 65 20 61 6e 64 20 73 61 76 65 20 69 74 20 61 66 74 65 72 77 61 72 64 73 20 77 69 74 68 20 74 68 65 20 73 61 76}
 		$ = {22 43 61 6e 63 65 6c 5c 22 3e 3c 2f 66 6f 72 6d 3e 22 3b 0a 20 09 09 65 63 68 6f 20 22 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 3c 2f 63 65 6e 74 65 72 3e 22 3b 0a 20 09 7d 0a 7d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Dive_Shell_1_0___Emperor_Hacking_Team_txt
@@ -4363,7 +4028,19 @@ rule SHELL_Dive_Shell_1_0___Emperor_Hacking_Team_txt
 		$ = {70 75 74 2e 73 63 72 6f 6c 6c 54 6f 70 20 3d 20 64 6f 63 75 6d 65 6e 74 2e 73 68 65 6c 6c 2e 6f 75 74 70 75 74 2e 73 63 72 6f 6c 6c 48 65 69 67 68 74 3b 0a 20 20 64 6f 63 75 6d 65 6e 74 2e 73}
 		$ = {6e 74 3e 0a 20 20 26 6e 62 73 70 3b 3c 74 65 78 74 61 72 65 61 20 6e 61 6d 65 3d 22 6f 75 74 70 75 74 22 20 72 65 61 64 6f 6e 6c 79 3d 22 72 65 61 64 6f 6e 6c 79 22 20 63 6f 6c 73 3d 22 31 30}
 	condition:
-		 any of them
+		3 of them
+}
+
+rule SHELL_r57_txt
+{
+	strings:
+		$ = {72 6e 20 40 6f 63 69 72 6f 77 63 6f 75 6e 74 28 24 74 68 69 73 2d 3e 72 65 73 29 3b 0a 20 20 20 20 62 72 65 61 6b 3b 0a 20 20 20 20 64 65 66 61 75 6c 74 3a 0a 20 20 20 20 20 72 65 74 75 72 6e}
+		$ = {31 27 3d 3e 27 53 51 4c 2d 53 65 72 76 65 72 20 3a 20 50 6f 72 74 27 2c 0a 27 65 6e 67 5f 74 65 78 74 31 31 32 27 3d 3e 27 54 65 73 74 20 62 79 70 61 73 73 20 73 61 66 65 5f 6d 6f 64 65 20 77}
+		$ = {4e 6d 61 57 78 6c 4f 77 30 4b 49 43 42 6a 61 47 46 79 49 47 4a 31 5a 6c 73 30 4d 44 6b 32 58 54 73 4e 43 69 41 67 63 33 52 79 64 57 4e 30 49 48 4e 76 59 32 74 68 5a 47 52 79 58 32 6c 75 49 47}
+		$ = {65 27 5d 29 29 0a 20 7b 0a 20 69 66 28 21 24 66 69 6c 65 3d 40 66 6f 70 65 6e 28 24 5f 50 4f 53 54 5b 27 65 5f 6e 61 6d 65 27 5d 2c 22 72 2b 22 29 29 20 7b 20 24 6f 6e 6c 79 5f 72 65 61 64 20}
+		$ = {61 67 65 2e 27 5f 74 65 78 74 33 34 27 5d 2c 27 69 64 31 31 27 29 2e 24 74 61 62 6c 65 5f 75 70 32 2e 64 69 76 28 27 69 64 31 31 27 29 2e 24 74 73 3b 0a 65 63 68 6f 20 22 3c 74 61 62 6c 65 20}
+	condition:
+		3 of them
 }
 
 rule SHELL_c99_2_txt
@@ -4375,7 +4052,7 @@ rule SHELL_c99_2_txt
 		$ = {36 5c 22 20 77 69 64 74 68 3d 5c 22 31 39 5c 22 20 62 6f 72 64 65 72 3d 5c 22 30 5c 22 3e 3c 2f 61 3e 26 6e 62 73 70 3b 3c 61 20 68 72 65 66 3d 5c 22 22 2e 24 73 75 72 6c 2e 22 61 63 74 3d 66}
 		$ = {20 3d 20 63 6f 75 6e 74 28 65 78 70 6c 6f 64 65 28 22 5c 72 5c 6e 22 2c 24 72 29 29 3b 0a 20 20 20 69 66 20 28 24 72 6f 77 73 20 3c 20 31 30 29 20 7b 24 72 6f 77 73 20 3d 20 31 30 3b 7d 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_php_include_w_shell_txt
@@ -4387,7 +4064,7 @@ rule SHELL_php_include_w_shell_txt
 		$ = {2f 22 2e 24 66 69 6c 65 6e 61 6d 65 3b 0a 09 09 09 69 66 28 40 69 73 5f 66 69 6c 65 28 24 46 4e 29 29 20 24 69 73 5f 66 69 6c 65 5b 5d 20 3d 20 24 66 69 6c 65 6e 61 6d 65 3b 0a 09 09 09 69 66}
 		$ = {64 20 6e 6f 74 20 73 65 6c 65 63 74 20 64 61 74 61 62 61 73 65 22 3b 0a 09 24 71 75 65 72 79 20 3d 20 22 53 45 4c 45 43 54 20 2a 20 46 52 4f 4d 20 22 2e 24 6d 79 74 61 62 6c 65 2e 22 20 49 4e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wso2_php
@@ -4399,7 +4076,7 @@ rule SHELL_wso2_php
 		$ = {68 6f 20 27 3c 73 74 79 6c 65 3e 70 72 65 7b 66 6f 6e 74 2d 66 61 6d 69 6c 79 3a 43 6f 75 72 69 65 72 2c 4d 6f 6e 6f 73 70 61 63 65 3b 7d 3c 2f 73 74 79 6c 65 3e 3c 74 61 62 6c 65 20 63 65 6c}
 		$ = {6d 70 20 61 73 20 24 6c 69 6e 65 29 20 7b 0a 09 09 09 09 09 24 6c 69 6e 65 20 3d 20 74 72 69 6d 28 24 6c 69 6e 65 29 3b 0a 09 09 09 09 09 2b 2b 24 61 74 74 65 6d 70 74 73 3b 0a 09 09 09 09 09}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Php_Backdoor_txt
@@ -4411,7 +4088,7 @@ rule SHELL_Php_Backdoor_txt
 		$ = {6f 64 3d 22 50 4f 53 54 22 20 61 63 74 69 6f 6e 3d 22 3f 61 63 74 69 6f 6e 3d 66 69 6c 65 64 65 6c 22 3e 27 3b 0a 65 63 68 6f 20 27 46 69 6c 65 20 6e 61 6d 65 3a 20 3c 69 6e 70 75 74 20 74 79}
 		$ = {3c 62 72 3e 3c 62 72 3e 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 3c 62 72 3e 3c 62 72 3e 27 3b 0a 65 63 68 6f 20 27 4d 6f 64 69 66 69 6e 67 20 3c 62 3e 20 27}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_AntiSecShell_v0_5_txt
@@ -4423,7 +4100,7 @@ rule SHELL_AntiSecShell_v0_5_txt
 		$ = {20 30 3b 0a 20 20 20 20 20 20 20 20 20 20 24 62 20 3d 20 22 22 3b 0a 20 20 20 20 20 20 20 20 20 20 77 68 69 6c 65 28 66 69 6c 65 5f 65 78 69 73 74 73 28 24 75 70 6c 6f 61 64 70 61 74 68 2e 24}
 		$ = {24 73 75 72 6c 2e 22 61 6e 74 69 73 65 63 3d 66 26 66 3d 22 2e 75 72 6c 65 6e 63 6f 64 65 28 24 66 29 2e 22 26 66 74 3d 69 6e 66 6f 26 64 3d 22 2e 75 72 6c 65 6e 63 6f 64 65 28 24 64 29 2e 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_h4ntu_shell__powered_by_tsoi__txt
@@ -4435,7 +4112,7 @@ rule SHELL_h4ntu_shell__powered_by_tsoi__txt
 		$ = {62 3e 20 3c 3f 3d 20 24 75 73 65 72 20 3f 3e 3c 2f 44 49 56 3e 3c 2f 54 44 3e 0a 20 20 3c 2f 54 52 3e 0a 20 20 3c 54 52 3e 0a 0a 20 20 3c 54 44 3e 3c 44 49 56 20 53 54 59 4c 45 3d 22 66 6f 6e}
 		$ = {22 63 6d 64 22 20 76 61 6c 75 65 3d 22 3c 3f 70 68 70 20 65 63 68 6f 20 73 74 72 69 70 73 6c 61 73 68 65 73 28 68 74 6d 6c 65 6e 74 69 74 69 65 73 28 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_s72_Shell_v1_1_Coding_txt
@@ -4447,7 +4124,7 @@ rule SHELL_s72_Shell_v1_1_Coding_txt
 		$ = {74 3d 22 5f 62 6c 61 6e 6b 22 20 68 72 65 66 3d 22 27 2e 24 66 69 6c 65 2e 27 22 3e 27 2e 24 66 69 6c 65 2e 27 3c 2f 61 20 3e 3c 62 72 3e 27 3b 0a 7d 0a 63 6c 6f 73 65 64 69 72 28 24 66 6f 6c}
 		$ = {7d 0a 7d 0a 0a 69 66 28 21 65 6d 70 74 79 28 24 66 69 6c 65 29 29 0a 7b 0a 20 20 20 20 24 66 69 6c 65 6e 61 6d 65 20 3d 20 24 66 69 6c 65 5f 6e 61 6d 65 3b 0a 20 20 20 20 69 66 28 20 66 69 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_SimShell_1_0___Simorgh_Security_MGZ_php
@@ -4459,7 +4136,7 @@ rule SHELL_SimShell_1_0___Simorgh_Security_MGZ_php
 		$ = {5f 6c 69 6e 65 5d 20 3d 20 64 6f 63 75 6d 65 6e 74 2e 73 68 65 6c 6c 2e 63 6f 6d 6d 61 6e 64 2e 76 61 6c 75 65 3b 0a 20 20 20 20 20 20 63 75 72 72 65 6e 74 5f 6c 69 6e 65 2d 2d 3b 0a 20 20 20}
 		$ = {43 43 46 46 33 33 3b 20 62 6f 72 64 65 72 3a 20 31 70 78 20 64 61 73 68 65 64 20 23 46 46 30 30 30 30 3b 20 62 61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 3a 20 23 30 30 30 30 30 30 22 3e 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_php_backdoor_txt
@@ -4471,7 +4148,7 @@ rule SHELL_php_backdoor_txt
 		$ = {6e 64 3a 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 6e 61 6d 65 3d 22 63 22 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 73 75 62 6d 69 74 22 20 76 61 6c 75 65 3d 22 67 6f 22 3e}
 		$ = {3c 62 72 3e 66 6f 72 20 65 78 61 6d 70 6c 65 3a 0a 68 74 74 70 3a 2f 2f 3c 3f 20 65 63 68 6f 20 24 53 45 52 56 45 52 5f 4e 41 4d 45 2e 24 52 45 51 55 45 53 54 5f 55 52 49 3b 20 3f 3e 3f 64 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wso2_5_php
@@ -4483,7 +4160,7 @@ rule SHELL_wso2_5_php
 		$ = {76 61 6c 75 65 3d 22 27 2e 68 74 6d 6c 73 70 65 63 69 61 6c 63 68 61 72 73 28 24 76 29 2e 27 22 3e 27 2e 24 6e 2e 27 3c 2f 6f 70 74 69 6f 6e 3e 27 3b 0a 09 7d 0a 09 0a 09 65 63 68 6f 20 27 3c}
 		$ = {0a 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 69 66 28 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 66 69 6c 65 27 5d 29 29 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 6f 62 5f 73 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57shell2_0_txt
@@ -4495,7 +4172,7 @@ rule SHELL_r57shell2_0_txt
 		$ = {70 2f 62 61 63 6b 2e 63 22 29 3b 0a 20 24 62 6c 61 68 20 3d 20 65 78 28 22 2f 74 6d 70 2f 62 61 63 6b 63 20 22 2e 24 5f 50 4f 53 54 5b 27 69 70 27 5d 2e 22 20 22 2e 24 5f 50 4f 53 54 5b 27 70}
 		$ = {65 73 74 33 27 29 2e 77 73 28 34 29 2e 69 6e 28 27 73 75 62 6d 69 74 27 2c 27 73 75 62 6d 69 74 27 2c 30 2c 24 6c 61 6e 67 5b 24 6c 61 6e 67 75 61 67 65 2e 27 5f 62 75 74 74 38 27 5d 29 29 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_simple_cmd_txt
@@ -4506,7 +4183,7 @@ rule SHELL_simple_cmd_txt
 		$ = {20 76 61 6c 75 65 3d 22 3c 3f 3d 24 63 6d 64 3f 3e 22 20 0a 73 74 79 6c 65 3d 22 62 61 63 6b 67 72 6f 75 6e 64 3a 23 30 30 30 30 30 30 3b 63 6f 6c 6f 72 3a 23 66 66 66 66 66 66 3b 22 3e 0a 3c}
 		$ = {66 66 66 66 3b 22 3e 0a 3c 68 72 3e 0a 3c 70 72 65 3e 0a 3c 3f 20 24 63 6d 64 20 3d 20 24 5f 52 45 51 55 45 53 54 5b 22 2d 63 6d 64 22 5d 3b 3f 3e 0a 3c 3f 20 69 66 28 24 63 6d 64 20 21 3d 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_SnIpEr_SA_Shell_txt
@@ -4518,7 +4195,7 @@ rule SHELL_SnIpEr_SA_Shell_txt
 		$ = {63 68 6f 20 22 3c 2f 66 6f 72 6d 3e 22 3b 0a 20 65 63 68 6f 20 22 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 22 3b 0a 20 65 78 69 74 28 29 3b 0a 20 7d 0a 20 7d 0a 69 66 28 21 65 6d}
 		$ = {27 74 65 73 74 32 5f 66 69 6c 65 27 5d 29 3f 28 24 5f 50 4f 53 54 5b 27 74 65 73 74 32 5f 66 69 6c 65 27 5d 29 3a 28 22 2f 65 74 63 2f 70 61 73 73 77 64 22 29 29 29 2e 69 6e 28 27 68 69 64 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_kartal_txt
@@ -4530,7 +4207,7 @@ rule SHELL_r57_kartal_txt
 		$ = {6e 74 3b 0a 69 66 28 21 24 77 69 6e 64 6f 77 73 29 7b 0a 65 63 68 6f 20 27 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 62 6c 75 65 3e 3c 62 3e 75 6e 61 6d 65 20 2d 61 20 3a 27 2e 77 73 28 31 29 2e 27}
 		$ = {20 63 61 73 65 20 27 4d 53 53 51 4c 27 3a 0a 20 20 69 66 28 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 64 62 5f 70 6f 72 74 27 5d 29 29 20 7b 20 24 5f 50 4f 53 54 5b 27 64 62 5f 70 6f 72 74 27}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_h4ntu_shell__powered_by_tsoi__php
@@ -4542,7 +4219,7 @@ rule SHELL_h4ntu_shell__powered_by_tsoi__php
 		$ = {62 3e 20 3c 3f 3d 20 24 75 73 65 72 20 3f 3e 3c 2f 44 49 56 3e 3c 2f 54 44 3e 0a 20 20 3c 2f 54 52 3e 0a 20 20 3c 54 52 3e 0a 0a 20 20 3c 54 44 3e 3c 44 49 56 20 53 54 59 4c 45 3d 22 66 6f 6e}
 		$ = {22 63 6d 64 22 20 76 61 6c 75 65 3d 22 3c 3f 70 68 70 20 65 63 68 6f 20 73 74 72 69 70 73 6c 61 73 68 65 73 28 68 74 6d 6c 65 6e 74 69 74 69 65 73 28 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Private_i3lue_txt
@@ -4554,7 +4231,7 @@ rule SHELL_Private_i3lue_txt
 		$ = {3c 3f 70 68 70 20 65 63 68 6f 28 22 24 73 65 6c 66 3f 22 20 2e 20 53 49 44 29 3b 20 3f 3e 22 20 6e 61 6d 65 3d 22 77 65 62 61 64 6d 69 6e 22 3e 0a 3c 2f 66 72 61 6d 65 73 65 74 3e 0a 3c 2f 68}
 		$ = {65 6e 61 6d 65 27 29 20 3f 20 21 24 72 65 76 65 72 73 65 20 3a 20 30 29 20 2e 20 22 26 24 70 5c 22 3e 3c 62 3e 7b 24 77 6f 72 64 73 5b 27 66 69 6c 65 6e 61 6d 65 27 5d 7d 3c 2f 62 3e 3c 2f 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_404_php
@@ -4566,7 +4243,7 @@ rule SHELL_404_php
 		$ = {6f 72 6d 3e 3c 2f 64 69 76 3e 3c 73 63 72 69 70 74 3e 64 6f 63 75 6d 65 6e 74 2e 63 66 2e 63 6d 64 2e 66 6f 63 75 73 28 29 3b 3c 2f 73 63 72 69 70 74 3e 27 3b 20 0a 20 20 20 20 70 72 69 6e 74}
 		$ = {20 20 3c 3f 70 68 70 20 0a 20 20 20 20 24 74 6d 70 20 3d 20 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 74 65 78 74 20 6e 61 6d 65 3d 73 71 6c 5f 62 61 73 65 20 76 61 6c 75 65 3d 27 27 3e 22 3b 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57shell1_40_txt
@@ -4578,7 +4255,7 @@ rule SHELL_r57shell1_40_txt
 		$ = {62 72 75 74 65 22 29 20 26 26 20 28 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 21 3d 22 64 62 5f 62 72 75 74 65 22 29 29 7b 0a 20 24 63 6d 64 5f 72 65 70 20 3d 20 65 78 28 24 5f 50 4f 53 54 5b 27}
 		$ = {20 20 0a 7d 0a 0a 69 66 28 28 24 73 61 66 65 5f 6d 6f 64 65 20 7c 7c 20 24 6f 70 65 6e 5f 62 61 73 65 64 69 72 29 20 26 26 20 40 76 65 72 73 69 6f 6e 5f 63 6f 6d 70 61 72 65 28 40 70 68 70 76}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Ani_Shell_php
@@ -4590,7 +4267,7 @@ rule SHELL_Ani_Shell_php
 		$ = {20 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 69 66 28 24 6f 73 20 3d 3d 20 22 4c 69 6e 75 78 22 29 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 20}
 		$ = {74 68 69 73 2e 76 61 6c 75 65 3d 27 39 39 39 39 39 39 27 3b 22 2f 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 2f 74 64 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ru24_post_sh_txt
@@ -4602,7 +4279,7 @@ rule SHELL_ru24_post_sh_txt
 		$ = {20 6d 65 74 68 6f 64 3d 70 6f 73 74 3e 22 3b 0a 65 63 68 6f 20 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 74 65 78 74 20 6e 61 6d 65 3d 63 6d 64 20 73 69 7a 65 3d 38 35 3e 22 3b 0a 65 63 68 6f 20}
 		$ = {22 3b 0a 69 66 20 28 28 21 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 29 20 7c 7c 20 28 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 3d 3d 22 22 29 29 20 7b 20 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_150_php
@@ -4614,7 +4291,7 @@ rule SHELL_150_php
 		$ = {78 55 63 65 38 34 36 6a 31 31 66 69 44 38 75 6b 52 6d 71 65 55 36 43 47 78 6c 48 67 48 75 55 73 72 56 74 38 4b 78 41 4d 4d 57 4a 47 57 33 67 78 6a 41 33 43 6b 38 35 38 31 74 43 2b 6c 49 33 47}
 		$ = {6d 74 36 50 48 6e 38 32 38 2b 54 47 61 76 4d 39 38 7a 38 6f 38 66 73 39 74 55 37 74 35 59 57 53 5a 74 54 32 49 52 50 32 58 48 4e 6e 6f 68 55 4f 43 5a 6c 67 71 46 4f 77 7a 54 66 6a 39 71 31 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_spygrup_txt
@@ -4626,7 +4303,7 @@ rule SHELL_spygrup_txt
 		$ = {5b 27 72 6f 6f 74 27 5d 29 20 24 72 6f 6f 74 20 3d 20 24 5f 47 45 54 5b 27 72 6f 6f 74 27 5d 3b 0a 20 09 20 20 69 66 20 28 21 69 6e 69 5f 67 65 74 28 27 73 61 66 65 5f 6d 6f 64 65 27 29 29 20}
 		$ = {3b 0a 20 0a 20 09 20 20 65 63 68 6f 20 22 3c 78 6d 70 3e 22 3b 0a 20 09 20 20 66 6f 72 65 61 63 68 28 24 44 20 61 73 20 24 69 74 65 6d 29 20 65 63 68 6f 20 22 7b 24 69 74 65 6d 7d 5c 6e 22 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_MySQL_Web_Interface_Version_0_8_txt
@@ -4638,7 +4315,7 @@ rule SHELL_MySQL_Web_Interface_Version_0_8_txt
 		$ = {63 68 6f 20 22 3c 74 68 3e 4e 61 6d 65 3c 2f 74 68 3e 5c 6e 22 3b 0a 09 65 63 68 6f 20 22 3c 74 68 3e 54 79 70 65 3c 2f 74 68 3e 5c 6e 22 3b 0a 09 65 63 68 6f 20 22 3c 74 68 3e 46 75 6e 63 74}
 		$ = {26 63 6f 6d 6d 61 6e 64 3d 73 68 6f 77 5f 70 72 6f 63 65 73 73 6c 69 73 74 27 3e 50 72 6f 63 65 73 73 6c 69 73 74 3c 2f 61 3e 5c 6e 22 3b 0a 09 09 65 63 68 6f 20 22 3c 2f 75 6c 3e 5c 6e 22 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ly0kha_txt
@@ -4650,7 +4327,7 @@ rule SHELL_ly0kha_txt
 		$ = {69 53 42 0a 51 7a 54 67 72 4f 57 71 6e 4a 78 49 39 6e 6b 56 59 76 73 45 75 4e 33 31 4c 6c 49 70 41 2b 47 34 63 6c 47 57 70 38 68 2f 0a 36 62 57 41 48 50 52 46 75 50 52 4f 4e 48 4d 45 36 64 77}
 		$ = {0a 35 2f 73 33 74 37 31 4b 44 55 68 70 50 71 4c 6c 7a 74 38 30 46 73 78 6d 52 4a 34 33 4c 45 51 70 45 46 4d 47 78 4a 52 42 0a 47 46 4d 47 49 55 7a 35 6d 31 6a 6a 66 42 2b 45 73 45 6c 6c 31 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_s72_Shell_v1_1_Coding_php
@@ -4662,7 +4339,7 @@ rule SHELL_s72_Shell_v1_1_Coding_php
 		$ = {74 3d 22 5f 62 6c 61 6e 6b 22 20 68 72 65 66 3d 22 27 2e 24 66 69 6c 65 2e 27 22 3e 27 2e 24 66 69 6c 65 2e 27 3c 2f 61 20 3e 3c 62 72 3e 27 3b 0a 7d 0a 63 6c 6f 73 65 64 69 72 28 24 66 6f 6c}
 		$ = {7d 0a 7d 0a 0a 69 66 28 21 65 6d 70 74 79 28 24 66 69 6c 65 29 29 0a 7b 0a 20 20 20 20 24 66 69 6c 65 6e 61 6d 65 20 3d 20 24 66 69 6c 65 5f 6e 61 6d 65 3b 0a 20 20 20 20 69 66 28 20 66 69 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Backdoor_PHP_Agent_php
@@ -4674,7 +4351,7 @@ rule SHELL_Backdoor_PHP_Agent_php
 		$ = {65 6c 6c 70 61 64 64 69 6e 67 3d 30 20 63 65 6c 6c 73 70 61 63 69 6e 67 3d 30 20 62 67 63 6f 6c 6f 72 3d 23 30 30 30 30 30 30 3e 3c 74 72 3e 3c 74 64 20 62 67 63 6f 6c 6f 72 3d 23 30 30 30 30}
 		$ = {62 6c 65 5f 75 70 31 2e 64 69 76 5f 74 69 74 6c 65 28 24 6c 61 6e 67 5b 24 6c 61 6e 67 75 61 67 65 2e 27 5f 74 65 78 74 33 33 27 5d 2c 27 69 64 31 30 27 29 2e 24 74 61 62 6c 65 5f 75 70 32 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_hkrkoz_php
@@ -4686,7 +4363,7 @@ rule SHELL_hkrkoz_php
 		$ = {20 24 74 62 6c 20 46 49 45 4c 44 53 20 22 0a 2e 20 22 54 45 52 4d 49 4e 41 54 45 44 20 42 59 20 20 20 20 20 20 20 27 5f 5f 54 48 49 53 5f 4e 45 56 45 52 5f 48 41 50 50 45 4e 53 5f 5f 27 20 22}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 69 66 20 28 28 69 73 5f 64 69 72 28 24 66 75 6c 6c 5f 70 61 74 68 29 29 20 26 26 20 28 24 70 65 72 6d 73 20 3d 3d 20 27 30 36 34 34 27 29 29 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cybershell_txt
@@ -4698,7 +4375,7 @@ rule SHELL_cybershell_txt
 		$ = {2c 20 5c 22 3e 26 58 5c 22 3b 0a 09 09 6f 70 65 6e 20 53 54 44 45 52 52 2c 20 5c 22 3e 26 58 5c 22 3b 0a 09 09 63 6c 6f 73 65 20 58 3b 0a 09 09 65 78 65 63 28 5c 22 2f 62 69 6e 2f 73 68 5c 22}
 		$ = {65 74 28 24 6d 74 61 62 6c 65 29 29 20 61 6e 64 20 28 69 73 73 65 74 28 24 76 61 72 29 29 20 61 6e 64 20 28 69 73 73 65 74 28 24 70 69 78 69 64 6e 61 6d 65 29 29 20 61 6e 64 20 28 69 73 73 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_acid_php
@@ -4710,7 +4387,7 @@ rule SHELL_acid_php
 		$ = {72 6f 6d 20 24 61 72 67 31 21 3c 2f 64 69 76 3e 22 3b 7d 0a 20 20 7d 0a 20 20 65 6c 73 65 69 66 20 28 24 66 73 66 75 6e 63 3d 3d 27 6d 6b 64 69 72 27 29 20 7b 0a 20 20 20 20 24 74 68 65 64 69}
 		$ = {41 4a 55 41 4c 41 41 41 41 41 41 51 41 42 41 41 68 77 41 41 41 50 2f 2f 2f 31 35 70 68 63 66 62 36 4e 4c 73 2f 37 50 63 2f 2b 50 30 2f 33 4a 2b 6c 39 62 73 22 2e 0a 22 2f 35 32 6e 75 71 6a 4b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_bd_txt
@@ -4722,7 +4399,19 @@ rule SHELL_r57_bd_txt
 		$ = {28 24 4d 53 47 4b 45 59 2c 20 30 36 30 30 29 3b 20 0a 20 69 66 20 28 21 40 6d 73 67 5f 73 65 6e 64 20 28 24 6d 73 67 5f 69 64 2c 20 31 2c 20 27 41 41 41 41 42 42 42 42 43 43 43 43 44 44 44 44}
 		$ = {2e 22 3c 2f 62 3e 22 2c 24 66 73 2e 69 6e 28 27 74 65 78 74 27 2c 27 74 65 73 74 31 37 5f 66 69 6c 65 27 2c 36 30 2c 28 21 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 74 65 73 74 31 37 5f 66 69}
 	condition:
-		 any of them
+		3 of them
+}
+
+rule SHELL_c100_txt
+{
+	strings:
+		$ = {69 73 5f 64 69 72 28 24 64 2e 24 66 29 29 0a 20 20 20 7b 0a 20 20 20 20 24 73 65 61 72 63 68 5f 69 5f 64 2b 2b 3b 0a 20 20 20 20 69 66 20 28 65 6d 70 74 79 28 24 61 5b 22 74 65 78 74 22 5d 29}
+		$ = {62 73 70 3b 22 3b 0a 20 20 20 20 20 65 63 68 6f 20 22 3c 61 20 68 72 65 66 3d 5c 22 22 2e 24 73 71 6c 5f 73 75 72 6c 2e 22 73 71 6c 5f 74 62 6c 3d 22 2e 75 72 6c 65 6e 63 6f 64 65 28 24 73 71}
+		$ = {22 3c 69 6e 70 75 74 20 74 79 70 65 3d 74 65 78 74 20 73 69 7a 65 3d 33 35 20 6f 6e 46 6f 63 75 73 3d 5c 22 74 68 69 73 2e 73 65 6c 65 63 74 28 29 5c 22 20 6f 6e 4d 6f 75 73 65 6f 76 65 72 3d}
+		$ = {75 6c 64 20 75 73 65 20 4e 65 74 43 61 74 26 63 6f 70 79 3b 2c 20 72 75 6e 20 5c 22 3c 62 3e 6e 63 20 2d 76 20 22 2e 67 65 74 65 6e 76 28 22 53 45 52 56 45 52 5f 41 44 44 52 22 29 2e 22 20 22}
+		$ = {41 41 41 22 2e 0a 22 41 41 6a 6e 41 43 74 56 43 6b 43 77 34 4a 78 4a 41 51 51 71 46 42 6a 41 78 6f 30 4d 4e 47 71 73 41 42 51 41 68 36 43 46 41 33 6e 6b 30 4d 48 69 52 52 45 56 44 68 7a 73 6f}
+	condition:
+		3 of them
 }
 
 rule SHELL_dC3_Security_Crew_Shell_priv8_txt
@@ -4734,7 +4423,7 @@ rule SHELL_dC3_Security_Crew_Shell_priv8_txt
 		$ = {75 74 20 73 69 7a 65 3d 34 30 20 74 79 70 65 3d 74 65 78 74 20 76 61 6c 75 65 3d 3c 3f 70 68 70 20 65 63 68 6f 20 68 74 6d 6c 73 70 65 63 69 61 6c 63 68 61 72 73 28 63 72 79 70 74 28 24 74 65}
 		$ = {6f 75 70 73 5c 22 3e 0a 20 20 3c 74 68 65 61 64 3e 0a 20 20 20 20 3c 74 72 3e 0a 20 20 20 20 20 20 3c 74 68 3e 46 69 6c 65 6e 61 6d 65 3c 2f 74 68 3e 3c 74 68 3e 45 64 69 74 3c 2f 74 68 3e 3c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Sst_Sheller_php
@@ -4746,7 +4435,7 @@ rule SHELL_Sst_Sheller_php
 		$ = {20 22 22 20 29 7b 0a 20 24 66 65 64 69 74 3d 72 65 61 6c 70 61 74 68 28 24 66 65 64 69 74 29 3b 0a 20 24 6c 69 6e 65 73 20 3d 20 66 69 6c 65 28 24 66 65 64 69 74 29 3b 0a 20 65 63 68 6f 20 22}
 		$ = {74 72 3e 0a 09 22 3b 0a 09 09 20 20 20 20 20 20 7d 0a 09 09 20 20 20 20 20 20 63 6c 6f 73 65 64 69 72 28 24 64 68 29 3b 0a 09 09 20 20 20 20 7d 20 0a 09 09 20 20 20 20 7d 0a 09 09 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_g00nshell_v1_3_txt
@@ -4758,7 +4447,7 @@ rule SHELL_g00nshell_v1_3_txt
 		$ = {65 6d 61 69 6c 27 3e 0a 3c 62 3e 59 6f 75 72 20 61 64 64 72 65 73 73 3a 3c 2f 62 3e 3c 62 72 3e 0a 3c 69 6e 70 75 74 20 6e 61 6d 65 3d 27 66 72 6f 6d 27 20 74 79 70 65 3d 27 74 65 78 74 27 20}
 		$ = {73 69 74 65 20 3d 20 72 65 2e 66 69 6e 64 61 6c 6c 28 27 2e 2b 5c 29 20 28 2e 2b 29 3c 62 72 3e 27 2c 20 75 72 6c 6c 69 62 32 2e 75 72 6c 6f 70 65 6e 28 72 65 71 29 2e 72 65 61 64 28 29 29 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Antichat_Shell_v1_3_php
@@ -4770,7 +4459,7 @@ rule SHELL_Antichat_Shell_v1_3_php
 		$ = {0a 20 20 24 64 69 72 3d 67 65 74 63 77 64 28 29 2e 22 2f 22 3b 0a 20 20 24 64 69 72 3d 73 74 72 5f 72 65 70 6c 61 63 65 28 22 5c 5c 22 2c 22 2f 22 2c 24 64 69 72 29 3b 0a 69 66 20 28 69 73 5f}
 		$ = {65 2e 27 5c 27 3b 20 64 6f 63 75 6d 65 6e 74 2e 72 65 71 73 2e 73 75 62 6d 69 74 28 29 3b 22 3e 27 2e 24 66 69 6c 65 73 5b 24 69 5d 2e 27 3c 2f 61 3e 3c 62 72 3e 3c 2f 74 64 3e 3c 74 64 3e 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_itsecteam_v2_1_txt
@@ -4782,7 +4471,7 @@ rule SHELL_itsecteam_v2_1_txt
 		$ = {66 62 65 3c 63 6f 75 6e 74 28 24 73 62 65 70 29 3b 24 66 62 65 2b 2b 29 7b 65 63 68 6f 20 24 73 62 65 70 5b 24 66 62 65 5d 3b 7d 7d 20 69 66 28 69 73 73 65 74 28 24 64 65 62 66 63 29 29 7b 7d}
 		$ = {20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 72 6f 77 5b 24 6a 5d 20 3d 20 22 27 22 2e 6d 79 73 71 6c 5f 65 73 63 61 70 65 5f 73 74 72 69 6e 67 28 24 6b 29 2e 22 27 22 3b 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_matamu_txt
@@ -4794,7 +4483,7 @@ rule SHELL_matamu_txt
 		$ = {63 68 61 72 65 63 74 65 72 2e 0a 09 20 20 20 54 68 69 73 20 6d 65 61 6e 73 20 74 68 61 74 20 77 65 20 68 61 76 65 20 61 20 74 6f 70 2d 6c 65 76 65 6c 20 64 69 72 65 63 74 6f 72 79 0a 09 20 20}
 		$ = {63 74 3e 3c 2f 70 3e 0a 0a 3c 70 3e 43 6f 6d 6d 61 6e 64 3a 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 6e 61 6d 65 3d 22 63 6f 6d 6d 61 6e 64 22 20 73 69 7a 65 3d 22 36 30 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_lolipop_txt
@@ -4806,7 +4495,7 @@ rule SHELL_lolipop_txt
 		$ = {46 46 46 27 3e 3c 62 72 3e 20 0a 20 20 20 20 20 20 20 20 20 20 3c 66 6f 6e 74 20 66 61 63 65 3d 27 41 72 69 61 6c 27 20 63 6f 6c 6f 72 3d 27 23 30 30 30 30 30 30 27 3e 44 62 73 69 66 72 65 3c}
 		$ = {78 20 73 6f 6c 69 64 20 23 36 36 36 36 36 36 3b 20 62 61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 3a 20 23 46 46 46 46 46 46 27 3e 3c 62 72 3e 20 0a 20 20 20 20 20 20 20 20 20 20 3c 66 6f 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_shadows_mod_php
@@ -4818,7 +4507,7 @@ rule SHELL_c99_shadows_mod_php
 		$ = {25 70 61 74 68 20 25 68 6f 73 74 20 25 70 6f 72 74 22 29 2c 0a 20 20 22 63 39 39 73 68 5f 62 61 63 6b 63 6f 6e 6e 2e 63 22 3d 3e 61 72 72 61 79 28 22 55 73 69 6e 67 20 43 22 2c 22 25 70 61 74}
 		$ = {41 41 41 41 41 41 41 41 41 41 41 41 41 41 22 2e 0a 22 41 41 41 41 41 43 48 35 42 41 45 41 41 41 6b 41 4c 41 41 41 41 41 41 55 41 42 51 41 41 41 52 2b 4d 4d 6b 35 54 54 57 49 36 69 70 79 4d 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_priv8_2012_bypass_shell_txt
@@ -4830,7 +4519,7 @@ rule SHELL_priv8_2012_bypass_shell_txt
 		$ = {3b 0a 0a a0 20 24 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 61 61 62 20 3d 20 22 20 58 58 58 78 2e 78 58 58 58 20 22 3b 0a 0a a0 20 24 5f 5f 5f 5f 5f 5f 5f 5f 5f}
 		$ = {6c 63 6a 6f 6b 63 47 46 7a 63 79 49 70 4f 77 6f 67 59 33 56 79 62 46 39 7a 5a 58 52 76 63 48 51 67 4b 43 52 6a 61 43 77 67 51 31 56 53 54 45 39 51 56 46 39 44 54 30 35 4f 52 55 4e 55 56 45 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cpanel_txt
@@ -4842,7 +4531,7 @@ rule SHELL_cpanel_txt
 		$ = {28 24 63 68 2c 20 43 55 52 4c 4f 50 54 5f 43 4f 4e 4e 45 43 54 54 49 4d 45 4f 55 54 2c 20 24 74 69 6d 65 6f 75 74 29 3b 0a 63 75 72 6c 5f 73 65 74 6f 70 74 28 24 63 68 2c 20 43 55 52 4c 4f 50}
 		$ = {69 66 20 28 24 6f 70 74 69 6f 6e 20 3d 3d 20 22 63 70 61 6e 65 6c 22 29 0a 7b 0a 63 70 61 6e 65 6c 5f 63 68 65 63 6b 28 24 74 61 72 67 65 74 2c 24 5f 75 73 65 72 2c 24 5f 70 61 73 73 2c 24 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mysqlwebsh_php
@@ -4854,7 +4543,7 @@ rule SHELL_mysqlwebsh_php
 		$ = {43 52 49 50 54 3e 0a 3c 3f 20 65 6e 64 69 66 20 3f 3e 0a 0a 3c 3f 0a 20 20 24 74 63 6f 75 6e 74 20 3d 20 30 3b 0a 20 20 72 65 73 65 74 28 24 61 6c 6c 74 61 62 6c 65 73 29 3b 0a 20 20 66 6f 72}
 		$ = {28 22 5e 5b 5b 3a 73 70 61 63 65 3a 5d 5d 2a 24 22 2c 24 72 6f 77 73 5b 24 69 5d 29 29 20 7b 24 72 6f 77 73 5b 24 69 5d 20 3d 20 22 26 6e 62 73 70 3b 22 3b 7d 0a 20 20 20 20 20 20 20 20 65 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHPRemoteView_txt
@@ -4866,7 +4555,7 @@ rule SHELL_PHPRemoteView_txt
 		$ = {29 20 61 72 73 6f 72 74 28 24 6e 61 6d 65 73 29 3b 20 65 6c 73 65 20 61 73 6f 72 74 28 24 6e 61 6d 65 73 29 3b 0a 20 20 20 2f 2f 65 63 68 6f 20 22 3c 70 72 65 3e 22 3b 70 72 69 6e 74 5f 72 28}
 		$ = {24 6e 61 6d 65 29 20 7b 0a 20 20 20 20 20 20 67 6c 6f 62 61 6c 20 24 73 65 6c 66 2c 24 64 2c 24 66 2c 24 75 75 72 6c 3b 0a 20 20 20 20 20 20 73 77 69 74 63 68 20 28 24 6e 61 6d 65 29 20 7b 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Antichat_Shell_v1_3_txt
@@ -4878,7 +4567,19 @@ rule SHELL_Antichat_Shell_v1_3_txt
 		$ = {0a 20 20 24 64 69 72 3d 67 65 74 63 77 64 28 29 2e 22 2f 22 3b 0a 20 20 24 64 69 72 3d 73 74 72 5f 72 65 70 6c 61 63 65 28 22 5c 5c 22 2c 22 2f 22 2c 24 64 69 72 29 3b 0a 69 66 20 28 69 73 5f}
 		$ = {65 2e 27 5c 27 3b 20 64 6f 63 75 6d 65 6e 74 2e 72 65 71 73 2e 73 75 62 6d 69 74 28 29 3b 22 3e 27 2e 24 66 69 6c 65 73 5b 24 69 5d 2e 27 3c 2f 61 3e 3c 62 72 3e 3c 2f 74 64 3e 3c 74 64 3e 66}
 	condition:
-		 any of them
+		3 of them
+}
+
+rule SHELL_simattacker_txt
+{
+	strings:
+		$ = {6e 67 3d 22 30 22 20 68 65 69 67 68 74 3d 22 35 30 32 22 3e 0a 0a 09 09 3c 74 72 3e 0a 0a 09 09 09 3c 74 64 20 73 74 79 6c 65 3d 22 62 6f 72 64 65 72 3a 20 31 70 78 20 64 6f 74 74 65 64 20 23}
+		$ = {2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 3c 2f 66 6f 6e 74 3e 3c 2f 73 70 61 6e 3e 3c}
+		$ = {0a 0a 09 09 09 3c 69 6e 70 75 74 20 74 79 70 65 3d 27 74 65 78 74 27 20 6e 61 6d 65 3d 27 62 70 6f 72 74 27 20 73 69 7a 65 3d 27 35 27 20 76 61 6c 75 65 3d 27 31 30 31 39 27 3e 3c 62 72 3e 0a}
+		$ = {09 3c 2f 74 72 3e 22 3b 0a 0a 09 09 20 20 20 20 69 66 20 28 69 73 5f 64 69 72 28 24 64 69 72 29 29 7b 0a 0a 09 09 20 20 20 20 69 66 20 28 24 64 68 3d 6f 70 65 6e 64 69 72 28 24 64 69 72 29 29}
+		$ = {3e 0a 0a 3c 66 6f 72 6d 20 65 6e 63 74 79 70 65 3d 27 6d 75 6c 74 69 70 61 72 74 2f 66 6f 72 6d 2d 64 61 74 61 27 20 61 63 74 69 6f 6e 3d 27 27 20 6d 65 74 68 6f 64 3d 27 50 4f 53 54 27 3e 0a}
+	condition:
+		3 of them
 }
 
 rule SHELL_Safe_Mode_Bypass_PHP_4_4_2_and_PHP_5_1_2_txt
@@ -4890,7 +4591,7 @@ rule SHELL_Safe_Mode_Bypass_PHP_4_4_2_and_PHP_5_1_2_txt
 		$ = {20 6f 72 20 73 74 72 74 6f 6c 6f 77 65 72 28 24 76 29 20 3d 3d 20 22 6f 6e 22 29 20 7b 24 6f 70 65 6e 62 61 73 65 64 69 72 20 3d 20 74 72 75 65 3b 20 24 68 6f 70 65 6e 62 61 73 65 64 69 72 20}
 		$ = {79 28 22 63 6f 6d 70 72 65 73 73 2e 7a 6c 69 62 3a 2f 2f 22 2e 24 66 69 6c 65 2c 20 24 74 65 6d 70 29 29 7b 0a 24 7a 72 6f 64 6c 6f 20 3d 20 66 6f 70 65 6e 28 24 74 65 6d 70 2c 20 22 72 22 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_kral_txt
@@ -4902,7 +4603,7 @@ rule SHELL_kral_txt
 		$ = {4c 4f 50 54 5f 55 52 4c 2c 24 62 6c 61 29 3b 0a 24 61 6c 3d 63 75 72 6c 5f 65 78 65 63 28 24 63 68 29 3b 0a 63 75 72 6c 5f 63 6c 6f 73 65 28 24 63 68 29 3b 0a 69 66 28 65 72 65 67 69 28 27 74}
 		$ = {20 20 20 20 20 20 20 3c 74 64 20 77 69 64 74 68 3d 22 32 37 35 22 20 68 65 69 67 68 74 3d 22 31 30 30 22 20 76 61 6c 69 67 6e 3d 22 74 6f 70 22 20 62 6f 72 64 65 72 63 6f 6c 6f 72 3d 22 23 46}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_backupsql_txt
@@ -4914,7 +4615,7 @@ rule SHELL_backupsql_txt
 		$ = {5f 53 45 52 56 45 52 5b 27 52 45 4d 4f 54 45 5f 41 44 44 52 27 5d 3b 24 64 32 33 20 3d 20 24 5f 53 45 52 56 45 52 5b 27 53 43 52 49 50 54 5f 46 49 4c 45 4e 41 4d 45 27 5d 3b 24 65 30 39 20 3d}
 		$ = {2e 3d 20 22 2d 2d 7b 24 6d 69 6d 65 5f 62 6f 75 6e 64 61 72 79 7d 5c 6e 22 20 2e 22 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 7b 24 66 69 6c 65 61 74 74 5f 74 79 70 65 7d 3b 5c 6e 22 20 2e 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_CrystalShell_v_1_txt
@@ -4926,7 +4627,7 @@ rule SHELL_CrystalShell_v_1_txt
 		$ = {79 70 65 3d 27 70 27 3b 20 7d 0a 65 6c 73 65 20 69 66 28 20 24 6d 6f 64 65 20 26 20 30 78 32 30 30 30 20 29 20 7b 20 24 74 79 70 65 3d 27 63 27 3b 20 7d 0a 65 6c 73 65 20 69 66 28 20 24 6d 6f}
 		$ = {74 68 6f 64 3d 5c 22 50 4f 53 54 5c 22 3e 0a 43 6f 6d 6d 61 6e 64 3a 3c 49 4e 50 55 54 20 74 79 70 65 3d 5c 22 74 65 78 74 5c 22 20 6e 61 6d 65 3d 5c 22 63 6d 64 5c 22 20 73 69 7a 65 3d 33 30}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_erne_txt
@@ -4938,7 +4639,7 @@ rule SHELL_erne_txt
 		$ = {0a 3c 74 72 3e 0a 3c 74 64 3e 3c 63 65 6e 74 65 72 3e 3c 66 6f 6e 74 20 73 69 7a 65 3d 27 36 27 20 63 6f 6c 6f 72 3d 27 23 42 42 42 35 31 36 27 3e 20 42 79 20 20 65 72 6e 65 20 3c 2f 66 6f 6e}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 24 66 75 6c 6c 5f 70 61 74 68 20 3d 20 22 24 70 61 74 68 2f 24 66 69 6c 65 31 22 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 70 65 72 6d 73 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_iMHaPFtp_txt
@@ -4950,7 +4651,7 @@ rule SHELL_iMHaPFtp_txt
 		$ = {69 5d 20 3d 20 6e 6c 32 62 72 28 68 74 6d 6c 28 24 61 72 67 75 6d 65 6e 74 73 5b 24 69 5d 29 29 3b 0a 09 7d 0a 0a 09 24 72 65 70 6c 61 63 65 20 3d 20 61 72 72 61 79 28 27 7b 27 20 3d 3e 20 27}
 		$ = {73 27 20 3d 3e 20 27 4a 61 27 2c 0a 27 6e 6f 27 20 3d 3e 20 27 4e 65 6a 27 2c 0a 27 47 65 72 69 27 20 3d 3e 20 27 54 69 6c 6c 62 61 6b 73 27 2c 0a 27 59 6f 6c 27 20 3d 3e 20 27 59 6f 6c 27 2c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_DTool_Pro_txt
@@ -4962,7 +4663,7 @@ rule SHELL_DTool_Pro_txt
 		$ = {22 72 65 74 75 72 6e 20 65 6e 76 69 61 43 4d 44 28 29 22 3e 0a 3c 74 61 62 6c 65 20 77 69 64 74 68 3d 22 33 37 35 22 20 62 6f 72 64 65 72 3d 22 31 22 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72}
 		$ = {0a 20 20 69 66 28 24 66 75 3d 3d 33 29 7b 24 66 65 3d 22 65 78 65 63 63 22 3b 24 66 65 73 68 6f 77 3d 22 65 78 65 63 22 3b 7d 0a 20 20 69 66 28 24 66 75 3d 3d 34 29 7b 24 66 65 3d 22 70 6f 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PH_Vayv_txt
@@ -4974,7 +4675,7 @@ rule SHELL_PH_Vayv_txt
 		$ = {73 69 7a 65 3a 20 38 70 74 22 3e 0a 0a 0a 0a 0a 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 61 20 68 72 65 66 3d 22 3c 3f 65 63 68 6f 20 22 24 66 69 73 74 69 6b 2e 70 68 70 3f 64}
 		$ = {68 74 3d 22 31 37 22 20 62 67 63 6f 6c 6f 72 3d 22 23 38 30 38 30 38 30 22 3e 0a 20 20 20 20 3c 70 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e 0a 20 20 20 20 3c 69 6d 67 20 62 6f 72 64 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_locus_txt
@@ -4986,7 +4687,7 @@ rule SHELL_locus_txt
 		$ = {3b 0a 20 20 20 20 24 64 65 73 74 69 6e 20 3d 20 24 64 65 73 74 69 6e 5b 63 6f 75 6e 74 28 24 64 65 73 74 69 6e 29 2d 31 5d 3b 0a 20 20 20 20 69 66 20 28 65 6d 70 74 79 28 24 64 65 73 74 69 6e}
 		$ = {45 51 71 46 67 4b 49 59 55 68 38 45 76 75 57 51 36 50 77 50 46 51 4a 70 55 4c 70 75 6e 72 58 5a 4c 72 59 4b 78 32 30 47 33 6f 44 41 37 30 39 33 45 73 76 31 39 71 35 4f 2f 77 6f 46 75 39 5a 41}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_log_txt
@@ -4998,7 +4699,7 @@ rule SHELL_log_txt
 		$ = {3b 0a 09 09 65 6c 73 65 0a 09 09 09 63 75 72 2d 2d 3b 0a 09 7d 0a 7d 0a 66 75 6e 63 74 69 6f 6e 20 61 64 64 28 63 6d 64 29 20 7b 0a 09 63 6d 64 73 2e 70 6f 70 28 29 3b 0a 09 63 6d 64 73 2e 70}
 		$ = {24 64 62 2d 3e 73 65 74 43 68 61 72 73 65 74 28 27 6b 6f 69 38 75 27 29 3b 20 62 72 65 61 6b 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 63 61 73 65 20 22 63 70 38 36 36 22 3a 20 24 64 62 2d 3e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_SimAttacker___Vrsion_1_0_0___priv8_4_My_friend_php
@@ -5010,7 +4711,7 @@ rule SHELL_SimAttacker___Vrsion_1_0_0___priv8_4_My_friend_php
 		$ = {6c 69 67 6e 3d 27 63 65 6e 74 65 72 27 3e 0a 09 09 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 27 23 46 46 39 39 33 33 27 20 73 69 7a 65 3d 27 32 27 3e 3c 62 3e 45 64 69 74 3c 2f 62 3e 3c 2f 66 6f 6e}
 		$ = {64 65 63 6f 72 61 74 69 6f 6e 3a 20 6e 6f 6e 65 27 3e 3c 66 6f 6e 74 20 73 69 7a 65 3d 27 32 27 20 63 6f 6c 6f 72 3d 27 23 39 39 39 39 39 39 27 3e 43 68 6d 6f 64 22 3b 0a 09 09 7d 0a 09 09 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_sosyete_txt
@@ -5022,7 +4723,7 @@ rule SHELL_sosyete_txt
 		$ = {20 6e 6f 6e 65 7d 0a 20 20 20 41 3a 68 6f 76 65 72 20 7b 63 6f 6c 6f 72 3a 72 65 64 3b 54 45 58 54 2d 44 45 43 4f 52 41 54 49 4f 4e 3a 20 6e 6f 6e 65 7d 0a 20 20 20 69 6e 70 75 74 2c 20 74 65}
 		$ = {6b 6f 6b 6f 3b 0a 65 63 68 6f 20 22 3c 2f 68 34 3e 3c 2f 70 72 65 3e 22 3b 0a 0a 3f 3e 0a 0a 3c 2f 74 72 3e 0a 20 20 20 20 20 20 20 20 3c 2f 74 61 62 6c 65 3e 20 20 20 20 0a 09 09 0a 09 09 3c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_locus7s_txt
@@ -5034,7 +4735,7 @@ rule SHELL_c99_locus7s_txt
 		$ = {69 66 20 28 65 6d 70 74 79 28 24 73 65 61 72 63 68 5f 6e 61 6d 65 29 29 20 7b 24 73 65 61 72 63 68 5f 6e 61 6d 65 20 3d 20 22 28 2e 2a 29 22 3b 20 24 73 65 61 72 63 68 5f 6e 61 6d 65 5f 72 65}
 		$ = {20 20 7b 20 0a 20 20 20 69 66 20 28 65 72 65 67 28 22 70 68 70 22 2e 22 42 42 20 32 2e 28 2e 2a 29 20 61 75 74 6f 2d 67 65 6e 65 72 61 74 65 64 20 63 6f 6e 66 69 67 20 66 69 6c 65 22 2c 24 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cbfphpsh_txt
@@ -5046,7 +4747,7 @@ rule SHELL_cbfphpsh_txt
 		$ = {72 6f 77 73 3d 27 31 30 27 20 63 6f 6c 73 3d 27 36 34 27 3e 22 3b 65 63 68 6f 20 68 74 6d 6c 73 70 65 63 69 61 6c 63 68 61 72 73 28 65 76 61 6c 28 72 65 70 6c 61 63 65 5f 73 74 52 28 24 73 2c}
 		$ = {22 2c 73 68 65 6c 4c 28 22 63 61 74 20 24 69 6e 70 75 74 22 29 29 3b 0a 24 6f 75 74 70 75 74 3d 66 6f 70 65 6e 28 24 5f 52 45 51 55 45 53 54 5b 27 6f 75 74 70 75 74 27 5d 2c 27 77 27 29 3b 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_connect_back_php_txt
@@ -5058,7 +4759,7 @@ rule SHELL_connect_back_php_txt
 		$ = {3d 22 5c 6e 22 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 0a 20 20 20 20 20 20 20 20 20 66 70 75 74 73 20 28 24 6d 75 63 78 20 2c 22 5c 6e 77 65 6c 63 6f 6d 65 20 5a 6f 52 42}
 		$ = {61 6d 61 7a 69 6e 67 30 20 29 3b 0a 20 20 20 20 20 20 20 20 20 77 68 69 6c 65 28 21 66 65 6f 66 28 24 6d 75 63 78 29 29 7b 20 20 0a 20 20 20 20 20 20 20 66 70 75 74 73 20 28 24 6d 75 63 78 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Safe0ver_Shell__Safe_Mod_Bypass_By_Evilc0der_txt
@@ -5070,7 +4771,7 @@ rule SHELL_Safe0ver_Shell__Safe_Mod_Bypass_By_Evilc0der_txt
 		$ = {3e 0a 20 20 20 20 3c 69 6e 70 75 74 20 74 61 62 69 6e 64 65 78 3d 5c 22 30 5c 22 20 74 79 70 65 3d 5c 22 73 75 62 6d 69 74 5c 22 20 76 61 6c 75 65 3d 5c 22 4e 4f 21 5c 22 3e 3c 2f 66 6f 72 6d}
 		$ = {3c 62 72 3e 5c 6e 22 3b 0a 20 20 20 20 49 66 20 28 65 6d 70 74 79 28 24 6e 65 77 66 69 6c 65 29 20 21 3d 20 74 72 75 65 29 20 7b 0a 20 20 20 20 20 20 20 20 20 65 63 68 6f 20 22 3c 63 65 6e 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_metaslsoft_php
@@ -5082,7 +4783,7 @@ rule SHELL_metaslsoft_php
 		$ = {6c 61 73 73 3d 5c 22 69 6e 70 75 74 7a 5c 22 20 74 79 70 65 3d 5c 22 74 65 78 74 5c 22 20 6e 61 6d 65 3d 5c 22 73 71 6c 75 73 65 72 31 5c 22 20 76 61 6c 75 65 3d 5c 22 22 2e 24 73 71 6c 75 73}
 		$ = {09 09 24 73 5f 72 65 73 75 6c 74 20 2e 3d 20 22 3c 64 69 76 20 63 6c 61 73 73 3d 5c 22 6d 79 62 6f 78 5c 22 3e 3c 68 32 3e 52 65 76 65 72 73 65 20 73 68 65 6c 6c 20 28 20 62 69 6e 20 29 3c 2f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_egy_txt
@@ -5094,7 +4795,7 @@ rule SHELL_egy_txt
 		$ = {69 72 3a 20 3c 62 3e 22 3b 0a 69 66 28 40 66 75 6e 63 74 69 6f 6e 5f 65 78 69 73 74 73 28 27 69 6e 69 5f 67 65 74 27 29 29 20 7b 20 69 66 20 28 27 27 3d 3d 28 24 64 66 3d 40 69 6e 69 5f 67 65}
 		$ = {6f 77 2e 22 3c 2f 62 3e 22 2c 0a 27 0a 3c 73 65 6c 65 63 74 20 6e 61 6d 65 3d 22 64 61 79 22 20 73 69 7a 65 3d 22 31 22 3e 0a 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 30 31 22 3e 31 3c 2f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c37_php
@@ -5106,7 +4807,7 @@ rule SHELL_c37_php
 		$ = {73 69 7a 65 3d 22 34 30 22 20 69 64 3d 22 73 65 61 72 63 68 22 20 6e 61 6d 65 3d 22 73 65 61 72 63 68 22 27 3b 20 69 66 20 28 69 73 73 65 74 28 24 5f 47 45 54 5b 27 73 65 61 72 63 68 27 5d 29}
 		$ = {09 09 65 6c 73 65 69 66 20 28 24 5f 46 49 4c 45 53 5b 27 46 69 6c 65 27 5d 5b 27 65 72 72 6f 72 27 5d 20 3d 3d 3d 20 34 29 20 7b 20 65 63 68 6f 20 27 4e 6f 20 66 69 6c 65 20 77 61 73 20 75 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mysql_tool_txt
@@ -5118,7 +4819,7 @@ rule SHELL_mysql_tool_txt
 		$ = {74 61 62 6c 65 73 3a 3c 62 72 20 2f 3e 0a 3c 64 69 76 20 73 74 79 6c 65 3d 22 6d 61 72 67 69 6e 2d 6c 65 66 74 3a 20 34 30 70 78 22 3e 0a 20 20 20 20 3c 73 65 6c 65 63 74 20 6e 61 6d 65 3d 22}
 		$ = {5f 63 68 61 72 20 3d 20 22 5c 6e 22 3b 0a 0a 20 20 20 20 20 20 20 20 2f 2f 20 53 65 74 73 20 66 69 6c 65 20 70 6f 73 69 74 69 6f 6e 20 69 6e 64 69 63 61 74 6f 72 0a 20 20 20 20 20 20 20 20 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_soldierofallah_txt
@@ -5130,7 +4831,7 @@ rule SHELL_soldierofallah_txt
 		$ = {69 66 20 28 6c 65 74 74 65 72 77 69 64 74 68 5b 69 5d 3d 3d 30 29 20 7b 6c 65 74 74 65 72 77 69 64 74 68 5b 69 5d 3d 74 65 78 74 66 6f 6e 74 73 69 7a 65 7d 0a 09 09 09 09 6d 65 73 73 61 67 65}
 		$ = {7d 69 6e 70 75 74 2c 6f 70 74 69 6f 6e 7b 62 61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 3a 23 46 46 46 46 41 41 3b 66 6f 6e 74 2d 66 61 6d 69 6c 79 3a 41 72 69 61 6c 3b 7d 3c 2f 73 74 79 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_nst_txt
@@ -5142,7 +4843,7 @@ rule SHELL_nst_txt
 		$ = {6e 6f 68 75 70 20 70 65 72 6c 20 2f 74 6d 70 2f 6e 73 74 5f 70 65 72 6c 5f 70 72 6f 78 79 2e 70 6c 20 24 70 6f 72 74 20 26 22 29 3b 0a 75 6e 6c 69 6e 6b 28 22 2f 74 6d 70 2f 6e 73 74 5f 70 65}
 		$ = {75 74 20 74 79 70 65 3d 73 75 62 6d 69 74 20 76 61 6c 75 65 3d 55 70 6c 6f 61 64 20 6e 61 6d 65 3d 75 70 6c 6f 61 64 66 3e 0a 3c 2f 66 6f 72 6d 3e 3c 62 72 3e 0a 22 3b 0a 0a 69 66 28 40 24 5f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_GNY_Shell_v1_1_txt
@@ -5154,7 +4855,7 @@ rule SHELL_GNY_Shell_v1_1_txt
 		$ = {58 4a 73 63 58 56 76 64 47 56 39 49 6a 73 4e 43 67 6c 79 5a 58 52 31 63 6d 34 67 4a 47 35 6c 64 31 39 31 63 6d 77 37 44 51 70 39 44 51 6f 4e 43 6d 5a 31 62 6d 4e 30 61 57 39 75 49 47 5a 79 59}
 		$ = {28 24 73 71 6c 5f 61 63 74 29 29 20 7b 65 63 68 6f 20 22 3c 68 72 20 73 69 7a 65 3d 5c 22 31 5c 22 20 6e 6f 73 68 61 64 65 3e 22 3b 7d 20 0a 20 20 20 20 69 66 20 28 24 73 71 6c 5f 61 63 74 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Moroccan_Spamers_Ma_EditioN_By_GhOsT_txt
@@ -5166,7 +4867,7 @@ rule SHELL_Moroccan_Spamers_Ma_EditioN_By_GhOsT_txt
 		$ = {72 64 65 72 3d 22 30 22 20 63 65 6c 6c 73 70 61 63 69 6e 67 3d 22 30 22 20 73 74 79 6c 65 3d 22 62 6f 72 64 65 72 2d 63 6f 6c 6c 61 70 73 65 3a 20 63 6f 6c 6c 61 70 73 65 22 20 62 6f 72 64 65}
 		$ = {64 65 72 20 3d 20 22 46 72 6f 6d 3a 20 24 72 65 61 6c 6e 61 6d 65 20 3c 24 66 72 6f 6d 3e 5c 72 5c 6e 52 65 70 6c 79 2d 54 6f 3a 20 24 72 65 70 6c 79 74 6f 5c 72 5c 6e 22 3b 20 0a 24 68 65 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_nshell_txt
@@ -5178,7 +4879,7 @@ rule SHELL_nshell_txt
 		$ = {22 3c 63 65 6e 74 65 72 3e 3c 68 72 20 63 6f 6c 6f 72 3d 37 37 37 37 37 37 20 77 69 64 74 68 3d 31 30 30 25 20 68 65 69 67 68 74 3d 31 31 35 70 78 3e 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 22}
 		$ = {28 24 72 65 73 75 6c 74 29 3b 0a 7d 0a 66 75 6e 63 74 69 6f 6e 20 73 71 6c 28 24 73 74 72 69 6e 67 29 0a 7b 0a 24 61 72 72 3d 40 61 72 72 61 79 28 29 3b 0a 24 61 72 72 3d 65 78 70 6c 6f 64 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_Mohajer22_txt
@@ -5190,7 +4891,7 @@ rule SHELL_r57_Mohajer22_txt
 		$ = {6b 28 24 5f 50 4f 53 54 5b 27 6d 6b 5f 6e 61 6d 65 27 5d 29 29 20 65 63 68 6f 20 22 3c 74 61 62 6c 65 20 77 69 64 74 68 3d 31 30 30 25 20 63 65 6c 6c 70 61 64 64 69 6e 67 3d 30 20 63 65 6c 6c}
 		$ = {61 67 65 2e 27 5f 62 75 74 74 31 32 27 5d 29 29 3b 0a 65 63 68 6f 20 73 72 28 31 35 2c 22 3c 62 3e 22 2e 24 6c 61 6e 67 5b 24 6c 61 6e 67 75 61 67 65 2e 27 5f 74 65 78 74 35 33 27 5d 2e 24 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57142_php
@@ -5202,7 +4903,7 @@ rule SHELL_r57142_php
 		$ = {6b 71 37 6a 47 74 77 5a 2b 6a 69 41 72 42 32 58 52 6e 4c 42 48 2b 63 42 76 68 71 54 33 66 56 6b 62 42 6e 45 72 38 73 42 47 57 48 46 47 39 4d 38 6d 30 36 30 70 4e 77 42 74 4e 63 62 63 56 72 64}
 		$ = {6a 49 58 55 66 7a 52 56 4b 61 75 59 6a 42 6e 4e 4e 35 4d 46 4f 64 64 6c 54 61 6a 31 63 42 69 71 33 52 63 45 76 64 45 77 77 4d 53 30 43 73 4c 55 42 6d 66 72 75 34 69 78 6e 32 73 73 59 47 55 50}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_simple_backdoor_txt
@@ -5213,7 +4914,7 @@ rule SHELL_simple_backdoor_txt
 		$ = {0a 20 20 20 20 20 20 20 20 73 79 73 74 65 6d 28 24 63 6d 64 29 3b 0a 20 20 20 20 20 20 20 20 65 63 68 6f 20 22 3c 2f 70 72 65 3e 22 3b 0a 20 20 20 20 20 20 20 20 64 69 65 3b 0a 7d 0a 0a 3f 3e}
 		$ = {64 69 65 3b 0a 7d 0a 0a 3f 3e 0a 0a 55 73 61 67 65 3a 20 68 74 74 70 3a 2f 2f 74 61 72 67 65 74 2e 63 6f 6d 2f 73 69 6d 70 6c 65 2d 62 61 63 6b 64 6f 6f 72 2e 70 68 70 3f 63 6d 64 3d 63 61 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Ajax_PHP_Command_Shell_txt
@@ -5225,7 +4926,7 @@ rule SHELL_Ajax_PHP_Command_Shell_txt
 		$ = {72 69 65 64 20 74 6f 20 63 68 6d 6f 64 20 69 74 20 61 75 74 6f 6d 61 74 69 63 6c 79 2e 22 3b 0a 7d 0a 0a 66 75 6e 63 74 69 6f 6e 20 72 75 6e 63 6f 6d 6d 61 6e 64 28 75 72 6c 74 6f 6f 70 65 6e}
 		$ = {3c 69 3e 5b 57 5d 3c 2f 69 3e 20 3d 20 73 65 74 20 64 69 72 65 63 74 6f 72 79 20 61 73 20 77 6f 72 6b 69 6e 67 20 64 69 72 65 63 74 6f 72 79 2e 3c 62 72 3e 3c 69 3e 5b 44 5d 3c 2f 69 3e 20 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_remview_fix_php
@@ -5237,7 +4938,7 @@ rule SHELL_remview_fix_php
 		$ = {6c 65 61 6e 20 6f 6b 20 28 66 69 6c 65 20 6e 6f 77 20 65 6d 70 74 79 29 22 29 2e 22 22 3b 0a 20 20 20 20 20 20 20 62 72 65 61 6b 3b 0a 20 20 20 63 61 73 65 20 22 77 69 70 65 22 3a 0a 20 20 20}
 		$ = {20 20 63 61 73 65 20 39 3a 0a 20 20 20 20 20 20 20 20 20 20 20 20 24 6f 75 74 3d 66 72 6f 6d 5f 74 72 61 6e 73 6c 69 74 28 24 63 6f 6e 76 65 72 74 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd_txt
@@ -5245,7 +4946,7 @@ rule SHELL_cmd_txt
 	strings:
 		$ = {3c 70 72 65 3e 3c 62 6f 64 79 20 62 67 63 6f 6c 6f 72 3d 77 68 69 74 65 3e 3c 3f 20 40 73 79 73 74 65 6d 28 24 5f 52 45 51 55 45 53 54 5b 22 63 6d 64 22 5d 29 3b 20 3f 3e 3c 2f 62 6f 64 79 3e 3c 2f 70 72 65 3e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_PHPSPY_php
@@ -5257,7 +4958,7 @@ rule SHELL_PHPSPY_php
 		$ = {0a 20 20 3c 74 72 20 63 6c 61 73 73 3d 22 66 69 72 73 74 61 6c 74 22 3e 0a 20 20 20 20 3c 74 64 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e d6 b4 d0 d0 20 53 51 4c 20 d3 ef be e4 3c 2f 74}
 		$ = {74 65 78 74 22 20 63 6c 61 73 73 3d 22 69 6e 70 75 74 22 20 73 69 7a 65 3d 22 34 30 22 3e 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 73 75 62 6d 69 74 22 20 76 61 6c 75 65 3d 22 b2 e9 bf b4 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_kolang_bypass_txt
@@ -5268,7 +4969,7 @@ rule SHELL_kolang_bypass_txt
 		$ = {53 41 41 6b 41 46 67 41 41 41 41 67 47 41 41 41 41 41 41 41 41 45 67 41 4d 41 41 42 66 58 32 64 74 62 32 35 66 63 33 52 68 63 6e 52 66 58 77 42 66 61 57 35 70 64 41 42 66 0a 5a 6d 6c 75 61 51}
 		$ = {41 41 48 42 41 41 41 4b 59 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 45 41 41 41 41 41 41 41 41 41 45 51 41 41 41 41 4d 41 41 41 41 41 41 41 41 41 41 41 41 41 41 4d 49 51 41 41 44 46 41 41}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_aZRaiLPhp_v1_0_php
@@ -5280,7 +4981,7 @@ rule SHELL_aZRaiLPhp_v1_0_php
 		$ = {61 6c 75 65 3d 27 24 64 69 73 6d 69 27 20 63 6c 61 73 73 3d 27 69 6e 70 75 74 27 20 72 65 61 64 6f 6e 6c 79 3e 43 48 4d 4f 44 3a 0a 20 20 20 20 20 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 27 74}
 		$ = {6c 65 3f 64 69 72 3d 43 3a 5c 5c 27 3e 43 3a 5c 5c 3c 2f 61 3e 3c 2f 63 65 6e 74 65 72 3e 22 3b 0a 7d 20 65 6c 73 65 20 7b 7d 0a 69 66 20 28 66 69 6c 65 5f 65 78 69 73 74 73 28 22 44 3a 5c 5c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99v2_php
@@ -5292,7 +4993,7 @@ rule SHELL_c99v2_php
 		$ = {66 66 5c 22 20 76 61 6c 75 65 3d 5c 22 50 61 63 6b 20 62 75 66 66 65 72 20 74 6f 20 61 72 63 68 69 76 65 5c 22 3e 26 6e 62 73 70 3b 3c 69 6e 70 75 74 20 74 79 70 65 3d 5c 22 74 65 78 74 5c 22}
 		$ = {76 68 2b 36 46 74 48 35 36 57 5a 74 76 72 2f 52 41 51 45 5a 65 63 78 39 4c 6c 2f 50 58 36 2f 76 33 2b 22 2e 0a 22 2f 33 65 48 74 36 71 38 38 65 48 75 2f 5a 6b 66 48 33 79 56 79 49 75 51 74 2b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_gfs_sh_txt
@@ -5304,7 +5005,7 @@ rule SHELL_gfs_sh_txt
 		$ = {64 3e 3c 74 64 20 61 6c 6c 69 6e 67 3d 63 65 6e 74 65 72 3e 3c 62 3e 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 72 65 64 3e 20 4e 4f 20 3c 2f 62 3e 3c 2f 66 6f 6e 74 3e 3c 2f 74 64 3e 3c 2f 74 72 3e}
 		$ = {6c 65 6e 61 6d 65 5c 22 3e 3c 2f 74 64 3e 22 29 3b 0a 20 65 63 68 6f 20 28 22 3c 74 64 20 61 6c 6c 69 6e 67 3d 5c 22 63 65 6e 74 65 72 5c 22 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 5c 22 74 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_megabor_txt
@@ -5316,7 +5017,7 @@ rule SHELL_megabor_txt
 		$ = {26 26 69 73 73 65 74 28 24 5f 52 45 51 55 45 53 54 5b 27 72 65 6e 66 27 5d 29 29 7b 0a 69 66 20 28 72 65 6e 61 6d 65 28 24 6e 73 63 64 69 72 2e 22 2f 22 2e 24 5f 52 45 51 55 45 53 54 5b 27 72}
 		$ = {6e 73 63 64 69 72 2c 35 39 29 3b 70 72 69 6e 74 22 3c 62 72 3e 22 3b 0a 69 6e 70 75 74 28 22 73 75 62 6d 69 74 22 2c 22 22 2c 22 47 c3 b6 73 74 65 72 22 2c 22 22 29 3b 70 72 69 6e 74 20 22 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99madshell_php
@@ -5328,7 +5029,7 @@ rule SHELL_c99madshell_php
 		$ = {68 46 2b 57 57 75 59 2f 68 48 48 43 4b 31 2f 74 6f 48 6f 44 42 37 35 46 35 66 42 6b 79 56 76 2b 63 49 6f 75 47 39 4a 7a 44 6d 67 37 54 39 66 56 65 6e 65 52 59 54 51 6d 4f 41 72 6b 68 5a 42 51}
 		$ = {6a 7a 70 4a 63 58 67 75 76 72 36 6b 35 59 50 53 2f 78 6f 4f 35 72 4b 4a 78 72 4f 57 4f 59 77 45 63 37 38 59 77 56 4a 57 6a 36 69 2b 69 66 79 2b 45 30 32 4c 79 49 62 71 65 45 62 35 4c 43 72 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ex0shell_txt
@@ -5340,7 +5041,7 @@ rule SHELL_ex0shell_txt
 		$ = {0a 70 72 69 6e 74 22 3c 63 65 6e 74 65 72 3e 3c 64 69 76 3e 3c 62 3e 5b 20 22 2e 20 24 5f 52 45 51 55 45 53 54 5b 27 72 65 6e 27 5d 2e 22 20 69 73 20 72 65 6e 61 6d 65 64 20 74 6f 20 22 20 2e}
 		$ = {70 75 74 28 22 73 75 62 6d 69 74 22 2c 22 22 2c 22 56 69 65 77 22 2c 22 22 29 3b 70 72 69 6e 74 20 22 20 22 3b 0a 69 6e 70 75 74 28 22 72 65 73 65 74 22 2c 22 22 2c 22 52 30 30 54 22 2c 22 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Cyber_Shell__v_1_0__php
@@ -5352,7 +5053,7 @@ rule SHELL_Cyber_Shell__v_1_0__php
 		$ = {29 3b 0a 73 79 73 74 65 6d 28 22 70 65 72 6c 20 24 64 2f 24 62 66 69 6c 65 6e 65 6d 65 22 29 3b 0a 65 63 68 6f 20 22 3c 6d 65 74 61 20 68 74 74 70 2d 65 71 75 69 76 3d 52 65 66 72 65 73 68 20}
 		$ = {64 20 28 69 73 73 65 74 28 24 74 65 78 74 6f 66 6d 79 73 71 6c 29 29 29 7b 0a 6d 79 73 71 6c 5f 73 65 6c 65 63 74 5f 64 62 28 24 64 62 6e 61 6d 65 29 20 6f 72 20 64 69 65 28 22 cd e5 20 ec ee}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b37_php
@@ -5364,7 +5065,7 @@ rule SHELL_b37_php
 		$ = {38 34 73 65 67 70 6a 6c 73 78 79 67 57 75 55 36 77 43 61 0a 6a 2b 70 6c 34 2f 53 53 75 66 39 50 50 42 46 73 6d 78 4e 37 5a 47 35 37 38 75 6c 76 36 72 42 68 37 79 6a 76 39 76 36 47 73 42 7a 59}
 		$ = {44 4c 42 31 2b 54 73 59 64 75 33 43 4f 41 6f 34 6d 76 77 62 6c 47 4a 6c 36 31 73 61 7a 63 4b 66 38 68 43 71 4f 62 66 4e 0a 39 34 30 65 75 75 4b 64 6d 44 43 52 79 53 4e 74 2f 6c 74 2b 74 6e 4c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_madnet_txt
@@ -5376,7 +5077,7 @@ rule SHELL_c99_madnet_txt
 		$ = {79 44 69 34 68 46 2b 57 57 75 59 2f 68 48 48 43 4b 31 2f 74 6f 48 6f 44 42 37 35 46 35 66 42 6b 79 56 76 2b 63 49 6f 75 47 39 4a 7a 44 6d 67 37 54 39 66 56 65 6e 65 52 59 54 51 6d 4f 41 72 6b}
 		$ = {58 58 57 6a 7a 70 4a 63 58 67 75 76 72 36 6b 35 59 50 53 2f 78 6f 4f 35 72 4b 4a 78 72 4f 57 4f 59 77 45 63 37 38 59 77 56 4a 57 6a 36 69 2b 69 66 79 2b 45 30 32 4c 79 49 62 71 65 45 62 35 4c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c66_php
@@ -5388,7 +5089,7 @@ rule SHELL_c66_php
 		$ = {5c 22 20 73 69 7a 65 3d 5c 22 37 30 5c 22 3e 3c 62 72 3e 3c 62 72 3e 0a 53 61 76 65 20 74 68 69 73 20 66 69 6c 65 20 64 69 72 3a 20 3c 69 6e 70 75 74 20 6e 61 6d 65 3d 5c 22 75 70 6c 6f 61 64}
 		$ = {69 64 2c 24 73 69 67 29 29 20 7b 65 63 68 6f 20 22 4f 4b 2e 22 3b 7d 0a 20 20 20 20 65 6c 73 65 20 7b 65 63 68 6f 20 22 45 52 52 4f 52 2e 22 3b 7d 0a 20 20 20 7d 0a 20 20 20 77 68 69 6c 65 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wso_v2_5_txt
@@ -5400,7 +5101,7 @@ rule SHELL_wso_v2_5_txt
 		$ = {6c 75 65 29 3b 69 66 28 74 68 69 73 2e 61 6a 61 78 2e 63 68 65 63 6b 65 64 29 7b 61 28 6e 75 6c 6c 2c 6e 75 6c 6c 2c 74 68 69 73 2e 63 6d 64 2e 76 61 6c 75 65 2c 74 68 69 73 2e 73 68 6f 77 5f}
 		$ = {27 63 70 38 36 36 27 29 3b 20 62 72 65 61 6b 3b 0a 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 69 66 28 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 66 69 6c 65 27 5d 29 29 20 7b 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_bdotw44shell_txt
@@ -5412,7 +5113,7 @@ rule SHELL_bdotw44shell_txt
 		$ = {69 6c 65 3a 22 3b 0a 09 09 69 66 28 21 66 69 6c 65 5f 65 78 69 73 74 73 28 22 66 69 6c 65 3a 22 29 29 20 7b 0a 09 09 09 6d 6b 64 69 72 28 22 66 69 6c 65 3a 22 29 3b 0a 09 09 09 63 68 64 69 72}
 		$ = {6f 73 65 28 24 63 68 29 3b 0a 09 09 72 65 74 75 72 6e 20 24 72 65 73 75 6c 74 3b 0a 09 7d 0a 09 2f 2f 65 78 65 63 75 74 65 20 66 75 6e 63 74 69 6f 6e 0a 09 69 66 28 66 75 6e 63 65 78 28 22 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_KAdot_Universal_Shell_v0_1_6_txt
@@ -5424,7 +5125,7 @@ rule SHELL_KAdot_Universal_Shell_v0_1_6_txt
 		$ = {6b 3b 0a 0a 0a 2f 2f 20 55 70 6c 6f 61 64 69 6e 67 0a 63 61 73 65 20 22 75 70 6c 6f 61 64 22 3a 0a 0a 65 63 68 6f 20 3c 3c 3c 48 54 4d 4c 0a 3c 62 3e 46 69 6c 65 20 55 70 6c 6f 61 64 3c 2f 62}
 		$ = {69 6e 74 20 22 cd e5 20 f3 e4 e0 b8 f2 f1 ff 20 e7 e0 e3 f0 f3 e7 e8 f2 fc 20 f4 e0 e9 eb ee 2e 20 c8 ed f4 e0 3a 5c 6e 22 3b 0a 20 20 20 20 70 72 69 6e 74 5f 72 28 24 5f 46 49 4c 45 53 29 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_DxShell_1_0_txt
@@ -5436,7 +5137,7 @@ rule SHELL_DxShell_1_0_txt
 		$ = {20 29 0a 09 09 09 2e 27 20 63 6c 61 73 73 3d 72 61 64 69 6f 3e 27 2e 24 63 75 72 5f 72 61 64 2e 27 26 6e 62 73 70 3b 26 6e 62 73 70 3b 26 6e 62 73 70 3b 27 3b 0a 09 70 72 69 6e 74 20 22 5c 6e}
 		$ = {74 72 65 6b 27 2c 32 37 32 37 3d 3e 27 4d 47 43 50 20 63 61 6c 6c 20 61 67 65 6e 74 27 2c 32 36 32 38 3d 3e 27 44 49 43 54 27 2c 32 39 39 38 3d 3e 27 49 53 53 20 52 65 61 6c 20 53 65 63 75 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Rootshell_v_1_0_txt
@@ -5448,7 +5149,7 @@ rule SHELL_Rootshell_v_1_0_txt
 		$ = {7a 65 3d 22 37 30 22 20 6e 61 6d 65 3d 22 63 6f 6d 6d 61 6e 64 22 20 72 6f 77 73 3d 22 32 22 20 63 6f 6c 73 3d 22 34 30 22 20 3e 3c 2f 74 65 78 74 61 72 65 61 3e 20 3c 62 72 3e 0a 3c 62 72 3e}
 		$ = {0a 3c 2f 74 64 3e 0a 0a 20 20 20 20 20 20 3c 2f 74 72 3e 0a 20 20 20 20 3c 74 72 3e 0a 20 20 20 20 20 20 3c 74 64 20 77 69 64 74 68 3d 22 34 39 25 22 20 68 65 69 67 68 74 3d 22 32 35 22 20 62}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_sniper_txt
@@ -5460,7 +5161,7 @@ rule SHELL_sniper_txt
 		$ = {73 70 61 63 69 6e 67 3d 30 20 62 67 63 6f 6c 6f 72 3d 23 63 63 63 63 63 63 3e 0a 3c 74 72 3e 3c 74 64 20 61 6c 69 67 6e 3d 72 69 67 68 74 20 77 69 64 74 68 3d 31 30 30 3e 27 3b 0a 65 63 68 6f}
 		$ = {69 64 33 27 29 2e 24 74 61 62 6c 65 5f 75 70 32 2e 64 69 76 28 27 69 64 33 27 29 2e 24 74 73 3b 0a 65 63 68 6f 20 73 72 28 31 35 2c 22 3c 62 3e 22 2e 24 6c 61 6e 67 5b 24 6c 61 6e 67 75 61 67}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_404_txt
@@ -5472,7 +5173,7 @@ rule SHELL_404_txt
 		$ = {75 6d 65 6e 74 2e 63 66 2e 63 6d 64 2e 66 6f 63 75 73 28 29 3b 3c 2f 73 63 72 69 70 74 3e 27 3b 20 0a 20 20 20 20 70 72 69 6e 74 46 6f 6f 74 65 72 28 29 3b 20 0a 7d 20 0a 0a 66 75 6e 63 74 69}
 		$ = {20 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 74 65 78 74 20 6e 61 6d 65 3d 73 71 6c 5f 62 61 73 65 20 76 61 6c 75 65 3d 27 27 3e 22 3b 20 0a 20 20 20 20 69 66 28 69 73 73 65 74 28 24 5f 50 4f 53}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_lamashell_txt
@@ -5484,7 +5185,7 @@ rule SHELL_lamashell_txt
 		$ = {79 70 65 3d 22 74 65 78 74 22 20 73 69 7a 65 3d 22 31 30 30 22 20 76 61 6c 75 65 3d 22 3c 3f 20 65 63 68 6f 20 24 63 75 72 64 69 72 3b 20 3f 3e 22 3e 3c 2f 74 64 3e 0a 20 20 20 20 20 20 3c 74}
 		$ = {75 72 64 69 72 2e 22 2f 22 2e 24 5f 46 49 4c 45 53 5b 27 66 69 6c 61 27 5d 5b 27 6e 61 6d 65 27 5d 29 29 20 7b 0a 20 20 20 20 20 20 20 20 65 63 68 6f 20 22 54 68 65 20 66 69 6c 65 20 68 61 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Worse_Linux_Shell_txt
@@ -5496,7 +5197,7 @@ rule SHELL_Worse_Linux_Shell_txt
 		$ = {70 65 3d 66 69 6c 65 20 6e 61 6d 65 3d 5f 75 70 6c 3e 3c 2f 74 64 3e 22 3b 0a 70 72 69 6e 74 20 22 3c 74 64 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 73 75 62 6d 69 74 20 6e 61 6d 65 3d 5f 61 63}
 		$ = {20 20 20 20 20 20 20 20 70 72 69 6e 74 20 22 3c 63 65 6e 74 65 72 3e 3c 70 72 65 3e 22 3b 0a 20 20 20 20 20 20 20 20 73 79 73 74 65 6d 28 22 6d 76 20 22 2e 24 5f 46 49 4c 45 53 5b 27 5f 75 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_v1_txt
@@ -5508,7 +5209,7 @@ rule SHELL_b374k_v1_txt
 		$ = {34 50 44 4e 49 45 0a 56 44 73 6e 57 47 4e 6d 6c 78 44 74 31 36 58 44 44 54 43 7a 78 53 32 58 59 4f 7a 4f 51 43 5a 33 73 53 65 34 49 6d 56 57 4b 4c 59 2f 67 4c 68 74 73 41 56 59 4e 46 52 36 50}
 		$ = {4d 50 32 63 57 65 4f 33 45 2b 45 49 74 54 65 4f 46 77 74 4f 67 4d 48 46 59 49 7a 47 6b 65 53 63 70 34 6c 55 76 52 70 32 4a 38 74 67 52 4f 34 79 56 44 4f 36 0a 63 6f 45 75 4f 78 4a 7a 49 58 45}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_PSych0_php
@@ -5520,7 +5221,7 @@ rule SHELL_c99_PSych0_php
 		$ = {65 63 68 6f 20 22 3c 2f 74 72 3e 5c 72 5c 6e 22 3b 20 0a 20 20 7d 20 0a 20 20 65 63 68 6f 20 22 3c 2f 74 61 62 6c 65 3e 3c 68 72 20 73 69 7a 65 3d 5c 22 31 5c 22 20 6e 6f 73 68 61 64 65 3e 3c}
 		$ = {6b 2f 4e 4c 6c 2f 4c 54 55 2b 72 6e 58 2b 38 7a 69 2f 4c 62 56 2b 2b 66 78 2f 65 37 32 2f 76 48 33 2f 76 4c 34 2f 75 33 31 22 2e 20 0a 22 2f 65 33 31 2f 75 44 75 2f 64 7a 72 2f 4f 72 7a 2f 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Liz0ziM_Private_Safe_Mode_Command_Execuriton_Bypass_Exploit_php
@@ -5532,7 +5233,7 @@ rule SHELL_Liz0ziM_Private_Safe_Mode_Command_Execuriton_Bypass_Exploit_php
 		$ = {64 2e 63 6f 6e 66 3c 2f 6f 70 74 69 6f 6e 3e 0a 3c 2f 73 65 6c 65 63 74 3e 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 73 75 62 6d 69 74 22 20 76 61 6c 75 65 3d 22 47 f6 73 74 65 72 20 42 61 6b}
 		$ = {65 78 65 63 28 27 69 64 27 29 3b 0a 24 73 65 72 76 65 72 3d 73 68 65 6c 6c 5f 65 78 65 63 28 27 75 6e 61 6d 65 20 2d 61 27 29 3b 0a 65 63 68 6f 20 22 3c 70 72 65 3e 3c 68 34 3e 22 3b 0a 65 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_load_shell_txt
@@ -5544,7 +5245,7 @@ rule SHELL_load_shell_txt
 		$ = {76 3e 22 3b 0a 7d 0a 0a 0a 0a 69 66 28 69 73 73 65 74 28 24 5f 50 4f 53 54 5b 27 70 68 70 63 6f 64 65 27 5d 29 29 7b 0a 0a 65 63 68 6f 20 22 3c 63 65 6e 74 65 72 3e 3c 64 69 76 20 69 64 3d 6c}
 		$ = {65 63 68 6f 20 24 66 69 6c 65 73 3b 0a 65 63 68 6f 20 22 3c 2f 74 61 62 6c 65 3e 3c 62 72 3e 22 3b 0a 0a 0a 0a 0a 65 63 68 6f 20 22 0a 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 5c 22 24 52 45 51}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_NIX_REMOTE_WEB_SHELL_v_0_5_alpha_Lite_Public_Version_php
@@ -5556,7 +5257,7 @@ rule SHELL_NIX_REMOTE_WEB_SHELL_v_0_5_alpha_Lite_Public_Version_php
 		$ = {68 72 65 66 3d 27 24 70 68 70 5f 73 65 6c 66 3f 6e 6f 3d 31 27 3e cd e5 f2 3c 2f 61 3e 0a 3c 62 72 3e 0a 22 3b 0a 69 66 28 40 24 5f 47 45 54 5b 27 79 65 73 27 5d 3d 3d 22 79 65 73 22 29 7b 0a}
 		$ = {5b 27 63 6d 64 27 5d 29 2e 22 22 3b 0a 65 63 68 6f 20 22 3c 2f 66 6f 6e 74 3e 3c 2f 62 3e 22 3b 0a 62 72 65 61 6b 3b 0a 0a 2f 2f 20 55 70 6c 6f 61 64 69 6e 67 0a 63 61 73 65 20 22 75 70 6c 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Safe_mode_breaker_php
@@ -5567,7 +5268,7 @@ rule SHELL_Safe_mode_breaker_php
 		$ = {6a 5d 7d 22 3b 20 0a 0a 20 20 20 20 20 20 20 20 20 20 20 24 70 72 65 76 44 32 20 3d 20 24 44 5b 63 6f 75 6e 74 28 24 44 29 2d 31 5d 3b 20 0a 20 20 20 20 20 20 20 20 20 20 20 67 6c 6f 62 28 24}
 		$ = {29 3b 20 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 69 66 28 24 44 5b 63 6f 75 6e 74 28 24 44 29 2d 31 5d 20 21 3d 20 24 70 72 65 76 44 33 29 7b 20 0a 0a 0a 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_MySQL_Web_Interface_Version_0_8_php
@@ -5579,7 +5280,7 @@ rule SHELL_MySQL_Web_Interface_Version_0_8_php
 		$ = {63 68 6f 20 22 3c 74 68 3e 4e 61 6d 65 3c 2f 74 68 3e 5c 6e 22 3b 0a 09 65 63 68 6f 20 22 3c 74 68 3e 54 79 70 65 3c 2f 74 68 3e 5c 6e 22 3b 0a 09 65 63 68 6f 20 22 3c 74 68 3e 46 75 6e 63 74}
 		$ = {26 63 6f 6d 6d 61 6e 64 3d 73 68 6f 77 5f 70 72 6f 63 65 73 73 6c 69 73 74 27 3e 50 72 6f 63 65 73 73 6c 69 73 74 3c 2f 61 3e 5c 6e 22 3b 0a 09 09 65 63 68 6f 20 22 3c 2f 75 6c 3e 5c 6e 22 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Dive_Shell_1_0___Emperor_Hacking_Team_php
@@ -5591,7 +5292,7 @@ rule SHELL_Dive_Shell_1_0___Emperor_Hacking_Team_php
 		$ = {70 75 74 2e 73 63 72 6f 6c 6c 54 6f 70 20 3d 20 64 6f 63 75 6d 65 6e 74 2e 73 68 65 6c 6c 2e 6f 75 74 70 75 74 2e 73 63 72 6f 6c 6c 48 65 69 67 68 74 3b 0a 20 20 64 6f 63 75 6d 65 6e 74 2e 73}
 		$ = {6e 74 3e 0a 20 20 26 6e 62 73 70 3b 3c 74 65 78 74 61 72 65 61 20 6e 61 6d 65 3d 22 6f 75 74 70 75 74 22 20 72 65 61 64 6f 6e 6c 79 3d 22 72 65 61 64 6f 6e 6c 79 22 20 63 6f 6c 73 3d 22 31 30}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Mysql_interface_v1_0_txt
@@ -5603,7 +5304,7 @@ rule SHELL_Mysql_interface_v1_0_txt
 		$ = {46 75 6e 63 74 69 6f 6e 3c 2f 74 68 3e 5c 6e 22 3b 0a 65 63 68 6f 20 22 3c 74 68 3e 44 61 74 61 3c 2f 74 68 3e 5c 6e 22 3b 0a 65 63 68 6f 20 22 3c 2f 74 72 3e 5c 6e 22 3b 0a 0a 24 70 52 65 73}
 		$ = {74 3c 2f 61 3e 5c 6e 22 3b 0a 20 20 65 63 68 6f 20 22 3c 2f 75 6c 3e 5c 6e 22 3b 0a 20 20 65 63 68 6f 20 22 46 6c 75 73 68 5c 6e 22 3b 0a 20 20 65 63 68 6f 20 22 3c 75 6c 3e 5c 6e 22 3b 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_27_9_txt
@@ -5615,7 +5316,7 @@ rule SHELL_27_9_txt
 		$ = {28 24 75 70 6c 6f 61 64 70 61 74 68 2e 24 64 65 73 74 69 6e 2c 24 73 74 61 74 5b 39 5d 2c 24 73 74 61 74 5b 38 5d 29 3b 7d 0a 20 20 20 20 20 7d 0a 20 20 20 20 7d 0a 20 20 20 7d 0a 20 20 7d 0a}
 		$ = {29 29 2e 22 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 3c 62 72 3e 22 3b 0a 20 20 20 24 66 69 20 3d 20 66 6f 70 65 6e 28 24 64 2e 24 66 2c 22 72 62 22 29 3b 0a 20 20 20 69 66 20 28}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Worse_Linux_Shell_php
@@ -5627,7 +5328,19 @@ rule SHELL_Worse_Linux_Shell_php
 		$ = {70 65 3d 66 69 6c 65 20 6e 61 6d 65 3d 5f 75 70 6c 3e 3c 2f 74 64 3e 22 3b 0a 70 72 69 6e 74 20 22 3c 74 64 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 73 75 62 6d 69 74 20 6e 61 6d 65 3d 5f 61 63}
 		$ = {20 20 20 20 20 20 20 20 70 72 69 6e 74 20 22 3c 63 65 6e 74 65 72 3e 3c 70 72 65 3e 22 3b 0a 20 20 20 20 20 20 20 20 73 79 73 74 65 6d 28 22 6d 76 20 22 2e 24 5f 46 49 4c 45 53 5b 27 5f 75 70}
 	condition:
-		 any of them
+		3 of them
+}
+
+rule SHELL_c99_txt
+{
+	strings:
+		$ = {24 64 2c 2d 31 29 20 21 3d 20 44 49 52 45 43 54 4f 52 59 5f 53 45 50 41 52 41 54 4f 52 29 20 7b 24 64 20 2e 3d 20 44 49 52 45 43 54 4f 52 59 5f 53 45 50 41 52 41 54 4f 52 3b 7d 0a 20 24 68 20}
+		$ = {5f 74 62 6c 5f 61 63 74 3d 73 74 72 75 63 74 75 72 65 5c 22 3e 5b 26 6e 62 73 70 3b 3c 62 3e 53 74 72 75 63 74 75 72 65 3c 2f 62 3e 26 6e 62 73 70 3b 5d 3c 2f 61 3e 26 6e 62 73 70 3b 26 6e 62}
+		$ = {6f 63 75 73 3d 5c 22 74 68 69 73 2e 73 65 6c 65 63 74 28 29 5c 22 20 6f 6e 4d 6f 75 73 65 6f 76 65 72 3d 5c 22 74 68 69 73 2e 73 65 6c 65 63 74 28 29 5c 22 20 6f 6e 4d 6f 75 73 65 6f 75 74 3d}
+		$ = {4e 33 74 67 65 74 73 6f 75 72 63 65 28 24 62 69 6e 64 5b 22 73 72 63 22 5d 29 29 20 7b 65 63 68 6f 20 22 43 61 6e 27 74 20 64 6f 77 6e 6c 6f 61 64 20 73 6f 75 72 63 65 73 21 22 3b 7d 0a 20 20}
+		$ = {22 52 30 6c 47 4f 44 6c 68 45 41 41 51 41 48 63 41 41 43 48 35 42 41 45 41 41 4a 55 41 4c 41 41 41 41 41 41 51 41 42 41 41 68 77 41 41 41 49 65 70 33 42 45 39 6d 6c 6c 69 63 33 42 35 69 56 70}
+	condition:
+		3 of them
 }
 
 rule SHELL_pws_txt
@@ -5639,7 +5352,7 @@ rule SHELL_pws_txt
 		$ = {65 61 6c 3b 0a 20 20 20 63 6f 70 79 28 24 75 70 6c 6f 61 64 65 64 2c 20 24 64 65 7a 29 3b 0a 20 20 20 65 63 68 6f 20 22 46 49 4c 45 20 55 50 4c 4f 41 44 45 44 20 54 4f 20 24 64 65 7a 22 3b 0a}
 		$ = {20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 6e 61 6d 65 3d 22 64 69 72 22 20 73 69 7a 65 3d 22 33 30 22 20 76 61 6c 75 65 3d 22 3c 3f 20 70 61 73 73 74 68 72 75 28 22 70 77 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_knullsh_txt
@@ -5651,7 +5364,7 @@ rule SHELL_knullsh_txt
 		$ = {4b 43 6b 37 43 67 6b 4a 43 58 42 68 63 33 4e 30 61 48 4a 31 4b 43 52 6a 4b 54 73 4b 43 51 6b 4a 4a 47 38 39 62 32 4a 66 5a 32 56 30 0a 58 32 4e 76 62 6e 52 6c 62 6e 52 7a 4b 43 6b 37 43 67 6b}
 		$ = {61 62 6c 65 20 74 6f 20 65 78 65 63 75 74 65 20 4e 65 74 63 61 74 20 42 61 63 6b 70 69 70 65 3c 2f 70 3e 27 3b 0a 09 09 7d 0a 0a 09 0a 09 7d 20 65 6c 73 65 20 69 66 20 28 69 73 73 65 74 28 24}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_zacosmall_txt
@@ -5663,7 +5376,7 @@ rule SHELL_zacosmall_txt
 		$ = {60 28 5c 6e 22 3b 0a 66 6f 72 28 24 6a 3d 30 3b 24 6a 3c 6d 79 73 71 6c 5f 6e 75 6d 5f 72 6f 77 73 28 24 72 65 73 75 6c 74 32 29 2d 31 3b 24 6a 2b 2b 29 0a 7b 0a 24 72 6f 77 73 32 3d 6d 79 73}
 		$ = {6b 5d 3d 3d 27 27 3f 27 6e 75 6c 6c 29 3b 27 3a 27 5c 27 27 2e 61 64 64 73 6c 61 73 68 65 73 28 24 72 6f 77 73 32 5b 24 6b 5d 29 2e 27 5c 27 29 3b 27 29 2e 22 5c 6e 22 3b 0a 69 66 28 24 61 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_SimAttacker___Vrsion_1_0_0___priv8_4_My_friend_txt
@@ -5675,7 +5388,7 @@ rule SHELL_SimAttacker___Vrsion_1_0_0___priv8_4_My_friend_txt
 		$ = {6c 69 67 6e 3d 27 63 65 6e 74 65 72 27 3e 0a 09 09 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 27 23 46 46 39 39 33 33 27 20 73 69 7a 65 3d 27 32 27 3e 3c 62 3e 45 64 69 74 3c 2f 62 3e 3c 2f 66 6f 6e}
 		$ = {64 65 63 6f 72 61 74 69 6f 6e 3a 20 6e 6f 6e 65 27 3e 3c 66 6f 6e 74 20 73 69 7a 65 3d 27 32 27 20 63 6f 6c 6f 72 3d 27 23 39 39 39 39 39 39 27 3e 43 68 6d 6f 64 22 3b 0a 09 09 7d 0a 09 09 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_stres_txt
@@ -5687,7 +5400,7 @@ rule SHELL_stres_txt
 		$ = {3f 20 27 78 27 20 3a 20 27 2d 27 3b 0a 24 77 6f 72 6c 64 5b 22 72 65 61 64 22 5d 20 3d 20 28 24 6d 6f 64 65 20 26 20 30 30 30 30 34 29 20 3f 20 27 72 27 20 3a 20 27 2d 27 3b 0a 24 77 6f 72 6c}
 		$ = {22 20 73 69 7a 65 3d 22 33 22 3e 67 3c 2f 66 6f 6e 74 3e 3c 73 65 6c 65 63 74 20 6e 61 6d 65 3d 22 63 6d 64 22 20 73 69 7a 65 3d 22 31 22 3e 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 6c 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_mod_bizzz_shell_txt
@@ -5699,7 +5412,7 @@ rule SHELL_r57_mod_bizzz_shell_txt
 		$ = {50 4f 53 54 5b 27 63 6d 64 27 5d 3d 22 22 3b 20 7d 0a 20 65 6c 73 65 20 7b 0a 20 65 63 68 6f 20 24 74 61 62 6c 65 5f 75 70 33 3b 0a 20 65 63 68 6f 20 24 66 6f 6e 74 3b 0a 20 65 63 68 6f 20 22}
 		$ = {3b 0a 20 20 20 20 20 7d 0a 20 20 20 20 20 69 66 28 21 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 64 69 66 27 5d 29 26 26 24 66 70 29 20 7b 20 40 66 70 75 74 73 28 24 66 70 2c 24 73 71 6c 31 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_newsh_php
@@ -5711,7 +5424,7 @@ rule SHELL_newsh_php
 		$ = {67 68 74 3d 23 63 30 63 30 63 30 20 62 6f 72 64 65 72 3d 31 3e 0a 27 3b 0a 77 68 69 6c 65 20 28 24 72 6f 77 20 3d 20 6d 79 73 71 6c 5f 66 65 74 63 68 5f 61 72 72 61 79 28 24 73 65 6c 65 63 74}
 		$ = {79 6c 65 3e 0a 3c 74 69 74 6c 65 3e 3c 3f 3d 22 5b 6e 65 78 40 22 2e 67 65 74 65 6e 76 28 22 48 54 54 50 5f 48 4f 53 54 22 29 2e 22 20 7e 5d 22 3f 3e 3c 2f 74 69 74 6c 65 3e 3c 2f 68 65 61 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ctt_sh_txt
@@ -5723,7 +5436,7 @@ rule SHELL_ctt_sh_txt
 		$ = {65 4f 64 51 4b 62 50 67 65 64 6a 5a 6d 68 6e 41 63 4a 6c 71 61 49 71 55 65 73 6d 49 69 6b 70 45 69 78 6e 79 4a 68 75 6c 55 4d 68 67 32 34 61 53 4f 36 59 79 45 41 4f 77 3d 3d 22 2c 0a 22 73 6d}
 		$ = {41 41 41 44 2f 41 50 2f 2f 41 41 41 41 2f 2f 38 41 2f 77 44 2f 22 2e 0a 22 2f 2f 2f 2f 2f 79 77 41 41 41 41 41 45 41 41 51 41 41 41 45 55 2f 44 49 67 36 71 31 4d 36 50 48 2b 36 4f 5a 74 48 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c100_v__777shell_v__Undetectable__18a_Modded_by_777___Don_php
@@ -5735,7 +5448,7 @@ rule SHELL_c100_v__777shell_v__Undetectable__18a_Modded_by_777___Don_php
 		$ = {0a 20 20 20 24 66 70 20 3d 20 66 6f 70 65 6e 28 24 73 72 63 70 61 74 68 2c 22 61 62 2b 22 29 3b 0a 20 20 20 69 66 20 28 21 24 66 70 29 20 7b 65 63 68 6f 20 22 43 61 6e 27 74 20 77 72 69 74 65}
 		$ = {41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 22 2e 0a 22 41 41 41 41 41 43 48 35 42 41 45 41 41 41 67 41 4c 41 41 41 41 41 41 54 41 42 41 41 41 41 52 52 45 4d 6c 4a 71 37 30 34 36 79}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_small_txt
@@ -5747,7 +5460,7 @@ rule SHELL_small_txt
 		$ = {27 2e 24 72 6f 77 73 32 5b 34 5d 2e 27 5c 27 27 3a 27 20 44 45 46 41 55 4c 54 20 4e 55 4c 4c 27 29 2e 22 2c 5c 6e 22 3b 0a 7d 0a 24 72 6f 77 73 32 3d 6d 79 73 71 6c 5f 66 65 74 63 68 5f 61 72}
 		$ = {6d 70 5f 66 69 6c 65 29 3b 66 66 6c 75 73 68 28 24 74 5f 66 29 3b 7d 0a 65 6c 73 65 0a 7b 0a 65 63 68 6f 28 24 64 75 6d 70 5f 66 69 6c 65 29 3b 0a 6f 62 5f 66 6c 75 73 68 28 29 3b 0a 7d 0a 24}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_RedhatC99__login_redhat_pass_root_
@@ -5759,7 +5472,7 @@ rule SHELL_RedhatC99__login_redhat_pass_root_
 		$ = {73 20 66 69 6c 65 20 64 69 72 3a 20 3c 69 6e 70 75 74 20 6e 61 6d 65 3d 5c 22 75 70 6c 6f 61 64 70 61 74 68 5c 22 20 73 69 7a 65 3d 5c 22 37 30 5c 22 20 76 61 6c 75 65 3d 5c 22 22 2e 24 64 69}
 		$ = {6f 20 22 4f 4b 2e 22 3b 7d 0a 20 20 20 20 65 6c 73 65 20 7b 65 63 68 6f 20 22 45 52 52 4f 52 2e 22 3b 7d 0a 20 20 20 7d 0a 20 20 20 77 68 69 6c 65 20 28 65 72 65 67 28 22 20 20 22 2c 24 72 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_isko_txt
@@ -5771,7 +5484,7 @@ rule SHELL_isko_txt
 		$ = {35 5a 48 6e 71 78 45 31 70 50 4c 58 38 6f 54 73 62 66 4c 30 39 5a 39 37 31 2b 47 4f 61 54 38 36 41 33 4c 57 66 68 7a 61 46 65 63 4d 4e 74 6f 4f 5a 62 42 69 2b 67 6d 49 6b 76 64 79 35 6d 58 34}
 		$ = {52 68 69 6d 4b 32 7a 65 54 6a 67 61 6e 54 33 31 5a 50 6a 6e 37 6d 71 69 30 4e 42 4b 56 38 6a 6c 39 5a 69 32 70 73 70 4d 30 50 43 2b 63 55 4b 30 4a 4e 77 39 49 6e 4b 54 37 4e 31 51 30 49 56 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_shellzx_txt
@@ -5783,7 +5496,7 @@ rule SHELL_shellzx_txt
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 66 69 65 6c 64 73 3d 69 6d 70 6c 6f 64 65 28 22 60 2c 20 60 22 2c 20 61 72}
 		$ = {70 61 73 73 65 72 27 3e 5b 45 78 69 73 74 69 6e 67 5d 20 44 61 74 61 62 61 73 65 20 74 6f 20 73 74 6f 72 65 20 74 65 6d 70 6f 72 61 72 79 20 74 61 62 6c 65 3a 20 3c 69 6e 70 75 74 20 74 79 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_2mv2_txt
@@ -5795,7 +5508,7 @@ rule SHELL_2mv2_txt
 		$ = {7a 34 38 4c 33 52 6b 50 67 6f 67 49 43 41 67 49 43 41 38 4c 33 52 79 50 67 6f 67 49 43 41 67 49 43 41 38 64 48 49 2b 43 69 41 67 49 43 41 67 49 43 41 67 0a 50 48 52 6b 49 48 64 70 5a 48 52 6f}
 		$ = {20 20 20 7d 0a 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 7d 0a 65 63 68 6f 20 40 24 68 74 6d 6c 5f 6f 75 74 70 75 74 3b 0a 7d 0a 0a 69 66 20 28 69 73 73 65 74 28 24 5f 50 4f 53 54 5b 27 53 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_SyRiAn_Sh3ll_v7_txt
@@ -5807,7 +5520,7 @@ rule SHELL_SyRiAn_Sh3ll_v7_txt
 		$ = {6e 69 6e 67 3c 2f 6f 70 74 69 6f 6e 3e 0a 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 33 30 22 20 3e 4e 6f 74 20 61 76 61 69 6c 61 62 6c 65 3c 2f 6f 70 74 69 6f 6e 3e 0a 3c 2f 73 65 6c 65 63}
 		$ = {5c 22 72 61 64 69 6f 5c 22 20 6e 61 6d 65 3d 5c 22 63 6f 6e 74 65 6e 74 74 79 70 65 5c 22 20 76 61 6c 75 65 3d 5c 22 68 74 6d 6c 5c 22 20 63 68 65 63 6b 65 64 3d 5c 22 63 68 65 63 6b 65 64 5c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Fx29Sh_3_2_12_08_txt
@@ -5819,7 +5532,7 @@ rule SHELL_Fx29Sh_3_2_12_08_txt
 		$ = {0a 0a 20 20 20 20 20 20 20 20 68 65 61 64 65 72 28 22 43 6f 6e 74 65 6e 74 2d 74 79 70 65 3a 20 74 65 78 74 2f 70 6c 61 69 6e 22 29 3b 0a 0a 20 20 20 20 20 20 20 20 68 65 61 64 65 72 28 22 43}
 		$ = {20 20 65 63 68 6f 20 24 76 3b 0a 0a 20 20 20 20 40 6f 62 5f 65 6e 64 5f 66 6c 75 73 68 28 29 3b 0a 0a 20 20 7d 0a 0a 20 20 65 78 69 74 3b 0a 0a 7d 0a 0a 23 23 5b 20 45 4e 44 20 4f 46 20 46 58}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_GFS_web_shell_ver_3_1_7___PRiV8_txt
@@ -5831,7 +5544,7 @@ rule SHELL_GFS_web_shell_ver_3_1_7___PRiV8_txt
 		$ = {20 22 6d 73 2d 73 6e 61 2d 62 61 73 65 22 3b 0a 24 70 6f 72 74 5b 31 34 39 30 5d 20 3d 20 22 69 6e 73 69 74 75 2d 63 6f 6e 66 22 3b 0a 24 70 6f 72 74 5b 31 34 39 34 5d 20 3d 20 22 43 69 74 72}
 		$ = {30 32 39 5d 20 3d 20 22 41 4f 4c 20 41 64 6d 69 6e 22 3b 0a 24 70 6f 72 74 5b 33 31 33 33 37 5d 20 3d 20 22 42 61 63 6b 20 4f 72 69 66 69 63 65 22 3b 0a 24 70 6f 72 74 5b 33 32 37 37 37 5d 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_bd_txt
@@ -5843,7 +5556,7 @@ rule SHELL_c99_bd_txt
 		$ = {76 61 6c 75 65 3d 22 43 6f 6e 6e 65 63 74 22 3e 3c 2f 66 6f 72 6d 3e 0a 43 6c 69 63 6b 20 22 43 6f 6e 6e 65 63 74 22 20 6f 6e 6c 79 20 61 66 74 65 72 20 6f 70 65 6e 20 70 6f 72 74 20 66 6f 72}
 		$ = {0a 22 65 78 74 5f 63 67 69 22 3d 3e 0a 22 52 30 6c 47 4f 44 6c 68 45 41 41 51 41 47 59 41 41 43 48 35 42 41 45 41 41 45 77 41 4c 41 41 41 41 41 41 51 41 42 41 41 68 67 41 41 41 4a 74 71 43 48}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99ud_txt
@@ -5855,7 +5568,7 @@ rule SHELL_c99ud_txt
 		$ = {71 33 30 71 70 50 39 52 54 43 43 44 39 34 32 79 71 79 61 4c 77 4b 30 4f 66 56 57 38 61 4d 2b 57 44 6b 32 31 2b 36 6b 67 46 71 79 4f 57 54 64 36 4e 6c 68 72 5a 36 59 73 55 65 47 47 41 31 54 57}
 		$ = {32 36 4f 30 33 55 31 52 47 44 74 36 50 46 78 42 64 2f 47 71 6c 5a 4d 30 7a 44 6f 43 63 78 39 37 59 63 35 55 45 36 71 76 43 58 58 58 57 79 71 7a 75 63 53 54 68 37 6b 77 46 63 69 48 38 54 2f 44}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_php
@@ -5867,7 +5580,7 @@ rule SHELL_c99_php
 		$ = {66 66 5c 22 20 76 61 6c 75 65 3d 5c 22 50 61 63 6b 20 62 75 66 66 65 72 20 74 6f 20 61 72 63 68 69 76 65 5c 22 3e 26 6e 62 73 70 3b 3c 69 6e 70 75 74 20 74 79 70 65 3d 5c 22 74 65 78 74 5c 22}
 		$ = {76 68 2b 36 46 74 48 35 36 57 5a 74 76 72 2f 52 41 51 45 5a 65 63 78 39 4c 6c 2f 50 58 36 2f 76 33 2b 22 2e 0a 22 2f 33 65 48 74 36 71 38 38 65 48 75 2f 5a 6b 66 48 33 79 56 79 49 75 51 74 2b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_SimShell_1_0___Simorgh_Security_MGZ_txt
@@ -5879,7 +5592,7 @@ rule SHELL_SimShell_1_0___Simorgh_Security_MGZ_txt
 		$ = {5f 6c 69 6e 65 5d 20 3d 20 64 6f 63 75 6d 65 6e 74 2e 73 68 65 6c 6c 2e 63 6f 6d 6d 61 6e 64 2e 76 61 6c 75 65 3b 0a 20 20 20 20 20 20 63 75 72 72 65 6e 74 5f 6c 69 6e 65 2d 2d 3b 0a 20 20 20}
 		$ = {43 43 46 46 33 33 3b 20 62 6f 72 64 65 72 3a 20 31 70 78 20 64 61 73 68 65 64 20 23 46 46 30 30 30 30 3b 20 62 61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 3a 20 23 30 30 30 30 30 30 22 3e 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHPJackal_txt
@@ -5891,7 +5604,7 @@ rule SHELL_PHPJackal_txt
 		$ = {30 6c 79 73 68 69 74 2c 20 73 74 61 63 6b 67 72 6f 77 32 2c 20 75 73 65 6c 69 62 32 34 2c 20 65 78 70 2e 73 68 2c 20 6b 72 61 64 2c 20 6b 72 61 64 32 27 2c 27 32 2e 36 2e 39 27 3d 3e 27 65 78}
 		$ = {74 27 5d 2c 27 72 27 29 3b 0a 69 66 28 21 24 69 6e 70 75 74 29 7b 0a 69 66 28 24 77 69 6e 64 6f 77 73 29 65 63 68 6f 20 24 65 72 72 6f 72 62 6f 78 2e 27 55 6e 61 62 6c 65 20 74 6f 20 72 65 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_FaTaLisTiCz_Fx_txt
@@ -5903,7 +5616,7 @@ rule SHELL_FaTaLisTiCz_Fx_txt
 		$ = {78 74 20 3d 20 24 65 78 74 5b 24 63 5d 3b 0a 20 20 20 20 24 65 78 74 20 3d 20 73 74 72 74 6f 6c 6f 77 65 72 28 24 65 78 74 29 3b 0a 20 20 20 20 24 72 66 74 20 3d 20 22 22 3b 0a 20 20 20 20 66}
 		$ = {4b 55 44 4d 79 4e 54 67 33 41 67 67 32 53 35 65 71 55 45 70 4a 44 67 63 44 43 41 78 4d 54 30 36 68 67 6b 32 36 76 41 77 55 46 55 68 44 74 59 70 43 75 77 5a 42 79 42 4d 52 52 4d 79 43 52 77 4d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_KAdot_Universal_Shell_v0_1_6_php
@@ -5915,7 +5628,7 @@ rule SHELL_KAdot_Universal_Shell_v0_1_6_php
 		$ = {6b 3b 0a 0a 0a 2f 2f 20 55 70 6c 6f 61 64 69 6e 67 0a 63 61 73 65 20 22 75 70 6c 6f 61 64 22 3a 0a 0a 65 63 68 6f 20 3c 3c 3c 48 54 4d 4c 0a 3c 62 3e 46 69 6c 65 20 55 70 6c 6f 61 64 3c 2f 62}
 		$ = {69 6e 74 20 22 cd e5 20 f3 e4 e0 b8 f2 f1 ff 20 e7 e0 e3 f0 f3 e7 e8 f2 fc 20 f4 e0 e9 eb ee 2e 20 c8 ed f4 e0 3a 5c 6e 22 3b 0a 20 20 20 20 70 72 69 6e 74 5f 72 28 24 5f 46 49 4c 45 53 29 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_g00nv13_php
@@ -5927,7 +5640,7 @@ rule SHELL_g00nv13_php
 		$ = {5d 20 2e 20 22 3c 74 64 3e 22 20 2e 20 24 66 69 6c 65 5b 27 73 69 7a 65 27 5d 20 2e 20 22 3c 2f 74 64 3e 3c 2f 74 72 3e 5c 6e 22 3b 7d 0a 20 20 20 20 20 20 20 20 61 72 72 61 79 5f 70 75 73 68}
 		$ = {65 63 74 3e 22 29 3b 0a 20 20 65 63 68 6f 28 22 3c 62 72 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 27 73 75 62 6d 69 74 27 20 76 61 6c 75 65 3d 27 47 72 61 62 27 3e 22 29 3b 0a 20 20 65 63 68 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cihshell_fix_php
@@ -5939,7 +5652,7 @@ rule SHELL_cihshell_fix_php
 		$ = {3e 22 3b 7d 65 63 68 6f 20 27 3c 2f 74 61 62 6c 65 3e 3c 62 72 2f 3e 27 3b 64 6f 5f 66 6f 6f 74 65 72 28 24 76 65 72 29 3b 64 69 65 28 29 3b 62 72 65 61 6b 3b 0a 63 61 73 65 20 27 64 65 6c 65}
 		$ = {6c 65 3d 27 70 61 64 64 69 6e 67 3a 30 70 78 3b 20 6d 61 72 67 69 6e 3a 30 70 78 3b 27 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 27 68 69 64 64 65 6e 27 20 6e 61 6d 65 3d 27 70 61 74 68 27 20 76}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_arabicspy_php
@@ -5951,7 +5664,7 @@ rule SHELL_arabicspy_php
 		$ = {29 2c 0a 09 09 09 33 34 20 3d 3e 20 61 72 72 61 79 28 22 53 4e 4d 50 22 2c 67 65 74 66 75 6e 28 22 73 6e 6d 70 67 65 74 22 29 29 2c 0a 09 09 09 33 35 20 3d 3e 20 61 72 72 61 79 28 22 28 5a 6c}
 		$ = {20 20 20 2e 3d 20 24 68 65 78 64 74 69 6d 65 3b 0a 0a 09 20 20 20 20 20 20 20 20 24 75 6e 63 5f 6c 65 6e 20 3d 20 73 74 72 6c 65 6e 28 24 64 61 74 61 29 3b 0a 09 09 20 20 20 20 24 63 72 63 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_x0rg_byp4ss_txt
@@ -5963,7 +5676,7 @@ rule SHELL_x0rg_byp4ss_txt
 		$ = {20 3f 3e 22 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 6e 61 6d 65 3d 22 73 71 6c 5f 6e 65 77 64 62 22 20 73 69 7a 65 3d 22 32 30 22 3e 26 6e 62 73 70 3b 3c 69 6e 70 75 74 20}
 		$ = {61 72 67 32 29 29 2e 22 29 22 3b 20 7d 0a 20 20 20 20 65 6c 73 65 20 7b 20 65 63 68 6f 20 22 3c 64 69 76 20 63 6c 61 73 73 3d 66 78 65 72 72 6d 73 67 3e 43 6f 75 6c 64 6e 27 74 20 77 72 69 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_iFX_txt
@@ -5975,7 +5688,7 @@ rule SHELL_r57_iFX_txt
 		$ = {79 28 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 29 20 26 26 20 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 3d 3d 22 65 64 69 74 5f 66 69 6c 65 22 29 0a 20 7b 0a 20 69 66 28 21 24 66 69 6c 65 3d 40 66}
 		$ = {2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 22 3b 0a 20 20 20 20 20 7d 0a 20 20 20 20 20 69 66 28 21 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 64 69 66 27 5d 29 26 26}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_w4cking_txt
@@ -5987,7 +5700,7 @@ rule SHELL_c99_w4cking_txt
 		$ = {68 61 72 73 28 24 64 29 2e 22 5c 22 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 68 69 64 64 65 6e 20 6e 61 6d 65 3d 66 20 76 61 6c 75 65 3d 5c 22 22 2e 68 74 6d 6c 73 70 65 63 69 61 6c 63 68 61 72}
 		$ = {29 2e 22 26 66 74 3d 22 2e 24 74 5b 31 5d 2e 22 26 77 68 69 74 65 3d 31 26 64 3d 22 2e 75 72 6c 65 6e 63 6f 64 65 28 24 64 29 2e 22 5c 22 20 74 61 72 67 65 74 3d 5c 22 5f 62 6c 61 6e 6b 5c 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_p0isoN_sh3ll_txt
@@ -5999,7 +5712,7 @@ rule SHELL_p0isoN_sh3ll_txt
 		$ = {2e 24 64 2e 24 61 72 67 32 2e 22 21 3c 2f 64 69 76 3e 22 3b 20 7d 0a 20 20 20 20 20 20 66 63 6c 6f 73 65 28 24 72 29 3b 0a 20 20 20 20 7d 0a 20 20 20 20 65 6c 73 65 20 7b 20 65 63 68 6f 20 22}
 		$ = {2c 0a 22 65 78 74 5f 64 69 7a 22 3d 3e 0a 22 52 30 6c 47 4f 44 6c 68 45 41 41 51 41 48 63 41 41 43 48 35 42 41 45 41 41 4a 55 41 4c 41 41 41 41 41 41 51 41 42 41 41 68 77 41 41 41 50 2f 2f 2f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_lostDC_txt
@@ -6011,7 +5724,7 @@ rule SHELL_lostDC_txt
 		$ = {66 70 2c 20 24 5f 50 4f 53 54 20 5b 27 74 69 74 6c 65 27 5d 20 2e 20 22 5c 6e 22 20 2e 20 24 5f 50 4f 53 54 20 5b 27 6c 61 6e 67 75 61 67 65 27 5d 20 2e 20 22 5c 6e 5c 6e 22 20 2e 20 24 5f 50}
 		$ = {3d 20 27 68 74 74 70 3a 2f 2f 69 6d 67 31 39 33 2e 69 6d 61 67 65 73 68 61 63 6b 2e 75 73 2f 69 6d 67 31 39 33 2f 39 35 38 39 2f 64 65 6c 65 74 65 66 2e 67 69 66 27 20 61 6c 74 20 3d 20 5c 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_rootshell_txt
@@ -6023,7 +5736,7 @@ rule SHELL_rootshell_txt
 		$ = {20 20 20 20 20 20 3c 62 72 3e 0a 3c 64 69 76 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 20 73 74 79 6c 65 3d 22 6f 76 65 72 66 6c 6f 77 3a 61 75 74 6f 3b 20 77 69 64 74 68 3a 39 39 25 3b 20}
 		$ = {0a 09 65 6c 73 65 0a 09 7b 0a 09 09 69 66 28 21 66 77 72 69 74 65 28 24 68 61 6e 64 6c 65 2c 20 24 66 69 6c 65 63 6f 6e 74 65 6e 74 73 29 29 0a 09 09 09 24 73 74 61 74 75 73 20 3d 20 24 73 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Liz0ziM_Private_Safe_Mode_Command_Execuriton_Bypass_Exploit_txt
@@ -6035,7 +5748,7 @@ rule SHELL_Liz0ziM_Private_Safe_Mode_Command_Execuriton_Bypass_Exploit_txt
 		$ = {64 2e 63 6f 6e 66 3c 2f 6f 70 74 69 6f 6e 3e 0a 3c 2f 73 65 6c 65 63 74 3e 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 73 75 62 6d 69 74 22 20 76 61 6c 75 65 3d 22 47 f6 73 74 65 72 20 42 61 6b}
 		$ = {65 78 65 63 28 27 69 64 27 29 3b 0a 24 73 65 72 76 65 72 3d 73 68 65 6c 6c 5f 65 78 65 63 28 27 75 6e 61 6d 65 20 2d 61 27 29 3b 0a 65 63 68 6f 20 22 3c 70 72 65 3e 3c 68 34 3e 22 3b 0a 65 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_G5_php
@@ -6047,7 +5760,7 @@ rule SHELL_G5_php
 		$ = {6f 20 20 22 3c 66 6f 72 6d 20 20 61 63 74 69 6f 6e 3d 5c 22 22 2e 24 70 68 70 2e 22 5c 22 20 6d 65 74 68 6f 64 3d 5c 22 70 6f 73 74 5c 22 3e 22 3b 0a 65 63 68 6f 20 22 3c 62 72 3e 3c 64 69 76}
 		$ = {64 65 72 3d 5c 22 31 5c 22 20 62 67 63 6f 6c 6f 72 3d 5c 22 38 30 30 30 30 30 5c 22 3e 3c 74 68 3e 0a 54 6f 74 61 6c 20 3a 20 5b 22 2e 40 6d 79 73 71 6c 5f 6e 75 6d 5f 72 6f 77 73 28 24 71 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_iskorpitx_txt
@@ -6059,7 +5772,7 @@ rule SHELL_iskorpitx_txt
 		$ = {35 5a 48 6e 71 78 45 31 70 50 4c 58 38 6f 54 73 62 66 4c 30 39 5a 39 37 31 2b 47 4f 61 54 38 36 41 33 4c 57 66 68 7a 61 46 65 63 4d 4e 74 6f 4f 5a 62 42 69 2b 67 6d 49 6b 76 64 79 35 6d 58 34}
 		$ = {52 68 69 6d 4b 32 7a 65 54 6a 67 61 6e 54 33 31 5a 50 6a 6e 37 6d 71 69 30 4e 42 4b 56 38 6a 6c 39 5a 69 32 70 73 70 4d 30 50 43 2b 63 55 4b 30 4a 4e 77 39 49 6e 4b 54 37 4e 31 51 30 49 56 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c993_txt
@@ -6071,7 +5784,7 @@ rule SHELL_c993_txt
 		$ = {70 75 74 20 74 79 70 65 3d 5c 22 73 75 62 6d 69 74 5c 22 20 6e 61 6d 65 3d 5c 22 61 63 74 61 72 63 62 75 66 66 5c 22 20 76 61 6c 75 65 3d 5c 22 50 61 63 6b 20 62 75 66 66 65 72 20 74 6f 20 61}
 		$ = {70 71 6f 31 65 6a 79 2f 66 37 59 41 63 54 62 2b 38 76 68 2b 36 46 74 48 35 36 57 5a 74 76 72 2f 52 41 51 45 5a 65 63 78 39 4c 6c 2f 50 58 36 2f 76 33 2b 22 2e 0a 22 2f 33 65 48 74 36 71 38 38}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cpg_143_incl_xpl_php
@@ -6083,7 +5796,7 @@ rule SHELL_cpg_143_incl_xpl_php
 		$ = {69 63 61 74 69 6f 6e 2f 6f 63 74 65 74 2d 73 74 72 65 61 6d 0a 0a 0a 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 37 64 36 31 33 62 31 64 30 34 34 38}
 		$ = {78 32 30 29 2e 63 68 72 28 30 78 32 30 29 2e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 63 68 72 28 30 78 32 30 29 2e 63 68 72 28 30 78 32 30 29 3b 0a 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_redcod_php
@@ -6095,7 +5808,7 @@ rule SHELL_redcod_php
 		$ = {69 53 42 0a 51 7a 54 67 72 4f 57 71 6e 4a 78 49 39 6e 6b 56 59 76 73 45 75 4e 33 31 4c 6c 49 70 41 2b 47 34 63 6c 47 57 70 38 68 2f 0a 36 62 57 41 48 50 52 46 75 50 52 4f 4e 48 4d 45 36 64 77}
 		$ = {0a 35 2f 73 33 74 37 31 4b 44 55 68 70 50 71 4c 6c 7a 74 38 30 46 73 78 6d 52 4a 34 33 4c 45 51 70 45 46 4d 47 78 4a 52 42 0a 47 46 4d 47 49 55 7a 35 6d 31 6a 6a 66 42 2b 45 73 45 6c 6c 31 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_WinX_Shell_txt
@@ -6107,7 +5820,7 @@ rule SHELL_WinX_Shell_txt
 		$ = {70 72 69 6e 74 20 22 20 3c 69 6e 70 75 74 20 73 74 79 6c 65 20 3d 20 5c 22 66 6f 6e 74 2d 66 61 6d 69 6c 79 3a 20 56 65 72 64 61 6e 61 3b 20 66 6f 6e 74 2d 73 69 7a 65 3a 20 31 32 70 78 3b 20}
 		$ = {62 6f 72 64 65 72 2d 6c 65 66 74 2d 77 69 64 74 68 3a 20 31 70 78 5c 22 20 6e 61 6d 65 3d 5c 22 75 73 65 72 66 69 6c 65 5c 22 20 74 79 70 65 3d 5c 22 66 69 6c 65 5c 22 3e 22 3b 0a 70 72 69 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHANTASMA_txt
@@ -6119,7 +5832,7 @@ rule SHELL_PHANTASMA_txt
 		$ = {20 20 20 75 6e 73 69 67 6e 65 64 20 2a 20 61 64 64 72 20 3d 20 74 61 73 6b 3b 5c 6e 22 20 2e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 22 20 20 20 20 20 20 2f 2a 20 6c 6f 6f 6b 69 6e 67 20}
 		$ = {6e 22 20 2e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 22 76 6f 69 64 20 72 65 6d 61 70 28 76 6f 69 64 29 5c 6e 22 20 2e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 22 7b 5c 6e 22 20 2e 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mysql_txt
@@ -6131,7 +5844,7 @@ rule SHELL_mysql_txt
 		$ = {6f 72 3d 79 65 6c 6c 6f 77 3e 53 4b 49 50 50 45 44 3c 2f 66 6f 6e 74 3e 5c 6e 5c 6e 22 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 7d 0a 0a 20 20 20 20 20 20 20 20}
 		$ = {74 61 74 65 28 31 2c 20 22 6d 69 73 63 20 66 69 6c 65 73 79 73 74 65 6d 20 63 68 65 63 6b 73 22 29 3b 20 7d 20 65 6c 73 65 20 7b 20 24 74 68 69 73 2d 3e 6f 75 74 70 75 74 5f 6d 61 69 6e 73 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Ayyildiz_Tim___AYT__Shell_v_2_1_Biz_txt
@@ -6143,7 +5856,7 @@ rule SHELL_Ayyildiz_Tim___AYT__Shell_v_2_1_Biz_txt
 		$ = {66 20 28 21 65 6d 70 74 79 28 24 77 6f 72 6b 5f 64 69 72 5f 73 70 6c 69 74 74 65 64 5b 30 5d 29 29 20 7b 0a 20 20 24 70 61 74 68 20 3d 20 27 27 3b 0a 20 20 66 6f 72 20 28 24 69 20 3d 20 30 3b}
 		$ = {65 20 7b 0a 09 65 63 68 6f 20 22 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 5c 22 24 77 6f 72 6b 5f 64 69 72 2f 24 64 69 72 5c 22 3e 24 64 69 72 3c 2f 6f 70 74 69 6f 6e 3e 5c 6e 22 3b 0a 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_accept_language_txt
@@ -6151,7 +5864,7 @@ rule SHELL_accept_language_txt
 	strings:
 		$ = {3c 3f 70 68 70 20 70 61 73 73 74 68 72 75 28 67 65 74 65 6e 76 28 22 48 54 54 50 5f 41 43 43 45 50 54 5f 4c 41 4e 47 55 41 47 45 22 29 29 3b 20 65 63 68 6f 20 27 3c 62 72 3e 20 62 79 20 71 31 77 32 65 33 72 34 27 3b 20 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_jHn_php
@@ -6163,7 +5876,7 @@ rule SHELL_jHn_php
 		$ = {69 7a 65 3d 35 30 20 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 73 75 62 6d 69 74 20 76 61 6c 75 65 20 3d 22 72 65 61 64 22 3e 3c 2f 66 6f 72 6d 3e 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c}
 		$ = {70 6f 73 69 74 69 6f 6e 3a 20 61 74 74 61 63 68 6d 65 6e 74 3b 20 66 69 6c 65 6e 61 6d 65 3d 22 20 2e 20 24 66 69 6c 65 29 3b 20 20 20 0a 68 65 61 64 65 72 28 22 43 6f 6e 74 65 6e 74 2d 54 79}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_NetworkFileManagerPHP_txt
@@ -6175,7 +5888,7 @@ rule SHELL_NetworkFileManagerPHP_txt
 		$ = {68 61 74 20 4d 44 35 20 63 72 79 70 74 20 61 6c 67 6f 72 69 74 68 6d 20 68 61 73 20 6e 6f 20 77 61 79 20 74 6f 20 64 65 63 72 79 70 74 20 69 74 2c 20 62 65 63 61 75 73 65 20 69 74 20 75 73 65}
 		$ = {0a 20 24 64 61 74 61 3d 22 22 3b 0a 0a 20 24 64 61 74 61 2e 3d 22 23 23 5c 6e 22 3b 0a 0a 20 24 64 61 74 61 2e 3d 22 23 23 20 4e 46 4d 20 68 61 63 6b 2e 72 75 20 63 72 65 61 74 6f 72 20 5c 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_safe0ver_txt
@@ -6187,7 +5900,7 @@ rule SHELL_safe0ver_txt
 		$ = {5c 22 24 6c 61 73 74 64 69 72 5c 22 3e 0a 20 20 20 20 20 3c 69 6e 70 75 74 20 74 61 62 69 6e 64 65 78 3d 5c 22 30 5c 22 20 74 79 70 65 3d 5c 22 73 75 62 6d 69 74 5c 22 20 76 61 6c 75 65 3d 5c}
 		$ = {0a 20 20 20 20 20 49 66 20 28 65 6d 70 74 79 28 24 6e 65 77 66 69 6c 65 29 20 21 3d 20 74 72 75 65 29 20 7b 0a 20 20 20 20 20 20 20 20 20 20 65 63 68 6f 20 22 3c 63 65 6e 74 65 72 3e 22 3b 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_a_php
@@ -6199,7 +5912,7 @@ rule SHELL_a_php
 		$ = {6c 65 20 28 24 64 69 72 20 3d 20 72 65 61 64 64 69 72 28 24 64 69 72 5f 68 61 6e 64 6c 65 29 29 20 7b 20 0a 20 20 69 66 20 28 69 73 5f 64 69 72 28 24 64 69 72 29 29 20 7b 20 0a 20 20 20 20 69}
 		$ = {22 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 5c 22 22 2e 20 73 74 72 72 65 76 28 73 75 62 73 74 72 28 73 74 72 73 74 72 28 73 74 72 72 65 76 28 24 77 6f 72 6b 5f 64 69 72 29 2c 20 22 2f 22 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_itsecteam_shell_php
@@ -6211,7 +5924,7 @@ rule SHELL_itsecteam_shell_php
 		$ = {66 62 65 3c 63 6f 75 6e 74 28 24 73 62 65 70 29 3b 24 66 62 65 2b 2b 29 7b 65 63 68 6f 20 24 73 62 65 70 5b 24 66 62 65 5d 3b 7d 7d 20 69 66 28 69 73 73 65 74 28 24 64 65 62 66 63 29 29 7b 7d}
 		$ = {20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 72 6f 77 5b 24 6a 5d 20 3d 20 22 27 22 2e 6d 79 73 71 6c 5f 65 73 63 61 70 65 5f 73 74 72 69 6e 67 28 24 6b 29 2e 22 27 22 3b 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_myshell_txt
@@ -6223,7 +5936,7 @@ rule SHELL_myshell_txt
 		$ = {20 76 6f 69 64 20 63 6f 6d 6d 61 6e 64 20 66 6f 72 20 4d 79 53 68 65 6c 6c 22 3b 0a 20 20 20 20 20 20 20 24 63 6f 6d 6d 61 6e 64 42 6b 20 3d 20 24 63 6f 6d 6d 61 6e 64 3b 0a 20 20 20 20 20 20}
 		$ = {6d 61 6e 64 42 6b 29 20 24 63 6f 6d 6d 61 6e 64 20 3d 20 24 63 6f 6d 6d 61 6e 64 42 6b 3b 0a 3f 3e 0a 3c 2f 74 65 78 74 61 72 65 61 3e 0a 3c 62 72 3e 0a 3c 3f 0a 69 66 28 24 65 64 69 74 4d 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_NCC_Shell_txt
@@ -6235,7 +5948,7 @@ rule SHELL_NCC_Shell_txt
 		$ = {49 70 4c 6f 67 67 65 72 3c 2f 68 32 3e 0a 3c 3f 70 68 70 0a 65 63 68 6f 20 22 3c 62 3e 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 72 65 64 3e 3c 62 72 3e 49 50 3a 20 3c 2f 66 6f 6e 74 3e 3c 2f 62 3e}
 		$ = {72 3e 0a 3c 68 32 3e 44 69 72 65 63 74 6f 72 79 20 4c 69 73 74 65 72 3c 2f 68 32 3e 0a 3c 3f 20 24 63 6d 64 20 3d 20 24 5f 52 45 51 55 45 53 54 5b 22 2d 63 6d 64 22 5d 3b 3f 3e 3c 6f 6e 4c 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ugdevil_v2_0_txt
@@ -6247,7 +5960,7 @@ rule SHELL_ugdevil_v2_0_txt
 		$ = {61 64 28 24 66 64 29 3b 09 0a 09 09 09 0a 09 7d 0a 09 65 6c 73 65 20 69 66 28 69 73 73 65 74 28 24 5f 47 45 54 5b 27 6d 61 69 6c 27 5d 29 29 0a 09 7b 0a 09 0a 09 69 66 28 69 73 73 65 74 28 24}
 		$ = {65 3d 62 20 73 69 7a 65 3d 38 30 20 63 6c 61 73 73 3d 75 70 6c 3e 3c 2f 73 70 61 6e 3e 3c 2f 74 64 3e 3c 2f 74 72 3e 0a 3c 74 72 3e 3c 74 64 3e 3c 73 70 61 6e 20 63 6c 61 73 73 3d 68 64 3e 55}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_uploader_txt
@@ -6255,7 +5968,7 @@ rule SHELL_uploader_txt
 	strings:
 		$ = {3c 46 4f 52 4d 20 45 4e 43 54 59 50 45 3d 22 6d 75 6c 74 69 70 61 72 74 2f 66 6f 72 6d 2d 64 61 74 61 22 20 41 43 54 49 4f 4e 3d 22 75 70 6c 6f 61 64 65 72 2e 70 68 70 22 20 4d 45 54 48 4f 44 3d 22 50 4f 53 54 22 3e 0a 3c 49 4e 50 55 54 20 54 59 50 45 3d 22 68 69 64 64 65 6e 22 20 6e 61 6d 65 3d 22 4d 41 58 5f 46 49 4c 45 5f 53 49 5a 45 22 20 76 61 6c 75 65 3d 22 31 30 30 30 30 30 22 3e 0a 53 65 6e 64 20 74 68 69 73 20 66 69 6c 65 3a 20 3c 49 4e 50 55 54 20 4e 41 4d 45 3d 22 75 73 65 72 66 69 6c 65 22 20 54 59 50 45 3d 22 66 69 6c 65 22 3e 0a 3c 49 4e 50 55 54 20 54 59 50 45 3d 22 73 75 62 6d 69 74 22 20 56 41 4c 55 45 3d 22 53 65 6e 64 22 3e 0a 3c 2f 46 4f 52 4d 3e 0a 3c 3f 0a 6d 6f 76 65 5f 75 70 6c 6f 61 64 65 64 5f 66 69 6c 65 28 24 75 73 65 72 66 69 6c 65 2c 20 22 65 6e 74 72 69 6b 61 2e 70 68 70 22 29 3b 20 0a 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_WinX_Shell_php
@@ -6267,7 +5980,7 @@ rule SHELL_WinX_Shell_php
 		$ = {70 72 69 6e 74 20 22 20 3c 69 6e 70 75 74 20 73 74 79 6c 65 20 3d 20 5c 22 66 6f 6e 74 2d 66 61 6d 69 6c 79 3a 20 56 65 72 64 61 6e 61 3b 20 66 6f 6e 74 2d 73 69 7a 65 3a 20 31 32 70 78 3b 20}
 		$ = {62 6f 72 64 65 72 2d 6c 65 66 74 2d 77 69 64 74 68 3a 20 31 70 78 5c 22 20 6e 61 6d 65 3d 5c 22 75 73 65 72 66 69 6c 65 5c 22 20 74 79 70 65 3d 5c 22 66 69 6c 65 5c 22 3e 22 3b 0a 70 72 69 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Private_i3lue_php
@@ -6279,7 +5992,7 @@ rule SHELL_Private_i3lue_php
 		$ = {3c 3f 70 68 70 20 65 63 68 6f 28 22 24 73 65 6c 66 3f 22 20 2e 20 53 49 44 29 3b 20 3f 3e 22 20 6e 61 6d 65 3d 22 77 65 62 61 64 6d 69 6e 22 3e 0a 3c 2f 66 72 61 6d 65 73 65 74 3e 0a 3c 2f 68}
 		$ = {65 6e 61 6d 65 27 29 20 3f 20 21 24 72 65 76 65 72 73 65 20 3a 20 30 29 20 2e 20 22 26 24 70 5c 22 3e 3c 62 3e 7b 24 77 6f 72 64 73 5b 27 66 69 6c 65 6e 61 6d 65 27 5d 7d 3c 2f 62 3e 3c 2f 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99unlimited_txt
@@ -6291,7 +6004,7 @@ rule SHELL_c99unlimited_txt
 		$ = {55 45 3b 0a 20 20 20 24 61 63 74 20 3d 20 22 6c 73 22 3b 0a 20 20 7d 0a 7d 0a 65 63 68 6f 20 22 3c 66 6f 72 6d 20 6d 65 74 68 6f 64 3d 50 4f 53 54 3e 0a 3c 69 6e 70 75 74 20 74 79 70 65 3d 68}
 		$ = {28 22 5c 6e 22 2c 24 72 29 3b 0a 20 20 20 20 69 66 20 28 63 6f 75 6e 74 28 24 61 72 72 20 3d 3d 20 31 38 29 29 0a 20 20 20 20 7b 0a 20 20 20 20 20 69 6e 63 6c 75 64 65 28 24 64 2e 24 66 29 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpjackal1_3_txt
@@ -6303,7 +6016,7 @@ rule SHELL_phpjackal1_3_txt
 		$ = {27 5d 29 20 26 26 20 21 65 6d 70 74 79 28 24 5f 52 45 51 55 45 53 54 5b 27 75 73 65 52 27 5d 29 20 26 26 20 21 65 6d 70 74 79 28 24 5f 52 45 51 55 45 53 54 5b 27 70 61 73 53 27 5d 29 20 26 26}
 		$ = {5c 72 5c 6e 41 63 63 65 70 74 2d 45 6e 63 6f 64 69 6e 67 3a 20 74 65 78 74 5c 72 5c 6e 48 6f 73 74 3a 20 24 68 6f 73 74 5c 72 5c 6e 52 65 66 65 72 65 72 3a 20 24 68 6f 73 74 5c 72 5c 6e 43 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_dC3_Security_Crew_Shell_PRiV_txt
@@ -6315,7 +6028,7 @@ rule SHELL_dC3_Security_Crew_Shell_PRiV_txt
 		$ = {75 74 20 73 69 7a 65 3d 34 30 20 74 79 70 65 3d 74 65 78 74 20 76 61 6c 75 65 3d 3c 3f 70 68 70 20 65 63 68 6f 20 68 74 6d 6c 73 70 65 63 69 61 6c 63 68 61 72 73 28 63 72 79 70 74 28 24 74 65}
 		$ = {6f 75 70 73 5c 22 3e 0a 20 20 3c 74 68 65 61 64 3e 0a 20 20 20 20 3c 74 72 3e 0a 20 20 20 20 20 20 3c 74 68 3e 46 69 6c 65 6e 61 6d 65 3c 2f 74 68 3e 3c 74 68 3e 45 64 69 74 3c 2f 74 68 3e 3c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Macker_s_Private_PHPShell_php
@@ -6327,7 +6040,7 @@ rule SHELL_Macker_s_Private_PHPShell_php
 		$ = {21 2d 2d 20 45 64 69 74 20 61 20 66 69 6c 65 20 61 6e 64 20 73 61 76 65 20 69 74 20 61 66 74 65 72 77 61 72 64 73 20 77 69 74 68 20 74 68 65 20 73 61 76 65 65 64 69 74 20 62 6c 6f 63 6b 2e 20}
 		$ = {20 22 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 3c 2f 63 65 6e 74 65 72 3e 22 3b 0a 0a 20 09 7d 0a 0a 7d 0a 0a 65 6c 73 65 20 69 66 20 28 20 24 63 6d 64 20 3d 3d 20 22 63 6f 6e 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Safe_Mode_Bypass_PHP_4_4_2_and_PHP_5_1_2_php
@@ -6339,7 +6052,7 @@ rule SHELL_Safe_Mode_Bypass_PHP_4_4_2_and_PHP_5_1_2_php
 		$ = {22 29 20 6f 72 20 73 74 72 74 6f 6c 6f 77 65 72 28 40 69 6e 69 5f 67 65 74 28 22 73 61 66 65 5f 6d 6f 64 65 22 29 29 20 3d 3d 20 22 6f 6e 22 29 0a 7b 0a 20 24 73 61 66 65 6d 6f 64 65 20 3d 20}
 		$ = {0a 0a 65 63 68 6f 20 22 3c 50 52 45 3e 5c 6e 22 3b 0a 69 66 28 65 6d 70 74 79 28 24 66 69 6c 65 29 29 7b 0a 69 66 28 65 6d 70 74 79 28 24 5f 47 45 54 5b 27 66 69 6c 65 27 5d 29 29 7b 0a 69 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_co_php
@@ -6351,7 +6064,7 @@ rule SHELL_co_php
 		$ = {6c 75 63 2b 38 73 58 79 72 79 33 4d 53 43 43 56 0a 2f 45 34 51 78 72 69 37 77 37 78 68 75 63 75 53 56 34 78 30 75 42 38 34 43 48 6d 77 41 37 37 33 68 54 61 4f 73 44 78 33 0a 48 76 31 36 2f 41}
 		$ = {79 70 35 2b 61 4b 0a 31 6c 41 55 76 54 70 58 62 6b 6f 39 35 65 36 69 72 6a 54 7a 63 36 56 54 37 69 6c 61 52 52 33 73 30 72 56 57 72 39 38 32 0a 35 79 2f 39 35 75 61 38 2f 37 54 33 66 46 57 5a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_aZRaiLPhp_v1_0_txt
@@ -6363,7 +6076,7 @@ rule SHELL_aZRaiLPhp_v1_0_txt
 		$ = {61 6c 75 65 3d 27 24 64 69 73 6d 69 27 20 63 6c 61 73 73 3d 27 69 6e 70 75 74 27 20 72 65 61 64 6f 6e 6c 79 3e 43 48 4d 4f 44 3a 0a 20 20 20 20 20 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 27 74}
 		$ = {6c 65 3f 64 69 72 3d 43 3a 5c 5c 27 3e 43 3a 5c 5c 3c 2f 61 3e 3c 2f 63 65 6e 74 65 72 3e 22 3b 0a 7d 20 65 6c 73 65 20 7b 7d 0a 69 66 20 28 66 69 6c 65 5f 65 78 69 73 74 73 28 22 44 3a 5c 5c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_1_4_0_php
@@ -6375,7 +6088,7 @@ rule SHELL_r57_1_4_0_php
 		$ = {57 47 44 6a 39 4b 6d 78 56 48 38 68 30 59 67 6f 30 4c 68 7a 67 4c 42 6a 35 66 6e 46 72 63 35 5a 59 62 53 31 6a 4e 79 7a 4f 38 37 46 5a 68 73 51 41 69 54 75 4a 4b 4d 70 71 49 4b 6d 62 33 4c 6a}
 		$ = {46 30 71 55 51 6d 49 52 35 4a 70 4c 75 47 6f 75 67 41 6b 32 31 49 63 4e 61 38 32 4a 79 69 52 52 5a 7a 6e 5a 6c 33 77 6d 48 42 2f 4a 42 78 37 39 35 6b 42 79 33 4d 38 6b 48 72 4a 66 48 35 7a 48}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_bypass_txt
@@ -6387,7 +6100,7 @@ rule SHELL_bypass_txt
 		$ = {67 56 63 71 4e 55 33 55 6a 68 37 79 36 35 48 4c 31 74 70 33 32 68 72 36 56 53 55 74 56 51 4f 34 72 52 38 76 33 6e 57 50 31 64 46 76 5a 6d 70 59 4e 30 59 55 71 35 52 35 37 4f 7a 56 4b 56 2f 41}
 		$ = {45 53 41 52 46 4c 58 75 69 62 71 6e 4e 72 69 6b 34 72 59 5a 6a 56 6f 51 58 34 30 78 4a 6e 61 6d 75 31 51 2b 34 74 55 52 56 53 45 65 55 52 72 33 76 45 2f 2b 45 70 6e 67 57 78 6b 6c 30 79 68 38}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_antichat_php
@@ -6399,7 +6112,7 @@ rule SHELL_antichat_php
 		$ = {62 6c 27 5d 2e 22 5c 72 5c 6e 22 3b 0a 20 20 20 20 20 24 73 71 6c 31 20 2e 3d 20 22 23 20 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 5c}
 		$ = {72 65 63 6f 72 64 73 5b 30 5d 5d 3c 2f 66 6f 6e 74 3e 3c 61 20 68 72 65 66 3d 5c 22 23 5c 22 20 6f 6e 63 6c 69 63 6b 3d 5c 22 64 6f 63 75 6d 65 6e 74 2e 64 75 6d 70 32 2e 76 6e 2e 76 61 6c 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99shell_php
@@ -6411,7 +6124,7 @@ rule SHELL_c99shell_php
 		$ = {61 62 5b 22 66 69 6c 65 73 22 5d 5b 5d 20 3d 20 24 72 6f 77 3b 7d 0a 20 20 20 20 24 69 2b 2b 3b 0a 20 20 20 7d 0a 20 20 7d 0a 20 20 2f 2f 43 6f 6d 70 69 6c 69 6e 67 20 74 61 62 6c 65 0a 20 20}
 		$ = {3c 69 6e 70 75 74 20 74 79 70 65 3d 5c 22 72 65 73 65 74 5c 22 20 76 61 6c 75 65 3d 5c 22 52 65 73 65 74 5c 22 3e 26 6e 62 73 70 3b 3c 69 6e 70 75 74 20 74 79 70 65 3d 5c 22 62 75 74 74 6f 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpshell_php
@@ -6423,7 +6136,7 @@ rule SHELL_phpshell_php
 		$ = {3b 0a 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 0a 20 20 20 20 20 20 66 63 6c 6f 73 65 28 24 69 6f 5b 31 5d 29 3b 0a 20 20 20 20 20 20 66 63 6c 6f 73 65 28 24 69 6f 5b 32 5d 29 3b 0a 20 20 20}
 		$ = {69 6e 65 5d 3b 0a 20 20 20 20 7d 0a 0a 20 20 7d 0a 0a 66 75 6e 63 74 69 6f 6e 20 69 6e 69 74 28 29 20 7b 0a 20 20 64 6f 63 75 6d 65 6e 74 2e 73 68 65 6c 6c 2e 73 65 74 41 74 74 72 69 62 75 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_NIX_REMOTE_WEB_SHELL_v_0_5_alpha_Lite_Public_Version_txt
@@ -6435,7 +6148,7 @@ rule SHELL_NIX_REMOTE_WEB_SHELL_v_0_5_alpha_Lite_Public_Version_txt
 		$ = {68 72 65 66 3d 27 24 70 68 70 5f 73 65 6c 66 3f 6e 6f 3d 31 27 3e cd e5 f2 3c 2f 61 3e 0a 3c 62 72 3e 0a 22 3b 0a 69 66 28 40 24 5f 47 45 54 5b 27 79 65 73 27 5d 3d 3d 22 79 65 73 22 29 7b 0a}
 		$ = {5b 27 63 6d 64 27 5d 29 2e 22 22 3b 0a 65 63 68 6f 20 22 3c 2f 66 6f 6e 74 3e 3c 2f 62 3e 22 3b 0a 62 72 65 61 6b 3b 0a 0a 2f 2f 20 55 70 6c 6f 61 64 69 6e 67 0a 63 61 73 65 20 22 75 70 6c 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Crystal_txt
@@ -6447,7 +6160,7 @@ rule SHELL_Crystal_txt
 		$ = {69 6c 65 73 20 69 6e 20 63 75 72 72 65 6e 74 20 64 69 72 3c 2f 6f 70 74 69 6f 6e 3e 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 66 69 6e 64 20 2f 20 2d 74 79 70 65 20 66 20 2d 6e 61 6d 65 20}
 		$ = {3c 62 3e 0a 09 09 09 09 09 09 09 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 22 23 46 46 30 30 30 30 22 20 73 69 7a 65 3d 22 31 22 3e 41 74 74 61 63 6b 20 4d 6f 64 65 3c 2f 66 6f 6e 74 3e 3c 2f 62 3e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Dx_txt
@@ -6459,7 +6172,7 @@ rule SHELL_Dx_txt
 		$ = {61 72 63 68 27 5d 5b 27 6d 6f 64 65 27 5d 3d 3d 73 74 72 74 6f 6c 6f 77 65 72 28 24 63 75 72 5f 72 61 64 29 29 3f 27 43 48 45 43 4b 45 44 27 3a 27 27 29 20 20 20 3a 28 28 24 63 75 72 5f 72 61}
 		$ = {3d 3e 27 57 4c 42 53 27 2c 32 35 33 35 3d 3e 27 4d 41 44 43 41 50 27 2c 32 35 34 33 3d 3e 27 73 69 70 27 2c 32 35 39 32 3d 3e 27 6e 65 74 72 65 6b 27 2c 32 37 32 37 3d 3e 27 4d 47 43 50 20 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ironshell_txt
@@ -6471,7 +6184,7 @@ rule SHELL_ironshell_txt
 		$ = {39 39 39 39 39 39 39 3c 2f 6f 70 74 69 6f 6e 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 2f 73 65 6c 65 63 74 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 62 3e 4d 61}
 		$ = {30 30 5c 22 20 2f 3e 3c 69 6e 70 75 74 20 73 69 7a 65 3d 33 30 20 6e 61 6d 65 3d 5c 22 75 70 6c 6f 61 64 65 64 66 69 6c 65 5c 22 20 74 79 70 65 3d 5c 22 66 69 6c 65 5c 22 20 2f 3e 0a 3c 69 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_nstview_txt
@@ -6483,7 +6196,7 @@ rule SHELL_nstview_txt
 		$ = {6c 49 43 4a 7a 62 32 4e 72 5a 58 51 36 49 43 51 68 49 6a 73 4e 43 69 41 67 49 43 41 6b 59 33 56 79 49 44 30 67 63 32 56 73 5a 57 4e 30 4b 43 52 66 57 7a 42 64 4b 54 73 67 49 41 30 4b 44 51 6f}
 		$ = {24 5f 47 45 54 5b 27 74 27 5d 3d 3d 22 75 70 6c 6f 61 64 22 29 7b 0a 65 63 68 6f 20 22 3c 62 72 3e 0a 3c 61 20 68 72 65 66 3d 27 24 70 68 70 5f 73 65 6c 66 3f 64 3d 24 64 26 74 3d 6d 61 73 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_sql_php
@@ -6495,7 +6208,7 @@ rule SHELL_sql_php
 		$ = {f3 20 24 74 62 6c 5c 22 20 6f 6e 43 6c 69 63 6b 3d 5c 22 72 65 74 75 72 6e 20 63 6f 6e 66 69 72 6d 28 27 d3 e4 e0 eb e8 f2 fc 20 f2 e0 e1 eb e8 f6 f3 20 24 74 62 6c 20 3f 27 29 3b 5c 22 3e 3c}
 		$ = {20 20 20 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 5c 22 68 69 64 64 65 6e 5c 22 20 6e 61 6d 65 3d 5c 22 64 62 5c 22 20 76 61 6c 75 65 3d 5c 22 24 64 62 5c 22 3e 22 2e 0a 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Ajax_PHP_Command_Shell_txt_1
@@ -6507,7 +6220,7 @@ rule SHELL_Ajax_PHP_Command_Shell_txt_1
 		$ = {72 69 65 64 20 74 6f 20 63 68 6d 6f 64 20 69 74 20 61 75 74 6f 6d 61 74 69 63 6c 79 2e 22 3b 0a 7d 0a 0a 66 75 6e 63 74 69 6f 6e 20 72 75 6e 63 6f 6d 6d 61 6e 64 28 75 72 6c 74 6f 6f 70 65 6e}
 		$ = {3c 69 3e 5b 57 5d 3c 2f 69 3e 20 3d 20 73 65 74 20 64 69 72 65 63 74 6f 72 79 20 61 73 20 77 6f 72 6b 69 6e 67 20 64 69 72 65 63 74 6f 72 79 2e 3c 62 72 3e 3c 69 3e 5b 44 5d 3c 2f 69 3e 20 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Perl_Web_Shell_by_RST_GHC_pl
@@ -6519,7 +6232,7 @@ rule SHELL_Perl_Web_Shell_by_RST_GHC_pl
 		$ = {6e 64 65 66 2c 75 6e 64 65 66 29 3b 0a 20 26 69 6e 70 75 74 28 27 68 69 64 64 65 6e 27 2c 27 53 46 49 4c 45 27 2c 24 46 4f 52 4d 7b 45 46 49 4c 45 7d 2c 75 6e 64 65 66 2c 75 6e 64 65 66 29 3b}
 		$ = {20 7b 0a 20 20 20 20 28 24 66 5f 6e 2c 24 66 5f 76 29 20 3d 20 73 70 6c 69 74 28 2f 3d 2f 2c 24 5f 29 3b 0a 20 20 20 20 24 66 5f 6e 20 3d 20 26 75 72 6c 64 65 63 6f 64 65 28 24 66 5f 6e 29 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cgitelnet_txt
@@ -6531,7 +6244,7 @@ rule SHELL_cgitelnet_txt
 		$ = {3d 20 24 43 75 72 72 65 6e 74 44 69 72 3b 0a 09 09 24 43 6f 6d 6d 61 6e 64 20 3d 20 22 63 64 20 5c 22 24 43 75 72 72 65 6e 74 44 69 72 5c 22 22 2e 24 43 6d 64 53 65 70 2e 22 63 64 20 24 31 22}
 		$ = {28 24 54 61 72 67 65 74 46 69 6c 65 29 20 69 66 28 24 54 61 72 67 65 74 46 69 6c 65 20 3d 20 24 43 75 72 72 65 6e 74 44 69 72 29 20 3d 7e 20 6d 2f 5b 5c 5c 5c 2f 5d 24 2f 3b 0a 09 09 24 54 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_dc_pl
@@ -6543,7 +6256,7 @@ rule SHELL_dc_pl
 		$ = {20 53 4f 43 4b 5f 53 54 52 45 41 4d 2c 20 67 65 74 70 72 6f 74 6f 62 79 6e 61 6d 65 28 27 74 63 70 27 29 29 20 6f 72 20 64 69 65 20 70 72 69 6e 74 20 22 5b 2d 5d 20 55 6e 61 62 6c 65 20 74 6f}
 		$ = {6d 6f 74 65 20 68 6f 73 74 20 5c 6e 22 3b 20 0a 53 4f 43 4b 45 54 2d 3e 61 75 74 6f 66 6c 75 73 68 28 29 3b 20 0a 6f 70 65 6e 28 53 54 44 49 4e 2c 20 22 3e 26 53 4f 43 4b 45 54 22 29 3b 20 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jspShell_jsp
@@ -6554,7 +6267,7 @@ rule SHELL_jspShell_jsp
 		$ = {44 20 48 54 4d 4c 20 34 2e 30 31 20 54 72 61 6e 73 69 74 69 6f 6e 61 6c 2f 2f 45 4e 22 0a 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 54 52 2f 68 74 6d 6c 34 2f 6c 6f 6f 73 65 2e}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 62 79 74 65 5b 5d 20 64 69 67 65 73 74 20 3d 20 6d 64 41 6c 67 6f 72 69 74 68 6d 2e 64 69 67 65 73 74 28 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jspbd_jsp
@@ -6566,7 +6279,7 @@ rule SHELL_jspbd_jsp
 		$ = {65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 69 70 61 64 64 72 65 73 73 22 29 3b 0a 53 74 72 69 6e 67 20 69 70 50 6f 72 74 20 3d 20 72 65 71 75 65 73 74 2e 67 65 74 50 61 72}
 		$ = {75 74 43 6f 6e 6e 65 63 74 6f 72 20 3d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 6e 65 77 20 53 74 72 65 61 6d 43 6f 6e 6e 65 63 74 6f 72 28 70 72 6f 63 2e 67}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_913a1a61ff
@@ -6578,7 +6291,7 @@ rule SHELL_unknown_913a1a61ff
 		$ = {a9 ae 69 6c 76 20 64 6f 72 a9 ae 7a 62 74 66 20 74 64 78 6c 74 6b 20 6b 67 6b 6b 74 20 66 67 22 29 29 0a 45 6e 64 20 53 75 62 3a 73 75 62 20 68 69 64 64 65 6e 73 68 65 6c 6c 0a 65 78 65 63 75}
 		$ = {46 53 4f 29 0a 69 66 20 72 65 71 75 65 73 74 28 22 44 65 6c 43 6f 6e 22 29 3d 31 20 74 68 65 6e 0a 41 70 70 6c 69 63 61 74 69 6f 6e 28 72 65 71 75 65 73 74 28 22 50 72 6f 46 69 6c 65 22 29 26}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_bypass_safedog_02_asp
@@ -6589,7 +6302,7 @@ rule SHELL_bypass_safedog_02_asp
 		$ = {2a 2d 2f 2a 2d 2a 2f 2d 2f 2a 2d 2f 2a 2d 2a 2f 32 2f 2a 2d 2f 2a 2d 2a 2f 2d 2f 2a 2d 2f 2a 2d 2a 2f 35 2f 2a 2d 2f 2a 2d 2a 2f 5d 22 2b 0a 22 2c 22 2b 22 5c 22 22 2b 22 75 22 2b 22 6e 22 2b}
 		$ = {22 22 2b 22 75 22 2b 22 6e 22 2b 22 73 22 2f 2a 2d 2f 2a 2d 2a 2f 2b 22 61 22 2b 22 66 22 2b 22 65 22 2b 22 5c 22 22 2b 22 29 22 3b 65 76 61 6c 0a 28 2f 2a 2d 2f 2a 2d 2a 2f 50 2f 2a 2d 2f 2a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_1d_asp
@@ -6601,7 +6314,7 @@ rule SHELL_1d_asp
 		$ = {5e 6e 7b 4a 50 4c 7e 59 6d 44 6f 7f 4f 72 77 2c 5b 72 7e 45 5b 7e 32 4b 44 4f 31 21 68 50 4c 4a 49 69 6b 2b 44 7e 28 47 27 73 6c 30 6e 79 69 4b 6d 2f 6b 68 57 4d 4e 7b 49 4a 3d 6d 47 78 09 52}
 		$ = {44 44 29 56 5e 73 72 56 7f 2f 7e 48 7f 68 6e 6d 4f 74 42 7f 6d 4b 5b 6e 7e 61 6d 40 23 40 26 48 2b 61 4f 40 23 40 26 64 2b 44 7e 59 36 6b 73 6e 7b 78 57 4f 34 62 78 4c 40 23 40 26 6a 7f 59 7e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_c9a9006c3a
@@ -6609,7 +6322,7 @@ rule SHELL_unknown_c9a9006c3a
 	strings:
 		$ = {3c 25 0a 46 75 6e 63 74 69 6f 6e 20 4d 6f 72 66 69 43 6f 64 65 72 28 43 6f 64 65 29 0a 4d 6f 72 66 69 43 6f 64 65 72 3d 52 65 70 6c 61 63 65 28 52 65 70 6c 61 63 65 28 53 74 72 52 65 76 65 72 73 65 28 43 6f 64 65 29 2c 22 2f 2a 2f 22 2c 22 22 22 22 29 2c 22 5c 2a 5c 22 2c 76 62 43 72 6c 66 29 0a 45 6e 64 20 46 75 6e 63 74 69 6f 6e 0a 45 78 65 63 75 74 65 20 4d 6f 72 66 69 43 6f 64 65 72 28 22 29 2f 2a 2f 7a 2f 2a 2f 28 74 73 65 75 71 65 72 20 6c 61 76 65 22 29 0a 25 3e 0a 0a 70 61 73 73 77 6f 72 64 3a 7a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_unknown_15e563c678
@@ -6621,7 +6334,7 @@ rule SHELL_unknown_15e563c678
 		$ = {75 65 73 74 2e 46 6f 72 6d 28 22 70 6f 72 74 22 29 3d 22 22 20 74 68 65 6e 0a 50 6f 72 74 4c 69 73 74 3d 22 32 31 2c 31 34 33 33 2c 33 33 38 39 2c 34 33 39 35 38 2c 34 38 39 39 2c 33 33 30 36}
 		$ = {49 54 45 20 22 3c 42 52 3e 3c 46 4f 4e 54 20 43 4f 4c 4f 52 3d 52 45 44 3e 58 50 5f 53 45 52 56 49 43 45 43 4f 4e 54 52 4f 4c 20 b2 bb b4 e6 d4 da 21 3c 2f 46 4f 4e 54 3e 22 0a 09 09 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Ajan_asp
@@ -6633,7 +6346,7 @@ rule SHELL_Ajan_asp
 		$ = {0a 65 6e 74 72 69 6b 61 2e 77 72 69 74 65 20 22 42 69 6e 61 72 79 53 74 72 65 61 6d 2e 57 72 69 74 65 20 42 69 6e 61 72 79 44 61 74 61 22 20 26 20 76 62 63 72 6c 66 0a 65 6e 74 72 69 6b 61 2e}
 		$ = {20 3d 20 43 72 65 61 74 65 4f 62 6a 65 63 74 28 22 22 57 53 63 72 69 70 74 2e 53 68 65 6c 6c 22 22 29 22 20 26 20 76 62 63 72 6c 66 0a 65 6e 74 72 69 6b 61 2e 77 72 69 74 65 20 22 57 73 68 53}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ajn_asp
@@ -6645,7 +6358,7 @@ rule SHELL_ajn_asp
 		$ = {72 6c 66 0a 73 65 61 6c 2e 77 72 69 74 65 20 22 42 69 6e 61 72 79 53 74 72 65 61 6d 2e 57 72 69 74 65 20 42 69 6e 61 72 79 44 61 74 61 22 20 26 20 76 62 63 72 6c 66 0a 73 65 61 6c 2e 77 72 69}
 		$ = {65 6c 6c 20 3d 20 43 72 65 61 74 65 4f 62 6a 65 63 74 28 22 22 57 53 63 72 69 70 74 2e 53 68 65 6c 6c 22 22 29 22 20 26 20 76 62 63 72 6c 66 0a 73 65 61 6c 2e 77 72 69 74 65 20 22 57 73 68 53}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_good_1_asp
@@ -6657,7 +6370,7 @@ rule SHELL_good_1_asp
 		$ = {20 20 20 20 20 20 20 20 20 69 66 20 77 72 69 74 65 42 6f 6f 6c 65 61 6e 20 3d 20 74 72 75 65 20 74 68 65 6e 20 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
 		$ = {69 43 6f 75 6e 74 20 0a 20 20 20 20 20 20 20 20 20 20 6a 3d 49 6e 74 28 6b 20 2a 20 52 6e 64 20 29 2b 31 20 0a 20 20 20 20 20 20 20 20 20 20 73 74 72 43 6f 64 65 20 3d 20 73 74 72 43 6f 64 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_857066c589
@@ -6669,7 +6382,7 @@ rule SHELL_unknown_857066c589
 		$ = {70 28 72 73 64 78 28 75 70 66 6f 72 6d 2e 76 71 73 62 7a 2e 76 61 6c 75 65 29 29 26 22 26 69 67 69 71 68 3d 22 26 75 78 62 70 28 4d 69 64 28 75 70 66 6f 72 6d 2e 66 69 6c 65 2e 56 61 6c 75 65}
 		$ = {20 49 6e 53 74 72 28 76 71 73 62 7a 2c 22 3a 22 29 3c 31 20 54 68 65 6e 20 76 71 73 62 7a 3d 76 71 74 26 22 5c 22 26 76 71 73 62 7a 0a 53 65 74 20 6b 6f 64 77 71 3d 6d 66 6d 71 28 22 41 64 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_2013110125027897_asp
@@ -6681,7 +6394,7 @@ rule SHELL_2013110125027897_asp
 		$ = {20 3d 20 74 72 6f 50 6d 72 65 74 a9 ef a9 e5 72 65 62 6d 75 4e 74 72 6f 50 a9 e5 20 3d 20 79 65 4b 74 72 6f 50 6c 61 6e 69 6d 72 65 74 a9 ef a9 e5 5c 70 63 54 2d 50 44 52 5c 73 6e 6f 69 74 61}
 		$ = {73 65 0a 73 65 74 20 6d 79 66 69 6c 65 65 65 20 3d 20 66 73 6f 58 58 2e 43 72 65 61 74 65 54 65 78 74 46 69 6c 65 28 46 69 6c 65 55 72 6c 2c 74 72 75 65 2c 74 72 75 65 29 0a 65 6e 64 20 69 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_3dddf86579
@@ -6693,7 +6406,7 @@ rule SHELL_unknown_3dddf86579
 		$ = {20 47 65 74 43 6d 64 28 73 74 72 69 6e 67 20 63 6d 64 2c 73 74 72 69 6e 67 20 73 68 65 6c 6c 29 0a 7b 0a 20 20 73 74 72 69 6e 67 20 6f 6b 20 3d 20 73 74 72 69 6e 67 2e 45 6d 70 74 79 3b 0a 20}
 		$ = {0a 20 20 20 20 20 20 20 20 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 70 2e 53 74 61 72 74 28 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 70 2e 53 74 61 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_48a0446f9e
@@ -6705,7 +6418,7 @@ rule SHELL_unknown_48a0446f9e
 		$ = {20 20 6f 2e 6c 61 6e 67 75 61 67 65 20 3d 20 22 76 62 73 63 72 69 70 74 22 0d 0a 20 20 20 20 20 6f 2e 61 64 64 63 6f 64 65 28 52 65 71 75 65 73 74 28 22 53 75 62 43 6f 64 65 22 29 29 20 27 e5}
 		$ = {e5 af b9 e8 b1 a1 e4 bd 9c e4 b8 ba e5 8f 82 e6 95 b0 0d 0a 20 20 20 20 20 25 3e 0d 0a 0d 0a 5b 2b 5d e8 b0 83 e7 94 a8 e7 a4 ba e4 be 8b ef bc 9a 0d 0a c2 b7 e7 a8 8b e5 ba 8f e4 bb a3 e7 a0}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_shell_asp
@@ -6717,7 +6430,7 @@ rule SHELL_shell_asp
 		$ = {33 70 78 3b 0a 20 20 20 20 7a 2d 69 6e 64 65 78 3a 37 3b 0a 7d 0a 2e 53 54 59 4c 45 31 20 7b 63 6f 6c 6f 72 3a 20 23 39 39 30 30 46 46 7d 0a 2d 2d 3e 0a 3c 2f 73 74 79 6c 65 3e 0a 3c 74 69 74}
 		$ = {30 22 0a 76 61 6c 75 65 3d 22 3c 25 3d 73 65 72 76 65 72 2e 6d 61 70 70 61 74 68 28 22 61 6b 74 2e 61 73 70 22 29 25 3e 22 3e 20 3c 42 52 3e 0a 3c 54 45 58 54 41 52 45 41 20 4e 41 4d 45 3d 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_EFSO_2_asp
@@ -6729,7 +6442,7 @@ rule SHELL_EFSO_2_asp
 		$ = {55 27 45 4a 4c 73 72 56 6e 4b 6d 59 34 5b 72 76 50 44 58 32 6e 7b 4a 4a 32 47 6b 59 45 4a 40 2a 45 40 23 40 26 2e 7f 2f 61 57 78 6b 2b 63 41 44 62 59 6e 50 72 40 21 4f 43 28 56 2b 2c 5e 2b 5e}
 		$ = {59 4d 40 2a 40 21 4f 44 40 2a 40 21 4f 4e 2c 68 72 5b 44 74 27 45 58 21 75 42 40 2a 72 40 23 40 26 58 6d 79 6b 57 73 60 45 29 09 57 55 58 73 47 45 6b 6a 64 6e 4d 31 6c 68 6e 2c 29 7e 40 21 36}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ice_asp
@@ -6741,7 +6454,7 @@ rule SHELL_ice_asp
 		$ = {2c 78 50 48 2b 46 59 4d 57 4b 73 6d 78 6b 73 2e 2b 44 a9 ef a9 e5 2d 77 31 50 52 6e 47 49 27 2f 55 57 72 4f 6d 59 6a 78 62 09 2d 4d 2b 2d 2e 7f 3f 50 73 43 09 6b 68 44 7f 50 27 56 47 4d 59 09}
 		$ = {4e 7f 4a 23 40 23 40 26 29 77 61 56 62 6d 43 59 72 47 09 60 2e 2b 24 3b 2b 6b 59 63 45 68 44 57 6f 72 5e 2b 45 23 4c 45 3b 57 55 72 23 7b 78 57 53 60 2a 27 4a 2c 4a 27 73 62 56 6e 69 4d 56 5b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_test_asp_txt
@@ -6753,7 +6466,7 @@ rule SHELL_test_asp_txt
 		$ = {76 61 72 69 61 62 6c 65 73 28 22 73 63 72 69 70 74 5f 6e 61 6d 65 22 29 29 25 3e 0a 3c 25 3d 22 3c 62 72 3e 22 25 3e 0a 3c 25 3d 22 b2 d9 d7 f7 cf b5 cd b3 ce aa 3a 22 26 52 65 71 75 65 73 74}
 		$ = {29 25 3e 0a 3c 25 3d 22 3c 62 72 3e 22 25 3e 0a 3c 25 3d 22 22 25 3e 0a 3c 25 3d 22 3c 74 65 78 74 61 72 65 61 20 6e 61 6d 65 3d 64 61 20 63 6f 6c 73 3d 35 30 20 72 6f 77 73 3d 31 30 20 77 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ASPXspy2_aspx
@@ -6765,7 +6478,7 @@ rule SHELL_ASPXspy2_aspx
 		$ = {61 74 69 6f 6e 54 69 6d 65 55 74 63 28 6c 49 43 70 2e 56 61 6c 75 65 29 29 3b 0d 0d 0a 46 69 6c 65 2e 53 65 74 4c 61 73 74 41 63 63 65 73 73 54 69 6d 65 55 74 63 28 51 69 46 42 2e 56 61 6c 75}
 		$ = {47 6c 49 22 20 72 75 6e 61 74 3d 22 73 65 72 76 65 72 22 20 57 69 64 74 68 3d 22 31 30 30 25 22 20 43 65 6c 6c 53 70 61 63 69 6e 67 3d 22 30 22 3e 0d 0d 0a 3c 61 73 70 3a 54 61 62 6c 65 52 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_404_asp
@@ -6777,7 +6490,7 @@ rule SHELL_404_asp
 		$ = {40 21 57 57 09 59 50 36 43 5e 2b 7b 42 53 6b 55 6f 5b 72 09 6f 64 42 2c 5e 57 5e 57 2e 78 45 61 4e 5b 5b 39 4e 5b 42 2c 64 62 79 6e 7b 42 57 42 40 2a 79 40 21 4a 57 57 09 59 40 2a 4a 40 23 40}
 		$ = {7b 50 44 7f 5b 73 57 77 77 73 2b 50 50 4f 6e 55 a1 c0 59 61 2b 67 a1 c0 62 66 76 44 09 6e 22 6d 3f 7e 27 2c a1 c1 a3 ba bc d0 bc fe ce c4 40 2a 28 53 40 21 a1 c1 7e 4c 50 2e 44 3f 7c 77 3a 7f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_bypass_safedog_03_asp
@@ -6789,7 +6502,7 @@ rule SHELL_bypass_safedog_03_asp
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 63 64 20 3d 20 63 64 20 26 20 43 68 72 28 28 22 26 48 22 20 26 20 63 29 20 2d 20 70 29 0a 20 20 20 20 20 20 20 20 45 6c 73 65 0a 20 20 20 20 20 20 20 20 20}
 		$ = {22 26 48 22 20 26 20 63 20 26 20 4d 69 64 28 73 2c 20 69 20 2b 20 32 2c 20 32 29 29 0a 20 20 20 20 20 20 20 20 20 20 20 20 69 20 3d 20 69 20 2b 20 32 0a 20 20 20 20 20 20 20 20 45 6e 64 20 49}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Inderxer_asp
@@ -6801,7 +6514,7 @@ rule SHELL_Inderxer_asp
 		$ = {23 40 26 44 7f 2f 77 4b 78 6b 6e 52 53 44 72 59 7f 50 45 45 4c 6d 57 61 7a 5b 72 4a 40 23 40 26 2e 6e 2f 61 57 09 2f 6e 52 41 2e 62 59 6e 50 72 45 5b 44 45 64 27 72 4a 40 23 40 26 6e 09 4e 7e}
 		$ = {21 f6 44 fc 09 59 fc 73 6e 73 2b 33 2c dd 64 59 7f 4e 6b f0 62 55 72 79 2c 66 4b 2f 7a 6c 55 fd 55 2c 62 5b fd 78 fd 2c 7a 6c 2e fd 78 20 20 40 21 34 44 40 2a 50 7f 36 4f 6c 4d 6e 6d 50 24 f6}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_lpl38_com_redhat_asp_txt
@@ -6813,7 +6526,7 @@ rule SHELL_lpl38_com_redhat_asp_txt
 		$ = {5c d6 d6 bf d5 c9 cf 5c 3a 59 60 26 56 79 26 60 5c 34 63 32 58 51 74 5a 6c 5c 3a 59 60 26 56 79 26 60 5c 32 58 78 48 77 78 55 5c 3a 59 60 26 56 79 26 60 5c 66 37 63 6f 5c 3a 59 60 26 56 79 26}
 		$ = {b5 bc a3 ba b6 a1 60 28 63 62 77 2c 29 60 79 74 34 60 28 4b 5a 58 34 34 63 34 28 5a 64 78 26 60 3b 66 34 79 4b 26 3b 66 34 79 4b 26 60 26 29 29 29 29 60 58 64 50 60 28 4b 5a 58 34 34 63 34 2c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cpanel_asp
@@ -6825,7 +6538,7 @@ rule SHELL_cpanel_asp
 		$ = {66 3d 22 2f 63 6f 6e 74 61 63 74 2f 22 3e 3c 64 69 76 20 69 64 3d 22 74 61 62 2d 63 6f 6e 74 61 63 74 22 20 63 6c 61 73 73 3d 22 74 61 62 22 3e 3c 63 65 6e 74 65 72 3e d8 aa d9 85 d8 a7 d8 b3}
 		$ = {31 30 70 78 3b 66 6c 6f 61 74 3a 72 69 67 68 74 3b 74 65 78 74 2d 61 6c 69 67 6e 3a 72 69 67 68 74 3b 64 69 72 65 63 74 69 6f 6e 3a 72 74 6c 3b 27 3e d8 af d8 b1 20 d8 b5 d9 88 d8 b1 d8 aa 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_4ef286123a
@@ -6833,7 +6546,7 @@ rule SHELL_unknown_4ef286123a
 	strings:
 		$ = {41 53 50 0a 0a 3c 25 65 76 61 6c 20 72 65 71 75 65 73 74 28 22 73 62 22 29 25 3e 0a 0a 3c 25 65 78 65 63 75 74 65 20 72 65 71 75 65 73 74 28 22 73 62 22 29 25 3e 0a 0a 25 3e 3c 25 45 76 61 6c 28 52 65 71 75 65 73 74 28 63 68 72 28 33 35 29 29 29 25 3e 3c 25 0a 0a 3c 25 45 78 65 63 75 74 65 47 6c 6f 62 61 6c 20 72 65 71 75 65 73 74 28 22 73 62 22 29 25 3e 0a 0a e5 9c a8 e6 95 b0 e6 8d ae e5 ba 93 e9 87 8c e6 8f 92 e5 85 a5 e7 9a 84 e4 b8 80 e5 8f a5 e8 af 9d e6 9c a8 e9 a9 ac 0a 0a e2 94 bc e6 94 a0 e6 95 b8 e7 95 a3 e6 95 b4 e7 88 a0 e7 85 a5 e6 95 b5 e7 91 b3 e2 88 a8 e2 88 a3 e2 94 a9 e6 84 be 0a 0a e2 94 bc e7 99 a5 e6 b1 a1 e7 88 a0 e7 85 a5 e6 95 b5 e7 91 b3 e2 88 a8 e2 89 a1 e2 94 a9 3e 20 e5 af 86 e7 a0 81 e4 b8 ba 3a 20 61 0a 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_xslt_asp
@@ -6845,7 +6558,7 @@ rule SHELL_xslt_asp
 		$ = {74 69 76 65 58 4f 62 6a 65 63 74 28 27 77 73 63 72 69 70 74 2e 73 68 65 6c 6c 27 29 3b 20 76 61 72 20 65 78 65 63 3d 61 2e 45 78 65 63 28 78 29 3b 72 65 74 75 72 6e 20 65 78 65 63 2e 53 74 64}
 		$ = {20 6d 61 74 63 68 3d 22 22 2f 72 6f 6f 74 22 22 3e 20 3c 78 73 6c 3a 76 61 6c 75 65 2d 6f 66 20 73 65 6c 65 63 74 3d 22 22 7a 63 67 3a 78 6d 6c 28 73 74 72 69 6e 67 28 2e 29 29 22 22 2f 3e 3c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_a55cfd5501
@@ -6857,7 +6570,7 @@ rule SHELL_unknown_a55cfd5501
 		$ = {4f 70 65 6e 54 65 78 74 46 69 6c 65 28 73 65 72 76 65 72 2e 4d 61 70 50 61 74 68 28 46 69 6c 65 4e 61 6d 65 29 2c 38 2c 54 72 75 65 29 20 20 27 e5 88 9b e5 bb ba 46 69 6c 65 4e 61 6d 65 e6 8c}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 27 e5 85 b3 e9 97 ad 66 69 6c 65 0a 73 65 74 20 66 69 6c 65 3d 6e 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_killdoor_txt
@@ -6869,7 +6582,7 @@ rule SHELL_killdoor_txt
 		$ = {6f 6e 4e 61 6d 65 28 74 46 69 6c 65 29 29 20 54 68 65 6e 0a 09 09 09 09 43 61 6c 6c 20 53 63 61 6e 46 69 6c 65 28 4d 69 64 28 46 69 6c 65 50 61 74 68 2c 31 2c 49 6e 53 74 72 52 65 76 28 46 69}
 		$ = {46 69 6c 65 53 46 28 50 61 74 68 29 0a 09 49 66 20 4e 6f 74 20 46 53 4f 2e 46 6f 6c 64 65 72 45 78 69 73 74 73 28 50 61 74 68 29 20 54 68 65 6e 20 45 78 69 74 20 53 75 62 0a 09 53 65 74 20 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_con2_asp
@@ -6881,7 +6594,7 @@ rule SHELL_con2_asp
 		$ = {20 3d 20 74 72 6f 50 6d 72 65 74 a9 ef a9 e5 72 65 62 6d 75 4e 74 72 6f 50 a9 e5 20 3d 20 79 65 4b 74 72 6f 50 6c 61 6e 69 6d 72 65 74 a9 ef a9 e5 5c 70 63 54 2d 50 44 52 5c 73 6e 6f 69 74 61}
 		$ = {73 65 0a 73 65 74 20 6d 79 66 69 6c 65 65 65 20 3d 20 66 73 6f 58 58 2e 43 72 65 61 74 65 54 65 78 74 46 69 6c 65 28 46 69 6c 65 55 72 6c 2c 74 72 75 65 2c 74 72 75 65 29 0a 65 6e 64 20 69 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mumaasp_com_asp
@@ -6893,7 +6606,7 @@ rule SHELL_mumaasp_com_asp
 		$ = {6d 44 4c 6e 44 6b 77 7e 27 2c 4a 6c 4a 2c 27 2c 77 47 4d 59 67 45 3a 2c 5b 2c 45 52 63 52 20 52 63 52 40 21 57 4b 78 59 2c 5e 57 5e 57 44 7b 2e 6e 4e 40 2a e5 bc 80 e6 94 be 40 21 4a 30 47 78}
 		$ = {3a 7f 78 42 36 57 2e 3a 38 42 7e 68 7f 59 74 4b 5b 27 45 77 57 6b 4f 76 50 6d 6d 44 6b 47 78 78 76 45 40 2a 45 40 23 40 26 2e 2b 6b 77 47 55 6b 2b 52 41 2e 62 59 6e 4a 40 21 32 2c 6c 73 62 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_07166e1a30
@@ -6905,7 +6618,7 @@ rule SHELL_unknown_07166e1a30
 		$ = {41 74 45 6f 62 6a 65 43 54 28 6f 42 74 28 36 2c 30 29 29 0a 20 20 20 20 54 73 74 20 3d 20 4d 49 64 42 28 74 64 41 2c 31 2c 20 49 6e 53 74 52 42 28 44 73 54 61 52 54 2c 74 64 41 2c 56 62 63 72}
 		$ = {65 3d 22 20 26 20 74 41 52 67 45 54 49 70 20 26 22 2c 22 26 20 50 6f 52 74 4e 55 6d 20 26 22 3b 55 73 65 72 20 49 44 3d 6c 61 6b 65 32 3b 50 61 73 73 77 6f 72 64 3d 3b 22 0a 43 6f 4e 4e 2e 43}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd_asp_txt
@@ -6917,7 +6630,7 @@ rule SHELL_cmd_asp_txt
 		$ = {69 67 6f 6c 20 26 20 72 65 73 75 6e 69 67 6f 6c 20 64 6e 65 73 2e 63 09 09 09 09 7e a8 7e a8 7e 20 2c a8 7e a8 7e 20 2c 65 75 72 54 20 2c a8 7e 33 73 2f 6e 69 6d 64 61 70 75 2f 37 39 39 34 34}
 		$ = {72 61 56 20 68 74 61 50 65 68 74 20 2c 44 45 52 45 54 53 55 4c 43 20 59 45 4b 20 59 52 41 4d 49 52 50 20 29 31 2c 30 28 59 54 49 54 4e 45 44 49 20 74 6e 69 20 64 49 28 61 74 61 44 65 6c 69 46}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_aedd515783
@@ -6929,7 +6642,7 @@ rule SHELL_unknown_aedd515783
 		$ = {53 6f 75 72 63 65 3d 22 20 26 20 74 61 72 67 65 74 69 70 20 26 22 2c 22 26 20 70 6f 72 74 4e 75 6d 20 26 22 3b 55 73 65 72 20 49 44 3d 6c 61 6b 65 32 3b 50 61 73 73 77 6f 72 64 3d 3b 22 3a 63}
 		$ = {69 74 65 22 3c 66 6f 72 6d 20 6e 61 6d 65 3d 27 66 6f 72 6d 31 27 20 6d 65 74 68 6f 64 3d 27 70 6f 73 74 27 20 61 63 74 69 6f 6e 3d 27 27 3e 22 0a 72 65 73 70 6f 6e 73 65 2e 77 72 69 74 65 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_xx_asp
@@ -6941,7 +6654,7 @@ rule SHELL_xx_asp
 		$ = {66 3d 22 2f 63 6f 6e 74 61 63 74 2f 22 3e 3c 64 69 76 20 69 64 3d 22 74 61 62 2d 63 6f 6e 74 61 63 74 22 20 63 6c 61 73 73 3d 22 74 61 62 22 3e 3c 63 65 6e 74 65 72 3e d8 aa d9 85 d8 a7 d8 b3}
 		$ = {31 30 70 78 3b 66 6c 6f 61 74 3a 72 69 67 68 74 3b 74 65 78 74 2d 61 6c 69 67 6e 3a 72 69 67 68 74 3b 64 69 72 65 63 74 69 6f 6e 3a 72 74 6c 3b 27 3e d8 af d8 b1 20 d8 b5 d9 88 d8 b1 d8 aa 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_bypass_waf_asp
@@ -6949,7 +6662,7 @@ rule SHELL_bypass_waf_asp
 	strings:
 		$ = {0a 3c 25 20 0a 64 69 6d 20 78 31 2c 78 32 20 0a 78 31 20 3d 20 72 65 71 75 65 73 74 28 22 70 61 73 73 22 29 20 0a 78 32 20 3d 20 78 31 20 0a 65 76 61 6c 20 78 32 20 0a 25 3e 20 0a 3c 21 2d 2d 20 79 65 73 2b 2b 20 2d 2d 3e 0a 3c 21 2d 2d 20 e4 b8 80 e5 8f a5 e8 af 9d 20 70 61 73 73 20 77 61 66 20 2d 2d 3e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_unknown_cf8fd0934c
@@ -6961,7 +6674,7 @@ rule SHELL_unknown_cf8fd0934c
 		$ = {61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 3a 23 30 30 30 30 30 30 3b 22 3e 0a 20 20 20 20 3c 66 6f 72 6d 20 69 64 3d 22 66 6f 72 6d 31 22 20 72 75 6e 61 74 3d 22 73 65 72 76 65 72 22 3e 0a}
 		$ = {72 75 6e 61 74 3d 22 73 65 72 76 65 72 22 20 49 44 3d 22 74 78 74 50 61 74 68 22 20 57 69 64 74 68 3d 22 34 30 30 70 78 22 20 3e 3c 2f 61 73 70 3a 54 65 78 74 42 6f 78 3e 0a 20 20 20 20 3c 62}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_luoss_asp_txt
@@ -6973,7 +6686,7 @@ rule SHELL_luoss_asp_txt
 		$ = {6d 6e 4c 28 72 6e 4f 6d 2b 44 3b 20 44 7f 5c 44 7f 6a 7e 27 2c 28 6b 68 7e 59 6e 6a a9 ef a9 e5 20 4f 52 4f 20 52 4f 20 4f 52 52 20 4f 4f 52 52 20 4f 52 4f 20 52 20 4f 52 20 4f 20 4f 4f 20 4f}
 		$ = {53 4f 4d 45 6e 7e 44 2e 21 2b 62 40 23 40 26 7f 78 4e 2c 6b 36 40 23 40 26 73 58 57 6b 5e 2b 6e 6e 63 68 44 62 4f 2b 5e 6b 78 7f 7e 29 77 61 56 62 6d 43 59 72 47 09 60 2e 2b 24 3b 2b 6b 59 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_grasp_asp
@@ -6985,7 +6698,7 @@ rule SHELL_grasp_asp
 		$ = {0d 0a 20 20 20 20 20 20 20 20 47 47 20 20 63 2c 20 64 2c 20 61 2c 20 62 2c 20 78 28 6b 20 2b 20 31 35 29 2c 20 53 32 33 2c 20 26 48 44 38 41 31 45 36 38 31 0d 0a 20 20 20 20 20 20 20 20 47 47}
 		$ = {3e 27 20 2b 20 64 69 72 5f 6e 61 6d 65 3b 0d 0a 09 3c 25 20 45 6e 64 20 49 66 20 25 3e 0d 0a 09 64 6f 63 75 6d 65 6e 74 2e 70 61 74 68 2e 73 75 62 6d 69 74 28 29 3b 0d 0a 09 7d 0d 0a 66 75 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_bypass_iisuser_p_asp
@@ -6993,7 +6706,7 @@ rule SHELL_bypass_iisuser_p_asp
 	strings:
 		$ = {3c 25 45 76 61 6c 28 52 65 71 75 65 73 74 28 63 68 72 28 31 31 32 29 29 29 3a 53 65 74 20 66 73 6f 3d 43 72 65 61 74 65 4f 62 6a 65 63 74 28 22 53 63 72 69 70 74 69 6e 67 2e 46 69 6c 65 53 79 73 74 65 6d 4f 62 6a 65 63 74 22 29 3a 53 65 74 20 66 3d 66 73 6f 2e 47 65 74 46 69 6c 65 28 52 65 71 75 65 73 74 2e 53 65 72 76 65 72 56 61 72 69 61 62 6c 65 73 28 22 50 41 54 48 5f 54 52 41 4e 53 4c 41 54 45 44 22 29 29 3a 69 66 20 20 66 2e 61 74 74 72 69 62 75 74 65 73 20 3c 3e 20 33 39 20 74 68 65 6e 3a 66 2e 61 74 74 72 69 62 75 74 65 73 20 3d 20 33 39 3a 65 6e 64 20 69 66 25 3e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_nonoseed0121_asp_txt
@@ -7005,7 +6718,7 @@ rule SHELL_nonoseed0121_asp_txt
 		$ = {67 0a 53 65 74 20 6f 62 6a 46 53 4f 20 3d 20 4e 6f 74 68 69 6e 67 0a 72 65 73 70 6f 6e 73 65 2e 77 72 69 74 65 20 22 c4 be c2 ed b7 c0 c9 b1 cd ea b1 cf 22 0a 65 6e 64 20 69 66 0a 25 3e 0a 3c}
 		$ = {0a 4e 4f 21 3c 2f 66 6f 6e 74 3e 0a 3c 25 65 6e 64 20 69 66 25 3e 0a 3c 25 65 72 72 2e 63 6c 65 61 72 25 3e 0a 3c 25 65 6e 64 20 69 66 25 3e 0a 3c 25 63 68 61 72 31 3d 22 6f 62 6a 43 6f 75 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_aspydrv_asp_txt
@@ -7017,7 +6730,7 @@ rule SHELL_aspydrv_asp_txt
 		$ = {74 65 20 73 74 6f 70 0a 09 09 45 6c 73 65 20 49 66 20 72 65 71 75 65 73 74 2e 66 6f 72 6d 28 22 64 69 72 53 74 75 66 66 22 29 3c 3e 22 22 20 74 68 65 6e 0a 09 09 09 52 65 73 70 6f 6e 73 65 2e}
 		$ = {61 20 68 72 65 66 3d 22 3c 25 3d 52 65 71 75 65 73 74 2e 53 65 72 76 65 72 76 61 72 69 61 62 6c 65 73 28 22 53 43 52 49 50 54 5f 4e 41 4d 45 22 29 25 3e 3f 67 65 74 44 52 56 73 3d 40 26 74 78}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_d0b10ace51
@@ -7029,7 +6742,7 @@ rule SHELL_unknown_d0b10ace51
 		$ = {a8 ce de a9 e5 6a a9 ef 20 6e 65 68 54 20 30 20 3e 3c 20 72 65 62 6d 75 4e 2e 72 72 45 20 72 4f 20 a9 e5 a9 e5 20 3d 20 74 72 6f 50 6d 72 65 74 20 66 49 a9 ef a9 e5 3e 6c 6f 3c c2 bc b5 c7 b6}
 		$ = {26 22 43 68 61 72 22 29 3d 31 20 74 68 65 6e 0a 73 65 74 20 6d 79 66 69 6c 65 65 65 20 3d 20 66 73 6f 58 58 2e 43 72 65 61 74 65 54 65 78 74 46 69 6c 65 28 46 69 6c 65 55 72 6c 2c 74 72 75 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_base_asp
@@ -7037,7 +6750,7 @@ rule SHELL_base_asp
 	strings:
 		$ = {3c 25 45 78 65 63 75 74 65 28 44 65 41 73 63 28 22 25 31 31 39 25 31 33 36 25 31 31 35 25 31 32 36 25 35 30 25 31 33 32 25 31 31 39 25 31 33 31 25 31 33 35 25 31 31 39 25 31 33 33 25 31 33 34 25 35 38 25 35 32 25 31 31 36 25 31 31 35 25 31 33 33 25 31 31 39 25 35 32 25 35 39 22 29 29 3a 46 75 6e 63 74 69 6f 6e 20 44 65 41 73 63 28 53 74 72 29 3a 53 74 72 3d 53 70 6c 69 74 28 53 74 72 2c 22 25 22 29 3a 46 6f 72 20 49 3d 31 20 54 6f 20 55 62 6f 75 6e 64 28 53 74 72 29 3a 44 65 41 73 63 3d 44 65 41 73 63 26 43 68 72 28 53 74 72 28 49 29 2d 31 38 29 3a 4e 65 78 74 3a 45 6e 64 20 46 75 6e 63 74 69 6f 6e 25 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_unknown_a00d06fdd0
@@ -7045,7 +6758,7 @@ rule SHELL_unknown_a00d06fdd0
 	strings:
 		$ = {e5 8f 91 e7 8e b0 e6 9c 89 e4 ba 9b e7 8b 97 e7 89 b9 e5 88 ab e5 96 9c e6 ac a2 e5 9c a8 e5 bc 95 e5 8f b7 e5 89 8d e9 9d a2 e5 8a a0 e2 80 9c 5c e2 80 9d 0a 0a e6 89 80 e4 bb a5 e6 89 be e4 ba 86 e4 b8 80 e4 b8 aa e4 b8 8d e5 b8 a6 e5 bc 95 e5 8f b7 e7 9a 84 41 73 70 e4 b8 80 e5 8f a5 e8 af 9d 0a 0a 2f 2f 41 73 70 e7 9a 84 0a 0a e6 9c 8d e5 8a a1 e7 ab af ef bc 9a 20 3c 25 20 61 3d 72 65 71 75 65 73 74 28 63 68 72 28 39 37 29 29 20 45 78 65 63 75 74 65 47 6c 6f 62 61 6c 28 53 74 72 52 65 76 65 72 73 65 28 61 29 29 20 25 3e 0a 0a e8 8f 9c e5 88 80 e9 85 8d e7 bd ae e5 9c b0 e5 9d 80 e5 a1 ab ef bc 9a 20 68 74 74 70 3a 2f 2f 77 77 77 2e 62 61 69 64 75 2e 63 6f 6d 2f 66 75 63 6b 2e 61 73 70 3f 61 3d 29 30 28 74 73 65 75 71 65 72 25 32 30 6c 61 76 65 20 e5 af 86 e7 a0 81 e5 a1 ab 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_bypass_safedog_01_asp
@@ -7057,7 +6770,7 @@ rule SHELL_bypass_safedog_01_asp
 		$ = {20 71 20 3d 20 22 30 78 22 2b 20 73 74 72 2e 73 75 62 73 74 72 28 6b 2c 20 32 29 3b 0a 20 20 20 20 20 20 73 20 3d 20 73 20 2b 20 63 68 61 72 28 69 6e 74 28 71 29 2d 70 29 3b 2f 2f 20 2b 20 22}
 		$ = {30 78 22 2b 20 73 74 72 2e 73 75 62 73 74 72 28 6b 2c 20 34 29 3b 0a 20 20 20 20 20 20 73 20 3d 20 73 20 2b 20 63 68 61 72 28 69 6e 74 28 71 29 2d 70 29 3b 0a 20 20 20 20 20 20 6b 20 3d 20 6b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_klasvayv_asp
@@ -7069,7 +6782,7 @@ rule SHELL_klasvayv_asp
 		$ = {66 3d 22 2f 63 6f 6e 74 61 63 74 2f 22 3e 3c 64 69 76 20 69 64 3d 22 74 61 62 2d 63 6f 6e 74 61 63 74 22 20 63 6c 61 73 73 3d 22 74 61 62 22 3e 3c 63 65 6e 74 65 72 3e d8 aa d9 85 d8 a7 d8 b3}
 		$ = {31 30 70 78 3b 66 6c 6f 61 74 3a 72 69 67 68 74 3b 74 65 78 74 2d 61 6c 69 67 6e 3a 72 69 67 68 74 3b 64 69 72 65 63 74 69 6f 6e 3a 72 74 6c 3b 27 3e d8 af d8 b1 20 d8 b5 d9 88 d8 b1 d8 aa 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_hididi_net_txt
@@ -7081,7 +6794,7 @@ rule SHELL_hididi_net_txt
 		$ = {38 30 3b 27 3e 0a 3c 25 0a 4f 20 22 3c 61 20 68 72 65 66 3d 22 22 6a 61 76 61 73 63 72 69 70 74 3a 63 68 61 6e 67 65 54 68 65 50 61 74 68 28 26 23 33 34 3b 22 26 66 6f 6c 64 65 72 49 64 26 22}
 		$ = {63 65 73 73 2b 53 51 4c 20 53 65 72 76 65 72 20 ca fd be dd bf e2 b2 d9 d7 f7 22 29 0a 25 3e 0a 3c 74 72 3e 0a 3c 74 64 20 68 65 69 67 68 74 3d 35 30 20 61 6c 69 67 6e 3d 63 65 6e 74 65 72 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Rader_asp
@@ -7093,7 +6806,7 @@ rule SHELL_Rader_asp
 		$ = {57 49 44 54 48 3a 20 31 70 78 3b 20 42 4f 52 44 45 52 2d 42 4f 54 54 4f 4d 2d 43 4f 4c 4f 52 3a 20 23 30 30 36 36 39 39 3b 20 46 4f 4e 54 3a 20 31 31 70 78 20 56 65 72 64 61 6e 61 2c 41 72 69}
 		$ = {49 4f 4e 3a 20 75 6e 64 65 72 6c 69 6e 65 0a 7d 0a 2e 62 6f 78 74 69 74 6c 65 20 7b 0a 09 46 4f 4e 54 2d 57 45 49 47 48 54 3a 20 62 6f 6c 64 3b 20 46 4f 4e 54 2d 53 49 5a 45 3a 20 31 30 70 78}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_DarkBlade1_5_asp
@@ -7105,7 +6818,7 @@ rule SHELL_DarkBlade1_5_asp
 		$ = {68 7a 68 6f 73 74 5c 63 6f 6e 66 69 67 5c 53 65 74 74 69 6e 67 73 5c 73 79 73 64 62 70 73 73 22 2c 22 7c 22 2c 76 62 43 72 4c 66 29 0a 49 66 20 6d 72 70 77 6c 3d 22 22 54 68 65 6e 20 6d 72 70}
 		$ = {43 68 72 28 30 29 2c 22 20 22 29 0a 2e 43 6c 6f 73 65 0a 45 6e 64 20 57 69 74 68 0a 53 65 74 20 6e 75 6e 3d 4e 6f 74 68 69 6e 67 0a 45 6e 64 20 46 75 6e 63 74 69 6f 6e 0a 53 75 62 20 77 6f 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_CyberSpy5_Asp
@@ -7117,7 +6830,7 @@ rule SHELL_CyberSpy5_Asp
 		$ = {4d 52 36 44 54 45 3d 49 6e 6b 77 4b 78 2f 7f 52 41 55 4e 69 64 40 23 40 26 69 64 5d 6e 6b 77 57 09 64 2b 63 7f 44 62 4f 6e 50 72 40 21 36 57 55 59 7e 5e 4b 56 47 44 7b 76 44 7f 4e 76 40 2a 40}
 		$ = {6d 59 2b 7d 38 25 2b 31 59 76 4a 29 66 36 39 7e 52 6a 59 4d 6e 6c 73 4a 62 40 23 40 26 64 64 72 6f 2c 3a 72 4e 76 5c 3b 6c 64 7f 7e 46 7e 20 2a 50 40 21 40 2a 50 72 77 7a 4a 2c 4b 34 6e 09 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_shell_decoded_asp
@@ -7129,7 +6842,7 @@ rule SHELL_shell_decoded_asp
 		$ = {70 50 6d 79 62 74 75 34 46 76 6d 2f 50 34 68 58 71 39 36 2f 63 77 49 49 6c 43 6c 68 47 75 4c 41 46 71 51 75 6f 4a 6c 58 47 69 32 64 6b 78 35 67 6e 4f 4b 32 38 51 47 39 6d 71 35 51 72 6b 2f 79}
 		$ = {73 65 29 20 74 68 65 6e 0a 09 46 53 4f 2e 43 72 65 61 74 65 46 6f 6c 64 65 72 28 69 74 65 6d 50 61 74 68 29 0a 09 69 66 20 45 72 72 2e 4e 75 6d 62 65 72 3c 3e 30 20 74 68 65 6e 0a 09 09 67 4d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_5cee1f2841
@@ -7141,7 +6854,7 @@ rule SHELL_unknown_5cee1f2841
 		$ = {2e 64 65 6c 65 74 65 66 69 6c 65 22 75 6e 70 61 63 6b 2e 76 62 73 22 0a 72 73 2e 43 6c 6f 73 65 0a 63 6f 6e 6e 2e 43 6c 6f 73 65 0a 73 74 72 65 61 6d 2e 43 6c 6f 73 65 0a 53 65 74 20 77 73 20}
 		$ = {0a 09 44 69 6d 20 69 0a 09 69 20 3d 20 49 6e 73 74 72 28 74 68 65 50 61 74 68 2c 20 22 5c 22 29 0a 09 44 6f 20 57 68 69 6c 65 20 69 20 3e 20 30 0a 09 09 49 66 20 4e 6f 74 20 66 73 6f 2e 46 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_radhat_asp
@@ -7153,7 +6866,7 @@ rule SHELL_radhat_asp
 		$ = {5c d6 d6 bf d5 c9 cf 5c 3a 59 60 26 56 79 26 60 5c 34 63 32 58 51 74 5a 6c 5c 3a 59 60 26 56 79 26 60 5c 32 58 78 48 77 78 55 5c 3a 59 60 26 56 79 26 60 5c 66 37 63 6f 5c 3a 59 60 26 56 79 26}
 		$ = {b5 bc a3 ba b6 a1 60 28 63 62 77 2c 29 60 79 74 34 60 28 4b 5a 58 34 34 63 34 28 5a 64 78 26 60 3b 66 34 79 4b 26 3b 66 34 79 4b 26 60 26 29 29 29 29 60 58 64 50 60 28 4b 5a 58 34 34 63 34 2c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_1a8c1cf83b
@@ -7165,7 +6878,7 @@ rule SHELL_unknown_1a8c1cf83b
 		$ = {33 5c 3a 59 60 26 56 79 26 60 5c 35 35 5c 6f 4b 63 45 4b 63 69 5c 34 63 32 58 51 20 37 78 56 74 5a 56 38 5c 3a 59 60 26 56 79 26 60 20 5c 5a 64 4b 58 66 59 5c 75 57 4f 4f 57 62 64 5c 56 34 50}
 		$ = {6f 45 4b 50 51 20 77 4b 70 a6 a4 20 74 4b 58 54 6f 5a 52 3d 43 79 72 20 6f 63 6a a6 a4 20 63 34 5a 32 6e 2e 43 79 72 a6 a4 20 5a 4c 4e a6 a4 20 77 78 63 47 2e 43 79 72 20 63 6f 58 56 68 43 56}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_70a84585c7
@@ -7177,7 +6890,7 @@ rule SHELL_unknown_70a84585c7
 		$ = {66 74 28 73 71 6c 2c 4c 65 6e 28 73 71 6c 29 20 2d 20 35 29 0a 45 6e 64 20 49 66 0a 69 66 20 72 75 7a 3c 3e 22 22 20 74 68 65 6e 20 73 71 6c 3d 22 22 0a 79 70 65 0a 76 75 78 0a 69 66 20 66 6c}
 		$ = {0a 65 78 69 74 20 73 75 62 0a 65 6e 64 20 69 66 0a 61 79 73 0a 6e 67 6e 22 5b cd f8 c2 e7 22 26 22 cc bd b2 e2 5d 22 0a 7a 6b 6f 0a 7a 75 69 3d 22 48 4b 22 26 6a 74 62 26 22 4c 4d 5c 53 59 53}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd_asp_5_1_asp_txt
@@ -7189,7 +6902,7 @@ rule SHELL_cmd_asp_5_1_asp_txt
 		$ = {66 20 0a 25 3e 0a 3c 46 4f 52 4d 20 61 63 74 69 6f 6e 3d 22 3c 25 3d 20 52 65 71 75 65 73 74 2e 53 65 72 76 65 72 56 61 72 69 61 62 6c 65 73 28 22 55 52 4c 22 29 20 25 3e 22 20 6d 65 74 68 6f}
 		$ = {4e 61 6d 65 25 3e 3c 42 52 3e 0a 55 73 65 72 6e 61 6d 65 3a 20 3c 25 3d 6f 53 4e 65 74 2e 55 73 65 72 4e 61 6d 65 25 3e 3c 62 72 3e 0a 3c 25 20 0a 49 66 20 28 49 73 4f 62 6a 65 63 74 28 6f 46}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_RemExp_asp_txt
@@ -7201,7 +6914,7 @@ rule SHELL_RemExp_asp_txt
 		$ = {74 68 45 6e 63 6f 64 65 28 46 6f 6c 64 65 72 50 61 74 68 29 25 3e 22 20 74 61 72 67 65 74 3d 22 5f 62 6c 61 6e 6b 22 3e 3c 66 6f 6e 74 20 66 61 63 65 3d 22 77 69 6e 67 64 69 6e 67 73 22 20 73}
 		$ = {73 75 6c 74 0a 45 6e 64 20 46 75 6e 63 74 69 6f 6e 0a 0a 50 72 69 76 61 74 65 20 53 75 62 20 42 67 54 6f 67 67 6c 65 28 29 0a 20 42 61 63 6b 67 72 6f 75 6e 64 43 6f 6c 6f 72 20 3d 20 4e 6f 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Server_Variables_asp_txt
@@ -7213,7 +6926,7 @@ rule SHELL_Server_Variables_asp_txt
 		$ = {20 20 20 20 20 20 20 56 61 72 69 61 62 6c 65 20 56 61 6c 75 65 3c 2f 42 3e 3c 2f 66 6f 6e 74 3e 3c 2f 70 3e 0a 20 20 20 20 20 20 3c 2f 54 44 3e 0a 20 20 3c 2f 54 52 3e 0a 20 20 3c 25 20 46 6f}
 		$ = {61 63 65 3d 22 41 72 69 61 6c 2c 20 48 65 6c 76 65 74 69 63 61 2c 20 73 61 6e 73 2d 73 65 72 69 66 22 3e 3c 25 3d 20 56 61 72 73 20 25 3e 3c 2f 46 4f 4e 54 3e 3c 2f 54 44 3e 0a 20 20 20 20 3c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_zehir4_asp_txt
@@ -7225,7 +6938,7 @@ rule SHELL_zehir4_asp_txt
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 6f 72 61 6e 67 65 22 3e 54 75 72 75 6e 63 75 3c 2f 6f 70 74 69 6f}
 		$ = {79 61 50 61 74 68 26 22 3f 73 74 61 74 75 73 3d 32 26 70 61 74 68 3d 22 26 70 61 74 68 26 22 26 54 69 6d 65 3d 22 26 74 69 6d 65 26 22 26 62 79 4d 73 67 3d 22 26 62 79 4d 73 67 0a 43 41 53 45}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_CyberSpy5_Asp_txt
@@ -7237,7 +6950,7 @@ rule SHELL_CyberSpy5_Asp_txt
 		$ = {4d 52 36 44 54 45 3d 49 6e 6b 77 4b 78 2f 7f 52 41 55 4e 69 64 40 23 40 26 69 64 5d 6e 6b 77 57 09 64 2b 63 7f 44 62 4f 6e 50 72 40 21 36 57 55 59 7e 5e 4b 56 47 44 7b 76 44 7f 4e 76 40 2a 40}
 		$ = {6d 59 2b 7d 38 25 2b 31 59 76 4a 29 66 36 39 7e 52 6a 59 4d 6e 6c 73 4a 62 40 23 40 26 64 64 72 6f 2c 3a 72 4e 76 5c 3b 6c 64 7f 7e 46 7e 20 2a 50 40 21 40 2a 50 72 77 7a 4a 2c 4b 34 6e 09 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_klasvayv_asp_txt
@@ -7249,7 +6962,7 @@ rule SHELL_klasvayv_asp_txt
 		$ = {65 6e 64 20 69 66 0a 0a 0a 0a 0a 73 65 6c 65 63 74 20 63 61 73 65 20 61 6b 74 69 66 6b 6c 61 73 0a 63 61 73 65 20 22 43 3a 22 20 61 6b 74 69 66 6b 6c 61 73 3d 22 43 3a 5c 22 0a 63 61 73 65 20}
 		$ = {6f 72 3d 22 23 30 30 30 30 30 30 22 3e 0a 20 20 20 20 20 20 20 20 3c 74 61 62 6c 65 20 62 6f 72 64 65 72 3d 22 30 22 20 63 65 6c 6c 70 61 64 64 69 6e 67 3d 22 30 22 20 63 65 6c 6c 73 70 61 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_elmaliseker_asp_txt
@@ -7261,7 +6974,7 @@ rule SHELL_elmaliseker_asp_txt
 		$ = {6d 6d 61 6e 64 2e 76 61 6c 75 65 20 3d 20 63 6d 64 0a 66 72 6d 46 69 6c 65 2e 73 75 62 6d 69 74 28 29 3b 20 0a 7d 0a 3c 2f 73 63 72 69 70 74 3e 0a 3c 25 0a 65 6e 64 20 73 75 62 0a 0a 73 75 62}
 		$ = {0a 50 72 69 76 61 74 65 20 46 75 6e 63 74 69 6f 6e 20 50 61 72 73 65 42 69 6e 61 72 79 44 61 74 61 28 42 79 52 65 66 20 70 62 69 6e 43 68 75 6e 6b 29 0a 44 69 6d 20 6c 6c 6e 67 53 74 61 72 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Rader_asp_txt
@@ -7273,7 +6986,7 @@ rule SHELL_Rader_asp_txt
 		$ = {57 49 44 54 48 3a 20 31 70 78 3b 20 42 4f 52 44 45 52 2d 42 4f 54 54 4f 4d 2d 43 4f 4c 4f 52 3a 20 23 30 30 36 36 39 39 3b 20 46 4f 4e 54 3a 20 31 31 70 78 20 56 65 72 64 61 6e 61 2c 41 72 69}
 		$ = {49 4f 4e 3a 20 75 6e 64 65 72 6c 69 6e 65 0a 7d 0a 2e 62 6f 78 74 69 74 6c 65 20 7b 0a 09 46 4f 4e 54 2d 57 45 49 47 48 54 3a 20 62 6f 6c 64 3b 20 46 4f 4e 54 2d 53 49 5a 45 3a 20 31 30 70 78}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_EFSO_2_asp_txt
@@ -7285,7 +6998,7 @@ rule SHELL_EFSO_2_asp_txt
 		$ = {59 34 5b 72 76 50 44 58 32 6e 7b 4a 4a 32 47 6b 59 45 4a 40 2a 45 40 23 40 26 2e 7f 2f 61 57 78 6b 2b 63 41 44 62 59 6e 50 72 40 21 4f 43 28 56 2b 2c 5e 2b 5e 56 77 6d 5b 5b 6b 09 6f 7b 4a 45}
 		$ = {40 2a 40 21 4f 44 40 2a 40 21 4f 4e 2c 68 72 5b 44 74 27 45 58 21 75 42 40 2a 72 40 23 40 26 58 6d 79 6b 57 73 60 45 29 09 57 55 58 73 47 45 6b 6a 64 6e 4d 31 6c 68 6e 2c 29 7e 40 21 36 47 09}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_CMD_asp_txt
@@ -7297,7 +7010,7 @@ rule SHELL_CMD_asp_txt
 		$ = {31 2c 20 46 61 6c 73 65 2c 20 30 29 0a 0a 20 20 45 6e 64 20 49 66 0a 0a 25 3e 0a 3c 48 54 4d 4c 3e 0a 3c 42 4f 44 59 3e 0a 3c 46 4f 52 4d 20 61 63 74 69 6f 6e 3d 22 3c 25 3d 20 52 65 71 75 65}
 		$ = {4e 61 6d 65 20 26 20 22 5c 22 20 26 20 6f 53 63 72 69 70 74 4e 65 74 2e 55 73 65 72 4e 61 6d 65 20 25 3e 0a 3c 62 72 3e 0a 3c 25 0a 20 20 49 66 20 28 49 73 4f 62 6a 65 63 74 28 6f 46 69 6c 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Reader_asp_txt
@@ -7309,7 +7022,7 @@ rule SHELL_Reader_asp_txt
 		$ = {57 49 44 54 48 3a 20 31 70 78 3b 20 42 4f 52 44 45 52 2d 42 4f 54 54 4f 4d 2d 43 4f 4c 4f 52 3a 20 23 30 30 36 36 39 39 3b 20 46 4f 4e 54 3a 20 31 31 70 78 20 56 65 72 64 61 6e 61 2c 41 72 69}
 		$ = {49 4f 4e 3a 20 75 6e 64 65 72 6c 69 6e 65 0a 7d 0a 2e 62 6f 78 74 69 74 6c 65 20 7b 0a 09 46 4f 4e 54 2d 57 45 49 47 48 54 3a 20 62 6f 6c 64 3b 20 46 4f 4e 54 2d 53 49 5a 45 3a 20 31 30 70 78}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Tool_asp_txt
@@ -7321,7 +7034,7 @@ rule SHELL_Tool_asp_txt
 		$ = {70 75 74 20 74 79 70 65 3d 22 22 73 75 62 6d 69 74 22 22 20 76 61 6c 75 65 3d 22 22 4f 4b 22 22 3e 3c 2f 66 6f 72 6d 3e 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 22 0a 09 09 09 09}
 		$ = {6c 65 20 49 6e 20 55 70 6c 6f 61 64 65 72 2e 46 69 6c 65 73 2e 49 74 65 6d 73 0a 09 09 09 09 09 46 69 6c 65 2e 53 61 76 65 54 6f 44 69 73 6b 20 52 65 70 6c 61 63 65 28 54 72 69 6d 28 52 65 71}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ntdaddy_asp_txt
@@ -7333,7 +7046,7 @@ rule SHELL_ntdaddy_asp_txt
 		$ = {76 65 22 0a 63 61 73 65 20 33 34 20 27 45 78 74 72 61 0a 46 69 6c 65 41 74 74 72 69 62 75 74 65 73 20 3d 20 22 48 69 64 64 65 6e 2c 20 41 72 63 68 69 76 65 22 0a 63 61 73 65 20 33 38 20 27 45}
 		$ = {52 55 4e 41 54 3d 53 45 52 56 45 52 20 4c 41 4e 47 55 41 47 45 3d 56 42 53 43 52 49 50 54 3e 0a 43 6f 6e 73 74 20 49 6e 63 6c 75 64 65 54 79 70 65 20 3d 20 32 20 0a 44 69 6d 20 55 70 6c 6f 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_NT_Addy_asp_txt
@@ -7345,7 +7058,7 @@ rule SHELL_NT_Addy_asp_txt
 		$ = {76 65 22 0a 63 61 73 65 20 33 34 20 27 45 78 74 72 61 0a 46 69 6c 65 41 74 74 72 69 62 75 74 65 73 20 3d 20 22 48 69 64 64 65 6e 2c 20 41 72 63 68 69 76 65 22 0a 63 61 73 65 20 33 38 20 27 45}
 		$ = {52 55 4e 41 54 3d 53 45 52 56 45 52 20 4c 41 4e 47 55 41 47 45 3d 56 42 53 43 52 49 50 54 3e 0a 43 6f 6e 73 74 20 49 6e 63 6c 75 64 65 54 79 70 65 20 3d 20 32 20 0a 44 69 6d 20 55 70 6c 6f 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Ajan_asp_txt
@@ -7357,7 +7070,7 @@ rule SHELL_Ajan_asp_txt
 		$ = {0a 65 6e 74 72 69 6b 61 2e 77 72 69 74 65 20 22 42 69 6e 61 72 79 53 74 72 65 61 6d 2e 57 72 69 74 65 20 42 69 6e 61 72 79 44 61 74 61 22 20 26 20 76 62 63 72 6c 66 0a 65 6e 74 72 69 6b 61 2e}
 		$ = {20 3d 20 43 72 65 61 74 65 4f 62 6a 65 63 74 28 22 22 57 53 63 72 69 70 74 2e 53 68 65 6c 6c 22 22 29 22 20 26 20 76 62 63 72 6c 66 0a 65 6e 74 72 69 6b 61 2e 77 72 69 74 65 20 22 57 73 68 53}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Elmali_Seker_asp_txt
@@ -7369,7 +7082,7 @@ rule SHELL_Elmali_Seker_asp_txt
 		$ = {6d 6d 61 6e 64 2e 76 61 6c 75 65 20 3d 20 63 6d 64 0a 66 72 6d 46 69 6c 65 2e 73 75 62 6d 69 74 28 29 3b 20 0a 7d 0a 3c 2f 73 63 72 69 70 74 3e 0a 3c 25 0a 65 6e 64 20 73 75 62 0a 0a 73 75 62}
 		$ = {0a 50 72 69 76 61 74 65 20 46 75 6e 63 74 69 6f 6e 20 50 61 72 73 65 42 69 6e 61 72 79 44 61 74 61 28 42 79 52 65 66 20 70 62 69 6e 43 68 75 6e 6b 29 0a 44 69 6d 20 6c 6c 6e 67 53 74 61 72 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_indexer_asp_txt
@@ -7381,7 +7094,7 @@ rule SHELL_indexer_asp_txt
 		$ = {23 40 26 44 7f 2f 77 4b 78 6b 6e 52 53 44 72 59 7f 50 45 45 4c 6d 57 61 7a 5b 72 4a 40 23 40 26 2e 6e 2f 61 57 09 2f 6e 52 41 2e 62 59 6e 50 72 45 5b 44 45 64 27 72 4a 40 23 40 26 6e 09 4e 7e}
 		$ = {21 f6 44 fc 09 59 fc 73 6e 73 2b 33 2c dd 64 59 7f 4e 6b f0 62 55 72 79 2c 66 4b 2f 7a 6c 55 fd 55 2c 62 5b fd 78 fd 2c 7a 6c 2e fd 78 20 20 40 21 34 44 40 2a 50 7f 36 4f 6c 4d 6e 6d 50 24 f6}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_CmdAsp_asp_txt
@@ -7393,7 +7106,7 @@ rule SHELL_CmdAsp_asp_txt
 		$ = {20 30 29 0a 0a 45 6e 64 20 49 66 0a 0a 25 3e 0a 3c 48 54 4d 4c 3e 0a 3c 42 4f 44 59 3e 0a 3c 46 4f 52 4d 20 61 63 74 69 6f 6e 3d 22 3c 25 3d 20 52 65 71 75 65 73 74 2e 53 65 72 76 65 72 56 61}
 		$ = {26 20 22 5c 22 20 26 20 6f 53 63 72 69 70 74 4e 65 74 2e 55 73 65 72 4e 61 6d 65 20 25 3e 0a 3c 62 72 3e 0a 3c 25 0a 49 66 20 28 49 73 4f 62 6a 65 63 74 28 6f 46 69 6c 65 29 29 20 54 68 65 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Zehir_4_asp_txt
@@ -7405,7 +7118,7 @@ rule SHELL_Zehir_4_asp_txt
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 6f 72 61 6e 67 65 22 3e 54 75 72 75 6e 63 75 3c 2f 6f 70 74 69 6f}
 		$ = {79 61 50 61 74 68 26 22 3f 73 74 61 74 75 73 3d 32 26 70 61 74 68 3d 22 26 70 61 74 68 26 22 26 54 69 6d 65 3d 22 26 74 69 6d 65 26 22 26 62 79 4d 73 67 3d 22 26 62 79 4d 73 67 0a 43 41 53 45}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_kacak_asp_txt
@@ -7417,7 +7130,7 @@ rule SHELL_kacak_asp_txt
 		$ = {6c 65 63 74 20 63 61 73 65 20 61 6b 74 69 66 6b 6c 61 73 0a 63 61 73 65 20 22 43 3a 22 20 61 6b 74 69 66 6b 6c 61 73 3d 22 43 3a 5c 22 0a 63 61 73 65 20 22 44 3a 22 20 61 6b 74 69 66 6b 6c 61}
 		$ = {61 64 64 69 6e 67 3d 22 30 22 20 63 65 6c 6c 73 70 61 63 69 6e 67 3d 22 30 22 20 73 74 79 6c 65 3d 22 62 6f 72 64 65 72 2d 63 6f 6c 6c 61 70 73 65 3a 20 63 6f 6c 6c 61 70 73 65 22 20 62 6f 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_s_php_php_txt
@@ -7429,7 +7142,7 @@ rule SHELL_s_php_php_txt
 		$ = {6f 6c 6f 72 3d 23 30 30 30 30 30 30 3e 0a 3c 74 72 3e 3c 74 64 20 61 6c 69 67 6e 3d 72 69 67 68 74 20 77 69 64 74 68 3d 31 30 30 3e 27 3b 0a 0a 65 63 68 6f 20 24 66 6f 6e 74 3b 0a 69 66 28 21}
 		$ = {6c 65 20 62 61 67 6c 61 6e 74 69 20 4b 75 72 75 6c 61 6d 69 79 6f 72 22 3b 0a 20 20 62 72 65 61 6b 3b 0a 20 20 63 61 73 65 20 27 4d 53 53 51 4c 27 3a 0a 20 20 69 66 28 65 6d 70 74 79 28 24 5f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_php_php_txt
@@ -7441,7 +7154,7 @@ rule SHELL_r57_php_php_txt
 		$ = {3e 3c 2f 64 69 76 3e 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 22 3b 0a 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 65 6c 73 65 20 7b 20 65 72 72 28 32 2c 24 5f 50 4f 53 54 5b 27}
 		$ = {24 6c 61 6e 67 75 61 67 65 2e 27 5f 74 65 78 74 33 33 27 5d 2c 27 69 64 31 30 27 29 2e 24 74 61 62 6c 65 5f 75 70 32 2e 64 69 76 28 27 69 64 31 30 27 29 2e 24 74 73 3b 0a 65 63 68 6f 20 73 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_zacosmall_php_txt
@@ -7453,7 +7166,7 @@ rule SHELL_zacosmall_php_txt
 		$ = {73 71 6c 5f 71 75 65 72 79 28 27 73 68 6f 77 20 74 61 62 6c 65 73 27 2c 24 6d 79 73 71 6c 5f 6c 69 6e 6b 29 3b 0a 66 6f 72 28 24 69 3d 30 3b 24 69 3c 6d 79 73 71 6c 5f 6e 75 6d 5f 72 6f 77 73}
 		$ = {6c 74 28 24 72 65 73 75 6c 74 32 29 3b 0a 24 72 65 73 75 6c 74 32 3d 6d 79 73 71 6c 5f 71 75 65 72 79 28 27 73 65 6c 65 63 74 20 2a 20 66 72 6f 6d 20 60 27 2e 24 74 61 62 6c 65 5f 64 75 6d 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PH_Vayv_php_php_txt
@@ -7465,7 +7178,7 @@ rule SHELL_PH_Vayv_php_php_txt
 		$ = {73 69 7a 65 3a 20 38 70 74 22 3e 0a 0a 0a 0a 0a 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 61 20 68 72 65 66 3d 22 3c 3f 65 63 68 6f 20 22 24 66 69 73 74 69 6b 2e 70 68 70 3f 64}
 		$ = {68 74 3d 22 31 37 22 20 62 67 63 6f 6c 6f 72 3d 22 23 38 30 38 30 38 30 22 3e 0a 20 20 20 20 3c 70 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e 0a 20 20 20 20 3c 69 6d 67 20 62 6f 72 64 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_STNC_php_php_txt
@@ -7477,7 +7190,7 @@ rule SHELL_STNC_php_php_txt
 		$ = {20 69 73 20 73 61 76 65 64 2e 22 3b 0a 20 20 7d 0a 7d 0a 65 6c 73 65 69 66 28 28 24 61 63 74 69 6f 6e 20 3d 3d 3d 20 22 75 70 6c 6f 61 64 22 29 26 26 28 69 73 73 65 74 28 24 5f 46 49 4c 45 53}
 		$ = {6c 65 3e 3c 2f 63 65 6e 74 65 72 3e 3c 2f 74 64 3e 3c 2f 66 6f 72 6d 3e 3c 2f 74 72 3e 0a 0a 3c 74 72 3e 3c 66 6f 72 6d 20 6d 65 74 68 6f 64 3d 70 6f 73 74 3e 3c 74 64 20 63 6c 61 73 73 3d 5c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Ayyildiz_Tim___AYT__Shell_v_2_1_Biz_html_txt
@@ -7489,7 +7202,7 @@ rule SHELL_Ayyildiz_Tim___AYT__Shell_v_2_1_Biz_html_txt
 		$ = {66 20 28 21 65 6d 70 74 79 28 24 77 6f 72 6b 5f 64 69 72 5f 73 70 6c 69 74 74 65 64 5b 30 5d 29 29 20 7b 0a 20 20 24 70 61 74 68 20 3d 20 27 27 3b 0a 20 20 66 6f 72 20 28 24 69 20 3d 20 30 3b}
 		$ = {65 20 7b 0a 09 65 63 68 6f 20 22 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 5c 22 24 77 6f 72 6b 5f 64 69 72 2f 24 64 69 72 5c 22 3e 24 64 69 72 3c 2f 6f 70 74 69 6f 6e 3e 5c 6e 22 3b 0a 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_1_txt
@@ -7501,7 +7214,7 @@ rule SHELL_1_txt
 		$ = {41 41 41 41 41 41 4d 41 48 77 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 44 41 43 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 77 41 68 41 41 45 41 41 41 41 41 41 41 41 41}
 		$ = {63 61 6c 20 52 61 63 65 20 45 78 70 6c 6f 69 74 3c 2f 61 3e 0a 3c 3f 70 68 70 0a 09 09 69 66 20 28 24 5f 47 45 54 5b 27 73 70 6c 6f 69 74 27 5d 20 3d 3d 20 27 68 30 30 6c 79 73 68 69 74 27 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r577_php_php_txt
@@ -7513,7 +7226,7 @@ rule SHELL_r577_php_php_txt
 		$ = {50 4f 53 54 5b 27 63 6d 64 27 5d 3d 22 22 3b 20 7d 0a 20 65 6c 73 65 20 7b 0a 20 65 63 68 6f 20 24 74 61 62 6c 65 5f 75 70 33 3b 0a 20 65 63 68 6f 20 24 66 6f 6e 74 3b 0a 20 65 63 68 6f 20 22}
 		$ = {3b 0a 20 20 20 20 20 7d 0a 20 20 20 20 20 69 66 28 21 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 64 69 66 27 5d 29 26 26 24 66 70 29 20 7b 20 40 66 70 75 74 73 28 24 66 70 2c 24 73 71 6c 31 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_Shell_php_php_txt
@@ -7525,7 +7238,7 @@ rule SHELL_r57_Shell_php_php_txt
 		$ = {22 50 65 72 6c 22 29 29 0a 7b 0a 20 63 66 28 22 2f 74 6d 70 2f 62 64 70 6c 22 2c 24 70 6f 72 74 5f 62 69 6e 64 5f 62 64 5f 70 6c 29 3b 0a 20 24 70 32 3d 77 68 69 63 68 28 22 70 65 72 6c 22 29}
 		$ = {2e 27 5f 74 65 78 74 37 31 27 5d 2e 22 27 3e 3c 62 72 3e 22 3b 0a 65 63 68 6f 20 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 68 69 64 64 65 6e 20 6e 61 6d 65 3d 63 6d 64 20 73 69 7a 65 3d 38 35 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_w3d_php_php_txt
@@ -7537,7 +7250,7 @@ rule SHELL_w3d_php_php_txt
 		$ = {30 43 43 30 30 3e 3c 62 3e 4e 6f 20 51 75 65 72 79 20 45 78 65 63 75 74 65 64 3c 2f 62 3e 3c 2f 66 6f 6e 74 3e 22 3b 0a 7d 0a 65 6c 73 65 20 7b 0a 2f 2f 51 75 65 72 79 20 54 69 6d 65 0a 24 71}
 		$ = {20 20 20 20 65 63 68 6f 20 22 3c 2f 74 72 3e 5c 6e 22 3b 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 76 76 20 3d 20 74 72 75 65 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_KAdot_Universal_Shell_v0_1_6_html_txt
@@ -7549,7 +7262,7 @@ rule SHELL_KAdot_Universal_Shell_v0_1_6_html_txt
 		$ = {6b 3b 0a 0a 0a 2f 2f 20 55 70 6c 6f 61 64 69 6e 67 0a 63 61 73 65 20 22 75 70 6c 6f 61 64 22 3a 0a 0a 65 63 68 6f 20 3c 3c 3c 48 54 4d 4c 0a 3c 62 3e 46 69 6c 65 20 55 70 6c 6f 61 64 3c 2f 62}
 		$ = {69 6e 74 20 22 cd e5 20 f3 e4 e0 b8 f2 f1 ff 20 e7 e0 e3 f0 f3 e7 e8 f2 fc 20 f4 e0 e9 eb ee 2e 20 c8 ed f4 e0 3a 5c 6e 22 3b 0a 20 20 20 20 70 72 69 6e 74 5f 72 28 24 5f 46 49 4c 45 53 29 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cybershell_php_php_txt
@@ -7561,7 +7274,7 @@ rule SHELL_cybershell_php_php_txt
 		$ = {2c 20 5c 22 3e 26 58 5c 22 3b 0a 09 09 6f 70 65 6e 20 53 54 44 45 52 52 2c 20 5c 22 3e 26 58 5c 22 3b 0a 09 09 63 6c 6f 73 65 20 58 3b 0a 09 09 65 78 65 63 28 5c 22 2f 62 69 6e 2f 73 68 5c 22}
 		$ = {65 74 28 24 6d 74 61 62 6c 65 29 29 20 61 6e 64 20 28 69 73 73 65 74 28 24 76 61 72 29 29 20 61 6e 64 20 28 69 73 73 65 74 28 24 70 69 78 69 64 6e 61 6d 65 29 29 20 61 6e 64 20 28 69 73 73 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_php_backdoor_php_txt
@@ -7573,7 +7286,7 @@ rule SHELL_php_backdoor_php_txt
 		$ = {6e 64 3a 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 6e 61 6d 65 3d 22 63 22 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 73 75 62 6d 69 74 22 20 76 61 6c 75 65 3d 22 67 6f 22 3e}
 		$ = {3c 62 72 3e 66 6f 72 20 65 78 61 6d 70 6c 65 3a 0a 68 74 74 70 3a 2f 2f 3c 3f 20 65 63 68 6f 20 24 53 45 52 56 45 52 5f 4e 41 4d 45 2e 24 52 45 51 55 45 53 54 5f 55 52 49 3b 20 3f 3e 3f 64 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mysql_php_php_txt
@@ -7585,7 +7298,7 @@ rule SHELL_mysql_php_php_txt
 		$ = {0a 20 20 20 20 20 20 20 20 20 20 20 20 24 74 68 69 73 2d 3e 6d 61 69 6e 73 74 61 74 65 20 3d 20 22 75 6e 73 61 66 65 22 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20}
 		$ = {66 65 22 3b 0a 0a 20 20 20 20 20 20 20 20 69 66 20 28 24 74 68 69 73 2d 3e 73 79 73 74 65 6d 5f 63 68 65 63 6b 73 28 22 2f 62 69 6e 2f 6c 73 22 29 29 20 7b 20 24 74 68 69 73 2d 3e 6f 75 74 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_framer_zip
@@ -7597,7 +7310,7 @@ rule SHELL_framer_zip
 		$ = {ed 3a 6b 9e 65 71 f8 20 c3 68 9e 52 71 f8 20 87 c4 38 04 6b 49 c4 90 90 63 91 1c 51 7a f8 20 87 0f 71 ec 21 46 a5 ff 42 df 87 ef f3 e7 cb b7 a9 c5 5b 7f ed be 19 30 00 fb 00 a0 43 68 9c 20 79}
 		$ = {27 9f 16 62 80 0f 17 21 e2 1f 34 86 88 e7 21 3f 2e e2 e3 ec e4 64 6d a6 46 c4 83 86 5a 56 68 b3 b5 a9 cb 50 1a 7a 00 f5 db 1b ce 39 8d fb e8 8c 17 a2 58 47 6c 3d da 7a 21 89 f3 b8 ae d8 78 fa}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wacking_php_php_txt
@@ -7609,7 +7322,7 @@ rule SHELL_wacking_php_php_txt
 		$ = {65 3d 63 68 6d 6f 64 3e 3c 74 61 62 6c 65 20 61 6c 69 67 6e 3d 6c 65 66 74 20 77 69 64 74 68 3d 33 30 30 20 62 6f 72 64 65 72 3d 30 20 63 65 6c 6c 73 70 61 63 69 6e 67 3d 30 20 63 65 6c 6c 70}
 		$ = {74 3d 5c 22 5f 62 6c 61 6e 6b 5c 22 3e 2b 3c 2f 61 3e 29 20 7c 22 3b 0a 20 20 7d 0a 20 20 65 63 68 6f 20 22 3c 68 72 20 73 69 7a 65 3d 5c 22 31 5c 22 20 6e 6f 73 68 61 64 65 3e 22 3b 0a 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_s72_Shell_v1_1_Coding_html_txt
@@ -7621,7 +7334,7 @@ rule SHELL_s72_Shell_v1_1_Coding_html_txt
 		$ = {74 3d 22 5f 62 6c 61 6e 6b 22 20 68 72 65 66 3d 22 27 2e 24 66 69 6c 65 2e 27 22 3e 27 2e 24 66 69 6c 65 2e 27 3c 2f 61 20 3e 3c 62 72 3e 27 3b 0a 7d 0a 63 6c 6f 73 65 64 69 72 28 24 66 6f 6c}
 		$ = {7d 0a 7d 0a 0a 69 66 28 21 65 6d 70 74 79 28 24 66 69 6c 65 29 29 0a 7b 0a 20 20 20 20 24 66 69 6c 65 6e 61 6d 65 20 3d 20 24 66 69 6c 65 5f 6e 61 6d 65 3b 0a 20 20 20 20 69 66 28 20 66 69 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_NIX_REMOTE_WEB_SHELL_v_0_5_alpha_Lite_Public_Version_php_txt
@@ -7633,7 +7346,7 @@ rule SHELL_NIX_REMOTE_WEB_SHELL_v_0_5_alpha_Lite_Public_Version_php_txt
 		$ = {68 72 65 66 3d 27 24 70 68 70 5f 73 65 6c 66 3f 6e 6f 3d 31 27 3e cd e5 f2 3c 2f 61 3e 0a 3c 62 72 3e 0a 22 3b 0a 69 66 28 40 24 5f 47 45 54 5b 27 79 65 73 27 5d 3d 3d 22 79 65 73 22 29 7b 0a}
 		$ = {5b 27 63 6d 64 27 5d 29 2e 22 22 3b 0a 65 63 68 6f 20 22 3c 2f 66 6f 6e 74 3e 3c 2f 62 3e 22 3b 0a 62 72 65 61 6b 3b 0a 0a 2f 2f 20 55 70 6c 6f 61 64 69 6e 67 0a 63 61 73 65 20 22 75 70 6c 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_shankar_php_php_txt
@@ -7645,7 +7358,7 @@ rule SHELL_shankar_php_php_txt
 		$ = {26 6e 62 73 70 3b 53 51 4c 3c 2f 62 3e 3c 2f 54 44 3e 3c 2f 54 52 3e 0a 3c 54 52 3e 3c 54 44 20 62 67 63 6f 6c 6f 72 3d 22 23 44 30 45 30 46 46 22 20 68 65 69 67 68 74 3d 22 32 30 22 3e 3c 69}
 		$ = {3d 65 64 69 74 20 76 61 6c 75 65 3d 27 24 75 70 5f 65 27 3e 22 3b 0a 24 75 70 5f 65 3d 75 72 6c 64 65 63 6f 64 65 28 24 5f 50 4f 53 54 5b 27 65 64 69 74 27 5d 29 3b 0a 65 63 68 6f 20 22 3c 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Liz0ziM_Private_Safe_Mode_Command_Execuriton_Bypass_Exploit_php_txt
@@ -7657,7 +7370,7 @@ rule SHELL_Liz0ziM_Private_Safe_Mode_Command_Execuriton_Bypass_Exploit_php_txt
 		$ = {64 2e 63 6f 6e 66 3c 2f 6f 70 74 69 6f 6e 3e 0a 3c 2f 73 65 6c 65 63 74 3e 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 73 75 62 6d 69 74 22 20 76 61 6c 75 65 3d 22 47 f6 73 74 65 72 20 42 61 6b}
 		$ = {65 78 65 63 28 27 69 64 27 29 3b 0a 24 73 65 72 76 65 72 3d 73 68 65 6c 6c 5f 65 78 65 63 28 27 75 6e 61 6d 65 20 2d 61 27 29 3b 0a 65 63 68 6f 20 22 3c 70 72 65 3e 3c 68 34 3e 22 3b 0a 65 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHP_Backdoor_Connect_pl_php_txt
@@ -7669,7 +7382,7 @@ rule SHELL_PHP_Backdoor_Connect_pl_php_txt
 		$ = {20 46 69 6c 65 48 61 6e 64 6c 65 3b 0a 73 6f 63 6b 65 74 28 53 4f 43 4b 45 54 2c 20 50 46 5f 49 4e 45 54 2c 20 53 4f 43 4b 5f 53 54 52 45 41 4d 2c 20 67 65 74 70 72 6f 74 6f 62 79 6e 61 6d 65}
 		$ = {20 43 6f 6e 6e 65 63 74 65 64 20 74 6f 20 72 65 6d 6f 74 65 20 68 6f 73 74 20 5c 6e 22 3b 0a 53 4f 43 4b 45 54 2d 3e 61 75 74 6f 66 6c 75 73 68 28 29 3b 0a 6f 70 65 6e 28 53 54 44 49 4e 2c 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_xinfo_php_php_txt
@@ -7681,7 +7394,7 @@ rule SHELL_xinfo_php_php_txt
 		$ = {28 24 69 31 32 20 3d 20 30 3b 20 24 69 31 32 20 3c 3d 20 24 63 3b 20 24 69 31 32 2b 2b 29 20 7b 0a 0a 24 77 6f 72 64 5b 31 32 5d 20 3d 20 24 63 68 61 72 73 5f 64 65 7b 24 69 31 32 7d 3b 0a 0a}
 		$ = {24 6f 75 74 70 75 74 3b 0a 0a 7d 0a 0a 0a 0a 66 75 6e 63 74 69 6f 6e 20 73 70 6c 69 74 5f 63 73 76 5f 66 69 6c 65 28 24 63 73 76 29 20 7b 20 72 65 74 75 72 6e 20 65 78 70 6c 6f 64 65 28 22 5c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mysql_tool_php_php_txt
@@ -7693,7 +7406,7 @@ rule SHELL_mysql_tool_php_php_txt
 		$ = {74 61 62 6c 65 73 3a 3c 62 72 20 2f 3e 0a 3c 64 69 76 20 73 74 79 6c 65 3d 22 6d 61 72 67 69 6e 2d 6c 65 66 74 3a 20 34 30 70 78 22 3e 0a 20 20 20 20 3c 73 65 6c 65 63 74 20 6e 61 6d 65 3d 22}
 		$ = {5f 63 68 61 72 20 3d 20 22 5c 6e 22 3b 0a 0a 20 20 20 20 20 20 20 20 2f 2f 20 53 65 74 73 20 66 69 6c 65 20 70 6f 73 69 74 69 6f 6e 20 69 6e 64 69 63 61 74 6f 72 0a 20 20 20 20 20 20 20 20 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Safe0ver_Shell__Safe_Mod_Bypass_By_Evilc0der_php_txt
@@ -7705,7 +7418,7 @@ rule SHELL_Safe0ver_Shell__Safe_Mod_Bypass_By_Evilc0der_php_txt
 		$ = {3e 0a 20 20 20 20 3c 69 6e 70 75 74 20 74 61 62 69 6e 64 65 78 3d 5c 22 30 5c 22 20 74 79 70 65 3d 5c 22 73 75 62 6d 69 74 5c 22 20 76 61 6c 75 65 3d 5c 22 4e 4f 21 5c 22 3e 3c 2f 66 6f 72 6d}
 		$ = {3c 62 72 3e 5c 6e 22 3b 0a 20 20 20 20 49 66 20 28 65 6d 70 74 79 28 24 6e 65 77 66 69 6c 65 29 20 21 3d 20 74 72 75 65 29 20 7b 0a 20 20 20 20 20 20 20 20 20 65 63 68 6f 20 22 3c 63 65 6e 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Private_i3lue_php_txt
@@ -7717,7 +7430,7 @@ rule SHELL_Private_i3lue_php_txt
 		$ = {3c 3f 70 68 70 20 65 63 68 6f 28 22 24 73 65 6c 66 3f 22 20 2e 20 53 49 44 29 3b 20 3f 3e 22 20 6e 61 6d 65 3d 22 77 65 62 61 64 6d 69 6e 22 3e 0a 3c 2f 66 72 61 6d 65 73 65 74 3e 0a 3c 2f 68}
 		$ = {65 6e 61 6d 65 27 29 20 3f 20 21 24 72 65 76 65 72 73 65 20 3a 20 30 29 20 2e 20 22 26 24 70 5c 22 3e 3c 62 3e 7b 24 77 6f 72 64 73 5b 27 66 69 6c 65 6e 61 6d 65 27 5d 7d 3c 2f 62 3e 3c 2f 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ru24_post_sh_php_php_txt
@@ -7729,7 +7442,7 @@ rule SHELL_ru24_post_sh_php_php_txt
 		$ = {20 6d 65 74 68 6f 64 3d 70 6f 73 74 3e 22 3b 0a 65 63 68 6f 20 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 74 65 78 74 20 6e 61 6d 65 3d 63 6d 64 20 73 69 7a 65 3d 38 35 3e 22 3b 0a 65 63 68 6f 20}
 		$ = {22 3b 0a 69 66 20 28 28 21 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 29 20 7c 7c 20 28 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 3d 3d 22 22 29 29 20 7b 20 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Test_php_php_txt
@@ -7737,7 +7450,7 @@ rule SHELL_Test_php_php_txt
 	strings:
 		$ = {3c 3f 70 68 70 0a 24 65 6e 74 72 79 5f 6c 69 6e 65 3d 22 48 41 43 4b 65 64 20 62 79 20 45 6e 74 72 69 4b 61 22 3b 0a 24 66 70 20 3d 20 66 6f 70 65 6e 28 22 69 6e 64 65 78 2e 70 68 70 22 2c 20 22 77 22 29 3b 0a 66 70 75 74 73 28 24 66 70 2c 20 24 65 6e 74 72 79 5f 6c 69 6e 65 29 3b 0a 66 63 6c 6f 73 65 28 24 66 70 29 3b 0a 3f 3e 0a 0a 3c 3f 20 0a 24 66 70 20 3d 40 66 6f 70 65 6e 28 22 69 6e 64 65 78 2e 68 74 6d 22 2c 20 22 61 2b 22 29 3b 0a 24 79 61 7a 69 20 3d 20 22 74 65 73 74 22 20 2e 20 22 5c 72 5c 6e 22 3b 0a 66 77 72 69 74 65 20 28 24 66 70 2c 20 22 24 79 61 7a 69 22 29 3b 0a 66 63 6c 6f 73 65 20 28 24 66 70 29 3b 0a 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_nfm_php_php_txt
@@ -7749,7 +7462,7 @@ rule SHELL_nfm_php_php_txt
 		$ = {74 68 6f 64 3d 70 6f 73 74 3e 0a 20 3c 74 72 3e 3c 74 64 20 61 6c 69 67 6e 3d 6c 65 66 74 20 76 61 6c 69 67 6e 3d 74 6f 70 20 63 6f 6c 73 70 61 6e 3d 33 20 63 6c 61 73 73 3d 70 61 67 65 74 69}
 		$ = {2b 2b 24 63 70 74 63 68 61 6d 70 3c 24 6e 75 6d 66 69 65 6c 64 73 29 20 7b 0a 20 20 20 20 69 66 20 28 21 24 66 69 72 73 74 66 69 65 6c 64 29 20 7b 20 24 74 61 62 6c 65 64 75 6d 70 2e 3d 22 2c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_small_php_php_txt
@@ -7761,7 +7474,7 @@ rule SHELL_small_php_php_txt
 		$ = {66 52 6e 32 6d 79 58 62 51 74 4e 6c 35 4c 6e 32 69 50 2b 6e 6f 63 78 6d 4c 71 6f 51 74 55 37 45 4c 6d 47 55 76 76 72 4b 35 48 56 4a 79 72 48 6a 31 59 39 70 63 59 30 57 44 45 49 79 77 2b 4c 6f}
 		$ = {69 37 2f 6f 49 41 43 2f 48 33 49 4c 6e 39 6d 33 65 39 6e 42 6c 45 6e 62 78 58 45 76 36 52 61 47 35 4a 2b 52 6b 4c 42 79 31 34 34 54 50 30 50 63 49 57 63 76 4d 61 44 43 58 41 53 46 74 63 79 4e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Russian_php_php_txt
@@ -7773,7 +7486,7 @@ rule SHELL_Russian_php_php_txt
 		$ = {65 3d 22 34 38 22 20 76 61 6c 75 65 3d 22 24 64 6f 63 72 2f 22 20 6e 61 6d 65 3d 22 70 61 74 68 22 20 74 79 70 65 3d 22 74 65 78 74 22 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 73 75 62 6d 69}
 		$ = {5d 2e 20 22 5c 6e 22 3b 0a 20 20 20 20 65 63 68 6f 20 22 d0 e0 e7 ec e5 f0 3a 22 20 2e 24 5f 46 49 4c 45 53 5b 27 66 69 6c 65 27 5d 5b 27 73 69 7a 65 27 5d 2e 20 22 5c 6e 22 3b 0a 0a 7d 20 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_dC3_Security_Crew_Shell_PRiV_php_txt
@@ -7785,7 +7498,7 @@ rule SHELL_dC3_Security_Crew_Shell_PRiV_php_txt
 		$ = {75 74 20 73 69 7a 65 3d 34 30 20 74 79 70 65 3d 74 65 78 74 20 76 61 6c 75 65 3d 3c 3f 70 68 70 20 65 63 68 6f 20 68 74 6d 6c 73 70 65 63 69 61 6c 63 68 61 72 73 28 63 72 79 70 74 28 24 74 65}
 		$ = {6f 75 70 73 5c 22 3e 0a 20 20 3c 74 68 65 61 64 3e 0a 20 20 20 20 3c 74 72 3e 0a 20 20 20 20 20 20 3c 74 68 3e 46 69 6c 65 6e 61 6d 65 3c 2f 74 68 3e 3c 74 68 3e 45 64 69 74 3c 2f 74 68 3e 3c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_pHpINJ_php_php_txt
@@ -7797,7 +7510,7 @@ rule SHELL_pHpINJ_php_php_txt
 		$ = {45 4c 46 5d 22 20 3b 20 3f 3e 22 20 6d 65 74 68 6f 64 20 3d 20 22 70 6f 73 74 22 3e 0a 3c 69 6e 70 75 74 20 74 79 70 65 20 3d 20 22 74 65 78 74 22 20 6e 61 6d 65 20 3d 20 22 75 72 6c 22 20 76}
 		$ = {20 66 69 6c 65 20 77 68 69 63 68 20 77 69 6c 6c 20 63 6f 6e 74 61 69 6e 20 74 68 65 20 50 68 70 20 53 68 65 6c 6c 20 3c 62 72 20 2f 3e 0a 3c 69 6e 70 75 74 20 74 79 70 65 20 3d 20 22 74 65 78}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99php_txt
@@ -7809,7 +7522,7 @@ rule SHELL_c99php_txt
 		$ = {36 50 4c 6c 49 4f 6a 72 36 43 44 79 35 65 77 67 34 65 37 72 35 65 55 67 36 4f 66 73 35 65 33 6f 38 75 55 67 36 75 37 76 36 50 44 67 36 66 4c 37 4c 43 44 79 37 69 44 2f 49 4f 48 7a 35 50 4d 67}
 		$ = {43 71 71 59 42 70 75 4d 36 68 71 38 50 33 68 77 6f 45 67 55 33 6d 61 77 45 4c 42 45 61 50 46 69 41 55 41 4d 67 59 79 33 56 4d 22 2e 0a 22 53 6e 45 6a 67 50 56 61 72 48 45 48 67 72 42 34 33 4a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_a_gedit_php_php_txt
@@ -7821,7 +7534,7 @@ rule SHELL_a_gedit_php_php_txt
 		$ = {6e 22 3b 0a 0a 20 20 20 20 20 24 72 65 73 20 20 20 3d 20 40 6d 79 73 71 6c 5f 71 75 65 72 79 28 22 53 48 4f 57 20 43 52 45 41 54 45 20 54 41 42 4c 45 20 60 22 2e 24 5f 50 4f 53 54 5b 27 6d 79}
 		$ = {2f 66 6f 6e 74 3e 3c 61 20 68 72 65 66 3d 5c 22 23 5c 22 20 6f 6e 63 6c 69 63 6b 3d 5c 22 64 6f 63 75 6d 65 6e 74 2e 64 75 6d 70 32 2e 76 6e 2e 76 61 6c 75 65 3d 27 24 73 74 72 5b 30 5d 27 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c100_php_txt
@@ -7833,7 +7546,7 @@ rule SHELL_c100_php_txt
 		$ = {69 66 20 28 65 6d 70 74 79 28 24 73 65 61 72 63 68 5f 6e 61 6d 65 29 29 20 7b 24 73 65 61 72 63 68 5f 6e 61 6d 65 20 3d 20 22 28 2e 2a 29 22 3b 20 24 73 65 61 72 63 68 5f 6e 61 6d 65 5f 72 65}
 		$ = {20 20 7b 20 0a 20 20 20 69 66 20 28 65 72 65 67 28 22 70 68 70 22 2e 22 42 42 20 32 2e 28 2e 2a 29 20 61 75 74 6f 2d 67 65 6e 65 72 61 74 65 64 20 63 6f 6e 66 69 67 20 66 69 6c 65 22 2c 24 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_LOTFREE_php_php_txt
@@ -7845,7 +7558,7 @@ rule SHELL_LOTFREE_php_php_txt
 		$ = {20 20 20 20 69 66 28 24 79 5b 22 6b 65 79 22 5d 25 32 3d 3d 30 29 65 63 68 6f 20 22 20 62 67 63 6f 6c 6f 72 3d 27 6c 69 67 68 74 67 72 65 65 6e 27 3e 5c 6e 22 3b 0a 20 20 20 20 20 20 65 6c 73}
 		$ = {70 68 70 20 65 63 68 6f 20 24 5f 53 45 52 56 45 52 5b 27 50 48 50 5f 53 45 4c 46 27 5d 2e 22 3f 64 69 72 3d 24 64 69 72 22 3b 20 3f 3e 22 3e 0a 45 78 65 63 75 74 65 72 20 75 6e 65 20 63 6f 6d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Worse_Linux_Shell_php_txt
@@ -7857,7 +7570,7 @@ rule SHELL_Worse_Linux_Shell_php_txt
 		$ = {70 65 3d 66 69 6c 65 20 6e 61 6d 65 3d 5f 75 70 6c 3e 3c 2f 74 64 3e 22 3b 0a 70 72 69 6e 74 20 22 3c 74 64 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 73 75 62 6d 69 74 20 6e 61 6d 65 3d 5f 61 63}
 		$ = {20 20 20 20 20 20 20 20 70 72 69 6e 74 20 22 3c 63 65 6e 74 65 72 3e 3c 70 72 65 3e 22 3b 0a 20 20 20 20 20 20 20 20 73 79 73 74 65 6d 28 22 6d 76 20 22 2e 24 5f 46 49 4c 45 53 5b 27 5f 75 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_webadmin_php_php_txt
@@ -7869,7 +7582,7 @@ rule SHELL_webadmin_php_php_txt
 		$ = {6d 6f 76 65 5f 66 69 6c 65 73 27 20 3d 3e 20 27 53 70 6f 73 74 6f 20 71 75 65 73 74 69 20 66 69 6c 65 3a 27 2c 0a 27 6d 6f 76 65 64 27 20 3d 3e 20 22 51 75 65 73 74 69 20 66 69 6c 65 20 73 6f}
 		$ = {3d 3e 20 27 46 6f 6e 6b 73 69 79 6f 6e 6c 61 72 27 2c 0a 0a 27 72 65 61 64 27 20 3d 3e 20 27 6f 6b 75 27 2c 0a 27 77 72 69 74 65 27 20 3d 3e 20 27 79 61 7a 27 2c 0a 27 65 78 65 63 75 74 65 27}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_DTool_Pro_php_txt
@@ -7881,7 +7594,7 @@ rule SHELL_DTool_Pro_php_txt
 		$ = {22 72 65 74 75 72 6e 20 65 6e 76 69 61 43 4d 44 28 29 22 3e 0a 3c 74 61 62 6c 65 20 77 69 64 74 68 3d 22 33 37 35 22 20 62 6f 72 64 65 72 3d 22 31 22 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72}
 		$ = {0a 20 20 69 66 28 24 66 75 3d 3d 33 29 7b 24 66 65 3d 22 65 78 65 63 63 22 3b 24 66 65 73 68 6f 77 3d 22 65 78 65 63 22 3b 7d 0a 20 20 69 66 28 24 66 75 3d 3d 34 29 7b 24 66 65 3d 22 70 6f 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_SpecialShell_99_php_php_txt
@@ -7893,7 +7606,7 @@ rule SHELL_SpecialShell_99_php_php_txt
 		$ = {3f 22 3c 62 3e 45 72 72 6f 72 3a 3c 2f 62 3e 20 22 2e 24 65 72 72 3a 22 22 29 2e 22 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 5c 22 22 2e 24 73 75 72 6c 2e 22 5c 22 20 6d 65 74 68 6f 64 3d 50 4f}
 		$ = {20 76 61 6c 75 65 3d 5c 22 22 2e 24 64 69 73 70 64 2e 22 5c 22 3e 3c 62 72 3e 3c 62 72 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 73 75 62 6d 69 74 20 76 61 6c 75 65 3d 5c 22 54 61 6d 61 6d 5c 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_backupsql_php_php_txt
@@ -7905,7 +7618,7 @@ rule SHELL_backupsql_php_php_txt
 		$ = {5f 53 45 52 56 45 52 5b 27 52 45 4d 4f 54 45 5f 41 44 44 52 27 5d 3b 24 64 32 33 20 3d 20 24 5f 53 45 52 56 45 52 5b 27 53 43 52 49 50 54 5f 46 49 4c 45 4e 41 4d 45 27 5d 3b 24 65 30 39 20 3d}
 		$ = {2e 3d 20 22 2d 2d 7b 24 6d 69 6d 65 5f 62 6f 75 6e 64 61 72 79 7d 5c 6e 22 20 2e 22 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 7b 24 66 69 6c 65 61 74 74 5f 74 79 70 65 7d 3b 5c 6e 22 20 2e 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpbackdoor15_php_txt
@@ -7917,7 +7630,7 @@ rule SHELL_phpbackdoor15_php_txt
 		$ = {20 20 20 20 69 66 28 24 79 5b 22 6b 65 79 22 5d 25 32 3d 3d 30 29 65 63 68 6f 20 22 20 62 67 63 6f 6c 6f 72 3d 27 6c 69 67 68 74 67 72 65 65 6e 27 3e 5c 6e 22 3b 0a 20 20 20 20 20 20 65 6c 73}
 		$ = {70 68 70 20 65 63 68 6f 20 24 5f 53 45 52 56 45 52 5b 27 50 48 50 5f 53 45 4c 46 27 5d 2e 22 3f 64 69 72 3d 24 64 69 72 22 3b 20 3f 3e 22 3e 0a 45 78 65 63 75 74 65 72 20 75 6e 65 20 63 6f 6d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHP_Shell_php_php_txt
@@ -7929,7 +7642,7 @@ rule SHELL_PHP_Shell_php_php_txt
 		$ = {65 64 69 74 22 20 29 20 7b 20 2f 2a 3c 21 2d 2d 20 45 64 69 74 20 61 20 66 69 6c 65 20 61 6e 64 20 73 61 76 65 20 69 74 20 61 66 74 65 72 77 61 72 64 73 20 77 69 74 68 20 74 68 65 20 73 61 76}
 		$ = {22 43 61 6e 63 65 6c 5c 22 3e 3c 2f 66 6f 72 6d 3e 22 3b 0a 20 09 09 65 63 68 6f 20 22 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 3c 2f 63 65 6e 74 65 72 3e 22 3b 0a 20 09 7d 0a 7d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_lamashell_php_txt
@@ -7941,7 +7654,7 @@ rule SHELL_lamashell_php_txt
 		$ = {79 70 65 3d 22 74 65 78 74 22 20 73 69 7a 65 3d 22 31 30 30 22 20 76 61 6c 75 65 3d 22 3c 3f 20 65 63 68 6f 20 24 63 75 72 64 69 72 3b 20 3f 3e 22 3e 3c 2f 74 64 3e 0a 20 20 20 20 20 20 3c 74}
 		$ = {75 72 64 69 72 2e 22 2f 22 2e 24 5f 46 49 4c 45 53 5b 27 66 69 6c 61 27 5d 5b 27 6e 61 6d 65 27 5d 29 29 20 7b 0a 20 20 20 20 20 20 20 20 65 63 68 6f 20 22 54 68 65 20 66 69 6c 65 20 68 61 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_uploader_php_php_txt
@@ -7949,7 +7662,7 @@ rule SHELL_uploader_php_php_txt
 	strings:
 		$ = {3c 46 4f 52 4d 20 45 4e 43 54 59 50 45 3d 22 6d 75 6c 74 69 70 61 72 74 2f 66 6f 72 6d 2d 64 61 74 61 22 20 41 43 54 49 4f 4e 3d 22 75 70 6c 6f 61 64 65 72 2e 70 68 70 22 20 4d 45 54 48 4f 44 3d 22 50 4f 53 54 22 3e 0a 3c 49 4e 50 55 54 20 54 59 50 45 3d 22 68 69 64 64 65 6e 22 20 6e 61 6d 65 3d 22 4d 41 58 5f 46 49 4c 45 5f 53 49 5a 45 22 20 76 61 6c 75 65 3d 22 31 30 30 30 30 30 22 3e 0a 53 65 6e 64 20 74 68 69 73 20 66 69 6c 65 3a 20 3c 49 4e 50 55 54 20 4e 41 4d 45 3d 22 75 73 65 72 66 69 6c 65 22 20 54 59 50 45 3d 22 66 69 6c 65 22 3e 0a 3c 49 4e 50 55 54 20 54 59 50 45 3d 22 73 75 62 6d 69 74 22 20 56 41 4c 55 45 3d 22 53 65 6e 64 22 3e 0a 3c 2f 46 4f 52 4d 3e 0a 3c 3f 0a 6d 6f 76 65 5f 75 70 6c 6f 61 64 65 64 5f 66 69 6c 65 28 24 75 73 65 72 66 69 6c 65 2c 20 22 65 6e 74 72 69 6b 61 2e 70 68 70 22 29 3b 20 0a 3f 3e 0a 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_phvayvv_php_php_txt
@@ -7961,7 +7674,7 @@ rule SHELL_phvayvv_php_php_txt
 		$ = {73 69 7a 65 3a 20 38 70 74 22 3e 0a 0a 0a 0a 0a 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 61 20 68 72 65 66 3d 22 3c 3f 65 63 68 6f 20 22 24 66 69 73 74 69 6b 2e 70 68 70 3f 64}
 		$ = {68 74 3d 22 31 37 22 20 62 67 63 6f 6c 6f 72 3d 22 23 38 30 38 30 38 30 22 3e 0a 20 20 20 20 3c 70 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e 0a 20 20 20 20 3c 69 6d 67 20 62 6f 72 64 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_DxShell_php_php_txt
@@ -7973,7 +7686,7 @@ rule SHELL_DxShell_php_php_txt
 		$ = {20 29 0a 09 09 09 2e 27 20 63 6c 61 73 73 3d 72 61 64 69 6f 3e 27 2e 24 63 75 72 5f 72 61 64 2e 27 26 6e 62 73 70 3b 26 6e 62 73 70 3b 26 6e 62 73 70 3b 27 3b 0a 09 70 72 69 6e 74 20 22 5c 6e}
 		$ = {74 72 65 6b 27 2c 32 37 32 37 3d 3e 27 4d 47 43 50 20 63 61 6c 6c 20 61 67 65 6e 74 27 2c 32 36 32 38 3d 3e 27 44 49 43 54 27 2c 32 39 39 38 3d 3e 27 49 53 53 20 52 65 61 6c 20 53 65 63 75 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mailer3_php_php_txt
@@ -7985,7 +7698,7 @@ rule SHELL_mailer3_php_php_txt
 		$ = {72 64 65 72 3d 22 30 22 20 63 65 6c 6c 73 70 61 63 69 6e 67 3d 22 30 22 20 73 74 79 6c 65 3d 22 62 6f 72 64 65 72 2d 63 6f 6c 6c 61 70 73 65 3a 20 63 6f 6c 6c 61 70 73 65 22 20 62 6f 72 64 65}
 		$ = {64 65 72 20 3d 20 22 46 72 6f 6d 3a 20 24 72 65 61 6c 6e 61 6d 65 20 3c 24 66 72 6f 6d 3e 5c 72 5c 6e 52 65 70 6c 79 2d 54 6f 3a 20 24 72 65 70 6c 79 74 6f 5c 72 5c 6e 22 3b 20 0a 24 68 65 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Sincap_php_php_txt
@@ -7997,7 +7710,7 @@ rule SHELL_Sincap_php_php_txt
 		$ = {37 30 30 22 20 63 6f 6c 6f 72 3d 22 23 30 30 30 30 30 30 22 3e 26 6e 62 73 70 3b 52 65 66 65 72 61 6e 73 3c 2f 66 6f 6e 74 3e 3c 2f 74 64 3e 0a 20 20 3c 2f 74 72 3e 0a 3c 74 72 3e 0a 0a 0a 3c}
 		$ = {29 3b 0a 24 64 65 67 65 72 54 3d 20 73 74 72 74 72 28 24 64 65 67 65 72 32 2c 24 74 65 6d 69 7a 6c 65 6d 65 29 3b 0a 3f 3e 0a 20 20 20 20 3c 74 64 20 77 69 64 74 68 3d 22 38 25 22 20 62 67 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_GFS_web_shell_ver_3_1_7___PRiV8_php_txt
@@ -8009,7 +7722,7 @@ rule SHELL_GFS_web_shell_ver_3_1_7___PRiV8_php_txt
 		$ = {20 22 6d 73 2d 73 6e 61 2d 62 61 73 65 22 3b 0a 24 70 6f 72 74 5b 31 34 39 30 5d 20 3d 20 22 69 6e 73 69 74 75 2d 63 6f 6e 66 22 3b 0a 24 70 6f 72 74 5b 31 34 39 34 5d 20 3d 20 22 43 69 74 72}
 		$ = {30 32 39 5d 20 3d 20 22 41 4f 4c 20 41 64 6d 69 6e 22 3b 0a 24 70 6f 72 74 5b 33 31 33 33 37 5d 20 3d 20 22 42 61 63 6b 20 4f 72 69 66 69 63 65 22 3b 0a 24 70 6f 72 74 5b 33 32 37 37 37 5d 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_gfs_sh_php_php_txt
@@ -8021,7 +7734,7 @@ rule SHELL_gfs_sh_php_php_txt
 		$ = {22 6c 6f 67 69 6e 3a 6c 69 62 22 29 7b 0a 20 20 24 69 6e 70 75 74 3d 66 69 6c 65 28 24 66 69 6c 65 29 3b 0a 20 20 66 6f 72 65 61 63 68 28 24 69 6e 70 75 74 20 61 73 20 24 69 3d 3e 24 76 29 7b}
 		$ = {6d 65 3d 5c 22 73 71 6c 5c 22 20 76 61 6c 75 65 3d 5c 22 24 73 71 6c 5c 22 3e 3c 2f 74 64 3e 3c 2f 74 72 3e 22 29 3b 0a 20 65 63 68 6f 20 22 3c 74 72 3e 3c 74 64 20 61 6c 6c 69 6e 67 3d 5c 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99madshell_v2_1_php_php_txt
@@ -8033,7 +7746,7 @@ rule SHELL_c99madshell_v2_1_php_php_txt
 		$ = {6e 74 3e 3c 2f 74 64 3e 3c 74 64 3e 3c 62 3e 57 6f 72 6c 64 3c 2f 62 3e 3c 62 72 3e 3c 62 72 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 63 68 65 63 6b 62 6f 78 20 4e 41 4d 45 3d 63 68 6d 6f 64 5f}
 		$ = {3d 22 42 69 6e 64 22 3e 3c 2f 66 6f 72 6d 3e 0a 3c 62 3e 42 61 63 6b 20 63 6f 6e 6e 65 63 74 69 6f 6e 3a 3c 2f 62 3e 3c 62 72 3e 3c 66 6f 72 6d 20 6d 65 74 68 6f 64 3d 22 50 4f 53 54 22 3e 3c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHPRemoteView_php_txt
@@ -8045,7 +7758,7 @@ rule SHELL_PHPRemoteView_php_txt
 		$ = {22 2e 6d 6d 28 22 43 6c 65 61 6e 20 6f 6b 20 28 66 69 6c 65 20 6e 6f 77 20 65 6d 70 74 79 29 22 29 2e 22 22 3b 0a 20 20 20 20 20 20 20 62 72 65 61 6b 3b 0a 20 20 20 63 61 73 65 20 22 77 69 70}
 		$ = {0a 20 20 20 20 20 20 20 20 20 20 20 20 62 72 65 61 6b 3b 0a 0a 20 20 20 20 20 20 20 20 20 63 61 73 65 20 39 3a 0a 20 20 20 20 20 20 20 20 20 20 20 20 24 6f 75 74 3d 66 72 6f 6d 5f 74 72 61 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_w_php_php_txt
@@ -8057,7 +7770,7 @@ rule SHELL_w_php_php_txt
 		$ = {5c 22 20 73 69 7a 65 3d 5c 22 37 30 5c 22 3e 3c 62 72 3e 3c 62 72 3e 0a 53 61 76 65 20 74 68 69 73 20 66 69 6c 65 20 64 69 72 3a 20 3c 69 6e 70 75 74 20 6e 61 6d 65 3d 5c 22 75 70 6c 6f 61 64}
 		$ = {69 64 2c 24 73 69 67 29 29 20 7b 65 63 68 6f 20 22 4f 4b 2e 22 3b 7d 0a 20 20 20 20 65 6c 73 65 20 7b 65 63 68 6f 20 22 45 52 52 4f 52 2e 22 3b 7d 0a 20 20 20 7d 0a 20 20 20 77 68 69 6c 65 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_sniper_sa_shell_txt
@@ -8069,7 +7782,7 @@ rule SHELL_sniper_sa_shell_txt
 		$ = {63 68 6f 20 22 3c 2f 66 6f 72 6d 3e 22 3b 0a 20 65 63 68 6f 20 22 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 22 3b 0a 20 65 78 69 74 28 29 3b 0a 20 7d 0a 20 7d 0a 69 66 28 21 65 6d}
 		$ = {27 74 65 73 74 32 5f 66 69 6c 65 27 5d 29 3f 28 24 5f 50 4f 53 54 5b 27 74 65 73 74 32 5f 66 69 6c 65 27 5d 29 3a 28 22 2f 65 74 63 2f 70 61 73 73 77 64 22 29 29 29 2e 69 6e 28 27 68 69 64 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_WinX_Shell_html_txt
@@ -8081,7 +7794,7 @@ rule SHELL_WinX_Shell_html_txt
 		$ = {70 72 69 6e 74 20 22 20 3c 69 6e 70 75 74 20 73 74 79 6c 65 20 3d 20 5c 22 66 6f 6e 74 2d 66 61 6d 69 6c 79 3a 20 56 65 72 64 61 6e 61 3b 20 66 6f 6e 74 2d 73 69 7a 65 3a 20 31 32 70 78 3b 20}
 		$ = {62 6f 72 64 65 72 2d 6c 65 66 74 2d 77 69 64 74 68 3a 20 31 70 78 5c 22 20 6e 61 6d 65 3d 5c 22 75 73 65 72 66 69 6c 65 5c 22 20 74 79 70 65 3d 5c 22 66 69 6c 65 5c 22 3e 22 3b 0a 70 72 69 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mysql_shell_php_txt
@@ -8093,7 +7806,7 @@ rule SHELL_mysql_shell_php_txt
 		$ = {68 6f 20 22 3c 74 68 3e 54 79 70 65 3c 2f 74 68 3e 5c 6e 22 3b 0a 09 65 63 68 6f 20 22 3c 74 68 3e 46 75 6e 63 74 69 6f 6e 3c 2f 74 68 3e 5c 6e 22 3b 0a 09 65 63 68 6f 20 22 3c 74 68 3e 44 61}
 		$ = {73 74 27 3e 50 72 6f 63 65 73 73 6c 69 73 74 3c 2f 61 3e 5c 6e 22 3b 0a 09 09 65 63 68 6f 20 22 3c 2f 75 6c 3e 5c 6e 22 3b 0a 09 09 65 63 68 6f 20 22 46 6c 75 73 68 5c 6e 22 3b 0a 09 09 65 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpjackal_php_txt
@@ -8105,7 +7818,7 @@ rule SHELL_phpjackal_php_txt
 		$ = {6d 62 6f 20 6f 6e 43 6c 69 63 6b 3d 5c 22 64 6f 63 75 6d 65 6e 74 2e 66 6f 72 6d 2e 75 73 65 72 2e 64 69 73 61 62 6c 65 64 20 3d 20 74 72 75 65 3b 5c 22 20 73 74 79 6c 65 3d 5c 22 62 6f 72 64}
 		$ = {2e 22 24 65 74 3c 62 72 3e 22 3b 0a 65 6c 73 65 7b 0a 24 69 6e 70 75 74 3d 65 78 70 6c 6f 64 65 28 22 5c 6e 22 2c 73 68 65 6c 4c 28 22 63 61 74 20 24 69 6e 70 75 74 22 29 29 3b 0a 24 6f 75 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Ajax_PHP_Command_Shell_php_txt
@@ -8117,7 +7830,7 @@ rule SHELL_Ajax_PHP_Command_Shell_php_txt
 		$ = {72 69 65 64 20 74 6f 20 63 68 6d 6f 64 20 69 74 20 61 75 74 6f 6d 61 74 69 63 6c 79 2e 22 3b 0a 7d 0a 0a 66 75 6e 63 74 69 6f 6e 20 72 75 6e 63 6f 6d 6d 61 6e 64 28 75 72 6c 74 6f 6f 70 65 6e}
 		$ = {3c 69 3e 5b 57 5d 3c 2f 69 3e 20 3d 20 73 65 74 20 64 69 72 65 63 74 6f 72 79 20 61 73 20 77 6f 72 6b 69 6e 67 20 64 69 72 65 63 74 6f 72 79 2e 3c 62 72 3e 3c 69 3e 5b 44 5d 3c 2f 69 3e 20 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHANTASMA_php_txt
@@ -8129,7 +7842,7 @@ rule SHELL_PHANTASMA_php_txt
 		$ = {20 20 20 75 6e 73 69 67 6e 65 64 20 2a 20 61 64 64 72 20 3d 20 74 61 73 6b 3b 5c 6e 22 20 2e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 22 20 20 20 20 20 20 2f 2a 20 6c 6f 6f 6b 69 6e 67 20}
 		$ = {6e 22 20 2e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 22 76 6f 69 64 20 72 65 6d 61 70 28 76 6f 69 64 29 5c 6e 22 20 2e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 22 7b 5c 6e 22 20 2e 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wso_txt
@@ -8141,7 +7854,7 @@ rule SHELL_wso_txt
 		$ = {65 3b 7d 61 64 64 28 74 68 69 73 2e 63 6d 64 2e 76 61 6c 75 65 29 3b 69 66 28 74 68 69 73 2e 61 6a 61 78 2e 63 68 65 63 6b 65 64 29 7b 61 28 6e 75 6c 6c 2c 6e 75 6c 6c 2c 74 68 69 73 2e 63 6d}
 		$ = {65 74 43 68 61 72 73 65 74 28 27 63 70 38 36 36 27 29 3b 20 62 72 65 61 6b 3b 0a 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 69 66 28 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 66 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_shell_php_php_txt
@@ -8153,7 +7866,7 @@ rule SHELL_shell_php_php_txt
 		$ = {63 68 61 72 65 63 74 65 72 2e 0a 09 20 20 20 54 68 69 73 20 6d 65 61 6e 73 20 74 68 61 74 20 77 65 20 68 61 76 65 20 61 20 74 6f 70 2d 6c 65 76 65 6c 20 64 69 72 65 63 74 6f 72 79 0a 09 20 20}
 		$ = {63 74 3e 3c 2f 70 3e 0a 0a 3c 70 3e 43 6f 6d 6d 61 6e 64 3a 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 6e 61 6d 65 3d 22 63 6f 6d 6d 61 6e 64 22 20 73 69 7a 65 3d 22 36 30 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_backdoorfr_php_txt
@@ -8165,7 +7878,7 @@ rule SHELL_backdoorfr_php_txt
 		$ = {65 20 48 54 54 50 20 3a 20 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 5c 22 72 65 64 5c 22 3e 24 48 54 54 50 5f 43 4f 4e 4e 45 43 54 49 4f 4e 3c 2f 66 6f 6e 74 3e 3c 62 72 3e 20 22 3b 0a 20 20 20 20}
 		$ = {6e 22 3b 0a 09 20 20 20 20 7d 0a 20 20 20 20 7d 0a 7d 0a 2f 2a 20 4c 69 73 74 69 6e 67 20 64 65 20 72 65 70 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2f 0a 0a 0a 2f 2a 20 47 65 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ngh_php_php_txt
@@ -8177,7 +7890,7 @@ rule SHELL_ngh_php_php_txt
 		$ = {20 3c 74 64 3e 3c 73 6d 61 6c 6c 3e 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 23 44 31 44 31 45 31 3e 73 69 7a 65 3c 2f 66 6f 6e 74 3e 3c 2f 73 6d 61 6c 6c 3e 3c 2f 74 64 3e 0a 20 3c 74 64 3e 3c 73}
 		$ = {3c 61 20 68 72 65 66 3d 3c 3f 3d 24 73 63 72 69 70 74 3f 3e 3f 61 63 74 3d 70 68 70 69 6e 66 6f 3e 50 68 70 69 6e 66 6f 28 29 3c 2f 61 3e 0a 3c 3f 0a 7d 20 65 6c 73 65 20 64 69 65 28 22 3c 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_matamu_php_txt
@@ -8189,7 +7902,7 @@ rule SHELL_matamu_php_txt
 		$ = {63 68 61 72 65 63 74 65 72 2e 0a 09 20 20 20 54 68 69 73 20 6d 65 61 6e 73 20 74 68 61 74 20 77 65 20 68 61 76 65 20 61 20 74 6f 70 2d 6c 65 76 65 6c 20 64 69 72 65 63 74 6f 72 79 0a 09 20 20}
 		$ = {63 74 3e 3c 2f 70 3e 0a 0a 3c 70 3e 43 6f 6d 6d 61 6e 64 3a 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 6e 61 6d 65 3d 22 63 6f 6d 6d 61 6e 64 22 20 73 69 7a 65 3d 22 36 30 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_backdoor1_php_txt
@@ -8201,7 +7914,7 @@ rule SHELL_backdoor1_php_txt
 		$ = {24 62 61 63 6b 64 6f 6f 72 2d 3e 66 69 63 68 69 65 72 20 3d 20 24 66 69 63 68 69 65 72 3b 0a 24 62 61 63 6b 64 6f 6f 72 2d 3e 64 65 6c 20 3d 20 24 64 65 6c 3b 0a 24 62 61 63 6b 64 6f 6f 72 2d}
 		$ = {20 65 6c 73 65 69 66 28 24 73 68 65 6c 6c 29 20 7b 20 20 20 0a 20 20 20 24 62 61 63 6b 64 6f 6f 72 2d 3e 73 68 65 6c 6c 28 29 3b 0a 7d 65 6c 73 65 69 66 28 24 70 72 6f 78 79 29 20 7b 0a 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_NetworkFileManagerPHP_php_txt
@@ -8213,7 +7926,7 @@ rule SHELL_NetworkFileManagerPHP_php_txt
 		$ = {68 61 74 20 4d 44 35 20 63 72 79 70 74 20 61 6c 67 6f 72 69 74 68 6d 20 68 61 73 20 6e 6f 20 77 61 79 20 74 6f 20 64 65 63 72 79 70 74 20 69 74 2c 20 62 65 63 61 75 73 65 20 69 74 20 75 73 65}
 		$ = {0a 20 24 64 61 74 61 3d 22 22 3b 0a 0a 20 24 64 61 74 61 2e 3d 22 23 23 5c 6e 22 3b 0a 0a 20 24 64 61 74 61 2e 3d 22 23 23 20 4e 46 4d 20 68 61 63 6b 2e 72 75 20 63 72 65 61 74 6f 72 20 5c 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_hidshell_php_php_txt
@@ -8225,7 +7938,7 @@ rule SHELL_hidshell_php_php_txt
 		$ = {33 75 37 4e 46 58 30 69 39 65 6f 30 42 66 45 67 6f 69 42 4b 30 61 75 31 33 73 31 42 57 57 42 7a 53 34 77 78 32 53 73 34 47 64 79 46 77 36 70 48 64 69 33 32 69 70 54 75 77 45 66 73 47 5a 55 49}
 		$ = {63 56 30 33 2b 2f 5a 32 49 33 49 67 53 64 46 6a 78 45 79 6d 6b 53 6e 70 72 79 6a 77 67 4a 52 75 6e 70 63 58 79 31 70 46 6c 4d 72 35 6f 52 5a 72 57 77 65 4e 4a 38 77 52 32 69 4d 53 43 5a 63 4e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_nst_php_php_txt
@@ -8237,7 +7950,7 @@ rule SHELL_nst_php_php_txt
 		$ = {49 43 4a 7a 62 32 4e 72 5a 58 51 36 49 43 51 68 49 6a 73 4e 43 69 41 67 49 43 41 6b 59 33 56 79 49 44 30 67 63 32 56 73 5a 57 4e 30 4b 43 52 66 57 7a 42 64 4b 54 73 67 49 41 30 4b 44 51 6f 67}
 		$ = {47 45 54 5b 27 74 27 5d 3d 3d 22 75 70 6c 6f 61 64 22 29 7b 0a 65 63 68 6f 20 22 3c 62 72 3e 0a 3c 61 20 68 72 65 66 3d 27 24 70 68 70 5f 73 65 6c 66 3f 64 3d 24 64 26 74 3d 6d 61 73 73 75 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_aZRaiLPhp_v1_0_php_txt
@@ -8249,7 +7962,7 @@ rule SHELL_aZRaiLPhp_v1_0_php_txt
 		$ = {61 6c 75 65 3d 27 24 64 69 73 6d 69 27 20 63 6c 61 73 73 3d 27 69 6e 70 75 74 27 20 72 65 61 64 6f 6e 6c 79 3e 43 48 4d 4f 44 3a 0a 20 20 20 20 20 20 3c 69 6e 70 75 74 20 74 79 70 65 3d 27 74}
 		$ = {6c 65 3f 64 69 72 3d 43 3a 5c 5c 27 3e 43 3a 5c 5c 3c 2f 61 3e 3c 2f 63 65 6e 74 65 72 3e 22 3b 0a 7d 20 65 6c 73 65 20 7b 7d 0a 69 66 20 28 66 69 6c 65 5f 65 78 69 73 74 73 28 22 44 3a 5c 5c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_nshell_php_php_txt
@@ -8261,7 +7974,7 @@ rule SHELL_nshell_php_php_txt
 		$ = {22 3c 63 65 6e 74 65 72 3e 3c 68 72 20 63 6f 6c 6f 72 3d 37 37 37 37 37 37 20 77 69 64 74 68 3d 31 30 30 25 20 68 65 69 67 68 74 3d 31 31 35 70 78 3e 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 22}
 		$ = {28 24 72 65 73 75 6c 74 29 3b 0a 7d 0a 66 75 6e 63 74 69 6f 6e 20 73 71 6c 28 24 73 74 72 69 6e 67 29 0a 7b 0a 24 61 72 72 3d 40 61 72 72 61 79 28 29 3b 0a 24 61 72 72 3d 65 78 70 6c 6f 64 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phvayv_php_php_txt
@@ -8273,7 +7986,7 @@ rule SHELL_phvayv_php_php_txt
 		$ = {37 30 30 22 20 63 6f 6c 6f 72 3d 22 23 30 30 30 30 30 30 22 3e 26 6e 62 73 70 3b 52 65 66 65 72 61 6e 73 3c 2f 66 6f 6e 74 3e 3c 2f 74 64 3e 0a 20 20 3c 2f 74 72 3e 0a 3c 74 72 3e 0a 0a 0a 3c}
 		$ = {29 3b 0a 24 64 65 67 65 72 54 3d 20 73 74 72 74 72 28 24 64 65 67 65 72 32 2c 24 74 65 6d 69 7a 6c 65 6d 65 29 3b 0a 3f 3e 0a 20 20 20 20 3c 74 64 20 77 69 64 74 68 3d 22 38 25 22 20 62 67 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Antichat_Shell_v1_3_php_txt
@@ -8285,7 +7998,7 @@ rule SHELL_Antichat_Shell_v1_3_php_txt
 		$ = {0a 20 20 24 64 69 72 3d 67 65 74 63 77 64 28 29 2e 22 2f 22 3b 0a 20 20 24 64 69 72 3d 73 74 72 5f 72 65 70 6c 61 63 65 28 22 5c 5c 22 2c 22 2f 22 2c 24 64 69 72 29 3b 0a 69 66 20 28 69 73 5f}
 		$ = {65 2e 27 5c 27 3b 20 64 6f 63 75 6d 65 6e 74 2e 72 65 71 73 2e 73 75 62 6d 69 74 28 29 3b 22 3e 27 2e 24 66 69 6c 65 73 5b 24 69 5d 2e 27 3c 2f 61 3e 3c 62 72 3e 3c 2f 74 64 3e 3c 74 64 3e 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_rootshell_php_txt
@@ -8297,7 +8010,7 @@ rule SHELL_rootshell_php_txt
 		$ = {20 20 20 20 3c 74 64 20 77 69 64 74 68 3d 22 35 31 25 22 20 68 65 69 67 68 74 3d 22 31 39 22 20 62 67 63 6f 6c 6f 72 3d 22 23 46 43 46 45 42 41 22 3e 0a 20 20 20 20 20 20 3c 70 20 61 6c 69 67}
 		$ = {6e 74 2d 73 69 7a 65 3a 20 38 70 74 27 3e 46 69 6c 65 20 64 6f 65 73 20 6e 6f 74 20 65 78 69 73 74 21 3c 2f 66 6f 6e 74 3e 22 3b 0a 7d 0a 65 6c 73 65 20 69 66 28 24 5f 50 4f 53 54 5b 22 73 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ironshell_php_txt
@@ -8309,7 +8022,7 @@ rule SHELL_ironshell_php_txt
 		$ = {39 39 39 39 39 39 39 3c 2f 6f 70 74 69 6f 6e 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 2f 73 65 6c 65 63 74 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 62 3e 4d 61}
 		$ = {30 30 5c 22 20 2f 3e 3c 69 6e 70 75 74 20 73 69 7a 65 3d 33 30 20 6e 61 6d 65 3d 5c 22 75 70 6c 6f 61 64 65 64 66 69 6c 65 5c 22 20 74 79 70 65 3d 5c 22 66 69 6c 65 5c 22 20 2f 3e 0a 3c 69 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_fuckphpshell_php_txt
@@ -8321,7 +8034,7 @@ rule SHELL_fuckphpshell_php_txt
 		$ = {20 0a 20 20 20 20 20 20 20 20 62 61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 3a 20 23 30 30 30 30 30 30 3b 20 0a 20 20 20 20 20 20 20 20 66 6f 6e 74 2d 66 61 6d 69 6c 79 3a 20 54 65 72 6d 69}
 		$ = {0a 0a 20 20 2d 2d 3e 3c 2f 53 43 52 49 50 54 3e 20 0a 3c 2f 48 45 41 44 3e 20 0a 3c 42 4f 44 59 20 6f 6e 4c 6f 61 64 3d 22 64 6f 63 75 6d 65 6e 74 2e 67 65 74 45 6c 65 6d 65 6e 74 42 79 49 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Crystal_php_txt
@@ -8333,7 +8046,7 @@ rule SHELL_Crystal_php_txt
 		$ = {69 6c 65 73 20 69 6e 20 63 75 72 72 65 6e 74 20 64 69 72 3c 2f 6f 70 74 69 6f 6e 3e 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 66 69 6e 64 20 2f 20 2d 74 79 70 65 20 66 20 2d 6e 61 6d 65 20}
 		$ = {3c 62 3e 0a 09 09 09 09 09 09 09 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 22 23 46 46 30 30 30 30 22 20 73 69 7a 65 3d 22 31 22 3e 41 74 74 61 63 6b 20 4d 6f 64 65 3c 2f 66 6f 6e 74 3e 3c 2f 62 3e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99shell_v1_0_php_php_txt
@@ -8345,7 +8058,7 @@ rule SHELL_c99shell_v1_0_php_php_txt
 		$ = {3c 75 3e 43 6f 6e 6e 65 63 74 20 74 6f 20 44 42 3c 2f 75 3e 3c 2f 62 3e 3c 2f 61 3e 3c 62 72 3e 3c 62 72 3e 22 3b 7d 0a 20 20 20 20 20 65 6c 73 65 20 7b 65 63 68 6f 20 22 42 75 74 2c 20 79 6f}
 		$ = {2f 77 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 43 48 35 42 41 45 41}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_crystal_txt
@@ -8357,7 +8070,7 @@ rule SHELL_crystal_txt
 		$ = {69 6c 65 73 20 69 6e 20 63 75 72 72 65 6e 74 20 64 69 72 3c 2f 6f 70 74 69 6f 6e 3e 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 66 69 6e 64 20 2f 20 2d 74 79 70 65 20 66 20 2d 6e 61 6d 65 20}
 		$ = {3c 62 3e 0a 09 09 09 09 09 09 09 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 22 23 46 46 30 30 30 30 22 20 73 69 7a 65 3d 22 31 22 3e 41 74 74 61 63 6b 20 4d 6f 64 65 3c 2f 66 6f 6e 74 3e 3c 2f 62 3e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Mysql_interface_v1_0_php_txt
@@ -8369,7 +8082,7 @@ rule SHELL_Mysql_interface_v1_0_php_txt
 		$ = {46 75 6e 63 74 69 6f 6e 3c 2f 74 68 3e 5c 6e 22 3b 0a 65 63 68 6f 20 22 3c 74 68 3e 44 61 74 61 3c 2f 74 68 3e 5c 6e 22 3b 0a 65 63 68 6f 20 22 3c 2f 74 72 3e 5c 6e 22 3b 0a 0a 24 70 52 65 73}
 		$ = {74 3c 2f 61 3e 5c 6e 22 3b 0a 20 20 65 63 68 6f 20 22 3c 2f 75 6c 3e 5c 6e 22 3b 0a 20 20 65 63 68 6f 20 22 46 6c 75 73 68 5c 6e 22 3b 0a 20 20 65 63 68 6f 20 22 3c 75 6c 3e 5c 6e 22 3b 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Casus15_php_php_txt
@@ -8381,7 +8094,7 @@ rule SHELL_Casus15_php_php_txt
 		$ = {73 69 7a 65 28 24 79 6f 6c 29 3b 0a 24 64 75 7a 65 6e 20 3d 20 40 66 72 65 61 64 20 28 24 64 6f 73 79 61 2c 20 24 62 6f 79 75 74 29 3b 0a 65 63 68 6f 20 22 3c 66 6f 72 6d 20 6d 65 74 68 6f 64}
 		$ = {72 28 62 61 73 65 5f 63 6f 6e 76 65 72 74 28 66 69 6c 65 70 65 72 6d 73 28 22 24 70 61 74 68 2f 24 66 69 6c 65 22 29 2c 31 30 2c 38 29 2c 2d 34 29 3b 0a 65 63 68 6f 20 22 3c 66 6f 6e 74 20 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_backup_php_php_txt
@@ -8393,7 +8106,7 @@ rule SHELL_backup_php_php_txt
 		$ = {2f 20 28 64 6f 77 6e 6c 6f 61 64 20 70 61 67 65 29 20 5c 72 5c 6e 22 3b 0a 24 64 61 74 61 20 2e 3d 20 22 23 24 64 61 74 61 62 61 73 65 20 76 32 2e 30 20 44 61 74 61 62 61 73 65 20 42 61 63 6b}
 		$ = {46 52 4f 4d 20 61 64 64 5f 6c 69 6e 6b 73 22 29 3b 77 68 69 6c 65 20 28 24 61 20 3d 20 6d 79 73 71 6c 5f 66 65 74 63 68 5f 61 72 72 61 79 28 24 72 65 73 75 6c 74 29 29 20 7b 0a 09 66 6f 72 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_csh_php_php_txt
@@ -8405,7 +8118,7 @@ rule SHELL_csh_php_php_txt
 		$ = {64 61 6e 61 20 63 6f 6c 6f 72 3d 30 30 30 30 30 30 3e 43 75 72 72 65 6e 74 20 64 69 72 65 63 74 6f 72 79 3a 20 3c 2f 66 6f 6e 74 3e 3c 49 4e 50 55 54 20 74 79 70 65 3d 5c 22 74 65 78 74 5c 22}
 		$ = {6c 65 5c 22 20 73 74 79 6c 65 3d 5c 22 6d 61 72 67 69 6e 2d 6c 65 66 74 3a 20 33 3b 20 62 61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 3a 20 23 35 35 35 35 35 35 3b 20 66 6f 6e 74 2d 66 61 6d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Nshell__1__php_php_txt
@@ -8417,7 +8130,7 @@ rule SHELL_Nshell__1__php_php_txt
 		$ = {22 29 3b 0a 66 75 6e 63 74 69 6f 6e 20 65 63 6d 64 28 29 0a 7b 0a 65 63 68 6f 20 22 3c 46 4f 52 4d 20 6e 61 6d 65 3d 69 6e 6a 65 63 74 69 6f 6e 20 4d 45 54 48 4f 44 3d 50 4f 53 54 20 41 43 54}
 		$ = {6d 20 2f 74 6d 70 2f 63 6d 64 74 65 6d 70 22 29 3b 0a 20 20 24 6f 75 74 70 75 74 20 3d 20 6f 62 5f 67 65 74 5f 63 6f 6e 74 65 6e 74 73 28 29 3b 0a 20 20 6f 62 5f 65 6e 64 5f 63 6c 65 61 6e 28}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_nixrem_php_php_txt
@@ -8429,7 +8142,7 @@ rule SHELL_nixrem_php_php_txt
 		$ = {63 20 24 66 75 6c 6c 70 61 74 68 20 2d 66 20 24 63 68 61 72 73 6e 61 6d 65 2e 74 61 72 2e 67 7a 22 29 2e 22 f3 ef e0 ea ee e2 e0 ed 20 e2 20 f4 e0 e9 eb 20 3c 75 3e 24 63 68 61 72 73 6e 61 6d}
 		$ = {73 73 27 5d 29 26 26 28 24 5f 50 4f 53 54 5b 27 75 73 65 27 5d 3d 3d 22 43 22 29 29 0a 7b 0a 20 24 77 5f 66 69 6c 65 3d 66 6f 70 65 6e 28 22 2f 74 6d 70 2f 62 64 2e 63 22 2c 22 61 62 2b 22 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cyberlords_sql_php_php_txt
@@ -8441,7 +8154,7 @@ rule SHELL_cyberlords_sql_php_php_txt
 		$ = {5f 29 2e 22 3f 69 6d 61 67 65 3d 63 6c 65 61 72 5c 22 20 61 6c 69 67 6e 3d 5c 22 61 62 73 6d 69 64 64 6c 65 5c 22 3e 3c 2f 61 3e 3c 2f 74 64 3e 5c 6e 3c 2f 74 72 3e 22 3b 0a 20 20 7d 0a 20 20}
 		$ = {6e 70 75 74 20 74 79 70 65 3d 5c 22 74 65 78 74 5c 22 20 6e 61 6d 65 3d 5c 22 72 6f 77 73 5c 22 20 76 61 6c 75 65 3d 5c 22 5c 22 20 6d 61 78 6c 65 6e 67 74 68 3d 5c 22 31 30 5c 22 3e 5c 6e 3c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99madshell_v2_0_php_php_txt
@@ -8453,7 +8166,7 @@ rule SHELL_c99madshell_v2_0_php_php_txt
 		$ = {68 46 2b 57 57 75 59 2f 68 48 48 43 4b 31 2f 74 6f 48 6f 44 42 37 35 46 35 66 42 6b 79 56 76 2b 63 49 6f 75 47 39 4a 7a 44 6d 67 37 54 39 66 56 65 6e 65 52 59 54 51 6d 4f 41 72 6b 68 5a 42 51}
 		$ = {6a 7a 70 4a 63 58 67 75 76 72 36 6b 35 59 50 53 2f 78 6f 4f 35 72 4b 4a 78 72 4f 57 4f 59 77 45 63 37 38 59 77 56 4a 57 6a 36 69 2b 69 66 79 2b 45 30 32 4c 79 49 62 71 65 45 62 35 4c 43 72 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ak74shell_php_php_txt
@@ -8465,7 +8178,7 @@ rule SHELL_ak74shell_php_php_txt
 		$ = {6e 20 65 78 65 63 75 74 65 66 6f 72 6d 28 29 0a 7b 0a 20 24 72 65 73 20 3d 20 27 27 3b 0a 20 24 72 65 73 20 2e 3d 20 27 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 22 27 2e 24 78 73 68 65 6c 6c 2e}
 		$ = {63 74 65 74 2d 73 74 72 65 61 6d 22 29 3b 0a 68 65 61 64 65 72 20 28 22 43 6f 6e 74 65 6e 74 2d 4c 65 6e 67 74 68 3a 20 22 20 2e 20 66 69 6c 65 73 69 7a 65 28 24 66 69 6c 65 29 29 3b 0a 68 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_SimAttacker___Vrsion_1_0_0___priv8_4_My_friend_php_txt
@@ -8477,7 +8190,7 @@ rule SHELL_SimAttacker___Vrsion_1_0_0___priv8_4_My_friend_php_txt
 		$ = {6c 69 67 6e 3d 27 63 65 6e 74 65 72 27 3e 0a 09 09 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 27 23 46 46 39 39 33 33 27 20 73 69 7a 65 3d 27 32 27 3e 3c 62 3e 45 64 69 74 3c 2f 62 3e 3c 2f 66 6f 6e}
 		$ = {64 65 63 6f 72 61 74 69 6f 6e 3a 20 6e 6f 6e 65 27 3e 3c 66 6f 6e 74 20 73 69 7a 65 3d 27 32 27 20 63 6f 6c 6f 72 3d 27 23 39 39 39 39 39 39 27 3e 43 68 6d 6f 64 22 3b 0a 09 09 7d 0a 09 09 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Safe_Mode_Bypass_PHP_4_4_2_and_PHP_5_1_2_php_txt
@@ -8489,7 +8202,7 @@ rule SHELL_Safe_Mode_Bypass_PHP_4_4_2_and_PHP_5_1_2_php_txt
 		$ = {22 29 20 6f 72 20 73 74 72 74 6f 6c 6f 77 65 72 28 40 69 6e 69 5f 67 65 74 28 22 73 61 66 65 5f 6d 6f 64 65 22 29 29 20 3d 3d 20 22 6f 6e 22 29 0a 7b 0a 20 24 73 61 66 65 6d 6f 64 65 20 3d 20}
 		$ = {0a 0a 65 63 68 6f 20 22 3c 50 52 45 3e 5c 6e 22 3b 0a 69 66 28 65 6d 70 74 79 28 24 66 69 6c 65 29 29 7b 0a 69 66 28 65 6d 70 74 79 28 24 5f 47 45 54 5b 27 66 69 6c 65 27 5d 29 29 7b 0a 69 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Rem_View_php_php_txt
@@ -8501,7 +8214,7 @@ rule SHELL_Rem_View_php_php_txt
 		$ = {22 2e 6d 6d 28 22 43 6c 65 61 6e 20 6f 6b 20 28 66 69 6c 65 20 6e 6f 77 20 65 6d 70 74 79 29 22 29 2e 22 22 3b 0a 20 20 20 20 20 20 20 62 72 65 61 6b 3b 0a 20 20 20 63 61 73 65 20 22 77 69 70}
 		$ = {0a 20 20 20 20 20 20 20 20 20 20 20 20 62 72 65 61 6b 3b 0a 0a 20 20 20 20 20 20 20 20 20 63 61 73 65 20 39 3a 0a 20 20 20 20 20 20 20 20 20 20 20 20 24 6f 75 74 3d 66 72 6f 6d 5f 74 72 61 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c2007_php_php_txt
@@ -8513,7 +8226,7 @@ rule SHELL_c2007_php_php_txt
 		$ = {61 74 75 73 29 20 0a 20 20 7b 20 0a 20 20 20 76 61 72 20 69 64 20 3d 20 31 3b 20 0a 20 20 20 76 61 72 20 6e 75 6d 20 3d 20 22 2e 28 63 6f 75 6e 74 28 24 74 61 62 6c 65 29 2d 32 29 2e 22 3b 20}
 		$ = {67 2b 38 50 64 2b 38 48 63 2b 73 66 66 2b 38 54 65 2b 2f 44 32 2f 72 58 49 38 72 48 46 38 62 72 4d 38 37 66 4a 38 6e 6d 50 22 2e 20 0a 22 77 72 33 4e 38 36 2f 44 38 4b 76 42 38 46 39 6e 65 45}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_SnIpEr_SA_Shell_php_txt
@@ -8525,7 +8238,7 @@ rule SHELL_SnIpEr_SA_Shell_php_txt
 		$ = {63 68 6f 20 22 3c 2f 66 6f 72 6d 3e 22 3b 0a 20 65 63 68 6f 20 22 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 22 3b 0a 20 65 78 69 74 28 29 3b 0a 20 7d 0a 20 7d 0a 69 66 28 21 65 6d}
 		$ = {27 74 65 73 74 32 5f 66 69 6c 65 27 5d 29 3f 28 24 5f 50 4f 53 54 5b 27 74 65 73 74 32 5f 66 69 6c 65 27 5d 29 3a 28 22 2f 65 74 63 2f 70 61 73 73 77 64 22 29 29 29 2e 69 6e 28 27 68 69 64 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_webshell_php_txt
@@ -8537,7 +8250,7 @@ rule SHELL_webshell_php_txt
 		$ = {6e 4d 71 64 65 6d 39 36 49 52 4c 30 48 57 75 68 43 63 6b 49 51 78 6f 71 55 49 56 30 69 41 47 57 4a 4a 42 44 6f 30 6a 77 78 73 38 36 59 62 58 38 61 45 51 65 43 43 45 7a 68 4b 68 4f 6b 62 77 7a}
 		$ = {66 34 38 63 77 41 4b 6f 41 4b 2b 58 4a 42 4f 6b 2b 4e 52 53 56 52 67 67 75 6f 53 53 38 37 38 35 48 4a 57 51 72 57 6c 44 72 49 2b 6b 4a 53 53 7a 6e 51 36 61 37 4d 57 43 77 4d 42 6c 53 68 6f 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_network_php_php_txt
@@ -8549,7 +8262,7 @@ rule SHELL_network_php_php_txt
 		$ = {68 61 74 20 4d 44 35 20 63 72 79 70 74 20 61 6c 67 6f 72 69 74 68 6d 20 68 61 73 20 6e 6f 20 77 61 79 20 74 6f 20 64 65 63 72 79 70 74 20 69 74 2c 20 62 65 63 61 75 73 65 20 69 74 20 75 73 65}
 		$ = {0a 20 24 64 61 74 61 3d 22 22 3b 0a 0a 20 24 64 61 74 61 2e 3d 22 23 23 5c 6e 22 3b 0a 0a 20 24 64 61 74 61 2e 3d 22 23 23 20 4e 46 4d 20 68 61 63 6b 2e 72 75 20 63 72 65 61 74 6f 72 20 5c 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_antichat_php_php_txt
@@ -8561,7 +8274,7 @@ rule SHELL_antichat_php_php_txt
 		$ = {0a 20 20 7d 0a 66 6f 72 28 24 69 3d 30 3b 24 69 3c 63 6f 75 6e 74 28 24 66 69 6c 65 73 29 3b 24 69 2b 2b 29 20 7b 0a 24 6c 69 6e 6b 66 69 6c 65 3d 24 64 69 72 2e 24 66 69 6c 65 73 5b 24 69 5d}
 		$ = {63 68 6f 20 24 66 6f 72 6d 5f 77 69 6e 3b 0a 09 65 63 68 6f 20 27 3c 74 72 3e 3c 74 64 3e 3c 73 65 6c 65 63 74 20 73 69 7a 65 3d 5c 22 31 5c 22 20 6e 61 6d 65 3d 5c 22 77 69 74 68 5c 22 3e 3c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_simple_backdoor_php_txt
@@ -8572,7 +8285,7 @@ rule SHELL_simple_backdoor_php_txt
 		$ = {0a 20 20 20 20 20 20 20 20 73 79 73 74 65 6d 28 24 63 6d 64 29 3b 0a 20 20 20 20 20 20 20 20 65 63 68 6f 20 22 3c 2f 70 72 65 3e 22 3b 0a 20 20 20 20 20 20 20 20 64 69 65 3b 0a 7d 0a 0a 3f 3e}
 		$ = {64 69 65 3b 0a 7d 0a 0a 3f 3e 0a 0a 55 73 61 67 65 3a 20 68 74 74 70 3a 2f 2f 74 61 72 67 65 74 2e 63 6f 6d 2f 73 69 6d 70 6c 65 2d 62 61 63 6b 64 6f 6f 72 2e 70 68 70 3f 63 6d 64 3d 63 61 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57shell_php_php_txt
@@ -8584,7 +8297,7 @@ rule SHELL_r57shell_php_php_txt
 		$ = {4f 53 54 5f 56 41 52 53 5b 27 63 6d 64 27 5d 3d 24 61 6c 69 61 73 5f 63 6d 64 3b 7d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
 		$ = {3e 22 3b 0a 65 63 68 6f 20 22 3c 62 3e 26 6e 62 73 70 3b 26 6e 62 73 70 3b 26 6e 62 73 70 3b 26 6e 62 73 70 3b 26 6e 62 73 70 3b 26 6e 62 73 70 3b 26 6e 62 73 70 3b 26 6e 62 73 70 3b 26 6e 62}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Fatalshell_php_php_txt
@@ -8596,7 +8309,7 @@ rule SHELL_Fatalshell_php_php_txt
 		$ = {61 3e 3c 61 20 68 72 65 66 3d 22 23 22 20 6f 6e 63 6c 69 63 6b 3d 22 64 6f 63 75 6d 65 6e 74 2e 72 65 71 73 2e 61 63 74 69 6f 6e 2e 76 61 6c 75 65 3d 5c 27 64 65 6c 65 74 65 5c 27 3b 20 64 6f}
 		$ = {65 6c 6c 28 77 68 69 63 68 28 27 6c 69 6e 6b 73 27 29 2e 22 20 2d 73 6f 75 72 63 65 20 22 2e 24 5f 50 4f 53 54 5b 27 75 72 6c 64 6f 77 6e 27 5d 2e 22 20 3e 20 22 2e 24 5f 50 4f 53 54 5b 27 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_simple_cmd_html_txt
@@ -8607,7 +8320,7 @@ rule SHELL_simple_cmd_html_txt
 		$ = {20 76 61 6c 75 65 3d 22 3c 3f 3d 24 63 6d 64 3f 3e 22 20 0a 73 74 79 6c 65 3d 22 62 61 63 6b 67 72 6f 75 6e 64 3a 23 30 30 30 30 30 30 3b 63 6f 6c 6f 72 3a 23 66 66 66 66 66 66 3b 22 3e 0a 3c}
 		$ = {66 66 66 66 3b 22 3e 0a 3c 68 72 3e 0a 3c 70 72 65 3e 0a 3c 3f 20 24 63 6d 64 20 3d 20 24 5f 52 45 51 55 45 53 54 5b 22 2d 63 6d 64 22 5d 3b 3f 3e 0a 3c 3f 20 69 66 28 24 63 6d 64 20 21 3d 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_php_include_w_shell_php_txt
@@ -8619,7 +8332,7 @@ rule SHELL_php_include_w_shell_php_txt
 		$ = {2f 22 2e 24 66 69 6c 65 6e 61 6d 65 3b 0a 09 09 09 69 66 28 40 69 73 5f 66 69 6c 65 28 24 46 4e 29 29 20 24 69 73 5f 66 69 6c 65 5b 5d 20 3d 20 24 66 69 6c 65 6e 61 6d 65 3b 0a 09 09 09 69 66}
 		$ = {64 20 6e 6f 74 20 73 65 6c 65 63 74 20 64 61 74 61 62 61 73 65 22 3b 0a 09 24 71 75 65 72 79 20 3d 20 22 53 45 4c 45 43 54 20 2a 20 46 52 4f 4d 20 22 2e 24 6d 79 74 61 62 6c 65 2e 22 20 49 4e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Dx_php_php_txt
@@ -8631,7 +8344,7 @@ rule SHELL_Dx_php_php_txt
 		$ = {61 72 63 68 27 5d 5b 27 6d 6f 64 65 27 5d 3d 3d 73 74 72 74 6f 6c 6f 77 65 72 28 24 63 75 72 5f 72 61 64 29 29 3f 27 43 48 45 43 4b 45 44 27 3a 27 27 29 20 20 20 3a 28 28 24 63 75 72 5f 72 61}
 		$ = {3d 3e 27 57 4c 42 53 27 2c 32 35 33 35 3d 3e 27 4d 41 44 43 41 50 27 2c 32 35 34 33 3d 3e 27 73 69 70 27 2c 32 35 39 32 3d 3e 27 6e 65 74 72 65 6b 27 2c 32 37 32 37 3d 3e 27 4d 47 43 50 20 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Antichat_Socks5_Server_php_php_txt
@@ -8643,7 +8356,7 @@ rule SHELL_Antichat_Socks5_Server_php_php_txt
 		$ = {44 41 54 41 3b 0a 0a 09 69 66 28 6f 72 64 28 24 72 65 71 6d 65 73 73 61 67 65 5b 24 69 64 5d 5b 31 5d 29 20 3e 20 73 74 72 6c 65 6e 28 24 72 65 71 6d 65 73 73 61 67 65 5b 24 69 64 5d 29 20 2d}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 73 74 6f 70 28 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 63 6f 6e 74 69 6e 75 65 3b 0a 09 7d 0a 09 69 66 20 28 69 6e 5f 61 72 72 61 79 28 24 73 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_s72_shell_txt
@@ -8655,7 +8368,7 @@ rule SHELL_s72_shell_txt
 		$ = {74 3d 22 5f 62 6c 61 6e 6b 22 20 68 72 65 66 3d 22 27 2e 24 66 69 6c 65 2e 27 22 3e 27 2e 24 66 69 6c 65 2e 27 3c 2f 61 20 3e 3c 62 72 3e 27 3b 0a 7d 0a 63 6c 6f 73 65 64 69 72 28 24 66 6f 6c}
 		$ = {7d 0a 7d 0a 0a 69 66 28 21 65 6d 70 74 79 28 24 66 69 6c 65 29 29 0a 7b 0a 20 20 20 20 24 66 69 6c 65 6e 61 6d 65 20 3d 20 24 66 69 6c 65 5f 6e 61 6d 65 3b 0a 20 20 20 20 69 66 28 20 66 69 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_spy_php_php_txt
@@ -8667,7 +8380,7 @@ rule SHELL_spy_php_php_txt
 		$ = {5f 74 65 78 74 36 32 27 5d 2e 22 3c 2f 62 3e 3c 2f 66 6f 6e 74 3e 3c 2f 64 69 76 3e 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 22 3b 0a 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20}
 		$ = {2c 20 40 61 72 72 61 79 5f 6b 65 79 73 28 24 72 6f 77 29 29 3b 0a 20 20 20 20 20 24 76 61 6c 75 65 73 20 3d 20 40 61 72 72 61 79 5f 76 61 6c 75 65 73 28 24 72 6f 77 29 3b 0a 20 20 20 20 20 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_myshell_php_php_txt
@@ -8679,7 +8392,7 @@ rule SHELL_myshell_php_php_txt
 		$ = {29 24 6f 52 6f 77 73 3d 24 74 65 72 6d 52 6f 77 73 3b 0a 69 66 28 24 65 64 69 74 4d 6f 64 65 29 24 66 6f 63 75 73 3d 22 73 68 65 6c 6c 4f 75 74 2e 66 6f 63 75 73 28 29 22 3b 0a 65 6c 73 65 20}
 		$ = {62 73 70 3b 20 26 6e 62 73 70 3b 20 26 6e 62 73 70 3b 20 26 6e 62 73 70 3b 20 26 6e 62 73 70 3b 20 26 6e 62 73 70 3b 20 26 6e 62 73 70 3b 20 26 6e 62 73 70 3b 20 26 6e 62 73 70 3b 20 26 6e 62}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Moroccan_Spamers_Ma_EditioN_By_GhOsT_php_txt
@@ -8691,7 +8404,7 @@ rule SHELL_Moroccan_Spamers_Ma_EditioN_By_GhOsT_php_txt
 		$ = {72 64 65 72 3d 22 30 22 20 63 65 6c 6c 73 70 61 63 69 6e 67 3d 22 30 22 20 73 74 79 6c 65 3d 22 62 6f 72 64 65 72 2d 63 6f 6c 6c 61 70 73 65 3a 20 63 6f 6c 6c 61 70 73 65 22 20 62 6f 72 64 65}
 		$ = {64 65 72 20 3d 20 22 46 72 6f 6d 3a 20 24 72 65 61 6c 6e 61 6d 65 20 3c 24 66 72 6f 6d 3e 5c 72 5c 6e 52 65 70 6c 79 2d 54 6f 3a 20 24 72 65 70 6c 79 74 6f 5c 72 5c 6e 22 3b 20 0a 24 68 65 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_pws_php_php_txt
@@ -8703,7 +8416,7 @@ rule SHELL_pws_php_php_txt
 		$ = {65 61 6c 3b 0a 20 20 20 63 6f 70 79 28 24 75 70 6c 6f 61 64 65 64 2c 20 24 64 65 7a 29 3b 0a 20 20 20 65 63 68 6f 20 22 46 49 4c 45 20 55 50 4c 4f 41 44 45 44 20 54 4f 20 24 64 65 7a 22 3b 0a}
 		$ = {20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 6e 61 6d 65 3d 22 64 69 72 22 20 73 69 7a 65 3d 22 33 30 22 20 76 61 6c 75 65 3d 22 3c 3f 20 70 61 73 73 74 68 72 75 28 22 70 77 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_w4k_php_php_txt
@@ -8715,7 +8428,7 @@ rule SHELL_w4k_php_php_txt
 		$ = {65 3d 63 68 6d 6f 64 3e 3c 74 61 62 6c 65 20 61 6c 69 67 6e 3d 6c 65 66 74 20 77 69 64 74 68 3d 33 30 30 20 62 6f 72 64 65 72 3d 30 20 63 65 6c 6c 73 70 61 63 69 6e 67 3d 30 20 63 65 6c 6c 70}
 		$ = {74 3d 5c 22 5f 62 6c 61 6e 6b 5c 22 3e 2b 3c 2f 61 3e 29 20 7c 22 3b 0a 20 20 7d 0a 20 20 65 63 68 6f 20 22 3c 68 72 20 73 69 7a 65 3d 5c 22 31 5c 22 20 6e 6f 73 68 61 64 65 3e 22 3b 0a 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_sql_php_php_txt
@@ -8727,7 +8440,7 @@ rule SHELL_sql_php_php_txt
 		$ = {20 20 20 3c 74 64 3e 3c 62 72 3e 22 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 69 66 20 28 69 73 73 65 74 28 24 74 29 29 20 7b 20 70 72 69 6e 74 20 22 26 6e 62 73 70 3b 26 6e 62 73}
 		$ = {62 5c 22 3e 22 2e 0a 20 20 20 20 20 20 20 20 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 5c 22 68 69 64 64 65 6e 5c 22 20 6e 61 6d 65 3d 5c 22 74 62 6c 5c 22 20 76 61 6c 75 65 3d 5c 22 24 74 62 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_accept_language_php_txt
@@ -8735,7 +8448,7 @@ rule SHELL_accept_language_php_txt
 	strings:
 		$ = {3c 3f 70 68 70 20 70 61 73 73 74 68 72 75 28 67 65 74 65 6e 76 28 22 48 54 54 50 5f 41 43 43 45 50 54 5f 4c 41 4e 47 55 41 47 45 22 29 29 3b 20 65 63 68 6f 20 27 3c 62 72 3e 20 62 79 20 71 31 77 32 65 33 72 34 27 3b 20 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_Dive_Shell_1_0___Emperor_Hacking_Team_php_txt
@@ -8747,7 +8460,7 @@ rule SHELL_Dive_Shell_1_0___Emperor_Hacking_Team_php_txt
 		$ = {70 75 74 2e 73 63 72 6f 6c 6c 54 6f 70 20 3d 20 64 6f 63 75 6d 65 6e 74 2e 73 68 65 6c 6c 2e 6f 75 74 70 75 74 2e 73 63 72 6f 6c 6c 48 65 69 67 68 74 3b 0a 20 20 64 6f 63 75 6d 65 6e 74 2e 73}
 		$ = {6e 74 3e 0a 20 20 26 6e 62 73 70 3b 3c 74 65 78 74 61 72 65 61 20 6e 61 6d 65 3d 22 6f 75 74 70 75 74 22 20 72 65 61 64 6f 6e 6c 79 3d 22 72 65 61 64 6f 6e 6c 79 22 20 63 6f 6c 73 3d 22 31 30}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ctt_sh_php_php_txt
@@ -8759,7 +8472,7 @@ rule SHELL_ctt_sh_php_php_txt
 		$ = {65 4f 64 51 4b 62 50 67 65 64 6a 5a 6d 68 6e 41 63 4a 6c 71 61 49 71 55 65 73 6d 49 69 6b 70 45 69 78 6e 79 4a 68 75 6c 55 4d 68 67 32 34 61 53 4f 36 59 79 45 41 4f 77 3d 3d 22 2c 0a 22 73 6d}
 		$ = {41 41 41 44 2f 41 50 2f 2f 41 41 41 41 2f 2f 38 41 2f 77 44 2f 22 2e 0a 22 2f 2f 2f 2f 2f 79 77 41 41 41 41 41 45 41 41 51 41 41 41 45 55 2f 44 49 67 36 71 31 4d 36 50 48 2b 36 4f 5a 74 48 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_img_php_php_txt
@@ -8771,7 +8484,7 @@ rule SHELL_img_php_php_txt
 		$ = {69 74 61 62 6c 65 28 22 2e 22 29 29 7b 0a 6d 6b 64 69 72 28 22 2e 6e 73 74 5f 70 72 6f 78 79 5f 74 6d 70 22 29 3b 0a 24 66 70 3d 66 6f 70 65 6e 28 22 2e 6e 73 74 5f 70 72 6f 78 79 5f 74 6d 70}
 		$ = {5d 29 7b 0a 24 77 68 65 72 65 3d 24 5f 50 4f 53 54 5b 27 77 68 65 72 65 27 5d 3b 0a 24 6e 65 77 66 3d 24 5f 50 4f 53 54 5b 27 6e 65 77 66 27 5d 3b 0a 24 77 68 65 72 65 3d 73 74 72 5f 72 65 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_iMHaPFtp_php_php_txt
@@ -8783,7 +8496,7 @@ rule SHELL_iMHaPFtp_php_php_txt
 		$ = {69 5d 20 3d 20 6e 6c 32 62 72 28 68 74 6d 6c 28 24 61 72 67 75 6d 65 6e 74 73 5b 24 69 5d 29 29 3b 0a 09 7d 0a 0a 09 24 72 65 70 6c 61 63 65 20 3d 20 61 72 72 61 79 28 27 7b 27 20 3d 3e 20 27}
 		$ = {73 27 20 3d 3e 20 27 4a 61 27 2c 0a 27 6e 6f 27 20 3d 3e 20 27 4e 65 6a 27 2c 0a 27 47 65 72 69 27 20 3d 3e 20 27 54 69 6c 6c 62 61 6b 73 27 2c 0a 27 59 6f 6c 27 20 3d 3e 20 27 59 6f 6c 27 2c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_2008_php_php_txt
@@ -8795,7 +8508,7 @@ rule SHELL_2008_php_php_txt
 		$ = {7d 2f 2f 65 6e 64 20 6e 65 77 74 69 6d 65 0a 0a 65 6c 73 65 69 66 20 28 24 61 63 74 69 6f 6e 20 3d 3d 20 27 73 68 65 6c 6c 27 29 20 7b 0a 09 69 66 20 28 49 53 5f 57 49 4e 20 26 26 20 49 53 5f}
 		$ = {3a 20 27 2e 24 61 72 72 61 79 5b 27 67 69 64 27 5d 2e 27 26 23 31 33 26 23 31 30 47 65 63 6f 73 3a 20 27 2e 24 61 72 72 61 79 5b 27 67 65 63 6f 73 27 5d 2e 27 26 23 31 33 26 23 31 30 44 69 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_nstview_php_php_txt
@@ -8807,7 +8520,7 @@ rule SHELL_nstview_php_php_txt
 		$ = {6c 49 43 4a 7a 62 32 4e 72 5a 58 51 36 49 43 51 68 49 6a 73 4e 43 69 41 67 49 43 41 6b 59 33 56 79 49 44 30 67 63 32 56 73 5a 57 4e 30 4b 43 52 66 57 7a 42 64 4b 54 73 67 49 41 30 4b 44 51 6f}
 		$ = {24 5f 47 45 54 5b 27 74 27 5d 3d 3d 22 75 70 6c 6f 61 64 22 29 7b 0a 65 63 68 6f 20 22 3c 62 72 3e 0a 3c 61 20 68 72 65 66 3d 27 24 70 68 70 5f 73 65 6c 66 3f 64 3d 24 64 26 74 3d 6d 61 73 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_MySQL_Web_Interface_Version_0_8_php_txt
@@ -8819,7 +8532,7 @@ rule SHELL_MySQL_Web_Interface_Version_0_8_php_txt
 		$ = {63 68 6f 20 22 3c 74 68 3e 4e 61 6d 65 3c 2f 74 68 3e 5c 6e 22 3b 0a 09 65 63 68 6f 20 22 3c 74 68 3e 54 79 70 65 3c 2f 74 68 3e 5c 6e 22 3b 0a 09 65 63 68 6f 20 22 3c 74 68 3e 46 75 6e 63 74}
 		$ = {26 63 6f 6d 6d 61 6e 64 3d 73 68 6f 77 5f 70 72 6f 63 65 73 73 6c 69 73 74 27 3e 50 72 6f 63 65 73 73 6c 69 73 74 3c 2f 61 3e 5c 6e 22 3b 0a 09 09 65 63 68 6f 20 22 3c 2f 75 6c 3e 5c 6e 22 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_rst_sql_php_php_txt
@@ -8831,7 +8544,7 @@ rule SHELL_rst_sql_php_php_txt
 		$ = {20 20 20 3c 74 64 3e 3c 62 72 3e 22 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 69 66 20 28 69 73 73 65 74 28 24 74 29 29 20 7b 20 70 72 69 6e 74 20 22 26 6e 62 73 70 3b 26 6e 62 73}
 		$ = {62 5c 22 3e 22 2e 0a 20 20 20 20 20 20 20 20 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 5c 22 68 69 64 64 65 6e 5c 22 20 6e 61 6d 65 3d 5c 22 74 62 6c 5c 22 20 76 61 6c 75 65 3d 5c 22 24 74 62 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_SimShell_1_0___Simorgh_Security_MGZ_php_txt
@@ -8843,7 +8556,7 @@ rule SHELL_SimShell_1_0___Simorgh_Security_MGZ_php_txt
 		$ = {5f 6c 69 6e 65 5d 20 3d 20 64 6f 63 75 6d 65 6e 74 2e 73 68 65 6c 6c 2e 63 6f 6d 6d 61 6e 64 2e 76 61 6c 75 65 3b 0a 20 20 20 20 20 20 63 75 72 72 65 6e 74 5f 6c 69 6e 65 2d 2d 3b 0a 20 20 20}
 		$ = {43 43 46 46 33 33 3b 20 62 6f 72 64 65 72 3a 20 31 70 78 20 64 61 73 68 65 64 20 23 46 46 30 30 30 30 3b 20 62 61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 3a 20 23 30 30 30 30 30 30 22 3e 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_predator_php_php_txt
@@ -8855,7 +8568,7 @@ rule SHELL_predator_php_php_txt
 		$ = {2e 3a 3a 55 70 6c 6f 61 64 3a 3a 2e 3c 2f 62 3e 0a 3c 2f 74 64 3e 3c 74 64 20 61 6c 69 67 6e 3d 72 69 67 68 74 20 63 6f 6c 73 70 61 6e 3d 33 3e 0a 3c 69 6e 70 75 74 20 74 79 70 65 3d 73 75 62}
 		$ = {61 63 69 6e 67 3d 30 20 77 69 64 74 68 3d 39 30 25 20 62 6f 72 64 65 72 3d 30 3e 3c 74 72 3e 3c 74 64 20 63 6f 6c 73 70 61 6e 3d 33 3e 0a 3c 62 3e 2e 3a 3a 42 69 6e 64 20 70 6f 72 74 3a 3a 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_SsEs_php_php_txt
@@ -8867,7 +8580,7 @@ rule SHELL_SsEs_php_php_txt
 		$ = {54 4f 52 3b 7d 0a 20 20 69 66 20 28 21 65 6d 70 74 79 28 24 73 75 62 6d 69 74 29 29 20 7b 0a 20 20 20 20 67 6c 6f 62 61 6c 20 24 5f 46 49 4c 45 53 3b 0a 20 20 20 20 24 75 70 6c 6f 61 64 66 69}
 		$ = {26 66 3d 22 2e 75 72 6c 65 6e 63 6f 64 65 28 24 66 29 2e 22 26 66 74 3d 69 6e 66 6f 26 64 3d 22 2e 75 72 6c 65 6e 63 6f 64 65 28 24 64 29 2e 22 5c 22 3e 50 72 65 76 69 65 77 3c 2f 61 3e 5d 3c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_sh_php_php_txt
@@ -8879,7 +8592,7 @@ rule SHELL_sh_php_php_txt
 		$ = {6c 65 3d 61 72 72 61 79 28 27 2f 65 74 63 2f 70 61 73 73 77 64 27 2c 27 2f 65 74 63 2f 73 68 61 64 6f 77 27 2c 27 2f 65 74 63 2f 6d 61 73 74 65 72 2e 70 61 73 73 77 64 27 2c 27 2f 65 74 63 2f}
 		$ = {27 29 3b 0a 65 63 68 6f 20 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 73 75 62 6d 69 74 20 6e 61 6d 65 3d 73 61 76 65 20 76 61 6c 75 65 3d 73 61 76 65 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 68 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_load_shell_php_php_txt
@@ -8891,7 +8604,7 @@ rule SHELL_load_shell_php_php_txt
 		$ = {6f 20 22 3c 2f 64 69 76 3e 3c 2f 63 65 6e 74 65 72 3e 22 3b 0a 0a 0a 7d 0a 0a 0a 69 66 20 28 24 63 6d 64 29 7b 0a 0a 69 66 28 24 73 65 72 74 79 70 65 20 3d 3d 20 22 77 69 6e 64 61 22 29 7b 0a}
 		$ = {65 74 68 6f 64 3d 5c 22 50 4f 53 54 5c 22 3e 0a 3c 74 61 62 6c 65 20 69 64 3d 74 62 3e 3c 74 72 3e 3c 74 64 3e 43 6f 6d 6d 61 6e 64 3a 3c 49 4e 50 55 54 20 74 79 70 65 3d 5c 22 74 65 78 74 5c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_KA_uShell_php_php_txt
@@ -8903,7 +8616,7 @@ rule SHELL_KA_uShell_php_php_txt
 		$ = {6b 3b 0a 0a 0a 2f 2f 20 55 70 6c 6f 61 64 69 6e 67 0a 63 61 73 65 20 22 75 70 6c 6f 61 64 22 3a 0a 0a 65 63 68 6f 20 3c 3c 3c 48 54 4d 4c 0a 3c 62 3e 46 69 6c 65 20 55 70 6c 6f 61 64 3c 2f 62}
 		$ = {69 6e 74 20 22 cd e5 20 f3 e4 e0 b8 f2 f1 ff 20 e7 e0 e3 f0 f3 e7 e8 f2 fc 20 f4 e0 e9 eb ee 2e 20 c8 ed f4 e0 3a 5c 6e 22 3b 0a 20 20 20 20 70 72 69 6e 74 5f 72 28 24 5f 46 49 4c 45 53 29 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpshell17_php_txt
@@ -8915,7 +8628,7 @@ rule SHELL_phpshell17_php_txt
 		$ = {6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 24 77 6f 72 6b 5f 64 69 72 22 20 73 65 6c 65 63 74 65 64 3e 43 75 72 72 65 6e 74 20 44 69 72 65 63 74 6f 72 79 3c 2f 6f 70 74 69 6f 6e 3e 20 22 3b 0a}
 		$ = {3e 24 64 69 72 3c 2f 6f 70 74 69 6f 6e 3e 20 22 3b 0a 7d 20 65 6c 73 65 20 7b 0a 65 63 68 6f 20 22 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 24 77 6f 72 6b 5f 64 69 72 2f 24 64 69 72 22 3e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_WebShell_cgi_txt
@@ -8927,7 +8640,7 @@ rule SHELL_WebShell_cgi_txt
 		$ = {20 69 6e 64 65 78 20 3d 3e 20 24 69 6e 64 65 78 2c 20 6e 75 6d 62 65 72 20 3d 3e 20 24 69 6e 64 65 78 2b 31 2c 0a 20 20 20 20 20 20 20 20 20 20 20 20 66 69 72 73 74 20 3d 3e 20 24 69 6e 64 65}
 		$ = {20 7d 0a 20 20 20 20 20 20 20 20 69 66 20 28 24 61 6c 6c 6f 77 29 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 24 63 6f 6d 6d 61 6e 64 20 3d 7e 20 2f 5e 28 5c 77 2b 29 2f 3b 0a 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_lurm_safemod_on_cgi_txt
@@ -8939,7 +8652,7 @@ rule SHELL_lurm_safemod_on_cgi_txt
 		$ = {24 70 61 72 61 6d 7b 63 6d 64 7d 7c 22 29 3b 0a 77 68 69 6c 65 20 28 24 6c 69 6e 65 3d 3c 46 49 4c 45 48 41 4e 44 4c 45 3e 29 7b 70 72 69 6e 74 20 22 24 6c 69 6e 65 22 3b 7d 3b 0a 63 6c 6f 73}
 		$ = {6f 64 79 3e 0a 3c 2f 68 74 6d 6c 3e 0a 5b 69 6e 73 33 5d 0a 0a 73 75 62 20 72 65 61 64 5f 70 61 72 61 6d 20 7b 0a 24 62 75 66 66 65 72 20 3d 20 22 24 45 4e 56 7b 27 51 55 45 52 59 5f 53 54 52}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_telnet_cgi_txt
@@ -8951,7 +8664,7 @@ rule SHELL_telnet_cgi_txt
 		$ = {6d 65 6f 75 74 44 75 72 61 74 69 6f 6e 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 69 66 28 24 53 68 6f 77 44 79 6e 61 6d 69}
 		$ = {20 26 53 65 6e 64 46 69 6c 65 54 6f 42 72 6f 77 73 65 72 28 24 54 61 72 67 65 74 46 69 6c 65 29 3b 0a 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 65 6c 73 65 20 23 20 77 65 20 68 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_go_shell_cgi_txt
@@ -8963,7 +8676,7 @@ rule SHELL_go_shell_cgi_txt
 		$ = {50 61 73 73 77 6f 72 64 3a 0a 3c 69 6e 70 75 74 20 74 79 70 65 3d 74 65 78 74 20 63 6c 61 73 73 3d 22 54 45 58 54 22 20 6e 61 6d 65 3d 70 77 64 20 76 61 6c 75 65 3d 24 70 61 72 61 6d 7b 70 77}
 		$ = {0a 5b 6b 61 6c 61 62 61 6e 67 61 5d 0a 0a 73 75 62 20 72 65 61 64 5f 70 61 72 61 6d 20 7b 0a 24 62 75 66 66 65 72 20 3d 20 22 24 45 4e 56 7b 27 51 55 45 52 59 5f 53 54 52 49 4e 47 27 7d 22 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_telnetd_pl_txt
@@ -8975,7 +8688,7 @@ rule SHELL_telnetd_pl_txt
 		$ = {72 65 6f 70 65 6e 20 53 54 44 45 52 52 3a 20 24 21 22 3b 0a 20 20 20 20 63 6c 6f 73 65 28 24 74 74 79 29 3b 0a 0a 20 20 20 20 73 6c 65 65 70 28 31 29 3b 0a 0a 20 20 20 20 66 6f 72 65 61 63 68}
 		$ = {72 20 28 6d 79 20 24 69 20 3d 20 30 3b 20 24 69 20 3c 20 32 35 36 3b 20 24 69 2b 2b 29 20 7b 0a 20 20 20 20 20 6d 79 20 24 70 74 79 20 3d 20 67 65 74 5f 74 74 79 28 24 69 2c 20 22 2f 64 65 76}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_shellbot_pl_txt
@@ -8986,7 +8699,7 @@ rule SHELL_shellbot_pl_txt
 		$ = {28 22 4d 4f 44 45 20 24 5f 5b 30 5d 20 2b 6f 20 24 5f 5b 31 5d 22 29 3b 0a 7d 0a 73 75 62 20 64 65 6f 70 20 7b 0a 20 20 20 72 65 74 75 72 6e 20 75 6e 6c 65 73 73 20 24 23 5f 20 3d 3d 20 31 3b}
 		$ = {20 20 20 20 20 20 20 20 20 20 73 65 65 6b 28 53 45 4e 44 46 49 4c 45 2c 20 24 62 79 74 65 73 5f 73 65 6e 64 65 64 2c 20 30 29 3b 0a 20 20 20 20 20 20 20 20 20 20 6d 79 20 24 73 65 6e 64 5f 62}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_connectback2_pl_txt
@@ -8998,7 +8711,7 @@ rule SHELL_connectback2_pl_txt
 		$ = {74 3b 20 0a 75 73 65 20 46 69 6c 65 48 61 6e 64 6c 65 3b 20 0a 73 6f 63 6b 65 74 28 53 4f 43 4b 45 54 2c 20 50 46 5f 49 4e 45 54 2c 20 53 4f 43 4b 5f 53 54 52 45 41 4d 2c 20 67 65 74 70 72 6f}
 		$ = {43 6f 6e 6e 65 63 74 65 64 20 74 6f 20 72 65 6d 6f 74 65 20 68 6f 73 74 20 5c 6e 22 3b 0a 53 4f 43 4b 45 54 2d 3e 61 75 74 6f 66 6c 75 73 68 28 29 3b 20 0a 6f 70 65 6e 28 53 54 44 49 4e 2c 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_perlbot_pl_txt
@@ -9010,7 +8723,7 @@ rule SHELL_perlbot_pl_txt
 		$ = {30 5d 22 29 3b 0a 7d 0a 73 75 62 20 74 6f 70 69 63 6f 20 7b 0a 20 20 20 72 65 74 75 72 6e 20 75 6e 6c 65 73 73 20 24 23 5f 20 3d 3d 20 31 3b 0a 20 20 20 73 65 6e 64 72 61 77 28 22 54 4f 50 49}
 		$ = {22 24 3a 3a 49 52 43 5f 63 75 72 5f 73 6f 63 6b 65 74 22 7d 7b 27 6d 65 75 69 70 27 7d 3b 0a 20 20 6d 79 20 24 6c 6f 6e 67 69 70 20 3d 20 75 6e 70 61 63 6b 28 22 4e 22 2c 69 6e 65 74 5f 61 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Asmodeus_v0_1_pl_txt
@@ -9022,7 +8735,7 @@ rule SHELL_Asmodeus_v0_1_pl_txt
 		$ = {22 3b 0a 0a 24 73 79 73 74 65 6d 3d 27 2f 62 69 6e 2f 73 68 27 3b 0a 0a 73 6f 63 6b 65 74 28 53 45 52 56 45 52 2c 20 50 46 5f 49 4e 45 54 2c 20 53 4f 43 4b 5f 53 54 52 45 41 4d 2c 20 24 70 72}
 		$ = {2c 20 53 4f 4d 41 58 43 4f 4e 4e 29 20 6f 72 20 64 69 65 20 22 6c 69 73 74 65 6e 3a 20 24 21 22 3b 0a 0a 66 6f 72 28 3b 24 70 61 64 64 72 3d 61 63 63 65 70 74 28 43 4c 49 45 4e 54 2c 20 53 45}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_telnet_pl_txt
@@ -9034,7 +8747,7 @@ rule SHELL_telnet_pl_txt
 		$ = {20 3d 20 24 43 75 72 72 65 6e 74 44 69 72 3b 0a 09 09 24 43 6f 6d 6d 61 6e 64 20 3d 20 22 63 64 20 5c 22 24 43 75 72 72 65 6e 74 44 69 72 5c 22 22 2e 24 43 6d 64 53 65 70 2e 22 63 64 20 24 31}
 		$ = {28 24 54 61 72 67 65 74 46 69 6c 65 29 20 69 66 28 24 54 61 72 67 65 74 46 69 6c 65 20 3d 20 24 43 75 72 72 65 6e 74 44 69 72 29 20 3d 7e 20 6d 2f 5b 5c 5c 5c 2f 5d 24 2f 3b 0a 09 09 24 54 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmdjsp_jsp_txt
@@ -9046,7 +8759,7 @@ rule SHELL_cmdjsp_jsp_txt
 		$ = {64 65 72 20 73 49 20 3d 20 6e 65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 70 2e 67 65 74 49 6e 70 75 74 53 74 72 65}
 		$ = {20 20 20 20 20 20 20 20 20 20 6f 75 74 70 75 74 20 2b 3d 20 73 3b 0a 20 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 63 61 74 63 68 28 49 4f 45 78 63 65 70 74 69 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jsp_reverse_jsp_txt
@@ -9058,7 +8771,7 @@ rule SHELL_jsp_reverse_jsp_txt
 		$ = {72 61 6d 65 74 65 72 28 22 69 70 61 64 64 72 65 73 73 22 29 3b 0a 53 74 72 69 6e 67 20 69 70 50 6f 72 74 20 3d 20 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 70 6f 72 74}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 6e 65 77 20 53 74 72 65 61 6d 43 6f 6e 6e 65 63 74 6f 72 28 70 72 6f 63 2e 67 65 74 49 6e 70 75 74 53 74 72 65 61 6d 28 29 2c 0a 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Java_Shell_js_txt
@@ -9070,7 +8783,7 @@ rule SHELL_Java_Shell_js_txt
 		$ = {6c 65 2e 73 65 74 54 65 78 74 41 74 74 72 69 62 75 74 65 73 28 6e 65 77 20 54 65 78 74 41 74 74 72 69 62 75 74 65 73 28 63 6f 6c 6f 72 43 75 72 73 6f 72 29 29 3b 0a 09 09 09 09 0a 09 09 09 09}
 		$ = {72 70 2e 65 78 65 63 28 63 6f 6d 6d 61 6e 64 29 3b 0a 09 09 09 09 09 63 6f 6d 6d 61 6e 64 20 3d 20 22 22 3b 0a 09 09 09 09 7d 0a 09 09 09 7d 20 63 61 74 63 68 20 28 45 78 63 65 70 74 69 6f 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_JspWebshell_1_2_jsp_txt
@@ -9082,7 +8795,7 @@ rule SHELL_JspWebshell_1_2_jsp_txt
 		$ = {65 3d 22 66 6f 72 6d 32 22 20 6d 65 74 68 6f 64 3d 22 70 6f 73 74 22 20 61 63 74 69 6f 6e 3d 22 22 3e 0a 20 20 20 20 20 20 20 20 20 20 3c 70 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e 20}
 		$ = {53 74 72 69 6e 67 20 74 65 6d 70 66 69 6c 65 6e 61 6d 65 3d 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 69 6c 65 22 29 3b 0a 20 20 20 20 20 20 20 20 20 20 46 69 6c 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jspshall_jsp_txt
@@ -9094,7 +8807,7 @@ rule SHELL_jspshall_jsp_txt
 		$ = {4a 73 70 57 72 69 74 65 72 20 6f 75 74 29 74 68 72 6f 77 73 20 45 78 63 65 70 74 69 6f 6e 7b 0a 20 69 66 28 6f 70 65 6e 48 74 74 70 50 72 6f 78 79 3d 21 6f 70 65 6e 48 74 74 70 50 72 6f 78 79}
 		$ = {2e 63 72 65 61 74 65 53 74 61 74 65 6d 65 6e 74 28 29 3b 0a 20 20 20 20 20 69 66 28 73 71 6c 43 6d 64 2e 74 72 69 6d 28 29 2e 74 6f 4c 6f 77 65 72 43 61 73 65 28 29 2e 73 74 61 72 74 73 57 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cgi_python_py_txt
@@ -9106,7 +8819,7 @@ rule SHELL_cgi_python_py_txt
 		$ = {42 52 3e 22 22 22 0a 62 6f 64 79 65 6e 64 20 3d 20 27 3c 2f 42 4f 44 59 3e 3c 2f 48 54 4d 4c 3e 27 0a 65 72 72 6f 72 6d 65 73 73 20 3d 20 27 3c 43 45 4e 54 45 52 3e 3c 48 32 3e 53 6f 6d 65 74}
 		$ = {74 72 79 3a 0a 20 20 20 20 20 20 20 20 20 20 20 20 63 68 69 6c 64 5f 73 74 64 69 6e 2c 20 63 68 69 6c 64 5f 73 74 64 6f 75 74 20 3d 20 6f 73 2e 70 6f 70 65 6e 32 28 74 68 65 63 6d 64 29 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wh_bindshell_py_txt
@@ -9118,7 +8831,7 @@ rule SHELL_wh_bindshell_py_txt
 		$ = {20 20 20 20 20 20 20 20 20 65 72 72 6f 72 3d 73 74 64 65 72 72 6f 72 2e 72 65 61 64 28 29 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 69 66 20 65 72 72 6f 72 3a 0a 20 20 20}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 63 6f 6e 6e 65 63 74 69 6f 6e 2e 73 65 6e 64 28 65 72 72 6f 72 29 0a 20 20 20 20 23 23 23 50 72 6f 6d 70 74 0a 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_smtpd_py_txt
@@ -9130,7 +8843,7 @@ rule SHELL_smtpd_py_txt
 		$ = {20 70 72 6f 63 65 73 73 5f 6d 65 73 73 61 67 65 28 73 65 6c 66 2c 20 70 65 65 72 2c 20 6d 61 69 6c 66 72 6f 6d 2c 20 72 63 70 74 74 6f 73 2c 20 64 61 74 61 29 3a 0a 20 20 20 20 20 20 20 20 66}
 		$ = {20 20 20 20 65 6c 69 66 20 63 6f 6d 6d 61 6e 64 20 69 6e 20 28 27 6a 6f 69 6e 27 2c 20 27 6c 65 61 76 65 27 29 3a 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 23 20 54 42 44 3a 20 74 68}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Phyton_Shell_py_txt
@@ -9142,7 +8855,7 @@ rule SHELL_Phyton_Shell_py_txt
 		$ = {5b 31 5d 3d 3d 22 2d 62 22 3a 20 0a 09 50 57 3d 61 72 67 76 5b 32 5d 0a 09 50 4f 52 54 3d 61 72 67 76 5b 33 5d 0a 65 6c 69 66 20 61 72 67 76 5b 31 5d 3d 3d 22 2d 72 22 20 61 6e 64 20 6c 65 6e}
 		$ = {69 6e 64 28 28 27 6c 6f 63 61 6c 68 6f 73 74 27 2c 20 50 4f 52 54 29 29 0a 09 73 6f 63 6b 2e 6c 69 73 74 65 6e 28 30 29 0a 0a 72 75 6e 3d 54 72 75 65 0a 77 68 69 6c 65 20 72 75 6e 3a 0a 0a 09}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mod_joomla_shell_zip
@@ -9154,7 +8867,7 @@ rule SHELL_mod_joomla_shell_zip
 		$ = {eb e7 b1 84 4a b0 51 20 4b 06 60 bc b2 e0 50 8b a7 e5 87 b9 ad 6c 8c 4e 76 16 da 7e f1 21 71 3c 99 56 08 db 1e 1f a5 9a 63 0c 5d 3a 83 f2 18 4f 44 1c 5e 68 aa 7e 9c 96 8c 52 f5 e1 46 2d a0 9a}
 		$ = {46 a0 b5 f9 97 61 63 6a ce 63 3f d3 dd 2f c0 ae a8 66 7f ab 83 1d a9 1f c5 b9 9b 8f a8 1f 6c 2e c6 4e 48 44 38 6f 1e f3 ab 7f bd e3 58 5a 69 ec 50 b3 a9 09 30 46 bf 42 5b a4 3d 75 c0 c4 e2 1b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mod_joomla_shell_PNG
@@ -9166,7 +8879,7 @@ rule SHELL_mod_joomla_shell_PNG
 		$ = {40 52 60 ef 4d 81 4f f0 89 e7 43 e0 d3 88 02 7b 8d a1 9f f6 86 72 20 5b 06 fd 34 1a 0c c0 67 20 29 b0 f7 a6 c0 27 f8 44 7e 0b 3e 8d 28 b0 d7 18 fa 69 6f 28 07 b2 65 d0 4f a3 c1 c0 1f 7c 76 ef}
 		$ = {43 46 ee f2 85 71 c2 a7 7f 09 6f 80 51 37 81 4f 23 77 c1 b8 b5 1e 48 38 1e 09 6f 80 91 07 c1 a7 91 bb 60 dc 5a 0f 24 1c 8f 84 37 c0 c8 83 ad e5 d3 e8 62 a6 c6 c8 6f 4d 3d 66 bf bd bf f0 48 b8}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_DefaceKeeper_0_2_php_txt
@@ -9178,7 +8891,7 @@ rule SHELL_DefaceKeeper_0_2_php_txt
 		$ = {46 75 5a 48 6c 6a 63 45 39 33 4d 45 74 4b 52 31 4a 73 57 6d 31 47 61 6c 70 54 51 54 6c 4a 51 30 6b 34 59 55 68 53 64 47 4a 45 4e 44 68 68 52 31 5a 6f 0a 57 6b 51 30 4f 47 52 48 62 44 42 69 52}
 		$ = {5a 71 57 6c 51 78 0a 59 30 6c 72 54 6e 5a 6b 57 45 70 77 44 51 70 61 57 45 70 6a 53 57 6f 30 4f 47 4e 44 51 6d 68 69 52 32 78 75 59 6d 6f 78 59 30 6c 74 54 6d 78 69 62 6c 4a 73 59 32 78 33 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_3802_php
@@ -9186,7 +8899,7 @@ rule SHELL_3802_php
 	strings:
 		$ = {3c 3f 70 68 70 20 0a 75 6e 73 65 74 28 24 6a 6b 68 79 2c 24 6a 6b 5f 75 69 64 29 3b 20 0a 24 6a 6b 5f 75 69 64 3d 27 33 38 30 32 27 3b 20 0a 24 6a 6b 68 79 3d 61 72 72 61 79 28 29 3b 20 0a 24 6a 6b 68 79 5b 33 38 30 32 5d 3d 27 66 65 78 69 6e 27 3b 20 0a 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_unknown_d83650f069
@@ -9198,7 +8911,7 @@ rule SHELL_unknown_d83650f069
 		$ = {20 2e 3d 20 22 58 3a 20 2e 2e 2f 73 68 65 6c 6c 2e 70 68 70 20 5c 72 5c 6e 22 3b 0d 0a 24 6f 75 74 20 2e 3d 20 22 59 3a 20 3c 3f 70 68 70 20 65 76 61 6c 28 5c 24 5f 50 4f 53 54 31 29 3b 3f 3e}
 		$ = {24 66 70 29 29 7b 0d 0a 24 72 65 73 70 5f 73 74 72 3d 22 22 3b 0d 0a 24 72 65 73 70 5f 73 74 72 20 2e 3d 20 66 67 65 74 73 28 24 66 70 2c 35 31 32 29 3b 2f 2f e8 bf 94 e5 9b 9e e5 80 bc e6 94}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_redirect_asp
@@ -9210,7 +8923,7 @@ rule SHELL_redirect_asp
 		$ = {22 34 22 29 2b 22 26 75 72 6c 3d 22 29 3b 0a 20 20 20 20 20 20 20 20 20 63 6f 64 65 64 74 65 78 74 20 3d 20 63 6f 64 65 64 74 65 78 74 2e 72 65 70 6c 61 63 65 28 2f 28 3c 28 3f 3a 66 72 61 6d}
 		$ = {26 70 61 72 65 6e 74 3d 22 2b 70 72 65 75 72 6c 5f 31 2b 22 26 75 72 6c 3d 22 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 63 6f 64 65 64 74 65 78 74 20 3d 20 63 6f 64 65 64 74 65 78 74 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_a_asp
@@ -9218,7 +8931,7 @@ rule SHELL_a_asp
 	strings:
 		$ = {3c 25 20 0a 64 69 6d 20 78 31 2c 78 32 20 0a 78 31 20 3d 20 72 65 71 75 65 73 74 28 22 68 22 29 20 0a 78 32 20 3d 20 78 31 20 0a 65 76 61 6c 20 78 32 20 0a 25 3e 20 0a 3c 21 2d 2d 20 79 65 73 2b 2b 20 2d 2d 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_ice_cfm
@@ -9230,7 +8943,7 @@ rule SHELL_ice_cfm
 		$ = {74 6f 72 79 28 29 29 7b 69 66 28 6e 6f 74 20 64 66 2e 65 78 69 73 74 73 28 29 29 7b 64 66 2e 6d 6b 64 69 72 28 29 3b 7d 4c 3d 73 66 2e 6c 69 73 74 46 69 6c 65 73 28 29 3b 0a 66 6f 72 28 69 3d}
 		$ = {61 73 74 4d 6f 64 69 66 69 65 64 28 46 6f 72 6d 2e 7a 31 2c 50 61 72 73 65 44 61 74 65 54 69 6d 65 28 46 6f 72 6d 2e 7a 32 29 29 3b 4f 3d 22 31 22 3b 3c 2f 43 46 53 43 52 49 50 54 3e 3c 2f 43}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_guo_php
@@ -9238,7 +8951,7 @@ rule SHELL_guo_php
 	strings:
 		$ = {3c 3f 70 68 70 20 28 24 77 77 77 3d 20 24 5f 50 4f 53 54 5b 27 69 63 65 27 5d 29 20 26 26 20 40 70 72 65 67 5f 72 65 70 6c 61 63 65 28 27 2f 61 64 2f 65 27 2c 27 40 27 2e 73 74 72 5f 72 6f 74 31 33 28 27 72 69 6e 79 27 29 2e 27 28 24 77 77 77 29 27 2c 20 27 61 64 64 27 29 3b 3f 3e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_w_ob_start02_php
@@ -9246,7 +8959,7 @@ rule SHELL_w_ob_start02_php
 	strings:
 		$ = {3c 3f 70 68 70 20 0a 6f 62 5f 73 74 61 72 74 28 66 75 6e 63 74 69 6f 6e 20 28 24 63 2c 24 64 29 7b 72 65 67 69 73 74 65 72 5f 73 68 75 74 64 6f 77 6e 5f 66 75 6e 63 74 69 6f 6e 28 27 61 73 73 65 72 74 27 2c 24 63 29 3b 7d 29 3b 20 0a 65 63 68 6f 20 24 5f 52 45 51 55 45 53 54 5b 27 70 61 73 73 27 5d 3b 20 0a 6f 62 5f 65 6e 64 5f 66 6c 75 73 68 28 29 3b 20 0a 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_w_php
@@ -9257,7 +8970,7 @@ rule SHELL_w_php
 		$ = {6e 20 20 61 72 72 61 79 20 20 e8 bf 94 e5 9b 9e e6 95 b0 e7 bb 84 e6 a0 bc e5 bc 8f ef bc 8c e5 a6 82 e6 9e 9c ef bc 8c 64 61 74 61 e4 b8 ba e7 a9 ba ef bc 8c e5 88 99 e8 bf 94 e5 9b 9e e7 a9}
 		$ = {e7 a9 ba e6 95 b0 e7 bb 84 20 0a 2a 2f 20 0a 66 75 6e 63 74 69 6f 6e 20 73 74 72 69 6e 67 32 61 72 72 61 79 28 24 64 61 74 61 29 20 7b 20 0a 69 66 28 24 64 61 74 61 20 3d 3d 20 27 27 29 20 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_w_jsp
@@ -9269,7 +8982,7 @@ rule SHELL_w_jsp
 		$ = {6d 2e 65 78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67 65}
 		$ = {3d 6e 65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_209cd9e070
@@ -9281,7 +8994,7 @@ rule SHELL_unknown_209cd9e070
 		$ = {2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 5b 2b 5d 0a 0a 3c 25 40 20 50 61 67 65 20 4c 61 6e 67 75 61 67 65 3d 22 4a 73 63 72 69 70 74 22 25 3e 3c 25 65 76 61 6c 28 52 65 71 75 65 73 74 2e 49}
 		$ = {20 20 0a 20 49 49 53 20 36 2e 30 20 bd e2 ce f6 3a 20 20 78 2e 61 73 70 2f 78 2e 6a 70 67 20 20 78 2e 61 73 70 3b 78 2e 6a 70 67 20 a3 bb c8 e7 b9 fb d3 f6 b5 bd b0 b2 c8 ab b9 b7 a3 ac bb fb}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_hkmjj_asp
@@ -9293,7 +9006,7 @@ rule SHELL_hkmjj_asp
 		$ = {6c 73 65 69 66 20 41 73 63 20 28 43 75 72 63 68 61 72 29 20 3d 20 33 32 20 74 68 65 6e 20 20 20 0a 20 20 20 20 20 20 20 20 20 20 20 20 43 75 72 63 68 61 72 20 3d 20 63 68 72 20 28 31 38 29 20}
 		$ = {72 20 28 41 73 63 20 28 43 75 72 63 68 61 72 29 20 2d 33 29 20 20 20 0a 20 20 20 20 20 20 20 20 45 6e 64 20 69 66 20 20 20 0a 20 20 20 20 20 20 20 20 44 65 43 6f 64 65 20 3d 20 44 65 63 6f 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mdb_asp
@@ -9301,7 +9014,7 @@ rule SHELL_mdb_asp
 	strings:
 		$ = {00 4e 00 61 00 76 00 50 00 61 00 6e 00 65 00 47 00 72 00 6f 00 75 00 70 00 43 00 61 00 74 00 65 00 67 00 6f 00 72 00 69 00 65 00 73 00 49 00 64 00 dc 00 d8 00 a4 00 86 00 64 00 0e 00 05 00 ff}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_w_ob_start01_php
@@ -9309,7 +9022,7 @@ rule SHELL_w_ob_start01_php
 	strings:
 		$ = {3c 3f 70 68 70 20 0a 24 65 76 61 6c 73 74 72 3d 22 22 3b 20 0a 6f 62 5f 73 74 61 72 74 28 66 75 6e 63 74 69 6f 6e 20 28 24 63 2c 24 64 29 7b 67 6c 6f 62 61 6c 20 24 65 76 61 6c 73 74 72 3b 24 65 76 61 6c 73 74 72 3d 24 63 3b 7d 29 3b 20 0a 65 63 68 6f 20 24 5f 52 45 51 55 45 53 54 5b 27 70 61 73 73 27 5d 3b 20 0a 6f 62 5f 65 6e 64 5f 66 6c 75 73 68 28 29 3b 20 0a 61 73 73 65 72 74 28 24 65 76 61 6c 73 74 72 29 3b 20 0a 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_fuck_php
@@ -9317,7 +9030,7 @@ rule SHELL_fuck_php
 	strings:
 		$ = {3c 3f 70 68 70 20 24 4b 3d 73 54 72 5f 52 65 70 4c 61 43 65 28 27 60 27 2c 27 27 2c 27 61 60 73 60 73 60 65 60 72 60 74 27 29 3b 24 4d 3d 24 5f 50 4f 53 54 5b 69 63 65 5d 3b 49 46 28 24 4d 3d 3d 4e 75 4c 6c 29 48 65 61 44 65 52 28 27 53 74 61 74 75 73 3a 34 30 34 27 29 3b 45 6c 73 65 2f 2a 2a 2f 24 4b 28 24 4d 29 3b 3f 3e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_ice_aspx
@@ -9325,7 +9038,7 @@ rule SHELL_ice_aspx
 	strings:
 		$ = {47 49 46 38 39 61 0a 3c 25 40 20 50 61 67 65 20 4c 61 6e 67 75 61 67 65 3d 22 4a 73 63 72 69 70 74 22 25 3e 3c 25 65 76 61 6c 28 52 65 71 75 65 73 74 2e 49 74 65 6d 5b 22 69 63 65 22 5d 2c 22 75 6e 73 61 66 65 22 29 3b 25 3e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_customize_ashx
@@ -9336,7 +9049,7 @@ rule SHELL_customize_ashx
 		$ = {20 20 20 20 20 20 7b 20 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 62 72 65 61 6b 3b 20 0a 20 20 20 20 20 20 20 20 20 20 20}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 52 20 2b 3d 20 53 74 72 69 6e 67 2e 46 6f 72 6d 61 74 28 22 7b 30 7d 5c 74 7c 5c 74 22 2c 20 64 73 2e 54 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_php_jpg
@@ -9348,7 +9061,7 @@ rule SHELL_php_jpg
 		$ = {13 7f e8 36 f5 f4 a7 86 bc 0b a4 78 4b 58 f1 36 a7 a6 42 f0 5c f8 8a fd 75 3d 40 17 25 1e e1 6d e2 b7 de a3 f8 73 1c 11 e4 0e a4 13 d4 9a c8 f0 97 c2 af 0c fc 2c d2 fc 63 ff 00 08 d6 9e d6 1f}
 		$ = {f0 41 04 82 0d 4d 45 00 7e 3b ff 00 c1 33 bf e1 1e f8 69 fb 7d 7c 5f d3 4d d5 a6 85 a2 58 69 7a c6 9f 66 2f 2e 82 22 22 6a b6 ab 1c 61 e4 6c b1 0a 9d c9 27 04 f3 cd 7e b0 ff 00 c2 d0 f0 6f fd}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ice_jsp
@@ -9360,7 +9073,7 @@ rule SHELL_ice_jsp
 		$ = {2e 65 78 65 63 75 74 65 51 75 65 72 79 28 71 29 3b 52 65 73 75 6c 74 53 65 74 4d 65 74 61 44 61 74 61 20 64 3d 72 2e 67 65 74 4d 65 74 61 44 61 74 61 28 29 3b 69 6e 74 20 6e 3d 64 2e 67 65 74}
 		$ = {6e 65 77 20 42 75 66 66 65 72 65 64 52 65 61 64 65 72 28 6e 65 77 20 49 6e 70 75 74 53 74 72 65 61 6d 52 65 61 64 65 72 28 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 6e 65 77}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_b855e99ea0
@@ -9372,7 +9085,7 @@ rule SHELL_unknown_b855e99ea0
 		$ = {6c 6f 73 65 28 29 3b 0a 09 09 63 2e 63 6c 6f 73 65 28 29 3b 0a 09 7d 0a 09 25 3e 0a 3c 25 0a 0a 09 53 79 73 74 65 6d 2e 6f 75 74 2e 70 72 69 6e 74 6c 6e 28 72 65 71 75 65 73 74 2e 67 65 74 4d}
 		$ = {69 66 20 28 5a 2e 65 71 75 61 6c 73 28 22 43 22 29 29 20 7b 0a 09 09 09 53 74 72 69 6e 67 20 6c 20 3d 20 22 22 3b 0a 09 09 09 42 75 66 66 65 72 65 64 52 65 61 64 65 72 20 62 72 20 3d 20 6e 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_00191595e6
@@ -9383,19 +9096,7 @@ rule SHELL_unknown_00191595e6
 		$ = {22 41 44 4f 44 42 2e 53 74 72 65 61 6d 22 29 0a 20 73 47 65 74 2e 4d 6f 64 65 20 3d 20 33 0a 20 73 47 65 74 2e 54 79 70 65 20 3d 20 31 0a 20 73 47 65 74 2e 4f 70 65 6e 28 29 0a 20 73 47 65 74}
 		$ = {74 2e 4f 70 65 6e 28 29 0a 20 73 47 65 74 2e 57 72 69 74 65 28 78 50 6f 73 74 2e 72 65 73 70 6f 6e 73 65 42 6f 64 79 29 0a 20 73 47 65 74 2e 53 61 76 65 54 6f 46 69 6c 65 20 22 44 3a 5c 77 65}
 	condition:
-		 any of them
-}
-
-rule SHELL_z_2016_01_05_php
-{
-	strings:
-		$ = {75 6e 63 74 69 6f 6e 20 63 76 65 28 24 73 74 72 2c 24 6b 65 79 29 0a 7b 0a 24 74 3d 22 22 3b 0a 66 6f 72 28 24 69 3d 30 3b 20 24 69 3c 73 74 72 6c 65 6e 28 24 73 74 72 29 3b 20 24 69 3d 24 69}
-		$ = {20 24 6b 3d 28 28 24 69 2b 32 29 2f 32 29 25 73 74 72 6c 65 6e 28 24 6b 65 79 29 3b 0a 20 20 24 70 3d 73 75 62 73 74 72 28 24 6b 65 79 2c 20 24 6b 2c 31 29 3b 0a 20 20 69 66 28 69 73 5f 6e 75}
-		$ = {75 62 73 74 72 28 24 73 74 72 2c 20 24 69 2c 31 29 29 29 0a 20 20 7b 0a 20 20 20 20 24 74 3d 24 74 2e 63 68 72 28 68 65 78 64 65 63 28 73 75 62 73 74 72 28 24 73 74 72 2c 20 24 69 2c 32 29 29}
-		$ = {20 7d 0a 20 20 65 6c 73 65 0a 20 20 7b 0a 20 20 20 20 24 74 3d 24 74 2e 63 68 72 28 68 65 78 64 65 63 28 73 75 62 73 74 72 28 24 73 74 72 2c 20 24 69 2c 34 29 29 29 3b 0a 20 20 20 20 24 69 3d}
-		$ = {20 7d 0a 7d 0a 72 65 74 75 72 6e 28 24 74 29 3b 0a 7d 0a 0a 28 40 24 5f 3d 63 76 65 28 27 36 41 37 36 37 43 36 38 37 42 37 37 27 2c 27 33 39 27 29 29 2e 40 24 5f 28 63 76 65 28 27 36 37 37 36}
-	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_x_php
@@ -9403,7 +9104,7 @@ rule SHELL_x_php
 	strings:
 		$ = {3c 3f 70 68 70 20 0a 69 66 28 69 73 73 65 74 28 24 5f 50 4f 53 54 5b 27 30 4b 27 5d 29 20 26 26 20 73 75 62 73 74 72 28 6d 64 35 28 24 5f 50 4f 53 54 5b 27 30 4b 27 5d 29 2c 32 30 29 3d 3d 27 65 30 35 37 66 32 30 66 38 38 33 65 27 29 7b 20 0a 24 45 78 70 3d 73 74 72 72 65 76 28 24 5f 50 4f 53 54 5b 27 71 77 65 72 27 5d 29 3b 65 76 61 6c 28 24 45 78 70 28 24 5f 50 4f 53 54 5b 7a 30 5d 29 29 3b 7d 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_customize_asmx
@@ -9415,7 +9116,7 @@ rule SHELL_customize_asmx
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 43 6f 6e 6e 2e 43 6c 6f 73 65 28 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
 		$ = {29 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ice_jpg
@@ -9427,7 +9128,7 @@ rule SHELL_ice_jpg
 		$ = {44 90 6b 3a 65 85 de 99 04 8b 21 09 e4 5c 49 6f 24 aa cb d0 fc d6 b0 90 7b 60 fa d6 f5 14 00 51 45 14 00 51 45 14 00 51 45 14 00 51 45 14 00 51 45 14 00 51 45 14 00 51 45 14 00 51 45 14 00 51}
 		$ = {ec be 08 ff 00 82 df 78 ca c2 de e1 7c 61 f0 c7 42 d7 67 67 cc 2f a2 6a 13 69 aa 8b 81 c3 2c ab 70 58 e7 3c 82 bd 47 1c 73 f5 26 81 f1 17 e0 6f fc 14 8f c4 fe 34 f8 6d e2 ef 03 4c 9a df 82 a6}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_ae02f44665
@@ -9439,7 +9140,7 @@ rule SHELL_unknown_ae02f44665
 		$ = {5f 50 4f 53 54 5b 27 68 27 5d 2c 22 41 63 63 65 73 73 22 29 3b 0d 0a 2f 2f e8 8f 9c e5 88 80 e4 b8 80 e5 8f a5 e8 af 9d 0d 0a 35 e3 80 81 69 6e 63 6c 75 64 65 20 28 24 75 69 64 29 3b 0d 0a 2f}
 		$ = {9d e5 ae a2 e6 88 b7 e7 ab af e7 9a 84 e4 b8 93 e5 ae b6 e6 a8 a1 e5 bc 8f e6 89 a7 e8 a1 8c e7 9b b8 e5 85 b3 e7 9a 84 70 68 70 e8 af ad e5 8f a5 0d 0a e7 a8 8b e5 ba 8f e4 bb a3 e7 a0 81 0d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_aspx_jpg
@@ -9451,7 +9152,7 @@ rule SHELL_aspx_jpg
 		$ = {0d 37 c7 df d9 af c7 3e 0b 8a ff 00 fb 36 ea ee cc 5c db 4e c4 88 fc f8 1d 67 89 64 c0 27 63 3c 4a ac 40 24 02 48 04 80 2b f2 4b fe 09 bd fb 14 f8 1f f6 c1 ff 00 85 89 ff 00 09 96 ab e2 0d 33}
 		$ = {a1 23 01 97 48 5c 8f 7e 5a bc ff 00 c4 bf f0 52 5f da 47 c5 9a 1d e6 91 7f f1 3e ed 2c ee e3 31 4a 6c 74 eb 2b 39 b6 9e bb 66 86 04 91 3e aa c0 d7 eb 3f fc 3a e3 f6 62 ff 00 a2 65 ff 00 95 fd}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_p_php
@@ -9459,7 +9160,7 @@ rule SHELL_p_php
 	strings:
 		$ = {3c 3f 70 68 70 20 0a 24 61 3d 27 6c 61 76 65 27 3b 20 0a 24 62 3d 27 28 24 5f 50 4f 53 54 5b 68 5d 29 27 3b 20 0a 24 61 3d 73 74 72 72 65 76 28 24 61 29 3b 20 0a 40 61 73 73 65 72 74 28 24 61 2e 24 62 29 3b 20 0a 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_sqzr_php
@@ -9470,7 +9171,7 @@ rule SHELL_sqzr_php
 		$ = {22 2c 20 22 22 2c 20 22 6b 62 61 6b 73 6b 65 36 6b 34 6b 5f 6b 64 6b 65 6b 63 6b 6f 6b 64 6b 65 22 29 3b 20 0a 24 73 62 70 20 3d 20 24 76 62 6c 28 22 63 74 77 22 2c 22 22 2c 22 63 74 77 63 63}
 		$ = {2c 22 22 2c 22 63 74 77 63 63 74 77 72 65 63 74 77 61 74 63 74 77 65 63 74 77 5f 66 63 74 77 75 6e 63 63 74 77 74 63 74 77 69 6f 63 74 77 6e 22 29 3b 20 0a 24 6d 70 79 20 3d 20 24 73 62 70 28}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_2d14bb3bb0
@@ -9482,7 +9183,7 @@ rule SHELL_unknown_2d14bb3bb0
 		$ = {54 00 6c 00 6e 00 74 00 70 00 6f 00 72 00 74 00 26 00 63 00 68 00 72 00 28 00 31 00 33 00 29 00 26 00 63 00 68 00 72 00 28 00 31 00 30 00 29 00 0d 00 0a 00 70 00 63 00 41 00 6e 00 79 00 77 00}
 		$ = {00 65 00 67 00 52 00 65 00 61 00 64 00 28 00 70 00 63 00 41 00 6e 00 79 00 77 00 68 00 65 00 72 00 65 00 4b 00 65 00 79 00 29 00 0d 00 0a 00 49 00 66 00 20 00 50 00 41 00 57 00 50 00 6f 00 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_f323760ae8
@@ -9494,7 +9195,7 @@ rule SHELL_unknown_f323760ae8
 		$ = {72 00 69 00 74 00 79 00 2e 00 41 00 63 00 63 00 65 00 73 00 73 00 43 00 6f 00 6e 00 74 00 72 00 6f 00 6c 00 2e 00 46 00 69 00 6c 00 65 00 53 00 79 00 73 00 74 00 65 00 6d 00 52 00 69 00 67 00}
 		$ = {54 00 79 00 70 00 65 00 2e 00 41 00 6c 00 6c 00 6f 00 77 00 29 00 29 00 3b 00 0d 00 0a 00 0d 00 0a 00 64 00 69 00 72 00 69 00 6e 00 66 00 6f 00 2e 00 53 00 65 00 74 00 41 00 63 00 63 00 65 00}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_f4ab38053b
@@ -9506,7 +9207,7 @@ rule SHELL_unknown_f4ab38053b
 		$ = {65 00 64 00 74 00 66 00 69 00 6c 00 65 00 2e 00 22 00 5c 00 74 00 22 00 3b 00 0d 00 0a 00 09 00 09 00 09 00 40 00 63 00 68 00 6d 00 6f 00 64 00 28 00 24 00 65 00 64 00 74 00 66 00 69 00 6c 00}
 		$ = {00 73 00 74 00 72 00 70 00 6f 00 73 00 28 00 24 00 54 00 2c 00 20 00 24 00 69 00 48 00 65 00 72 00 65 00 29 00 3b 00 0d 00 0a 00 09 00 09 00 09 00 09 00 69 00 66 00 20 00 28 00 24 00 69 00 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpspy2011_ccc
@@ -9518,7 +9219,7 @@ rule SHELL_phpspy2011_ccc
 		$ = {70 00 3e 00 27 00 29 00 3b 00 0d 00 0a 00 09 00 66 00 6f 00 72 00 6d 00 66 00 6f 00 6f 00 74 00 65 00 72 00 28 00 29 00 3b 00 0d 00 0a 00 7d 00 2f 00 2f 00 65 00 6e 00 64 00 20 00 65 00 76 00}
 		$ = {63 00 6c 00 6f 00 73 00 65 00 28 00 24 00 66 00 70 00 29 00 3b 00 0d 00 0a 00 09 00 7d 00 0d 00 0a 00 7d 00 0d 00 0a 00 66 00 75 00 6e 00 63 00 74 00 69 00 6f 00 6e 00 20 00 64 00 69 00 72 00}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_998ddca46a
@@ -9530,7 +9231,7 @@ rule SHELL_unknown_998ddca46a
 		$ = {20 00 28 00 24 00 73 00 74 00 72 00 43 00 6f 00 6f 00 6b 00 69 00 65 00 20 00 21 00 3d 00 20 00 22 00 22 00 29 00 3f 00 22 00 43 00 6f 00 6f 00 6b 00 69 00 65 00 3a 00 20 00 24 00 7b 00 73 00}
 		$ = {66 00 70 00 2c 00 20 00 35 00 31 00 32 00 29 00 3b 00 7d 00 0d 00 0a 00 09 00 24 00 6e 00 46 00 69 00 6e 00 64 00 20 00 3d 00 20 00 73 00 74 00 72 00 70 00 6f 00 73 00 28 00 24 00 73 00 74 00}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_4b65aa604b
@@ -9542,7 +9243,7 @@ rule SHELL_unknown_4b65aa604b
 		$ = {09 00 7b 00 0d 00 0a 00 09 00 09 00 24 00 6e 00 20 00 3d 00 20 00 66 00 74 00 65 00 6c 00 6c 00 28 00 24 00 66 00 70 00 29 00 2d 00 24 00 66 00 61 00 3b 00 0d 00 0a 00 09 00 09 00 24 00 66 00}
 		$ = {29 00 3b 00 0d 00 0a 00 09 00 69 00 66 00 20 00 28 00 24 00 64 00 61 00 74 00 61 00 29 00 0d 00 0a 00 09 00 7b 00 0d 00 0a 00 09 00 09 00 24 00 6e 00 20 00 3d 00 20 00 66 00 74 00 65 00 6c 00}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_c75dadc91c
@@ -9554,7 +9255,7 @@ rule SHELL_unknown_c75dadc91c
 		$ = {2e 00 45 00 78 00 69 00 73 00 74 00 73 00 28 00 50 00 29 00 29 00 0d 00 0a 00 09 00 7b 00 0d 00 0a 00 09 00 09 00 76 00 61 00 72 00 20 00 54 00 20 00 3d 00 20 00 6e 00 65 00 77 00 20 00 53 00}
 		$ = {00 09 00 52 00 65 00 73 00 70 00 6f 00 6e 00 73 00 65 00 2e 00 57 00 72 00 69 00 74 00 65 00 28 00 22 00 2d 00 2d 00 2d 00 2d 00 2d 00 2d 00 2d 00 2d 00 2d 00 2d 00 2d 00 2d 00 2d 00 2d 00 2d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_aa5d5da1eb
@@ -9566,7 +9267,7 @@ rule SHELL_unknown_aa5d5da1eb
 		$ = {5c 00 64 00 65 00 65 00 70 00 73 00 63 00 61 00 6e 00 5c 00 53 00 65 00 63 00 74 00 69 00 6f 00 6e 00 5c 00 6d 00 75 00 74 00 65 00 78 00 2e 00 64 00 62 00 5c 00 7c 00 43 00 3a 00 5c 00 50 00}
 		$ = {64 00 20 00 53 00 65 00 74 00 74 00 69 00 6e 00 67 00 73 00 5c 00 41 00 6c 00 6c 00 20 00 55 00 73 00 65 00 72 00 73 00 5c 00 41 00 70 00 70 00 6c 00 69 00 63 00 61 00 74 00 69 00 6f 00 6e 00}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_a2293a0841
@@ -9574,7 +9275,7 @@ rule SHELL_unknown_a2293a0841
 	strings:
 		$ = {66 6f 72 20 28 24 69 3d 31 3b 20 24 69 3c 32 35 35 3b 20 24 69 2b 2b 29 0a 7b 0a 0a 24 73 74 72 48 6f 73 74 20 3d 20 22 31 39 32 2e 31 36 38 2e 31 2e 7b 24 69 7d 22 3b 0a 24 66 70 20 3d 20 40 66 73 6f 63 6b 6f 70 65 6e 28 24 73 74 72 48 6f 73 74 2c 20 38 30 2c 20 24 65 72 72 6e 6f 2c 20 24 65 72 72 73 74 72 2c 20 31 29 3b 0a 69 66 20 28 21 24 66 70 29 0a 7b 0a 09 70 72 69 6e 74 20 22 7b 24 69 7d 2e 7b 24 65 72 72 73 74 72 7d 5c 6e 22 3b 0a 7d 0a 65 6c 73 65 0a 7b 0a 09 70 72 69 6e 74 20 22 7b 24 69 7d 2e 6f 70 65 6e 5c 6e 22 3b 0a 7d 0a 0a 66 63 6c 6f 73 65 28 24 66 70 29 3b 0a 0a 7d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_webshell_123_php
@@ -9586,7 +9287,7 @@ rule SHELL_webshell_123_php
 		$ = {6a 35 45 4c 32 54 6d 45 7a 64 50 56 47 55 4d 4c 72 61 76 4e 77 52 6d 49 32 46 6a 69 34 71 7a 2f 6f 35 33 54 74 58 32 42 6e 54 65 58 51 76 77 74 4a 55 30 59 2b 43 2b 64 71 55 6a 63 31 34 39 62}
 		$ = {5a 72 34 61 50 6c 33 66 52 7a 67 36 6a 4e 66 4c 76 78 67 48 44 47 7a 58 55 48 50 42 48 76 49 6b 2b 75 72 39 69 66 54 57 36 34 66 44 6e 70 68 76 48 5a 37 4d 54 47 6e 64 45 4d 33 2b 37 44 4e 62}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_s_php_txt
@@ -9598,7 +9299,7 @@ rule SHELL_s_php_txt
 		$ = {72 76 49 33 4c 42 30 77 32 38 36 57 51 43 61 32 44 67 32 56 62 63 6e 67 52 38 33 36 63 6b 75 75 61 35 55 66 52 59 50 47 4d 6e 62 49 70 57 61 32 74 37 5a 37 50 56 51 6b 41 61 2f 57 71 71 6d 67}
 		$ = {63 47 71 6a 67 64 34 38 33 30 62 6c 36 49 48 68 58 4b 30 76 4f 39 4e 7a 46 72 54 33 34 56 64 59 79 4f 49 32 65 63 4e 46 75 73 6b 78 77 4a 72 66 6b 34 38 73 2f 76 5a 72 37 52 48 38 56 36 55 56}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_tiamo_php_txt
@@ -9610,7 +9311,7 @@ rule SHELL_tiamo_php_txt
 		$ = {42 76 33 5a 5a 56 32 4b 45 43 4c 38 61 38 2b 4e 4e 4e 61 62 66 4b 68 68 31 61 35 45 51 61 78 53 41 39 77 30 34 63 64 49 4a 5a 72 48 75 49 4a 32 69 30 63 33 33 61 7a 6a 61 33 66 32 7a 49 34 50}
 		$ = {2f 65 50 42 6e 59 71 6e 4b 37 79 55 72 63 48 45 62 6d 4f 56 7a 41 67 62 6b 34 67 38 47 59 6d 45 44 69 64 51 4f 42 54 78 48 31 78 72 69 72 4f 49 56 34 41 59 76 56 46 48 4e 43 49 62 32 2b 45 4d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_xiaom_php
@@ -9618,7 +9319,7 @@ rule SHELL_xiaom_php
 	strings:
 		$ = {3c 3f 70 68 70 20 40 24 5f 3d 22 73 22 2e 22 73 22 2e 2f 2a 2d 20 0a 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 20 0a 2a 2d 2a 2f 22 65 22 2e 2f 2a 2d 2f 2a 2d 2a 2f 22 72 22 3b 40 24 5f 3d 2f 2a 2d 2f 2a 2d 2a 2f 22 61 22 2e 2f 2a 2d 2f 2a 2d 2a 2f 24 5f 2e 2f 2a 2d 2f 2a 2d 2a 2f 22 74 22 3b 40 24 5f 2f 2a 2d 2f 2a 2d 2a 2f 28 24 2f 2a 2d 2f 2a 2d 2a 2f 7b 22 5f 50 22 2e 2f 2a 2d 2f 2a 2d 2a 2f 22 4f 53 22 2e 2f 2a 2d 2f 2a 2d 2a 2f 22 54 22 7d 5b 2f 2a 2d 2f 20 0a 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 2f 0a 2a 2d 2a 2f 30 2f 2a 2d 2f 2a 2d 2a 2f 2d 2f 2a 2d 2f 2a 2d 2a 2f 32 2f 2a 2d 2f 2a 2d 2a 2f 2d 2f 2a 2d 2f 2a 2d 2a 2f 35 2f 2a 2d 2f 2a 2d 2a 2f 5d 29 3b 3f 3e 57 6f 6f 59 75 6e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_aioshell_php
@@ -9630,7 +9331,7 @@ rule SHELL_aioshell_php
 		$ = {29 0a 7b 0a 20 20 20 20 20 20 20 20 24 62 61 6e 6e 65 72 20 3d 20 22 63 6f 6e 6e 65 63 74 20 62 61 63 6b 20 66 72 6f 6d 20 70 68 70 73 68 65 6c 6c 5c 6e 22 3b 0a 20 20 20 20 20 20 20 20 24 73}
 		$ = {20 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 63 6f 6c 6f 72 3a 20 23 32 38 35 38 30 30 3b 20 62 61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 3a 20 23 30 30 30 30 30 30 3b 0a 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_itsec_php
@@ -9642,7 +9343,7 @@ rule SHELL_itsec_php
 		$ = {6f 20 24 73 62 65 70 5b 24 66 62 65 5d 3b 7d 7d 20 69 66 28 69 73 73 65 74 28 24 64 65 62 66 63 29 29 7b 7d 20 65 63 68 6f 20 24 62 6f 70 65 6e 73 2e 27 3c 2f 74 65 78 74 61 72 65 61 3e 3c 68}
 		$ = {20 20 20 20 20 20 20 20 20 24 72 6f 77 5b 24 6a 5d 20 3d 20 22 27 22 2e 6d 79 73 71 6c 5f 65 73 63 61 70 65 5f 73 74 72 69 6e 67 28 24 6b 29 2e 22 27 22 3b 0a 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_61acdc1876
@@ -9654,7 +9355,7 @@ rule SHELL_unknown_61acdc1876
 		$ = {ad 98 e5 9c a8 e8 af a5 e6 b4 9e ef bc 8c e4 bb 85 e9 99 90 32 30 31 30 e7 89 88 e6 9c ac ef bc 8c e5 af b9 e6 af 94 e4 ba 8c e8 80 85 e5 8d b3 e5 8f af e5 be 97 e5 88 b0 e7 ad 94 e6 a1 88 ef}
 		$ = {29 20 7b 0d 0a 66 6f 72 65 61 63 68 28 24 24 5f 72 65 71 75 65 73 74 20 61 73 20 24 5f 6b 65 79 20 3d 3e 20 24 5f 76 61 6c 75 65 29 20 7b 0d 0a 69 66 20 28 24 5f 6b 65 79 7b 30 7d 20 21 3d 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_0e2a755413
@@ -9666,7 +9367,7 @@ rule SHELL_unknown_0e2a755413
 		$ = {6f 72 74 20 6e 65 77 20 66 69 6c 65 20 6e 61 6d 65 20 61 6e 64 20 6e 65 77 20 66 69 6c 65 29 27 2c 27 6e 61 6d 65 27 3d 3e 27 65 64 69 74 66 69 6c 65 6e 61 6d 65 27 2c 27 76 61 6c 75 65 27 3d}
 		$ = {74 75 72 6e 20 28 24 70 61 74 68 20 3f 20 24 70 61 74 68 20 3a 20 24 70 72 29 3b 20 0a 7d 0a 0a 66 75 6e 63 74 69 6f 6e 20 63 66 28 24 66 6e 61 6d 65 2c 24 74 65 78 74 29 7b 0a 09 69 66 28 24}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_47d736d90c
@@ -9678,7 +9379,7 @@ rule SHELL_unknown_47d736d90c
 		$ = {74 43 6f 6e 73 75 6d 65 72 20 61 73 20 5c 24 43 6f 6e 73 75 6d 65 72 0a 7b 0a 20 20 4e 61 6d 65 20 3d 20 5c 22 63 6f 6e 73 50 43 53 56 32 5c 22 3b 0a 20 20 53 63 72 69 70 74 69 6e 67 45 6e 67}
 		$ = {20 63 68 65 63 6b 20 74 68 65 20 20 72 65 73 75 6c 74 21 21 3c 62 72 3e 49 66 20 74 68 65 20 72 65 73 75 6c 74 20 69 73 20 6e 6f 74 20 63 6f 72 72 65 63 74 2c 74 72 79 20 72 65 61 64 20 61 67}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_fc55db199f
@@ -9690,7 +9391,7 @@ rule SHELL_unknown_fc55db199f
 		$ = {e7 bd ae 22 e4 b8 80 e6 a0 8f e8 be 93 e5 85 a5 0d 0a e3 80 80 20 3c 4f 3e 68 3d 40 65 76 61 6c 28 24 5f 50 4f 53 54 5b 63 5d 29 3b 3c 2f 4f 3e 0d 0a 2a 20 3c 73 63 72 69 70 74 20 6c 61 6e 67}
 		$ = {3e 0d 0a 2a 20 24 66 69 6c 65 6e 61 6d 65 3d 24 5f 47 45 54 5b 27 78 62 69 64 27 5d 3b 0d 0a 20 20 20 69 6e 63 6c 75 64 65 20 28 24 66 69 6c 65 6e 61 6d 65 29 3b 0d 0a 2a 20 3c 3f 70 68 70 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_pass_waf_2014_10_19_php
@@ -9698,7 +9399,7 @@ rule SHELL_pass_waf_2014_10_19_php
 	strings:
 		$ = {3c 3f 70 68 70 20 0a 24 69 74 65 6d 5b 27 74 74 27 5d 20 3d 20 27 61 73 73 65 72 74 27 3b 20 0a 24 61 72 72 61 79 5b 5d 20 3d 20 24 69 74 65 6d 3b 20 0a 24 61 72 72 61 79 5b 30 5d 5b 27 74 74 27 5d 28 24 5f 50 4f 53 54 5b 27 74 74 31 32 33 34 27 5d 29 3b 20 20 2f 2f 63 61 69 64 61 6f 20 20 70 61 73 73 77 6f 72 64 3a 20 74 74 31 32 33 34 20 0a 3f 3e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_xw_php
@@ -9710,7 +9411,7 @@ rule SHELL_xw_php
 		$ = {6e 61 6d 65 22 29 29 20 65 63 68 6f 20 22 5b 24 64 69 72 2f 24 6d 6b 6e 61 6d 65 5d e8 af a5 e6 96 87 e4 bb b6 e5 b7 b2 e5 ad 98 e5 9c a8 22 3b 0a 09 09 09 09 65 6c 73 65 7b 0a 09 09 09 09 09}
 		$ = {6f 72 3d 22 23 30 30 30 30 30 30 22 20 63 6c 61 73 73 3d 22 73 74 79 6c 65 62 74 65 78 74 33 22 20 63 6f 6c 73 70 61 6e 3d 22 32 22 3e e8 87 aa e5 ae 9a e4 b9 89 e6 9f a5 e7 9c 8b 50 48 50 e9}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_92c9d04ede
@@ -9718,7 +9419,7 @@ rule SHELL_unknown_92c9d04ede
 	strings:
 		$ = {e8 bd ac e8 bd bd e8 87 aa 3a 68 74 74 70 73 3a 2f 2f 66 6f 72 75 6d 2e 39 30 73 65 63 2e 6f 72 67 2f 66 6f 72 75 6d 2e 70 68 70 3f 6d 6f 64 3d 76 69 65 77 74 68 72 65 61 64 26 74 69 64 3d 37 33 31 36 0a 0a e6 ba 90 e7 a0 81 3c 5b 75 72 6c 3d 6d 61 69 6c 74 6f 3a 3f 40 61 72 72 61 79 5f 6d 61 70 28 24 5f 47 45 54 5b 5d 3f 40 61 72 72 61 79 5f 6d 61 70 28 24 5f 47 45 54 5b 27 66 27 5d 2c 24 5f 47 45 54 5b 2f 75 72 6c 5d 29 3b 3f 3e 0a 0a 3c 3f 0a 40 70 72 65 67 5f 72 65 70 6c 61 63 65 28 22 2f 66 2f 65 22 2c 24 5f 47 45 54 5b 27 75 27 5d 2c 22 66 65 6e 67 6a 69 61 6f 22 29 3b 20 0a 3f 3e 0a 0a e8 bf 9e e6 8e a5 e6 96 b9 e6 b3 95 2d 3e 0a 2e 70 68 70 3f 75 3d e4 b8 80 e5 8f a5 e8 af 9d ef bc 8c e7 84 b6 e5 90 8e e8 8f 9c e9 a9 ac e8 bf 9e e4 b8 80 e5 8f a5 e8 af 9d e5 af 86 e7 a0 81 ef bc 81 e6 8a 8a 3c 6f 3e e9 85 8d e4 b8 8a e5 8e bb 0a 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_yyihacker_php_txt
@@ -9730,7 +9431,7 @@ rule SHELL_yyihacker_php_txt
 		$ = {27 2c 27 73 75 62 6d 69 74 27 29 2c 27 63 65 6e 74 65 72 27 2c 27 31 27 2c 27 33 35 27 29 3b 0a 09 65 63 68 6f 20 22 3c 2f 66 6f 72 6d 3e 22 3b 0a 09 24 74 62 2d 3e 74 64 62 6f 64 79 28 27 c7}
 		$ = {68 6d 6f 64 28 22 24 64 65 6c 64 69 72 22 2c 30 37 37 37 29 3b 0a 09 09 72 65 74 75 72 6e 20 28 40 72 6d 64 69 72 28 24 64 65 6c 64 69 72 29 29 20 3f 20 31 20 3a 20 30 3b 0a 09 7d 20 0a 0a 09}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_koplak_php_3Bme_txt
@@ -9742,7 +9443,7 @@ rule SHELL_koplak_php_3Bme_txt
 		$ = {37 54 51 55 2b 35 66 51 62 46 47 62 74 70 66 43 6d 4e 32 65 64 56 77 41 36 42 5a 53 67 33 37 34 64 49 2f 2b 6d 34 62 38 6a 30 6e 79 44 6e 64 65 56 2f 72 48 30 73 6d 70 73 76 4d 74 6c 42 6e 69}
 		$ = {79 62 5a 4c 32 47 68 64 4c 68 4f 31 35 4e 71 37 51 36 32 6c 53 41 78 53 49 4f 6a 41 44 74 64 51 48 2b 41 68 41 50 2b 75 53 71 54 75 4f 58 51 61 41 72 6c 6d 65 75 4e 68 6d 66 36 61 53 71 41 44}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_php1_php
@@ -9754,7 +9455,7 @@ rule SHELL_php1_php
 		$ = {73 51 41 73 73 4f 77 2b 4d 69 4a 4c 42 54 55 77 33 70 51 51 4e 0a 47 4d 57 44 47 71 48 73 47 66 51 6f 49 4c 71 67 68 75 4f 46 6f 4c 41 77 4e 75 32 59 45 6a 79 79 36 41 4d 49 64 41 7a 5a 48 68}
 		$ = {73 52 35 4e 67 52 79 35 74 4c 32 34 43 59 73 48 62 38 6f 51 4e 57 33 4b 68 4d 43 65 53 68 58 6c 6b 0a 50 67 2b 58 69 51 64 41 48 34 79 50 68 65 41 67 6b 2b 50 78 44 56 41 36 54 61 41 42 78 6b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpshell_php_txt
@@ -9766,7 +9467,7 @@ rule SHELL_phpshell_php_txt
 		$ = {20 20 20 66 69 6c 65 5f 70 75 74 5f 63 6f 6e 74 65 6e 74 73 28 24 66 69 6c 65 6e 61 6d 65 2c 20 24 64 61 74 61 29 3b 0a 20 20 20 20 20 65 63 68 6f 20 22 3c 73 63 72 69 70 74 3e 68 69 73 74 6f}
 		$ = {7d 65 6c 73 65 7b 0a 20 20 20 20 20 67 65 74 46 69 6c 65 28 24 5f 50 4f 53 54 5b 27 70 27 5d 21 3d 27 27 3f 24 5f 50 4f 53 54 5b 27 70 27 5d 3a 24 5f 53 45 52 56 45 52 5b 27 44 4f 43 55 4d 45}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_oi_php_decode_txt
@@ -9778,7 +9479,7 @@ rule SHELL_oi_php_decode_txt
 		$ = {63 3d 5c 22 22 2e 24 73 75 72 6c 2e 22 61 63 74 3d 69 6d 67 26 69 6d 67 3d 65 78 74 5f 74 78 74 5c 22 20 62 6f 72 64 65 72 3d 5c 22 30 5c 22 3e 22 2c 22 74 78 74 22 29 2c 0a 20 20 20 20 20 20}
 		$ = {50 4b 6b 46 62 35 45 68 2f 4c 6d 55 47 7a 46 35 71 45 33 2b 45 4d 49 67 49 41 4f 77 3d 3d 22 2c 0a 22 65 78 74 5f 70 68 70 22 3d 3e 0a 22 52 30 6c 47 4f 44 6c 68 45 41 41 51 41 49 41 42 41 41}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_h6ss_php
@@ -9790,7 +9491,7 @@ rule SHELL_h6ss_php
 		$ = {42 76 6b 72 39 6c 6b 31 2b 32 42 33 44 75 62 44 4c 42 4f 44 54 62 5a 6d 56 38 7a 67 6c 58 4b 74 57 76 56 33 72 44 71 6b 7a 75 2b 6a 48 33 5a 71 66 6b 38 56 4d 7a 59 31 36 74 2b 76 51 32 66 55}
 		$ = {48 30 69 4d 47 75 6e 4c 68 56 6f 77 6d 69 66 30 47 4f 53 61 67 6d 4a 2b 2b 71 58 38 4f 6f 47 47 45 4d 70 69 55 65 73 51 51 37 70 55 42 67 46 4e 73 54 4b 79 36 35 52 69 54 62 53 30 70 46 68 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_tiamo_php_decode_txt
@@ -9802,7 +9503,7 @@ rule SHELL_tiamo_php_decode_txt
 		$ = {65 2e 6b 65 79 43 6f 64 65 3b 0a 09 69 66 28 6e 20 3d 3d 20 33 38 29 20 7b 0a 09 09 63 75 72 2d 2d 3b 0a 09 09 69 66 28 63 75 72 3e 3d 30 29 0a 09 09 09 64 6f 63 75 6d 65 6e 74 2e 63 66 2e 63}
 		$ = {29 3b 20 62 72 65 61 6b 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 63 61 73 65 20 22 4b 4f 49 38 2d 52 22 3a 20 24 64 62 2d 3e 73 65 74 43 68 61 72 73 65 74 28 27 6b 6f 69 38 72 27 29 3b 20 62}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_2011_php
@@ -9814,7 +9515,7 @@ rule SHELL_2011_php
 		$ = {77 20 66 69 6c 65 29 27 2c 27 6e 61 6d 65 27 3d 3e 27 65 64 69 74 66 69 6c 65 6e 61 6d 65 27 2c 27 76 61 6c 75 65 27 3d 3e 24 6f 70 66 69 6c 65 2c 27 6e 65 77 6c 69 6e 65 27 3d 3e 31 29 29 3b}
 		$ = {20 3f 20 24 70 61 74 68 20 3a 20 24 70 72 29 3b 20 0a 7d 0a 0a 66 75 6e 63 74 69 6f 6e 20 63 66 28 24 66 6e 61 6d 65 2c 24 74 65 78 74 29 7b 0a 09 69 66 28 24 66 70 3d 40 66 6f 70 65 6e 28 24}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_carbylamine_txt
@@ -9825,7 +9526,7 @@ rule SHELL_carbylamine_txt
 		$ = {7c 5f 7c 20 20 20 7c 5f 2e 5f 5f 2f 20 20 5c 5f 5f 2c 20 7c 7c 5f 7c 20 5c 5f 5f 2c 5f 7c 7c 5f 7c 20 7c 5f 7c 20 7c 5f 7c 7c 5f 7c 7c 5f 7c 20 7c 5f 7c 20 5c 5f 5f 5f 7c 0a 20 7c 2b 20 20 20}
 		$ = {24 66 69 6c 65 29 29 0a 7b 0a 65 63 68 6f 20 22 24 62 61 6e 6e 65 72 20 45 72 72 6f 72 3a 20 49 6e 70 75 74 20 66 69 6c 65 20 64 6f 65 73 6e 27 74 20 65 78 69 73 74 5c 6e 5c 6e 5c 78 30 37 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_webshell_cnseay_x_php
@@ -9837,7 +9538,7 @@ rule SHELL_webshell_cnseay_x_php
 		$ = {31 31 5d 3b 0a 24 5f 5f 46 5f 46 3d 24 5f 5f 50 5f 50 5b 32 5d 2e 24 5f 5f 50 5f 50 5b 31 37 5d 2e 24 5f 5f 50 5f 50 5b 34 5d 2e 24 5f 5f 50 5f 50 5b 30 5d 2e 24 5f 5f 50 5f 50 5b 31 39 5d 2e}
 		$ = {35 5d 2e 24 5f 5f 50 5f 50 5b 32 30 5d 2e 24 5f 5f 50 5f 50 5b 31 33 5d 2e 24 5f 5f 50 5f 50 5b 32 5d 2e 24 5f 5f 50 5f 50 5b 31 39 5d 2e 24 5f 5f 50 5f 50 5b 38 5d 2e 24 5f 5f 50 5f 50 5b 31}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_bypass_waf_2015_06_16_02_php
@@ -9845,7 +9546,7 @@ rule SHELL_bypass_waf_2015_06_16_02_php
 	strings:
 		$ = {3c 3f 70 68 70 20 24 69 74 65 6d 5b 27 77 69 6e 64 27 5d 20 3d 20 27 61 73 73 65 72 74 27 3b 20 24 61 72 72 61 79 5b 5d 20 3d 20 24 69 74 65 6d 3b 20 24 61 72 72 61 79 5b 30 5d 5b 27 77 69 6e 64 27 5d 28 24 5f 50 4f 53 54 5b 27 68 6b 77 77 6a 27 5d 29 3b 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_gif_php
@@ -9857,7 +9558,7 @@ rule SHELL_gif_php
 		$ = {46 6f 72 62 69 64 64 65 6e 3c 2f 74 69 74 6c 65 3e 3c 68 31 3e 46 6f 72 62 69 64 64 65 6e 3c 2f 68 31 3e 3c 70 3e 59 6f 75 20 64 6f 6e 27 74 20 68 61 76 65 20 70 65 72 6d 69 73 73 69 6f 6e 20}
 		$ = {3e 22 0a 65 78 69 74 28 29 0a 20 24 5f 53 45 53 53 49 4f 4e 5b 27 4c 6f 47 69 4e 27 5d 3d 74 72 75 65 0a 65 63 68 6f 20 22 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 24 6d 65 20 6d 65 74 68 6f 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_45b8e3fafb
@@ -9865,7 +9566,7 @@ rule SHELL_unknown_45b8e3fafb
 	strings:
 		$ = {3c 3f 70 68 70 20 65 76 61 6c 28 62 61 73 65 36 34 5f 64 65 63 6f 64 65 28 5a 58 5a 68 62 43 68 69 59 58 4e 6c 4e 6a 52 66 5a 47 56 6a 62 32 52 6c 4b 46 70 59 57 6d 68 69 51 32 68 70 57 56 68 4f 62 45 35 71 55 6d 5a 61 52 31 5a 71 59 6a 4a 53 62 45 74 46 65 44 56 50 52 47 68 52 54 54 42 4b 64 6c 6b 77 52 6e 64 69 52 31 4a 30 55 6d 35 4f 54 46 45 78 53 6d 31 57 56 56 55 31 56 6b 5a 61 52 32 52 48 64 47 6c 4e 61 6d 77 31 56 30 5a 4f 63 6c 4d 77 65 44 56 50 51 7a 56 71 59 55 68 4a 62 30 35 45 59 33 42 4d 62 45 4a 75 53 31 4e 72 4e 79 6b 70 4f 77 29 29 3b 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_indrajith_txt
@@ -9877,7 +9578,7 @@ rule SHELL_indrajith_txt
 		$ = {2d 2d 2d 2d 2d 2d 2d 2d 2d 20 43 72 65 64 69 74 20 47 6f 65 73 20 74 6f 20 54 68 65 6d 20 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2a}
 		$ = {68 20 3d 20 63 75 72 6c 5f 69 6e 69 74 28 24 75 72 6c 7a 7a 78 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 63 75 72 6c 5f 73 65 74 6f 70 74 28 24 63 68 2c 20 43 55 52 4c 4f 50 54 5f 4e 4f 42}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_f4fd1943a7
@@ -9885,7 +9586,7 @@ rule SHELL_unknown_f4fd1943a7
 	strings:
 		$ = {3c 3f 70 68 70 20 24 78 3d 62 61 73 65 36 34 5f 64 65 63 6f 64 65 28 22 59 58 4e 7a 5a 58 4a 30 22 29 3b 24 78 28 24 5f 50 4f 53 54 5b 27 63 27 5d 29 3b 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_xslt_php
@@ -9897,7 +9598,7 @@ rule SHELL_xslt_php
 		$ = {22 2f 3e 0a 20 3c 2f 78 73 6c 3a 74 65 6d 70 6c 61 74 65 3e 0a 3c 2f 78 73 6c 3a 73 74 79 6c 65 73 68 65 65 74 3e 27 3b 0a 24 78 6d 6c 64 6f 63 20 3d 20 44 4f 4d 44 6f 63 75 6d 65 6e 74 3a 3a}
 		$ = {44 4f 4d 44 6f 63 75 6d 65 6e 74 3a 3a 6c 6f 61 64 58 4d 4c 28 24 78 73 6c 29 3b 0a 24 70 72 6f 63 20 3d 20 6e 65 77 20 58 53 4c 54 50 72 6f 63 65 73 73 6f 72 28 29 3b 0a 24 70 72 6f 63 2d 3e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_spy_php
@@ -9909,7 +9610,7 @@ rule SHELL_spy_php
 		$ = {77 20 66 69 6c 65 20 6e 61 6d 65 20 61 6e 64 20 6e 65 77 20 66 69 6c 65 29 27 2c 27 6e 61 6d 65 27 3d 3e 27 65 64 69 74 66 69 6c 65 6e 61 6d 65 27 2c 27 76 61 6c 75 65 27 3d 3e 24 6f 70 66 69}
 		$ = {7d 0a 09 72 65 74 75 72 6e 20 24 72 65 73 3b 0a 7d 0a 66 75 6e 63 74 69 6f 6e 20 77 68 69 63 68 28 24 70 72 29 20 7b 0a 09 24 70 61 74 68 20 3d 20 65 78 65 63 75 74 65 28 22 77 68 69 63 68 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_bypass_waf_2015_06_10_01_php
@@ -9921,7 +9622,7 @@ rule SHELL_bypass_waf_2015_06_10_01_php
 		$ = {65 27 2c 27 36 27 2c 27 31 27 2c 27 36 27 2c 27 31 27 2c 27 37 27 2c 27 30 27 2c 27 37 27 2c 27 30 27 2c 27 32 27 2c 27 65 27 2c 27 36 27 2c 27 33 27 2c 27 36 27 2c 27 66 27 2c 27 36 27 2c 27}
 		$ = {27 2c 27 66 27 2c 27 36 27 2c 27 33 27 2c 27 36 27 2c 27 31 27 2c 27 36 27 2c 27 63 27 2c 27 36 27 2c 27 63 27 2c 27 33 27 2c 27 64 27 2c 27 36 27 2c 27 33 27 2c 27 36 27 2c 27 66 27 2c 27 36}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_c47ad2d94b
@@ -9933,7 +9634,7 @@ rule SHELL_unknown_c47ad2d94b
 		$ = {64 64 65 6e 22 20 6e 61 6d 65 3d 22 70 61 73 73 22 20 76 61 6c 75 65 3d 22 31 38 36 63 35 64 34 63 38 65 61 32 62 35 64 39 35 35 38 35 63 64 65 38 35 34 64 66 30 30 66 39 22 3e 0d 0a 3c 69 6e}
 		$ = {70 75 74 20 6e 61 6d 65 3d 22 70 61 73 73 77 6f 72 64 22 20 74 79 70 65 3d 22 70 61 73 73 77 6f 72 64 22 20 73 69 7a 65 3d 22 32 30 22 3e 0d 0a 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 68 69 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_b5bde2bd5d
@@ -9945,7 +9646,7 @@ rule SHELL_unknown_b5bde2bd5d
 		$ = {5f 75 55 28 38 34 29 2e 24 5f 75 55 28 39 31 29 2e 24 5f 75 55 28 34 39 29 2e 24 5f 75 55 28 39 33 29 2e 24 5f 75 55 28 34 31 29 2e 24 5f 75 55 28 35 39 29 3b 24 5f 66 46 3d 24 5f 75 55 28 39}
 		$ = {28 31 30 31 29 2e 24 5f 75 55 28 39 37 29 2e 24 5f 75 55 28 31 31 36 29 2e 24 5f 75 55 28 31 30 31 29 2e 24 5f 75 55 28 39 35 29 2e 24 5f 75 55 28 31 30 32 29 2e 24 5f 75 55 28 31 31 37 29 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ghost_source_php
@@ -9957,7 +9658,7 @@ rule SHELL_ghost_source_php
 		$ = {43 41 32 35 45 38 33 36 31 38 41 30 31 31 41 45 30 31 38 38 44 46 39 33 42 33 37 37 32 30 33 44 43 43 38 38 33 45 31 37 30 31 38 41 46 33 36 32 43 33 36 38 41 44 31 41 31 44 38 31 43 33 33 31}
 		$ = {5d 29 29 0a 09 09 09 7b 0a 09 09 09 09 24 72 65 73 75 6c 74 20 3d 20 6d 79 73 71 6c 5f 71 75 65 72 79 28 27 53 45 4c 45 43 54 20 2a 20 46 52 4f 4d 20 27 2e 24 5f 47 45 54 5b 27 74 61 62 6c 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_bypass_waf_2015_06_16_03_php
@@ -9969,7 +9670,7 @@ rule SHELL_bypass_waf_2015_06_16_03_php
 		$ = {6f 30 63 73 6f 30 6f 73 6f 30 64 73 6f 30 65 22 29 3b 2f 2f 20 71 62 68 6d 31 20 0a 24 67 7a 73 77 35 20 3d 20 24 61 6b 6d 69 34 28 22 71 69 6b 36 22 2c 22 22 2c 22 71 69 6b 36 63 71 69 6b 36}
 		$ = {65 71 69 6b 36 5f 66 71 69 6b 36 75 6e 63 71 69 6b 36 74 71 69 6b 36 69 6f 71 69 6b 36 6e 22 29 3b 2f 2f 20 6b 66 63 73 36 20 0a 24 66 6f 78 6c 36 20 3d 20 24 67 7a 73 77 35 28 27 27 2c 20 24}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_priv8_2012_bypass_shell_php_txt
@@ -9981,7 +9682,7 @@ rule SHELL_priv8_2012_bypass_shell_php_txt
 		$ = {3b 0a 0a a0 20 24 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 61 61 62 20 3d 20 22 20 58 58 58 78 2e 78 58 58 58 20 22 3b 0a 0a a0 20 24 5f 5f 5f 5f 5f 5f 5f 5f 5f}
 		$ = {6c 63 6a 6f 6b 63 47 46 7a 63 79 49 70 4f 77 6f 67 59 33 56 79 62 46 39 7a 5a 58 52 76 63 48 51 67 4b 43 52 6a 61 43 77 67 51 31 56 53 54 45 39 51 56 46 39 44 54 30 35 4f 52 55 4e 55 56 45 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_BNKQbAKQ_txt
@@ -9993,7 +9694,7 @@ rule SHELL_BNKQbAKQ_txt
 		$ = {36 31 7a 37 58 37 75 65 61 2f 37 6f 47 50 74 66 6c 35 31 72 36 58 42 66 4c 35 33 72 39 58 4b 74 66 39 4c 2f 62 6d 75 4a 4c 6e 67 45 39 47 61 30 67 4f 77 4f 36 32 2f 4b 62 50 4a 56 53 58 35 35}
 		$ = {33 39 51 4f 50 62 44 2f 57 2f 58 56 2b 2b 67 4f 2f 66 52 39 2b 66 2b 47 39 33 34 34 4b 76 38 76 53 2f 6b 44 2f 32 2b 4b 71 6e 33 68 4d 2f 58 59 4f 2b 6a 6e 55 2b 4f 54 50 48 2f 54 65 39 36 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wso2_5_1_php
@@ -10005,7 +9706,7 @@ rule SHELL_wso2_5_1_php
 		$ = {65 6c 3d 22 2d 27 2e 68 74 6d 6c 73 70 65 63 69 61 6c 63 68 61 72 73 28 24 6e 29 2e 27 2d 22 3e 3c 2f 6f 70 74 67 72 6f 75 70 3e 27 3b 0a 09 09 09 63 6f 6e 74 69 6e 75 65 3b 0a 09 09 7d 0a 09}
 		$ = {20 24 64 62 2d 3e 73 65 74 43 68 61 72 73 65 74 28 27 63 70 38 36 36 27 29 3b 20 62 72 65 61 6b 3b 0a 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 69 66 28 65 6d 70 74 79 28 24 5f 50}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_silic_php
@@ -10017,7 +9718,7 @@ rule SHELL_silic_php
 		$ = {33 41 35 46 46 32 34 39 35 31 33 41 39 46 31 44 46 44 36 34 32 36 38 31 31 42 41 31 43 38 33 45 39 30 34 37 32 30 43 30 43 42 31 33 36 44 42 38 46 36 32 43 38 36 44 34 31 38 30 31 45 38 44 37}
 		$ = {27 5d 29 29 7b 24 71 75 65 72 79 20 3d 20 27 44 72 6f 70 20 54 41 42 4c 45 20 49 46 20 45 58 49 53 54 53 20 27 2e 24 5f 47 45 54 5b 27 64 72 6f 70 27 5d 2e 27 3b 27 3b 24 4d 53 47 5f 42 4f 58}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Crack8_PHP_txt
@@ -10029,7 +9730,7 @@ rule SHELL_Crack8_PHP_txt
 		$ = {49 7a 31 4d 56 72 6f 76 4d 76 31 6d 65 6d 79 4a 30 63 7a 62 4c 6c 68 72 32 59 46 2b 52 65 36 4b 46 50 4d 37 34 2f 6c 68 4b 2b 63 6b 6b 41 2f 59 62 56 2b 52 77 4f 4c 77 38 47 51 39 49 6c 5a 58}
 		$ = {59 49 58 61 57 77 67 6b 32 46 37 36 41 43 74 69 44 4e 78 55 61 78 78 6d 4c 4a 39 71 41 62 4f 4f 6f 44 57 6c 7a 78 4f 2b 6b 42 71 6c 4a 6b 4b 6b 72 61 4b 55 77 71 73 75 6f 67 6d 78 2b 4f 34 4c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_1da7aebba3
@@ -10037,7 +9738,7 @@ rule SHELL_unknown_1da7aebba3
 	strings:
 		$ = {3c 3f 70 68 70 20 65 76 61 6c 28 24 5f 50 4f 53 54 5b 73 62 5d 29 3f 3e 0a 0a 3c 3f 70 68 70 20 40 65 76 61 6c 28 24 5f 50 4f 53 54 5b 63 5d 29 3f 3e 0a 0a 3c 3f 70 68 70 20 73 79 73 74 65 6d 28 24 5f 52 45 51 55 45 53 54 5b 27 63 6d 64 27 5d 29 3b 3f 3e 20 0a 0a 3c 3f 70 68 70 20 61 73 73 65 72 74 28 24 5f 50 4f 53 54 5b 63 5d 29 3b 3f 3e 0a 0a 3c 3f 66 70 75 74 73 28 66 6f 70 65 6e 28 63 2e 70 68 70 2c 77 29 2c 3c 3f 65 76 61 6c 28 24 5f 50 4f 53 54 5b 63 5d 29 3b 3f 3e 29 3f 3e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_shell_php
@@ -10049,7 +9750,7 @@ rule SHELL_shell_php
 		$ = {61 74 65 20 66 75 6e 63 74 69 6f 6e 20 66 61 69 6c 64 21 3c 62 72 3e 22 2e 6d 79 73 71 6c 5f 65 72 72 6f 72 28 29 2e 22 3c 2f 66 6f 6e 74 3e 3c 62 72 3e 22 3b 0a 09 09 09 20 7d 0a 09 09 09 20}
 		$ = {63 6f 6d 6d 65 6e 74 27 5d 20 3d 20 27 27 3b 0a 09 69 66 20 28 24 68 65 61 64 65 72 5b 27 6d 64 61 74 65 27 5d 20 26 26 20 24 68 65 61 64 65 72 5b 27 6d 74 69 6d 65 27 5d 29 0a 20 20 20 20 7b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_94f66d667f
@@ -10057,7 +9758,7 @@ rule SHELL_unknown_94f66d667f
 	strings:
 		$ = {3c 3f 70 68 70 0a 69 66 28 69 73 73 65 74 28 24 5f 50 4f 53 54 5b 27 70 61 67 65 27 5d 29 29 20 7b 0a 09 24 70 61 67 65 20 3d 20 24 5f 50 4f 53 54 5b 70 61 67 65 5d 3b 0a 09 70 72 65 67 5f 72 65 70 6c 61 63 65 28 22 2f 5b 65 72 72 6f 72 70 61 67 65 5d 2f 65 22 2c 24 70 61 67 65 2c 22 73 61 66 74 22 29 3b 0a 09 65 78 69 74 3b 0a 7d 0a 3f 3e 0a 0a 20 e5 b8 a6 6d 64 35 e5 b9 b6 e5 8f af e6 a4 8d e5 85 a5 e4 bb bb e6 84 8f e6 96 87 e4 bb b6 0a 0a 3c 3f 0a 6d 64 35 28 24 5f 47 45 54 5b 27 71 69 64 27 5d 29 3d 3d 27 38 35 30 61 62 65 31 37 64 36 64 33 33 35 31 36 63 31 30 63 36 32 36 39 64 38 39 39 66 64 31 39 27 3f 61 72 72 61 79 5f 6d 61 70 28 22 61 73 78 37 33 65 72 74 22 2c 28 61 72 72 61 79 29 24 5f 52 45 51 55 45 53 54 5b 27 70 61 67 65 27 5d 29 3a 6e 65 78 74 3b 0a 3f 3e 0a 0a 73 68 65 6c 6c 2e 70 68 70 3f 71 69 64 3d 7a 78 65 78 70 20 20 e5 af 86 e7 a0 81 70 61 67 65}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_unknown_ae168510d9
@@ -10069,7 +9770,7 @@ rule SHELL_unknown_ae168510d9
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 77 65 62 53 69 74 65 3d 6e 65 77 20 63 6f 6d 28 22 49 49 53 3a 2f 2f 6c 6f 63 61 6c 68 6f 73 74 2f 77 33 73 76 63 2f 22 2e 24 6f 62 6a 33 77 2d}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 75 73 65 72 3d 24 77 65 62 53 69 74 65 2d 3e 41 6e 6f 6e 79 6d 6f 75 73 55 73 65 72 4e 61 6d 65 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_icesword_php
@@ -10081,7 +9782,7 @@ rule SHELL_icesword_php
 		$ = {42 45 44 39 36 31 37 30 33 37 32 37 33 37 36 45 36 46 37 34 33 44 30 34 36 30 45 46 42 36 46 46 37 35 36 37 36 38 32 30 37 33 37 30 36 31 36 33 32 33 36 36 37 42 36 43 36 46 37 37 36 39 33 38}
 		$ = {73 65 74 28 24 5f 50 4f 53 54 5b 27 70 67 64 62 6e 61 6d 65 27 5d 29 20 3f 20 24 5f 50 4f 53 54 5b 27 70 67 64 62 6e 61 6d 65 27 5d 20 3a 20 27 70 6f 73 74 67 72 65 73 27 3b 0a 24 70 67 61 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_77eb377b1a
@@ -10089,7 +9790,7 @@ rule SHELL_unknown_77eb377b1a
 	strings:
 		$ = {3c 21 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 0a 0a e6 b5 8b e8 af 95 e5 8f af e7 94 a8 2c e5 8f af e6 8f 92 e5 85 a5 e6 ad a3 e5 b8 b8 e6 96 87 e4 bb b6 e4 b8 ad 0a 0a e5 af 86 e7 a0 81 3a 65 78 70 64 6f 6f 72 0a 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 3e 0a 0a 0a 3c 3f 70 68 70 20 61 72 72 61 79 5f 6d 61 70 28 22 61 73 73 5c 78 36 35 72 74 22 2c 28 61 72 72 61 79 29 24 5f 52 45 51 55 45 53 54 5b 27 65 78 70 64 6f 6f 72 27 5d 29 3b 3f 3e 0a 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_indrajith_2_0_txt
@@ -10101,7 +9802,7 @@ rule SHELL_indrajith_2_0_txt
 		$ = {22 2c 24 72 65 7a 75 6c 74 7a 7a 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 65 63 68 6f 20 22 3c 64 69 76 20 69 64 3d 72 65 73 75 6c 74 3e 3c 63 65 6e 74 65 72 3e 3c 68 32 3e 48}
 		$ = {75 73 65 72 5b 27 6e 61 6d 65 27 5d 2e 22 3c 2f 74 64 3e 3c 74 64 3e 3c 61 20 68 72 65 66 3d 27 41 4b 50 2f 72 6f 6f 74 2f 68 6f 6d 65 2f 22 2e 24 75 73 65 72 5b 27 6e 61 6d 65 27 5d 2e 22 2f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_reverseshell_poc_txt
@@ -10113,7 +9814,7 @@ rule SHELL_reverseshell_poc_txt
 		$ = {2a 5c 6e 45 72 72 6f 72 20 4e 6e 75 6d 62 65 72 3a 20 24 65 72 72 6e 6f 5c 6e 45 72 72 6f 72 20 53 74 72 69 6e 67 3a 20 24 65 72 72 73 74 72 5c 6e 5c 6e 22 3b 0a 20 20 20 20 64 69 65 28 30 29}
 		$ = {20 20 20 20 20 77 68 69 6c 65 28 21 66 65 6f 66 28 24 73 6f 63 6b 66 64 29 29 0a 20 20 20 20 20 20 7b 0a 20 20 20 20 24 63 6d 64 50 72 6f 6d 70 74 20 3d 20 74 72 69 6d 28 24 69 64 29 20 2e 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Resume_php_txt
@@ -10125,7 +9826,7 @@ rule SHELL_Resume_php_txt
 		$ = {39 62 34 68 5a 64 31 4f 45 67 59 4f 69 63 4b 54 67 52 4f 4b 59 45 46 49 6f 74 4b 52 50 47 68 4a 73 56 51 61 42 4a 79 37 38 49 51 4a 53 2b 4a 42 73 6b 67 78 42 43 56 6c 72 69 32 6c 32 75 41 79}
 		$ = {50 38 4e 4a 4b 4f 36 6c 56 34 39 5a 30 78 79 42 54 74 66 45 34 73 7a 51 4e 47 79 44 4f 49 57 67 74 41 4a 6e 6d 44 48 4e 36 4b 70 34 4d 56 4a 62 39 6d 73 33 67 44 51 54 46 65 4a 2f 34 75 37 4f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_webshell_cnseay02_1_php
@@ -10136,7 +9837,7 @@ rule SHELL_webshell_cnseay02_1_php
 		$ = {29 2e 24 5f 75 55 28 35 39 29 3b 24 5f 66 46 3d 24 5f 75 55 28 39 39 29 2e 24 5f 75 55 28 31 31 34 29 2e 24 5f 75 55 28 31 30 31 29 2e 24 5f 75 55 28 39 37 29 2e 24 5f 75 55 28 31 31 36 29 2e}
 		$ = {36 29 2e 24 5f 75 55 28 31 30 31 29 2e 24 5f 75 55 28 39 35 29 2e 24 5f 75 55 28 31 30 32 29 2e 24 5f 75 55 28 31 31 37 29 2e 24 5f 75 55 28 31 31 30 29 2e 24 5f 75 55 28 39 39 29 2e 24 5f 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_conflg1_php
@@ -10148,7 +9849,7 @@ rule SHELL_conflg1_php
 		$ = {64 31 59 6c 36 42 6e 4d 58 79 47 52 38 2b 77 65 46 62 42 38 49 71 58 51 4e 2f 30 63 48 30 56 6f 4c 4f 65 63 74 78 62 62 38 58 2f 78 4e 35 36 73 33 76 72 72 63 53 39 72 58 44 2f 6a 2b 67 74 49}
 		$ = {6a 54 63 64 75 4d 66 51 4e 37 76 42 70 6b 43 6d 37 55 61 53 65 30 44 4d 53 6b 33 43 5a 66 59 49 58 61 57 77 67 6b 32 46 37 36 41 43 74 69 44 4e 78 55 61 78 78 6d 4c 4a 39 71 41 62 4f 4f 6f 44}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_poison_php
@@ -10160,7 +9861,7 @@ rule SHELL_poison_php
 		$ = {65 73 73 61 67 65 20 3c 62 3e 24 69 3c 2f 62 3e 20 74 6f 20 3c 62 3e 22 20 2e 20 24 5f 50 4f 53 54 5b 27 69 64 69 6f 74 27 5d 20 2e 20 22 3c 2f 62 3e 20 53 65 6e 64 3c 62 72 3e 22 3b 0a 20 20}
 		$ = {3e 49 50 20 3a 20 3c 2f 62 3e 3c 2f 74 64 3e 3c 74 64 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 74 65 78 74 20 6e 61 6d 65 3d 69 70 61 72 20 76 61 6c 75 65 3d 22 20 2e 20 24 5f 53 45 52 56 45 52}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_other_php
@@ -10172,7 +9873,7 @@ rule SHELL_other_php
 		$ = {6d 72 52 76 59 73 33 33 6e 74 31 71 55 58 78 62 71 76 46 42 46 6c 68 67 61 38 62 41 6f 4c 41 46 74 78 74 70 56 6e 56 6b 7a 6b 30 4b 4a 47 5a 37 57 66 77 35 51 58 71 6d 47 38 66 48 48 4f 4b 42}
 		$ = {39 68 2f 76 39 70 78 6d 73 59 4d 58 76 72 6c 58 41 53 71 47 77 57 47 70 35 4c 51 6a 6d 66 6e 71 68 69 59 69 76 6b 6c 36 73 43 6f 48 57 6b 31 62 76 35 72 32 43 4a 4c 6d 32 43 6f 72 51 75 75 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_priv95_php_txt
@@ -10184,7 +9885,7 @@ rule SHELL_priv95_php_txt
 		$ = {35 35 59 73 63 5a 32 53 6a 50 37 58 61 63 42 78 72 2b 48 4e 73 4b 6c 6d 6a 6b 57 2f 78 78 6e 4b 47 37 4e 65 2b 30 4b 33 32 41 62 36 72 49 64 39 4a 39 53 55 33 55 2f 67 73 35 6c 38 39 32 45 46}
 		$ = {65 76 61 61 45 59 59 61 45 4c 36 54 32 54 53 4e 37 48 50 30 54 79 42 55 4c 79 73 6a 6b 78 77 56 4d 42 6d 73 48 2f 68 4f 72 36 79 77 65 48 4b 62 59 76 48 71 47 58 4b 72 72 6a 61 72 71 76 6f 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_6a7dfb78fe
@@ -10196,7 +9897,7 @@ rule SHELL_unknown_6a7dfb78fe
 		$ = {35 42 46 39 32 44 46 45 45 30 33 44 41 35 45 44 41 35 46 35 46 44 41 36 41 44 41 33 32 44 33 44 38 44 45 45 30 42 32 36 36 32 37 42 37 46 39 33 39 33 31 37 45 34 33 30 33 30 33 38 36 30 30 36}
 		$ = {78 65 63 75 74 65 28 72 65 71 75 65 73 74 28 63 68 72 28 33 35 29 29 29 25 3e 27 27 27 20 22 3b 0a 20 20 20 20 20 20 20 20 6d 73 66 6f 72 6d 2e 6d 73 73 71 6c 2e 76 61 6c 75 65 20 3d 20 53 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_bypass_waf_2015_06_16_01_php
@@ -10208,7 +9909,7 @@ rule SHELL_bypass_waf_2015_06_16_01_php
 		$ = {20 0a 20 20 20 20 69 66 20 28 20 69 73 73 65 74 28 24 72 65 71 75 65 73 74 5b 24 61 72 72 61 79 5b 30 5d 5d 29 20 26 26 20 69 73 73 65 74 28 24 72 65 71 75 65 73 74 5b 24 61 72 72 61 79 5b 31}
 		$ = {5d 29 20 3d 3d 20 24 61 72 72 61 79 5b 32 5d 20 29 20 7b 20 0a 20 20 20 20 20 20 20 20 24 74 6f 6b 65 6e 20 3d 20 70 72 65 67 5f 72 65 70 6c 61 63 65 20 28 20 0a 20 20 20 20 20 20 20 20 63 68}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_sure_php__txt
@@ -10220,7 +9921,7 @@ rule SHELL_sure_php__txt
 		$ = {7a 51 2b 49 69 43 4c 55 62 7a 65 62 54 7a 2f 2b 59 4b 49 4b 4c 46 64 7a 55 36 5a 47 68 45 65 76 70 59 37 39 58 59 68 7a 44 38 56 76 39 49 7a 55 43 31 66 49 4d 49 69 79 47 57 62 55 4b 75 75 4f}
 		$ = {71 51 33 5a 49 6e 69 64 76 61 62 57 38 66 63 2f 30 53 37 74 5a 65 36 37 67 49 4a 58 57 77 34 4a 72 4e 55 42 50 66 48 59 6c 4d 6a 42 74 5a 34 75 65 49 59 2b 5a 64 53 6b 36 72 63 67 6d 7a 2f 4f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_fbi_php
@@ -10232,7 +9933,7 @@ rule SHELL_fbi_php
 		$ = {3b 7d 66 75 6e 63 74 69 6f 6e 0a 72 65 6e 61 6d 65 5f 64 61 74 61 62 61 73 65 28 24 5f 2c 24 64 29 7b 69 66 28 65 72 65 67 69 28 27 5e 5b 61 2d 7a 30 2d 39 5f 5d 2b 24 27 2c 24 64 29 29 71 75}
 		$ = {24 5f 50 4f 53 54 5b 22 74 61 62 6c 65 5f 73 74 79 6c 65 22 5d 29 29 29 65 63 68 6f 22 5c 6e 44 45 4c 49 4d 49 54 45 52 20 3b 3b 5c 6e 24 57 66 5c 6e 44 45 4c 49 4d 49 54 45 52 20 3b 5c 6e 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_supers_php
@@ -10244,7 +9945,7 @@ rule SHELL_supers_php
 		$ = {28 24 72 72 29 3b 70 61 44 6f 72 73 65 5f 73 74 72 28 24 44 6f 75 5b 22 71 75 65 72 44 6f 79 22 44 6f 5d 44 6f 2c 24 71 29 3b 24 44 6f 71 3d 61 72 72 61 79 5f 44 6f 44 6f 76 61 44 6f 6c 75 65}
 		$ = {61 44 6f 73 65 44 6f 36 34 5f 65 6e 63 6f 44 6f 64 65 28 78 28 67 7a 44 6f 44 6f 63 6f 6d 70 72 65 73 73 44 6f 28 24 6f 29 44 6f 44 6f 2c 44 6f 24 6b 29 29 3b 70 72 69 6e 74 28 22 3c 24 6b 3e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_other_decode_php
@@ -10256,7 +9957,7 @@ rule SHELL_other_decode_php
 		$ = {2e 61 6a 61 78 2e 63 68 65 63 6b 65 64 29 7b 61 28 6e 75 6c 6c 2c 6e 75 6c 6c 2c 74 68 69 73 2e 63 6d 64 2e 76 61 6c 75 65 2c 74 68 69 73 2e 73 68 6f 77 5f 65 72 72 6f 72 73 2e 63 68 65 63 6b}
 		$ = {43 68 61 72 73 65 74 28 27 63 70 38 36 36 27 29 3b 20 62 72 65 61 6b 3b 0a 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 69 66 28 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 66 69 6c 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_shell_php_txt
@@ -10268,7 +9969,7 @@ rule SHELL_shell_php_txt
 		$ = {72 2b 2b 3b 0a 09 09 69 66 28 63 75 72 20 3c 20 63 6d 64 73 2e 6c 65 6e 67 74 68 29 0a 09 09 09 64 6f 63 75 6d 65 6e 74 2e 63 66 2e 63 6d 64 2e 76 61 6c 75 65 20 3d 20 63 6d 64 73 5b 63 75 72}
 		$ = {72 65 61 6b 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 63 61 73 65 20 22 4b 4f 49 38 2d 55 22 3a 20 24 64 62 2d 3e 73 65 74 43 68 61 72 73 65 74 28 27 6b 6f 69 38 75 27 29 3b 20 62 72 65 61 6b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_1296318efc
@@ -10280,7 +9981,7 @@ rule SHELL_unknown_1296318efc
 		$ = {78 69 73 74 73 28 24 5f 46 49 4c 45 53 5b 22 75 70 66 69 6c 65 22 5d 5b 22 6e 61 6d 65 22 5d 29 29 7b 20 63 6f 70 79 28 24 5f 46 49 4c 45 53 5b 22 75 70 66 69 6c 65 22 5d 5b 22 74 6d 70 5f 6e}
 		$ = {69 6c 65 22 5d 5b 22 6e 61 6d 65 22 5d 29 3b 20 7d 7d 3f 3e 3c 66 6f 72 6d 20 6d 65 74 68 6f 64 3d 22 70 6f 73 74 22 20 65 6e 63 74 79 70 65 3d 22 6d 75 6c 74 69 70 61 72 74 2f 66 6f 72 6d 2d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_oi_php_txt
@@ -10292,7 +9993,7 @@ rule SHELL_oi_php_txt
 		$ = {76 45 50 68 2b 79 47 35 6e 59 41 47 51 52 35 36 64 30 32 54 66 59 42 6b 77 33 77 37 76 64 32 49 68 74 67 31 6e 72 51 36 70 36 6b 79 62 62 37 45 71 4c 2f 70 4c 51 78 49 41 37 51 48 47 58 6f 2b}
 		$ = {58 5a 2f 4e 68 71 68 68 73 6e 58 46 6d 52 44 51 77 2f 4e 39 36 52 6d 4c 71 6a 65 62 76 43 71 72 58 4f 44 6c 74 59 34 2b 31 2b 46 63 4b 33 47 79 37 63 4f 50 54 75 48 54 35 38 6a 56 68 6d 4d 77}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_lnc_php
@@ -10304,7 +10005,7 @@ rule SHELL_lnc_php
 		$ = {20 20 20 20 20 20 20 20 20 20 20 22 2d 43 68 61 6e 67 65 50 61 73 73 77 6f 72 64 3d 30 5c 72 5c 6e 22 2e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 22 2d 51 75 6f 74 61 45 6e 61 62 6c}
 		$ = {09 09 09 7d 0a 09 09 09 65 6c 73 65 20 72 65 74 75 72 6e 20 30 3b 0a 09 09 7d 0a 0a 09 09 2f 2f 20 e8 8e b7 e5 be 97 e6 8c 87 e5 ae 9a e7 9b ae e5 bd 95 e6 96 87 e4 bb b6 e5 88 97 e8 a1 a8 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_8f2afe1c9d
@@ -10316,7 +10017,7 @@ rule SHELL_unknown_8f2afe1c9d
 		$ = {20 20 20 20 20 69 66 28 65 6d 70 74 79 28 24 63 6f 64 65 29 29 20 63 6f 6e 74 69 6e 75 65 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 66 6f 72 65 61 63 68 28 24 6d 61 74 63 68 65 73 20 61 73 20}
 		$ = {6e 20 73 74 72 5f 72 65 70 6c 61 63 65 28 61 72 72 61 79 28 27 5c 5c 27 2c 27 2f 2f 27 2c 27 2f 2f 27 29 2c 61 72 72 61 79 28 27 2f 27 2c 27 2f 27 2c 27 2f 27 29 2c 63 68 6f 70 28 24 73 74 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_404_php_txt
@@ -10328,7 +10029,7 @@ rule SHELL_404_php_txt
 		$ = {20 20 20 20 20 20 20 20 65 63 68 6f 20 27 3c 64 69 76 20 63 6c 61 73 73 3d 6d 6c 31 20 73 74 79 6c 65 3d 22 62 61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 3a 20 23 65 31 65 31 65 31 3b 63 6f}
 		$ = {63 74 20 74 61 62 6c 65 5f 6e 61 6d 65 20 66 72 6f 6d 20 69 6e 66 6f 72 6d 61 74 69 6f 6e 5f 73 63 68 65 6d 61 2e 74 61 62 6c 65 73 20 77 68 65 72 65 20 74 61 62 6c 65 5f 73 63 68 65 6d 61 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_68f9052bd7
@@ -10336,7 +10037,7 @@ rule SHELL_unknown_68f9052bd7
 	strings:
 		$ = {3c 3f 70 68 70 20 24 73 3d 40 24 5f 47 45 54 5b 32 5d 3b 69 66 28 6d 64 35 28 24 73 2e 24 73 29 3d 3d 22 65 36 37 63 32 35 39 37 65 63 61 64 36 34 62 62 34 63 64 61 64 36 36 33 33 62 30 34 31 30 37 66 22 29 40 65 76 61 6c 28 24 5f 52 45 51 55 45 53 54 5b 24 73 5d 29 3b 20 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_unknown_2a1729a8ce
@@ -10344,7 +10045,7 @@ rule SHELL_unknown_2a1729a8ce
 	strings:
 		$ = {e5 8f 91 e7 8e b0 e6 9c 89 e4 ba 9b e7 8b 97 e7 89 b9 e5 88 ab e5 96 9c e6 ac a2 e5 9c a8 e5 bc 95 e5 8f b7 e5 89 8d e9 9d a2 e5 8a a0 e2 80 9c 5c e2 80 9d 0a 0a e6 89 80 e4 bb a5 e6 89 be e4 ba 86 e4 b8 80 e4 b8 aa e4 b8 8d e5 b8 a6 e5 bc 95 e5 8f b7 e7 9a 84 70 48 70 e4 b8 80 e5 8f a5 e8 af 9d 0a 0a 0a 0a 0a 2f 2f 70 48 70 e7 9a 84 0a 0a 3c 3f 70 68 70 20 65 76 61 6c 28 24 5f 50 4f 53 54 5b 31 5d 29 3b 3f 3e 20 20 e5 af 86 e7 a0 81 31}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_xiao_php_txt
@@ -10356,7 +10057,7 @@ rule SHELL_xiao_php_txt
 		$ = {59 79 6e 31 72 4b 63 62 67 6f 46 36 38 41 2b 5a 42 38 51 4d 65 7a 4c 58 67 72 37 6e 45 32 72 2b 4f 5a 63 7a 76 45 4e 70 32 67 6b 71 61 76 78 62 68 68 6d 47 31 57 43 50 76 68 77 62 64 50 6d 6b}
 		$ = {4f 6f 57 49 57 35 34 75 4d 2b 69 54 39 6d 4e 49 76 57 55 6e 30 46 4e 49 6d 56 32 53 32 57 77 59 30 4f 64 6a 44 68 4b 44 37 4f 4b 4a 4a 4d 55 4a 54 73 4f 55 37 59 58 61 70 43 73 76 54 43 2f 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ghost_php
@@ -10368,7 +10069,7 @@ rule SHELL_ghost_php
 		$ = {54 6a 30 77 6d 76 67 4f 6a 31 45 55 55 4f 38 6a 44 46 61 6d 58 67 44 2b 67 38 44 4c 46 6d 30 5a 76 72 59 54 65 52 38 42 53 71 73 37 73 71 4d 78 2f 53 45 75 71 79 62 44 4f 68 4a 71 58 4a 55 49}
 		$ = {32 6c 74 4b 76 79 4d 57 72 4a 71 74 51 37 56 79 32 2b 34 77 77 57 6d 50 6b 6f 54 45 66 46 54 45 43 2b 4c 4e 6a 74 53 55 37 56 35 7a 63 37 6e 36 68 65 72 4b 4d 30 38 39 2f 39 4d 6a 69 37 55 56}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_4b4a9071d9
@@ -10380,7 +10081,7 @@ rule SHELL_unknown_4b4a9071d9
 		$ = {3e 0a 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 73 69 7a 65 3d 36 31 20 6e 61 6d 65 3d 22 66 22 20 76 61 6c 75 65 3d 27 3c 3f 70 68 70 20 65 63 68 6f 20 24 5f 53 45 52 56 45 52}
 		$ = {46 49 4c 45 4e 41 4d 45 22 5d 3b 3f 3e 27 3e 3c 62 72 3e 3c 62 72 3e 0a 3c 74 65 78 74 61 72 65 61 20 6e 61 6d 65 3d 22 63 22 20 63 6f 6c 73 3d 36 30 20 72 6f 77 73 3d 31 35 3e 3c 2f 74 65 78}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wso2_php_txt
@@ -10392,7 +10093,7 @@ rule SHELL_wso2_php_txt
 		$ = {66 6f 63 75 73 28 29 3b 3c 2f 73 63 72 69 70 74 3e 27 3b 0a 20 20 20 20 77 73 6f 46 6f 6f 74 65 72 28 29 3b 0a 7d 0a 0a 66 75 6e 63 74 69 6f 6e 20 61 63 74 69 6f 6e 4c 6f 67 6f 75 74 28 29 20}
 		$ = {30 39 36 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 68 65 61 64 65 72 28 22 43 6f 6e 74 65 6e 74 2d 44 69 73 70 6f 73 69 74 69 6f 6e 3a 20 61 74 74 61 63 68 6d 65 6e 74 3b 20 66 69 6c 65 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_f69656a010
@@ -10400,7 +10101,7 @@ rule SHELL_unknown_f69656a010
 	strings:
 		$ = {3c 3f 70 68 70 20 63 61 6c 6c 5f 75 73 65 72 5f 66 75 6e 63 28 63 72 65 61 74 65 5f 66 75 6e 63 74 69 6f 6e 28 6e 75 6c 6c 2c 27 61 73 73 65 72 74 28 24 5f 50 4f 53 54 5b 63 5d 29 3b 27 29 29 3b 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_lpl38_com_php_txt
@@ -10412,7 +10113,7 @@ rule SHELL_lpl38_com_php_txt
 		$ = {33 43 34 42 43 39 41 41 36 36 39 39 41 42 30 41 38 39 43 39 30 38 43 38 38 34 39 42 45 41 36 36 39 38 30 36 43 36 34 43 44 32 45 38 32 31 44 36 35 42 42 38 43 38 46 39 30 35 43 30 33 37 46 30}
 		$ = {3e 20 20 20 0a 3c 64 69 76 20 63 6c 61 73 73 3d 22 61 63 74 61 6c 6c 22 3e 3c 54 44 20 57 49 44 54 48 3d 31 30 30 20 56 41 4c 49 47 4e 3d 54 4f 50 20 41 4c 49 47 4e 3d 43 45 4e 54 45 52 3e ce}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_20140901_04_jpg
@@ -10424,7 +10125,7 @@ rule SHELL_20140901_04_jpg
 		$ = {d3 79 ba df 11 7f e0 a9 1e 2d f8 8d a4 7c 54 f0 ef 8d 7f 68 8f 14 eb da 4f c7 1f 1e 69 df 12 3e 25 e9 b3 f8 42 3d 2e cf c4 7a c6 99 0a db 58 5c b2 43 a7 45 f6 58 2d a2 86 d4 0b 3b 13 0d bf fa}
 		$ = {39 8f a7 19 e7 9c 7e 55 4a ef c4 fe 28 d4 fc 66 fe 3b f1 06 a7 a9 6b 5e 26 b8 d6 bf e1 20 d5 75 cd 56 f6 5d 53 56 d6 2e 8d c4 93 5c 5c 5c ce e4 cb 2c d3 ca ac 5a 52 77 16 24 92 73 91 f4 ff 00}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_20140901_02_png
@@ -10436,7 +10137,7 @@ rule SHELL_20140901_02_png
 		$ = {8e 49 28 70 9a 80 5a 66 43 99 36 15 99 61 2e 5b 3c b4 dc ea d8 cc 34 7b 81 25 0c 26 71 15 1b 9e bc c1 9e cf ec bf b7 99 5b 00 ac 0b c8 03 72 bb 95 91 d7 58 2f 5f 37 7a 6c ef a6 e5 23 3b 8f 8d}
 		$ = {ad a6 3c fb e0 66 31 81 89 2f da 9e 79 64 3b 02 3c 73 cd de 57 de e5 04 78 39 eb db b2 c2 8a 4e 78 7c d7 e3 e2 65 e7 90 58 76 d3 cf 87 4e 7c 9b ce df 8b 8a 76 d3 1f b9 77 d7 ca 68 ab f6 9a 9c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_20140901_06_png
@@ -10448,7 +10149,7 @@ rule SHELL_20140901_06_png
 		$ = {03 51 cc 70 82 40 02 a2 68 52 ce a4 cb cb c2 cd bb 9a 02 41 1f 09 84 0e 88 62 b8 ee f6 4e 20 c8 50 65 75 46 92 45 31 0d aa c6 b2 4c 79 79 79 24 12 49 a7 52 e1 d2 52 59 96 93 f1 38 c5 30 ba ae}
 		$ = {5a 7d 18 0b f4 b3 af d6 06 9a 41 96 85 00 42 d6 24 1e b8 32 a1 f2 8c da 0b ce a8 bd 60 6b 74 43 46 49 8f 0e 4c 78 71 f3 13 bb 12 3b 0e 09 4f 71 78 3c a5 24 5f d9 f2 d4 3b 0d 2f 4b 9a c8 53 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_20140901_05_jpg
@@ -10460,7 +10161,7 @@ rule SHELL_20140901_05_jpg
 		$ = {2a 35 8c a9 68 c2 9c be 2a 5f f2 f1 db f9 3a 6e fb 69 b5 c7 0e 0e e1 67 38 41 60 a9 f3 4a 55 23 0d 2a eb 2a 6a f5 36 a8 d6 db 6f ae dd 4f d7 ff 00 f8 51 be 15 3f f3 1e f1 76 49 e7 1a 9d 96 3f}
 		$ = {5b 0b 55 73 46 9f b3 e4 8e 95 ba 4a 95 29 ab b7 75 4e d2 72 bb e6 fe 8a be 24 ff 00 c1 4c fc 07 f1 5b c2 5f 10 34 df 11 f8 9f 44 1e 3f f8 af e3 fd 0f c4 7e 36 f1 1e 99 a7 cd a4 e8 d2 e9 1e 17}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_20140901_03_jpg
@@ -10472,7 +10173,7 @@ rule SHELL_20140901_03_jpg
 		$ = {a1 e2 7f fc 14 6a 3f fc 66 8f f8 68 ef 82 bf f4 3c 4f ff 00 82 8d 47 ff 00 8c d7 e4 4f 9e 7d 4f e9 fe 34 79 e7 d4 fe 9f e3 47 fc 41 6e 17 ff 00 9f f8 8f be 8f ff 00 28 0f f8 aa 4f 8f ff 00 f4}
 		$ = {7b 2c 3b 6a d4 5d 1f 60 fc 9f b7 af d5 eb df fe d1 b6 3a 3e 9b f1 7f c6 16 3e 1c 58 61 b1 8e e2 23 35 ad b1 f3 21 b7 ba f2 62 5b a8 a3 e4 f4 93 23 f0 ae 07 e1 ed ff 00 83 74 cf 19 68 b7 bf 10}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_20140901_01_png
@@ -10484,7 +10185,7 @@ rule SHELL_20140901_01_png
 		$ = {ea c0 5f 12 66 9b f8 d8 ad 9e 6b 79 ee e6 7c 6c f1 11 d0 94 a5 d6 f4 a9 00 9b 03 42 a9 2a cf 05 db 15 ec b6 b4 45 15 a3 0a e0 62 e4 d0 52 a5 b5 34 85 0b ec 58 a4 92 46 78 33 52 02 93 95 d3 42}
 		$ = {c3 99 38 21 b2 1f e7 62 56 c5 a6 73 59 87 52 a7 81 79 2e c9 19 18 65 fb 5e 90 38 7d 01 14 8a 56 80 92 f3 40 d2 37 b9 1d 28 bd 42 ff 95 ea 7a db 91 c2 08 08 58 89 66 3c f8 0c ac 84 61 56 21 a7}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_password_txt
@@ -10495,7 +10196,7 @@ rule SHELL_password_txt
 		$ = {e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 95 97 20 e2 94 8c e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 e2 94 82 20 68 74 74 70 73 3a 2f 2f 65 78 70 6c 6f 69 74 2e 69 6e 2f 66 6f 72 75 6d 2f 69 6e 64 65 78 2e 70 68 70 3f 73 68 6f 77 74 6f 70 69 63 3d 36 38 32 33}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_pas_php
@@ -10507,7 +10208,7 @@ rule SHELL_pas_php
 		$ = {69 70 78 6e 32 33 2f 53 77 79 78 38 44 67 44 4c 6f 41 69 4e 57 42 55 59 66 74 76 2f 57 34 5a 43 78 35 43 6b 70 45 61 42 77 42 41 68 70 44 72 59 56 58 68 77 51 70 35 52 63 45 76 6a 75 34 4a 4e}
 		$ = {66 36 34 77 4a 31 75 41 49 6d 30 58 56 4a 71 6f 4a 75 4c 4f 71 43 6a 44 4b 77 71 74 37 71 62 72 70 41 68 50 42 44 76 69 48 62 35 69 56 79 52 69 75 70 59 76 62 0a 57 31 4d 33 43 4b 73 70 64 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHPRemoteView_php
@@ -10519,7 +10220,7 @@ rule SHELL_PHPRemoteView_php
 		$ = {22 2e 6d 6d 28 22 43 6c 65 61 6e 20 6f 6b 20 28 66 69 6c 65 20 6e 6f 77 20 65 6d 70 74 79 29 22 29 2e 22 22 3b 0a 20 20 20 20 20 20 20 62 72 65 61 6b 3b 0a 20 20 20 63 61 73 65 20 22 77 69 70}
 		$ = {0a 20 20 20 20 20 20 20 20 20 20 20 20 62 72 65 61 6b 3b 0a 0a 20 20 20 20 20 20 20 20 20 63 61 73 65 20 39 3a 0a 20 20 20 20 20 20 20 20 20 20 20 20 24 6f 75 74 3d 66 72 6f 6d 5f 74 72 61 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHPRemoteView2_jpg
@@ -10531,7 +10232,7 @@ rule SHELL_PHPRemoteView2_jpg
 		$ = {aa d8 e0 95 04 12 33 db 23 3e a2 b3 ef f4 a9 ae 35 9d 3f 54 b5 b9 8e 19 ed 52 48 1d 65 88 c8 b2 43 23 46 ce 06 19 4a be 62 4c 36 48 1c e5 4e 46 35 28 03 8f d1 7e 20 69 b7 5e 12 b6 d5 f5 36 9e}
 		$ = {eb 8e 33 d7 15 56 cb 41 d1 b4 d7 2f 63 a4 d8 5a bb 3f 98 5a 0b 64 42 5f 04 6e e0 75 c1 23 3e e7 d6 b9 88 a1 f1 3d a8 58 1a d2 fe 71 71 1d b0 59 45 dc 64 5a 85 95 8b 09 0b 38 62 db 0a 82 54 36}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHPRemoteView_jpg
@@ -10543,7 +10244,7 @@ rule SHELL_PHPRemoteView_jpg
 		$ = {ae 3e c9 6c 24 73 84 0c 4b 08 81 cb 6c 7c e3 1f eb 9f 18 c2 6c 6e 74 9a b7 2f 71 ba 94 5a f8 7b fe b6 fc d7 dc 64 69 7e 2f 9f 5b d5 3c 3f 1c d6 49 67 1d f2 cb 73 0e cb b6 72 e1 11 d4 ab 28 d8}
 		$ = {8a 9d 2e 20 96 69 61 8e 68 de 58 48 12 22 b0 2c 99 19 19 1d b2 39 a9 28 02 a7 d8 e7 ff 00 a0 95 d7 fd f3 17 ff 00 11 47 d8 e7 ff 00 a0 95 d7 fd f3 17 ff 00 11 56 e8 a0 0a 9f 63 9f fe 82 57 5f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Dx_php
@@ -10555,7 +10256,7 @@ rule SHELL_Dx_php
 		$ = {61 72 63 68 27 5d 5b 27 6d 6f 64 65 27 5d 3d 3d 73 74 72 74 6f 6c 6f 77 65 72 28 24 63 75 72 5f 72 61 64 29 29 3f 27 43 48 45 43 4b 45 44 27 3a 27 27 29 20 20 20 3a 28 28 24 63 75 72 5f 72 61}
 		$ = {3d 3e 27 57 4c 42 53 27 2c 32 35 33 35 3d 3e 27 4d 41 44 43 41 50 27 2c 32 35 34 33 3d 3e 27 73 69 70 27 2c 32 35 39 32 3d 3e 27 6e 65 74 72 65 6b 27 2c 32 37 32 37 3d 3e 27 4d 47 43 50 20 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Dx_jpg
@@ -10567,7 +10268,7 @@ rule SHELL_Dx_jpg
 		$ = {28 56 c6 f9 e5 97 52 33 c6 0d ac 9c a6 08 ce 4a f1 fc e9 74 d8 2e ed f4 5b 48 e6 d3 6f 3c db 5b f1 70 61 36 b2 13 22 60 0e 0e dc 67 ea 47 4a d3 eb 52 f6 69 e9 7b 9a fd 76 7e cd 3d 2f 7b 3f 35}
 		$ = {45 6b cd 1e e7 95 cf 1e e4 34 54 df 64 9f fb 9f a8 a3 ec 93 ff 00 73 f5 14 73 47 b8 73 c7 b9 0d 21 e9 53 fd 92 7f ee 7e a2 9b 25 bc a8 85 99 70 07 b8 a1 49 77 1a 94 7b 90 51 45 15 65 85 14 51}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_jpg
@@ -10579,7 +10280,7 @@ rule SHELL_r57_jpg
 		$ = {ef f6 b5 8f d9 04 9e 51 9f ed 09 b0 3f f7 77 67 19 f6 eb 58 ed e1 dd 44 ea a6 41 78 a2 c3 ed 21 be cf e6 36 d3 1e f3 29 3b 71 8d fe 66 07 fb 9d f9 c5 0d e1 dd 44 ea a6 41 78 a2 c3 ed 21 be cf}
 		$ = {26 a6 fe cf 3f f3 f9 71 f9 27 ff 00 13 47 f6 79 ff 00 9f cb 8f c9 3f f8 9a 39 82 c4 3e 54 bf de b7 ff 00 be db ff 00 89 a3 ca 97 fb d6 ff 00 f7 db 7f f1 35 37 f6 79 ff 00 9f cb 8f c9 3f f8 9a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r572_jpg
@@ -10591,7 +10292,7 @@ rule SHELL_r572_jpg
 		$ = {b9 66 8e f9 c0 f2 8f de 21 8c 27 0c 79 18 2a 47 7c 9e 94 3f 20 5e 66 92 f8 96 39 3c 3d fd af 1e 9d 7c c0 10 1a d3 11 ac c8 49 03 90 5c 2f 70 7e f7 43 4b 17 88 1a 4b 7b d6 6d 1e fe 2b ab 45 57}
 		$ = {d6 e5 ba 2a 0f b6 da ff 00 cf cc 3f f7 f0 51 f6 db 5f f9 f9 87 fe fe 0a 43 27 a2 a0 fb 6d af fc fc c3 ff 00 7f 05 4b 1b a4 a9 be 36 57 4c e3 72 9c 8c fa 7e a2 80 1d 45 14 50 01 45 14 50 01 45}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PH_Vayv_jpg
@@ -10603,7 +10304,7 @@ rule SHELL_PH_Vayv_jpg
 		$ = {3f e8 2f ff 00 92 d2 ff 00 f1 14 01 d6 d1 5c 97 fc 2c cf 08 7f d0 5f ff 00 25 a5 ff 00 e2 28 ff 00 85 99 e1 0f fa 0b ff 00 e4 b4 bf fc 45 00 75 b4 57 25 ff 00 0b 33 c2 1f f4 17 ff 00 c9 69 7f}
 		$ = {ff 00 41 7f fc 96 97 ff 00 88 a0 0e b6 8a e4 bf e1 66 78 43 fe 82 ff 00 f9 2d 2f ff 00 11 47 fc 2c cf 08 7f d0 5f ff 00 25 a5 ff 00 e2 28 03 ad a2 b9 2f f8 59 9e 10 ff 00 a0 bf fe 4b 4b ff 00}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PH_Vayv_php
@@ -10615,7 +10316,7 @@ rule SHELL_PH_Vayv_php
 		$ = {73 69 7a 65 3a 20 38 70 74 22 3e 0a 0a 0a 0a 0a 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 61 20 68 72 65 66 3d 22 3c 3f 65 63 68 6f 20 22 24 66 69 73 74 69 6b 2e 70 68 70 3f 64}
 		$ = {68 74 3d 22 31 37 22 20 62 67 63 6f 6c 6f 72 3d 22 23 38 30 38 30 38 30 22 3e 0a 20 20 20 20 3c 70 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e 0a 20 20 20 20 3c 69 6d 67 20 62 6f 72 64 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ironshell_jpg
@@ -10627,7 +10328,7 @@ rule SHELL_ironshell_jpg
 		$ = {bf d9 ef 6b 5e eb d7 42 bf 71 76 ad fa fe 86 7e a5 ae ff 00 6a df cb 79 73 36 64 90 e4 80 1b 0a 3d 06 73 81 55 3e d9 07 fc f4 fd 0d 69 6a 76 91 d8 ea 33 5a c5 31 99 62 3b 4b 94 da 73 8e 46 01}
 		$ = {bd d7 f5 ae 77 28 6f cb f8 bf 3f 33 0e 68 f6 fc ff 00 cc a5 36 b1 73 71 8f 3b 4e 8e 5d bd 37 dc 48 d8 fc de ab dc df 4f 70 b1 2f d8 23 88 46 bb 46 c9 0f 4c e7 b9 3e ff 00 9d 68 18 e0 b9 4b 90}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_3d9e652c8f
@@ -10635,7 +10336,7 @@ rule SHELL_unknown_3d9e652c8f
 	strings:
 		$ = {6c 6f 67 69 6e 0a 0a b1 b8 d7 a2 3a b2 bb cd ac c8 a8 cf de ce c4 bc fe bc d0 d3 c3 b2 bb cd ac d1 d5 c9 ab c7 f8 b7 d6 b3 f6 c0 b4 0a 0a 20 20 20 20 20 c8 e7 3a 37 37 37 20 37 35 30 20 37 33 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_ironshell_php
@@ -10647,7 +10348,7 @@ rule SHELL_ironshell_php
 		$ = {39 39 39 39 39 39 39 3c 2f 6f 70 74 69 6f 6e 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 2f 73 65 6c 65 63 74 3e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 62 3e 4d 61}
 		$ = {30 30 5c 22 20 2f 3e 3c 69 6e 70 75 74 20 73 69 7a 65 3d 33 30 20 6e 61 6d 65 3d 5c 22 75 70 6c 6f 61 64 65 64 66 69 6c 65 5c 22 20 74 79 70 65 3d 5c 22 66 69 6c 65 5c 22 20 2f 3e 0a 3c 69 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHP_Shell_jpg
@@ -10659,7 +10360,7 @@ rule SHELL_PHP_Shell_jpg
 		$ = {09 48 5a 39 66 79 f7 33 12 d2 05 ce 09 27 6f 00 0c 00 70 38 ce 07 24 9e 6b 12 1f 08 69 d0 e9 1a 76 9a 25 b9 68 6c 6e 05 c4 6e ce 37 b3 02 4e 18 e3 95 e7 18 e3 80 2b 0f 55 f1 bd fc 57 70 45 a7}
 		$ = {a9 68 97 53 2a 9b d7 bc fd e4 44 9d ab 34 92 30 eb 8e 40 71 9f 7a 6e ca 2e db ff 00 c3 7f c1 1e 8e df 2f cb 52 58 fc 61 a1 be 9f 2d f1 bb 96 28 22 68 d5 fc fb 69 62 71 bc 80 84 23 28 62 ac 4e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHP_Shell3_jpg
@@ -10671,7 +10372,7 @@ rule SHELL_PHP_Shell3_jpg
 		$ = {f4 fc 2a b7 8c 34 19 b5 d8 f4 cf 2a c3 4d d4 12 d2 ec cf 2d a6 a2 e5 62 95 7c b7 4c 67 cb 7e 41 70 79 5e d5 5e c7 c3 97 31 c9 a4 94 d1 b4 6d 1e 1b 1b f7 b9 7b 7d 3a 52 c8 ea d0 3c 79 ff 00 55}
 		$ = {ae ae 47 c6 ff 00 f2 20 f8 8f fe c1 77 3f fa 29 ab ae a0 02 8a 28 a0 02 8a 28 a0 02 8a 28 a0 02 8a 28 a0 02 8a 28 a0 02 8a 28 a0 02 8a 28 a0 02 8a 28 a0 02 8a 28 a0 02 8a 28 a0 0e 67 55 ff 00}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHP_Shell2_jpg
@@ -10683,7 +10384,7 @@ rule SHELL_PHP_Shell2_jpg
 		$ = {b0 ba fb 64 ef 24 d1 e9 92 07 92 02 1b 62 b5 d1 90 23 26 3c b0 10 0c 82 a3 8e 0b 54 5a 35 90 b3 8f 52 58 34 f6 48 bf b3 a5 12 dc 49 a7 49 69 36 e1 8c 09 59 8e cb 87 3f 31 2e a3 82 0f 38 7a 87}
 		$ = {ff 00 23 d7 47 45 00 73 9f f0 8c 5f ff 00 d0 df ae 7f df ab 3f fe 47 a3 fe 11 8b ff 00 fa 1b f5 cf fb f5 67 ff 00 c8 f5 d1 d1 40 1c e7 fc 23 17 ff 00 f4 37 eb 9f f7 ea cf ff 00 91 e8 ff 00 84}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHP_Shell_php
@@ -10695,7 +10396,7 @@ rule SHELL_PHP_Shell_php
 		$ = {65 64 69 74 22 20 29 20 7b 20 2f 2a 3c 21 2d 2d 20 45 64 69 74 20 61 20 66 69 6c 65 20 61 6e 64 20 73 61 76 65 20 69 74 20 61 66 74 65 72 77 61 72 64 73 20 77 69 74 68 20 74 68 65 20 73 61 76}
 		$ = {22 43 61 6e 63 65 6c 5c 22 3e 3c 2f 66 6f 72 6d 3e 22 3b 0a 20 09 09 65 63 68 6f 20 22 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 3c 2f 63 65 6e 74 65 72 3e 22 3b 0a 20 09 7d 0a 7d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_locus7s2_jpg
@@ -10707,7 +10408,7 @@ rule SHELL_c99_locus7s2_jpg
 		$ = {c1 18 c1 ce 36 8c a9 ce 4f 95 78 97 fe 45 db dc 74 c2 7f e8 6b 57 0a f5 d5 78 c2 52 ba 7e 86 94 71 38 9f 6d 05 29 dd 37 d9 7f 91 e7 54 51 45 7a e7 ba 14 51 45 00 14 51 45 00 14 51 45 00 14 51}
 		$ = {61 2b b3 36 8a 28 ad 4d c2 8a 28 a0 02 8a 28 a0 02 8a 28 a0 02 8a 28 a0 02 8a 28 a0 02 8a 28 a0 02 ba bf 87 df f2 30 c9 ff 00 5e cd ff 00 a1 2d 72 95 d5 fc 3e ff 00 91 86 4f fa f6 6f fd 09 6b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_locus7s_php
@@ -10719,7 +10420,7 @@ rule SHELL_c99_locus7s_php
 		$ = {69 66 20 28 65 6d 70 74 79 28 24 73 65 61 72 63 68 5f 6e 61 6d 65 29 29 20 7b 24 73 65 61 72 63 68 5f 6e 61 6d 65 20 3d 20 22 28 2e 2a 29 22 3b 20 24 73 65 61 72 63 68 5f 6e 61 6d 65 5f 72 65}
 		$ = {20 20 7b 20 0a 20 20 20 69 66 20 28 65 72 65 67 28 22 70 68 70 22 2e 22 42 42 20 32 2e 28 2e 2a 29 20 61 75 74 6f 2d 67 65 6e 65 72 61 74 65 64 20 63 6f 6e 66 69 67 20 66 69 6c 65 22 2c 24 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_locus7s_jpg
@@ -10731,7 +10432,7 @@ rule SHELL_c99_locus7s_jpg
 		$ = {28 dd 28 7a 7f 5f d7 97 de 0b 57 63 87 a2 8a 28 00 a2 8a 28 00 a2 8a 28 00 a2 8a 28 00 a2 8a 74 6b be 45 4c 81 b8 81 93 da 80 1b 45 6f cd 6d 0d 9e 9f ab 5b 45 e6 13 1f 92 19 dd 87 cc 73 9e 06}
 		$ = {6b e1 cf 1c 69 7a ad e9 75 b6 82 46 f3 19 17 71 50 ca 57 38 ee 06 73 eb 8f 5a 10 33 d7 a4 f8 0b a1 69 ad a5 5a 5d de 6a b7 f7 57 53 18 e7 9a da e2 de dd 21 5e 70 de 5b 86 66 ec 30 09 ef ec 2b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_w4cking_jpg
@@ -10743,7 +10444,7 @@ rule SHELL_c99_w4cking_jpg
 		$ = {03 99 a2 ba 6f f8 57 9e 2d ff 00 a0 1d cf e6 bf e3 47 fc 2b cf 16 ff 00 d0 0e e7 f3 5f f1 a0 0e 66 8a e9 bf e1 5e 78 b7 fe 80 77 3f 9a ff 00 8d 1f f0 af 3c 5b ff 00 40 3b 9f cd 7f c6 80 39 9a}
 		$ = {a0 2e 7d 40 e2 99 88 a7 b6 13 df bd 94 7b 2d 02 47 7b 63 a8 aa ca 40 8b 68 46 88 b1 27 b2 90 15 3b e4 e3 9a 57 d1 b0 eb 63 91 a7 a4 52 48 8e e9 1b b2 c6 37 39 03 21 46 71 93 e9 c9 03 f1 ae aa}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_w4cking_php
@@ -10755,7 +10456,7 @@ rule SHELL_c99_w4cking_php
 		$ = {68 61 72 73 28 24 64 29 2e 22 5c 22 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 68 69 64 64 65 6e 20 6e 61 6d 65 3d 66 20 76 61 6c 75 65 3d 5c 22 22 2e 68 74 6d 6c 73 70 65 63 69 61 6c 63 68 61 72}
 		$ = {29 2e 22 26 66 74 3d 22 2e 24 74 5b 31 5d 2e 22 26 77 68 69 74 65 3d 31 26 64 3d 22 2e 75 72 6c 65 6e 63 6f 64 65 28 24 64 29 2e 22 5c 22 20 74 61 72 67 65 74 3d 5c 22 5f 62 6c 61 6e 6b 5c 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_w4cking2_jpg
@@ -10767,7 +10468,7 @@ rule SHELL_c99_w4cking2_jpg
 		$ = {bf 86 fa 23 f9 9a 82 6f 9e 61 fe 85 79 f6 72 7e 63 d4 ed 6c 8a 9b ab 36 16 d6 c7 07 6d 6d 71 79 3a c1 6b 04 93 cc d9 db 1c 48 59 8f 7e 00 e6 a3 20 ab 15 60 41 07 04 1e d5 ea 7e 18 89 59 fc 21}
 		$ = {2b 3b 4b 08 24 b8 95 b6 a2 6e 61 93 f5 2d 8a af f6 e5 ff 00 9f 48 3f 37 ff 00 e2 ab bb b4 d6 fc 3f 63 aa e9 b7 36 37 3a 55 ae 9d 0c 80 cd 6a d6 4f 25 c6 ed ed 96 13 18 b7 15 c6 31 f3 29 c7 1b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_smowu_php
@@ -10779,7 +10480,7 @@ rule SHELL_smowu_php
 		$ = {63 6b 3d 22 64 6f 63 75 6d 65 6e 74 2e 74 6f 64 6f 2e 61 63 74 2e 76 61 6c 75 65 3d 27 74 6f 75 63 68 27 3b 64 6f 63 75 6d 65 6e 74 2e 74 6f 64 6f 2e 64 2e 76 61 6c 75 65 3d 27 25 32 46 76 61}
 		$ = {6e 74 2e 74 6f 64 6f 2e 64 2e 76 61 6c 75 65 3d 27 25 32 46 76 61 72 25 32 46 77 77 77 25 32 46 68 74 6d 6c 25 32 46 77 6f 72 64 70 72 65 73 73 27 3b 64 6f 63 75 6d 65 6e 74 2e 74 6f 64 6f 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_C99madShell_v__3_0_jpg
@@ -10791,7 +10492,7 @@ rule SHELL_C99madShell_v__3_0_jpg
 		$ = {77 6f 4f bd 5e 21 45 47 d9 e5 2f 98 fa 22 e6 f3 4c b3 f0 1f 88 ed ac f5 0f 0a 59 f8 5e eb c3 b6 16 f6 6f 6f f6 37 d5 a5 b8 fb 45 93 dc 79 bb 7f d2 99 91 92 e1 d9 1f e5 f9 3e 4f e0 ae 83 58 4f}
 		$ = {88 34 85 d7 b4 4f ed 3f 11 f8 76 27 b3 9b fb 45 62 8a 27 fb 44 52 bd bc b2 b6 c5 8a 5d b1 3f c8 ed b7 ee 7f 7e ba b9 b4 4b 3f 16 f8 b6 e1 a7 f1 46 9a f6 5a 0e 9d a5 ad e5 a2 6b f6 b6 bf da d7}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_gfs_sh2_jpg
@@ -10803,7 +10504,7 @@ rule SHELL_gfs_sh2_jpg
 		$ = {01 88 b0 47 ca ce 37 86 88 2e 13 0b f2 26 ec 33 f4 0b 8b 67 d6 52 3b 7d 52 2d 6b 16 64 35 d4 72 89 3e ca 43 2f ee f2 09 c0 7c e4 6e 25 cf 94 77 34 98 1b 76 bf b5 d3 fe 81 ba e7 fe 09 6e ff 00}
 		$ = {b6 73 42 c6 ea 75 9b ce 54 94 38 28 8a e4 9e 30 f2 12 80 90 b8 52 02 ef f9 f4 7f b5 d3 fe 81 ba e7 fe 09 6e ff 00 f8 d5 32 6d 4a de e2 19 21 9b 49 d6 a4 8a 45 28 e8 fa 1d d9 56 52 30 41 06 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_gfs_sh_jpg
@@ -10815,7 +10516,7 @@ rule SHELL_gfs_sh_jpg
 		$ = {76 90 4f 0d d5 bc 57 16 f2 c7 34 12 a0 78 e4 8d 83 2b a9 19 04 11 c1 04 73 9a 92 8f ac bf e5 5f 8f f9 87 d5 97 f3 3f c3 fc 8e 1f cd d6 7f e7 a5 ef fd fb 93 fc 68 f3 75 9f f9 e9 7b ff 00 7e e4}
 		$ = {36 df f3 30 53 ef c9 fe f7 f4 14 fa 62 7d f9 3f de fe 82 9f 5f b5 c7 6f bc f9 69 ef f7 7e 41 45 14 55 10 14 51 45 00 14 51 45 00 14 51 45 00 14 51 45 00 14 51 45 00 14 51 45 00 14 51 45 00 14}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_gfs_sh_php
@@ -10827,7 +10528,7 @@ rule SHELL_gfs_sh_php
 		$ = {64 3e 3c 74 64 20 61 6c 6c 69 6e 67 3d 63 65 6e 74 65 72 3e 3c 62 3e 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 72 65 64 3e 20 4e 4f 20 3c 2f 62 3e 3c 2f 66 6f 6e 74 3e 3c 2f 74 64 3e 3c 2f 74 72 3e}
 		$ = {6c 65 6e 61 6d 65 5c 22 3e 3c 2f 74 64 3e 22 29 3b 0a 20 65 63 68 6f 20 28 22 3c 74 64 20 61 6c 6c 69 6e 67 3d 5c 22 63 65 6e 74 65 72 5c 22 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 5c 22 74 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_pwhash_php
@@ -10839,7 +10540,7 @@ rule SHELL_pwhash_php
 		$ = {0a 20 20 22 3c 74 74 3e 26 3c 2f 74 74 3e 22 20 28 61 6d 70 65 72 73 61 6e 64 29 2c 20 22 3c 74 74 3e 7e 3c 2f 74 74 3e 22 20 28 74 69 6c 64 65 29 2c 20 22 3c 74 74 3e 21 3c 2f 74 74 3e 22 20}
 		$ = {20 24 73 61 6c 74 20 3d 20 64 65 63 68 65 78 28 6d 74 5f 72 61 6e 64 28 29 29 3b 0a 0a 20 20 20 20 20 20 20 20 24 68 61 73 68 20 3d 20 24 66 6b 74 20 2e 20 27 3a 27 20 2e 20 24 73 61 6c 74 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_INSTALL
@@ -10851,7 +10552,7 @@ rule SHELL_INSTALL
 		$ = {20 20 3d 20 22 6d 64 35 3a 37 65 61 33 62 35 39 65 3a 65 62 32 37 31 63 34 34 35 39 32 35 33 65 61 61 31 36 33 66 63 61 63 32 61 31 31 39 66 32 32 35 22 0a 0a 59 6f 75 20 77 69 6c 6c 20 6e 6f}
 		$ = {6c 6c 20 62 65 20 6d 61 74 63 68 65 64 20 61 67 61 69 6e 73 74 20 74 68 65 20 66 69 72 73 74 20 74 6f 6b 65 6e 20 6f 66 20 74 68 65 20 63 6f 6d 6d 61 6e 64 0a 6c 69 6e 65 20 61 6e 64 20 73 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpshell3_jpg
@@ -10863,7 +10564,7 @@ rule SHELL_phpshell3_jpg
 		$ = {db fe 07 f9 14 fc 13 a5 2e 95 6f ac a8 b1 fb 2f 9b ab 5c c8 a0 c7 b3 7a 6f f9 48 f5 5c 74 ed 4e f1 6d ad c5 cd df 86 9a 08 25 94 43 ac 47 24 a6 34 2d b1 04 72 02 cd 8e 83 24 72 7d 45 5d 83 c3}
 		$ = {d6 a9 63 77 24 13 69 d7 08 cf 76 d1 c6 db 5e 5c 89 17 60 3d be 46 1d 32 79 c0 4f 87 70 6a b7 36 d7 9e 21 be bb b4 96 3d 66 63 72 a9 1d a3 c6 fb 46 12 33 b8 c8 c3 69 44 07 6e 32 37 75 34 2d 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_style_css
@@ -10875,7 +10576,7 @@ rule SHELL_style_css
 		$ = {6e 74 2d 73 69 7a 65 3a 20 31 30 30 25 3b 0a 20 20 77 69 64 74 68 3a 20 31 30 30 25 3b 0a 20 20 62 6f 72 64 65 72 3a 20 6e 6f 6e 65 3b 0a 7d 0a 0a 70 20 7b 0a 20 20 6d 61 72 67 69 6e 2d 74 6f}
 		$ = {69 6c 79 3a 20 6d 6f 6e 6f 73 70 61 63 65 3b 0a 20 20 6d 61 72 67 69 6e 3a 20 30 70 78 3b 0a 7d 0a 0a 70 23 70 72 6f 6d 70 74 20 69 6e 70 75 74 20 7b 0a 20 20 62 6f 72 64 65 72 3a 20 6e 6f 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_config_php
@@ -10887,7 +10588,7 @@ rule SHELL_config_php
 		$ = {73 65 20 66 6f 6c 6c 6f 77 20 74 68 65 0a 3b 20 69 6e 73 74 72 75 63 74 69 6f 6e 73 20 67 69 76 65 6e 20 69 6e 20 70 77 68 61 73 68 2e 70 68 70 2e 0a 0a 61 6c 69 63 65 20 3d 20 22 73 65 63 72}
 		$ = {20 65 78 70 61 6e 64 20 69 6e 74 6f 20 27 6c 73 20 2d 43 76 68 46 27 20 64 6f 65 73 20 6e 6f 74 20 63 61 75 73 65 20 61 6e 20 69 6e 66 69 6e 69 74 65 20 72 65 63 75 72 73 69 6f 6e 2e 0a 0a 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpshell3_php
@@ -10899,7 +10600,7 @@ rule SHELL_phpshell3_php
 		$ = {20 20 20 24 69 6f 29 3b 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 2f 2a 20 52 65 61 64 20 6f 75 74 70 75 74 20 73 65 6e 74 20 74 6f 20 73 74 64 6f 75 74 2e 20 2a 2f 0a 20 20 20 20 20 20 20 20}
 		$ = {70 6f 73 74 22 3e 0a 0a 3c 3f 70 68 70 0a 69 66 20 28 21 24 5f 53 45 53 53 49 4f 4e 5b 27 61 75 74 68 65 6e 74 69 63 61 74 65 64 27 5d 29 20 7b 0a 20 20 20 20 2f 2a 20 47 65 6e 65 72 65 61 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_NetworkFileManagerPHP_php
@@ -10911,7 +10612,7 @@ rule SHELL_NetworkFileManagerPHP_php
 		$ = {68 61 74 20 4d 44 35 20 63 72 79 70 74 20 61 6c 67 6f 72 69 74 68 6d 20 68 61 73 20 6e 6f 20 77 61 79 20 74 6f 20 64 65 63 72 79 70 74 20 69 74 2c 20 62 65 63 61 75 73 65 20 69 74 20 75 73 65}
 		$ = {0a 20 24 64 61 74 61 3d 22 22 3b 0a 0a 20 24 64 61 74 61 2e 3d 22 23 23 5c 6e 22 3b 0a 0a 20 24 64 61 74 61 2e 3d 22 23 23 20 4e 46 4d 20 68 61 63 6b 2e 72 75 20 63 72 65 61 74 6f 72 20 5c 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_NetworkFileManagerPHP2_jpg
@@ -10923,7 +10624,7 @@ rule SHELL_NetworkFileManagerPHP2_jpg
 		$ = {d0 ff 00 e7 bf fe 52 74 cf fe 45 ae f6 8a 3d bd 4e e1 64 70 5f f0 a9 b4 3f f9 ef ff 00 94 9d 33 ff 00 91 68 ff 00 85 4d a1 ff 00 cf 7f fc a4 e9 9f fc 8b 5d ed 14 7b 7a 9d c2 c8 e0 bf e1 53 68}
 		$ = {a5 14 73 4b b8 72 ae c7 17 ff 00 0a a3 c1 9f f4 0b 9f ff 00 06 17 3f fc 72 8f f8 55 1e 0c ff 00 a0 5c ff 00 f8 30 b9 ff 00 e3 95 da 51 47 34 bb 87 2a ec 71 7f f0 aa 3c 19 ff 00 40 b9 ff 00 f0}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_NetworkFileManagerPHP_jpg
@@ -10935,7 +10636,7 @@ rule SHELL_NetworkFileManagerPHP_jpg
 		$ = {ce 14 36 d3 b9 8e 32 38 03 1d c7 4a 92 55 f0 54 a9 0a 1b fd 35 56 18 8c 28 b1 df 84 06 32 72 55 b6 b0 dc 09 ea 0e 73 4e 95 bc 19 3d d7 da 1e ff 00 4c de 42 2b 28 bd 02 36 09 f7 77 20 6d ad 8e}
 		$ = {7a 6e e4 fa 03 b4 e3 d7 f3 a5 86 fa 39 ee 1a 15 49 17 ef 6d 76 03 6b ed 38 6c 73 9e 0f ae 3d a9 3e c6 55 6c 51 08 db 6e d9 39 3c 91 b1 97 f3 c9 15 1d b5 9c f1 5c a9 90 c7 e4 c5 e6 79 7b 49 dc}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_MySQL_Web_Interface_Version_0_8_jpg
@@ -10947,7 +10648,7 @@ rule SHELL_MySQL_Web_Interface_Version_0_8_jpg
 		$ = {8a 28 00 a2 8a 28 00 a2 8a 28 00 a2 8a 28 00 a2 8a 28 00 a2 8a 28 00 a2 8a 28 00 a2 8a 28 00 a2 8a 28 00 a2 8a 28 03 9a f1 c7 fc 81 61 ff 00 af 85 ff 00 d0 5a b6 74 8f f9 02 d8 7f d7 bc 7f fa}
 		$ = {28 b5 d4 95 25 b2 b6 b6 49 9f 4e 9d 22 69 22 92 e5 9c 79 85 02 63 0e b8 6c e1 b7 0c 13 5d 05 9e 93 a6 e9 f7 17 57 16 5a 7d a5 b4 f7 6f be e6 48 61 54 69 9b 24 e5 c8 19 63 96 27 27 d4 fa d5 ca}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_Mohajer22_jpg
@@ -10959,7 +10660,7 @@ rule SHELL_r57_Mohajer22_jpg
 		$ = {19 06 1f 0d 78 8e db c3 d7 17 13 2a 6b 4a 64 61 b5 6c 75 6f b2 86 40 73 b2 4d b1 92 e3 e8 57 bf 4a 87 c3 ba 3e 97 ac 4f 15 b5 ee af 2d a5 cd c5 c2 5b db c3 0d 99 9c 92 dc 6e 73 b9 42 ae 48 1c}
 		$ = {5b d1 07 f7 57 d0 67 9c 7f 40 00 f0 5d 3b c5 de 23 d2 2d da 0d 32 6d 32 ca 16 62 e6 3b 6d 67 45 8d 4b 10 01 38 58 40 ce 00 e7 d8 55 bf f8 58 9e 34 ff 00 a0 ad b7 fe 0f f4 7f fe 35 40 16 bf 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_Mohajer222_jpg
@@ -10971,7 +10672,7 @@ rule SHELL_r57_Mohajer222_jpg
 		$ = {ff 00 c4 51 fd bd 79 ff 00 3c 74 ef fc 16 db ff 00 f1 14 01 77 fe 12 1d 2f fe 84 cd 0f fe ff 00 5e ff 00 f2 45 67 eb 5a b3 eb 7a 99 bd 92 da 0b 6f dd 45 0a 43 06 ed 88 91 c6 b1 a8 1b 99 9b ee}
 		$ = {ad c7 d3 7e 20 bd ed ad e7 fc 21 d7 09 35 b1 2d 1f 95 e1 98 d1 72 46 3e 65 58 42 b7 b6 e0 70 79 18 34 db 9d 2b c7 d7 ba d5 ae ab 79 e0 eb e9 ae 20 94 4d b5 74 23 0a ca c1 b7 1f 30 45 1a ee c9}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_Mohajer22_php
@@ -10983,7 +10684,7 @@ rule SHELL_r57_Mohajer22_php
 		$ = {6b 28 24 5f 50 4f 53 54 5b 27 6d 6b 5f 6e 61 6d 65 27 5d 29 29 20 65 63 68 6f 20 22 3c 74 61 62 6c 65 20 77 69 64 74 68 3d 31 30 30 25 20 63 65 6c 6c 70 61 64 64 69 6e 67 3d 30 20 63 65 6c 6c}
 		$ = {61 67 65 2e 27 5f 62 75 74 74 31 32 27 5d 29 29 3b 0a 65 63 68 6f 20 73 72 28 31 35 2c 22 3c 62 3e 22 2e 24 6c 61 6e 67 5b 24 6c 61 6e 67 75 61 67 65 2e 27 5f 74 65 78 74 35 33 27 5d 2e 24 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Crystal2_jpg
@@ -10995,7 +10696,7 @@ rule SHELL_Crystal2_jpg
 		$ = {fc 62 8f ed 2f 0f 7f d0 23 53 ff 00 c1 94 7f fc 62 b0 68 a0 0d ef ed 2f 0f 7f d0 23 53 ff 00 c1 94 7f fc 62 8f ed 2f 0f 7f d0 23 53 ff 00 c1 94 7f fc 62 b1 21 86 5b 89 a3 86 18 de 49 64 60 a8}
 		$ = {fc fb dd ff 00 e0 4a ff 00 f1 ba 3c 9d 33 fe 7d ee ff 00 f0 25 7f f8 dd 47 45 00 49 e4 e9 9f f3 ef 77 ff 00 81 2b ff 00 c6 e8 f2 74 cf f9 f7 bb ff 00 c0 95 ff 00 e3 75 1d 14 01 27 93 a6 7f cf}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Crystal_php
@@ -11007,7 +10708,7 @@ rule SHELL_Crystal_php
 		$ = {69 6c 65 73 20 69 6e 20 63 75 72 72 65 6e 74 20 64 69 72 3c 2f 6f 70 74 69 6f 6e 3e 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 66 69 6e 64 20 2f 20 2d 74 79 70 65 20 66 20 2d 6e 61 6d 65 20}
 		$ = {3c 62 3e 0a 09 09 09 09 09 09 09 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 22 23 46 46 30 30 30 30 22 20 73 69 7a 65 3d 22 31 22 3e 41 74 74 61 63 6b 20 4d 6f 64 65 3c 2f 66 6f 6e 74 3e 3c 2f 62 3e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Crystal3_jpg
@@ -11019,7 +10720,7 @@ rule SHELL_Crystal3_jpg
 		$ = {09 df 5f eb cb f0 33 b4 ff 00 0b ea fa a6 98 fa 95 ad bc 7f 61 49 7c 97 b8 9a e2 38 91 1f 19 c3 33 b0 03 a8 c1 3c 12 40 eb c5 63 91 82 47 a5 75 b7 1a 8c 37 3f 0c 9a 17 9e d8 5e 3e b8 67 68 23}
 		$ = {d2 ef 04 36 31 9c 21 00 9c 64 d5 41 e1 4b 4b 1d 0a c3 55 d7 2f ef 2d 63 bf 79 16 11 6b 62 27 0b b1 b6 9d ec 64 40 0e 41 f9 46 4e 07 6a dd bd f8 80 9a bd f2 6a 13 f8 93 c5 5a 6b b8 5f 3e c6 c6}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Crystal_jpg
@@ -11031,7 +10732,7 @@ rule SHELL_Crystal_jpg
 		$ = {78 47 e1 9e 9f e1 4f 10 e9 1e 26 f1 17 88 b5 7d 66 d6 7d 6f 47 b2 d6 2e ad dd 20 86 d5 d2 2f b3 fd 8b cf 66 5f 32 53 ba 28 1b 3b f9 6f 93 e5 8f 55 fd 98 ac 3e 0f 78 f3 c1 d6 9f 16 b5 cb 8d 33}
 		$ = {3d 2c 3e 0a b6 2e 5c b8 78 f3 7f 5f 89 c9 03 86 25 78 1e a6 90 fd cf a7 4a f4 3b 1d 1a d2 ef e1 c8 93 6d bc 57 0d 71 f3 5c 3a 0d c0 7d 7e f6 2b 16 7f 00 6a 90 ea f0 58 2a 47 2c b3 2e f4 91 1b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_nstview2_jpg
@@ -11043,7 +10744,7 @@ rule SHELL_nstview2_jpg
 		$ = {14 79 d1 ff 00 cf 44 ff 00 be 85 65 51 59 7d 46 3d c7 ec 91 ab e7 47 ff 00 3d 13 fe fa 14 79 d1 ff 00 cf 44 ff 00 be 85 65 51 47 d4 63 dc 3d 92 35 7c e8 ff 00 e7 a2 7f df 42 8f 3a 3f f9 e8 9f}
 		$ = {8d 92 c0 ce f3 3b 23 e0 06 0e 02 8f 90 76 39 cf 6a 59 fc 61 a8 1d ad 17 d8 60 59 14 dd 40 d3 c7 23 09 ed c9 0b 12 0d a7 22 59 18 9c 60 31 03 1f 29 3c 57 5d f6 d8 ff 00 ba ff 00 90 a3 ed b1 ff}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_nstview_php
@@ -11055,7 +10756,7 @@ rule SHELL_nstview_php
 		$ = {6c 49 43 4a 7a 62 32 4e 72 5a 58 51 36 49 43 51 68 49 6a 73 4e 43 69 41 67 49 43 41 6b 59 33 56 79 49 44 30 67 63 32 56 73 5a 57 4e 30 4b 43 52 66 57 7a 42 64 4b 54 73 67 49 41 30 4b 44 51 6f}
 		$ = {24 5f 47 45 54 5b 27 74 27 5d 3d 3d 22 75 70 6c 6f 61 64 22 29 7b 0a 65 63 68 6f 20 22 3c 62 72 3e 0a 3c 61 20 68 72 65 66 3d 27 24 70 68 70 5f 73 65 6c 66 3f 64 3d 24 64 26 74 3d 6d 61 73 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_nstview_jpg
@@ -11067,7 +10768,7 @@ rule SHELL_nstview_jpg
 		$ = {d1 84 c8 93 cc 00 8e 01 c1 52 7b 67 a6 30 34 cd 49 e4 f1 b7 96 6f cb ca 6f 67 47 80 6a 12 3c c2 30 1c 28 92 d0 fc 91 20 c2 91 20 e4 e1 3f be 6a ff 00 8a 75 cd 01 ec ac e5 b8 d5 66 85 a7 32 c7}
 		$ = {22 05 60 72 17 07 01 58 8c 57 41 65 e2 6f 0e d9 25 b4 43 c7 1a 4c d0 c3 6d e4 95 9a f2 12 d2 3f 18 90 b6 ec f4 04 63 de 9c a0 ad ee ff 00 5b ff 00 c0 fe b6 1a ec 6c db eb a9 7d a4 3e a1 61 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_kartal_jpg
@@ -11079,7 +10780,7 @@ rule SHELL_r57_kartal_jpg
 		$ = {ed 52 ea ce e2 1b 8b 79 06 52 58 5c 3a 37 38 e0 8e 0d 57 d4 65 d5 22 11 ff 00 66 59 d9 dc 93 9d ff 00 69 bb 68 36 fa 63 6c 6f 9e fe 9f 8d 21 97 a8 ae 53 c4 7a bd ce 9d a7 69 f2 de 6b 36 1a 1d}
 		$ = {75 63 45 d2 82 04 1a 65 98 45 45 8c 2f 90 b8 0a a7 72 af 4e 80 f2 07 63 51 2f 87 74 35 9a 79 97 46 d3 84 b7 01 96 67 16 a9 ba 40 df 78 31 c7 20 f7 cf 5a 1d ba 79 ff 00 c0 12 ff 00 2f f8 27 35}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_kartal2_jpg
@@ -11091,7 +10792,7 @@ rule SHELL_r57_kartal2_jpg
 		$ = {a7 67 f6 a1 65 08 be 30 9b ad 83 cd 30 02 10 b7 7d a0 f3 8f ad 62 f8 93 c4 77 1a 0c f6 89 16 95 73 7a 93 12 59 a0 28 76 2a fd e2 db 99 76 8e 57 e6 e4 73 ce 38 cf 43 da 8a 3a dc 3a 0d 8c bb 46}
 		$ = {67 fa 47 fc f9 4d ff 00 7d 27 ff 00 15 47 fa 47 fc f9 4d ff 00 7d 27 ff 00 15 40 0f a2 9d 22 18 a5 78 db 19 52 54 e3 da 9b 40 05 14 51 40 05 14 51 40 05 14 51 40 05 14 51 40 05 14 51 40 05 14}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_kartal_php
@@ -11103,7 +10804,7 @@ rule SHELL_r57_kartal_php
 		$ = {6e 74 3b 0a 69 66 28 21 24 77 69 6e 64 6f 77 73 29 7b 0a 65 63 68 6f 20 27 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 62 6c 75 65 3e 3c 62 3e 75 6e 61 6d 65 20 2d 61 20 3a 27 2e 77 73 28 31 29 2e 27}
 		$ = {20 63 61 73 65 20 27 4d 53 53 51 4c 27 3a 0a 20 20 69 66 28 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 64 62 5f 70 6f 72 74 27 5d 29 29 20 7b 20 24 5f 50 4f 53 54 5b 27 64 62 5f 70 6f 72 74 27}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Mysql_interface_v1_0_jpg
@@ -11115,7 +10816,7 @@ rule SHELL_Mysql_interface_v1_0_jpg
 		$ = {fb 78 ff 00 d1 cb 5e 8d 5e 73 e1 1f f9 29 5a ef fd bc 7f e8 e5 af 4b 05 fc 1a df e1 fd 4f 37 1d fc 6a 3f e2 fd 0f 46 a2 8a 2b cd 3d 20 a2 8a 28 00 a2 8a 28 00 a2 8a 28 00 a2 8a 28 00 a2 8a 28}
 		$ = {a3 de 5f 7b 3c e7 fe 11 1f 1a ff 00 d0 c5 ff 00 93 b3 7f f1 34 7f c2 23 e3 5f fa 18 bf f2 76 6f fe 26 bd 1a 8a 3f b5 2b 76 8f dc 83 fb 2e 8f 79 7d ec f3 9f f8 44 7c 6b ff 00 43 17 fe 4e cd ff}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Mysql_interface_v1_0_php
@@ -11127,7 +10828,7 @@ rule SHELL_Mysql_interface_v1_0_php
 		$ = {46 75 6e 63 74 69 6f 6e 3c 2f 74 68 3e 5c 6e 22 3b 0a 65 63 68 6f 20 22 3c 74 68 3e 44 61 74 61 3c 2f 74 68 3e 5c 6e 22 3b 0a 65 63 68 6f 20 22 3c 2f 74 72 3e 5c 6e 22 3b 0a 0a 24 70 52 65 73}
 		$ = {74 3c 2f 61 3e 5c 6e 22 3b 0a 20 20 65 63 68 6f 20 22 3c 2f 75 6c 3e 5c 6e 22 3b 0a 20 20 65 63 68 6f 20 22 46 6c 75 73 68 5c 6e 22 3b 0a 20 20 65 63 68 6f 20 22 3c 75 6c 3e 5c 6e 22 3b 0a 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_EgY_SpIdEr_ShElL_V2_php_jpg
@@ -11138,7 +10839,7 @@ rule SHELL_EgY_SpIdEr_ShElL_V2_php_jpg
 		$ = {f0 9f fe c6 dd 27 ff 00 4b 62 af 33 af 4c fd 99 7f e4 e4 be 13 ff 00 d8 db a4 ff 00 e9 6c 54 01 cf f8 77 c0 9e 21 f1 94 37 2d a0 68 ba 86 b0 96 db 7c f5 b2 b6 79 b6 6e ce dd db 54 ed fb ad ff}
 		$ = {6b ec 78 f6 dd ca cc ad f3 7d f5 56 1f 27 1d 76 f7 1f b4 17 87 7c 41 e1 7f 1a 59 58 f8 2f 4a f8 4d a3 e8 5f d8 ba 74 cb 6f ab 41 e1 58 2e 0c ad 6e 8d 2b 32 5e 7e ff 00 e6 6c fd fa 6f fa fb ae}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_EgY_SpIdEr_ShElL_V2_php
@@ -11150,7 +10851,7 @@ rule SHELL_EgY_SpIdEr_ShElL_V2_php
 		$ = {65 6e 3e 24 64 66 3c 2f 66 6f 6e 74 3e 3c 2f 62 3e 22 3b 7d 3b 7d 0a 65 6c 73 65 20 7b 65 63 68 6f 20 22 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 72 65 64 3e 69 6e 69 5f 67 65 74 20 64 69 73 61 62}
 		$ = {61 6c 75 65 3d 22 30 32 22 3e 32 3c 2f 6f 70 74 69 6f 6e 3e 0a 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 30 33 22 3e 33 3c 2f 6f 70 74 69 6f 6e 3e 0a 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_EgY_SpIdEr_ShElL_V2_php2_jpg
@@ -11161,7 +10862,7 @@ rule SHELL_EgY_SpIdEr_ShElL_V2_php2_jpg
 		$ = {21 22 7d c0 e0 32 91 36 36 8d bb 80 07 24 8c 15 c9 20 1c 4d 15 e8 67 c5 4e 97 9a 8d dc 7a fe 9f 6d 71 25 94 71 2b 58 8b bc ce eb 20 39 66 91 4b 17 08 19 77 31 e8 c0 67 ae 3a 0b 0d 4e e3 5b 7d}
 		$ = {ba df b1 da ff 00 cf b4 3f f7 c0 a3 ec 76 bf f3 ed 0f fd f0 28 03 92 af 41 3e 3b 86 36 ba 5b 3d 67 5e b4 b6 b8 95 e4 6b 78 50 2a 1d dd 72 04 a0 1e 38 e9 59 7f 63 b5 ff 00 9f 68 7f ef 81 47 d8}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_zacosmall_php
@@ -11173,7 +10874,7 @@ rule SHELL_zacosmall_php
 		$ = {73 71 6c 5f 71 75 65 72 79 28 27 73 68 6f 77 20 74 61 62 6c 65 73 27 2c 24 6d 79 73 71 6c 5f 6c 69 6e 6b 29 3b 0a 66 6f 72 28 24 69 3d 30 3b 24 69 3c 6d 79 73 71 6c 5f 6e 75 6d 5f 72 6f 77 73}
 		$ = {6c 74 28 24 72 65 73 75 6c 74 32 29 3b 0a 24 72 65 73 75 6c 74 32 3d 6d 79 73 71 6c 5f 71 75 65 72 79 28 27 73 65 6c 65 63 74 20 2a 20 66 72 6f 6d 20 60 27 2e 24 74 61 62 6c 65 5f 64 75 6d 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_zacosmall_jpg
@@ -11185,7 +10886,7 @@ rule SHELL_zacosmall_jpg
 		$ = {ab 2c 28 a2 8a 00 28 a2 8a 00 28 a2 8a 00 28 a2 8a 00 28 a2 8a 00 28 a2 8a 00 28 a2 8a 00 28 ae a3 4c 67 8b c3 5e 64 70 e8 92 5c 2c d9 8c dd 35 bf 98 b1 f3 bb e5 62 09 c9 18 c3 02 70 7e 5c 70}
 		$ = {aa 58 fd ef 7a c9 d4 b5 f4 d8 c9 d5 b7 43 8d a2 bb bd 1d ac a4 d3 22 7b cf ec 31 7d 2b 4c f6 a1 d6 00 89 91 92 27 1d 40 fe e0 ec 7a f1 81 59 f6 06 58 3c 3e ee b0 e8 52 dc a4 e4 a1 b8 7b 62 e1}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHPJackal_php
@@ -11197,7 +10898,7 @@ rule SHELL_PHPJackal_php
 		$ = {2c 20 6b 72 61 64 2c 20 68 30 30 6c 79 73 68 69 74 27 2c 27 32 2e 36 2e 31 30 27 3d 3e 27 68 30 30 6c 79 73 68 69 74 2c 20 73 74 61 63 6b 67 72 6f 77 32 2c 20 75 73 65 6c 69 62 32 34 2c 20 65}
 		$ = {27 6f 75 74 70 75 74 27 5d 29 29 7b 0a 24 69 6e 70 75 74 3d 66 6f 70 65 6e 28 24 5f 52 45 51 55 45 53 54 5b 27 69 6e 70 75 74 27 5d 2c 27 72 27 29 3b 0a 69 66 28 21 24 69 6e 70 75 74 29 7b 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHPJackal2_jpg
@@ -11209,7 +10910,7 @@ rule SHELL_PHPJackal2_jpg
 		$ = {39 e3 d3 14 20 3a 0d 4f f7 10 9b b4 b3 85 ae b1 6d 1b 46 f1 07 11 a9 8f 38 0a 72 06 48 c7 af 1c 53 9a 1b 5b 3b bb 5b 68 ad 2d 99 26 d4 1a 27 f3 23 0e 42 fc 99 4c 9e 78 2c 79 eb c5 64 26 ad 6d}
 		$ = {f1 c0 1e 4b 9b 65 98 c6 25 16 ec c4 39 53 d3 b6 dc 91 ce 33 9f 6a 00 b5 0e b1 05 b2 ed 83 fb 5a 25 c6 31 1e a2 14 75 27 b4 7e a4 fe 74 8d ab 5b b4 72 46 c3 55 29 29 cc 8a 75 01 87 3e a4 79 7c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHPJackal_jpg
@@ -11221,7 +10922,7 @@ rule SHELL_PHPJackal_jpg
 		$ = {f9 9a a1 77 a9 49 79 32 4d 2b 4c 64 8e 35 58 db cd e4 30 c7 cd d3 be 09 fa 9e b4 f3 ac dc c9 6f 0c 53 bb cf e5 cd e6 9f 39 cb 87 1c 61 48 3d b8 3f 9d 30 fe bf 02 5d 4a da 55 b1 8e e2 e6 dd 2d}
 		$ = {00 9f c8 3f f0 1c ff 00 f1 74 7f 66 5e 7f cf e4 1f f8 0e 7f f8 ba d5 a2 80 32 bf b3 2f 3f e7 f2 0f fc 07 3f fc 5d 1f d9 97 9f f3 f9 07 fe 03 9f fe 2e b5 68 a0 0c af ec cb cf f9 fc 83 ff 00 01}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_iFX_php
@@ -11233,7 +10934,7 @@ rule SHELL_r57_iFX_php
 		$ = {79 28 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 29 20 26 26 20 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 3d 3d 22 65 64 69 74 5f 66 69 6c 65 22 29 0a 20 7b 0a 20 69 66 28 21 24 66 69 6c 65 3d 40 66}
 		$ = {2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 22 3b 0a 20 20 20 20 20 7d 0a 20 20 20 20 20 69 66 28 21 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 64 69 66 27 5d 29 26 26}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_NIX_REMOTE_WEB_SHELL2_jpg
@@ -11245,7 +10946,7 @@ rule SHELL_NIX_REMOTE_WEB_SHELL2_jpg
 		$ = {5e 50 91 dc 87 be b9 d3 d2 09 94 9f 2b 08 52 48 15 40 38 38 3b 32 70 70 6b a8 d0 a7 bc ba f0 fe 9d 71 a8 46 63 bd 92 da 37 9d 19 0a 15 90 a8 dc 0a 9e 9c e7 8a 76 0f 33 42 99 2c d1 40 a1 a6 91}
 		$ = {1a 75 8d e4 77 51 4b a9 c9 2c 64 94 17 3a a5 cc e8 09 04 67 64 92 32 e7 04 f6 a4 1e 2a d1 da 4b 54 49 e6 90 dd 16 f2 4c 76 b2 b8 75 52 01 7c 85 23 cb cb 2f cf f7 70 73 9c 53 e3 f1 3e 89 35 bc}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_NIX_REMOTE_WEB_SHELL_jpg
@@ -11257,7 +10958,7 @@ rule SHELL_NIX_REMOTE_WEB_SHELL_jpg
 		$ = {41 4e ae 27 b9 e8 c7 e1 41 45 14 52 28 28 a2 8a 00 29 0f 4a 5a 28 01 8d d2 be 70 f0 97 fc 9d 6f 8e bf de ba ff 00 d2 0d 02 be 8f 35 f2 c7 81 af e7 7f db 67 e2 5d 9b bf fa 3c 76 86 64 5d bf 75}
 		$ = {f7 12 af 9d a7 4a ee a9 2c af 2e c7 74 b8 55 6d ad 2b ff 00 0d 5b 4f 0d eb 57 3a b6 95 79 a9 ea ba 7c d0 d8 4e d7 1e 55 be 9d 2c 4e ef e5 4b 17 df 6b 87 ff 00 9e ad fc 35 d4 51 40 1e 49 f1 37}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_NIX_REMOTE_WEB_SHELL_php
@@ -11269,7 +10970,7 @@ rule SHELL_NIX_REMOTE_WEB_SHELL_php
 		$ = {cd e5 3f 2f 61 3e 0a 3c 62 72 3e 0a 22 3b 0a 69 66 28 40 24 5f 47 45 54 5b 27 79 65 73 27 5d 3d 3d 22 79 65 73 22 29 7b 0a 40 24 64 3d 24 5f 47 45 54 5b 27 64 27 5d 3b 20 40 24 65 3d 24 5f 47}
 		$ = {4f 53 54 5b 27 63 6d 64 27 5d 29 2e 22 22 3b 0a 65 63 68 6f 20 22 3c 2f 66 6f 6e 74 3e 3c 2f 62 3e 22 3b 0a 62 72 65 61 6b 3b 0a 0a 2f 2f 20 55 70 6c 6f 61 64 69 6e 67 0a 63 61 73 65 20 22 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_PSych0_jpg
@@ -11281,7 +10982,7 @@ rule SHELL_c99_PSych0_jpg
 		$ = {65 48 fc 8d 8d bb 0d bb 04 9e 83 ee f6 27 f0 a9 b4 cd 4e c3 4f 9a 3b 93 a7 cc f7 50 cd e6 c2 e9 75 b1 47 42 aa cb b4 92 01 1d 8a 93 9a 48 35 3b 38 f4 7b cb 39 6c e7 79 ee 5c 48 65 4b 85 55 52}
 		$ = {e1 73 20 33 a3 38 44 28 9b d8 1d c8 0f dd e4 10 08 3e b5 a0 8c 4a 2b a2 87 c3 50 fd 92 ea 79 b5 4b 5f 2d 6d 96 78 26 4f 33 63 e6 4d 87 23 cb dd c1 c8 c6 07 24 76 cd 57 5f 0d cc c6 dd 0d fd 92}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHPJackal_v1_5_jpg
@@ -11293,7 +10994,7 @@ rule SHELL_PHPJackal_v1_5_jpg
 		$ = {58 a8 f7 00 e7 bd 55 87 48 86 e0 b8 8a c6 17 f2 d0 c8 f8 8d 78 51 d4 d6 bc e7 ec 9a 05 b4 2b 80 d7 8e 66 93 d4 aa 9d aa 3e 99 dc 7f 2a 76 97 73 2b bd ea 16 0a 8f 6f 33 b2 a2 85 04 ec 3d 80 e9}
 		$ = {e2 68 03 5b 44 cd 86 87 69 a9 5d 3b 33 9b 7f 2e ca 22 73 9c 8c 16 3e 8a 32 7e a7 f1 ad 4b 90 45 de a5 2f 48 1b 4e 8f 69 ec 41 11 85 1f 98 fd 2b 9a d3 b5 bd 4a 1d 26 d6 08 ee b5 35 89 61 55 08}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHPJackal_v1_5_php
@@ -11305,7 +11006,7 @@ rule SHELL_PHPJackal_v1_5_php
 		$ = {63 6f 6d 62 6f 20 6f 6e 43 6c 69 63 6b 3d 5c 22 64 6f 63 75 6d 65 6e 74 2e 66 6f 72 6d 2e 75 73 65 72 2e 64 69 73 61 62 6c 65 64 20 3d 20 74 72 75 65 3b 5c 22 20 73 74 79 6c 65 3d 5c 22 62 6f}
 		$ = {29 20 2e 22 24 65 74 3c 62 72 3e 22 3b 0a 65 6c 73 65 7b 0a 24 69 6e 70 75 74 3d 65 78 70 6c 6f 64 65 28 22 5c 6e 22 2c 73 68 65 6c 4c 28 22 63 61 74 20 24 69 6e 70 75 74 22 29 29 3b 0a 24 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57shell127_php
@@ -11317,7 +11018,7 @@ rule SHELL_r57shell127_php
 		$ = {5f 50 4f 53 54 5b 27 63 6d 64 27 5d 3d 22 70 73 20 2d 61 75 78 20 7c 20 67 72 65 70 20 64 70 22 3b 0a 7d 0a 69 66 20 28 21 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 6c 6f 63 61 6c 5f 70 6f 72}
 		$ = {61 6e 67 5b 24 6c 61 6e 67 75 61 67 65 2e 27 5f 74 65 78 74 35 33 27 5d 2e 24 61 72 72 6f 77 2e 22 3c 2f 62 3e 22 2c 69 6e 28 27 74 65 78 74 27 2c 27 73 5f 64 69 72 27 2c 38 35 2c 24 64 69 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57shell127_jpg
@@ -11329,7 +11030,7 @@ rule SHELL_r57shell127_jpg
 		$ = {7a e3 24 73 59 fa ac 7e 1e 86 f2 d2 f7 57 4d 31 2e 95 c2 5a cf 76 23 0e 1b 39 01 19 b9 ce 79 c0 ac 9f 15 6c 6d 73 49 f3 d3 57 16 a9 1c c6 77 d3 61 98 90 0e cd a0 bc 43 70 c9 1d 14 e7 8e 7e 5c}
 		$ = {62 b6 79 af a4 5b 09 ed 6d 16 48 6e 04 80 38 e1 72 d2 98 c7 6c e1 14 71 9e 2a 64 f8 7b 75 a8 69 32 0d 4e e6 78 af 66 b3 b6 81 3e cd 66 f1 ac 1e 49 dc b9 f9 8e f3 bb a9 04 74 e3 1d 6b d0 3c 9b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_c9ada4a48a
@@ -11341,7 +11042,7 @@ rule SHELL_unknown_c9ada4a48a
 		$ = {68 92 fe ea fc e4 6d d1 45 15 81 d2 14 51 45 00 14 51 45 00 14 51 45 00 14 51 45 00 70 1a b7 fc 96 2d 33 fe bc 57 f9 5c d7 69 5c 5e ad ff 00 25 8b 4c ff 00 af 15 fe 57 35 da 56 f5 be 18 7a 7e}
 		$ = {00 f6 0d b6 ff 00 d1 4b 55 bc 57 ff 00 22 e5 cf fb f1 7f e8 c5 ab 3e 0c ff 00 91 1b c3 ff 00 f6 0d b6 ff 00 d1 4b 5d 12 ff 00 77 8f f8 9f e4 8e 68 ff 00 bc cb fc 31 fc e4 6d d1 45 15 ce 74 85}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_madnet_jpg
@@ -11353,7 +11054,7 @@ rule SHELL_c99_madnet_jpg
 		$ = {0a 2a 48 a3 0e 1d 9b 38 55 ce 07 7a b0 f1 ac 92 26 ec 85 10 06 e3 ad 63 2a ca 32 b1 84 eb c6 12 b3 29 d1 56 a3 82 29 00 60 5c 28 6c 1c e3 3d 29 3e ce a2 41 19 2d b8 ae 49 ec 0d 1e de 17 6b b0}
 		$ = {5f a7 3c 50 05 66 bc ba 79 26 91 ae 66 67 9c 62 56 2e 49 90 67 3f 31 ef c8 07 9f 4a 5f b6 dd 19 84 df 69 9b cd 09 e5 87 f3 0e e0 b8 db b7 3e 98 e3 1e 94 a2 c2 f1 84 64 5a 4e 44 a5 56 32 23 3f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_madnet2_jpg
@@ -11364,7 +11065,7 @@ rule SHELL_c99_madnet2_jpg
 		$ = {bd ad da fd e4 dd e5 b2 b2 ba 36 d6 57 56 56 5f ef 7d ea d8 bc f8 87 e2 bf ec ab 5d 2f 45 f0 4d af 85 6c ed 35 0b 3d 52 d8 69 3a 75 ce f8 ee 20 f3 76 3e e9 a5 91 a5 ff 00 5e ff 00 eb 59 be e2}
 		$ = {fd 05 6f bf ef fb 51 ff 00 09 26 b1 ff 00 41 5b ef fb fe d5 9f 45 16 41 cf 2e e6 87 fc 24 9a c7 fd 05 6f bf ef fb 51 ff 00 09 26 b1 ff 00 41 5b ef fb fe d5 9f 45 16 41 cf 2e e6 87 fc 24 9a c7}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Shell__ci___Biz_was_here_php
@@ -11376,7 +11077,7 @@ rule SHELL_Shell__ci___Biz_was_here_php
 		$ = {68 3b 7d 0a 20 20 20 40 75 6e 6c 69 6e 6b 28 24 73 72 63 70 61 74 68 29 3b 0a 20 20 20 24 66 70 20 3d 20 66 6f 70 65 6e 28 24 73 72 63 70 61 74 68 2c 22 61 62 2b 22 29 3b 0a 20 20 20 69 66 20}
 		$ = {2f 2f 2f 6e 50 2f 2f 7a 76 2f 4f 6e 50 66 33 39 2f 2f 2f 2f 77 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 22 2e 0a 22 41 41 41 41 41 43 48 35 42 41 45 41 41 41 67 41 4c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Shell__ci___Biz_was_here_jpg
@@ -11388,7 +11089,7 @@ rule SHELL_Shell__ci___Biz_was_here_jpg
 		$ = {34 e5 4f 91 a6 61 35 3b e8 71 be 2f 4d 3a 3f 16 ea 6b a4 88 c5 87 9c 4c 22 26 ca 80 40 3c 7e 39 e3 b7 4a fa c3 c0 f3 22 fc 3e d0 3e 54 27 ec 51 f2 40 3d ab e3 67 77 92 46 92 46 67 76 24 b3 31}
 		$ = {1a 5e 91 32 cf 25 b4 af a0 42 d6 f2 a1 2a 4b 25 95 ee 76 9e 39 06 48 f3 83 91 bc 7a 8a de d6 ef a3 1e 1a bf 41 a7 5a 32 cf 1e a9 14 93 b7 cb 24 31 c1 e7 45 04 71 84 c6 d4 51 b0 63 1b 0e 4f 01}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Antichat_jpg
@@ -11400,7 +11101,7 @@ rule SHELL_Antichat_jpg
 		$ = {6d dd 5d b3 fc 84 07 2f 73 a3 ea f6 60 99 ee f6 62 56 84 fe ed 0f ce b8 dc 38 3e e2 ab 7d 9a f7 fe 82 1f f9 05 6b a7 d6 ef ed af 16 41 04 9b f3 7f 3c c3 e5 23 e4 60 9b 4f 3f 43 58 b4 80 a5 f6}
 		$ = {51 45 00 14 51 45 00 14 51 45 00 16 ba c5 a6 97 77 79 15 ea 3b c1 75 6e 88 c2 37 d8 dc 39 6e 0e d6 ee 07 51 56 6f fc 5f 61 77 0c d1 44 1a 24 77 85 97 2c 58 a8 8d 0a 0c fc a3 24 e7 39 e2 a2 b0}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99shell_jpg
@@ -11412,7 +11113,7 @@ rule SHELL_c99shell_jpg
 		$ = {bc 7d 7d a9 91 de e9 4c b7 d6 73 4b 7a 2d 26 9d 2e 23 99 20 5f 33 23 70 2a 50 be 31 f3 1e 77 76 1c 73 47 f5 f8 ff 00 90 19 a7 4d ba 1a af f6 67 97 fe 95 e6 f9 3b 73 c6 ec e3 af a7 bd 5b 97 42}
 		$ = {28 a5 07 04 1c 66 80 1d e5 38 4d c5 48 3b 80 03 1d 73 9f f0 a4 31 b8 20 14 6c 9e 9c 75 a9 7c d4 0d b8 6e 39 90 39 c8 ec 33 fe 34 d8 e5 d8 1f ae 4f 20 fb ff 00 93 58 a9 4f b1 82 95 4b 37 62 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ctt_sh_jpg
@@ -11424,7 +11125,7 @@ rule SHELL_ctt_sh_jpg
 		$ = {cf f9 f2 ff 00 c8 a9 ff 00 c5 d1 ff 00 08 36 b9 ff 00 3e 5f f9 15 3f f8 ba ae 6d 6c 1f d7 e5 fd 7c cf 45 f8 8b e0 9f 0b dc ea 3f 15 75 7f 0a db 5d dc e8 fa 4f 89 2d ec b4 9b bb 49 e0 fe cf 48}
 		$ = {e2 1d 49 dd 62 be 5d e8 bb fe 75 4f fe 22 bf 49 3f e0 a9 bf f2 41 6c ff 00 ec 71 b5 ff 00 d2 5b fa fc bd d3 6c 27 bf ba d9 03 6c 75 f9 f7 ee fb b5 12 97 bb cc 75 61 29 fb 5a f1 8b 8f 37 91 d0}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ctt_sh_php
@@ -11436,7 +11137,7 @@ rule SHELL_ctt_sh_php
 		$ = {65 4f 64 51 4b 62 50 67 65 64 6a 5a 6d 68 6e 41 63 4a 6c 71 61 49 71 55 65 73 6d 49 69 6b 70 45 69 78 6e 79 4a 68 75 6c 55 4d 68 67 32 34 61 53 4f 36 59 79 45 41 4f 77 3d 3d 22 2c 0a 22 73 6d}
 		$ = {41 41 41 44 2f 41 50 2f 2f 41 41 41 41 2f 2f 38 41 2f 77 44 2f 22 2e 0a 22 2f 2f 2f 2f 2f 79 77 41 41 41 41 41 45 41 41 51 41 41 41 45 55 2f 44 49 67 36 71 31 4d 36 50 48 2b 36 4f 5a 74 48 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_jpg
@@ -11448,7 +11149,7 @@ rule SHELL_c99_jpg
 		$ = {97 59 3c 7b bd 4e 41 d3 e1 e7 fe 07 2d 62 e9 37 33 da f8 77 5a 7b 79 a4 89 98 c2 8c 63 72 a4 a9 2d 90 71 d8 d7 7d 19 b9 d3 52 7b b2 64 ac ec 61 d1 5d 3c be 1f b0 4d 12 e2 43 2b c7 a8 db 41 1c}
 		$ = {c0 3f ad 43 a8 6a 89 a8 2e ab 2a 5d 18 23 ba bb 59 56 d0 c5 b8 ba fc d8 6d dd 8a 83 d3 3c e7 da a7 b7 f5 d8 a7 bb 2b 4f a0 6a 16 c1 5a 54 b7 0a d2 08 8b 2d d4 4c 11 cf 40 e4 37 c9 d0 fd ec 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57shell_jpg
@@ -11460,7 +11161,7 @@ rule SHELL_r57shell_jpg
 		$ = {ed 8f 88 23 81 a6 4b 6d 3c 24 6c d2 3e 97 3c e1 b2 cc 18 19 91 82 45 80 07 2c 38 ce 4f 14 2e c2 bf 53 a3 00 28 00 00 00 e0 01 58 7a 9f 86 17 52 37 68 35 6d 46 d6 da f0 7e fe de dc c5 b1 ce 02}
 		$ = {f2 21 8b 75 9e d3 93 e4 92 84 a6 ee 8d d7 70 e0 d7 42 8a 55 15 4b 97 20 00 59 b1 93 ee 71 c5 73 b7 be 31 87 4f b9 fb 2c fa 4e a4 2e 9d 23 6b 78 00 88 bd c9 73 82 b1 8f 33 e6 29 fc 7d 36 8e 7a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57shell_php
@@ -11472,7 +11173,7 @@ rule SHELL_r57shell_php
 		$ = {66 69 6c 65 2c 40 66 69 6c 65 73 69 7a 65 28 24 5f 50 4f 53 54 5b 27 65 5f 6e 61 6d 65 27 5d 29 29 29 3b 0a 20 66 63 6c 6f 73 65 28 24 66 69 6c 65 29 3b 0a 20 65 63 68 6f 20 22 3c 2f 74 65 78}
 		$ = {76 61 6c 27 29 3b 0a 65 63 68 6f 20 22 3c 62 72 3e 22 2e 77 73 28 31 29 2e 69 6e 28 27 73 75 62 6d 69 74 27 2c 27 73 75 62 6d 69 74 27 2c 30 2c 24 6c 61 6e 67 5b 24 6c 61 6e 67 75 61 67 65 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_iMHaPFtp_jpg
@@ -11484,7 +11185,7 @@ rule SHELL_iMHaPFtp_jpg
 		$ = {ed 56 55 8e 97 77 6d a9 35 ec f7 d1 ce f2 da c7 0c e0 41 b3 7b 21 62 1c 7c c7 6f df 39 18 3f 51 d2 b5 6b 48 de da 9c f8 97 4d cf f7 76 b5 96 d7 de da ef e6 14 51 45 33 00 a2 8a 28 00 a2 8a 28}
 		$ = {ab 2f 64 ae df 7f f3 b9 e8 47 30 92 4a 36 d9 5b 7f 24 b4 ed b7 df a9 c7 c5 64 12 2b 43 a9 69 b7 32 d8 04 b8 fb 24 5e 4b 39 b7 26 52 62 ca 81 98 ce cc 61 8e 36 01 8c ad 57 d2 ed 6d 8e 9b a6 c9}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_iMHaPFtp_php
@@ -11496,7 +11197,7 @@ rule SHELL_iMHaPFtp_php
 		$ = {69 5d 20 3d 20 6e 6c 32 62 72 28 68 74 6d 6c 28 24 61 72 67 75 6d 65 6e 74 73 5b 24 69 5d 29 29 3b 0a 09 7d 0a 0a 09 24 72 65 70 6c 61 63 65 20 3d 20 61 72 72 61 79 28 27 7b 27 20 3d 3e 20 27}
 		$ = {73 27 20 3d 3e 20 27 4a 61 27 2c 0a 27 6e 6f 27 20 3d 3e 20 27 4e 65 6a 27 2c 0a 27 47 65 72 69 27 20 3d 3e 20 27 54 69 6c 6c 62 61 6b 73 27 2c 0a 27 59 6f 6c 27 20 3d 3e 20 27 59 6f 6c 27 2c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_SnIpEr_SA_Shell_jpg
@@ -11508,7 +11209,7 @@ rule SHELL_SnIpEr_SA_Shell_jpg
 		$ = {8f 87 be dd a6 7f 68 1d 5b 4e b6 85 64 11 48 2e 1d d5 91 8f 4e 02 1d d9 c7 f0 e7 03 93 8a c6 ad 6b 7d 6e 38 34 73 a6 be 91 61 3a 17 f3 0c b2 34 c1 cb 60 80 7e 59 00 e0 1c 74 c7 ae 68 e8 1d 49}
 		$ = {de 5d 37 46 12 44 e5 18 1b 79 d4 e4 1c 74 32 02 3e 84 03 40 1d f7 fc 25 5e 27 ff 00 9f cf 10 ff 00 e0 25 9f ff 00 11 47 fc 25 5e 27 ff 00 9f cf 10 ff 00 e0 25 9f ff 00 11 5c 1a fc 7a f1 9b c9}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_SnIpEr_SA_Shell_php
@@ -11520,7 +11221,7 @@ rule SHELL_SnIpEr_SA_Shell_php
 		$ = {63 68 6f 20 22 3c 2f 66 6f 72 6d 3e 22 3b 0a 20 65 63 68 6f 20 22 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 22 3b 0a 20 65 78 69 74 28 29 3b 0a 20 7d 0a 20 7d 0a 69 66 28 21 65 6d}
 		$ = {27 74 65 73 74 32 5f 66 69 6c 65 27 5d 29 3f 28 24 5f 50 4f 53 54 5b 27 74 65 73 74 32 5f 66 69 6c 65 27 5d 29 3a 28 22 2f 65 74 63 2f 70 61 73 73 77 64 22 29 29 29 2e 69 6e 28 27 68 69 64 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_404super_php
@@ -11532,7 +11233,7 @@ rule SHELL_404super_php
 		$ = {2c 20 31 31 30 2c 20 31 31 36 2c 20 31 31 35 29 2c 0a 20 20 20 20 27 65 27 20 3d 3e 20 24 69 28 27 63 2a 27 2c 30 78 36 33 2c 30 78 37 32 2c 30 78 36 35 2c 30 78 36 31 2c 30 78 37 34 2c 30 78}
 		$ = {65 36 33 36 66 36 64 32 66 37 36 33 31 27 29 2c 0a 20 20 20 20 27 73 27 20 3d 3e 24 69 28 27 63 2a 27 2c 30 78 37 33 2c 30 78 37 30 2c 30 78 37 32 2c 30 78 36 39 2c 30 78 36 65 2c 30 78 37 34}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_make2_php
@@ -11543,7 +11244,7 @@ rule SHELL_make2_php
 		$ = {73 3f 25 73 27 2c 70 61 63 6b 28 22 48 2a 22 2c 27 36 38 37 34 37 34 37 30 33 61 32 66 32 66 33 37 37 33 36 38 36 35 36 63 36 63 32 65 36 37 36 66 36 66 36 37 36 63 36 35 36 33 36 66 36 34 36}
 		$ = {33 36 66 36 34 36 35 32 65 36 33 36 66 36 64 32 66 37 33 37 36 36 65 32 66 36 64 36 31 36 62 36 35 32 65 36 61 37 30 36 37 27 29 2c 75 6e 69 71 69 64 28 29 29 29 2c 33 36 34 39 29 3b 40 70 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_code_php
@@ -11555,7 +11256,7 @@ rule SHELL_code_php
 		$ = {65 64 20 66 75 6e 63 74 69 6f 6e 20 68 65 61 64 65 72 73 28 29 20 7b 0a 20 20 20 20 68 65 61 64 65 72 20 28 22 43 61 63 68 65 2d 43 6f 6e 74 72 6f 6c 3a 20 6e 6f 2d 63 61 63 68 65 2c 20 6d 75}
 		$ = {7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 24 63 64 72 6f 6d 5b 5d 3d 62 61 73 65 6e 61 6d 65 28 24 66 66 29 3b 0a 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 66 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_dev_core_php
@@ -11567,7 +11268,7 @@ rule SHELL_dev_core_php
 		$ = {70 61 63 6b 28 27 48 2a 27 2c 0a 20 20 20 20 20 20 20 20 20 20 20 20 27 37 38 39 63 36 33 64 34 65 35 36 38 30 65 66 64 63 39 33 63 39 31 37 64 36 35 64 34 39 37 66 30 34 66 32 31 39 62 39 38}
 		$ = {49 50 54 5f 4e 41 4d 45 22 5d 2c 20 24 6c 6f 67 69 6e 29 3b 0a 20 20 20 20 20 20 20 20 65 78 69 74 28 29 3b 0a 20 20 20 20 7d 0a 7d 0a 0a 66 75 6e 63 74 69 6f 6e 20 5f 43 6f 6e 74 65 6e 74 28}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_odd_php
@@ -11579,7 +11280,7 @@ rule SHELL_odd_php
 		$ = {65 73 65 61 72 63 68 20 32 30 31 33 20 7c 20 69 6e 73 65 63 75 72 65 74 79 2e 6e 65 74 0a 3c 3f 70 68 70 0a 69 6e 69 5f 73 65 74 28 27 61 6c 6c 6f 77 5f 75 72 6c 5f 69 6e 63 6c 75 64 65 2c 20}
 		$ = {2f 20 41 6c 6c 6f 77 20 75 72 6c 20 69 6e 63 6c 75 73 69 6f 6e 20 69 6e 20 74 68 69 73 20 73 63 72 69 70 74 0a 2f 2f 20 4e 6f 20 65 76 61 6c 28 29 20 63 61 6c 6c 73 2c 20 6e 6f 20 73 79 73 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_upload_py
@@ -11591,7 +11292,7 @@ rule SHELL_upload_py
 		$ = {6c 65 64 61 74 61 20 3d 20 72 61 77 66 69 6c 65 64 61 74 61 2e 65 6e 63 6f 64 65 28 27 62 61 73 65 36 34 27 29 0a 0a 70 68 70 70 61 79 6c 6f 61 64 20 3d 20 22 22 22 3c 3f 70 68 70 0a 24 66 20}
 		$ = {65 6e 63 6f 64 65 64 66 69 6c 65 64 61 74 61 29 20 23 20 49 20 6e 65 65 64 20 74 6f 20 61 64 64 20 61 20 68 61 73 68 69 6e 67 20 66 75 6e 63 74 69 6f 6e 20 73 6f 6d 65 74 69 6d 65 20 66 6f 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_CHANGELOG
@@ -11603,7 +11304,7 @@ rule SHELL_CHANGELOG
 		$ = {61 73 20 4a 61 6e 75 61 72 79 2e 20 55 70 64 61 74 65 64 20 74 68 65 20 63 6c 69 65 6e 74 20 61 20 62 69 74 2e 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
 		$ = {6c 6f 61 64 20 63 6c 69 65 6e 74 20 61 6e 64 20 77 72 69 74 69 6e 67 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 64 6f 63 75 6d 65 6e 74 61 74 69 6f 6e 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpkit_py
@@ -11615,7 +11316,7 @@ rule SHELL_phpkit_py
 		$ = {65 64 20 3a 28 22 0a 20 20 20 20 20 20 20 20 70 61 73 73 0a 20 20 20 20 70 72 69 6e 74 20 22 5b 2b 5d 20 54 65 73 74 69 6e 67 20 65 78 65 63 28 29 22 0a 20 20 20 20 70 61 79 6c 6f 61 64 20 3d}
 		$ = {20 20 20 20 69 66 20 63 6d 64 20 3d 3d 20 22 71 75 69 74 22 3a 0a 20 20 20 20 20 20 20 20 20 20 20 20 70 72 69 6e 74 20 22 5c 6e 5b 2d 5d 20 51 75 69 74 74 69 6e 67 22 0a 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wsb_pl
@@ -11627,7 +11328,7 @@ rule SHELL_wsb_pl
 		$ = {70 72 69 6e 74 20 22 5c 6e 45 6e 74 65 72 20 73 79 6d 6c 69 6e 6b 20 50 61 74 68 20 28 2f 68 6f 6d 65 2f 6d 65 2f 70 75 62 6c 69 63 5f 68 74 6d 6c 2f 73 79 6d 2e 74 78 74 29 5c 6e 45 6e 74 65}
 		$ = {65 74 20 24 75 72 6c 2e 22 3f 75 73 72 3d 22 2e 24 75 73 72 2e 22 26 70 61 73 73 3d 22 2e 24 70 61 73 73 2e 22 26 69 64 63 3d 24 5f 28 27 63 61 74 20 24 66 66 27 29 3b 22 3b 0a 09 09 09 09 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_idc_php
@@ -11635,7 +11336,7 @@ rule SHELL_idc_php
 	strings:
 		$ = {3c 3f 70 68 70 0a 24 75 73 65 72 3d 22 36 33 61 39 66 30 65 61 37 62 62 39 38 30 35 30 37 39 36 62 36 34 39 65 38 35 34 38 31 38 34 35 22 3b 20 23 72 6f 6f 74 0a 24 70 61 73 73 3d 22 37 62 32 34 61 66 63 38 62 63 38 30 65 35 34 38 64 36 36 63 34 65 37 66 66 37 32 31 37 31 63 35 22 3b 20 23 74 6f 6f 72 0a 0a 69 66 20 28 6d 64 35 28 24 5f 47 45 54 5b 27 75 73 72 27 5d 29 3d 3d 24 75 73 65 72 20 26 26 20 6d 64 35 28 24 5f 47 45 54 5b 27 70 61 73 73 27 5d 29 3d 3d 24 70 61 73 73 29 0a 7b 65 76 61 6c 28 24 5f 47 45 54 5b 27 69 64 63 27 5d 29 3b 7d 0a 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_b374k_3_2_3_php
@@ -11647,7 +11348,7 @@ rule SHELL_b374k_3_2_3_php
 		$ = {74 73 2e 6c 65 6e 67 74 68 3d 3d 3d 30 3f 74 68 69 73 5b 30 5d 26 26 28 74 68 69 73 5b 30 5d 2e 6d 75 6c 74 69 70 6c 65 3f 63 28 74 68 69 73 5b 30 5d 29 2e 66 69 6e 64 28 22 6f 70 74 69 6f 6e}
 		$ = {22 3c 74 61 62 6c 65 20 63 6c 61 73 73 3d 27 62 6f 78 74 62 6c 27 3e 3c 74 72 3e 3c 74 64 20 63 6c 61 73 73 3d 27 63 6f 6c 46 69 74 27 3e 46 6f 6c 64 65 72 20 4e 61 6d 65 3c 2f 74 64 3e 3c 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_3_2_2_php
@@ -11659,7 +11360,7 @@ rule SHELL_b374k_3_2_2_php
 		$ = {72 3a 66 75 6e 63 74 69 6f 6e 28 63 2c 64 29 7b 76 61 72 20 65 3b 72 65 74 75 72 6e 20 74 79 70 65 6f 66 20 63 3d 3d 22 73 74 72 69 6e 67 22 26 26 64 3d 3d 3d 61 3f 74 68 69 73 2e 6c 65 6e 67}
 		$ = {77 20 46 6f 6c 64 65 72 22 3b 0a 09 70 61 74 68 20 3d 20 70 61 74 68 20 2b 20 27 6e 65 77 66 6f 6c 64 65 72 2d 27 20 2b 20 74 69 6d 65 28 29 3b 0a 09 63 6f 6e 74 65 6e 74 20 3d 20 22 3c 74 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_4_min_php
@@ -11671,7 +11372,7 @@ rule SHELL_b374k_2_4_min_php
 		$ = {55 57 6a 67 45 34 47 53 50 55 44 65 64 43 61 77 58 4c 47 52 30 76 54 50 79 58 31 66 63 54 55 5a 49 6d 4e 2f 46 65 36 43 50 2f 33 57 61 45 4d 51 56 49 2f 5a 55 42 47 41 76 37 76 73 77 34 44 73}
 		$ = {64 68 52 77 67 6e 77 4e 57 6a 73 36 59 75 55 4b 63 6d 75 76 55 42 35 41 57 75 42 66 73 4e 48 49 74 7a 31 51 51 7a 38 53 36 42 62 6e 34 33 72 46 35 75 2b 37 70 46 47 47 42 38 64 33 6c 4c 36 7a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_3_2_3_min_php
@@ -11683,19 +11384,7 @@ rule SHELL_b374k_3_2_3_min_php
 		$ = {6e 53 55 4d 4b 31 46 38 45 67 31 6c 62 36 54 4a 36 6e 30 71 49 63 7a 48 70 2b 42 76 6d 44 4f 53 71 35 5a 6a 41 65 51 36 68 68 39 71 53 78 43 56 75 6d 78 6c 69 48 49 73 48 4c 74 6f 38 78 6c 61}
 		$ = {72 4a 73 62 74 7a 2b 45 57 2b 41 32 48 43 53 6e 55 4e 7a 31 32 6b 4a 44 63 58 38 39 75 30 5a 6c 33 6c 65 39 58 6f 46 33 70 6d 70 78 35 50 53 6f 78 67 72 6e 6d 57 44 4f 5a 51 4a 55 75 2f 41 6e}
 	condition:
-		 any of them
-}
-
-rule SHELL_webshell_extract_py
-{
-	strings:
-		$ = {72 20 3d 20 6f 70 74 70 61 72 73 65 2e 4f 70 74 69 6f 6e 50 61 72 73 65 72 28 29 0a 20 20 20 20 70 61 72 73 65 72 2e 61 64 64 5f 6f 70 74 69 6f 6e 28 27 2d 2d 64 69 72 65 63 74 6f 72 79 27 2c}
-		$ = {78 70 6f 72 74 73 20 73 69 67 6e 61 74 75 72 65 73 20 66 72 6f 6d 20 66 69 6c 65 6e 61 6d 65 20 27 73 20 63 6f 6e 74 65 6e 74 20 61 6e 64 20 73 61 76 65 73 20 74 6f 20 73 74 72 69 6e 67 73 0a}
-		$ = {66 20 6e 6f 74 20 69 73 5f 77 68 69 74 65 6c 69 73 74 28 70 61 74 29 3a 0a 20 20 20 20 20 20 20 20 20 20 20 20 73 74 72 69 6e 67 73 2e 61 70 70 65 6e 64 28 70 61 74 29 0a 20 20 20 20 72 65 74}
-		$ = {6c 6c 6e 61 6d 65 20 3d 20 73 68 65 6c 6c 6e 61 6d 65 2e 72 65 70 6c 61 63 65 28 27 5b 27 2c 20 27 5f 27 29 0a 20 20 20 20 73 68 65 6c 6c 6e 61 6d 65 20 3d 20 73 68 65 6c 6c 6e 61 6d 65 2e 72}
-		$ = {20 20 20 20 0a 20 20 20 20 20 20 20 20 6f 75 74 28 27 5c 74 5c 74 24 20 3d 20 7b 27 20 2b 20 74 6f 68 65 78 28 73 29 2b 20 27 7d 5c 6e 27 29 0a 20 20 20 20 6f 75 74 28 27 5c 74 63 6f 6e 64 69}
-	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_2_poly_php
@@ -11707,7 +11396,7 @@ rule SHELL_b374k_2_2_poly_php
 		$ = {6c 78 76 30 4b 43 63 45 6f 59 58 77 6b 46 64 63 66 36 2f 72 2f 50 6f 64 52 44 4b 73 76 56 66 61 5a 56 36 55 43 56 61 4d 6a 6d 6f 31 41 4e 79 7a 70 6c 4a 69 32 52 79 42 68 4e 2b 66 58 50 66 70}
 		$ = {33 55 38 37 57 52 73 53 43 78 52 6e 59 5a 4c 7a 4f 37 2b 6b 4d 56 54 66 47 61 78 76 46 66 6c 51 6d 30 76 6f 42 73 65 4f 70 6a 42 63 51 55 69 67 78 53 6c 4e 43 41 34 57 68 4d 56 70 2f 4d 59 35}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_3_2_2_min_php
@@ -11719,7 +11408,7 @@ rule SHELL_b374k_3_2_2_min_php
 		$ = {43 55 4d 4c 6c 45 5a 63 39 73 63 56 43 70 6d 58 4f 33 44 66 44 68 78 6d 73 37 57 73 69 62 71 62 4d 63 44 41 2b 39 72 53 6c 53 53 64 66 65 56 4e 6b 53 32 73 67 44 7a 54 70 73 59 65 42 4e 74 66}
 		$ = {69 37 65 70 74 6f 4c 72 42 32 42 42 36 59 51 70 6b 58 7a 75 46 52 7a 79 33 49 37 5a 49 36 54 2b 4e 4a 74 31 38 5a 49 51 66 4f 72 48 32 4b 56 46 62 4a 56 51 48 41 34 63 32 48 58 6f 42 4b 35 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_5_php
@@ -11731,7 +11420,7 @@ rule SHELL_b374k_2_5_php
 		$ = {47 7a 6b 57 76 4d 6f 4d 76 69 6e 34 31 4d 32 69 75 4f 32 63 47 4a 6c 35 6a 42 67 6a 57 71 37 79 67 69 35 39 66 7a 51 71 63 68 38 34 35 6f 61 2b 78 41 55 58 30 56 54 36 77 44 48 38 31 49 30 67}
 		$ = {43 6d 69 42 6f 6c 46 39 63 4a 33 4b 4d 76 47 4e 6b 49 76 6c 72 2b 79 41 45 62 34 6f 4f 44 4f 34 53 43 73 59 78 64 6d 55 44 55 6e 75 49 66 77 37 32 43 2f 77 34 75 72 4c 37 53 37 75 72 75 66 51}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_3_min_php
@@ -11743,7 +11432,7 @@ rule SHELL_b374k_2_3_min_php
 		$ = {6c 77 6b 2f 33 36 51 6b 64 65 74 54 55 57 54 49 68 45 49 43 44 73 63 71 48 70 33 79 33 5a 43 35 30 37 4f 4d 79 49 45 38 4b 49 48 58 59 7a 45 43 54 4b 4c 34 34 46 35 51 67 63 6c 33 67 45 78 66}
 		$ = {47 79 6a 6d 51 4a 43 4a 32 76 57 57 4d 52 54 7a 77 48 65 35 76 2f 62 37 76 6c 78 78 59 63 71 63 54 30 6b 6f 4b 66 36 63 6b 56 38 32 41 7a 37 70 6d 76 79 68 38 2f 45 7a 66 4a 77 2f 66 44 61 2b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_3_poly_php
@@ -11755,7 +11444,7 @@ rule SHELL_b374k_2_3_poly_php
 		$ = {72 42 48 6e 69 65 46 46 6b 78 41 6c 7a 39 52 76 47 4c 4b 36 2b 66 52 70 71 66 45 4b 6b 65 56 76 77 46 2b 59 7a 66 77 52 72 2f 77 35 59 4c 70 69 4e 49 53 55 4e 6a 6b 56 51 72 68 76 4b 6b 4b 5a}
 		$ = {39 4e 73 54 53 72 58 48 65 45 59 63 64 77 59 73 66 2b 35 47 4f 32 48 57 69 66 70 65 6a 77 52 69 43 47 6e 55 4d 34 32 36 73 57 6c 55 74 75 53 50 6b 5a 62 64 6b 49 4c 45 47 61 32 39 5a 36 5a 4b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_4_poly_php
@@ -11767,19 +11456,7 @@ rule SHELL_b374k_2_4_poly_php
 		$ = {6a 6b 5a 47 35 65 64 52 77 55 45 49 71 45 38 55 73 49 2b 48 73 4f 42 4e 55 37 43 46 41 41 70 6c 35 69 75 4e 5a 33 70 4e 73 48 66 64 35 76 35 6e 54 45 6c 31 5a 39 68 53 46 7a 6b 41 58 77 56 2f}
 		$ = {55 4e 70 41 4c 34 64 46 6d 4f 69 41 37 36 4e 73 77 58 57 76 72 6d 4f 37 51 74 49 66 7a 41 73 74 49 6b 6c 58 61 58 43 66 46 62 71 6b 4a 49 42 6a 68 71 69 44 32 39 6b 35 63 77 67 70 47 2b 74 4e}
 	condition:
-		 any of them
-}
-
-rule SHELL_patterndb_yara
-{
-	strings:
-		$ = {3d 20 7b 32 38 20 32 39 20 32 62 20 32 32 20 33 63 20 32 66 20 36 36 20 36 66 20 36 65 20 37 34 20 33 65 20 32 32 20 32 39 20 33 62 20 30 61 20 37 64 20 30 61 20 32 35 20 33 65 20 30 61 20 30}
-		$ = {20 32 30 20 36 32 20 36 37 20 36 33 20 36 66 20 36 63 20 36 66 20 37 32 20 33 64 20 32 32 20 32 33 20 33 33 20 33 33 20 33 36 20 33 36 20 33 30 20 33 30 20 32 32 7d 0a 09 09 24 20 3d 20 7b 36}
-		$ = {20 36 37 20 36 35 20 35 34 20 36 38 20 36 35 20 35 30 20 36 31 20 37 34 20 36 38 20 32 38 20 32 36 20 32 33 20 33 33 20 33 34 20 33 62 20 32 32 20 32 36 20 36 36 20 36 66 20 36 63 20 36 34 20}
-		$ = {20 36 61 20 31 61 20 62 65 20 61 66 20 66 30 20 65 36 20 63 66 20 34 65 20 66 30 20 66 64 20 64 37 20 38 39 20 34 37 20 38 35 20 38 65 20 61 33 20 65 33 20 66 39 20 61 63 20 36 64 20 36 31 20}
-		$ = {20 33 32 20 34 61 20 37 61 20 34 35 20 34 63 20 36 34 20 34 65 20 35 32 20 36 38 20 37 31 20 36 65 20 34 32 20 37 33 20 35 61 20 35 37 20 34 33 20 35 37 20 36 35 20 34 32 20 33 37 20 35 33 20}
-	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_6_php
@@ -11791,7 +11468,7 @@ rule SHELL_b374k_2_6_php
 		$ = {59 67 6f 36 33 65 41 4f 62 61 38 44 72 6f 64 4b 39 36 4d 31 6f 38 57 78 46 32 51 35 47 47 54 38 70 2b 69 74 59 79 4f 34 59 2b 4d 74 65 76 57 7a 50 53 38 6e 47 79 39 4f 73 57 2b 51 38 2b 74 2b}
 		$ = {6e 71 6e 30 63 33 74 69 66 71 47 69 32 74 4c 53 49 30 36 2f 77 30 7a 58 73 2f 46 6e 34 66 43 2f 7a 69 33 66 75 37 2b 56 35 32 33 6d 4f 52 35 64 67 33 4d 69 7a 4f 4a 6c 49 44 37 6e 37 6d 59 34}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_2_min_php
@@ -11803,7 +11480,7 @@ rule SHELL_b374k_2_2_min_php
 		$ = {30 36 65 55 2f 6e 69 48 55 73 4c 53 63 55 45 65 38 33 79 44 31 72 41 47 35 4d 73 67 35 41 50 68 70 6e 61 33 6d 42 69 34 0a 4c 64 76 4c 39 6b 6a 43 48 7a 72 36 54 53 6f 49 4c 48 2f 5a 47 76 59}
 		$ = {77 53 6b 69 71 44 64 2f 75 4e 39 38 0a 51 6e 7a 2f 61 73 33 38 4d 36 31 54 45 35 50 48 78 52 6e 59 43 39 6f 50 4e 4f 53 58 59 51 57 57 6e 65 53 44 71 39 48 6c 65 39 67 54 53 41 36 2b 61 6e 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_8_php
@@ -11815,7 +11492,7 @@ rule SHELL_b374k_2_8_php
 		$ = {77 76 33 6f 61 52 45 47 56 33 63 6c 45 71 73 43 4d 49 44 57 57 33 4d 56 63 35 37 66 35 39 58 76 30 41 46 6f 78 32 32 74 39 71 49 43 4e 53 5a 37 72 30 4f 6d 4e 6f 59 69 42 51 6d 55 43 45 41 64}
 		$ = {74 6f 4d 2b 4f 74 58 48 77 4b 6e 7a 73 55 31 49 42 61 47 67 70 34 6a 51 4a 57 5a 4d 78 74 43 54 34 45 53 70 52 38 5a 6b 52 6f 51 54 45 69 44 4f 44 76 48 68 55 75 51 76 51 73 31 6b 66 63 2b 54}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_7_php
@@ -11827,7 +11504,7 @@ rule SHELL_b374k_2_7_php
 		$ = {7a 31 38 53 56 4e 42 6a 51 6c 4a 38 49 67 52 53 6f 71 37 41 32 5a 54 69 52 38 67 4f 77 6a 4c 47 68 74 44 67 61 66 43 64 76 30 75 46 73 63 6f 53 31 66 34 64 33 4a 59 48 6d 58 61 67 48 4d 65 5a}
 		$ = {2b 33 6e 34 44 50 55 38 75 45 79 43 76 31 34 58 44 42 72 58 50 77 63 58 51 71 57 2b 68 6d 46 47 67 50 73 61 4b 51 75 42 4f 74 63 74 4e 41 45 69 32 30 34 4d 71 78 6b 51 62 54 38 79 2b 6e 52 4e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_3_php
@@ -11839,7 +11516,7 @@ rule SHELL_b374k_2_3_php
 		$ = {6f 77 73 5b 24 6a 5d 3b 0a 09 09 09 09 09 09 09 09 24 71 5f 72 65 73 75 6c 74 20 2e 3d 20 22 3c 74 64 3e 22 2e 68 74 6d 6c 73 70 65 63 69 61 6c 63 68 61 72 73 28 24 64 61 74 61 7a 29 2e 22 3c}
 		$ = {73 65 74 28 24 5f 52 45 51 55 45 53 54 5b 22 72 73 68 6f 73 74 5f 22 2e 24 72 73 74 79 70 65 5d 29 29 20 24 72 73 68 6f 73 74 5f 20 3d 20 73 73 28 24 5f 52 45 51 55 45 53 54 5b 22 72 73 68 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_2_php
@@ -11851,7 +11528,7 @@ rule SHELL_b374k_2_2_php
 		$ = {72 6d 3e 0a 09 09 09 09 3c 2f 64 69 76 3e 22 3b 0a 09 09 09 09 2f 2f 20 6d 73 73 71 6c 0a 09 09 09 09 24 73 5f 72 65 73 75 6c 74 20 2e 3d 20 22 3c 64 69 76 20 63 6c 61 73 73 3d 5c 22 6d 79 62}
 		$ = {69 64 74 68 3a 31 32 30 70 78 3b 68 65 69 67 68 74 3a 33 30 70 78 3b 6d 61 72 67 69 6e 3a 31 30 70 78 20 32 70 78 20 30 20 32 70 78 3b 5c 22 20 2f 3e 0a 09 09 26 6e 62 73 70 3b 26 6e 62 73 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_8_source_php
@@ -11863,7 +11540,7 @@ rule SHELL_b374k_2_8_source_php
 		$ = {40 69 73 5f 64 69 72 28 24 73 5f 6f 6c 64 29 29 20 24 73 5f 72 65 6e 6d 73 67 20 3d 20 28 40 72 65 6e 61 6d 65 28 24 73 5f 6f 6c 64 2c 20 24 73 5f 6e 65 77 29 29 3f 20 22 44 69 72 65 63 74 6f}
 		$ = {24 73 5f 69 69 5b 30 5d 2e 22 3c 2f 74 64 3e 3c 74 64 3e 22 2e 24 73 5f 69 69 5b 31 5d 2e 22 3c 2f 74 64 3e 3c 2f 74 72 3e 22 3b 0a 09 09 09 09 09 7d 0a 09 09 09 09 09 65 6c 73 65 20 24 73 5f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_7_source_php
@@ -11875,7 +11552,7 @@ rule SHELL_b374k_2_7_source_php
 		$ = {20 22 73 5f 6c 77 70 64 6f 77 6e 6c 6f 61 64 22 2c 20 22 73 5f 6c 79 6e 78 22 2c 20 22 73 5f 63 75 72 6c 22 29 3b 0a 09 09 66 6f 72 65 61 63 68 28 24 73 5f 61 63 63 65 73 73 20 61 73 20 24 73}
 		$ = {73 28 65 78 65 28 24 73 5f 63 6d 64 29 29 3b 0a 09 09 09 09 09 69 66 28 24 73 5f 72 20 21 3d 20 27 27 29 20 24 73 5f 72 65 73 75 6c 74 20 2e 3d 20 22 3c 70 72 65 3e 22 2e 24 73 5f 72 2e 22 3c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_6_source_php
@@ -11887,7 +11564,7 @@ rule SHELL_b374k_2_6_source_php
 		$ = {30 70 78 3b 27 20 2f 3e 3c 2f 70 3e 0a 09 09 09 09 3c 2f 66 6f 72 6d 3e 22 3b 0a 0a 09 7d 2f 2f 20 68 65 78 20 65 64 69 74 20 66 69 6c 65 0a 09 65 6c 73 65 69 66 28 69 73 73 65 74 28 24 5f 52}
 		$ = {69 73 73 65 74 28 24 5f 52 45 51 55 45 53 54 5b 22 72 73 68 6f 73 74 5f 22 2e 24 73 5f 72 73 74 79 70 65 5d 29 29 20 24 73 5f 72 73 68 6f 73 74 5f 20 3d 20 73 73 28 24 5f 52 45 51 55 45 53 54}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_5_source_php
@@ -11899,7 +11576,7 @@ rule SHELL_b374k_2_5_source_php
 		$ = {30 30 30 42 42 22 2c 22 30 30 30 30 30 30 22 2c 22 46 46 38 30 30 30 22 2c 22 44 44 30 30 30 30 22 2c 20 22 30 30 37 37 30 30 22 29 3b 0a 09 09 09 09 24 73 5f 6e 65 77 20 3d 20 61 72 72 61 79}
 		$ = {74 27 20 76 61 6c 75 65 3d 27 27 20 2f 3e 3c 2f 74 64 3e 3c 2f 74 72 3e 0a 09 09 09 09 09 3c 74 72 3e 3c 74 64 3e 55 73 65 72 6e 61 6d 65 3c 2f 74 64 3e 3c 74 64 3e 3c 69 6e 70 75 74 20 73 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_b374k_2_4_php
@@ -11911,7 +11588,7 @@ rule SHELL_b374k_2_4_php
 		$ = {6c 73 65 20 69 66 28 69 73 5f 66 69 6c 65 28 24 66 29 29 20 24 66 63 20 3d 20 40 66 69 6c 65 5f 67 65 74 5f 63 6f 6e 74 65 6e 74 73 28 24 66 29 3b 0a 09 09 0a 0a 09 09 69 66 28 69 73 73 65 74}
 		$ = {6c 27 3e 0a 09 09 09 09 09 3c 74 72 3e 3c 74 64 20 73 74 79 6c 65 3d 27 77 69 64 74 68 3a 31 37 30 70 78 3b 27 3e 48 6f 73 74 3c 2f 74 64 3e 3c 74 64 3e 3c 69 6e 70 75 74 20 73 74 79 6c 65 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_getcode_php
@@ -11919,7 +11596,7 @@ rule SHELL_getcode_php
 	strings:
 		$ = {3c 3f 70 68 70 0a 2f 2f 67 65 74 63 6f 64 65 2e 70 68 70 20 20 20 20 0a 2f 2f 61 73 73 65 72 74 28 24 5f 50 4f 53 54 5b 63 5d 29 3b 0a 24 63 6d 64 3d 24 5f 47 45 54 5b 27 63 61 6c 6c 27 5d 3b 0a 69 66 20 28 24 63 6d 64 3d 3d 27 63 6f 64 65 27 29 20 20 0a 20 20 20 65 63 68 6f 20 73 70 72 69 6e 74 66 28 27 36 31 37 33 37 33 36 35 37 32 37 34 32 38 32 34 35 66 35 30 34 66 35 33 35 34 35 62 36 33 35 64 32 39 33 62 27 29 3b 0a 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_webshell_php
@@ -11931,7 +11608,7 @@ rule SHELL_webshell_php
 		$ = {2f 2f 63 61 6c 6c 5f 75 73 65 72 5f 66 75 6e 63 28 63 72 65 61 74 65 5f 66 75 6e 63 74 69 6f 6e 28 6e 75 6c 6c 2c 27 61 73 73 65 72 74 28 24 5f 50 4f 53 54 5b 63 5d 29 3b 27 29 29 3b 0a 0a 24}
 		$ = {72 6c 3d 27 68 74 74 70 3a 2f 2f 6c 6f 63 61 6c 68 6f 73 74 2f 44 65 62 75 67 50 48 50 2f 67 65 74 63 6f 64 65 2e 70 68 70 3f 63 61 6c 6c 3d 63 6f 64 65 27 3b 0a 63 61 6c 6c 5f 75 73 65 72 5f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_client_py
@@ -11943,7 +11620,7 @@ rule SHELL_client_py
 		$ = {69 62 32 2e 62 75 69 6c 64 5f 6f 70 65 6e 65 72 28 29 0a 20 20 20 20 20 20 20 20 20 20 20 20 75 72 6c 20 3d 20 61 72 67 73 5b 31 5d 0a 20 20 20 20 20 20 20 20 20 20 20 20 63 6d 64 20 3d 20 72}
 		$ = {20 20 20 20 20 6f 70 65 6e 65 72 2e 61 64 64 68 65 61 64 65 72 73 2e 61 70 70 65 6e 64 28 28 27 43 6f 64 65 27 2c 20 63 6f 64 65 29 29 23 20 25 28 73 74 72 28 63 6f 64 65 29 29 0a 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpkitcli_py
@@ -11955,7 +11632,7 @@ rule SHELL_phpkitcli_py
 		$ = {20 20 20 20 20 20 20 20 20 20 70 72 69 6e 74 20 22 5c 6e 5b 2d 5d 20 51 75 69 74 74 69 6e 67 22 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 73 79 73 2e 65 78 69 74 28 30 29 0a 20 20 20}
 		$ = {22 72 22 29 0a 20 20 20 20 72 61 77 66 69 6c 65 64 61 74 61 20 3d 20 66 2e 72 65 61 64 28 29 0a 20 20 20 20 65 6e 63 6f 64 65 64 66 69 6c 65 64 61 74 61 20 3d 20 72 61 77 66 69 6c 65 64 61 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_2009lite_php
@@ -11967,7 +11644,7 @@ rule SHELL_2009lite_php
 		$ = {72 72 61 79 28 27 6d 61 67 69 63 5f 71 75 6f 74 65 73 5f 67 70 63 27 2c 67 65 74 63 66 67 28 27 6d 61 67 69 63 5f 71 75 6f 74 65 73 5f 67 70 63 27 29 29 2c 0a 09 09 31 39 20 3d 3e 20 61 72 72}
 		$ = {09 09 40 75 6e 6c 69 6e 6b 28 24 64 65 6c 64 69 72 2e 27 2f 27 2e 24 66 69 6c 65 29 3b 0a 09 09 7d 0a 09 7d 20 0a 09 24 6d 79 64 69 72 2d 3e 63 6c 6f 73 65 28 29 3b 20 0a 09 40 63 68 6d 6f 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_63d9a58116
@@ -11979,7 +11656,7 @@ rule SHELL_unknown_63d9a58116
 		$ = {71 75 6f 74 65 73 5f 67 70 63 27 2c 67 65 74 63 66 67 28 27 6d 61 67 69 63 5f 71 75 6f 74 65 73 5f 67 70 63 27 29 29 2c 0a 09 09 31 39 20 3d 3e 20 61 72 72 61 79 28 27 6d 65 6d 6f 72 79 5f 6c}
 		$ = {20 3d 20 65 78 70 6c 6f 64 65 28 27 2f 27 2c 20 24 63 77 64 29 3b 0a 09 24 6e 75 6d 20 3d 20 63 6f 75 6e 74 28 24 70 61 74 68 64 62 29 3b 0a 09 69 66 20 28 24 6e 75 6d 20 3e 20 32 29 20 7b 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_2009mssql_php
@@ -11991,7 +11668,7 @@ rule SHELL_2009mssql_php
 		$ = {56 6c 73 78 58 54 73 4e 43 69 52 70 59 57 52 6b 63 6a 31 70 62 6d 56 30 58 32 46 30 62 32 34 6f 4a 48 52 22 2e 0a 09 09 22 68 63 6d 64 6c 64 43 6b 67 66 48 77 67 5a 47 6c 6c 4b 43 4a 46 63 6e}
 		$ = {3d 20 30 78 32 30 30 30 29 20 7b 24 74 79 70 65 20 3d 20 27 63 27 3b 7d 0a 09 65 6c 73 65 69 66 20 28 28 24 6d 6f 64 65 20 26 20 30 78 31 30 30 30 29 20 3d 3d 3d 20 30 78 31 30 30 30 29 20 7b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpspy2010_php
@@ -12003,7 +11680,7 @@ rule SHELL_phpspy2010_php
 		$ = {72 51 30 38 42 69 32 2b 45 35 51 45 61 38 56 57 53 33 76 56 59 2b 65 42 44 49 35 79 34 53 46 46 6a 57 5a 59 76 33 53 71 41 63 49 39 50 34 41 4d 6e 73 65 4d 6b 6c 34 47 68 61 72 45 78 52 53 69}
 		$ = {6d 6d 39 4b 38 77 65 53 70 52 6b 55 63 42 4f 37 61 4c 58 35 71 5a 66 51 42 45 39 6d 6f 46 48 42 6f 4d 57 72 42 4e 53 65 34 41 36 76 58 43 71 44 4e 62 4f 53 36 33 49 46 76 6a 4c 65 65 53 39 2f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_2014phpspy_php
@@ -12015,7 +11692,7 @@ rule SHELL_2014phpspy_php
 		$ = {34 79 31 65 55 61 34 2b 39 4a 78 4f 78 7a 2b 71 6a 67 4b 41 51 65 30 35 5a 44 65 61 49 5a 48 31 51 51 6b 4b 4a 58 6f 68 4e 44 6f 68 57 70 67 6b 45 66 51 42 4b 47 4c 7a 56 31 32 38 37 7a 45 49}
 		$ = {78 73 62 48 36 44 44 56 74 4e 4a 45 53 50 37 74 56 65 33 75 4f 6e 75 6d 58 39 6d 43 69 53 35 42 52 42 51 74 75 49 67 6e 72 39 34 58 66 65 2f 70 54 66 63 74 5a 32 57 4a 30 68 4b 49 72 41 6f 39}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_a922124c04
@@ -12027,7 +11704,7 @@ rule SHELL_unknown_a922124c04
 		$ = {77 38 58 4e 79 57 32 4e 65 53 32 41 2f 74 4a 74 6c 46 55 72 43 33 4e 72 64 33 42 4f 5a 31 42 52 50 31 61 48 2f 6b 6f 72 53 48 51 75 6c 42 70 74 46 77 43 4d 49 4b 48 2f 41 4d 72 4b 48 44 66 4e}
 		$ = {64 42 62 4a 61 42 67 46 57 41 66 6b 32 32 4c 76 59 46 51 69 46 74 46 58 4c 61 70 6d 51 65 48 54 4b 55 74 69 6a 32 4e 65 47 45 32 65 6f 78 57 5a 72 33 45 61 37 52 46 50 48 47 34 2b 4a 75 30 47}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpspy_2005_full_php
@@ -12039,7 +11716,7 @@ rule SHELL_phpspy_2005_full_php
 		$ = {63 66 67 28 22 72 65 67 69 73 74 65 72 5f 67 6c 6f 62 61 6c 73 22 29 29 3b 0a 09 24 69 6e 66 6f 5b 31 37 5d 20 3d 20 61 72 72 61 79 28 22 6d 61 67 69 63 5f 71 75 6f 74 65 73 5f 67 70 63 22 2c}
 		$ = {5a 69 70 7b 0a 09 76 61 72 20 24 6f 75 74 3d 27 27 3b 0a 09 09 66 75 6e 63 74 69 6f 6e 20 50 48 50 5a 69 70 28 24 64 69 72 2c 20 24 7a 69 70 66 69 6c 65 6e 61 6d 65 3d 22 22 29 09 7b 0a 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_2008_php
@@ -12051,7 +11728,7 @@ rule SHELL_2008_php
 		$ = {7d 2f 2f 65 6e 64 20 6e 65 77 74 69 6d 65 0a 0a 65 6c 73 65 69 66 20 28 24 61 63 74 69 6f 6e 20 3d 3d 20 27 73 68 65 6c 6c 27 29 20 7b 0a 09 69 66 20 28 49 53 5f 57 49 4e 20 26 26 20 49 53 5f}
 		$ = {3a 20 27 2e 24 61 72 72 61 79 5b 27 67 69 64 27 5d 2e 27 26 23 31 33 26 23 31 30 47 65 63 6f 73 3a 20 27 2e 24 61 72 72 61 79 5b 27 67 65 63 6f 73 27 5d 2e 27 26 23 31 33 26 23 31 30 44 69 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpspy_2006_php
@@ -12063,7 +11740,7 @@ rule SHELL_phpspy_2006_php
 		$ = {62 6c 65 5f 66 75 6e 63 74 69 6f 6e 73 22 2c 24 64 69 73 5f 66 75 6e 63 29 2c 0a 09 09 09 32 33 20 3d 3e 20 61 72 72 61 79 28 22 70 68 70 69 6e 66 6f 28 29 22 2c 24 70 68 70 69 6e 66 6f 29 2c}
 		$ = {74 72 5f 72 65 70 6c 61 63 65 28 27 5c 5c 27 2c 20 27 2f 27 2c 20 24 6e 61 6d 65 29 3b 0a 0a 09 09 20 20 20 20 24 64 74 69 6d 65 20 20 20 20 3d 20 64 65 63 68 65 78 28 24 74 68 69 73 2d 3e 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpspy_2005_lite_php
@@ -12075,7 +11752,7 @@ rule SHELL_phpspy_2005_lite_php
 		$ = {6c 5f 65 78 65 63 22 20 3c 3f 20 69 66 20 28 24 65 78 65 63 66 75 6e 63 3d 3d 22 73 68 65 6c 6c 5f 65 78 65 63 22 29 20 7b 20 65 63 68 6f 20 22 73 65 6c 65 63 74 65 64 22 3b 20 7d 20 3f 3e 3e}
 		$ = {61 6d 65 3d 22 70 68 70 76 61 72 6e 61 6d 65 22 20 74 79 70 65 3d 22 74 65 78 74 22 20 63 6c 61 73 73 3d 22 69 6e 70 75 74 22 20 73 69 7a 65 3d 22 34 30 22 3e 20 3c 69 6e 70 75 74 20 74 79 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wso_4_2_1_php
@@ -12087,7 +11764,7 @@ rule SHELL_wso_4_2_1_php
 		$ = {27 5d 29 3b 0a 09 09 09 09 69 66 20 28 24 75 69 64 29 0a 09 09 09 09 09 65 63 68 6f 20 6a 6f 69 6e 28 27 3a 27 2c 24 75 69 64 29 2e 22 5c 6e 22 3b 0a 09 09 09 7d 0a 09 09 09 62 72 65 61 6b 3b}
 		$ = {20 20 20 20 20 20 20 20 20 20 66 63 6c 6f 73 65 28 24 66 70 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 75 6e 73 65 74 28 24 5f 50 4f 53 54 5b 27 70 32 27 5d 29 3b 0a 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wso2_pack_php
@@ -12099,19 +11776,7 @@ rule SHELL_wso2_pack_php
 		$ = {45 37 51 4e 36 79 54 73 34 4e 55 6c 66 59 32 76 52 77 43 2f 77 75 36 7a 74 34 71 39 39 46 66 34 44 30 6c 55 58 4c 33 72 5a 30 6f 37 58 65 65 51 47 35 6a 6f 69 54 4c 53 71 4d 50 61 65 4b 5a 43}
 		$ = {75 4b 34 34 31 58 67 4a 65 39 53 48 4f 65 73 54 58 4f 32 47 78 56 67 6e 50 68 53 30 73 4f 52 4d 78 6a 6b 76 57 62 6a 76 74 68 50 5a 33 69 6d 42 6d 44 52 6e 6a 6a 4a 5a 69 75 78 68 51 68 66 55}
 	condition:
-		 any of them
-}
-
-rule SHELL_wso_4_2_3_php
-{
-	strings:
-		$ = {6f 70 74 67 72 6f 75 70 3e 3c 2f 73 65 6c 65 63 74 3e 3c 2f 6c 61 62 65 6c 3e 3c 62 72 3e 3c 73 70 61 6e 3e 53 65 72 76 65 72 20 49 50 3a 3c 2f 73 70 61 6e 3e 3c 62 72 3e 27 2e 67 65 74 68 6f}
-		$ = {72 65 61 6b 3b 0a 09 09 63 61 73 65 20 27 68 65 78 64 75 6d 70 27 3a 0a 09 09 09 24 63 20 3d 20 40 66 69 6c 65 5f 67 65 74 5f 63 6f 6e 74 65 6e 74 73 28 24 5f 50 4f 53 54 5b 27 70 31 27 5d 29}
-		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 63 6f 6e 74 69 6e 75 65 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 69 66 28 40 69 73 5f}
-		$ = {69 6e 69 5f 72 65 73 74 6f 72 65 28 22 6f 70 65 6e 5f 62 61 73 65 64 69 72 22 29 3b 0a 09 09 09 69 6e 63 6c 75 64 65 28 24 5f 50 4f 53 54 5b 27 70 32 27 5d 29 3b 0a 09 09 09 62 72 65 61 6b 3b}
-		$ = {73 20 24 76 29 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 64 62 2d 3e 64 75 6d 70 28 24 76 2c 20 24 66 70 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 66 63 6c 6f 73 65 28 24 66 70}
-	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wso_4_2_0_php
@@ -12123,7 +11788,7 @@ rule SHELL_wso_4_2_0_php
 		$ = {6e 70 22 20 74 79 70 65 3d 74 65 78 74 20 6e 61 6d 65 3d 70 61 72 61 6d 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 73 75 62 6d 69 74 20 76 61 6c 75 65 3d 22 3e 3e 22 3e 3c 2f 66 6f 72 6d 3e 3c 62}
 		$ = {6d 70 28 24 76 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 65 78 69 74 3b 0a 20 20 20 20 20 20 20 20 7d 20 65 6c 73 65 69 66 28 24 66 70 20 3d 20 40 66 6f 70 65 6e 28 24 5f 50 4f 53 54 5b 27}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_WSO_4_0_5_php
@@ -12135,7 +11800,7 @@ rule SHELL_WSO_4_0_5_php
 		$ = {63 6c 69 63 6b 3d 22 67 28 6e 75 6c 6c 2c 6e 75 6c 6c 2c 5c 27 79 65 73 5c 27 29 22 3e 59 65 73 3c 2f 61 3e 3c 2f 64 69 76 3e 27 3b 0a 09 70 72 69 6e 74 46 6f 6f 74 65 72 28 29 3b 0a 7d 0a 2f}
 		$ = {3b 0a 09 69 66 28 69 73 73 65 74 28 24 5f 50 4f 53 54 5b 27 73 71 6c 5f 68 6f 73 74 27 5d 29 29 7b 0a 09 09 69 66 28 24 64 62 2d 3e 63 6f 6e 6e 65 63 74 28 24 5f 50 4f 53 54 5b 27 73 71 6c 5f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_WSO_base64_php
@@ -12147,19 +11812,7 @@ rule SHELL_WSO_base64_php
 		$ = {62 57 78 70 62 6d 73 6f 49 69 38 69 4c 43 49 77 4c 33 67 75 64 48 68 30 49 69 6b 37 43 69 52 6a 49 43 41 39 49 43 4a 50 63 48 52 70 62 32 35 7a 49 45 6c 75 5a 47 56 34 5a 58 4d 67 52 6d 39 73}
 		$ = {33 4a 6c 55 33 46 73 50 43 39 76 63 48 52 70 62 32 34 2b 43 67 6b 4a 43 51 6b 4a 50 43 39 7a 5a 57 78 6c 59 33 51 2b 50 43 39 30 5a 44 34 4b 43 51 6b 4a 43 54 78 30 5a 44 34 38 61 57 35 77 64}
 	condition:
-		 any of them
-}
-
-rule SHELL_wso_4_2_2_php
-{
-	strings:
-		$ = {2f 66 6f 6e 74 3e 22 3a 22 20 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 72 65 64 3e 28 4e 6f 74 20 77 72 69 74 61 62 6c 65 29 3c 2f 66 6f 6e 74 3e 22 3b 0a 20 20 20 20 65 63 68 6f 20 22 0a 3c 2f 64}
-		$ = {09 09 63 61 73 65 20 31 30 3a 20 24 68 5b 32 5d 20 2e 3d 20 27 20 27 3b 20 62 72 65 61 6b 3b 0a 09 09 09 09 09 63 61 73 65 20 31 33 3a 20 24 68 5b 32 5d 20 2e 3d 20 27 20 27 3b 20 62 72 65 61}
-		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 69 74 65 72 61 74 6f 72 20 3d 20 6e 65 77 20 52 65 63 75 72 73 69 76 65 49 74 65 72 61 74 6f 72 49}
-		$ = {3b 0a 09 09 09 09 69 66 20 28 24 75 69 64 29 0a 09 09 09 09 09 65 63 68 6f 20 6a 6f 69 6e 28 27 3a 27 2c 24 75 69 64 29 2e 22 5c 6e 22 3b 0a 09 09 09 7d 0a 09 09 09 62 72 65 61 6b 3b 0a 09 09}
-		$ = {20 20 20 20 20 20 20 20 20 66 63 6c 6f 73 65 28 24 66 70 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 75 6e 73 65 74 28 24 5f 50 4f 53 54 5b 27 70 32 27 5d 29 3b 0a 20 20 20 20 20 20 20 20 7d}
-	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wso_php
@@ -12171,7 +11824,7 @@ rule SHELL_wso_php
 		$ = {74 69 74 6c 65 3e 22 3b 0a 6d 6b 64 69 72 28 22 73 79 6d 22 29 3b 0a 73 79 6d 6c 69 6e 6b 28 22 2f 22 2c 22 30 2f 78 2e 74 78 74 22 29 3b 0a 24 63 20 20 3d 20 22 4f 70 74 69 6f 6e 73 20 49 6e}
 		$ = {73 65 6c 65 63 74 65 64 27 3b 3f 3e 3e 50 6f 73 74 67 72 65 53 71 6c 3c 2f 6f 70 74 69 6f 6e 3e 0a 09 09 09 09 09 3c 2f 73 65 6c 65 63 74 3e 3c 2f 74 64 3e 0a 09 09 09 09 3c 74 64 3e 3c 69 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wso_4_1_3_php
@@ -12183,7 +11836,7 @@ rule SHELL_wso_4_1_3_php
 		$ = {5b 27 70 32 27 5d 20 3c 3d 20 24 5f 50 4f 53 54 5b 27 70 33 27 5d 3b 24 5f 50 4f 53 54 5b 27 70 32 27 5d 2b 2b 29 20 7b 0a 09 09 09 09 24 75 69 64 20 3d 20 40 70 6f 73 69 78 5f 67 65 74 70 77}
 		$ = {0a 20 20 20 20 20 20 20 20 20 20 20 20 66 63 6c 6f 73 65 28 24 66 70 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 75 6e 73 65 74 28 24 5f 50 4f 53 54 5b 27 70 32 27 5d 29 3b 0a 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_12309_php_txt
@@ -12195,7 +11848,7 @@ rule SHELL_12309_php_txt
 		$ = {45 54 2d 3e 6e 65 77 28 0a 20 20 20 4c 6f 63 61 6c 50 6f 72 74 20 3d 3e 20 27 2e 24 5f 50 4f 53 54 5b 22 70 6f 72 74 22 5d 2e 27 2c 27 3b 0a 20 20 20 24 70 65 72 6c 62 64 63 6f 64 65 2e 3d 67}
 		$ = {3e 3c 62 72 3e 3c 62 72 3e 27 3b 0a 20 20 20 69 66 20 28 21 66 75 6e 63 74 69 6f 6e 5f 65 6e 61 62 6c 65 64 28 27 70 68 70 69 6e 66 6f 27 29 29 20 7b 20 65 63 68 6f 20 22 66 61 69 6c 2c 20 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_dd18bc83e0
@@ -12203,7 +11856,7 @@ rule SHELL_unknown_dd18bc83e0
 	strings:
 		$ = {0a 3c 3f 70 68 70 0a 20 20 20 20 24 66 75 6e 63 20 3d 20 6e 65 77 20 52 65 66 6c 65 63 74 69 6f 6e 46 75 6e 63 74 69 6f 6e 28 24 5f 47 45 54 5b 6d 5d 29 3b 0a 20 20 20 20 65 63 68 6f 20 24 66 75 6e 63 2d 3e 69 6e 76 6f 6b 65 41 72 67 73 28 61 72 72 61 79 28 24 5f 47 45 54 5b 63 5d 29 29 3b 0a 3f 3e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_11_jpg
@@ -12215,7 +11868,7 @@ rule SHELL_11_jpg
 		$ = {4b c4 9a 37 c2 9d 2f c5 d7 3a e6 9d 35 95 f5 c2 42 b6 b6 ba 91 96 e2 06 78 cc a9 e6 aa fc a9 94 19 c1 6d c3 23 20 54 73 2b 5c 7d 4f 9d 7e d7 6f ff 00 3d a3 ff 00 be 85 74 9a 26 98 f2 dc c7 a9}
 		$ = {e7 04 f5 35 d9 8a cc b1 35 a4 d5 44 9b e6 fc 6f d2 ef ab 7b 6d 66 b6 be bc 98 2c 8f 0b 85 e5 9d 2b ab 2f 2d 9a 5a 37 6e 96 5a ef 74 ee de a7 29 f1 0b c6 3f 07 be 20 fe d5 13 f8 e2 f6 f7 e2 35}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHP_reflection_php_txt
@@ -12227,7 +11880,7 @@ rule SHELL_PHP_reflection_php_txt
 		$ = {e8 af 9d e9 a9 ac 20 66 6f 72 20 77 69 6e 64 6f 77 73 0a 0a 0a 0a 6d 75 32 30 31 34 30 35 2e 70 68 70 3f 6d 3d 73 79 73 74 65 6d 26 63 3d 65 63 68 6f 20 5e 3c 3f 70 68 70 20 65 76 61 6c 5e 28}
 		$ = {a8 e5 bd 93 e5 89 8d e7 9b ae e5 bd 95 e4 b8 8b e9 9d a2 e7 94 9f e6 88 90 e4 b8 80 e5 8f a5 e8 af 9d e9 a9 ac 20 66 6f 72 20 77 69 6e 64 6f 77 73 0a 0a 6e 65 77 73 2e 70 68 70 3f 6d 3d 73 79}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wpes_v0_2_php
@@ -12239,7 +11892,7 @@ rule SHELL_wpes_v0_2_php
 		$ = {74 65 6e 74 2d 44 65 73 63 72 69 70 74 69 6f 6e 3a 20 46 69 6c 65 20 54 72 61 6e 73 66 65 72 27 29 3b 0a 09 09 09 09 68 65 61 64 65 72 28 27 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 61 70 70}
 		$ = {3d 22 65 78 65 63 54 79 70 65 22 20 69 64 3d 22 65 78 65 63 54 79 70 65 22 2f 3e 0a 09 09 3c 62 75 74 74 6f 6e 20 74 79 70 65 3d 22 62 75 74 74 6f 6e 22 20 6f 6e 43 6c 69 63 6b 3d 22 73 61 76}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_con2_aspx
@@ -12251,7 +11904,7 @@ rule SHELL_con2_aspx
 		$ = {20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 63 61 74 63 68 20 28 45 78 63 65 70 74 69 6f 6e 20 65 78 29 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
 		$ = {22 3e 0a 70 72 6f 74 65 63 74 65 64 20 76 6f 69 64 20 42 75 74 74 6f 6e 45 78 65 5f 43 6c 69 63 6b 28 6f 62 6a 65 63 74 20 73 65 6e 64 65 72 2c 20 45 76 65 6e 74 41 72 67 73 20 65 29 0a 7b 0a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_lpl38_com_aspx_txt
@@ -12263,7 +11916,7 @@ rule SHELL_lpl38_com_aspx_txt
 		$ = {0a 7d 0a 46 69 6c 65 2e 53 65 74 43 72 65 61 74 69 6f 6e 54 69 6d 65 55 74 63 28 70 61 74 68 2c 43 6f 6e 76 65 72 74 2e 54 6f 44 61 74 65 54 69 6d 65 28 79 55 71 78 2e 56 61 6c 75 65 29 29 3b}
 		$ = {65 20 49 44 3d 22 49 6a 73 4c 22 20 72 75 6e 61 74 3d 22 73 65 72 76 65 72 22 20 57 69 64 74 68 3d 22 31 30 30 25 22 20 43 65 6c 6c 53 70 61 63 69 6e 67 3d 22 30 22 20 3e 0a 3c 61 73 70 3a 54}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_d82d678f96
@@ -12275,7 +11928,7 @@ rule SHELL_unknown_d82d678f96
 		$ = {69 66 20 28 52 65 71 75 65 73 74 2e 46 69 6c 65 73 2e 43 6f 75 6e 74 21 3d 30 29 20 7b 20 52 65 71 75 65 73 74 2e 46 69 6c 65 73 5b 30 5d 2e 53 61 76 65 41 73 28 53 65 72 76 65 72 2e 4d 61 70}
 		$ = {22 66 22 5d 29 20 20 29 3b 20 7d 25 3e 0d 0a e3 80 80 e3 80 80 2f 2f 43 23 e7 9a 84 61 73 70 2e 6e 65 74 e4 b8 80 e5 8f a5 e8 af 9d 0d 0a 34 29 20 3c 25 20 49 66 20 52 65 71 75 65 73 74 2e 46}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_editor_aspx
@@ -12283,7 +11936,7 @@ rule SHELL_editor_aspx
 	strings:
 		$ = {3c 25 40 50 61 67 65 20 4c 61 6e 67 75 61 67 65 3d 22 4a 73 63 72 69 70 74 22 25 3e 3c 25 65 76 61 6c 28 52 65 71 75 65 73 74 2e 49 74 65 6d 5b 22 69 63 65 6b 69 6e 67 22 5d 2c 22 75 6e 73 61 66 65 22 29 3b 25 3e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_icesword_aspx
@@ -12295,7 +11948,7 @@ rule SHELL_icesword_aspx
 		$ = {75 65 29 29 3b 0a 46 69 6c 65 2e 53 65 74 4c 61 73 74 57 72 69 74 65 54 69 6d 65 55 74 63 28 70 61 74 68 2c 43 6f 6e 76 65 72 74 2e 54 6f 44 61 74 65 54 69 6d 65 28 75 59 6a 77 2e 56 61 6c 75}
 		$ = {3e 3c 61 73 70 3a 54 61 62 6c 65 43 65 6c 6c 3e 50 72 69 6f 72 69 74 79 3c 2f 61 73 70 3a 54 61 62 6c 65 43 65 6c 6c 3e 3c 61 73 70 3a 54 61 62 6c 65 43 65 6c 6c 3e 41 63 74 69 6f 6e 3c 2f 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Nightrunner_aspx_20_txt
@@ -12307,7 +11960,7 @@ rule SHELL_Nightrunner_aspx_20_txt
 		$ = {20 52 65 73 74 72 3d 22 22 3b 0a 09 09 69 66 28 69 6e 73 74 72 65 61 6d 2e 43 61 6e 52 65 61 64 29 0a 09 09 7b 0a 09 09 09 62 79 74 65 5b 5d 20 62 75 66 66 65 72 3d 6e 65 77 20 62 79 74 65 5b}
 		$ = {72 76 65 72 22 20 2f 3e 26 6e 62 73 70 3b 3c 61 73 70 3a 54 65 78 74 42 6f 78 20 49 44 3d 22 42 69 6e 5f 75 70 54 65 78 74 42 6f 78 22 20 72 75 6e 61 74 3d 22 73 65 72 76 65 72 22 20 57 69 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_111_aspx
@@ -12319,7 +11972,7 @@ rule SHELL_111_aspx
 		$ = {61 74 69 6f 6e 54 69 6d 65 55 74 63 28 70 61 74 68 2c 43 6f 6e 76 65 72 74 2e 54 6f 44 61 74 65 54 69 6d 65 28 79 55 71 78 2e 56 61 6c 75 65 29 29 3b 0a 46 69 6c 65 2e 53 65 74 4c 61 73 74 41}
 		$ = {3c 2f 61 73 70 3a 54 61 62 6c 65 43 65 6c 6c 3e 3c 61 73 70 3a 54 61 62 6c 65 43 65 6c 6c 3e 50 72 6f 63 65 73 73 3c 2f 61 73 70 3a 54 61 62 6c 65 43 65 6c 6c 3e 3c 61 73 70 3a 54 61 62 6c 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_xslt_aspx
@@ -12331,7 +11984,7 @@ rule SHELL_xslt_aspx
 		$ = {53 79 73 74 65 6d 2e 57 65 62 2e 48 74 74 70 43 6f 6e 74 65 78 74 2e 43 75 72 72 65 6e 74 3b 76 61 72 20 52 65 71 75 65 73 74 3d 63 2e 52 65 71 75 65 73 74 3b 76 61 72 20 52 65 73 70 6f 6e 73}
 		$ = {70 6c 61 74 65 3e 0a 3c 2f 78 73 6c 3a 73 74 79 6c 65 73 68 65 65 74 3e 22 3b 0a 58 6d 6c 44 6f 63 75 6d 65 6e 74 20 78 6d 6c 64 6f 63 3d 6e 65 77 20 58 6d 6c 44 6f 63 75 6d 65 6e 74 28 29 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_f58079e852
@@ -12342,7 +11995,7 @@ rule SHELL_unknown_f58079e852
 		$ = {65 74 75 72 6e 28 62 29 3b 0a 7d 0a 3c 2f 73 63 72 69 70 74 3e 0a 3c 25 0a 70 6f 70 75 70 28 70 6f 70 75 70 28 53 79 73 74 65 6d 2e 54 65 78 74 2e 45 6e 63 6f 64 69 6e 67 2e 47 65 74 45 6e 63}
 		$ = {6e 63 6f 64 69 6e 67 2e 47 65 74 45 6e 63 6f 64 69 6e 67 28 36 35 30 30 31 29 2e 0a 0a 47 65 74 53 74 72 69 6e 67 28 53 79 73 74 65 6d 2e 43 6f 6e 76 65 72 74 2e 46 72 6f 6d 42 61 73 65 36 34}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_z1_1__txt
@@ -12354,7 +12007,7 @@ rule SHELL_z1_1__txt
 		$ = {20 00 20 00 73 00 74 00 72 00 69 00 6e 00 67 00 20 00 71 00 75 00 69 00 74 00 65 00 20 00 3d 00 20 00 22 00 51 00 55 00 49 00 54 00 5c 00 72 00 5c 00 6e 00 22 00 3b 00 0d 00 0a 00 20 00 20 00}
 		$ = {65 00 78 00 2e 00 61 00 73 00 70 00 78 00 22 00 20 00 74 00 61 00 72 00 67 00 65 00 74 00 3d 00 22 00 5f 00 62 00 6c 00 61 00 6e 00 6b 00 22 00 3e 00 52 00 65 00 76 00 65 00 72 00 73 00 65 00}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_AspxSpy2014Final_aspx
@@ -12366,7 +12019,7 @@ rule SHELL_AspxSpy2014Final_aspx
 		$ = {72 76 69 63 65 73 50 65 72 6d 69 73 73 69 6f 6e 28 44 69 72 65 63 74 6f 72 79 53 65 72 76 69 63 65 73 50 65 72 6d 69 73 73 69 6f 6e 41 63 63 65 73 73 2e 42 72 6f 77 73 65 2c 41 44 53 50 61 74}
 		$ = {3c 61 73 70 3a 54 65 78 74 42 6f 78 20 69 64 3d 22 42 69 6e 5f 54 65 78 74 42 6f 78 5f 53 69 70 22 20 73 74 79 6c 65 3d 22 77 69 64 74 68 3a 31 30 25 3b 6d 61 72 67 69 6e 3a 30 20 38 70 78 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_d810738c27
@@ -12378,7 +12031,7 @@ rule SHELL_unknown_d810738c27
 		$ = {3e 0a 3c 2f 48 45 41 44 3e 0a 3c 42 4f 44 59 3e 0a 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 68 74 74 70 3a 2f 2f 31 32 37 2e 30 2e 30 2e 31 2f 74 65 73 74 2e 61 73 70 78 20 6d 65 74 68 6f 64 3d}
 		$ = {4d 61 70 50 61 74 68 28 22 6e 6f 6e 61 6d 65 64 2e 61 73 70 78 22 29 2c 66 61 6c 73 65 29 3b 0a 6e 6f 6e 61 6d 65 64 2e 57 72 69 74 65 28 52 65 71 75 65 73 74 2e 49 74 65 6d 5b 22 6c 22 5d 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_as_ashx
@@ -12390,7 +12043,7 @@ rule SHELL_as_ashx
 		$ = {70 75 74 20 3d 20 74 72 75 65 3b 20 0a 70 72 63 2e 53 74 61 72 74 49 6e 66 6f 2e 52 65 64 69 72 65 63 74 53 74 61 6e 64 61 72 64 45 72 72 6f 72 20 3d 20 74 72 75 65 3b 20 0a 70 72 63 2e 53 74}
 		$ = {65 4c 69 6e 65 28 78 29 3b 0a 70 72 63 2e 53 74 61 6e 64 61 72 64 49 6e 70 75 74 2e 43 6c 6f 73 65 28 29 3b 0a 63 6f 6e 74 65 78 74 2e 52 65 73 70 6f 6e 73 65 2e 57 72 69 74 65 28 70 72 63 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_2013110125222650_aspx
@@ -12402,7 +12055,7 @@ rule SHELL_2013110125222650_aspx
 		$ = {69 6e 67 20 61 6c 6c 70 6f 72 74 20 3d 20 54 65 78 74 42 6f 78 53 63 61 6e 50 6f 72 74 2e 54 65 78 74 3b 0a 63 68 61 72 5b 5d 20 73 65 70 61 72 61 74 6f 72 20 3d 20 7b 20 27 2c 27 20 7d 3b 0a}
 		$ = {73 20 6b 69 6c 6c 20 69 6e 20 6b 69 6c 6c 70 72 6f 63 65 73 73 29 0a 7b 0a 73 74 72 69 6e 67 20 70 72 6f 63 65 73 73 6e 61 6d 65 20 3d 20 4c 69 73 74 42 6f 78 50 72 6f 2e 53 65 6c 65 63 74 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_9e4e2599dd
@@ -12413,7 +12066,7 @@ rule SHELL_unknown_9e4e2599dd
 		$ = {0a 3c 25 69 66 20 28 52 65 71 75 65 73 74 2e 46 69 6c 65 73 2e 43 6f 75 6e 74 21 3d 30 29 20 7b 20 52 65 71 75 65 73 74 2e 46 69 6c 65 73 5b 30 5d 2e 53 61 76 65 41 73 28 53 65 72 76 65 72 2e}
 		$ = {65 72 2e 4d 61 70 50 61 74 68 28 52 65 71 75 65 73 74 5b 22 66 22 5d 29 20 29 3b 20 7d 25 3e 0a 0a 3c 25 20 49 66 20 52 65 71 75 65 73 74 2e 46 69 6c 65 73 2e 43 6f 75 6e 74 20 3c 3e 20 30 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wooyun2015052301_aspx
@@ -12425,7 +12078,7 @@ rule SHELL_wooyun2015052301_aspx
 		$ = {67 61 65 72 65 68 72 72 74 67 72 65 67 6a 67 72 67 65 6a 67 65 77 67 6a 65 77 67 65 77 6a 67 77 65 67 77 65 67 61 6b 6c 6d 67 72 67 68 6e 65 77 72 67 68 72 65 6e 72 65 67 61 64 66 67 61 65 72}
 		$ = {65 77 6a 67 77 65 67 77 65 67 61 6b 6c 6d 67 72 67 68 6e 65 77 72 67 68 72 65 6e 72 65 67 61 64 66 67 61 65 72 65 68 72 72 74 67 72 65 67 6a 67 72 67 65 6a 67 65 77 67 6a 65 77 67 65 77 6a 67}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_bd2112086d
@@ -12437,7 +12090,7 @@ rule SHELL_unknown_bd2112086d
 		$ = {29 0a 20 20 20 20 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 42 61 73 65 53 74 72 65 61 6d 2e 46 6c 75 73 68 28 29 3b 0a 20 20 20 20 20 20 20 20 7d 0a 0a 20 20 20 20 20 20 20 20 70}
 		$ = {67 6e 3a 20 6d 69 64 64 6c 65 3b 0a 66 6f 6e 74 2d 73 69 7a 65 3a 20 31 32 70 74 3b 0a 74 65 78 74 2d 61 6c 69 67 6e 3a 20 63 65 6e 74 65 72 3b 0a 7d 0a 0a 23 43 74 5f 32 20 0a 7b 0a 70 61 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wso_aspx
@@ -12449,7 +12102,7 @@ rule SHELL_wso_aspx
 		$ = {61 6d 65 2e 54 6f 53 74 72 69 6e 67 28 29 25 3e 3c 2f 74 64 3e 0a 20 20 3c 2f 74 72 3e 0a 20 20 3c 74 72 3e 0a 20 20 20 20 3c 74 64 3e 55 73 65 72 20 4e 61 6d 65 20 69 6e 20 74 68 69 73 20 50}
 		$ = {65 72 22 29 0a 09 09 09 09 45 6e 64 20 54 72 79 0a 09 25 3e 0a 3c 25 0a 63 61 73 65 20 22 72 65 67 73 68 65 6c 6c 22 0a 25 3e 0a 09 3c 66 6f 72 6d 20 72 75 6e 61 74 3d 22 73 65 72 76 65 72 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ChangeLog_txt
@@ -12461,7 +12114,7 @@ rule SHELL_ChangeLog_txt
 		$ = {73 65 72 2e 61 73 70 78 20 61 6e 64 20 66 69 6c 65 75 70 6c 6f 61 64 2e 61 73 70 78 20 73 6f 20 74 68 61 74 0a 20 20 20 20 69 66 20 74 68 65 20 61 70 70 6c 69 63 61 74 69 6f 6e 20 72 65 6e 61}
 		$ = {69 6c 65 73 79 73 74 65 6d 62 72 6f 77 73 65 72 2e 61 73 70 78 20 74 6f 20 63 61 74 63 68 20 65 72 72 6f 72 73 20 77 68 65 6e 20 0a 20 20 20 20 61 73 73 69 67 6e 69 6e 67 20 61 20 64 65 66 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_global_asax
@@ -12473,7 +12126,7 @@ rule SHELL_global_asax
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 53 74 72 69 6e 67 5b 5d 20 78}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 53 79 73 74 65 6d 2e 44 61 74 61 2e 44 61 74 61 53 65 74 20 64 73 20 3d 20 6e 65 77 20 53 79 73 74 65 6d 2e 44 61 74 61 2e 44 61 74 61 53 65 74 28 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Customize_cs
@@ -12485,7 +12138,7 @@ rule SHELL_Customize_cs
 		$ = {74 53 63 68 65 6d 61 28 22 43 6f 6c 75 6d 6e 73 22 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 43 6f 6e 6e 2e 43 6c 6f 73 65 28 29}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 52 20 2b 3d 20 53 74 72 69 6e 67 2e 46 6f 72 6d 61 74 28 22 7b 30 7d 5c 74 7c 5c 74 22 2c 20 64 73 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL__gitattributes
@@ -12497,7 +12150,7 @@ rule SHELL__gitattributes
 		$ = {73 74 65 78 74 70 6c 61 69 6e 0a 2a 2e 44 4f 43 09 20 64 69 66 66 3d 61 73 74 65 78 74 70 6c 61 69 6e 0a 2a 2e 64 6f 63 78 20 64 69 66 66 3d 61 73 74 65 78 74 70 6c 61 69 6e 0a 2a 2e 44 4f 43}
 		$ = {69 6e 0a 2a 2e 64 6f 74 20 20 64 69 66 66 3d 61 73 74 65 78 74 70 6c 61 69 6e 0a 2a 2e 44 4f 54 20 20 64 69 66 66 3d 61 73 74 65 78 74 70 6c 61 69 6e 0a 2a 2e 70 64 66 20 20 64 69 66 66 3d 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL__gitignore
@@ -12509,7 +12162,7 @@ rule SHELL__gitignore
 		$ = {74 6f 72 65 20 61 70 70 20 70 61 63 6b 61 67 65 20 64 69 72 65 63 74 6f 72 79 0a 41 70 70 50 61 63 6b 61 67 65 73 2f 0a 0a 23 20 4f 74 68 65 72 73 0a 73 71 6c 2f 0a 2a 2e 43 61 63 68 65 0a 43}
 		$ = {44 61 74 61 2f 2a 2e 6c 64 66 0a 0a 23 23 23 23 23 23 23 23 23 23 23 23 23 0a 23 23 20 57 69 6e 64 6f 77 73 20 64 65 74 72 69 74 75 73 0a 23 23 23 23 23 23 23 23 23 23 23 23 23 0a 0a 23 20 57}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_nishang_psm1
@@ -12521,7 +12174,7 @@ rule SHELL_nishang_psm1
 		$ = {2f 67 69 74 68 75 62 2e 63 6f 6d 2f 73 61 6d 72 61 74 61 73 68 6f 6b 2f 6e 69 73 68 61 6e 67 0a 23 3e 0a 0a 0a 23 43 6f 64 65 20 73 74 6f 6c 65 6e 20 66 72 6f 6d 20 68 65 72 65 20 68 74 74 70}
 		$ = {74 69 66 65 73 74 61 74 69 6f 6e 2f 50 6f 77 65 72 53 70 6c 6f 69 74 0a 47 65 74 2d 43 68 69 6c 64 49 74 65 6d 20 2d 52 65 63 75 72 73 65 20 28 4a 6f 69 6e 2d 50 61 74 68 20 24 50 53 53 63 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_CHANGELOG_txt
@@ -12533,7 +12186,7 @@ rule SHELL_CHANGELOG_txt
 		$ = {62 69 6e 2f 67 6d 61 69 6c 2f 74 69 6e 79 70 61 73 74 65 20 66 6f 72 20 65 78 66 69 6c 74 72 61 74 69 6f 6e 2e 0a 2d 20 41 64 64 65 64 20 47 65 74 2d 50 61 73 73 48 61 73 68 65 73 20 70 61 79}
 		$ = {72 20 61 74 20 41 44 2c 20 63 72 65 64 65 6e 74 69 61 6c 20 70 72 6f 6d 70 74 20 69 73 20 73 68 6f 77 6e 20 61 67 61 69 6e 2e 0a 2d 20 42 61 73 65 36 34 54 6f 53 74 72 69 6e 67 20 6e 6f 77 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Get_Information_ps1
@@ -12545,7 +12198,7 @@ rule SHELL_Get_Information_ps1
 		$ = {20 20 24 6f 75 74 70 75 74 20 3d 20 24 6f 75 74 70 75 74 20 2b 20 22 60 6e 60 6e 20 53 4e 4d 50 20 63 6f 6d 6d 75 6e 69 74 79 20 73 74 72 69 6e 67 73 20 66 6f 72 20 63 75 72 72 65 6e 74 20 75}
 		$ = {79 5f 76 61 6c 75 65 73 20 22 68 6b 6c 6d 3a 5c 53 4f 46 54 57 41 52 45 5c 4d 69 63 72 6f 73 6f 66 74 5c 57 69 6e 64 6f 77 73 5c 43 75 72 72 65 6e 74 56 65 72 73 69 6f 6e 5c 47 72 6f 75 70 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_FireListener_ps1
@@ -12557,7 +12210,7 @@ rule SHELL_FireListener_ps1
 		$ = {6b 20 24 73 6f 63 6b 65 74 62 6c 6f 63 6b 20 2d 41 72 67 75 6d 65 6e 74 4c 69 73 74 20 24 70 6f 72 74 73 20 2d 4e 61 6d 65 20 24 70 6f 72 74 73 0a 09 7d 0a 0a 0a 09 5b 63 6f 6e 73 6f 6c 65 5d}
 		$ = {20 20 20 20 20 47 65 74 2d 4a 6f 62 20 7c 20 52 65 6d 6f 76 65 2d 4a 6f 62 0a 09 09 09 23 53 74 6f 70 2d 50 72 6f 63 65 73 73 20 2d 49 64 20 24 50 49 44 0a 09 09 09 62 72 65 61 6b 3b 0a 09 09}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Check_VM_ps1
@@ -12569,7 +12222,7 @@ rule SHELL_Check_VM_ps1
 		$ = {20 20 20 20 20 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 76 62 76 6d 20 3d 20 24 74 72 75 65 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 7d 0a 20}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 78 65 6e 76 6d 20 3d 20 24 74 72 75 65 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Get_WLAN_Keys_ps1
@@ -12581,7 +12234,7 @@ rule SHELL_Get_WLAN_Keys_ps1
 		$ = {61 6e 73 20 3d 20 6e 65 74 73 68 20 77 6c 61 6e 20 73 68 6f 77 20 70 72 6f 66 69 6c 65 73 20 7c 20 53 65 6c 65 63 74 2d 53 74 72 69 6e 67 20 2d 50 61 74 74 65 72 6e 20 22 41 6c 6c 20 55 73 65}
 		$ = {20 20 20 24 65 78 70 6f 72 74 64 61 74 61 20 3d 20 24 77 6c 61 6e 73 20 7c 20 46 6f 72 65 61 63 68 2d 4f 62 6a 65 63 74 20 7b 24 5f 2e 52 65 70 6c 61 63 65 28 22 20 20 20 20 41 6c 6c 20 55 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Keylogger_ps1
@@ -12593,7 +12246,7 @@ rule SHELL_Keylogger_ps1
 		$ = {72 65 61 6d 57 72 69 74 65 72 28 24 63 73 29 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 73 77 2e 57 72 69 74 65 28 24 65 6e 63 64 61 74 61 29 0a 20 20 20 20 20 20 20 20 20 20 20 20}
 		$ = {63 6f 64 65 2e 4c 65 6e 67 74 68 25 36 33 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 71 75 65 72 79 20 3d 20 24 63 6f 64 65 2e 53 75 62 73 74 72 69 6e 67 28 24 63 6f 64 65 2e 4c 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Credentials_ps1
@@ -12605,7 +12258,7 @@ rule SHELL_Credentials_ps1
 		$ = {47 65 74 4e 65 74 77 6f 72 6b 43 72 65 64 65 6e 74 69 61 6c 28 29 0a 20 20 20 20 20 20 20 20 20 20 20 20 5b 53 74 72 69 6e 67 5d 24 75 73 65 72 20 3d 20 24 63 72 65 64 73 2e 75 73 65 72 6e 61}
 		$ = {53 65 72 76 69 63 65 73 2e 44 69 72 65 63 74 6f 72 79 45 6e 74 72 79 28 24 64 6f 6d 61 69 6e 44 4e 2c 24 75 73 65 72 2c 24 70 61 73 73 29 0a 20 20 20 20 20 20 20 20 20 20 20 20 69 66 28 28 24}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Get_LSASecret_ps1
@@ -12617,7 +12270,7 @@ rule SHELL_Get_LSASecret_ps1
 		$ = {6a 65 63 74 20 4c 53 41 55 74 69 6c 2e 4c 53 41 55 74 69 6c 2b 4c 53 41 5f 55 4e 49 43 4f 44 45 5f 53 54 52 49 4e 47 0a 20 20 20 20 20 20 20 20 24 6c 6f 63 61 6c 73 79 73 74 65 6d 2e 42 75 66}
 		$ = {6f 57 69 6e 45 72 72 6f 72 3a 20 24 6c 73 61 4e 74 53 74 61 74 75 73 54 6f 57 69 6e 45 72 72 6f 72 22 0a 20 20 20 20 20 20 20 20 7d 0a 0a 20 20 20 20 20 20 20 20 5b 4c 53 41 55 74 69 6c 2e 4c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_FireBuster_ps1
@@ -12629,7 +12282,7 @@ rule SHELL_FireBuster_ps1
 		$ = {24 70 6f 72 74 73 20 2d 6c 65 20 24 68 69 67 68 70 6f 72 74 20 3b 20 24 70 6f 72 74 73 2b 2b 29 7b 0a 20 20 20 20 20 20 20 20 74 72 79 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 57 72 69 74 65}
 		$ = {70 6f 72 74 20 24 70 6f 72 74 73 22 20 2d 46 6f 72 65 67 72 6f 75 6e 64 43 6f 6c 6f 72 20 47 72 65 65 6e 0a 20 20 20 20 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 20 20 20 20 65 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Copy_VSS_ps1
@@ -12641,7 +12294,7 @@ rule SHELL_Copy_VSS_ps1
 		$ = {20 20 69 66 28 24 73 65 72 76 69 63 65 2e 53 74 61 74 75 73 20 2d 6e 65 20 22 52 75 6e 6e 69 6e 67 22 29 0a 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 24 6e 6f 74 72 75 6e 6e 69 6e 67 3d 31 0a}
 		$ = {70 79 20 2d 66 69 6c 74 65 72 20 22 49 44 3d 27 24 69 64 27 22 29 0a 20 20 20 20 24 66 69 6c 65 70 61 74 68 20 3d 20 22 24 70 77 64 5c 53 41 4d 22 0a 20 20 20 20 69 66 20 28 24 70 61 74 68 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Get_PassHashes_ps1
@@ -12653,7 +12306,7 @@ rule SHELL_Get_PassHashes_ps1
 		$ = {20 2c 24 62 32 3b 0a 7d 0a 0a 66 75 6e 63 74 69 6f 6e 20 47 65 74 2d 48 42 6f 6f 74 4b 65 79 0a 7b 0a 20 20 20 20 70 61 72 61 6d 28 5b 62 79 74 65 5b 5d 5d 24 62 6f 6f 74 6b 65 79 29 3b 0a 20}
 		$ = {7d 0a 0a 66 75 6e 63 74 69 6f 6e 20 47 65 74 2d 55 73 65 72 4b 65 79 73 0a 7b 0a 20 20 20 20 6c 73 20 48 4b 4c 4d 3a 5c 53 41 4d 5c 53 41 4d 5c 44 6f 6d 61 69 6e 73 5c 41 63 63 6f 75 6e 74 5c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Brute_Force_ps1
@@ -12665,7 +12318,7 @@ rule SHELL_Brute_Force_ps1
 		$ = {65 20 3d 20 24 72 65 73 75 6c 74 2e 42 61 6e 6e 65 72 4d 65 73 73 61 67 65 20 2b 20 24 72 65 73 75 6c 74 2e 57 65 6c 63 6f 6d 65 4d 65 73 73 61 67 65 0a 20 20 20 20 20 20 20 20 24 73 75 63 63}
 		$ = {22 0a 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 7d 0a 20 20 20 20 7d 20 65 6c 73 65 69 66 28 24 73 65 72 76 69 63 65 20 2d 65 71 20 22 57 65 62 22 29 20 7b 0a 20 20 20 20 20 20 69 66 28}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Port_Scan_ps1
@@ -12677,7 +12330,7 @@ rule SHELL_Port_Scan_ps1
 		$ = {6f 6d 70 6c 65 74 65 20 28 28 24 64 2f 28 24 45 6e 64 41 64 64 72 65 73 73 2e 53 70 6c 69 74 28 22 2e 22 29 5b 33 5d 29 29 20 2a 20 31 30 30 29 20 2d 49 64 20 31 0a 20 20 20 20 20 20 20 20 20}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 20 7d 20 65 6c 73 65 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 23 20 57 61 69 74 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Invoke_Encode_ps1
@@ -12689,7 +12342,7 @@ rule SHELL_Invoke_Encode_ps1
 		$ = {63 6f 64 69 6e 67 20 55 54 46 38 20 0a 20 20 20 20 7d 0a 0a 20 20 20 20 24 64 61 74 61 20 3d 20 5b 73 74 72 69 6e 67 5d 3a 3a 4a 6f 69 6e 28 22 60 6e 22 2c 20 24 45 6e 63 29 0a 20 20 20 20 24}
 		$ = {2f 2f 77 77 77 2e 64 61 72 6b 6f 70 65 72 61 74 6f 72 2e 63 6f 6d 2f 62 6c 6f 67 2f 32 30 31 33 2f 33 2f 32 31 2f 70 6f 77 65 72 73 68 65 6c 6c 2d 62 61 73 69 63 73 2d 65 78 65 63 75 74 69 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Download_ps1
@@ -12701,7 +12354,7 @@ rule SHELL_Download_ps1
 		$ = {20 20 5b 43 6d 64 6c 65 74 42 69 6e 64 69 6e 67 28 29 5d 20 50 61 72 61 6d 28 0a 20 20 20 20 20 20 20 20 5b 50 61 72 61 6d 65 74 65 72 28 50 6f 73 69 74 69 6f 6e 20 3d 20 30 2c 20 4d 61 6e 64}
 		$ = {73 69 74 69 6f 6e 20 3d 20 31 2c 20 4d 61 6e 64 61 74 6f 72 79 20 3d 20 24 54 72 75 65 29 5d 0a 20 20 20 20 20 20 20 20 5b 53 74 72 69 6e 67 5d 0a 20 20 20 20 20 20 20 20 24 46 69 6c 65 4e 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Remove_Persistence_ps1
@@ -12713,7 +12366,7 @@ rule SHELL_Remove_Persistence_ps1
 		$ = {6d 6f 76 69 6e 67 20 74 68 65 20 52 65 67 69 73 74 72 79 20 6b 65 79 73 2e 22 0a 20 20 20 20 20 20 20 20 52 65 6d 6f 76 65 2d 49 74 65 6d 50 72 6f 70 65 72 74 79 20 2d 50 61 74 68 20 48 4b 43}
 		$ = {0a 20 20 20 20 24 77 6d 69 5f 33 20 3d 20 67 77 6d 69 20 5f 5f 66 69 6c 74 65 72 74 6f 63 6f 6e 73 75 6d 65 72 62 69 6e 64 69 6e 67 20 2d 4e 61 6d 65 73 70 61 63 65 20 72 6f 6f 74 5c 73 75 62}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Add_Persistence_ps1
@@ -12725,7 +12378,7 @@ rule SHELL_Add_Persistence_ps1
 		$ = {74 20 77 69 74 68 69 6e 20 33 30 20 0a 20 20 20 20 20 20 20 20 20 20 20 20 77 68 65 72 65 20 74 61 72 67 65 74 49 6e 73 74 61 6e 63 65 20 69 73 61 20 27 57 69 6e 33 32 5f 4c 6f 67 6f 6e 53 65}
 		$ = {20 20 20 20 20 20 53 65 74 2d 57 6d 69 49 6e 73 74 61 6e 63 65 20 2d 43 6c 61 73 73 20 5f 5f 46 69 6c 74 65 72 54 6f 43 6f 6e 73 75 6d 65 72 42 69 6e 64 69 6e 67 20 2d 4e 61 6d 65 73 70 61 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Invoke_Decode_ps1
@@ -12737,7 +12390,7 @@ rule SHELL_Invoke_Decode_ps1
 		$ = {20 22 2e 5c 64 65 63 6f 64 65 64 2e 74 78 74 22 2c 20 0a 0a 20 20 20 20 20 20 20 20 5b 53 77 69 74 63 68 5d 0a 20 20 20 20 20 20 20 20 24 49 73 53 74 72 69 6e 67 0a 20 20 20 20 29 0a 20 20 20}
 		$ = {61 6d 0a 20 20 20 20 24 6d 73 2e 57 72 69 74 65 28 24 64 65 63 2c 20 30 2c 20 24 64 65 63 2e 4c 65 6e 67 74 68 29 0a 20 20 20 20 24 6d 73 2e 53 65 65 6b 28 30 2c 30 29 20 7c 20 4f 75 74 2d 4e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ExetoText_ps1
@@ -12749,7 +12402,7 @@ rule SHELL_ExetoText_ps1
 		$ = {28 50 6f 73 69 74 69 6f 6e 20 3d 20 30 2c 20 4d 61 6e 64 61 74 6f 72 79 20 3d 20 24 54 72 75 65 29 5d 0a 20 20 20 20 20 20 20 20 5b 53 74 72 69 6e 67 5d 0a 20 20 20 20 20 20 20 20 24 45 58 45}
 		$ = {20 20 20 20 20 20 20 20 24 46 69 6c 65 6e 61 6d 65 0a 20 20 20 20 29 0a 20 20 20 20 5b 62 79 74 65 5b 5d 5d 20 24 68 65 78 64 75 6d 70 20 3d 20 67 65 74 2d 63 6f 6e 74 65 6e 74 20 2d 65 6e 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Base64ToString_ps1
@@ -12761,7 +12414,7 @@ rule SHELL_Base64ToString_ps1
 		$ = {20 20 20 20 20 20 24 49 73 53 74 72 69 6e 67 0a 20 20 20 20 29 0a 20 20 20 20 69 66 28 24 49 73 53 74 72 69 6e 67 20 2d 65 71 20 24 74 72 75 65 29 0a 20 20 20 20 7b 0a 20 20 20 20 0a 20 20 20}
 		$ = {67 28 28 47 65 74 2d 43 6f 6e 74 65 6e 74 20 24 42 61 73 65 36 34 53 74 72 66 69 6c 65 29 29 0a 20 20 20 20 7d 0a 20 20 20 20 0a 20 20 20 20 24 64 65 63 6f 64 65 64 73 74 72 69 6e 67 20 3d 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Parse_Keys_ps1
@@ -12773,7 +12426,7 @@ rule SHELL_Parse_Keys_ps1
 		$ = {53 2d 31 38 39 20 7b 24 6f 75 74 20 3d 20 24 6f 75 74 20 2b 20 22 5f 20 20 22 7d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 53 2d 31 39 30 20 7b 24 6f 75 74 20 3d 20 24 6f 75 74 20 2b}
 		$ = {75 74 20 2b 20 22 49 6e 73 65 72 74 22 7d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 34 36 20 7b 24 6f 75 74 20 3d 20 24 6f 75 74 20 2b 20 22 44 65 6c 65 74 65 22 7d 0a 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Do_Exfiltration_ps1
@@ -12785,7 +12438,7 @@ rule SHELL_Do_Exfiltration_ps1
 		$ = {6e 20 2d 65 71 20 22 70 61 73 74 65 62 69 6e 22 29 0a 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 24 75 74 66 62 79 74 65 73 20 20 3d 20 5b 53 79 73 74 65 6d 2e 54 65 78 74 2e 45 6e 63 6f 64 69}
 		$ = {20 e2 80 9c 24 70 61 73 73 77 6f 72 64 e2 80 9d 29 3b 20 0a 20 20 20 20 20 20 20 20 24 6d 73 67 2e 46 72 6f 6d 20 3d 20 e2 80 9c 24 75 73 65 72 6e 61 6d 65 40 67 6d 61 69 6c 2e 63 6f 6d e2 80}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Add_Exfiltration_ps1
@@ -12797,7 +12450,7 @@ rule SHELL_Add_Exfiltration_ps1
 		$ = {65 76 61 6c 75 65 20 3d 20 5b 53 79 73 74 65 6d 2e 43 6f 6e 76 65 72 74 5d 3a 3a 54 6f 42 61 73 65 36 34 53 74 72 69 6e 67 28 24 75 74 66 62 79 74 65 73 29 0a 20 20 20 20 20 20 20 20 20 20 20}
 		$ = {20 20 20 20 20 69 66 20 28 24 66 69 6c 65 6e 61 6d 65 29 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 61 74 74 20 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_StringToBase64_ps1
@@ -12809,7 +12462,7 @@ rule SHELL_StringToBase64_ps1
 		$ = {20 20 20 20 20 24 6f 75 74 70 75 74 66 69 6c 65 3d 22 2e 5c 62 61 73 65 36 34 65 6e 63 6f 64 65 64 2e 74 78 74 22 2c 20 0a 0a 20 20 20 20 20 20 20 20 5b 53 77 69 74 63 68 5d 0a 20 20 20 20 20}
 		$ = {20 20 20 20 24 75 74 66 62 79 74 65 73 20 20 3d 20 5b 53 79 73 74 65 6d 2e 54 65 78 74 2e 45 6e 63 6f 64 69 6e 67 5d 3a 3a 55 6e 69 63 6f 64 65 2e 47 65 74 42 79 74 65 73 28 28 47 65 74 2d 43}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_TexttoExe_ps1
@@ -12821,7 +12474,7 @@ rule SHELL_TexttoExe_ps1
 		$ = {28 20 0a 20 20 20 20 20 20 20 20 5b 50 61 72 61 6d 65 74 65 72 28 50 6f 73 69 74 69 6f 6e 20 3d 20 30 2c 20 4d 61 6e 64 61 74 6f 72 79 20 3d 20 24 54 72 75 65 29 5d 0a 20 20 20 20 20 20 20 20}
 		$ = {20 20 20 5b 53 74 72 69 6e 67 5d 24 45 58 45 0a 20 20 20 20 29 0a 20 20 20 20 0a 20 20 20 20 5b 53 74 72 69 6e 67 5d 24 68 65 78 64 75 6d 70 20 3d 20 67 65 74 2d 63 6f 6e 74 65 6e 74 20 2d 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Create_MultipleSessions_ps1
@@ -12833,7 +12486,7 @@ rule SHELL_Create_MultipleSessions_ps1
 		$ = {24 66 69 6c 65 6e 61 6d 65 0a 0a 20 20 20 20 69 66 20 28 24 43 72 65 64 73 29 0a 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 24 43 72 65 64 65 6e 74 69 61 6c 73 20 3d 20 47 65 74 2d 43 72 65 64}
 		$ = {28 24 73 65 72 76 65 72 20 69 6e 20 24 73 65 72 76 65 72 73 29 0a 20 20 20 20 7b 0a 20 20 20 20 20 20 20 24 63 68 65 63 6b 20 3d 20 49 6e 76 6f 6b 65 2d 45 78 70 72 65 73 73 69 6f 6e 20 24 43}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Run_EXEonRemote_ps1
@@ -12845,7 +12498,7 @@ rule SHELL_Run_EXEonRemote_ps1
 		$ = {37 32 20 31 33 39 20 35 20 31 33 30 20 31 31 34 20 31 20 30 20 37 32 20 35 31 20 31 39 36 20 37 32 20 31 33 37 20 31 33 33 20 32 30 30 20 31 20 30 20 30 20 35 31 20 31 39 32 20 37 32 20 31 33}
 		$ = {20 31 30 38 20 31 30 31 20 31 30 33 20 31 30 31 20 31 31 35 20 30 20 31 35 30 20 31 20 37 36 20 31 31 31 20 31 31 31 20 31 30 37 20 31 31 37 20 31 31 32 20 38 30 20 31 31 34 20 31 30 35 20 31}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Prasadhak_ps1
@@ -12857,7 +12510,7 @@ rule SHELL_Prasadhak_ps1
 		$ = {73 73 65 73 20 61 6e 64 20 64 65 74 65 72 6d 69 6e 69 6e 67 20 65 78 65 63 75 74 61 62 6c 65 73 2e 22 0a 20 20 20 20 53 74 61 72 74 2d 53 6c 65 65 70 20 2d 53 65 63 6f 6e 64 73 20 33 0a 20 20}
 		$ = {29 2e 52 65 70 6c 61 63 65 28 22 2d 22 2c 20 22 22 29 2e 54 6f 4c 6f 77 65 72 28 29 0a 20 20 20 20 20 20 20 20 23 24 70 72 6f 63 6e 61 6d 65 20 3d 20 24 70 72 6f 63 6e 61 6d 65 20 2b 20 24 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Enable_DuplicateToken_ps1
@@ -12869,7 +12522,7 @@ rule SHELL_Enable_DuplicateToken_ps1
 		$ = {65 6e 50 72 69 76 69 6c 65 67 65 73 28 49 6e 74 50 74 72 20 68 74 6f 6b 2c 20 62 6f 6f 6c 20 64 69 73 61 6c 6c 2c 20 0a 20 20 20 20 20 72 65 66 20 54 6f 6b 50 72 69 76 31 4c 75 69 64 20 6e 65}
 		$ = {6f 6b 65 6e 28 24 61 64 6a 50 72 69 76 3a 3a 47 65 74 43 75 72 72 65 6e 74 50 72 6f 63 65 73 73 28 29 2c 20 5b 41 64 6a 50 72 69 76 2e 41 64 6a 50 72 69 76 5d 3a 3a 54 4f 4b 45 4e 5f 41 4c 4c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Remove_Update_ps1
@@ -12881,7 +12534,7 @@ rule SHELL_Remove_Update_ps1
 		$ = {75 6d 62 65 72 20 2f 71 75 69 65 74 20 2f 6e 6f 72 65 73 74 61 72 74 22 0a 20 20 20 20 20 20 20 20 20 20 20 20 57 72 69 74 65 2d 48 6f 73 74 20 22 52 65 6d 6f 76 69 6e 67 20 75 70 64 61 74 65}
 		$ = {65 6d 6f 76 61 6c 43 6f 6d 6d 61 6e 64 20 3d 20 22 77 75 73 61 2e 65 78 65 20 2f 75 6e 69 6e 73 74 61 6c 6c 20 2f 6b 62 3a 24 4b 42 53 65 63 75 72 69 74 79 20 2f 71 75 69 65 74 20 2f 6e 6f 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_DNS_TXT_Pwnage_ps1
@@ -12893,7 +12546,7 @@ rule SHELL_DNS_TXT_Pwnage_ps1
 		$ = {6e 63 64 61 74 61 20 3d 20 5b 73 74 72 69 6e 67 5d 3a 3a 4a 6f 69 6e 28 22 60 6e 22 2c 20 24 70 61 73 74 65 76 61 6c 75 65 29 0a 20 20 20 20 20 20 20 20 24 6d 73 20 3d 20 4e 65 77 2d 4f 62 6a}
 		$ = {6e 67 20 24 63 6f 6d 6d 61 6e 64 64 6f 6d 61 69 6e 20 24 70 73 73 74 72 69 6e 67 20 24 70 73 64 6f 6d 61 69 6e 20 24 53 74 6f 70 73 74 72 69 6e 67 20 24 41 75 74 68 4e 53 20 24 45 78 66 69 6c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_HTTP_Backdoor_ps1
@@ -12905,7 +12558,7 @@ rule SHELL_HTTP_Backdoor_ps1
 		$ = {6d 94 0a 20 20 20 20 20 20 20 20 24 6d 73 67 2e 54 6f 2e 41 64 64 28 94 24 75 73 65 72 6e 61 6d 65 40 67 6d 61 69 6c 2e 63 6f 6d 94 29 0a 20 20 20 20 20 20 20 20 24 6d 73 67 2e 53 75 62 6a 65}
 		$ = {74 43 75 72 72 65 6e 74 28 29 29 20 0a 20 20 20 20 20 20 20 20 69 66 28 24 63 75 72 72 65 6e 74 50 72 69 6e 63 69 70 61 6c 2e 49 73 49 6e 52 6f 6c 65 28 5b 53 65 63 75 72 69 74 79 2e 50 72 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Execute_OnTime_ps1
@@ -12917,7 +12570,7 @@ rule SHELL_Execute_OnTime_ps1
 		$ = {61 69 6c 2e 41 74 74 61 63 68 6d 65 6e 74 28 24 66 69 6c 65 6e 61 6d 65 29 0a 20 20 20 20 20 20 20 20 20 20 20 20 24 6d 73 67 2e 41 74 74 61 63 68 6d 65 6e 74 73 2e 41 64 64 28 24 61 74 74 29}
 		$ = {6f 77 73 42 75 69 6c 74 49 6e 52 6f 6c 65 5d 3a 3a 41 64 6d 69 6e 69 73 74 72 61 74 6f 72 29 20 2d 65 71 20 24 74 72 75 65 29 0a 20 20 20 20 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Powerpreter_psm1
@@ -12929,7 +12582,7 @@ rule SHELL_Powerpreter_psm1
 		$ = {4c 65 6e 67 74 68 29 3b 0a 20 20 20 20 72 65 74 75 72 6e 20 2c 24 72 65 73 75 6c 74 3b 0a 7d 0a 0a 66 75 6e 63 74 69 6f 6e 20 47 65 74 2d 52 65 67 4b 65 79 43 6c 61 73 73 28 5b 73 74 72 69 6e}
 		$ = {28 24 63 75 72 72 65 6e 74 50 72 69 6e 63 69 70 61 6c 2e 49 73 49 6e 52 6f 6c 65 28 5b 53 65 63 75 72 69 74 79 2e 50 72 69 6e 63 69 70 61 6c 2e 57 69 6e 64 6f 77 73 42 75 69 6c 74 49 6e 52 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Nishang_logo_small_png
@@ -12941,7 +12594,7 @@ rule SHELL_Nishang_logo_small_png
 		$ = {a3 a4 45 4a 37 97 4e cc 6b 7c 83 73 e8 a9 89 01 d8 ef 93 b0 48 3b aa e9 92 e7 05 74 db f0 eb d7 a5 a5 a5 b1 aa d9 e6 38 f1 e8 c5 bd 60 20 21 d5 00 b3 1e 70 80 2e ea a1 a1 6f 51 6e 68 e8 30 1d}
 		$ = {bc dc ba 09 c0 a1 0e e2 02 87 45 2d ea 9f 92 63 6e 8f 7f 7c bd 00 2d 23 6d d0 98 ad e9 98 24 0f f4 f4 1f 62 02 88 5b 27 f6 91 a1 5f 71 c4 b0 2e 6b d0 63 66 fe fe 7a 0e 66 b5 88 ef f8 02 08 d4}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Nishang_Logo_png
@@ -12953,7 +12606,7 @@ rule SHELL_Nishang_Logo_png
 		$ = {ce 43 c5 ce b4 59 b6 67 f9 6e 2c 6c 1a d1 6a 59 57 6c d8 34 a2 d5 b2 ae d8 18 3d d8 34 a2 cd 72 7e f9 da 34 a2 dd b2 7e f9 3a 92 8c 76 bb c9 f8 e5 3b 3e b3 69 44 ab e5 bc ec 3c b5 69 44 ab e5}
 		$ = {14 5f c8 d6 3c d2 07 f4 42 c3 11 1c 2f 4e 09 a5 f8 42 1d 2e c4 17 b2 35 8f d0 43 28 be 50 93 d3 0f a1 14 5f a8 cb c9 4b 38 c4 17 ea 73 e2 26 fe b1 49 75 50 9f 87 d3 c6 d7 be 2f d4 e8 a4 5b c0}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Speak_ps1
@@ -12965,7 +12618,7 @@ rule SHELL_Speak_ps1
 		$ = {65 73 74 65 72 2e 62 6c 6f 67 73 70 6f 74 2e 63 6f 6d 2f 0a 68 74 74 70 73 3a 2f 2f 67 69 74 68 75 62 2e 63 6f 6d 2f 73 61 6d 72 61 74 61 73 68 6f 6b 2f 6e 69 73 68 61 6e 67 0a 23 3e 0a 0a 0a}
 		$ = {61 72 61 6d 28 20 0a 20 20 20 20 20 20 20 20 5b 50 61 72 61 6d 65 74 65 72 28 50 6f 73 69 74 69 6f 6e 20 3d 20 30 2c 20 4d 61 6e 64 61 74 6f 72 79 20 3d 20 24 54 72 75 65 29 5d 0a 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_antak_aspx
@@ -12977,7 +12630,7 @@ rule SHELL_antak_aspx
 		$ = {0a 20 20 20 20 69 66 20 28 75 70 6c 6f 61 64 2e 48 61 73 46 69 6c 65 29 0a 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 74 72 79 0a 20 20 20 20 20 20 20 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20}
 		$ = {3d 22 62 61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 3a 20 23 38 30 38 30 38 30 22 3e 0a 20 20 20 20 3c 64 69 76 20 73 74 79 6c 65 3d 22 74 65 78 74 2d 61 6c 69 67 6e 3a 63 65 6e 74 65 72 3b}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Execute_DNSTXT_Code_ps1
@@ -12989,7 +12642,7 @@ rule SHELL_Execute_DNSTXT_Code_ps1
 		$ = {2d 73 74 72 69 6e 67 20 2d 70 61 74 74 65 72 6e 20 22 60 22 22 20 0a 20 20 20 20 24 74 6d 70 31 36 34 20 3d 20 24 74 6d 70 36 34 20 2d 73 70 6c 69 74 28 22 60 22 22 29 5b 30 5d 20 0a 20 20 20}
 		$ = {54 68 72 65 61 64 49 64 29 3b 20 0a 20 20 20 20 5b 44 6c 6c 49 6d 70 6f 72 74 28 22 6d 73 76 63 72 74 2e 64 6c 6c 22 29 5d 20 0a 20 20 20 20 70 75 62 6c 69 63 20 73 74 61 74 69 63 20 65 78 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Execute_Command_MSSQL_ps1
@@ -13001,7 +12654,7 @@ rule SHELL_Execute_Command_MSSQL_ps1
 		$ = {6e 6e 65 63 74 69 6f 6e 2e 43 6f 6e 6e 65 63 74 69 6f 6e 53 74 72 69 6e 67 20 3d 20 22 44 61 74 61 20 53 6f 75 72 63 65 3d 24 43 6f 6d 70 75 74 65 72 4e 61 6d 65 3b 49 6e 69 74 69 61 6c 20 43}
 		$ = {20 20 20 20 77 72 69 74 65 2d 68 6f 73 74 20 2d 4e 6f 4e 65 77 6c 69 6e 65 20 22 4d 53 53 51 4c 20 24 43 6f 6d 70 75 74 65 72 4e 61 6d 65 3e 20 22 0a 20 20 20 20 20 20 20 20 20 20 20 20 24 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Download_Execute_ps1
@@ -13013,7 +12666,7 @@ rule SHELL_Download_Execute_ps1
 		$ = {61 6d 28 0a 20 20 20 20 20 20 20 20 5b 50 61 72 61 6d 65 74 65 72 28 50 6f 73 69 74 69 6f 6e 20 3d 20 30 2c 20 4d 61 6e 64 61 74 6f 72 79 20 3d 20 24 54 72 75 65 29 5d 0a 20 20 20 20 20 20 20}
 		$ = {67 5d 24 68 65 78 66 6f 72 6d 61 74 20 3d 20 24 77 65 62 43 6c 69 65 6e 74 2e 44 6f 77 6e 6c 6f 61 64 53 74 72 69 6e 67 28 24 55 52 4c 29 20 0a 20 20 20 20 5b 42 79 74 65 5b 5d 5d 20 24 74 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Download_Execute_PS_ps1
@@ -13025,7 +12678,7 @@ rule SHELL_Download_Execute_PS_ps1
 		$ = {72 61 6d 65 74 65 72 28 50 6f 73 69 74 69 6f 6e 20 3d 20 31 2c 20 4d 61 6e 64 61 74 6f 72 79 20 3d 20 24 46 61 6c 73 65 29 5d 0a 20 20 20 20 20 20 20 20 5b 53 74 72 69 6e 67 5d 0a 20 20 20 20}
 		$ = {20 20 20 20 20 20 20 20 20 20 20 20 49 6e 76 6f 6b 65 2d 45 78 70 72 65 73 73 69 6f 6e 20 24 41 72 67 75 6d 65 6e 74 73 0a 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 7d 0a 20 20 20 20 0a 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_backupsql_php_txt
@@ -13037,7 +12690,7 @@ rule SHELL_backupsql_php_txt
 		$ = {5f 53 45 52 56 45 52 5b 27 52 45 4d 4f 54 45 5f 41 44 44 52 27 5d 3b 24 64 32 33 20 3d 20 24 5f 53 45 52 56 45 52 5b 27 53 43 52 49 50 54 5f 46 49 4c 45 4e 41 4d 45 27 5d 3b 24 65 30 39 20 3d}
 		$ = {2e 3d 20 22 2d 2d 7b 24 6d 69 6d 65 5f 62 6f 75 6e 64 61 72 79 7d 5c 6e 22 20 2e 22 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 7b 24 66 69 6c 65 61 74 74 5f 74 79 70 65 7d 3b 5c 6e 22 20 2e 22}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_backdoor1_txt
@@ -13049,7 +12702,7 @@ rule SHELL_backdoor1_txt
 		$ = {24 62 61 63 6b 64 6f 6f 72 2d 3e 66 69 63 68 69 65 72 20 3d 20 24 66 69 63 68 69 65 72 3b 0a 24 62 61 63 6b 64 6f 6f 72 2d 3e 64 65 6c 20 3d 20 24 64 65 6c 3b 0a 24 62 61 63 6b 64 6f 6f 72 2d}
 		$ = {20 65 6c 73 65 69 66 28 24 73 68 65 6c 6c 29 20 7b 20 20 20 0a 20 20 20 24 62 61 63 6b 64 6f 6f 72 2d 3e 73 68 65 6c 6c 28 29 3b 0a 7d 65 6c 73 65 69 66 28 24 70 72 6f 78 79 29 20 7b 0a 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_backup_php_txt
@@ -13061,7 +12714,7 @@ rule SHELL_backup_php_txt
 		$ = {2f 20 28 64 6f 77 6e 6c 6f 61 64 20 70 61 67 65 29 20 5c 72 5c 6e 22 3b 0a 24 64 61 74 61 20 2e 3d 20 22 23 24 64 61 74 61 62 61 73 65 20 76 32 2e 30 20 44 61 74 61 62 61 73 65 20 42 61 63 6b}
 		$ = {46 52 4f 4d 20 61 64 64 5f 6c 69 6e 6b 73 22 29 3b 77 68 69 6c 65 20 28 24 61 20 3d 20 6d 79 73 71 6c 5f 66 65 74 63 68 5f 61 72 72 61 79 28 24 72 65 73 75 6c 74 29 29 20 7b 0a 09 66 6f 72 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Blind_Shell_cpp_txt
@@ -13073,7 +12726,7 @@ rule SHELL_Blind_Shell_cpp_txt
 		$ = {65 6e 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 69 66 28 66 6f 72 6b 28 29 3d 3d 30 29 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 63 68 61}
 		$ = {20 20 20 20 20 63 6c 6f 73 65 28 69 6e 73 6f 63 6b 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 65 78 69 74 28 30 29 3b 0a 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_backdoorfr_txt
@@ -13085,7 +12738,7 @@ rule SHELL_backdoorfr_txt
 		$ = {65 20 48 54 54 50 20 3a 20 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 5c 22 72 65 64 5c 22 3e 24 48 54 54 50 5f 43 4f 4e 4e 45 43 54 49 4f 4e 3c 2f 66 6f 6e 74 3e 3c 62 72 3e 20 22 3b 0a 20 20 20 20}
 		$ = {6e 22 3b 0a 09 20 20 20 20 7d 0a 20 20 20 20 7d 0a 7d 0a 2f 2a 20 4c 69 73 74 69 6e 67 20 64 65 20 72 65 70 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2f 0a 0a 0a 2f 2a 20 47 65 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Sincap_php_txt
@@ -13097,7 +12750,7 @@ rule SHELL_Sincap_php_txt
 		$ = {37 30 30 22 20 63 6f 6c 6f 72 3d 22 23 30 30 30 30 30 30 22 3e 26 6e 62 73 70 3b 52 65 66 65 72 61 6e 73 3c 2f 66 6f 6e 74 3e 3c 2f 74 64 3e 0a 20 20 3c 2f 74 72 3e 0a 3c 74 72 3e 0a 0a 0a 3c}
 		$ = {29 3b 0a 24 64 65 67 65 72 54 3d 20 73 74 72 74 72 28 24 64 65 67 65 72 32 2c 24 74 65 6d 69 7a 6c 65 6d 65 29 3b 0a 3f 3e 0a 20 20 20 20 3c 74 64 20 77 69 64 74 68 3d 22 38 25 22 20 62 67 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_sql_php_txt
@@ -13109,7 +12762,7 @@ rule SHELL_sql_php_txt
 		$ = {68 6f 20 22 3c 74 68 3e 54 79 70 65 3c 2f 74 68 3e 5c 6e 22 3b 0a 09 65 63 68 6f 20 22 3c 74 68 3e 46 75 6e 63 74 69 6f 6e 3c 2f 74 68 3e 5c 6e 22 3b 0a 09 65 63 68 6f 20 22 3c 74 68 3e 44 61}
 		$ = {73 74 27 3e 50 72 6f 63 65 73 73 6c 69 73 74 3c 2f 61 3e 5c 6e 22 3b 0a 09 09 65 63 68 6f 20 22 3c 2f 75 6c 3e 5c 6e 22 3b 0a 09 09 65 63 68 6f 20 22 46 6c 75 73 68 5c 6e 22 3b 0a 09 09 65 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_spy_php_txt
@@ -13121,7 +12774,7 @@ rule SHELL_spy_php_txt
 		$ = {5f 74 65 78 74 36 32 27 5d 2e 22 3c 2f 62 3e 3c 2f 66 6f 6e 74 3e 3c 2f 64 69 76 3e 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 22 3b 0a 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20}
 		$ = {2c 20 40 61 72 72 61 79 5f 6b 65 79 73 28 24 72 6f 77 29 29 3b 0a 20 20 20 20 20 24 76 61 6c 75 65 73 20 3d 20 40 61 72 72 61 79 5f 76 61 6c 75 65 73 28 24 72 6f 77 29 3b 0a 20 20 20 20 20 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mysql_tool_php_txt
@@ -13133,7 +12786,7 @@ rule SHELL_mysql_tool_php_txt
 		$ = {74 61 62 6c 65 73 3a 3c 62 72 20 2f 3e 0a 3c 64 69 76 20 73 74 79 6c 65 3d 22 6d 61 72 67 69 6e 2d 6c 65 66 74 3a 20 34 30 70 78 22 3e 0a 20 20 20 20 3c 73 65 6c 65 63 74 20 6e 61 6d 65 3d 22}
 		$ = {5f 63 68 61 72 20 3d 20 22 5c 6e 22 3b 0a 0a 20 20 20 20 20 20 20 20 2f 2f 20 53 65 74 73 20 66 69 6c 65 20 70 6f 73 69 74 69 6f 6e 20 69 6e 64 69 63 61 74 6f 72 0a 20 20 20 20 20 20 20 20 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_myshell_php_txt
@@ -13145,7 +12798,7 @@ rule SHELL_myshell_php_txt
 		$ = {20 76 6f 69 64 20 63 6f 6d 6d 61 6e 64 20 66 6f 72 20 4d 79 53 68 65 6c 6c 22 3b 0a 20 20 20 20 20 20 20 24 63 6f 6d 6d 61 6e 64 42 6b 20 3d 20 24 63 6f 6d 6d 61 6e 64 3b 0a 20 20 20 20 20 20}
 		$ = {6d 61 6e 64 42 6b 29 20 24 63 6f 6d 6d 61 6e 64 20 3d 20 24 63 6f 6d 6d 61 6e 64 42 6b 3b 0a 3f 3e 0a 3c 2f 74 65 78 74 61 72 65 61 3e 0a 3c 62 72 3e 0a 3c 3f 0a 69 66 28 24 65 64 69 74 4d 6f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mailer3_php_txt
@@ -13157,7 +12810,7 @@ rule SHELL_mailer3_php_txt
 		$ = {72 64 65 72 3d 22 30 22 20 63 65 6c 6c 73 70 61 63 69 6e 67 3d 22 30 22 20 73 74 79 6c 65 3d 22 62 6f 72 64 65 72 2d 63 6f 6c 6c 61 70 73 65 3a 20 63 6f 6c 6c 61 70 73 65 22 20 62 6f 72 64 65}
 		$ = {64 65 72 20 3d 20 22 46 72 6f 6d 3a 20 24 72 65 61 6c 6e 61 6d 65 20 3c 24 66 72 6f 6d 3e 5c 72 5c 6e 52 65 70 6c 79 2d 54 6f 3a 20 24 72 65 70 6c 79 74 6f 5c 72 5c 6e 22 3b 20 0a 24 68 65 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mysql_php_txt
@@ -13169,7 +12822,7 @@ rule SHELL_mysql_php_txt
 		$ = {0a 20 20 20 20 20 20 20 20 20 20 20 20 24 74 68 69 73 2d 3e 6d 61 69 6e 73 74 61 74 65 20 3d 20 22 75 6e 73 61 66 65 22 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20}
 		$ = {66 65 22 3b 0a 0a 20 20 20 20 20 20 20 20 69 66 20 28 24 74 68 69 73 2d 3e 73 79 73 74 65 6d 5f 63 68 65 63 6b 73 28 22 2f 62 69 6e 2f 6c 73 22 29 29 20 7b 20 24 74 68 69 73 2d 3e 6f 75 74 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_mysql_shell_txt
@@ -13181,7 +12834,7 @@ rule SHELL_mysql_shell_txt
 		$ = {68 6f 20 22 3c 74 68 3e 54 79 70 65 3c 2f 74 68 3e 5c 6e 22 3b 0a 09 65 63 68 6f 20 22 3c 74 68 3e 46 75 6e 63 74 69 6f 6e 3c 2f 74 68 3e 5c 6e 22 3b 0a 09 65 63 68 6f 20 22 3c 74 68 3e 44 61}
 		$ = {73 74 27 3e 50 72 6f 63 65 73 73 6c 69 73 74 3c 2f 61 3e 5c 6e 22 3b 0a 09 09 65 63 68 6f 20 22 3c 2f 75 6c 3e 5c 6e 22 3b 0a 09 09 65 63 68 6f 20 22 46 6c 75 73 68 5c 6e 22 3b 0a 09 09 65 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Uploader_php_txt
@@ -13189,7 +12842,7 @@ rule SHELL_Uploader_php_txt
 	strings:
 		$ = {3c 46 4f 52 4d 20 45 4e 43 54 59 50 45 3d 22 6d 75 6c 74 69 70 61 72 74 2f 66 6f 72 6d 2d 64 61 74 61 22 20 41 43 54 49 4f 4e 3d 22 75 70 6c 6f 61 64 65 72 2e 70 68 70 22 20 4d 45 54 48 4f 44 3d 22 50 4f 53 54 22 3e 0a 3c 49 4e 50 55 54 20 54 59 50 45 3d 22 68 69 64 64 65 6e 22 20 6e 61 6d 65 3d 22 4d 41 58 5f 46 49 4c 45 5f 53 49 5a 45 22 20 76 61 6c 75 65 3d 22 31 30 30 30 30 30 22 3e 0a 53 65 6e 64 20 74 68 69 73 20 66 69 6c 65 3a 20 3c 49 4e 50 55 54 20 4e 41 4d 45 3d 22 75 73 65 72 66 69 6c 65 22 20 54 59 50 45 3d 22 66 69 6c 65 22 3e 0a 3c 49 4e 50 55 54 20 54 59 50 45 3d 22 73 75 62 6d 69 74 22 20 56 41 4c 55 45 3d 22 53 65 6e 64 22 3e 0a 3c 2f 46 4f 52 4d 3e 0a 3c 3f 0a 6d 6f 76 65 5f 75 70 6c 6f 61 64 65 64 5f 66 69 6c 65 28 24 75 73 65 72 66 69 6c 65 2c 20 22 65 6e 74 72 69 6b 61 2e 70 68 70 22 29 3b 20 0a 3f 3e 0a 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_Russian_php_txt
@@ -13201,7 +12854,7 @@ rule SHELL_Russian_php_txt
 		$ = {65 3d 22 34 38 22 20 76 61 6c 75 65 3d 22 24 64 6f 63 72 2f 22 20 6e 61 6d 65 3d 22 70 61 74 68 22 20 74 79 70 65 3d 22 74 65 78 74 22 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 73 75 62 6d 69}
 		$ = {5d 2e 20 22 5c 6e 22 3b 0a 20 20 20 20 65 63 68 6f 20 22 d0 e0 e7 ec e5 f0 3a 22 20 2e 24 5f 46 49 4c 45 53 5b 27 66 69 6c 65 27 5d 5b 27 73 69 7a 65 27 5d 2e 20 22 5c 6e 22 3b 0a 0a 7d 20 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Rem_View_php_txt
@@ -13213,7 +12866,7 @@ rule SHELL_Rem_View_php_txt
 		$ = {22 2e 6d 6d 28 22 43 6c 65 61 6e 20 6f 6b 20 28 66 69 6c 65 20 6e 6f 77 20 65 6d 70 74 79 29 22 29 2e 22 22 3b 0a 20 20 20 20 20 20 20 62 72 65 61 6b 3b 0a 20 20 20 63 61 73 65 20 22 77 69 70}
 		$ = {0a 20 20 20 20 20 20 20 20 20 20 20 20 62 72 65 61 6b 3b 0a 0a 20 20 20 20 20 20 20 20 20 63 61 73 65 20 39 3a 0a 20 20 20 20 20 20 20 20 20 20 20 20 24 6f 75 74 3d 66 72 6f 6d 5f 74 72 61 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_php_txt
@@ -13225,7 +12878,7 @@ rule SHELL_r57_php_txt
 		$ = {3e 3c 2f 64 69 76 3e 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 22 3b 0a 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 65 6c 73 65 20 7b 20 65 72 72 28 32 2c 24 5f 50 4f 53 54 5b 27}
 		$ = {24 6c 61 6e 67 75 61 67 65 2e 27 5f 74 65 78 74 33 33 27 5d 2c 27 69 64 31 30 27 29 2e 24 74 61 62 6c 65 5f 75 70 32 2e 64 69 76 28 27 69 64 31 30 27 29 2e 24 74 73 3b 0a 65 63 68 6f 20 73 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r57_Shell_php_txt
@@ -13237,7 +12890,7 @@ rule SHELL_r57_Shell_php_txt
 		$ = {22 50 65 72 6c 22 29 29 0a 7b 0a 20 63 66 28 22 2f 74 6d 70 2f 62 64 70 6c 22 2c 24 70 6f 72 74 5f 62 69 6e 64 5f 62 64 5f 70 6c 29 3b 0a 20 24 70 32 3d 77 68 69 63 68 28 22 70 65 72 6c 22 29}
 		$ = {2e 27 5f 74 65 78 74 37 31 27 5d 2e 22 27 3e 3c 62 72 3e 22 3b 0a 65 63 68 6f 20 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 68 69 64 64 65 6e 20 6e 61 6d 65 3d 63 6d 64 20 73 69 7a 65 3d 38 35 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_r577_php_txt
@@ -13249,7 +12902,7 @@ rule SHELL_r577_php_txt
 		$ = {50 4f 53 54 5b 27 63 6d 64 27 5d 3d 22 22 3b 20 7d 0a 20 65 6c 73 65 20 7b 0a 20 65 63 68 6f 20 24 74 61 62 6c 65 5f 75 70 33 3b 0a 20 65 63 68 6f 20 24 66 6f 6e 74 3b 0a 20 65 63 68 6f 20 22}
 		$ = {3b 0a 20 20 20 20 20 7d 0a 20 20 20 20 20 69 66 28 21 65 6d 70 74 79 28 24 5f 50 4f 53 54 5b 27 64 69 66 27 5d 29 26 26 24 66 70 29 20 7b 20 40 66 70 75 74 73 28 24 66 70 2c 24 73 71 6c 31 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Rem_Exp_asp_txt
@@ -13261,7 +12914,7 @@ rule SHELL_Rem_Exp_asp_txt
 		$ = {74 68 45 6e 63 6f 64 65 28 46 6f 6c 64 65 72 50 61 74 68 29 25 3e 22 20 74 61 72 67 65 74 3d 22 5f 62 6c 61 6e 6b 22 3e 3c 66 6f 6e 74 20 66 61 63 65 3d 22 77 69 6e 67 64 69 6e 67 73 22 20 73}
 		$ = {73 75 6c 74 0a 45 6e 64 20 46 75 6e 63 74 69 6f 6e 0a 0a 50 72 69 76 61 74 65 20 53 75 62 20 42 67 54 6f 67 67 6c 65 28 29 0a 20 42 61 63 6b 67 72 6f 75 6e 64 43 6f 6c 6f 72 20 3d 20 4e 6f 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ru24_post_sh_php_txt
@@ -13273,7 +12926,7 @@ rule SHELL_ru24_post_sh_php_txt
 		$ = {20 6d 65 74 68 6f 64 3d 70 6f 73 74 3e 22 3b 0a 65 63 68 6f 20 22 3c 69 6e 70 75 74 20 74 79 70 65 3d 74 65 78 74 20 6e 61 6d 65 3d 63 6d 64 20 73 69 7a 65 3d 38 35 3e 22 3b 0a 65 63 68 6f 20}
 		$ = {22 3b 0a 69 66 20 28 28 21 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 29 20 7c 7c 20 28 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 3d 3d 22 22 29 29 20 7b 20 24 5f 50 4f 53 54 5b 27 63 6d 64 27 5d 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHP_Backdoor_Connect_pl_txt
@@ -13285,7 +12938,7 @@ rule SHELL_PHP_Backdoor_Connect_pl_txt
 		$ = {20 46 69 6c 65 48 61 6e 64 6c 65 3b 0a 73 6f 63 6b 65 74 28 53 4f 43 4b 45 54 2c 20 50 46 5f 49 4e 45 54 2c 20 53 4f 43 4b 5f 53 54 52 45 41 4d 2c 20 67 65 74 70 72 6f 74 6f 62 79 6e 61 6d 65}
 		$ = {20 43 6f 6e 6e 65 63 74 65 64 20 74 6f 20 72 65 6d 6f 74 65 20 68 6f 73 74 20 5c 6e 22 3b 0a 53 4f 43 4b 45 54 2d 3e 61 75 74 6f 66 6c 75 73 68 28 29 3b 0a 6f 70 65 6e 28 53 54 44 49 4e 2c 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpjackal_txt
@@ -13297,7 +12950,7 @@ rule SHELL_phpjackal_txt
 		$ = {6d 62 6f 20 6f 6e 43 6c 69 63 6b 3d 5c 22 64 6f 63 75 6d 65 6e 74 2e 66 6f 72 6d 2e 75 73 65 72 2e 64 69 73 61 62 6c 65 64 20 3d 20 74 72 75 65 3b 5c 22 20 73 74 79 6c 65 3d 5c 22 62 6f 72 64}
 		$ = {2e 22 24 65 74 3c 62 72 3e 22 3b 0a 65 6c 73 65 7b 0a 24 69 6e 70 75 74 3d 65 78 70 6c 6f 64 65 28 22 5c 6e 22 2c 73 68 65 6c 4c 28 22 63 61 74 20 24 69 6e 70 75 74 22 29 29 3b 0a 24 6f 75 74}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phvayv_php_txt
@@ -13309,7 +12962,7 @@ rule SHELL_phvayv_php_txt
 		$ = {73 69 7a 65 3a 20 38 70 74 22 3e 0a 0a 0a 0a 0a 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 61 20 68 72 65 66 3d 22 3c 3f 65 63 68 6f 20 22 24 66 69 73 74 69 6b 2e 70 68 70 3f 64}
 		$ = {68 74 3d 22 31 37 22 20 62 67 63 6f 6c 6f 72 3d 22 23 38 30 38 30 38 30 22 3e 0a 20 20 20 20 3c 70 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e 0a 20 20 20 20 3c 69 6d 67 20 62 6f 72 64 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_pws_php_txt
@@ -13321,7 +12974,7 @@ rule SHELL_pws_php_txt
 		$ = {65 61 6c 3b 0a 20 20 20 63 6f 70 79 28 24 75 70 6c 6f 61 64 65 64 2c 20 24 64 65 7a 29 3b 0a 20 20 20 65 63 68 6f 20 22 46 49 4c 45 20 55 50 4c 4f 41 44 45 44 20 54 4f 20 24 64 65 7a 22 3b 0a}
 		$ = {20 3c 69 6e 70 75 74 20 74 79 70 65 3d 22 74 65 78 74 22 20 6e 61 6d 65 3d 22 64 69 72 22 20 73 69 7a 65 3d 22 33 30 22 20 76 61 6c 75 65 3d 22 3c 3f 20 70 61 73 73 74 68 72 75 28 22 70 77 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpshell17_txt
@@ -13333,7 +12986,7 @@ rule SHELL_phpshell17_txt
 		$ = {6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 24 77 6f 72 6b 5f 64 69 72 22 20 73 65 6c 65 63 74 65 64 3e 43 75 72 72 65 6e 74 20 44 69 72 65 63 74 6f 72 79 3c 2f 6f 70 74 69 6f 6e 3e 20 22 3b 0a}
 		$ = {3e 24 64 69 72 3c 2f 6f 70 74 69 6f 6e 3e 20 22 3b 0a 7d 20 65 6c 73 65 20 7b 0a 65 63 68 6f 20 22 3c 6f 70 74 69 6f 6e 20 76 61 6c 75 65 3d 22 24 77 6f 72 6b 5f 64 69 72 2f 24 64 69 72 22 3e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_pHpINJ_php_txt
@@ -13345,7 +12998,7 @@ rule SHELL_pHpINJ_php_txt
 		$ = {45 4c 46 5d 22 20 3b 20 3f 3e 22 20 6d 65 74 68 6f 64 20 3d 20 22 70 6f 73 74 22 3e 0a 3c 69 6e 70 75 74 20 74 79 70 65 20 3d 20 22 74 65 78 74 22 20 6e 61 6d 65 20 3d 20 22 75 72 6c 22 20 76}
 		$ = {20 66 69 6c 65 20 77 68 69 63 68 20 77 69 6c 6c 20 63 6f 6e 74 61 69 6e 20 74 68 65 20 50 68 70 20 53 68 65 6c 6c 20 3c 62 72 20 2f 3e 0a 3c 69 6e 70 75 74 20 74 79 70 65 20 3d 20 22 74 65 78}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_phpbackdoor15_txt
@@ -13357,7 +13010,7 @@ rule SHELL_phpbackdoor15_txt
 		$ = {20 20 20 20 69 66 28 24 79 5b 22 6b 65 79 22 5d 25 32 3d 3d 30 29 65 63 68 6f 20 22 20 62 67 63 6f 6c 6f 72 3d 27 6c 69 67 68 74 67 72 65 65 6e 27 3e 5c 6e 22 3b 0a 20 20 20 20 20 20 65 6c 73}
 		$ = {70 68 70 20 65 63 68 6f 20 24 5f 53 45 52 56 45 52 5b 27 50 48 50 5f 53 45 4c 46 27 5d 2e 22 3f 64 69 72 3d 24 64 69 72 22 3b 20 3f 3e 22 3e 0a 45 78 65 63 75 74 65 72 20 75 6e 65 20 63 6f 6d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PHP_Shell_php_txt
@@ -13369,7 +13022,7 @@ rule SHELL_PHP_Shell_php_txt
 		$ = {65 64 69 74 22 20 29 20 7b 20 2f 2a 3c 21 2d 2d 20 45 64 69 74 20 61 20 66 69 6c 65 20 61 6e 64 20 73 61 76 65 20 69 74 20 61 66 74 65 72 77 61 72 64 73 20 77 69 74 68 20 74 68 65 20 73 61 76}
 		$ = {22 43 61 6e 63 65 6c 5c 22 3e 3c 2f 66 6f 72 6d 3e 22 3b 0a 20 09 09 65 63 68 6f 20 22 3c 2f 74 64 3e 3c 2f 74 72 3e 3c 2f 74 61 62 6c 65 3e 3c 2f 63 65 6e 74 65 72 3e 22 3b 0a 20 09 7d 0a 7d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_PH_Vayv_php_txt
@@ -13381,7 +13034,7 @@ rule SHELL_PH_Vayv_php_txt
 		$ = {73 69 7a 65 3a 20 38 70 74 22 3e 0a 0a 0a 0a 0a 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 3c 61 20 68 72 65 66 3d 22 3c 3f 65 63 68 6f 20 22 24 66 69 73 74 69 6b 2e 70 68 70 3f 64}
 		$ = {68 74 3d 22 31 37 22 20 62 67 63 6f 6c 6f 72 3d 22 23 38 30 38 30 38 30 22 3e 0a 20 20 20 20 3c 70 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e 0a 20 20 20 20 3c 69 6d 67 20 62 6f 72 64 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_nshell_php_txt
@@ -13393,7 +13046,7 @@ rule SHELL_nshell_php_txt
 		$ = {22 3c 63 65 6e 74 65 72 3e 3c 68 72 20 63 6f 6c 6f 72 3d 37 37 37 37 37 37 20 77 69 64 74 68 3d 31 30 30 25 20 68 65 69 67 68 74 3d 31 31 35 70 78 3e 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 22}
 		$ = {28 24 72 65 73 75 6c 74 29 3b 0a 7d 0a 66 75 6e 63 74 69 6f 6e 20 73 71 6c 28 24 73 74 72 69 6e 67 29 0a 7b 0a 24 61 72 72 3d 40 61 72 72 61 79 28 29 3b 0a 24 61 72 72 3d 65 78 70 6c 6f 64 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Nshell__1__php_txt
@@ -13405,7 +13058,7 @@ rule SHELL_Nshell__1__php_txt
 		$ = {22 29 3b 0a 66 75 6e 63 74 69 6f 6e 20 65 63 6d 64 28 29 0a 7b 0a 65 63 68 6f 20 22 3c 46 4f 52 4d 20 6e 61 6d 65 3d 69 6e 6a 65 63 74 69 6f 6e 20 4d 45 54 48 4f 44 3d 50 4f 53 54 20 41 43 54}
 		$ = {6d 20 2f 74 6d 70 2f 63 6d 64 74 65 6d 70 22 29 3b 0a 20 20 24 6f 75 74 70 75 74 20 3d 20 6f 62 5f 67 65 74 5f 63 6f 6e 74 65 6e 74 73 28 29 3b 0a 20 20 6f 62 5f 65 6e 64 5f 63 6c 65 61 6e 28}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_network_php_txt
@@ -13417,7 +13070,7 @@ rule SHELL_network_php_txt
 		$ = {68 61 74 20 4d 44 35 20 63 72 79 70 74 20 61 6c 67 6f 72 69 74 68 6d 20 68 61 73 20 6e 6f 20 77 61 79 20 74 6f 20 64 65 63 72 79 70 74 20 69 74 2c 20 62 65 63 61 75 73 65 20 69 74 20 75 73 65}
 		$ = {0a 20 24 64 61 74 61 3d 22 22 3b 0a 0a 20 24 64 61 74 61 2e 3d 22 23 23 5c 6e 22 3b 0a 0a 20 24 64 61 74 61 2e 3d 22 23 23 20 4e 46 4d 20 68 61 63 6b 2e 72 75 20 63 72 65 61 74 6f 72 20 5c 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_nstview_php_txt
@@ -13429,7 +13082,7 @@ rule SHELL_nstview_php_txt
 		$ = {6c 49 43 4a 7a 62 32 4e 72 5a 58 51 36 49 43 51 68 49 6a 73 4e 43 69 41 67 49 43 41 6b 59 33 56 79 49 44 30 67 63 32 56 73 5a 57 4e 30 4b 43 52 66 57 7a 42 64 4b 54 73 67 49 41 30 4b 44 51 6f}
 		$ = {24 5f 47 45 54 5b 27 74 27 5d 3d 3d 22 75 70 6c 6f 61 64 22 29 7b 0a 65 63 68 6f 20 22 3c 62 72 3e 0a 3c 61 20 68 72 65 66 3d 27 24 70 68 70 5f 73 65 6c 66 3f 64 3d 24 64 26 74 3d 6d 61 73 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_w4k_php_txt
@@ -13441,7 +13094,7 @@ rule SHELL_w4k_php_txt
 		$ = {65 3d 63 68 6d 6f 64 3e 3c 74 61 62 6c 65 20 61 6c 69 67 6e 3d 6c 65 66 74 20 77 69 64 74 68 3d 33 30 30 20 62 6f 72 64 65 72 3d 30 20 63 65 6c 6c 73 70 61 63 69 6e 67 3d 30 20 63 65 6c 6c 70}
 		$ = {74 3d 5c 22 5f 62 6c 61 6e 6b 5c 22 3e 2b 3c 2f 61 3e 29 20 7c 22 3b 0a 20 20 7d 0a 20 20 65 63 68 6f 20 22 3c 68 72 20 73 69 7a 65 3d 5c 22 31 5c 22 20 6e 6f 73 68 61 64 65 3e 22 3b 0a 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_w3d_php_txt
@@ -13453,7 +13106,7 @@ rule SHELL_w3d_php_txt
 		$ = {30 43 43 30 30 3e 3c 62 3e 4e 6f 20 51 75 65 72 79 20 45 78 65 63 75 74 65 64 3c 2f 62 3e 3c 2f 66 6f 6e 74 3e 22 3b 0a 7d 0a 65 6c 73 65 20 7b 0a 2f 2f 51 75 65 72 79 20 54 69 6d 65 0a 24 71}
 		$ = {20 20 20 20 65 63 68 6f 20 22 3c 2f 74 72 3e 5c 6e 22 3b 0a 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 24 76 76 20 3d 20 74 72 75 65 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_w_php_txt
@@ -13465,7 +13118,7 @@ rule SHELL_w_php_txt
 		$ = {5c 22 20 73 69 7a 65 3d 5c 22 37 30 5c 22 3e 3c 62 72 3e 3c 62 72 3e 0a 53 61 76 65 20 74 68 69 73 20 66 69 6c 65 20 64 69 72 3a 20 3c 69 6e 70 75 74 20 6e 61 6d 65 3d 5c 22 75 70 6c 6f 61 64}
 		$ = {69 64 2c 24 73 69 67 29 29 20 7b 65 63 68 6f 20 22 4f 4b 2e 22 3b 7d 0a 20 20 20 20 65 6c 73 65 20 7b 65 63 68 6f 20 22 45 52 52 4f 52 2e 22 3b 7d 0a 20 20 20 7d 0a 20 20 20 77 68 69 6c 65 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_wacking_php_txt
@@ -13477,7 +13130,7 @@ rule SHELL_wacking_php_txt
 		$ = {65 3d 63 68 6d 6f 64 3e 3c 74 61 62 6c 65 20 61 6c 69 67 6e 3d 6c 65 66 74 20 77 69 64 74 68 3d 33 30 30 20 62 6f 72 64 65 72 3d 30 20 63 65 6c 6c 73 70 61 63 69 6e 67 3d 30 20 63 65 6c 6c 70}
 		$ = {74 3d 5c 22 5f 62 6c 61 6e 6b 5c 22 3e 2b 3c 2f 61 3e 29 20 7c 22 3b 0a 20 20 7d 0a 20 20 65 63 68 6f 20 22 3c 68 72 20 73 69 7a 65 3d 5c 22 31 5c 22 20 6e 6f 73 68 61 64 65 3e 22 3b 0a 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ctt_sh_php_txt
@@ -13489,7 +13142,7 @@ rule SHELL_ctt_sh_php_txt
 		$ = {65 4f 64 51 4b 62 50 67 65 64 6a 5a 6d 68 6e 41 63 4a 6c 71 61 49 71 55 65 73 6d 49 69 6b 70 45 69 78 6e 79 4a 68 75 6c 55 4d 68 67 32 34 61 53 4f 36 59 79 45 41 4f 77 3d 3d 22 2c 0a 22 73 6d}
 		$ = {41 41 41 44 2f 41 50 2f 2f 41 41 41 41 2f 2f 38 41 2f 77 44 2f 22 2e 0a 22 2f 2f 2f 2f 2f 79 77 41 41 41 41 41 45 41 41 51 41 41 41 45 55 2f 44 49 67 36 71 31 4d 36 50 48 2b 36 4f 5a 74 48 6e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cybershell_php_txt
@@ -13501,7 +13154,7 @@ rule SHELL_cybershell_php_txt
 		$ = {2c 20 5c 22 3e 26 58 5c 22 3b 0a 09 09 6f 70 65 6e 20 53 54 44 45 52 52 2c 20 5c 22 3e 26 58 5c 22 3b 0a 09 09 63 6c 6f 73 65 20 58 3b 0a 09 09 65 78 65 63 28 5c 22 2f 62 69 6e 2f 73 68 5c 22}
 		$ = {65 74 28 24 6d 74 61 62 6c 65 29 29 20 61 6e 64 20 28 69 73 73 65 74 28 24 76 61 72 29 29 20 61 6e 64 20 28 69 73 73 65 74 28 24 70 69 78 69 64 6e 61 6d 65 29 29 20 61 6e 64 20 28 69 73 73 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c2007_php_txt
@@ -13513,7 +13166,7 @@ rule SHELL_c2007_php_txt
 		$ = {61 74 75 73 29 20 0a 20 20 7b 20 0a 20 20 20 76 61 72 20 69 64 20 3d 20 31 3b 20 0a 20 20 20 76 61 72 20 6e 75 6d 20 3d 20 22 2e 28 63 6f 75 6e 74 28 24 74 61 62 6c 65 29 2d 32 29 2e 22 3b 20}
 		$ = {67 2b 38 50 64 2b 38 48 63 2b 73 66 66 2b 38 54 65 2b 2f 44 32 2f 72 58 49 38 72 48 46 38 62 72 4d 38 37 66 4a 38 6e 6d 50 22 2e 20 0a 22 77 72 33 4e 38 36 2f 44 38 4b 76 42 38 46 39 6e 65 45}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Casus15_php_txt
@@ -13525,7 +13178,7 @@ rule SHELL_Casus15_php_txt
 		$ = {73 69 7a 65 28 24 79 6f 6c 29 3b 0a 24 64 75 7a 65 6e 20 3d 20 40 66 72 65 61 64 20 28 24 64 6f 73 79 61 2c 20 24 62 6f 79 75 74 29 3b 0a 65 63 68 6f 20 22 3c 66 6f 72 6d 20 6d 65 74 68 6f 64}
 		$ = {72 28 62 61 73 65 5f 63 6f 6e 76 65 72 74 28 66 69 6c 65 70 65 72 6d 73 28 22 24 70 61 74 68 2f 24 66 69 6c 65 22 29 2c 31 30 2c 38 29 2c 2d 34 29 3b 0a 65 63 68 6f 20 22 3c 66 6f 6e 74 20 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_c99_1__php_txt
@@ -13537,7 +13190,7 @@ rule SHELL_c99_1__php_txt
 		$ = {36 50 4c 6c 49 4f 6a 72 36 43 44 79 35 65 77 67 34 65 37 72 35 65 55 67 36 4f 66 73 35 65 33 6f 38 75 55 67 36 75 37 76 36 50 44 67 36 66 4c 37 4c 43 44 79 37 69 44 2f 49 4f 48 7a 35 50 4d 67}
 		$ = {43 71 71 59 42 70 75 4d 36 68 71 38 50 33 68 77 6f 45 67 55 33 6d 61 77 45 4c 42 45 61 50 46 69 41 55 41 4d 67 59 79 33 56 4d 22 2e 0a 22 53 6e 45 6a 67 50 56 61 72 48 45 48 67 72 42 34 33 4a}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_iMHaPFtp_php_txt
@@ -13549,7 +13202,7 @@ rule SHELL_iMHaPFtp_php_txt
 		$ = {69 5d 20 3d 20 6e 6c 32 62 72 28 68 74 6d 6c 28 24 61 72 67 75 6d 65 6e 74 73 5b 24 69 5d 29 29 3b 0a 09 7d 0a 0a 09 24 72 65 70 6c 61 63 65 20 3d 20 61 72 72 61 79 28 27 7b 27 20 3d 3e 20 27}
 		$ = {73 27 20 3d 3e 20 27 4a 61 27 2c 0a 27 6e 6f 27 20 3d 3e 20 27 4e 65 6a 27 2c 0a 27 47 65 72 69 27 20 3d 3e 20 27 54 69 6c 6c 62 61 6b 73 27 2c 0a 27 59 6f 6c 27 20 3d 3e 20 27 59 6f 6c 27 2c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_img_php_txt
@@ -13561,7 +13214,7 @@ rule SHELL_img_php_txt
 		$ = {69 74 61 62 6c 65 28 22 2e 22 29 29 7b 0a 6d 6b 64 69 72 28 22 2e 6e 73 74 5f 70 72 6f 78 79 5f 74 6d 70 22 29 3b 0a 24 66 70 3d 66 6f 70 65 6e 28 22 2e 6e 73 74 5f 70 72 6f 78 79 5f 74 6d 70}
 		$ = {5d 29 7b 0a 24 77 68 65 72 65 3d 24 5f 50 4f 53 54 5b 27 77 68 65 72 65 27 5d 3b 0a 24 6e 65 77 66 3d 24 5f 50 4f 53 54 5b 27 6e 65 77 66 27 5d 3b 0a 24 77 68 65 72 65 3d 73 74 72 5f 72 65 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Inderxer_asp_txt
@@ -13573,7 +13226,7 @@ rule SHELL_Inderxer_asp_txt
 		$ = {23 40 26 44 7f 2f 77 4b 78 6b 6e 52 53 44 72 59 7f 50 45 45 4c 6d 57 61 7a 5b 72 4a 40 23 40 26 2e 6e 2f 61 57 09 2f 6e 52 41 2e 62 59 6e 50 72 45 5b 44 45 64 27 72 4a 40 23 40 26 6e 09 4e 7e}
 		$ = {21 f6 44 fc 09 59 fc 73 6e 73 2b 33 2c dd 64 59 7f 4e 6b f0 62 55 72 79 2c 66 4b 2f 7a 6c 55 fd 55 2c 62 5b fd 78 fd 2c 7a 6c 2e fd 78 20 20 40 21 34 44 40 2a 50 7f 36 4f 6c 4d 6e 6d 50 24 f6}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_gfs_sh_php_txt
@@ -13585,7 +13238,7 @@ rule SHELL_gfs_sh_php_txt
 		$ = {64 3e 3c 74 64 20 61 6c 6c 69 6e 67 3d 63 65 6e 74 65 72 3e 3c 62 3e 3c 66 6f 6e 74 20 63 6f 6c 6f 72 3d 72 65 64 3e 20 4e 4f 20 3c 2f 62 3e 3c 2f 66 6f 6e 74 3e 3c 2f 74 64 3e 3c 2f 74 72 3e}
 		$ = {6c 65 6e 61 6d 65 5c 22 3e 3c 2f 74 64 3e 22 29 3b 0a 20 65 63 68 6f 20 28 22 3c 74 64 20 61 6c 6c 69 6e 67 3d 5c 22 63 65 6e 74 65 72 5c 22 3e 3c 69 6e 70 75 74 20 74 79 70 65 3d 5c 22 74 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Klasvayv_asp_txt
@@ -13597,7 +13250,7 @@ rule SHELL_Klasvayv_asp_txt
 		$ = {65 6e 64 20 69 66 0a 0a 0a 0a 0a 73 65 6c 65 63 74 20 63 61 73 65 20 61 6b 74 69 66 6b 6c 61 73 0a 63 61 73 65 20 22 43 3a 22 20 61 6b 74 69 66 6b 6c 61 73 3d 22 43 3a 5c 22 0a 63 61 73 65 20}
 		$ = {6f 72 3d 22 23 30 30 30 30 30 30 22 3e 0a 20 20 20 20 20 20 20 20 3c 74 61 62 6c 65 20 62 6f 72 64 65 72 3d 22 30 22 20 63 65 6c 6c 70 61 64 64 69 6e 67 3d 22 30 22 20 63 65 6c 6c 73 70 61 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_xinfo_php_txt
@@ -13609,7 +13262,7 @@ rule SHELL_xinfo_php_txt
 		$ = {28 24 69 31 32 20 3d 20 30 3b 20 24 69 31 32 20 3c 3d 20 24 63 3b 20 24 69 31 32 2b 2b 29 20 7b 0a 0a 24 77 6f 72 64 5b 31 32 5d 20 3d 20 24 63 68 61 72 73 5f 64 65 7b 24 69 31 32 7d 3b 0a 0a}
 		$ = {24 6f 75 74 70 75 74 3b 0a 0a 7d 0a 0a 0a 0a 66 75 6e 63 74 69 6f 6e 20 73 70 6c 69 74 5f 63 73 76 5f 66 69 6c 65 28 24 63 73 76 29 20 7b 20 72 65 74 75 72 6e 20 65 78 70 6c 6f 64 65 28 22 5c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_load_shell_php_txt
@@ -13621,7 +13274,7 @@ rule SHELL_load_shell_php_txt
 		$ = {76 3e 22 3b 0a 7d 0a 0a 0a 0a 69 66 28 69 73 73 65 74 28 24 5f 50 4f 53 54 5b 27 70 68 70 63 6f 64 65 27 5d 29 29 7b 0a 0a 65 63 68 6f 20 22 3c 63 65 6e 74 65 72 3e 3c 64 69 76 20 69 64 3d 6c}
 		$ = {65 63 68 6f 20 24 66 69 6c 65 73 3b 0a 65 63 68 6f 20 22 3c 2f 74 61 62 6c 65 3e 3c 62 72 3e 22 3b 0a 0a 0a 0a 0a 65 63 68 6f 20 22 0a 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 5c 22 24 52 45 51}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Dx_php_txt
@@ -13633,7 +13286,7 @@ rule SHELL_Dx_php_txt
 		$ = {61 72 63 68 27 5d 5b 27 6d 6f 64 65 27 5d 3d 3d 73 74 72 74 6f 6c 6f 77 65 72 28 24 63 75 72 5f 72 61 64 29 29 3f 27 43 48 45 43 4b 45 44 27 3a 27 27 29 20 20 20 3a 28 28 24 63 75 72 5f 72 61}
 		$ = {3d 3e 27 57 4c 42 53 27 2c 32 35 33 35 3d 3e 27 4d 41 44 43 41 50 27 2c 32 35 34 33 3d 3e 27 73 69 70 27 2c 32 35 39 32 3d 3e 27 6e 65 74 72 65 6b 27 2c 32 37 32 37 3d 3e 27 4d 47 43 50 20 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_DxShell_hk_php_txt
@@ -13645,7 +13298,7 @@ rule SHELL_DxShell_hk_php_txt
 		$ = {5f 72 61 64 29 2e 27 22 20 27 0a 09 09 09 2e 28 20 20 28 69 73 73 65 74 28 24 5f 50 4f 53 54 5b 27 64 78 73 71 6c 73 65 61 72 63 68 27 5d 5b 27 6d 6f 64 65 27 5d 29 29 3f 20 20 20 28 28 24 5f}
 		$ = {6c 65 20 55 47 20 43 6f 6e 74 72 6f 6c 27 2c 32 34 32 37 3d 3e 27 4d 47 43 50 20 67 61 74 65 77 61 79 27 2c 32 35 30 34 3d 3e 27 57 4c 42 53 27 2c 32 35 33 35 3d 3e 27 4d 41 44 43 41 50 27 2c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_fuckphpshell_txt
@@ -13657,7 +13310,7 @@ rule SHELL_fuckphpshell_txt
 		$ = {20 0a 20 20 20 20 20 20 20 20 62 61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 3a 20 23 30 30 30 30 30 30 3b 20 0a 20 20 20 20 20 20 20 20 66 6f 6e 74 2d 66 61 6d 69 6c 79 3a 20 54 65 72 6d 69}
 		$ = {0a 0a 20 20 2d 2d 3e 3c 2f 53 43 52 49 50 54 3e 20 0a 3c 2f 48 45 41 44 3e 20 0a 3c 42 4f 44 59 20 6f 6e 4c 6f 61 64 3d 22 64 6f 63 75 6d 65 6e 74 2e 67 65 74 45 6c 65 6d 65 6e 74 42 79 49 64}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Fatalshell_php_txt
@@ -13669,7 +13322,7 @@ rule SHELL_Fatalshell_php_txt
 		$ = {61 3e 3c 61 20 68 72 65 66 3d 22 23 22 20 6f 6e 63 6c 69 63 6b 3d 22 64 6f 63 75 6d 65 6e 74 2e 72 65 71 73 2e 61 63 74 69 6f 6e 2e 76 61 6c 75 65 3d 5c 27 64 65 6c 65 74 65 5c 27 3b 20 64 6f}
 		$ = {65 6c 6c 28 77 68 69 63 68 28 27 6c 69 6e 6b 73 27 29 2e 22 20 2d 73 6f 75 72 63 65 20 22 2e 24 5f 50 4f 53 54 5b 27 75 72 6c 64 6f 77 6e 27 5d 2e 22 20 3e 20 22 2e 24 5f 50 4f 53 54 5b 27 66}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_JspWebshell_1_2_txt
@@ -13681,7 +13334,7 @@ rule SHELL_JspWebshell_1_2_txt
 		$ = {65 3d 22 66 6f 72 6d 32 22 20 6d 65 74 68 6f 64 3d 22 70 6f 73 74 22 20 61 63 74 69 6f 6e 3d 22 22 3e 0a 20 20 20 20 20 20 20 20 20 20 3c 70 20 61 6c 69 67 6e 3d 22 63 65 6e 74 65 72 22 3e 20}
 		$ = {53 74 72 69 6e 67 20 74 65 6d 70 66 69 6c 65 6e 61 6d 65 3d 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 66 69 6c 65 22 29 3b 0a 20 20 20 20 20 20 20 20 20 20 46 69 6c 65}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Test_php_txt
@@ -13689,7 +13342,7 @@ rule SHELL_Test_php_txt
 	strings:
 		$ = {3c 3f 70 68 70 0a 24 65 6e 74 72 79 5f 6c 69 6e 65 3d 22 48 41 43 4b 65 64 20 62 79 20 45 6e 74 72 69 4b 61 22 3b 0a 24 66 70 20 3d 20 66 6f 70 65 6e 28 22 69 6e 64 65 78 2e 70 68 70 22 2c 20 22 77 22 29 3b 0a 66 70 75 74 73 28 24 66 70 2c 20 24 65 6e 74 72 79 5f 6c 69 6e 65 29 3b 0a 66 63 6c 6f 73 65 28 24 66 70 29 3b 0a 3f 3e 0a 0a 3c 3f 20 0a 24 66 70 20 3d 40 66 6f 70 65 6e 28 22 69 6e 64 65 78 2e 68 74 6d 22 2c 20 22 61 2b 22 29 3b 0a 24 79 61 7a 69 20 3d 20 22 74 65 73 74 22 20 2e 20 22 5c 72 5c 6e 22 3b 0a 66 77 72 69 74 65 20 28 24 66 70 2c 20 22 24 79 61 7a 69 22 29 3b 0a 66 63 6c 6f 73 65 20 28 24 66 70 29 3b 0a 3f 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_jspspy_jspx
@@ -13701,7 +13354,7 @@ rule SHELL_jspspy_jspx
 		$ = {74 45 6e 74 72 79 28 65 6e 74 72 79 29 3b 0a 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 20 66 49 6e 70 75 74 20 3d 20 6e 65 77 20 46 69 6c 65 49 6e 70 75 74 53 74 72 65 61 6d 28 66 29 3b 0a}
 		$ = {53 65 72 76 6c 65 74 52 65 71 75 65 73 74 20 72 65 71 75 65 73 74 2c 48 74 74 70 53 65 72 76 6c 65 74 52 65 73 70 6f 6e 73 65 20 72 65 73 70 6f 6e 73 65 2c 48 74 74 70 53 65 73 73 69 6f 6e 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_unknown_96a1a8b2fa
@@ -13713,7 +13366,7 @@ rule SHELL_unknown_96a1a8b2fa
 		$ = {0a 3c 66 6f 72 6d 20 61 63 74 69 6f 6e 3d 22 68 74 74 70 3a 2f 2f 35 39 2e 78 2e 78 2e 78 3a 38 30 38 30 2f 73 63 64 63 2f 62 6f 62 2e 6a 73 70 3f 66 3d 66 75 63 6b 6a 70 2e 6a 73 70 22 20 6d}
 		$ = {64 3d 22 70 6f 73 74 22 3e 0a 3c 20 74 65 78 74 61 72 65 61 20 6e 61 6d 65 3d 74 20 63 6f 6c 73 3d 31 32 30 20 72 6f 77 73 3d 31 30 20 77 69 64 74 68 3d 34 35 3e 79 6f 75 72 20 63 6f 64 65 3c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jspx_jspx
@@ -13725,7 +13378,7 @@ rule SHELL_jspx_jspx
 		$ = {69 3d 31 3b 20 69 20 26 6c 74 3b 3d 6e 3b 20 69 2b 2b 29 7b 73 62 2e 61 70 70 65 6e 64 28 64 2e 67 65 74 43 6f 6c 75 6d 6e 4e 61 6d 65 28 69 29 2b 22 5c 74 7c 5c 74 22 29 3b 7d 73 62 2e 61 70}
 		$ = {6c 73 28 22 2f 22 29 29 7b 41 41 28 73 62 29 3b 7d 7d 65 6c 73 65 20 69 66 28 5a 2e 65 71 75 61 6c 73 28 22 42 22 29 29 7b 42 42 28 7a 31 2c 73 62 29 3b 7d 65 6c 73 65 20 69 66 28 5a 2e 65 71}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_paxmac_jspx
@@ -13737,7 +13390,7 @@ rule SHELL_paxmac_jspx
 		$ = {63 28 63 6d 64 29 3b 0a 09 09 09 49 6e 70 75 74 53 74 72 65 61 6d 20 69 6e 20 3d 20 63 68 69 6c 64 2e 67 65 74 49 6e 70 75 74 53 74 72 65 61 6d 28 29 3b 0a 09 09 09 69 6e 74 20 63 3b 0a 09 09}
 		$ = {09 09 09 63 68 69 6c 64 2e 77 61 69 74 46 6f 72 28 29 3b 0a 09 09 09 7d 20 63 61 74 63 68 20 28 49 6e 74 65 72 72 75 70 74 65 64 45 78 63 65 70 74 69 6f 6e 20 65 29 20 7b 0a 09 09 09 65 2e 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_jjw_jspx
@@ -13745,7 +13398,7 @@ rule SHELL_jjw_jspx
 	strings:
 		$ = {3c 6a 73 70 3a 72 6f 6f 74 20 78 6d 6c 6e 73 3a 6a 73 70 3d 22 68 74 74 70 3a 2f 2f 6a 61 76 61 2e 73 75 6e 2e 63 6f 6d 2f 4a 53 50 2f 50 61 67 65 22 20 20 76 65 72 73 69 6f 6e 3d 22 31 2e 32 22 3e 20 0a 3c 6a 73 70 3a 64 69 72 65 63 74 69 76 65 2e 70 61 67 65 20 63 6f 6e 74 65 6e 74 54 79 70 65 3d 22 74 65 78 74 2f 68 74 6d 6c 22 20 70 61 67 65 45 6e 63 6f 64 69 6e 67 3d 22 55 54 46 2d 38 22 20 2f 3e 20 0a 3c 6a 73 70 3a 73 63 72 69 70 74 6c 65 74 3e 20 0a 52 75 6e 74 69 6d 65 2e 67 65 74 52 75 6e 74 69 6d 65 28 29 2e 65 78 65 63 28 72 65 71 75 65 73 74 2e 67 65 74 50 61 72 61 6d 65 74 65 72 28 22 69 22 29 29 3b 20 0a 3c 2f 6a 73 70 3a 73 63 72 69 70 74 6c 65 74 3e 20 0a 3c 2f 6a 73 70 3a 72 6f 6f 74 3e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_jw_jspx
@@ -13757,7 +13410,7 @@ rule SHELL_jw_jspx
 		$ = {20 20 20 20 20 20 20 69 6e 74 20 61 20 3d 20 2d 31 3b 20 0a 20 20 20 20 20 20 20 20 62 79 74 65 5b 5d 20 62 20 3d 20 6e 65 77 20 62 79 74 65 5b 32 30 34 38 5d 3b 20 0a 20 20 20 20 20 20 20 20}
 		$ = {20 20 20 20 20 77 68 69 6c 65 28 28 61 3d 69 6e 2e 72 65 61 64 28 62 29 29 21 3d 2d 31 29 7b 20 0a 20 20 20 20 20 20 20 20 20 20 20 20 6f 75 74 2e 70 72 69 6e 74 6c 6e 28 6e 65 77 20 53 74 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_cmd_jspx
@@ -13769,7 +13422,7 @@ rule SHELL_cmd_jspx
 		$ = {42 75 66 66 65 72 28 74 6d 70 29 29 3b 0a 09 09 50 72 6f 63 65 73 73 20 70 20 3d 20 52 75 6e 74 69 6d 65 2e 67 65 74 52 75 6e 74 69 6d 65 28 29 2e 65 78 65 63 28 73 74 72 29 3b 0a 09 09 49 6e}
 		$ = {61 6d 52 65 61 64 65 72 28 69 6e 2c 22 47 42 4b 22 29 29 3b 0a 09 09 53 74 72 69 6e 67 20 62 72 73 20 3d 20 62 72 2e 72 65 61 64 4c 69 6e 65 28 29 3b 0a 09 09 77 68 69 6c 65 28 62 72 73 21 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_base64_jspx_txt
@@ -13781,7 +13434,7 @@ rule SHELL_base64_jspx_txt
 		$ = {42 75 66 66 65 72 28 74 6d 70 29 29 3b 0a 09 09 50 72 6f 63 65 73 73 20 70 20 3d 20 52 75 6e 74 69 6d 65 2e 67 65 74 52 75 6e 74 69 6d 65 28 29 2e 65 78 65 63 28 73 74 72 29 3b 0a 09 09 49 6e}
 		$ = {61 6d 52 65 61 64 65 72 28 69 6e 2c 22 47 42 4b 22 29 29 3b 0a 09 09 53 74 72 69 6e 67 20 62 72 73 20 3d 20 62 72 2e 72 65 61 64 4c 69 6e 65 28 29 3b 0a 09 09 77 68 69 6c 65 28 62 72 73 21 3d}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_devshell_jsp
@@ -13792,7 +13445,7 @@ rule SHELL_devshell_jsp
 		$ = {20 73 74 79 6c 65 3d 5c 22 66 6f 6e 74 2d 77 65 69 67 68 74 3a 62 6f 6c 64 3b 5c 22 3e 3c 61 20 68 72 65 66 3d 5c 22 3f 64 69 72 3d 22 20 2b 20 64 20 2b 20 22 5c 22 3e 5b 3c 2f 73 70 61 6e 3e}
 		$ = {65 73 61 6e 20 3d 20 22 22 3b 0a 09 53 74 72 69 6e 67 20 66 70 61 74 68 20 3d 20 22 22 3b 0a 09 62 6f 6f 6c 65 61 6e 20 64 6f 73 20 3d 20 66 61 6c 73 65 3b 0a 09 69 66 28 28 72 65 71 75 65 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_devshell_php
@@ -13804,7 +13457,7 @@ rule SHELL_devshell_php
 		$ = {30 37 37 54 51 55 2b 35 66 51 62 46 47 62 74 70 66 43 6d 4e 32 65 64 56 77 41 36 42 5a 53 67 33 37 34 64 49 2f 2b 6d 34 62 38 6a 30 6e 79 44 6e 64 65 56 2f 72 48 30 73 6d 70 73 76 4d 74 6c 42}
 		$ = {37 79 62 5a 4c 32 47 68 64 4c 68 4f 31 35 4e 71 37 51 36 32 6c 53 41 78 53 49 4f 6a 41 44 74 64 51 48 2b 41 68 41 50 2b 75 53 71 54 75 4f 58 51 61 41 72 6c 6d 65 75 4e 68 6d 66 36 61 53 71 41}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_devshell_cgi
@@ -13816,7 +13469,7 @@ rule SHELL_devshell_cgi
 		$ = {39 49 44 45 37 44 51 6f 67 66 51 30 4b 61 57 59 6f 5a 47 56 6d 61 57 35 6c 5a 43 67 6b 58 31 5a 42 55 6e 73 6e 61 57 31 6e 4a 33 30 70 4b 58 73 4e 43 67 6b 6b 5a 6d 6c 73 5a 53 41 39 49 43 5a}
 		$ = {34 69 50 43 39 30 61 58 52 73 5a 54 34 4e 43 6a 78 73 61 57 35 72 49 48 4a 6c 62 44 31 63 49 6c 4e 49 54 31 4a 55 51 31 56 55 49 45 6c 44 54 30 35 63 49 69 42 6f 63 6d 56 6d 50 56 77 69 49 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_devshell_cfm
@@ -13828,7 +13481,7 @@ rule SHELL_devshell_cfm
 		$ = {19 61 ba e4 2b af 8c 48 f1 ee 38 d8 2f 5d cd 51 e2 82 a3 9a e0 eb 48 ee 18 7f 5a 75 5c 5f 8f 3c dc c9 0e ac cf 7b e6 a5 74 c0 61 27 c6 31 7d 99 07 42 e6 78 8a ad b0 54 e3 e8 a7 18 72 3f 1b 87}
 		$ = {da 5a 68 33 95 03 95 4a 54 ae 69 d3 40 cc d5 29 33 8a dd d5 8a 85 a3 69 a9 68 ef 6a 81 6f a2 8a 0e 41 90 91 5b 5f 38 3f ec 8f 8a db 03 71 4a a7 72 a4 77 fd 73 b9 cd e7 da fe 3e f6 dc cb 2d 2e}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_devshell_aspx
@@ -13840,7 +13493,7 @@ rule SHELL_devshell_aspx
 		$ = {29 0a 20 20 20 20 20 20 20 20 45 6e 64 20 49 66 0a 20 20 20 20 20 20 20 20 49 66 20 28 28 52 65 71 75 65 73 74 2e 51 75 65 72 79 53 74 72 69 6e 67 28 22 62 74 6e 43 6f 6e 6e 65 63 74 22 29 20}
 		$ = {61 6d 65 2c 20 46 61 6c 73 65 29 0a 20 20 20 20 20 20 20 20 20 20 20 20 72 65 73 75 6c 74 20 3d 20 68 74 6d 6c 73 70 65 63 69 61 6c 63 68 61 72 73 28 72 65 73 75 6c 74 29 0a 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_devshell_asp
@@ -13852,7 +13505,7 @@ rule SHELL_devshell_asp
 		$ = {2c 4a 45 40 23 40 26 32 55 5b 2c 71 30 40 23 40 26 71 36 60 6d 34 6e 5e 33 2c 27 2c 2f 34 2b 73 73 7c 77 43 2f 6b 41 57 4d 4e 62 7e 3a 74 2b 55 40 23 40 26 64 43 45 44 34 2c 27 7e 44 44 21 2b}
 		$ = {7e 4a 40 21 7a 43 40 2a 72 50 5b 7e 68 6b 6f 7e 5b 2c 45 40 21 7a 32 40 2a 40 21 39 6b 5c 2c 2f 44 7a 56 7f 27 45 4a 31 56 6e 43 4d 29 34 4b 4f 74 70 3a 6c 4d 4c 72 78 3d 21 70 77 43 4e 5b 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_devilzShell_jsp
@@ -13863,7 +13516,7 @@ rule SHELL_devilzShell_jsp
 		$ = {20 73 74 79 6c 65 3d 5c 22 66 6f 6e 74 2d 77 65 69 67 68 74 3a 62 6f 6c 64 3b 5c 22 3e 3c 61 20 68 72 65 66 3d 5c 22 3f 64 69 72 3d 22 20 2b 20 64 20 2b 20 22 5c 22 3e 5b 3c 2f 73 70 61 6e 3e}
 		$ = {65 73 61 6e 20 3d 20 22 22 3b 0a 09 53 74 72 69 6e 67 20 66 70 61 74 68 20 3d 20 22 22 3b 0a 09 62 6f 6f 6c 65 61 6e 20 64 6f 73 20 3d 20 66 61 6c 73 65 3b 0a 09 69 66 28 28 72 65 71 75 65 73}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_devilzShell_cgi
@@ -13875,7 +13528,7 @@ rule SHELL_devilzShell_cgi
 		$ = {29 2c 20 24 5b 2b 31 2c 20 69 6e 74 28 28 6c 65 6e 67 74 68 28 24 5f 29 2b 32 29 2f 33 29 2a 34 20 2d 20 28 34 35 2d 6c 65 6e 67 74 68 28 24 5f 29 29 25 33 29 3b 0a 09 09 65 76 61 6c 20 71 71}
 		$ = {22 2e 24 66 69 6c 65 2e 22 5c 22 3e 22 2e 26 78 66 69 6c 65 73 75 6d 6d 61 72 79 28 24 66 69 6c 65 29 2e 22 3c 2f 61 3e 22 2e 24 6d 73 67 2e 22 3c 2f 70 3e 3c 64 69 76 20 73 74 79 6c 65 3d 5c}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_devilzShell_aspx
@@ -13887,7 +13540,7 @@ rule SHELL_devilzShell_aspx
 		$ = {29 0a 20 20 20 20 20 20 20 20 45 6e 64 20 49 66 0a 20 20 20 20 20 20 20 20 49 66 20 28 28 52 65 71 75 65 73 74 2e 51 75 65 72 79 53 74 72 69 6e 67 28 22 62 74 6e 43 6f 6e 6e 65 63 74 22 29 20}
 		$ = {61 6d 65 2c 20 46 61 6c 73 65 29 0a 20 20 20 20 20 20 20 20 20 20 20 20 72 65 73 75 6c 74 20 3d 20 68 74 6d 6c 73 70 65 63 69 61 6c 63 68 61 72 73 28 72 65 73 75 6c 74 29 0a 20 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_devilzShell_asp
@@ -13899,7 +13552,7 @@ rule SHELL_devilzShell_asp
 		$ = {3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 5d 0a 49 66 28 52 65 71 75 65 73 74 2e 46 6f 72 6d 28 22 70 61 73 73 77 22 29 20}
 		$ = {64 20 49 66 0a 09 72 65 73 75 6c 74 20 3d 20 78 66 69 6c 65 6f 70 65 6e 28 66 69 6c 65 2c 66 61 6c 73 65 29 0a 09 72 65 73 75 6c 74 20 3d 20 68 74 6d 6c 73 70 65 63 69 61 6c 63 68 61 72 73 28}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_devilzShell_php
@@ -13910,7 +13563,7 @@ rule SHELL_devilzShell_php
 		$ = {6e 74 66 28 22 25 2e 30 32 66 22 2c 40 72 6f 75 6e 64 28 24 73 69 7a 65 20 2f 20 31 30 32 34 2c 32 29 29 3b 0a 09 09 09 72 65 74 75 72 6e 20 24 73 69 7a 65 2e 22 20 6b 62 22 3b 0a 09 09 7d 0a}
 		$ = {45 54 5b 27 62 74 6e 4c 69 73 74 65 6e 27 5d 29 20 26 26 20 28 69 73 5f 6e 75 6d 65 72 69 63 28 24 5f 47 45 54 5b 27 6c 70 6f 72 74 43 27 5d 29 29 29 7b 0a 09 24 70 6f 72 74 20 3d 20 24 5f 47}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ka0tic_pl
@@ -13922,7 +13575,7 @@ rule SHELL_ka0tic_pl
 		$ = {5d 20 4f 6b 2c 20 4e 6f 76 6f 20 61 72 71 75 69 76 6f 20 61 20 73 65 72 20 63 6f 6c 6f 63 61 64 6f 3a 20 24 6e 65 77 66 69 6c 65 22 3b 0a 0a 69 66 28 22 24 64 69 72 22 29 20 7b 0a 20 70 72 69}
 		$ = {69 6c 65 20 28 3c 4e 45 57 3e 29 20 7b 0a 70 72 69 6e 74 20 46 49 4c 45 20 24 5f 3b 0a 7d 0a 63 6c 6f 73 65 28 46 49 4c 45 29 3b 0a 73 65 65 6b 28 4e 45 57 2c 20 30 2c 20 30 29 3b 0a 7d 0a 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_rcpexp_pl
@@ -13934,7 +13587,7 @@ rule SHELL_rcpexp_pl
 		$ = {6e 74 20 77 72 6f 6e 67 3a 20 24 21 22 3b 0a 63 6c 6f 73 65 28 48 4d 4d 29 3b 0a 0a 73 79 73 74 65 6d 20 22 72 63 70 20 27 68 65 79 20 67 65 65 7a 65 72 3b 20 67 63 63 20 2d 6f 20 2f 74 6d 70}
 		$ = {72 3b 20 63 68 6d 6f 64 20 2b 73 20 2f 74 6d 70 2f 73 68 65 6c 6c 3b 27 20 6c 6f 63 61 6c 68 6f 73 74 20 32 3e 20 2f 64 65 76 2f 6e 75 6c 6c 22 20 3b 0a 75 6e 6c 69 6e 6b 28 22 2f 74 6d 70 2f}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_inc_pl
@@ -13946,7 +13599,7 @@ rule SHELL_inc_pl
 		$ = {6d 2f 72 65 71 75 69 72 65 5f 6f 6e 63 65 20 5c 24 2f 69 29 20 7c 7c 20 28 24 6c 69 6e 65 20 3d 7e 20 6d 2f 69 6e 63 6c 75 64 65 5f 6f 6e 63 65 5c 28 5c 24 2f 69 29 20 7c 7c 20 28 24 6c 69 6e}
 		$ = {24 2f 69 29 20 7c 7c 20 28 24 6c 69 6e 65 20 3d 7e 20 6d 2f 69 6e 63 6c 75 64 65 20 5c 24 2f 69 29 20 7c 7c 20 28 24 6c 69 6e 65 20 3d 7e 20 6d 2f 69 6e 63 6c 75 64 65 5c 28 5c 24 2f 69 29 29}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_telnet_cgi_pl
@@ -13958,7 +13611,7 @@ rule SHELL_telnet_cgi_pl
 		$ = {6d 65 6f 75 74 44 75 72 61 74 69 6f 6e 29 3b 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 69 66 28 24 53 68 6f 77 44 79 6e 61 6d 69}
 		$ = {20 26 53 65 6e 64 46 69 6c 65 54 6f 42 72 6f 77 73 65 72 28 24 54 61 72 67 65 74 46 69 6c 65 29 3b 0a 20 20 20 20 20 20 20 20 7d 0a 20 20 20 20 20 20 20 20 65 6c 73 65 20 23 20 77 65 20 68 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_Silic_Group_cgi_pl
@@ -13970,7 +13623,7 @@ rule SHELL_Silic_Group_cgi_pl
 		$ = {0a 09 09 69 66 28 21 24 57 69 6e 4e 54 29 7b 61 6c 61 72 6d 28 30 29 3b 7d 0a 09 09 70 72 69 6e 74 20 22 3c 2f 78 6d 70 3e 22 3b 0a 09 7d 0a 09 26 50 72 69 6e 74 43 6f 6d 6d 61 6e 64 4c 69 6e}
 		$ = {69 6e 74 46 69 6c 65 55 70 6c 6f 61 64 46 6f 72 6d 3b 26 50 72 69 6e 74 50 61 67 65 46 6f 6f 74 65 72 3b 72 65 74 75 72 6e 3b 7d 0a 09 26 50 72 69 6e 74 50 61 67 65 48 65 61 64 65 72 28 22 63}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_exim_pl
@@ -13978,7 +13631,7 @@ rule SHELL_exim_pl
 	strings:
 		$ = {23 21 2f 75 73 72 2f 62 69 6e 2f 70 65 72 6c 0a 0a 24 63 6e 74 20 3d 20 30 78 62 66 66 66 66 61 31 30 3b 0a 0a 77 68 69 6c 65 20 28 31 29 20 7b 0a 20 20 20 24 68 65 78 20 3d 20 73 70 72 69 6e 74 66 20 28 22 30 78 25 78 22 2c 20 24 63 6e 74 29 3b 0a 20 20 20 24 72 65 73 20 3d 20 73 79 73 74 65 6d 20 28 22 2e 2f 65 78 70 6c 6f 69 74 20 24 68 65 78 22 29 3b 0a 20 20 20 70 72 69 6e 74 66 20 22 24 68 65 78 20 3a 20 24 72 65 73 5c 6e 22 3b 0a 20 20 20 24 63 6e 74 20 2b 3d 20 34 3b 0a 7d 0a 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_WebShell_cgi_pl
@@ -13990,7 +13643,7 @@ rule SHELL_WebShell_cgi_pl
 		$ = {20 69 6e 64 65 78 20 3d 3e 20 24 69 6e 64 65 78 2c 20 6e 75 6d 62 65 72 20 3d 3e 20 24 69 6e 64 65 78 2b 31 2c 0a 20 20 20 20 20 20 20 20 20 20 20 20 66 69 72 73 74 20 3d 3e 20 24 69 6e 64 65}
 		$ = {20 7d 0a 20 20 20 20 20 20 20 20 69 66 20 28 24 61 6c 6c 6f 77 29 20 7b 0a 20 20 20 20 20 20 20 20 20 20 20 20 24 63 6f 6d 6d 61 6e 64 20 3d 7e 20 2f 5e 28 5c 77 2b 29 2f 3b 0a 20 20 20 20 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_telnet_pl
@@ -14002,7 +13655,7 @@ rule SHELL_telnet_pl
 		$ = {20 3d 20 24 43 75 72 72 65 6e 74 44 69 72 3b 0a 09 09 24 43 6f 6d 6d 61 6e 64 20 3d 20 22 63 64 20 5c 22 24 43 75 72 72 65 6e 74 44 69 72 5c 22 22 2e 24 43 6d 64 53 65 70 2e 22 63 64 20 24 31}
 		$ = {28 24 54 61 72 67 65 74 46 69 6c 65 29 20 69 66 28 24 54 61 72 67 65 74 46 69 6c 65 20 3d 20 24 43 75 72 72 65 6e 74 44 69 72 29 20 3d 7e 20 6d 2f 5b 5c 5c 5c 2f 5d 24 2f 3b 0a 09 09 24 54 61}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_lurm_safemod_on_cgi_pl
@@ -14014,7 +13667,7 @@ rule SHELL_lurm_safemod_on_cgi_pl
 		$ = {24 70 61 72 61 6d 7b 63 6d 64 7d 7c 22 29 3b 0a 77 68 69 6c 65 20 28 24 6c 69 6e 65 3d 3c 46 49 4c 45 48 41 4e 44 4c 45 3e 29 7b 70 72 69 6e 74 20 22 24 6c 69 6e 65 22 3b 7d 3b 0a 63 6c 6f 73}
 		$ = {6f 64 79 3e 0a 3c 2f 68 74 6d 6c 3e 0a 5b 69 6e 73 33 5d 0a 0a 73 75 62 20 72 65 61 64 5f 70 61 72 61 6d 20 7b 0a 24 62 75 66 66 65 72 20 3d 20 22 24 45 4e 56 7b 27 51 55 45 52 59 5f 53 54 52}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_remot_shell_pl
@@ -14026,7 +13679,7 @@ rule SHELL_remot_shell_pl
 		$ = {22 3b 0a 0a 24 73 79 73 74 65 6d 3d 27 2f 62 69 6e 2f 73 68 27 3b 0a 0a 73 6f 63 6b 65 74 28 53 45 52 56 45 52 2c 20 50 46 5f 49 4e 45 54 2c 20 53 4f 43 4b 5f 53 54 52 45 41 4d 2c 20 24 70 72}
 		$ = {2c 20 53 4f 4d 41 58 43 4f 4e 4e 29 20 6f 72 20 64 69 65 20 22 6c 69 73 74 65 6e 3a 20 24 21 22 3b 0a 0a 66 6f 72 28 3b 24 70 61 64 64 72 3d 61 63 63 65 70 74 28 43 4c 49 45 4e 54 2c 20 53 45}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_hmass__priv8_mass_defacor__pl
@@ -14038,7 +13691,7 @@ rule SHELL_hmass__priv8_mass_defacor__pl
 		$ = {6e 63 74 69 6f 6e 0a 73 75 62 20 67 6f 70 79 61 6c 61 7b 0a 28 24 66 69 6c 65 31 2c 24 66 69 6c 65 32 29 3d 40 5f 3b 0a 24 6e 20 3d 20 46 69 6c 65 48 61 6e 64 6c 65 2d 3e 6e 65 77 28 22 24 66}
 		$ = {20 7d 0a 73 75 62 20 63 68 65 63 6b 64 69 72 7b 24 64 69 72 3d 73 68 69 66 74 3b 20 69 66 28 21 2d 64 20 24 64 69 72 29 7b 70 72 69 6e 74 20 22 5c 6e 5c 22 24 64 69 72 5c 22 20 70 61 74 68 20}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_AUTHORS
@@ -14046,7 +13699,7 @@ rule SHELL_AUTHORS
 	strings:
 		$ = {4d 61 69 6e 20 61 75 74 68 6f 72 3a 20 46 6c 6f 72 69 61 6e 20 52 6f 73 73 6f 6c 20 3c 72 6f 73 73 6f 6c 40 79 6f 6c 61 2e 69 6e 2d 62 65 72 6c 69 6e 2e 64 65 3e 0a 0a 54 68 61 6e 6b 73 20 67 6f 65 73 20 74 6f 20 4d 61 72 74 69 6e 20 47 65 69 73 6c 65 72 20 3c 67 69 6d 70 73 74 65 72 40 67 69 6d 70 73 74 65 72 2e 63 6f 6d 3e 20 77 68 6f 20 68 61 73 20 77 72 69 74 74 65 6e 0a 50 68 70 53 68 65 6c 6c 20 28 68 74 74 70 3a 2f 2f 77 77 77 2e 67 69 6d 70 73 74 65 72 2e 63 6f 6d 2f 77 69 6b 69 2f 50 68 70 53 68 65 6c 6c 29 2e 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_COPYING
@@ -14058,7 +13711,7 @@ rule SHELL_COPYING
 		$ = {68 6f 72 2f 64 6f 6e 6f 72 20 74 6f 20 64 65 63 69 64 65 20 69 66 20 68 65 20 6f 72 20 73 68 65 20 69 73 20 77 69 6c 6c 69 6e 67 0a 74 6f 20 64 69 73 74 72 69 62 75 74 65 20 73 6f 66 74 77 61}
 		$ = {20 50 41 52 54 49 45 53 20 4f 52 20 41 20 46 41 49 4c 55 52 45 20 4f 46 20 54 48 45 20 50 52 4f 47 52 41 4d 20 54 4f 20 4f 50 45 52 41 54 45 20 57 49 54 48 20 41 4e 59 20 4f 54 48 45 52 0a 50}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_ChangeLog
@@ -14066,7 +13719,7 @@ rule SHELL_ChangeLog
 	strings:
 		$ = {50 65 72 6c 57 65 62 53 68 65 6c 6c 20 30 2e 31 0a 0a 20 20 2a 20 49 6e 69 74 69 61 6c 20 52 65 6c 65 61 73 65 2e 0a 0a 20 2d 2d 20 46 6c 6f 72 69 61 6e 20 52 6f 73 73 6f 6c 20 3c 72 6f 73 73 6f 6c 40 79 6f 6c 61 2e 69 6e 2d 62 65 72 6c 69 6e 2e 64 65 3e 20 20 4d 6f 6e 2c 20 31 35 20 4d 61 72 20 32 30 30 34 20 32 32 3a 33 37 20 2b 30 31 30 30 0a 0a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_perlwebshell_cgi
@@ -14078,7 +13731,7 @@ rule SHELL_perlwebshell_cgi
 		$ = {76 61 6c 75 65 3d 5c 22 24 63 77 64 5c 22 20 73 65 6c 65 63 74 65 64 3d 5c 22 73 65 6c 65 63 74 65 64 5c 22 3e 43 75 72 72 65 6e 74 20 44 69 72 65 63 74 6f 72 79 3c 2f 6f 70 74 69 6f 6e 3e 5c}
 		$ = {64 6f 6e 6c 79 3d 22 72 65 61 64 6f 6e 6c 79 22 3e 29 20 2e 20 22 5c 6e 22 3b 0a 66 6f 72 65 61 63 68 20 28 3c 43 4f 4d 48 3e 29 20 7b 0a 20 20 20 20 70 72 69 6e 74 20 24 5f 3b 0a 7d 0a 70 72}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_pps_v3_5_pl
@@ -14090,7 +13743,7 @@ rule SHELL_pps_v3_5_pl
 		$ = {6e 3e 43 75 72 72 65 6e 74 20 71 75 65 72 79 3a 3c 2f 73 70 61 6e 3e 3c 2f 74 64 3e 3c 74 64 3e 3c 66 6f 72 6d 20 6e 61 6d 65 3d 27 71 75 65 72 79 73 27 20 6d 65 74 68 6f 64 3d 27 70 6f 73 74}
 		$ = {3e 66 65 74 63 68 72 6f 77 5f 61 72 72 61 79 72 65 66 29 7b 24 73 34 65 74 2b 2b 3b 73 71 6c 5f 64 61 74 61 62 61 73 65 73 5f 66 6f 72 6d 28 29 3b 7d 24 72 63 3d 24 73 74 68 2d 3e 66 69 6e 69}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_pps_v4_0_pl
@@ -14102,7 +13755,7 @@ rule SHELL_pps_v4_0_pl
 		$ = {7d 73 75 62 20 73 71 6c 5f 64 61 74 61 62 61 73 65 73 5f 66 6f 72 6d 7b 70 72 69 6e 74 20 27 3c 74 72 3e 3c 66 6f 72 6d 20 6d 65 74 68 6f 64 3d 70 6f 73 74 20 6e 61 6d 65 3d 64 64 27 2e 24 24}
 		$ = {3b 73 65 63 75 72 65 22 3a 22 22 29 3b 7d 73 65 74 43 6f 6f 6b 69 65 28 22 63 6f 6c 75 6d 6e 22 2c 22 24 63 6f 6c 75 6d 6e 22 2c 22 22 2c 22 2f 22 29 3b 3c 2f 73 63 72 69 70 74 3e 0a 45 4e 44}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_pps_v1_0_pl
@@ -14114,7 +13767,7 @@ rule SHELL_pps_v1_0_pl
 		$ = {6d 7b 70 72 69 6e 74 20 27 3c 74 72 3e 3c 66 6f 72 6d 20 6d 65 74 68 6f 64 3d 70 6f 73 74 20 6e 61 6d 65 3d 64 64 27 2e 24 24 72 65 66 5b 30 5d 2e 27 20 61 63 74 69 6f 6e 3d 22 27 2e 24 53 63}
 		$ = {45 4e 44 3b 0a 3c 53 43 52 49 50 54 20 4c 41 4e 47 55 41 47 45 3d 22 4a 61 76 61 53 63 72 69 70 74 22 3e 66 75 6e 63 74 69 6f 6e 20 73 65 74 43 6f 6f 6b 69 65 20 28 6e 61 6d 65 2c 76 61 6c 75}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_pps_v3_0_pl
@@ -14126,7 +13779,7 @@ rule SHELL_pps_v3_0_pl
 		$ = {61 6d 65 3d 22 61 22 20 76 61 6c 75 65 3d 22 73 71 6c 5f 71 75 65 72 79 22 3e 3c 2f 66 6f 72 6d 3e 0a 45 4e 44 0a 7d 73 75 62 20 73 71 6c 5f 63 71 5f 66 6f 72 6d 20 7b 70 72 69 6e 74 20 3c 3c}
 		$ = {60 20 4c 49 4d 49 54 20 30 2c 33 30 22 3b 70 72 69 6e 74 20 27 3c 73 63 72 69 70 74 3e 64 6f 63 75 6d 65 6e 74 2e 71 75 65 72 79 73 2e 71 75 65 72 79 2e 76 61 6c 75 65 3d 22 27 2e 24 7a 61 70}
 	condition:
-		 any of them
+		3 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_3_2_3__0__php
@@ -14134,7 +13787,7 @@ rule SHELL_SHELLDETECT_b374k_3_2_3__0__php
 	strings:
 		$ = {24 62 33 37 34 6b 3d 24 66 75 6e 63}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_CryptoPHP_0__0__php
@@ -14142,7 +13795,7 @@ rule SHELL_SHELLDETECT_CryptoPHP_0__0__php
 	strings:
 		$ = {6f 70 65 6e 73 73 6c 5f 73 65 61 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_2_3_min_2__0__php
@@ -14150,7 +13803,7 @@ rule SHELL_SHELLDETECT_b374k_2_3_min_2__0__php
 	strings:
 		$ = {33 36 45 4f 57 43 6f 6f 36 68 47 72 35 67 58 52 52 50 50 54 2b 6e 58 6d 57 2b 52 76 4a 77 51 70 42 6a 75 59 43 65 33 30 38 72 6e 52 44 6a 47 55 46 50 66 37 35 44 54 59 70 71 66 59 65 2b 55 32}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_2_3_poly_2__0__php
@@ -14158,7 +13811,7 @@ rule SHELL_SHELLDETECT_b374k_2_3_poly_2__0__php
 	strings:
 		$ = {48 4a 33 48 6a 75 76 63 63 6b 5a 66 35 63 4c 77 77 41 59 48 7a 41 6d 47 41 59 73 35 35 7a 7a 35 77 53 69 4b 4f 61 65 6e 76 32 7a 50 54 75 75 30 6d 75 54 65 56 56 2b 74 70 56 67 75 79 37 6a 38 73 35 54 54 75 47 79 2f 34 66}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_2_4_min_2__0__php
@@ -14166,7 +13819,7 @@ rule SHELL_SHELLDETECT_b374k_2_4_min_2__0__php
 	strings:
 		$ = {6c 66 51 68 4a 58 62 42 32 41 55 31 6d 30 69 38 41 56 59 6f 69 6d 54 79 32 56 65 66 4e 6d 65 41 58 36 4f 63 49 79 6f 52 62 67 39 79 41 4d 70 71 46 71 77 55 74 64 51 63 77 34 6c 65 37 67 42 73 74 65 51 75 36 43 66 49 78 72 39 41 75 79 44 59 55 48 62 41 42 50 76 55 46 47 6f 64 51 5a 6e 41 67 77 67 58 77}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_2_4_poly_2__0__php
@@ -14174,7 +13827,7 @@ rule SHELL_SHELLDETECT_b374k_2_4_poly_2__0__php
 	strings:
 		$ = {78 49 6f 6e 58 41 53 31 53 65 77 38 36 4e 66 72 54 31 6a 4e 6b 44 70 65 45 51 4a 4b 47 45 59 61 32 4b 54 31 52 61 5a 69 4a 51 55 4b 45 65 76 79 5a 68 5a 42 72 70 4a 55 30 2b 48 66 4a 58 4d 49 75 36 36 71 6e 67 47 67 74 63 4c 30 72 52 66 6f 47 42 76 75 57 41 4d 72 6a 34 54 5a 77 4b 45 37 2f 5a 77 35 2b 4c 38 59 64 78 75 78 39 50 58 34 6e 54 77 38}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_2_5_2__0__php
@@ -14182,7 +13835,7 @@ rule SHELL_SHELLDETECT_b374k_2_5_2__0__php
 	strings:
 		$ = {41 43 77 72 33 64 77 53 6c 6d 6e 38 5a 6d 67 69 36 2f 69 39 61 4a 78 30 4a 2f 47 74 49 6c 71 37 39 5a 62 4b 71 54 50 35 46 36 72 51 67 32 75 78 66 70 6b 37 53 75 37 38 4d 52 56 57 31 34 31 39 62 30 69 62 2f 6b 68 7a 74 4c 77 64 55 34 53 38 61 53 50 56 66 74 43 53 43 61 76 79 6c 48 55 31 42 56 66 36 53 52 4d 70 78 48 45 4b 38}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_2_6_2__0__php
@@ -14190,7 +13843,7 @@ rule SHELL_SHELLDETECT_b374k_2_6_2__0__php
 	strings:
 		$ = {75 67 43 54 66 34 41 61 32 71 79 74 32 4d 4a 64 49 50 4d 55 6a 71 58 67 71 30 74 57 73 53 46 57 7a 56 54 52 30 58 59 67 52 6d 48 4e 73 38 2f 30 35 67 4e 63 45 54 69 2f 2b 37 66 56 32 2b 4d 47 45 59 53 63 42 55 5a 55 6a 7a 31 46 35 32 64 36 76 30 70 31 64 72 62 45 6b 35 74 74 59 36 37 43 64 6b 4b 4f 32 75 4d 72 46 39 35 32 70 4c 44 4f 31}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_2_7_2__0__php
@@ -14198,7 +13851,7 @@ rule SHELL_SHELLDETECT_b374k_2_7_2__0__php
 	strings:
 		$ = {68 74 58 39 38 37 47 4e 71 71 4e 76 66 35 6f 61 7a 69 6c 47 4a 6a 73 7a 49 59 39 6d 70 6c 74 71 7a 56 35 78 31 70 76 33 49 35 6a 69 75 34 42 4a 76 6a 61 2b 35 4b 4d 70 62 7a 69 63 6c 4e 35 74 58 42 74 75 34 61 59 6f 73 70 65 4e 58 42 70 6a 78 33 70 67 64 38 33 6d 45 62 6a 44 54 30 6d 6b 64 72 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_2_8_2__0__php
@@ -14206,7 +13859,7 @@ rule SHELL_SHELLDETECT_b374k_2_8_2__0__php
 	strings:
 		$ = {2b 30 49 50 37 71 65 61 78 6c 36 53 4e 57 2b 73 57 56 4c 35 46 48 4e 6f 76 6a 4e 6c 71 6b 2b 56 30 75 50 77 59 6a 78 78 78 71 71 59 6a 6e 42 55 41 2b 30 67 62 6d 48 31 2f 46 33 43 79 31 4d 4e 66 56 6c 44 31 76 36 36 63 48 59 79 7a 32 31 78 69 77 79 78 68 38 44 58 6f 71 31 56 52 33 46 36 35 36 4a 58 68 58 53 2b 2b 61 38 44 56 4d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_my_b374k_28__0__php
@@ -14214,7 +13867,7 @@ rule SHELL_SHELLDETECT_my_b374k_28__0__php
 	strings:
 		$ = {47 43 6e 7a 44 6c 76 74 36 55 6f 6e 33 6d 53 30 64 34 51 51 38 32 36 62 43 6b 4a 77 38 66 36 43 46 46 72 45 5a 4b 39 68 70 6d 36 66 71 48 36 32 36 6e 72 76 63 39 56 4b 45 53 6c 51 59 59 78 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_31__0__php
@@ -14222,7 +13875,7 @@ rule SHELL_SHELLDETECT_cmd_31__0__php
 	strings:
 		$ = {4f 77 6b 4a 43 51 6f 4b 43 57 52 6c 5a 6d 46 31 62 48 51 36 43 67 6b 4a 63 32 68 76 64 31 39 73 63 79 67 70 4f 77 70 39 43 67 70 6d 64 57 35 6a 64 47 6c 76 62 69 42 7a 61 47 39 33 58 32 78 7a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_noname_1__0__php
@@ -14230,7 +13883,7 @@ rule SHELL_SHELLDETECT_noname_1__0__php
 	strings:
 		$ = {5a 64 6b 6f 35 54 54 4e 55 52 33 4a 49 4c 32 52 76 56 30 4d 30 57 47 31 42 52 57 74 5a 56 6e 64 42 51 31 56 51 55 57 51 77 52 32 77 30 4e 33 56 45 61 6c 49 69 4c 43 4a 6a 4d 6b 64 79 62 56 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_hiddenshell_0__0__php
@@ -14238,7 +13891,7 @@ rule SHELL_SHELLDETECT_hiddenshell_0__0__php
 	strings:
 		$ = {32 68 76 49 43 49 4e 43 67 6b 4a 43 51 6b 4e 43 67 6b 4a 49 43 41 67 49 41 6b 38 64 48 49 2b 44 51 6f 4a 43 51 6b 67 49 43 41 67 49 43 41 38 64 47 51 67 64 32 6c 6b 64 47 67 39 4a 7a 45 77 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_24__0__pl
@@ -14246,7 +13899,7 @@ rule SHELL_SHELLDETECT_cmd_24__0__pl
 	strings:
 		$ = {63 6d 39 73 4f 69 42 75 62 79 31 6a 59 57 4e 6f 5a 56 78 75 49 6a 73 4e 43 6e 42 79 61 57 35 30 49 43 4a 44 62 32 35 30 5a 57 35 30 4c 58 52 35 63 47 55 36 49 48 52 6c 65 48 51 76 61 48 52 74}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_s72shell_0__0__php
@@ -14254,7 +13907,7 @@ rule SHELL_SHELLDETECT_s72shell_0__0__php
 	strings:
 		$ = {4a 79 50 67 6f 67 49 43 41 67 49 43 41 67 49 44 78 69 63 69 41 76 50 6a 78 69 63 69 41 76 50 69 41 38 4c 32 5a 76 62 6e 51 2b 43 69 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 50 44}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cocacola_shell_0__0__php
@@ -14262,7 +13915,7 @@ rule SHELL_SHELLDETECT_cocacola_shell_0__0__php
 	strings:
 		$ = {47 52 6c 5a 6d 46 31 62 48 52 66 64 58 4e 6c 58 32 46 71 59 58 67 67 50 53 42 30 63 6e 56 6c 4f 79 41 6b 5a 47 56 6d 59 58 56 73 64 46 39 6a 61 47 46 79 63 32 56 30 49 44 30 67 4a 31 64 70 62 6d 52 76 64 33 4d 74 4d 54 49 31 4d 53 63 37 49 47 6c 6d 4b 43 46 6c 62 58 42 30 65 53 67 6b 58 31 4e 46 55 6c 5a 46 55 6c 73 6e 53 46 52 55 55 46 39 56 55 30 56 53 58 30 46 48 52 55 35}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_10__0__php
@@ -14270,7 +13923,7 @@ rule SHELL_SHELLDETECT_shell_uploader_10__0__php
 	strings:
 		$ = {50 45 5a 50 55 6b 30 67 52 55 35 44 56 46 6c 51 52 54 30 69 62 58 56 73 64 47 6c 77 59 58 4a 30 4c 32 5a 76 63 6d 30 74 5a 47 46 30 59 53 49 67 51 55 4e 55 53 55 39 4f 50 53 4a 31 63 47 78 76}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cih_0__0__php
@@ -14278,7 +13931,7 @@ rule SHELL_SHELLDETECT_cih_0__0__php
 	strings:
 		$ = {57 46 79 5a 32 6c 75 4c 57 78 6c 5a 6e 51 36 4e 58 42 34 4f 79 42 74 59 58 4a 6e 61 57 34 74 63 6d 6c 6e 61 48 51 36 4e 58 42 34 4f 79 63 2b 62 47 39 6e 61 57 34 36 50 43 39 7a 63 47 46 75 50}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_26__0__php
@@ -14286,7 +13939,7 @@ rule SHELL_SHELLDETECT_c99_26__0__php
 	strings:
 		$ = {5a 69 6b 75 49 69 6b 68 50 43 39 69 50 6a 77 76 59 32 56 75 64 47 56 79 50 69 49 37 66 51 30 4b 49 43 42 6c 62 48 4e 6c 49 48 74 6c 59 32 68 76 49 43 49 38 59 32 56 75 64 47 56 79 50 6a 78 69}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_lamashell_0__0__php
@@ -14294,7 +13947,7 @@ rule SHELL_SHELLDETECT_lamashell_0__0__php
 	strings:
 		$ = {68 62 57 55 6f 4b 53 34 69 58 47 34 69 4f 77 30 4b 50 7a 34 4e 43 6a 78 6f 63 6a 34 38 4c 33 42 79 5a 54 34 4e 43 69 41 67 49 43 41 38 64 47 46 69 62 47 55 2b 50 47 5a 76 63 6d 30 67 62 57 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_jackal_1__0__php
@@ -14302,7 +13955,7 @@ rule SHELL_SHELLDETECT_jackal_1__0__php
 	strings:
 		$ = {46 55 6c 73 6e 55 6b 56 4e 54 31 52 46 58 30 46 45 52 46 49 6e 58 54 74 6c 59 32 68 76 49 43 49 67 63 32 6c 36 5a 54 30 78 4e 7a 34 38 4c 33 52 6b 50 6a 77 76 64 48 49 2b 50 48 52 79 50 6a 78}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cshell_0__0__php
@@ -14310,7 +13963,7 @@ rule SHELL_SHELLDETECT_cshell_0__0__php
 	strings:
 		$ = {43 67 6b 4a 43 57 46 79 63 6d 46 35 58 33 42 76 63 43 67 6b 5a 58 68 34 4b 54 73 4e 43 67 30 4b 43 51 6b 4a 50 7a 34 4e 43 67 30 4b 43 51 6b 4a 52 47 6c 79 5a 57 4e 30 62 33 4a 35 49 45 4e 76}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_troyan_0__0__php
@@ -14318,7 +13971,7 @@ rule SHELL_SHELLDETECT_troyan_0__0__php
 	strings:
 		$ = {61 7a 45 31 4d 43 35 6b 5a 53 39 33 4c 32 52 6b 49 69 6b 37 49 41 30 4b 63 33 6c 7a 64 47 56 74 4b 43 4a 6a 61 47 31 76 5a 43 41 33 4e 7a 63 67 5a 47 51 69 4b 54 73 67 44 51 70 7a 65 58 4e 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_13__0__php
@@ -14326,7 +13979,7 @@ rule SHELL_SHELLDETECT_b374k_13__0__php
 	strings:
 		$ = {51 5a 30 6c 53 4e 6e 4a 57 55 46 64 74 52 6a 46 61 56 6d 74 6d 65 48 4a 42 4c 7a 52 48 55 31 45 79 4b 33 5a 48 5a 32 4e 47 57 56 64 61 65 46 5a 69 64 55 6c 78 59 30 77 30 4d 6c 4e 4e 53 54 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_32__0__php
@@ -14334,7 +13987,7 @@ rule SHELL_SHELLDETECT_phpshell_32__0__php
 	strings:
 		$ = {6c 64 47 4d 76 61 48 52 30 63 47 51 75 59 32 39 75 5a 67 30 4b 4c 32 56 30 59 79 39 77 64 58 4a 6c 4c 57 5a 30 63 47 51 75 59 32 39 75 5a 67 30 4b 4c 32 56 30 59 79 39 77 64 58 4a 6c 4c 57 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_9__0__php
@@ -14342,7 +13995,7 @@ rule SHELL_SHELLDETECT_filesman_9__0__php
 	strings:
 		$ = {4c 56 55 6e 4c 43 41 6e 59 33 41 34 4e 6a 59 6e 4b 54 73 4b 43 53 52 76 63 48 52 66 59 32 68 68 63 6e 4e 6c 64 48 4d 67 50 53 41 6e 4a 7a 73 4b 43 57 5a 76 63 6d 56 68 59 32 67 6f 4a 47 4e 6f}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cyberspy5_0__0__asp
@@ -14350,7 +14003,7 @@ rule SHELL_SHELLDETECT_cyberspy5_0__0__asp
 	strings:
 		$ = {4f 6e 52 2f 56 55 41 6a 51 43 5a 6b 4e 32 51 69 4b 32 51 79 53 33 67 76 66 79 42 4a 66 30 35 72 54 57 35 65 57 53 78 4b 4e 46 6c 50 64 32 77 6d 53 6d 68 42 61 47 4d 76 57 43 67 72 4c 6c 4a 78}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_14__0__php
@@ -14358,7 +14011,7 @@ rule SHELL_SHELLDETECT_filesman_14__0__php
 	strings:
 		$ = {46 6a 64 47 6c 76 62 6a 30 6e 61 48 52 30 63 44 6f 76 4c 33 64 33 64 79 35 6f 59 58 4e 6f 59 32 68 6c 59 32 74 6c 63 69 35 6b 5a 53 39 6f 59 58 4e 6f 4c 6d 4e 6e 61 54 38 6e 4f 32 52 76 59 33}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_18__0__jsp
@@ -14366,7 +14019,7 @@ rule SHELL_SHELLDETECT_cmd_18__0__jsp
 	strings:
 		$ = {35 51 56 56 51 67 64 48 6c 77 5a 54 31 7a 64 57 4a 74 61 58 51 67 64 6d 46 73 64 57 55 39 4a 31 4a 31 62 69 63 2b 44 51 6f 38 4c 30 5a 50 55 6b 30 2b 44 51 6f 4e 43 6a 77 6c 51 43 42 77 59 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_33__0__php
@@ -14374,7 +14027,7 @@ rule SHELL_SHELLDETECT_phpshell_33__0__php
 	strings:
 		$ = {79 63 57 31 43 63 46 64 46 64 33 56 52 62 55 55 78 4d 30 45 33 62 6c 64 5a 52 57 4a 4e 53 31 64 57 4e 57 34 32 63 6a 42 6c 4e 43 74 36 61 47 52 36 55 6a 63 72 65 45 46 54 65 6b 4a 6b 54 48 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_spam_trustapp_0__1__php
@@ -14382,7 +14035,7 @@ rule SHELL_SHELLDETECT_spam_trustapp_0__1__php
 	strings:
 		$ = {50 47 45 67 61 48 4a 6c 5a 6a 30 69 61 48 52 30 63 44 6f 76 4c 33 64 33 64 79 35 77 62 32 78 70 63 32 68 75 5a 58 64 7a 4c 6d 4e 76 62 53 39 70 62 6d 52 6c 65 43 35 77 61 48 41}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_arab_black_hat_0__0__pl
@@ -14390,7 +14043,7 @@ rule SHELL_SHELLDETECT_arab_black_hat_0__0__pl
 	strings:
 		$ = {5a 58 4d 67 50 54 78 4a 54 6b 5a 50 50 69 41 37 43 6d 4e 73 62 33 4e 6c 4b 45 6c 4f 52 6b 38 70 4f 77 70 7a 65 58 4e 30 5a 57 30 6f 51 47 78 70 62 6d 56 7a 4b 54 73 4b 63 48 4a 70 62 6e 51 6e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_indishell_0__0__php
@@ -14398,7 +14051,7 @@ rule SHELL_SHELLDETECT_indishell_0__0__php
 	strings:
 		$ = {49 44 77 76 64 47 46 69 62 47 55 2b 44 51 6f 67 49 43 41 67 49 43 41 67 49 41 30 4b 44 51 6f 6e 4f 79 41 4e 43 67 30 4b 50 7a 34 4e 43 6a 78 69 62 32 52 35 49 47 4a 6e 59 32 39 73 62 33 49 39}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_savefile_0__0__php
@@ -14406,7 +14059,7 @@ rule SHELL_SHELLDETECT_savefile_0__0__php
 	strings:
 		$ = {50 44 39 51 53 46 41 4b 4a 47 5a 70 62 47 55 67 50 53 42 6d 61 57 78 6c 58 32 64 6c 64 46 39 6a 62 32 35 30 5a 57 35 30 63 79 67 69 61 48 52 30 63 44 6f 76 4c 32 68 68 59 32 74 6c 63 6d 78 68}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_gnyshell_0__0__php
@@ -14414,7 +14067,7 @@ rule SHELL_SHELLDETECT_gnyshell_0__0__php
 	strings:
 		$ = {79 63 33 52 68 64 48 56 7a 49 69 6b 37 49 41 30 4b 49 43 41 6b 63 33 46 73 63 58 56 70 59 32 74 73 59 58 56 75 59 32 68 62 58 53 41 39 49 47 46 79 63 6d 46 35 4b 43 4a 54 5a 58 4a 32 5a 58 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_hackerps_0__0__php
@@ -14422,7 +14075,7 @@ rule SHELL_SHELLDETECT_hackerps_0__0__php
 	strings:
 		$ = {63 47 46 75 50 6a 77 76 5a 6d 39 75 64 44 34 38 5a 6d 39 75 64 43 42 6a 62 32 78 76 63 6a 30 69 49 7a 46 45 4d 55 51 78 52 43 49 67 5a 6d 46 6a 5a 54 30 69 56 47 46 6f 62 32 31 68 49 69 42 7a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpfilemanager_2__2__php
@@ -14430,7 +14083,7 @@ rule SHELL_SHELLDETECT_phpfilemanager_2__2__php
 	strings:
 		$ = {6d 64 30 61 44 6f 67 49 69 41 75 49 48 4e 30 63 6d 78 6c 62 69 67 6b 64 47 68 70 63 79 30 2b 59 58 4a 6a 61 47 6c 32 5a 53 6b 70 4f 77 30 4b 49 43 41 67 49 43 41 67 49 43 42 6f 5a 57 46 6b 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_joomla_spam_1__1__php
@@ -14438,7 +14091,7 @@ rule SHELL_SHELLDETECT_joomla_spam_1__1__php
 	strings:
 		$ = {48 67 79 4d 47 5a 63 65 44 49 7a 58 48 67 78 4e 31 78 34 4d 44 46 51 58 48 67 78 4d 7a 46 63 65 44 42 6b 4e 47 5a 63 65 44 4e 6c 53 31 78 34 4d 47 4d 77 57 46 78 34 4d 54 56 63 65 44 45 79 58}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_jackal_0__0__php
@@ -14446,7 +14099,7 @@ rule SHELL_SHELLDETECT_jackal_0__0__php
 	strings:
 		$ = {66 55 6b 56 52 56 55 56 54 56 46 73 6e 64 58 4e 6c 63 69 64 64 4b 53 6b 2f 4a 46 39 53 52 56 46 56 52 56 4e 55 57 79 64 31 63 32 56 79 4a 31 30 36 49 69 49 37 44 51 70 70 5a 69 67 68 5a 6d 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_elmaliseker_0__0__asp
@@ -14454,7 +14107,7 @@ rule SHELL_SHELLDETECT_elmaliseker_0__0__asp
 	strings:
 		$ = {30 4c 6b 5a 76 63 6d 30 6f 49 6d 31 76 5a 47 55 69 4b 53 6b 4b 5a 58 68 70 64 43 42 7a 64 57 49 4b 5a 57 35 6b 49 47 6c 6d 43 6d 56 75 5a 43 42 70 5a 67 6f 4b 53 48 52 74 62 45 68 6c 59 57 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_irc_bot_0__0__pl
@@ -14462,7 +14115,7 @@ rule SHELL_SHELLDETECT_irc_bot_0__0__pl
 	strings:
 		$ = {62 32 4e 72 5a 58 51 73 49 43 4a 51 55 6b 6c 57 54 56 4e 48 49 43 52 77 63 6d 6c 75 64 47 77 67 4f 69 42 4f 62 57 46 77 49 46 42 76 63 6e 52 54 59 32 46 75 49 44 45 79 4f 69 34 67 4e 48 77 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_4__0__php
@@ -14470,7 +14123,7 @@ rule SHELL_SHELLDETECT_cmd_4__0__php
 	strings:
 		$ = {49 43 41 67 49 43 41 67 49 43 42 6c 59 32 68 76 49 43 49 38 63 48 4a 6c 50 69 49 37 43 69 41 67 49 43 41 67 49 43 41 67 4a 47 4e 74 5a 43 41 39 49 43 67 6b 58 31 4a 46 55 56 56 46 55 31 52 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_2__0__php
@@ -14478,7 +14131,7 @@ rule SHELL_SHELLDETECT_phpshell_2__0__php
 	strings:
 		$ = {42 49 4b 30 52 58 61 31 45 35 4d 46 5a 71 59 55 74 44 64 56 6c 78 61 6e 42 53 51 6b 35 6a 55 33 56 5a 4d 32 35 59 52 48 5a 61 56 44 6c 69 53 6b 39 79 4d 46 6c 68 51 6d 31 48 62 58 52 71 51 32}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_teamsql_0__0__php
@@ -14486,7 +14139,7 @@ rule SHELL_SHELLDETECT_teamsql_0__0__php
 	strings:
 		$ = {5a 53 42 70 5a 44 30 69 64 47 46 69 62 47 55 79 49 69 42 7a 64 48 6c 73 5a 54 30 69 59 6d 39 79 5a 47 56 79 4c 57 4e 76 62 47 78 68 63 48 4e 6c 4f 69 42 6a 62 32 78 73 59 58 42 7a 5a 54 73 69}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_pbot_1__0__php
@@ -14494,7 +14147,7 @@ rule SHELL_SHELLDETECT_pbot_1__0__php
 	strings:
 		$ = {43 52 31 63 6d 77 67 4b 51 30 4b 43 51 6c 37 44 51 6f 4a 43 51 6b 6b 56 56 4a 4d 63 47 4e 7a 49 44 30 67 4b 43 42 77 59 58 4a 7a 5a 56 39 31 63 6d 77 6f 49 43 52 31 63 6d 77 67 4b 53 41 70 4f}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_23__0__php
@@ -14502,7 +14155,7 @@ rule SHELL_SHELLDETECT_cmd_23__0__php
 	strings:
 		$ = {50 44 39 77 61 48 41 67 61 57 59 6f 61 58 4e 7a 5a 58 51 6f 4a 46 39 53 52 56 46 56 52 56 4e 55 57 79 4a 6a 62 32 31 74 5a 57 35 30 49 6c 30 70 4b 53 42 37 49 47 56 32 59 57 77 6f 59 6d 46 7a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_insomnia_0__0__aspx
@@ -14510,7 +14163,7 @@ rule SHELL_SHELLDETECT_insomnia_0__0__aspx
 	strings:
 		$ = {6c 36 5a 51 6f 67 49 43 41 67 49 43 41 67 49 48 56 70 62 6e 51 67 62 6b 52 6c 5a 6d 46 31 62 48 52 55 61 57 31 6c 54 33 56 30 4c 41 6b 4a 43 51 6b 4a 43 53 38 76 49 48 52 70 62 57 55 74 62 33}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_antisecshell_0__0__php
@@ -14518,7 +14171,7 @@ rule SHELL_SHELLDETECT_antisecshell_0__0__php
 	strings:
 		$ = {59 6a 49 35 63 6d 46 58 56 57 39 4a 62 6c 70 77 59 7a 4a 73 4d 47 4e 35 53 58 4e 4b 53 46 70 77 59 7a 4a 73 4d 46 6b 79 4f 54 46 69 62 6c 46 77 54 33 64 76 64 6b 78 35 51 54 4e 68 52 46 4a 31}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_21__0__php
@@ -14526,7 +14179,7 @@ rule SHELL_SHELLDETECT_cmd_21__0__php
 	strings:
 		$ = {42 49 59 58 5a 6c 62 6d 46 79 5a 43 41 74 4c 54 34 4e 43 6a 77 68 4c 53 30 67 54 57 39 6b 61 57 5a 70 5a 57 51 67 64 47 38 67 64 32 39 79 61 79 42 33 61 58 52 6f 49 44 51 34 4e 44 4e 77 61 48}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_aspydrv_0__0__vb
@@ -14534,7 +14187,7 @@ rule SHELL_SHELLDETECT_aspydrv_0__0__vb
 	strings:
 		$ = {36 5a 54 30 69 49 43 59 67 5a 6d 6b 72 4d 79 41 6d 49 43 49 67 63 33 52 35 62 47 55 39 49 69 4a 69 59 57 4e 72 5a 33 4a 76 64 57 35 6b 4c 57 4e 76 62 47 39 79 4f 69 42 79 5a 32 49 6f 4e 44 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_951078biJ_0__0__php
@@ -14542,7 +14195,7 @@ rule SHELL_SHELLDETECT_951078biJ_0__0__php
 	strings:
 		$ = {46 53 59 6b 6f 79 54 6e 52 61 51 32 52 6b 55 46 51 77 61 56 70 75 55 6e 64 59 4d 6c 70 77 59 6b 64 57 5a 6d 52 59 51 57 6c 4c 55 30 46 6e 53 55 68 7a 5a 31 46 48 57 6a 42 6a 52 6a 6c 33 5a 46}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_15__0__php
@@ -14550,7 +14203,7 @@ rule SHELL_SHELLDETECT_phpshell_15__0__php
 	strings:
 		$ = {74 42 51 6c 70 34 51 55 68 6d 4e 6b 35 4a 4d 56 52 32 55 32 30 32 62 30 52 34 53 6c 6f 77 51 32 4d 35 62 6c 5a 48 4e 58 42 71 65 47 30 31 57 44 6c 61 52 47 45 79 55 55 4e 46 57 47 45 72 56 45}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_nstview_0__0__php
@@ -14558,7 +14211,7 @@ rule SHELL_SHELLDETECT_nstview_0__0__php
 	strings:
 		$ = {43 42 6a 62 32 78 76 63 6a 31 6e 63 6d 56 6c 62 6a 34 6b 5a 43 38 6b 5a 47 56 73 58 32 59 67 52 45 56 4d 52 56 52 46 52 43 45 38 4c 32 5a 76 62 6e 51 2b 50 43 39 69 50 67 30 4b 50 47 4a 79 50}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_12__0__php
@@ -14566,7 +14219,7 @@ rule SHELL_SHELLDETECT_filesman_12__0__php
 	strings:
 		$ = {57 31 77 4c 6e 4e 78 62 43 49 70 4f 77 30 4b 49 43 41 67 49 43 41 67 49 43 42 6f 5a 57 46 6b 5a 58 49 6f 49 6b 4e 76 62 6e 52 6c 62 6e 51 74 56 48 6c 77 5a 54 6f 67 64 47 56 34 64 43 39 77 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_unitxshell_0__0__pl
@@ -14574,7 +14227,7 @@ rule SHELL_SHELLDETECT_unitxshell_0__0__pl
 	strings:
 		$ = {74 4c 53 30 74 4c 53 30 74 4c 53 30 74 4c 53 30 74 4c 53 30 74 4c 51 70 7a 64 57 49 67 52 47 39 33 62 6d 78 76 59 57 52 47 61 57 78 6c 43 6e 73 4b 43 53 4d 67 61 57 59 67 62 6d 38 67 5a 6d 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpspy_2__0__php
@@ -14582,7 +14235,7 @@ rule SHELL_SHELLDETECT_phpspy_2__0__php
 	strings:
 		$ = {5a 48 59 58 4a 51 5a 6e 4a 6c 4f 58 41 35 4b 32 68 52 56 6e 56 4e 56 54 4e 31 56 6d 68 32 4e 47 56 55 4e 7a 4a 79 55 6b 6c 4c 53 58 70 4e 4c 31 4e 49 65 45 59 34 65 54 64 73 51 7a 6c 4c 5a 54}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_antisecshell_2__0__php
@@ -14590,7 +14243,7 @@ rule SHELL_SHELLDETECT_antisecshell_2__0__php
 	strings:
 		$ = {41 67 49 44 77 76 64 48 49 2b 44 51 6f 67 49 43 41 67 49 43 41 67 49 44 77 76 64 47 46 69 62 47 55 2b 44 51 6f 67 49 43 41 67 49 43 41 67 49 44 78 30 5a 58 68 30 59 58 4a 6c 59 53 42 75 59 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_getlinks_0__1__php
@@ -14598,7 +14251,7 @@ rule SHELL_SHELLDETECT_getlinks_0__1__php
 	strings:
 		$ = {61 48 52 30 63 44 6f 76 4c 7a 6b 31 4c 6a 45 32 4f 43 34 78 4f 54 45 75 4d 54 45 32 4c 30 64 6c 64 45 78 70 62 6d 74 7a 4c 6d 46 7a 61 48 67 2f 61 47 39 7a 64 44 30 3d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_imhapftp_0__0__php
@@ -14606,7 +14259,7 @@ rule SHELL_SHELLDETECT_imhapftp_0__0__php
 	strings:
 		$ = {61 57 34 67 58 43 4a 62 4a 54 4a 64 58 43 49 36 58 47 35 62 4a 54 46 64 49 69 77 4b 4a 30 74 76 63 48 6c 68 62 47 46 66 5a 6d 6c 73 5a 58 4d 6e 49 44 30 2b 49 43 64 44 62 33 42 70 62 79 42 78}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_stressbypass_0__0__php
@@ -14614,7 +14267,7 @@ rule SHELL_SHELLDETECT_stressbypass_0__0__php
 	strings:
 		$ = {36 4c 32 46 77 63 48 4e 6c 63 6e 59 76 64 33 64 33 4c 33 4e 6f 5a 57 78 73 63 79 38 69 50 67 6f 67 49 43 41 67 49 43 41 67 49 44 78 6d 62 32 35 30 49 47 4e 76 62 47 39 79 50 53 49 6a 52 45 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_1__0__asp
@@ -14622,7 +14275,7 @@ rule SHELL_SHELLDETECT_cmd_1__0__asp
 	strings:
 		$ = {30 67 63 33 70 44 54 55 51 73 49 48 4e 36 56 47 56 74 63 45 5a 70 62 47 55 4b 43 6b 39 75 49 45 56 79 63 6d 39 79 49 46 4a 6c 63 33 56 74 5a 53 42 4f 5a 58 68 30 43 67 6f 6e 49 43 30 74 49 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_darkshell_0__0__php
@@ -14630,7 +14283,7 @@ rule SHELL_SHELLDETECT_darkshell_0__0__php
 	strings:
 		$ = {39 74 62 57 46 75 5a 44 6f 67 50 47 6c 75 63 48 56 30 49 47 35 68 62 57 55 67 50 53 41 6e 59 32 31 6b 4a 7a 35 63 62 69 49 37 44 51 6f 67 49 43 41 67 49 43 41 67 49 43 42 6c 59 32 68 76 49 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_configspy_1__0__php
@@ -14638,7 +14291,7 @@ rule SHELL_SHELLDETECT_configspy_1__0__php
 	strings:
 		$ = {69 63 76 63 48 56 69 62 47 6c 6a 58 32 68 30 62 57 77 76 61 57 35 6a 4c 32 4e 76 62 6d 5a 70 5a 79 35 70 62 6d 4d 75 63 47 68 77 4a 79 77 6b 64 58 4e 6c 63 69 34 6e 4c 54 4d 7a 4c 6e 52 34 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_isko_0__0__php
@@ -14646,7 +14299,7 @@ rule SHELL_SHELLDETECT_isko_0__0__php
 	strings:
 		$ = {56 44 42 4e 52 6a 68 45 61 33 4e 78 63 56 4a 6a 56 6c 42 76 54 31 46 6b 55 6d 31 68 63 57 63 33 65 45 78 76 65 47 4d 72 53 31 46 4c 55 48 45 33 4e 33 70 36 4f 56 42 69 65 48 6c 57 59 6c 64 4d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpfilemanager_4__0__php
@@ -14654,7 +14307,7 @@ rule SHELL_SHELLDETECT_phpfilemanager_4__0__php
 	strings:
 		$ = {74 5a 53 67 67 4a 46 39 47 53 55 78 46 55 31 73 6e 64 58 42 73 62 32 46 6b 5a 57 52 6d 61 57 78 6c 4a 31 31 62 4a 32 35 68 62 57 55 6e 58 53 6b 67 62 33 49 67 5a 47 6c 6c 4b 43 52 6c 63 6e 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_worse_0__0__php
@@ -14662,7 +14315,7 @@ rule SHELL_SHELLDETECT_worse_0__0__php
 	strings:
 		$ = {49 47 35 68 62 57 55 39 58 43 4a 66 59 32 31 6b 58 43 49 67 64 6d 46 73 64 57 55 39 58 43 49 69 4c 69 52 6a 64 58 4a 79 5a 57 35 30 51 30 31 45 4c 69 4a 63 49 6a 34 38 4c 33 52 6b 50 69 49 37}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_zaco_0__0__php
@@ -14670,7 +14323,7 @@ rule SHELL_SHELLDETECT_zaco_0__0__php
 	strings:
 		$ = {66 5a 48 56 74 63 43 6b 37 43 6d 56 73 63 32 55 4b 65 77 70 70 5a 69 67 68 4a 48 52 76 58 32 5a 70 62 47 55 70 43 6e 73 4b 61 47 56 68 5a 47 56 79 4b 43 64 44 62 32 35 30 5a 57 35 30 4c 56 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mysql_6__2__php
@@ -14678,7 +14331,7 @@ rule SHELL_SHELLDETECT_mysql_6__2__php
 	strings:
 		$ = {6e 49 67 4c 7a 34 69 4f 69 63 6e 4b 53 34 69 50 43 39 30 5a 44 34 69 4f 77 30 4b 49 43 41 67 66 51 30 4b 49 43 41 67 4a 48 4e 78 62 47 52 79 4c 6a 30 69 50 43 39 30 63 6a 35 63 62 69 49 37 44}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_server_config_0__0__php
@@ -14686,7 +14339,7 @@ rule SHELL_SHELLDETECT_server_config_0__0__php
 	strings:
 		$ = {54 47 52 44 65 55 73 4e 43 6c 56 52 52 6d 74 6f 59 6d 49 32 54 7a 68 6b 4d 33 51 79 4c 7a 4e 71 55 6c 52 4b 4c 30 6c 78 55 33 64 44 51 55 6c 72 52 56 70 42 52 54 4e 69 4d 57 4a 43 64 54 59 34}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_crystal_2__0__php
@@ -14694,7 +14347,7 @@ rule SHELL_SHELLDETECT_crystal_2__0__php
 	strings:
 		$ = {52 73 5a 54 34 4e 43 69 41 38 63 33 52 35 62 47 55 2b 44 51 6f 67 49 43 42 30 5a 43 42 37 44 51 6f 67 49 43 42 6d 62 32 35 30 4c 57 5a 68 62 57 6c 73 65 54 6f 67 64 6d 56 79 5a 47 46 75 59 53}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_29__0__php
@@ -14702,7 +14355,7 @@ rule SHELL_SHELLDETECT_c99_29__0__php
 	strings:
 		$ = {42 6a 4f 54 6c 77 61 48 42 70 59 33 45 75 63 47 68 77 49 44 38 67 61 48 52 30 63 44 6f 76 4c 32 4e 6a 64 47 56 68 62 53 35 75 64 57 74 73 5a 57 39 75 4c 6e 56 7a 44 51 6f 6a 49 79 4d 6a 49 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_16__0__asp
@@ -14710,7 +14363,7 @@ rule SHELL_SHELLDETECT_cmd_16__0__asp
 	strings:
 		$ = {67 4a 79 41 67 52 6d 6c 73 5a 54 6f 67 49 43 41 67 51 32 31 6b 51 58 4e 77 4c 6d 46 7a 63 41 30 4b 49 43 41 6e 49 43 42 42 64 58 52 6f 62 33 49 36 49 43 42 4e 59 57 4e 6c 62 79 41 38 62 57 46}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ahlisyurga_shell_0__0__php
@@ -14718,7 +14371,7 @@ rule SHELL_SHELLDETECT_ahlisyurga_shell_0__0__php
 	strings:
 		$ = {61 55 31 4e 51 32 46 36 61 79 38 31 4e 30 46 6c 62 6e 56 30 62 6a 64 57 54 6c 4e 6b 61 55 46 55 53 58 6c 4e 4c 33 68 6f 65 6b 35 32 59 7a 6b 79 5a 54 46 31 52 56 67 32 55 30 39 33 4e 48 6b 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_0__0__php
@@ -14726,7 +14379,7 @@ rule SHELL_SHELLDETECT_wso_0__0__php
 	strings:
 		$ = {34 6b 63 33 52 79 4b 54 73 4e 43 67 6b 4a 43 51 6b 4a 59 6e 4a 6c 59 57 73 37 44 51 6f 4a 43 51 6b 4a 59 32 46 7a 5a 53 41 6e 62 58 6c 7a 63 57 77 6e 4f 67 30 4b 43 51 6b 4a 43 51 6c 79 5a 58}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_15__0__php
@@ -14734,7 +14387,7 @@ rule SHELL_SHELLDETECT_shell_uploader_15__0__php
 	strings:
 		$ = {61 55 74 54 51 6e 5a 6a 61 55 4a 36 5a 45 68 4b 63 47 4d 7a 55 6e 6c 4c 51 31 4a 35 57 6c 64 61 62 47 4e 74 56 6e 6c 4d 51 30 6f 7a 57 6c 64 4b 61 47 4a 49 55 6d 68 4a 61 57 74 6e 59 6a 4e 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_5__0__php
@@ -14742,7 +14395,7 @@ rule SHELL_SHELLDETECT_wso_5__0__php
 	strings:
 		$ = {35 62 31 39 66 78 71 33 30 6a 44 38 64 2f 77 70 35 43 32 6e 43 77 33 47 67 4a 4f 63 31 44 62 45 69 57 4d 6e 54 68 4d 37 39 55 75 53 4a 73 35 4e 46 31 68 67 36 34 57 6c 75 34 75 78 6d 2b 50 76 66 73 2b 4d 58 6c 62 61 46 38 42 70 7a 33 58 64 7a 2b 39 78 47 78 75 6b 30 57 6a 30 4e 68 72 4e 6a 45 61 6c 58 75 41 48 49 57 73 78 36 34 66 2b 34 4c 47 31 73 31 62 71 75 77 4e 6e 35 73 65 64 57 65 52 32 6e 44 2b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_batavi4_0__0__php
@@ -14750,7 +14403,7 @@ rule SHELL_SHELLDETECT_batavi4_0__0__php
 	strings:
 		$ = {69 38 76 56 57 35 30 64 57 73 67 62 33 42 30 61 57 31 68 62 47 6c 7a 59 58 4e 70 49 48 56 72 64 58 4a 68 62 69 42 6b 59 57 34 67 61 32 56 6a 5a 58 42 68 64 47 46 75 4c 67 6f 6b 61 57 31 6e 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_blindshell_0__0__c
@@ -14758,7 +14411,7 @@ rule SHELL_SHELLDETECT_blindshell_0__0__c
 	strings:
 		$ = {41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 42 39 43 69 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 47 52 31 63 44 49 6f 61 57 35 7a 62 32}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_crystal_1__0__php
@@ -14766,7 +14419,7 @@ rule SHELL_SHELLDETECT_crystal_1__0__php
 	strings:
 		$ = {62 57 55 67 4c 6d 68 30 63 47 46 7a 63 33 64 6b 49 6a 34 4e 43 67 6b 4a 5a 6d 6c 75 5a 43 42 68 62 47 77 67 4c 6d 68 30 63 47 46 7a 63 33 64 6b 49 47 5a 70 62 47 56 7a 50 43 39 76 63 48 52 70}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r3laps3_0__0__php
@@ -14774,7 +14427,7 @@ rule SHELL_SHELLDETECT_r3laps3_0__0__php
 	strings:
 		$ = {45 52 52 62 30 70 44 55 57 74 4b 51 31 52 57 61 6d 46 45 53 57 64 68 53 46 4a 30 59 6b 68 4f 64 30 35 58 54 54 42 4e 56 33 68 71 59 55 52 47 65 57 4e 35 61 45 46 61 62 6b 6b 78 54 56 64 52 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_w3dshell_0__0__php
@@ -14782,7 +14435,7 @@ rule SHELL_SHELLDETECT_w3dshell_0__0__php
 	strings:
 		$ = {49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 4a 48 5a 32 49 44 30 67 5a 6d 46 73 63 32 55 37 43 69 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_6__0__php
@@ -14790,7 +14443,7 @@ rule SHELL_SHELLDETECT_b374k_6__0__php
 	strings:
 		$ = {6c 59 4b 79 39 74 63 55 51 34 62 32 46 56 61 6c 68 77 62 7a 42 4e 54 6b 30 33 5a 56 55 72 4d 6a 59 34 52 7a 64 57 4f 46 70 30 55 6b 52 75 61 46 70 78 53 44 52 43 4e 47 56 4c 55 33 51 30 5a 46}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_4__0__php
@@ -14798,7 +14451,7 @@ rule SHELL_SHELLDETECT_b374k_4__0__php
 	strings:
 		$ = {56 77 70 6c 59 57 67 30 51 7a 56 4c 64 55 64 74 61 45 30 78 62 56 67 30 62 48 68 4b 55 6b 6f 33 52 44 46 53 64 33 6f 7a 56 6c 6c 75 52 46 42 49 59 6b 35 73 57 58 49 35 56 79 74 78 51 6e 5a 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_albanianshell_0__0__php
@@ -14806,7 +14459,7 @@ rule SHELL_SHELLDETECT_albanianshell_0__0__php
 	strings:
 		$ = {64 43 49 37 4c 79 39 6d 62 33 4a 74 59 58 52 76 44 51 6f 6b 53 47 46 34 63 47 78 76 63 6d 56 79 58 32 46 6b 5a 48 49 39 4a 48 4a 6c 62 57 39 30 5a 56 39 68 5a 47 52 79 4c 69 4a 30 62 32 39 73}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_hostdevil_0__0__pl
@@ -14814,7 +14467,7 @@ rule SHELL_SHELLDETECT_hostdevil_0__0__pl
 	strings:
 		$ = {73 67 5a 58 68 70 64 44 73 67 66 53 42 6c 62 48 4e 6c 49 48 73 4e 43 67 6b 4a 4a 6e 52 35 63 47 55 6f 4a 47 4e 6f 59 57 34 73 4a 47 4a 31 5a 79 77 6b 5a 47 39 79 61 79 77 69 52 47 56 4e 62 33}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_420532shell_0__0__php
@@ -14822,7 +14475,7 @@ rule SHELL_SHELLDETECT_420532shell_0__0__php
 	strings:
 		$ = {68 62 48 4e 6c 4b 53 42 37 44 51 6f 4a 43 51 6b 4a 61 57 59 67 4b 43 52 6d 49 43 45 39 49 43 63 75 4a 79 41 6d 4a 69 41 6b 5a 69 41 68 50 53 41 6e 4c 69 34 6e 49 43 59 6d 49 43 46 6b 5a 57 77}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_server_config_1__0__php
@@ -14830,7 +14483,7 @@ rule SHELL_SHELLDETECT_server_config_1__0__php
 	strings:
 		$ = {31 70 63 58 51 72 65 45 52 6d 53 7a 4e 42 54 54 64 79 59 57 31 35 51 6b 5a 53 54 55 56 36 59 6b 39 4b 55 6a 42 43 56 7a 4a 6e 64 6a 68 74 62 6b 78 35 62 6b 68 77 4b 33 42 6e 55 57 4e 4b 63 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_php_mailer_0__1__php
@@ -14838,7 +14491,7 @@ rule SHELL_SHELLDETECT_php_mailer_0__1__php
 	strings:
 		$ = {59 57 6c 73 4f 6a 77 76 5a 6d 39 75 64 44 34 38 4c 32 52 70 64 6a 34 38 4c 33 52 6b 50 67 30 4b 43 51 6b 4a 50 48 52 6b 49 48 64 70 5a 48 52 6f 50 53 49 78 4f 43 55 69 50 6a 78 6d 62 32 35 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_11__0__php
@@ -14846,7 +14499,7 @@ rule SHELL_SHELLDETECT_shell_uploader_11__0__php
 	strings:
 		$ = {4a 35 49 48 52 79 78 72 44 68 75 35 74 6a 49 47 74 6f 61 53 42 69 34 62 71 76 64 43 44 45 6b 65 47 36 70 33 55 67 5a 2b 47 37 72 57 6b 67 64 47 6c 75 49 47 35 6f 34 62 71 76 62 69 42 72 34 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_udpflooder_0__0__php
@@ -14854,7 +14507,7 @@ rule SHELL_SHELLDETECT_udpflooder_0__0__php
 	strings:
 		$ = {62 58 42 73 5a 58 52 6c 49 47 46 6d 64 47 56 79 4f 69 42 37 4a 47 56 34 5a 57 4e 66 64 47 6c 74 5a 58 30 67 63 32 56 6a 62 32 35 6b 63 31 78 75 49 6a 73 4e 43 67 30 4b 66 51 30 4b 44 51 70 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_egyspider_0__0__php
@@ -14862,7 +14515,7 @@ rule SHELL_SHELLDETECT_egyspider_0__0__php
 	strings:
 		$ = {31 4b 30 52 71 4f 45 4d 33 62 6a 56 47 4e 46 5a 61 56 6a 56 5a 56 47 78 68 63 6d 70 44 65 57 78 61 52 54 64 6c 63 6a 45 7a 52 48 52 4b 5a 6c 45 78 63 6d 6c 56 55 6e 4a 6b 62 57 52 59 65 47 70}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_629788tryag_0__0__php
@@ -14870,7 +14523,7 @@ rule SHELL_SHELLDETECT_629788tryag_0__0__php
 	strings:
 		$ = {57 55 69 4f 77 30 4b 43 51 6b 4a 66 51 30 4b 43 51 6b 4a 61 57 59 6f 49 57 6c 7a 58 32 46 79 63 6d 46 35 4b 43 52 70 62 6d 52 6c 65 46 73 6b 61 32 35 68 62 57 56 64 4b 53 6b 67 65 77 30 4b 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_efso2_1__0__asp
@@ -14878,7 +14531,7 @@ rule SHELL_SHELLDETECT_efso2_1__0__asp
 	strings:
 		$ = {41 64 41 44 39 2f 31 55 41 51 41 41 6a 41 45 41 41 4a 67 42 70 41 46 63 41 58 67 41 36 41 45 4d 41 54 67 42 79 41 47 4d 41 63 67 42 49 41 47 6f 41 2f 66 38 37 41 43 41 41 57 51 42 4c 41 46 63}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_21__0__php
@@ -14886,7 +14539,7 @@ rule SHELL_SHELLDETECT_c99_21__0__php
 	strings:
 		$ = {6c 50 56 77 69 64 47 56 34 64 46 77 69 49 47 35 68 62 57 55 39 58 43 4a 68 59 33 52 68 63 6d 4e 69 64 57 5a 6d 58 33 42 68 64 47 68 63 49 69 42 32 59 57 78 31 5a 54 31 63 49 6e 6c 34 58 32 46}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phantasma_0__0__php
@@ -14894,7 +14547,7 @@ rule SHELL_SHELLDETECT_phantasma_0__0__php
 	strings:
 		$ = {67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 49 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 5a 6d 46 30 59 57 77 6f 58 43 4a 56 62 6d 46 69 62 47 55 67 64 47 38 67 59 32 68 68 62 6d 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_12__0__php
@@ -14902,7 +14555,7 @@ rule SHELL_SHELLDETECT_b374k_12__0__php
 	strings:
 		$ = {6e 5a 75 4e 47 5a 68 65 47 56 5a 57 56 42 30 4e 57 31 57 54 54 42 6f 59 57 78 4e 62 6a 46 77 51 6d 63 32 51 79 39 4f 53 46 4a 57 59 6a 59 78 5a 46 46 49 4e 48 6c 52 54 6e 42 73 53 46 6f 30 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_jspreverse_0__0__jsp
@@ -14910,7 +14563,7 @@ rule SHELL_SHELLDETECT_jspreverse_0__0__jsp
 	strings:
 		$ = {53 49 70 4f 77 30 4b 44 51 6f 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 55 33 52 79 5a 57 46 74 51 32 39 75 62 6d 56 6a 64 47 39 79 49 47 39 31 64 48 42 31 64 45 4e 76 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_19__0__php
@@ -14918,7 +14571,7 @@ rule SHELL_SHELLDETECT_c99_19__0__php
 	strings:
 		$ = {66 51 70 6c 62 48 4e 6c 61 57 59 67 4b 43 67 6b 62 57 39 6b 5a 53 41 6d 49 44 42 34 4e 6a 41 77 4d 43 6b 67 50 54 30 39 49 44 42 34 4e 6a 41 77 4d 43 6b 67 65 79 52 30 49 44 30 67 49 6d 49 69}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_0__0__php
@@ -14926,7 +14579,7 @@ rule SHELL_SHELLDETECT_cmd_0__0__php
 	strings:
 		$ = {5a 58 5a 68 62 43 67 69 61 57 59 6f 61 58 4e 7a 5a 58 51 6f 58 43 52 66 55 6b 56 52 56 55 56 54 56 46 73 6e 59 32 67 6e 58 53 6b 67 4a 69 59 67 4b 47 31 6b 4e 53 68 63 4a 46 39 53 52 56 46 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_3__0__php
@@ -14934,7 +14587,7 @@ rule SHELL_SHELLDETECT_cmd_3__0__php
 	strings:
 		$ = {2b 43 6a 78 69 63 6a 34 4b 50 47 6c 75 63 48 56 30 49 48 52 35 63 47 55 39 56 45 56 59 56 43 42 75 59 57 31 6c 50 53 49 74 59 32 31 6b 49 69 42 7a 61 58 70 6c 50 54 59 30 49 48 5a 68 62 48 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpfilemanager_1__2__php
@@ -14942,7 +14595,7 @@ rule SHELL_SHELLDETECT_phpfilemanager_1__2__php
 	strings:
 		$ = {67 49 43 41 67 49 47 6c 6d 49 43 68 31 62 6d 78 70 62 6d 73 6f 4a 47 5a 70 62 47 55 70 4b 58 73 4e 43 69 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 61 57 59}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ajan_0__0__asp
@@ -14950,7 +14603,7 @@ rule SHELL_SHELLDETECT_ajan_0__0__asp
 	strings:
 		$ = {70 61 32 45 75 64 33 4a 70 64 47 55 67 49 6b 4e 76 62 6e 4e 30 49 47 46 6b 55 32 46 32 5a 55 4e 79 5a 57 46 30 5a 55 39 32 5a 58 4a 58 63 6d 6c 30 5a 53 41 39 49 44 49 69 49 43 59 67 64 6d 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ipays777_1__0__php
@@ -14958,7 +14611,7 @@ rule SHELL_SHELLDETECT_ipays777_1__0__php
 	strings:
 		$ = {49 43 34 69 49 45 64 43 49 6a 73 67 66 51 30 4b 49 43 41 67 49 47 56 73 63 32 56 70 5a 69 41 6f 49 43 52 7a 61 58 70 6c 49 44 34 39 49 44 45 77 4e 44 67 31 4e 7a 59 67 4b 53 42 37 49 43 52 7a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_safemode_1__0__php
@@ -14966,7 +14619,7 @@ rule SHELL_SHELLDETECT_safemode_1__0__php
 	strings:
 		$ = {78 69 59 58 49 74 5a 47 46 79 61 33 4e 6f 59 57 52 76 64 79 31 6a 62 32 78 76 63 6a 6f 67 63 32 6c 73 64 6d 56 79 4f 77 6f 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 42 7a 59 33 4a 76 62 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_20__0__php
@@ -14974,7 +14627,7 @@ rule SHELL_SHELLDETECT_r57_20__0__php
 	strings:
 		$ = {49 43 4d 67 49 43 41 67 49 79 4d 4e 43 69 38 71 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_1__0__php
@@ -14982,7 +14635,7 @@ rule SHELL_SHELLDETECT_shell_uploader_1__0__php
 	strings:
 		$ = {55 32 31 33 56 7a 52 4b 62 46 4e 46 54 30 6c 6b 59 6a 68 47 61 30 6c 54 4b 31 4d 78 54 56 56 31 55 31 64 74 63 54 6c 78 56 47 6f 32 4d 55 4a 73 4f 48 52 54 5a 46 6b 77 4d 57 34 7a 59 33 70 36}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_17__0__php
@@ -14990,7 +14643,7 @@ rule SHELL_SHELLDETECT_r57_17__0__php
 	strings:
 		$ = {79 63 39 50 69 63 6d 49 7a 45 77 4e 54 63 37 4a 69 4d 78 4d 44 67 32 4f 79 59 6a 4d 54 41 33 4f 54 73 6d 49 7a 45 77 4e 7a 59 37 4a 69 4d 78 4d 44 63 79 4f 79 59 6a 4d 54 41 35 4d 44 73 6d 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_9__0__php
@@ -14998,7 +14651,7 @@ rule SHELL_SHELLDETECT_c99_9__0__php
 	strings:
 		$ = {6f 67 49 43 41 67 66 51 30 4b 49 43 41 67 66 51 30 4b 49 43 42 39 44 51 6f 67 49 43 52 6f 5a 57 46 6b 57 79 52 72 58 53 41 39 49 43 49 38 59 6a 34 69 4c 69 52 6f 5a 57 46 6b 57 79 52 72 58 53}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mahkeme_0__0__php
@@ -15006,7 +14659,7 @@ rule SHELL_SHELLDETECT_mahkeme_0__0__php
 	strings:
 		$ = {53 49 70 4f 79 42 6c 65 47 6c 30 4f 79 42 39 43 67 6f 76 4c 30 31 68 61 47 74 6c 62 57 55 67 52 57 74 73 5a 57 35 30 61 58 4e 70 62 6d 55 67 57 57 46 72 59 57 78 68 62 69 59 6a 4d 7a 41 31 4f}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_rootshell_3__0__php
@@ -15014,7 +14667,7 @@ rule SHELL_SHELLDETECT_rootshell_3__0__php
 	strings:
 		$ = {76 62 6d 63 2b 43 6a 78 69 50 6a 78 31 50 6a 78 6a 5a 57 35 30 5a 58 49 2b 50 44 39 77 61 48 41 67 5a 57 4e 6f 62 79 41 69 56 47 68 70 63 79 42 7a 5a 58 4a 32 5a 58 49 67 61 47 46 7a 49 47 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_10__0__php
@@ -15022,7 +14675,7 @@ rule SHELL_SHELLDETECT_filesman_10__0__php
 	strings:
 		$ = {46 69 59 7a 55 31 59 6a 67 69 4f 79 41 6a 63 6d 39 76 64 41 30 4b 4a 47 4e 76 62 47 39 79 49 44 30 67 49 69 4e 6b 5a 6a 55 69 4f 77 30 4b 4a 47 52 6c 5a 6d 46 31 62 48 52 66 59 57 4e 30 61 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpfilemanager_0__2__php
@@ -15030,7 +14683,7 @@ rule SHELL_SHELLDETECT_phpfilemanager_0__2__php
 	strings:
 		$ = {68 62 44 30 6b 5a 47 6c 79 58 32 46 30 64 57 46 73 4a 79 74 68 63 6d 63 72 4a 79 38 6e 4f 77 30 4b 66 51 30 4b 5a 6e 56 75 59 33 52 70 62 32 34 67 63 32 68 76 64 31 39 75 59 57 31 6c 63 79 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_clearshell_0__0__php
@@ -15038,7 +14691,7 @@ rule SHELL_SHELLDETECT_clearshell_0__0__php
 	strings:
 		$ = {57 45 78 44 61 46 56 58 5a 6a 4e 4a 54 6a 52 52 63 31 46 54 52 56 49 34 62 43 74 31 57 55 64 51 5a 6e 46 71 51 32 64 35 56 6a 46 57 4d 46 52 30 59 31 70 51 64 44 4a 56 4d 6e 64 47 61 55 6c 6a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_lizozim_1__0__php
@@ -15046,7 +14699,7 @@ rule SHELL_SHELLDETECT_lizozim_1__0__php
 	strings:
 		$ = {77 59 58 4e 7a 64 32 51 38 4c 32 39 77 64 47 6c 76 62 6a 34 4e 43 6a 78 76 63 48 52 70 62 32 34 67 64 6d 46 73 64 57 55 39 49 6d 35 6c 64 48 4e 30 59 58 51 67 4c 57 46 75 49 48 77 67 5a 33 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ironshell_2__0__php
@@ -15054,7 +14707,7 @@ rule SHELL_SHELLDETECT_ironshell_2__0__php
 	strings:
 		$ = {70 4f 77 30 4b 49 48 30 4e 43 69 42 70 5a 69 67 6b 58 31 42 50 55 31 52 62 4a 33 42 68 63 33 4d 6e 58 53 41 39 50 53 41 6b 63 47 46 7a 63 33 64 76 63 6d 51 70 44 51 6f 67 65 77 30 4b 49 43 41}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_al_marhum_0__0__php
@@ -15062,7 +14715,7 @@ rule SHELL_SHELLDETECT_al_marhum_0__0__php
 	strings:
 		$ = {59 7a 5a 31 6b 72 56 6e 52 52 51 32 46 4a 52 56 42 68 63 6c 70 6c 64 6a 64 4a 4f 54 4a 57 51 54 4e 6e 53 31 5a 32 5a 56 45 77 4e 6a 68 72 4d 32 35 43 64 6d 4e 6e 53 44 41 79 54 47 39 4a 5a 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_configspy_3__0__php
@@ -15070,7 +14723,7 @@ rule SHELL_SHELLDETECT_configspy_3__0__php
 	strings:
 		$ = {4a 6b 5a 58 49 39 4d 54 34 4b 43 6a 78 30 63 69 42 69 5a 32 4e 76 62 47 39 79 50 57 64 79 5a 57 56 75 50 6a 78 30 5a 44 35 6b 4d 47 31 68 61 57 35 7a 50 43 39 30 5a 44 34 38 64 47 51 2b 64 58}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_lolipop_0__0__php
@@ -15078,7 +14731,7 @@ rule SHELL_SHELLDETECT_lolipop_0__0__php
 	strings:
 		$ = {42 6f 63 47 4a 69 4a 31 30 70 4b 53 41 4b 65 79 41 4b 5a 57 4e 6f 62 79 41 69 50 47 4e 6c 62 6e 52 6c 63 6a 34 38 64 47 46 69 62 47 55 67 59 6d 39 79 5a 47 56 79 50 54 41 67 64 32 6c 6b 64 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpbackdoor_0__0__php
@@ -15086,7 +14739,7 @@ rule SHELL_SHELLDETECT_phpbackdoor_0__0__php
 	strings:
 		$ = {56 55 56 54 56 46 73 6e 5a 47 6c 79 4a 31 30 37 43 67 6b 4a 4a 47 5a 75 59 57 31 6c 50 53 52 49 56 46 52 51 58 31 42 50 55 31 52 66 52 6b 6c 4d 52 56 4e 62 4a 32 5a 70 62 47 56 66 62 6d 46 74}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_devilzshell_0__0__php
@@ -15094,7 +14747,7 @@ rule SHELL_SHELLDETECT_devilzshell_0__0__php
 	strings:
 		$ = {4a 79 4f 44 46 34 55 79 39 78 53 45 52 6c 65 6e 4e 4a 4c 32 34 77 4f 53 39 51 63 44 5a 6c 5a 56 67 34 57 69 39 4c 64 6c 51 35 53 69 73 76 5a 56 70 79 4b 30 64 31 59 54 68 77 64 6b 64 74 5a 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ajax_command_shell_1__0__php
@@ -15102,7 +14755,7 @@ rule SHELL_SHELLDETECT_ajax_command_shell_1__0__php
 	strings:
 		$ = {62 57 56 75 64 43 35 6a 63 6d 56 68 64 47 56 46 62 47 56 74 5a 57 35 30 4b 43 4a 77 63 6d 55 69 4b 54 73 4e 43 6c 39 68 4c 6e 4e 30 65 57 78 6c 4c 6d 52 70 63 33 42 73 59 58 6b 39 49 6d 6c 75}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_nshell_0__0__php
@@ -15110,7 +14763,7 @@ rule SHELL_SHELLDETECT_nshell_0__0__php
 	strings:
 		$ = {63 47 55 39 64 47 56 34 64 43 49 75 51 43 52 66 55 45 39 54 56 46 73 6e 5a 6d 6c 73 5a 53 64 64 4c 69 49 2b 50 47 4a 79 50 69 49 37 43 6d 56 6a 61 47 38 67 49 6a 78 70 62 6e 42 31 64 43 42 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_spam_2__0__php
@@ -15118,7 +14771,7 @@ rule SHELL_SHELLDETECT_spam_2__0__php
 	strings:
 		$ = {47 56 68 5a 47 56 79 49 43 34 39 49 43 49 6b 62 57 56 7a 63 32 46 6e 5a 56 78 79 58 47 34 69 4f 77 30 4b 49 43 41 67 49 43 41 67 53 57 59 67 4b 43 52 6d 61 57 78 6c 58 32 35 68 62 57 55 70 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_connectback2_0__0__pl
@@ -15126,7 +14779,7 @@ rule SHELL_SHELLDETECT_connectback2_0__0__pl
 	strings:
 		$ = {4d 6a 45 67 58 47 34 69 4f 79 41 4b 66 53 41 4b 64 58 4e 6c 49 46 4e 76 59 32 74 6c 64 44 73 67 43 6e 56 7a 5a 53 42 47 61 57 78 6c 53 47 46 75 5a 47 78 6c 4f 79 41 4b 63 32 39 6a 61 32 56 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_king511_0__0__pl
@@ -15134,7 +14787,7 @@ rule SHELL_SHELLDETECT_king511_0__0__pl
 	strings:
 		$ = {70 4f 6e 67 36 4c 32 63 70 65 77 6f 6d 62 47 6c 73 4b 43 51 78 4b 54 73 4b 63 48 4a 70 62 6e 51 67 54 56 6c 47 53 55 78 46 49 43 51 78 4c 69 49 75 64 48 68 30 49 43 49 37 43 6d 5a 76 63 69 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cristercorp_infocollector_1__0__php
@@ -15142,7 +14795,7 @@ rule SHELL_SHELLDETECT_cristercorp_infocollector_1__0__php
 	strings:
 		$ = {43 67 6b 4a 49 47 6c 6d 49 43 68 7a 64 48 49 75 61 57 35 6b 5a 58 68 50 5a 69 68 6b 62 33 51 73 4b 47 78 68 64 43 73 79 4b 53 6b 39 50 53 30 78 4b 58 73 4b 43 67 6b 4a 49 43 41 67 49 47 46 73}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_teamsql_1__0__php
@@ -15150,7 +14803,7 @@ rule SHELL_SHELLDETECT_teamsql_1__0__php
 	strings:
 		$ = {58 68 30 50 53 49 6a 4e 32 45 33 59 7a 64 6b 49 6a 34 4e 43 69 41 67 49 43 41 67 49 43 41 38 5a 47 6c 32 49 47 46 73 61 57 64 75 50 53 4a 6a 5a 57 35 30 5a 58 49 69 50 67 30 4b 49 43 41 67 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_smtpd_0__1__py
@@ -15158,7 +14811,7 @@ rule SHELL_SHELLDETECT_smtpd_0__1__py
 	strings:
 		$ = {43 41 67 49 43 41 67 49 43 42 6a 62 32 35 30 59 57 6c 75 61 57 35 6e 49 47 45 67 59 43 34 6e 49 47 5a 76 62 47 78 76 64 32 56 6b 49 47 4a 35 49 47 39 30 61 47 56 79 49 48 52 6c 65 48 51 67 61}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_dc3shell_0__0__php
@@ -15166,7 +14819,7 @@ rule SHELL_SHELLDETECT_dc3shell_0__0__php
 	strings:
 		$ = {4d 47 52 36 59 55 38 31 64 45 68 6a 4d 6d 70 31 59 6c 49 7a 54 6d 38 33 62 54 42 6b 65 6d 45 4b 54 7a 56 30 53 47 4d 79 61 6e 56 69 55 6a 4e 4f 62 7a 64 74 4d 47 52 36 59 55 38 31 64 45 68 6a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_dc3shell_1__0__php
@@ -15174,7 +14827,7 @@ rule SHELL_SHELLDETECT_dc3shell_1__0__php
 	strings:
 		$ = {67 6b 58 31 42 50 55 31 52 62 4a 32 4e 76 62 57 31 68 62 6d 51 6e 58 53 6b 37 44 51 70 6c 59 32 68 76 49 43 49 38 4c 33 52 6c 65 48 52 68 63 6d 56 68 50 69 49 37 44 51 70 6c 65 47 6c 30 4f 77}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_34__0__php
@@ -15182,7 +14835,7 @@ rule SHELL_SHELLDETECT_cmd_34__0__php
 	strings:
 		$ = {32 55 75 59 32 39 74 43 67 6f 67 49 45 4e 76 63 48 6c 79 61 57 64 6f 64 43 41 6f 59 79 6b 67 4d 6a 41 77 4d 79 42 76 63 30 4e 76 62 57 31 6c 63 6d 4e 6c 43 67 6f 67 49 46 4a 6c 62 47 56 68 63}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_pzadv_0__1__php
@@ -15190,7 +14843,7 @@ rule SHELL_SHELLDETECT_pzadv_0__1__php
 	strings:
 		$ = {6b 31 70 65 47 77 79 51 55 70 69 54 57 52 6c 55 30 35 4c 64 6b 77 31 51 57 39 68 62 7a 67 33 54 33 70 7a 65 6e 55 78 64 44 59 30 57 6c 52 47 4f 57 56 4b 64 54 52 4a 4e 56 56 43 4e 30 6c 70 4d 47 39 70 4b 30 45 30 4d 55 31 50 54 30 46 4a 4e 33 6b 78 54 56 5a 56 51 6c 59 33 57 47 64 49 54 6b 5a 33 64 54 64 70 62 7a 6b 34 63 57 64 49 4d 30 4e 42 4e 6e 52 6c 63 31 49 32 54 58 56 4a 53 48 49 30 63 53 39 53 4d 56 45}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_joomla_spam_2__1__php
@@ -15198,7 +14851,7 @@ rule SHELL_SHELLDETECT_joomla_spam_2__1__php
 	strings:
 		$ = {46 34 4e 45 31 71 52 6b 39 59 53 47 64 36 57 56 5a 34 4e 45 31 48 55 6d 4e 6c 52 45 55 78 57 45 68 6e 64 31 6c 73 65 44 52 4e 56 31 5a 6a 5a 55 52 42 4d 6b 35 45 57 6d 4e 6c 52 45 6c 33 57 45}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_O0O_0__0__php
@@ -15206,7 +14859,7 @@ rule SHELL_SHELLDETECT_O0O_0__0__php
 	strings:
 		$ = {61 57 34 67 59 32 39 75 5a 6d 6c 6e 4c 69 6f 67 5a 6d 6c 73 5a 58 4d 75 4c 69 35 63 62 6c 78 75 49 6a 73 67 44 51 70 6d 62 33 4a 6c 59 57 4e 6f 49 43 67 6b 64 58 4e 6c 63 6e 4d 67 59 58 4d 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_35__0__php
@@ -15214,7 +14867,7 @@ rule SHELL_SHELLDETECT_phpshell_35__0__php
 	strings:
 		$ = {6d 56 33 49 46 4e 6f 5a 57 78 73 49 45 4a 35 49 43 34 76 54 55 4e 35 59 6d 56 79 54 47 6c 75 61 31 39 51 62 33 4a 30 4d 6a 49 70 49 43 6f 76 49 41 30 4b 4a 47 46 31 64 47 68 66 63 47 46 7a 63}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_aZRaiL_0__0__php
@@ -15222,7 +14875,7 @@ rule SHELL_SHELLDETECT_aZRaiL_0__0__php
 	strings:
 		$ = {43 67 6b 5a 47 6c 79 4c 69 49 76 49 69 34 6b 5a 47 6c 7a 62 57 6b 79 4c 43 52 6d 61 57 78 6c 63 47 56 79 62 53 6b 67 50 79 41 69 50 47 5a 76 62 6e 51 67 59 32 39 73 62 33 49 39 4a 79 4d 77 4d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_16__0__php
@@ -15230,7 +14883,7 @@ rule SHELL_SHELLDETECT_c99_16__0__php
 	strings:
 		$ = {57 43 31 76 49 44 59 74 62 79 42 59 4c 57 38 67 54 79 31 76 49 45 77 74 62 79 42 6c 4c 57 38 67 65 43 31 76 49 46 49 74 62 79 41 30 4c 57 38 67 4b 79 31 76 49 44 59 74 62 79 42 55 4c 57 38 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_stunshell_2__0__php
@@ -15238,7 +14891,7 @@ rule SHELL_SHELLDETECT_stunshell_2__0__php
 	strings:
 		$ = {33 52 33 5a 7a 61 6d 68 57 62 30 4e 58 64 56 55 7a 61 6d 4e 6d 4e 58 68 49 53 57 56 57 52 32 5a 68 4e 44 6c 61 56 54 46 55 55 6c 52 4e 4d 7a 56 75 56 57 78 45 61 57 5a 31 65 45 5a 6a 53 6a 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_perlbot_0__1__pl
@@ -15246,7 +14899,7 @@ rule SHELL_SHELLDETECT_perlbot_0__1__pl
 	strings:
 		$ = {4b 49 43 41 6b 52 45 4e 44 65 79 52 6b 59 32 4e 7a 62 32 4e 72 66 58 74 69 65 58 52 6c 63 33 30 67 50 53 41 6b 59 6e 6c 30 5a 58 4d 37 43 69 41 67 4a 45 52 44 51 33 73 6b 5a 47 4e 6a 63 32 39}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_harauku_0__0__php
@@ -15254,7 +14907,7 @@ rule SHELL_SHELLDETECT_harauku_0__0__php
 	strings:
 		$ = {7a 49 69 77 69 51 57 78 68 64 6d 6b 69 4c 43 4a 42 62 47 4e 76 63 6d 34 69 4c 43 4a 42 62 47 52 68 49 69 77 4e 43 69 4a 42 62 47 56 72 63 79 49 73 49 6b 46 73 62 47 6c 7a 62 32 34 69 4c 43 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_11__0__php
@@ -15262,7 +14915,7 @@ rule SHELL_SHELLDETECT_b374k_11__0__php
 	strings:
 		$ = {45 74 61 62 44 46 4b 62 47 63 4e 43 6a 56 47 4d 31 56 44 61 6d 78 50 5a 55 64 6f 57 48 70 6b 64 31 6c 54 54 54 6c 75 55 48 70 6e 5a 6c 70 6a 52 45 70 56 59 32 5a 51 57 47 6b 31 59 6b 46 4d 4d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_1__0__php
@@ -15270,7 +14923,7 @@ rule SHELL_SHELLDETECT_c99_1__0__php
 	strings:
 		$ = {64 48 52 5a 55 6d 46 43 56 32 6c 4d 54 46 56 79 53 48 6c 78 5a 48 4e 35 4d 47 45 35 55 48 52 6e 4c 32 59 77 54 48 4a 78 4e 6e 5a 77 55 57 59 30 4f 47 77 33 4f 44 49 33 59 58 4e 51 65 56 64 53}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_1__0__php
@@ -15278,7 +14931,7 @@ rule SHELL_SHELLDETECT_phpshell_1__0__php
 	strings:
 		$ = {45 74 61 53 42 31 4c 57 6b 67 65 43 31 70 49 46 41 74 61 53 41 30 4c 57 6b 67 4d 69 31 70 49 46 51 74 61 53 42 4b 4c 57 6b 67 54 69 31 70 49 47 51 74 61 53 42 33 4c 57 6b 67 4d 53 31 70 49 48}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_metasploit_0__0__php
@@ -15286,7 +14939,7 @@ rule SHELL_SHELLDETECT_metasploit_0__0__php
 	strings:
 		$ = {49 47 4a 79 5a 57 46 72 4f 77 70 39 43 6d 6c 6d 49 43 67 68 4a 47 78 6c 62 69 6b 67 65 77 6f 4a 49 79 42 58 5a 53 42 6d 59 57 6c 73 5a 57 51 67 62 32 34 67 64 47 68 6c 49 47 31 68 61 57 34 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c100_0__0__php
@@ -15294,7 +14947,7 @@ rule SHELL_SHELLDETECT_c100_0__0__php
 	strings:
 		$ = {44 30 67 62 58 6c 7a 63 57 78 66 62 47 6c 7a 64 46 39 6b 59 6e 4d 6f 4a 48 4e 78 62 46 39 7a 62 32 4e 72 4b 54 73 4e 43 69 41 67 49 47 6c 6d 49 43 67 68 4a 48 4a 6c 63 33 56 73 64 43 6b 67 65}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_webmysql_0__0__php
@@ -15302,7 +14955,7 @@ rule SHELL_SHELLDETECT_webmysql_0__0__php
 	strings:
 		$ = {4e 6f 62 79 41 69 52 6d 46 70 62 43 49 37 43 67 6b 4a 43 58 4a 6c 64 48 56 79 62 6a 73 4b 43 51 6c 39 43 67 6b 4a 4a 47 4e 76 62 43 41 39 49 47 31 35 63 33 46 73 58 32 35 31 62 56 39 6d 61 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_backdoor_2__0__php
@@ -15310,7 +14963,7 @@ rule SHELL_SHELLDETECT_backdoor_2__0__php
 	strings:
 		$ = {5a 47 56 7a 49 48 5a 6c 62 6d 46 75 64 43 42 6b 5a 53 42 51 53 46 41 69 4f 77 70 39 43 67 70 70 5a 69 67 6b 62 33 42 30 61 57 39 75 49 44 30 39 49 44 49 70 65 77 6f 67 49 43 41 67 63 48 4a 70}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_8__0__php
@@ -15318,7 +14971,7 @@ rule SHELL_SHELLDETECT_phpshell_8__0__php
 	strings:
 		$ = {62 6b 70 69 5a 44 6b 72 4e 48 46 7a 56 6a 5a 61 57 6b 5a 51 56 31 52 52 59 55 4a 73 59 32 6b 31 53 32 4e 48 61 44 45 33 57 55 35 51 54 6d 78 56 4f 43 49 73 49 6a 56 57 52 55 51 7a 57 6b 74 45}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_8__0__php
@@ -15326,7 +14979,7 @@ rule SHELL_SHELLDETECT_cmd_8__0__php
 	strings:
 		$ = {50 44 39 77 61 48 41 4e 43 6d 6c 6d 4b 43 52 66 55 45 39 54 56 46 73 69 63 47 46 7a 63 79 4a 64 49 44 30 39 49 43 49 79 4e 6a 4e 6a 5a 44 64 68 5a 54 55 77 4e 7a 68 68 4f 44 51 78 5a 54 41 78}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_19__0__php
@@ -15334,7 +14987,7 @@ rule SHELL_SHELLDETECT_wso_19__0__php
 	strings:
 		$ = {52 58 52 7a 54 47 74 32 59 31 64 47 57 57 74 75 4c 31 6c 52 62 32 39 61 4d 54 64 47 61 44 42 49 52 47 56 4e 57 46 42 6a 52 55 4a 55 57 54 67 33 62 30 38 32 57 47 56 4a 53 47 74 31 51 6e 6c 6a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_simshell_0__0__php
@@ -15342,7 +14995,7 @@ rule SHELL_SHELLDETECT_simshell_0__0__php
 	strings:
 		$ = {63 33 51 67 50 53 41 6e 49 69 49 6e 4f 77 6f 67 49 48 30 67 5a 57 78 7a 5a 53 42 37 43 69 41 67 49 43 41 6b 5a 58 4e 6a 59 58 42 6c 5a 43 41 39 49 47 46 79 63 6d 46 35 58 32 31 68 63 43 67 6e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_gfs_0__0__php
@@ -15350,7 +15003,7 @@ rule SHELL_SHELLDETECT_gfs_0__0__php
 	strings:
 		$ = {47 56 79 62 58 4d 39 4a 48 52 35 63 47 56 62 4d 46 30 37 43 69 41 6b 63 47 56 79 62 58 4d 75 50 53 67 6b 62 57 39 6b 5a 53 41 6d 49 44 41 77 4e 44 41 77 4b 53 41 2f 49 43 4a 79 49 69 41 36 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_myshell_0__0__php
@@ -15358,7 +15011,7 @@ rule SHELL_SHELLDETECT_myshell_0__0__php
 	strings:
 		$ = {37 43 69 41 67 49 43 41 67 49 43 41 67 66 51 6f 67 49 43 41 67 66 51 70 39 43 6a 38 2b 43 6a 78 69 63 6a 34 4b 50 48 52 6c 65 48 52 68 63 6d 56 68 49 47 35 68 62 57 55 39 49 6e 4e 6f 5a 57 78}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ntdaddy_0__0__asp
@@ -15366,7 +15019,7 @@ rule SHELL_SHELLDETECT_ntdaddy_0__0__asp
 	strings:
 		$ = {51 70 47 62 32 78 6b 5a 58 4a 42 64 48 52 79 61 57 4a 31 64 47 56 7a 49 44 30 67 49 6c 4e 35 63 33 52 6c 62 53 77 67 52 47 6c 79 5a 57 4e 30 62 33 4a 35 49 67 70 6a 59 58 4e 6c 49 44 49 79 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mysql_7__0__php
@@ -15374,7 +15027,7 @@ rule SHELL_SHELLDETECT_mysql_7__0__php
 	strings:
 		$ = {37 44 51 6f 67 49 47 56 6a 61 47 38 67 49 6b 5a 73 64 58 4e 6f 58 47 34 69 4f 77 30 4b 49 43 42 6c 59 32 68 76 49 43 49 38 64 57 77 2b 58 47 34 69 4f 77 30 4b 49 43 42 6c 59 32 68 76 49 43 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_tdshell_1__0__php
@@ -15382,7 +15035,7 @@ rule SHELL_SHELLDETECT_tdshell_1__0__php
 	strings:
 		$ = {31 52 56 4d 45 35 45 54 58 70 4f 56 45 6c 35 57 6b 52 61 62 45 39 45 59 7a 4e 4e 65 6b 45 77 54 31 64 4f 61 56 6b 78 63 32 6c 61 57 47 68 73 57 54 4e 57 4d 46 70 54 53 6d 52 4a 52 44 42 6e 53}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_1__0__php
@@ -15390,7 +15043,7 @@ rule SHELL_SHELLDETECT_filesman_1__0__php
 	strings:
 		$ = {51 31 67 77 56 31 5a 46 56 48 56 36 54 44 4e 35 56 45 31 35 63 56 46 48 59 56 64 45 53 46 4e 61 5a 55 5a 51 4f 57 52 47 52 30 30 32 62 33 64 35 4d 58 4a 68 59 7a 4e 42 4d 32 4e 53 53 6c 46 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_2__0__php
@@ -15398,7 +15051,7 @@ rule SHELL_SHELLDETECT_c99_2__0__php
 	strings:
 		$ = {64 4f 53 45 5a 52 4d 44 6b 76 57 55 64 42 64 47 4a 31 63 58 5a 34 64 48 70 55 63 58 70 34 4f 55 78 4a 4d 56 6b 34 4e 30 6b 79 55 46 52 7a 53 32 35 30 55 45 74 56 56 56 46 6a 51 6c 70 74 53 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_dxshell_1__0__php
@@ -15406,7 +15059,7 @@ rule SHELL_SHELLDETECT_dxshell_1__0__php
 	strings:
 		$ = {6b 56 55 4c 6a 31 6d 5a 32 56 30 63 79 67 6b 5a 69 77 67 4e 44 41 35 4e 69 41 70 4f 77 6f 4a 5a 6d 4e 73 62 33 4e 6c 4b 43 41 6b 5a 69 41 70 4f 77 6f 4b 43 58 42 79 61 57 35 30 49 43 4a 63 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_8__0__php
@@ -15414,7 +15067,7 @@ rule SHELL_SHELLDETECT_c99_8__0__php
 	strings:
 		$ = {44 71 38 4f 74 77 36 58 44 72 63 4f 6f 77 36 55 67 77 36 2f 44 73 4d 4f 75 77 36 6a 44 70 38 4f 69 77 36 37 44 71 38 4f 38 77 36 33 44 72 73 4f 6a 77 36 34 67 55 45 68 51 4c 63 4f 71 77 36 37}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_spyshell_1__0__php
@@ -15422,7 +15075,7 @@ rule SHELL_SHELLDETECT_spyshell_1__0__php
 	strings:
 		$ = {64 6d 46 73 64 57 55 39 49 69 39 6c 64 47 4d 76 63 33 6c 7a 62 47 39 6e 4c 6d 4e 76 62 6d 59 69 50 6c 4e 35 63 32 78 76 5a 79 42 42 65 57 46 79 62 47 46 79 61 54 77 76 62 33 42 30 61 57 39 75}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_backdoor_1__0__php
@@ -15430,7 +15083,7 @@ rule SHELL_SHELLDETECT_backdoor_1__0__php
 	strings:
 		$ = {4a 63 49 6a 34 69 4c 69 52 32 59 57 78 31 5a 53 34 69 4c 7a 77 76 51 54 34 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 69 4c 6d 52 68 64 47 55 6f 49 6e 49 69 4c 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_27__0__php
@@ -15438,7 +15091,7 @@ rule SHELL_SHELLDETECT_c99_27__0__php
 	strings:
 		$ = {69 42 76 64 47 68 6c 63 69 42 6d 63 6d 56 6c 49 47 39 79 49 47 39 77 5a 57 34 67 63 32 39 31 63 6d 4e 6c 49 48 4e 76 5a 6e 52 33 59 58 4a 6c 49 47 78 70 59 32 56 75 63 32 56 7a 4c 67 6f 67 4b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_30__0__php
@@ -15446,7 +15099,7 @@ rule SHELL_SHELLDETECT_cmd_30__0__php
 	strings:
 		$ = {50 44 39 77 61 48 41 4e 43 6d 56 6a 61 47 38 67 49 6a 78 6f 4d 7a 35 58 62 33 4a 72 63 79 45 67 56 58 4e 68 5a 32 55 36 49 47 63 77 4d 47 34 75 63 47 68 77 50 32 63 77 4d 47 34 39 57 30 4e 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_hacker_0__0__php
@@ -15454,7 +15107,7 @@ rule SHELL_SHELLDETECT_hacker_0__0__php
 	strings:
 		$ = {56 30 5a 58 49 6e 4c 41 6f 6e 63 6d 56 7a 5a 58 51 6e 49 44 30 2b 49 43 64 53 77 36 6c 70 62 6d 6c 30 61 57 46 73 61 58 4e 6c 63 69 63 73 43 69 64 79 5a 57 78 68 64 47 6c 32 5a 53 63 67 50 54}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_15__0__asp
@@ -15462,7 +15115,7 @@ rule SHELL_SHELLDETECT_cmd_15__0__asp
 	strings:
 		$ = {47 56 79 62 58 4d 4e 43 69 41 67 51 32 46 73 62 43 42 76 55 79 35 53 64 57 34 6f 49 6e 64 70 62 69 35 6a 62 32 30 67 59 32 31 6b 4c 6d 56 34 5a 53 41 76 59 79 42 6a 59 57 4e 73 63 79 35 6c 65}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c2007_0__0__php
@@ -15470,7 +15123,7 @@ rule SHELL_SHELLDETECT_c2007_0__0__php
 	strings:
 		$ = {32 68 6c 63 69 42 73 5a 58 5a 6c 62 48 4d 67 50 43 39 6b 61 58 59 2b 49 41 6f 67 49 43 41 67 50 43 39 6d 62 33 4a 74 50 69 41 4b 49 43 41 67 49 44 77 76 64 47 51 2b 49 41 6f 67 49 44 78 30 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_7__0__php
@@ -15478,7 +15131,7 @@ rule SHELL_SHELLDETECT_wso_7__0__php
 	strings:
 		$ = {64 30 34 79 64 48 5a 57 52 57 68 4c 59 6d 31 6f 61 56 4e 49 62 46 4a 68 56 31 4a 57 59 6c 68 77 61 32 4a 48 64 33 70 57 52 7a 56 34 57 6a 4e 61 64 6c 52 59 61 44 4a 4f 56 33 4e 34 54 6d 73 35}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_23__0__php
@@ -15486,7 +15139,7 @@ rule SHELL_SHELLDETECT_filesman_23__0__php
 	strings:
 		$ = {52 54 56 36 65 48 56 7a 59 54 4d 76 4b 33 52 71 4e 54 4a 61 52 31 5a 6a 61 47 34 35 54 6c 64 71 63 30 6c 79 54 33 63 35 4b 79 39 79 64 57 59 79 52 6e 68 72 4d 56 6c 6b 65 6d 68 69 4e 7a 42 68}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_indexer_0__0__asp
@@ -15494,7 +15147,7 @@ rule SHELL_SHELLDETECT_indexer_0__0__asp
 	strings:
 		$ = {43 59 75 66 79 38 79 53 33 68 72 4b 31 4a 54 52 47 4a 50 4b 79 78 4b 52 56 73 78 58 46 63 6e 63 6b 70 41 49 30 41 6d 4c 69 74 72 64 31 63 4a 5a 47 35 53 55 30 52 69 57 57 35 51 52 55 56 4d 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_webroot_1__0__php
@@ -15502,7 +15155,7 @@ rule SHELL_SHELLDETECT_webroot_1__0__php
 	strings:
 		$ = {79 54 7a 68 31 4d 6c 59 34 62 32 68 4b 57 55 4d 72 59 6b 5a 78 53 6d 74 6f 65 56 63 34 62 6a 4a 4b 53 6b 4e 55 59 54 64 48 4e 31 6f 78 59 6e 6f 77 64 6d 56 4c 55 45 35 32 64 6b 4a 47 64 57 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_FaTaLisTiCz_0__0__php
@@ -15510,7 +15163,7 @@ rule SHELL_SHELLDETECT_FaTaLisTiCz_0__0__php
 	strings:
 		$ = {49 38 4c 32 39 77 64 47 6c 76 62 6a 35 63 63 6c 78 75 49 6a 73 4e 43 69 41 67 49 43 42 39 44 51 6f 67 49 48 30 4e 43 69 41 67 5a 57 4e 6f 62 79 41 69 50 43 39 7a 5a 57 78 6c 59 33 51 2b 58 48}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_14__0__php
@@ -15518,7 +15171,7 @@ rule SHELL_SHELLDETECT_r57_14__0__php
 	strings:
 		$ = {41 76 5a 33 4a 6c 63 43 35 30 65 48 51 6e 4c 41 6f 6e 62 47 39 6a 59 58 52 6c 49 47 4e 76 62 6d 5a 70 5a 79 35 77 61 48 41 67 5a 6d 6c 73 5a 58 4d 67 50 6a 34 67 4c 33 52 74 63 43 39 6e 63 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_5__0__php
@@ -15526,7 +15179,7 @@ rule SHELL_SHELLDETECT_b374k_5__0__php
 	strings:
 		$ = {48 70 6a 4d 47 52 6c 43 67 6f 6b 61 6d 46 74 5a 58 4d 77 59 6d 46 7a 64 47 56 79 49 44 30 67 49 6a 64 59 4d 54 64 6c 4f 58 45 30 4f 48 5a 45 5a 6a 4e 6c 5a 6c 6f 33 4e 6b 49 32 59 33 68 69 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_fx0_3__0__php
@@ -15534,7 +15187,7 @@ rule SHELL_SHELLDETECT_fx0_3__0__php
 	strings:
 		$ = {6b 62 30 34 34 61 6e 64 52 51 57 52 46 56 6c 63 4b 56 6c 6b 78 63 6b 56 51 4f 56 56 71 64 31 4a 6b 57 47 39 30 5a 45 52 42 64 6b 46 6b 52 45 34 30 55 45 6c 30 4e 30 4e 47 55 47 39 78 5a 6a 63}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_pas_0__0__php
@@ -15542,7 +15195,7 @@ rule SHELL_SHELLDETECT_pas_0__0__php
 	strings:
 		$ = {62 62 3a 4a 46 39 66 58 31 39 66 4b 79 73 70 65 79 52 66 58 31 39 66 57 79 52 66 58 31 39 66 58 31 30 39 59 32 68 79 4b 43 67 67 62 33 4a 6b 4b 43 52 66 58 31 39 66 57 79 52 66 58 31 39 66 58 31 30 70 4c 57 39 79 5a 43 67 6b 58 31 39 66 57 79 52 66 58 31 39 66 58 31 30 70 4b 51 3d 3d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_gscshell_0__0__php
@@ -15550,7 +15203,7 @@ rule SHELL_SHELLDETECT_gscshell_0__0__php
 	strings:
 		$ = {58 53 6b 37 44 51 6f 67 49 43 41 67 49 43 41 67 49 47 56 6a 61 47 38 67 49 6a 77 76 64 47 56 34 64 47 46 79 5a 57 45 2b 49 6a 73 67 49 43 41 67 5a 47 6c 6c 4b 43 6b 37 44 51 6f 67 49 43 41 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_kadotshell_0__0__php
@@ -15558,7 +15211,7 @@ rule SHELL_SHELLDETECT_kadotshell_0__0__php
 	strings:
 		$ = {73 49 43 52 31 63 47 78 76 59 57 52 6d 61 57 78 6c 4b 53 6b 67 65 77 6f 67 49 43 41 67 5a 57 4e 6f 62 79 41 69 31 4f 44 70 36 2b 34 67 38 2f 48 76 35 66 6a 74 37 69 44 6e 34 4f 50 77 38 2b 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_spam_3__0__php
@@ -15566,7 +15219,7 @@ rule SHELL_SHELLDETECT_spam_3__0__php
 	strings:
 		$ = {67 49 43 41 67 50 48 52 6b 49 48 64 70 5a 48 52 6f 50 53 49 79 4d 54 6b 69 50 67 30 4b 49 43 41 67 49 43 41 67 49 43 41 38 5a 6d 39 75 64 43 42 7a 61 58 70 6c 50 53 49 74 4d 79 49 67 5a 6d 46}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_13__0__php
@@ -15574,7 +15227,7 @@ rule SHELL_SHELLDETECT_c99_13__0__php
 	strings:
 		$ = {49 77 54 57 70 71 63 54 42 54 64 48 4a 6c 63 47 5a 51 57 55 6f 7a 63 57 39 30 64 6e 6b 7a 61 33 52 4c 61 30 38 33 4e 32 68 57 4f 58 67 32 54 43 38 31 55 6e 55 31 61 30 6c 56 52 57 4a 32 4f 44}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_17__0__php
@@ -15582,7 +15235,7 @@ rule SHELL_SHELLDETECT_c99_17__0__php
 	strings:
 		$ = {65 46 4d 35 4b 33 68 31 64 44 49 77 55 6b 56 45 59 57 5a 72 51 6d 46 4e 61 55 52 30 53 55 4e 45 64 45 31 44 52 48 52 35 53 31 42 4a 64 6d 77 31 52 54 5a 50 65 56 64 59 4d 30 52 47 5a 6e 5a 4b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_htaccess_shell_0__0__htaccess
@@ -15590,7 +15243,7 @@ rule SHELL_SHELLDETECT_htaccess_shell_0__0__htaccess
 	strings:
 		$ = {47 46 73 62 47 39 33 4c 47 52 6c 62 6e 6b 4b 49 43 41 67 49 45 46 73 62 47 39 33 49 47 5a 79 62 32 30 67 59 57 78 73 43 6a 77 76 52 6d 6c 73 5a 58 4d 2b 43 67 6f 6a 49 45 31 68 61 32 55 67 4c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_25__0__php
@@ -15598,7 +15251,7 @@ rule SHELL_SHELLDETECT_c99_25__0__php
 	strings:
 		$ = {67 50 7a 38 2f 50 7a 38 2f 50 7a 38 2f 50 79 42 7a 61 47 56 73 62 43 30 2f 50 7a 38 2f 50 7a 38 67 4b 44 38 2f 50 7a 38 2f 49 44 38 2f 50 7a 38 2f 50 7a 38 73 49 44 38 2f 50 7a 38 2f 49 44 38}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_kaushell_0__0__php
@@ -15606,7 +15259,7 @@ rule SHELL_SHELLDETECT_kaushell_0__0__php
 	strings:
 		$ = {49 48 5a 68 62 48 56 6c 50 53 4a 46 62 6e 52 6c 63 69 49 2b 43 6a 77 76 64 47 51 2b 50 43 39 30 63 6a 34 4b 4a 48 52 6c 62 6d 51 4b 53 46 52 4e 54 44 73 4b 43 6d 6c 6d 49 43 68 70 63 33 4e 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_darkshell_1__0__php
@@ -15614,7 +15267,7 @@ rule SHELL_SHELLDETECT_darkshell_1__0__php
 	strings:
 		$ = {47 39 45 4d 44 42 4f 54 6e 4a 57 54 32 5a 4f 64 46 6b 72 65 48 46 35 4e 30 34 7a 51 57 64 6d 53 56 64 69 61 30 73 32 65 6b 6b 76 59 31 6c 51 5a 33 4a 31 56 6e 70 58 65 6b 73 78 4e 46 4a 6f 4f}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_stressbypass_1__0__php
@@ -15622,7 +15275,7 @@ rule SHELL_SHELLDETECT_stressbypass_1__0__php
 	strings:
 		$ = {67 50 48 52 6b 49 48 64 70 5a 48 52 6f 50 53 49 31 4d 43 55 69 49 47 68 6c 61 57 64 6f 64 44 30 69 4d 53 49 67 64 6d 46 73 61 57 64 75 50 53 4a 30 62 33 41 69 49 47 4a 6e 59 32 39 73 62 33 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_madspot_0__0__php
@@ -15630,7 +15283,7 @@ rule SHELL_SHELLDETECT_madspot_0__0__php
 	strings:
 		$ = {79 49 46 4e 6c 63 6e 5a 6c 63 69 42 70 62 6e 52 79 64 58 4e 70 62 32 34 38 4c 32 39 77 64 47 6c 76 62 6a 34 4e 43 6a 78 76 63 48 52 70 62 32 34 67 64 6d 46 73 64 57 55 39 49 6a 45 31 49 69 41}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_0__0__php
@@ -15638,7 +15291,7 @@ rule SHELL_SHELLDETECT_filesman_0__0__php
 	strings:
 		$ = {54 54 5a 70 55 6b 67 7a 56 55 56 51 64 44 5a 7a 5a 43 39 5a 63 57 46 59 59 6a 68 76 62 54 41 7a 65 47 4a 31 63 55 5a 4e 61 57 39 51 59 33 6c 56 64 6b 74 51 4e 6e 5a 54 55 6e 70 6a 63 57 31 70}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_elmaliseker_0__0__vbs
@@ -15646,7 +15299,7 @@ rule SHELL_SHELLDETECT_elmaliseker_0__0__vbs
 	strings:
 		$ = {4e 6c 49 47 59 75 59 58 52 30 63 6d 6c 69 64 58 52 6c 63 77 30 4b 59 32 46 7a 5a 53 41 77 44 51 70 47 62 32 78 6b 5a 58 4a 42 64 48 52 79 61 57 4a 31 64 47 56 7a 49 44 30 67 49 6b 35 76 63 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_20__0__php
@@ -15654,7 +15307,7 @@ rule SHELL_SHELLDETECT_c99_20__0__php
 	strings:
 		$ = {68 5a 44 64 34 63 53 38 30 4e 79 74 69 5a 30 6c 78 54 31 4d 78 64 6d 5a 70 63 57 64 34 61 6d 74 7a 4d 45 46 45 4e 6b 6c 49 59 32 68 6b 4d 33 70 56 57 44 63 35 64 6e 46 77 56 46 64 6c 55 7a 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_18__0__php
@@ -15662,7 +15315,7 @@ rule SHELL_SHELLDETECT_r57_18__0__php
 	strings:
 		$ = {53 69 73 34 61 32 31 36 59 6b 78 6c 62 6d 5a 42 65 6e 42 48 63 54 5a 6c 56 69 74 71 64 6b 64 71 64 6b 38 34 54 30 4a 4e 55 6e 6c 61 55 54 4e 79 63 33 42 74 64 43 73 31 54 79 39 5a 61 7a 42 61}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_telnet_1__0__pl
@@ -15670,7 +15323,7 @@ rule SHELL_SHELLDETECT_telnet_1__0__pl
 	strings:
 		$ = {59 57 51 67 5a 47 46 30 59 51 6f 4a 61 57 59 6f 4a 45 56 4f 56 6e 73 6e 51 30 39 4f 56 45 56 4f 56 46 39 55 57 56 42 46 4a 33 30 67 50 58 34 67 4c 32 31 31 62 48 52 70 63 47 46 79 64 46 77 76}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_foreverpp_0__1__php
@@ -15678,7 +15331,7 @@ rule SHELL_SHELLDETECT_foreverpp_0__1__php
 	strings:
 		$ = {50 53 63 77 4e 43 63 37 49 47 4a 79 5a 57 46 72 4f 77 30 4b 43 51 6b 4a 43 57 4e 68 63 32 55 67 4a 7a 55 6e 4f 69 41 67 4a 47 52 68 64 47 55 39 4a 7a 41 31 4a 7a 73 67 59 6e 4a 6c 59 57 73 37}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpbackdoor_1__0__php
@@ -15686,7 +15339,7 @@ rule SHELL_SHELLDETECT_phpbackdoor_1__0__php
 	strings:
 		$ = {61 58 70 6c 49 6c 30 38 4a 46 39 51 54 31 4e 55 57 79 4a 4e 51 56 68 66 52 6b 6c 4d 52 56 39 54 53 56 70 46 49 6c 30 70 43 69 41 67 49 43 42 37 43 69 41 67 49 43 41 67 49 47 6c 6d 4b 47 31 76}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_antichat_shell_1__0__php
@@ -15694,7 +15347,7 @@ rule SHELL_SHELLDETECT_antichat_shell_1__0__php
 	strings:
 		$ = {5a 57 78 73 50 43 39 30 61 58 52 73 5a 54 34 38 62 57 56 30 59 53 42 6f 64 48 52 77 4c 57 56 78 64 57 6c 32 50 53 4a 44 62 32 35 30 5a 57 35 30 4c 56 52 35 63 47 55 69 49 47 4e 76 62 6e 52 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_smartshell_0__0__asp
@@ -15702,7 +15355,7 @@ rule SHELL_SHELLDETECT_smartshell_0__0__asp
 	strings:
 		$ = {5a 51 30 4b 43 51 6b 4a 43 56 4a 6c 63 33 42 76 62 6e 4e 6c 4c 6c 64 79 61 58 52 6c 49 43 49 38 5a 6d 39 75 64 43 42 6d 59 57 4e 6c 50 53 49 69 59 58 4a 70 59 57 77 69 49 69 42 7a 61 58 70 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_webadmin_2__2__php
@@ -15710,7 +15363,7 @@ rule SHELL_SHELLDETECT_webadmin_2__2__php
 	strings:
 		$ = {56 6b 4a 79 41 39 50 69 41 69 52 47 6c 7a 63 32 55 67 5a 6d 6c 73 5a 58 49 67 5a 58 49 67 61 32 39 77 61 57 56 79 5a 58 51 67 64 47 6c 73 49 46 77 69 57 79 55 79 58 56 77 69 4f 6c 78 75 57 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_17__0__php
@@ -15718,7 +15371,7 @@ rule SHELL_SHELLDETECT_b374k_17__0__php
 	strings:
 		$ = {4d 47 63 31 63 69 74 71 55 57 52 36 56 47 78 72 4d 6e 64 59 61 56 63 77 64 30 68 31 61 46 42 4e 65 54 4a 42 52 30 4e 70 54 57 73 76 65 6b 35 43 54 44 5a 72 4e 58 46 57 53 30 73 77 53 6d 35 55}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_14__0__php
@@ -15726,7 +15379,7 @@ rule SHELL_SHELLDETECT_cmd_14__0__php
 	strings:
 		$ = {50 44 39 77 61 48 41 4b 4c 79 70 6a 4f 44 59 30 4f 57 45 35 59 54 45 32 4e 54 4e 6d 4f 44 55 79 4f 44 51 7a 5a 6a 51 30 5a 6a 6b 78 4e 6d 4a 6a 59 6a 51 30 5a 43 6f 76 61 57 59 6f 61 58 4e 7a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_26__0__php
@@ -15734,7 +15387,7 @@ rule SHELL_SHELLDETECT_phpshell_26__0__php
 	strings:
 		$ = {46 55 33 4e 56 51 33 51 6a 4a 79 52 54 49 32 4f 55 64 34 63 48 42 46 64 6a 5a 33 52 47 39 35 59 53 73 78 64 45 35 43 64 56 56 57 55 44 52 48 56 30 46 56 4c 33 5a 76 65 55 31 34 4d 56 67 78 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ironshell_1__0__php
@@ -15742,7 +15395,7 @@ rule SHELL_SHELLDETECT_ironshell_1__0__php
 	strings:
 		$ = {70 49 48 73 4e 43 69 41 67 49 43 41 67 49 43 41 67 63 48 4a 70 62 6e 51 67 49 6b 5a 70 62 47 55 36 49 69 34 67 49 47 4a 68 63 32 56 75 59 57 31 6c 4b 43 41 6b 58 30 5a 4a 54 45 56 54 57 79 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_bogel_shell_1__0__php
@@ -15750,7 +15403,7 @@ rule SHELL_SHELLDETECT_bogel_shell_1__0__php
 	strings:
 		$ = {4e 4e 57 57 70 53 4e 30 6c 55 5a 54 51 30 5a 47 74 56 63 32 39 49 62 6e 68 45 57 57 4d 34 5a 48 6c 78 63 6d 4a 32 5a 47 4a 74 61 69 74 71 59 32 38 35 65 57 4e 57 4d 6d 74 72 55 6b 70 48 52 6b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_erne_2__0__php
@@ -15758,7 +15411,7 @@ rule SHELL_SHELLDETECT_erne_2__0__php
 	strings:
 		$ = {69 4b 53 42 37 44 51 6f 4a 43 51 6b 6b 63 6d 56 7a 64 57 78 30 50 58 4e 6f 5a 57 78 73 58 32 56 34 5a 57 4d 6f 4a 46 39 51 54 31 4e 55 57 79 64 6a 62 32 31 74 59 57 35 6b 4a 31 30 70 4f 77 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_moroccan_spam_0__1__php
@@ -15766,7 +15419,7 @@ rule SHELL_SHELLDETECT_moroccan_spam_0__1__php
 	strings:
 		$ = {49 41 70 4f 59 57 31 6c 4f 6a 77 76 5a 6d 39 75 64 44 34 38 4c 32 52 70 64 6a 34 67 43 6a 77 76 64 47 51 2b 49 41 6f 38 64 47 51 67 64 32 6c 6b 64 47 67 39 49 6a 4d 78 4e 79 49 67 59 6d 39 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_antisecshell_1__0__php
@@ -15774,7 +15427,7 @@ rule SHELL_SHELLDETECT_antisecshell_1__0__php
 	strings:
 		$ = {76 5a 6d 39 79 62 54 34 38 4c 33 52 6b 50 6a 77 76 64 48 49 2b 44 51 6f 38 4c 33 52 68 59 6d 78 6c 50 67 30 4b 50 47 4a 79 50 6a 78 6b 61 58 59 67 59 32 78 68 63 33 4d 39 59 6d 46 79 61 47 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmos_clr_0__0__php
@@ -15782,7 +15435,7 @@ rule SHELL_SHELLDETECT_cmos_clr_0__0__php
 	strings:
 		$ = {4f 51 32 6c 42 5a 30 6c 44 51 57 64 4a 51 30 46 6e 53 55 4e 42 5a 30 6c 44 51 57 64 4a 51 30 46 6e 53 55 4e 42 5a 30 6c 44 51 57 64 4a 51 30 46 6e 53 55 4e 42 61 32 4e 48 64 47 31 4f 52 46 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_s72shell_1__0__php
@@ -15790,7 +15443,7 @@ rule SHELL_SHELLDETECT_s72shell_1__0__php
 	strings:
 		$ = {49 44 77 76 5a 6d 39 75 64 44 34 4e 43 69 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 50 44 39 77 61 48 41 67 44 51 6f 76 4c 79 42 44 61 47 56 6a 61 79 42 6d 62 33 49 67 55 32 46 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c100_1__0__php
@@ -15798,7 +15451,7 @@ rule SHELL_SHELLDETECT_c100_1__0__php
 	strings:
 		$ = {70 4f 77 6f 67 49 43 41 67 4a 48 56 6b 49 44 30 67 64 58 4a 73 5a 57 35 6a 62 32 52 6c 4b 43 52 6b 61 58 49 70 4f 77 6f 67 49 43 41 67 4a 48 56 32 49 44 30 67 64 58 4a 73 5a 57 35 6a 62 32 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_rhtool_0__0__asp
@@ -15806,7 +15459,7 @@ rule SHELL_SHELLDETECT_rhtool_0__0__asp
 	strings:
 		$ = {63 6d 73 67 50 53 42 54 5a 58 4a 32 5a 58 49 75 51 33 4a 6c 59 58 52 6c 54 32 4a 71 5a 57 4e 30 4b 43 4a 58 55 32 4e 79 61 58 42 30 4c 6b 35 6c 64 48 64 76 63 6d 73 69 4b 51 6f 4a 43 56 4e 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpspy_3__0__php
@@ -15814,7 +15467,7 @@ rule SHELL_SHELLDETECT_phpspy_3__0__php
 	strings:
 		$ = {38 4c 33 52 6b 50 69 63 70 4f 77 6f 4a 43 51 6b 4a 43 51 6c 77 4b 43 63 38 64 47 51 2b 4a 79 34 6b 63 6d 39 33 57 79 64 54 5a 58 46 66 61 57 35 66 61 57 35 6b 5a 58 67 6e 58 53 34 6e 50 43 39}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_brute_force_tool_0__0__php
@@ -15822,7 +15475,7 @@ rule SHELL_SHELLDETECT_brute_force_tool_0__0__php
 	strings:
 		$ = {43 42 6d 62 33 4a 6c 59 57 4e 6f 49 43 67 6b 59 57 78 73 54 47 6c 75 61 33 4d 67 59 58 4d 67 4a 47 74 72 49 44 30 2b 49 43 52 32 64 69 6c 37 49 43 52 68 62 47 78 45 62 57 35 7a 57 31 30 67 50}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_31__0__php
@@ -15830,7 +15483,7 @@ rule SHELL_SHELLDETECT_phpshell_31__0__php
 	strings:
 		$ = {66 4b 43 30 6f 4c 43 68 64 4b 44 6f 72 66 43 67 36 4c 56 38 6f 4c 43 67 36 4b 44 6f 6f 58 53 68 64 4c 43 59 6f 58 79 68 66 4b 47 41 74 58 69 67 73 4b 44 6f 6f 4c 69 68 64 4b 46 30 6f 58 69 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_22__0__php
@@ -15838,7 +15491,7 @@ rule SHELL_SHELLDETECT_c99_22__0__php
 	strings:
 		$ = {44 42 6e 61 45 4a 49 52 47 35 61 4b 32 6c 4a 52 45 74 47 65 6b 64 53 65 56 52 6a 5a 45 35 42 57 45 64 31 4d 45 30 35 65 6b 5a 75 55 30 55 33 63 57 4a 46 57 55 5a 6e 65 44 64 6e 52 32 6f 77 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_4__0__php
@@ -15846,7 +15499,7 @@ rule SHELL_SHELLDETECT_wso_4__0__php
 	strings:
 		$ = {68 63 33 4d 70 4b 53 42 37 43 69 41 67 49 43 42 70 5a 69 68 70 63 33 4e 6c 64 43 67 6b 58 31 42 50 55 31 52 62 4a 33 42 68 63 33 4d 6e 58 53 6b 67 4a 69 59 67 4b 47 31 6b 4e 53 67 6b 58 31 42}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_10__0__php
@@ -15854,7 +15507,7 @@ rule SHELL_SHELLDETECT_r57_10__0__php
 	strings:
 		$ = {4c 4d 6d 4a 6f 62 54 45 7a 51 6b 4e 4c 64 6b 4a 46 5a 6e 70 74 4e 55 73 31 54 30 78 32 59 33 70 6a 51 6c 46 72 54 6d 35 69 54 32 70 79 5a 6a 6c 56 63 44 59 35 56 55 4a 33 54 30 39 34 4d 43 39}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_sec4ever_0__0__php
@@ -15862,7 +15515,7 @@ rule SHELL_SHELLDETECT_sec4ever_0__0__php
 	strings:
 		$ = {54 4d 57 38 4b 4e 6a 4e 74 4d 57 34 76 63 32 46 7a 5a 32 35 6b 57 48 70 57 54 44 52 5a 52 55 46 7a 55 46 56 58 5a 54 5a 72 5a 33 56 70 59 56 4d 78 53 47 46 49 5a 46 5a 44 64 41 6f 7a 61 43 73}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_6__0__php
@@ -15870,7 +15523,7 @@ rule SHELL_SHELLDETECT_shell_uploader_6__0__php
 	strings:
 		$ = {30 52 6d 68 7a 62 30 68 73 61 33 4a 73 59 55 59 77 5a 30 56 36 4b 30 64 6b 61 45 4e 46 64 45 4e 68 51 57 6c 5a 61 57 4e 71 55 30 74 5a 56 33 4e 6e 56 30 74 7a 55 48 56 55 54 47 39 4c 54 56 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_6__0__php
@@ -15878,7 +15531,7 @@ rule SHELL_SHELLDETECT_wso_6__0__php
 	strings:
 		$ = {56 55 38 76 4e 45 74 4c 61 7a 55 76 4b 33 56 4a 54 31 4e 6b 63 33 68 6c 4f 57 4a 69 63 47 49 35 4d 46 42 50 52 6d 70 43 57 6d 31 6e 59 6e 46 73 64 6d 56 4f 54 6b 39 32 61 32 77 79 56 6d 6c 46}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_2__0__php
@@ -15886,7 +15539,7 @@ rule SHELL_SHELLDETECT_filesman_2__0__php
 	strings:
 		$ = {63 79 42 68 49 47 4e 76 62 6e 4e 6c 63 58 56 6c 62 6d 4e 6c 49 47 39 6d 49 48 56 7a 61 57 35 6e 49 48 42 6c 5a 58 49 74 64 47 38 74 63 47 56 6c 63 69 42 30 63 6d 46 75 63 32 31 70 63 33 4e 70}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_jackal_3__0__php
@@ -15894,7 +15547,7 @@ rule SHELL_SHELLDETECT_jackal_3__0__php
 	strings:
 		$ = {30 4b 61 57 59 6f 49 57 56 74 63 48 52 35 4b 43 52 66 55 6b 56 52 56 55 56 54 56 46 73 6e 62 6d 56 33 5a 6d 6c 73 5a 53 64 64 4b 53 6c 37 5a 6d 6c 73 5a 56 39 77 64 58 52 66 59 32 39 75 64 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_7__0__php
@@ -15902,7 +15555,7 @@ rule SHELL_SHELLDETECT_r57_7__0__php
 	strings:
 		$ = {4d 6a 34 6d 62 6d 4a 7a 63 44 73 69 4c 69 52 32 59 57 78 31 5a 58 4d 75 49 69 5a 75 59 6e 4e 77 4f 7a 77 76 5a 6d 39 75 64 44 34 38 4c 33 52 6b 50 6a 77 76 64 48 49 2b 49 6a 73 4e 43 69 41 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_14__0__php
@@ -15910,7 +15563,7 @@ rule SHELL_SHELLDETECT_phpshell_14__0__php
 	strings:
 		$ = {63 34 59 30 4a 47 4c 33 6b 69 4c 43 4a 6d 55 57 35 46 65 46 5a 43 4f 43 74 45 4e 56 64 45 4e 58 6f 34 55 6d 38 69 4c 43 4a 32 56 6a 63 34 4f 44 6c 6b 5a 6d 64 52 61 6c 46 71 61 57 68 43 4c 7a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_webshell_1__0__php
@@ -15918,7 +15571,7 @@ rule SHELL_SHELLDETECT_webshell_1__0__php
 	strings:
 		$ = {4e 7a 51 30 4c 44 4d 77 4c 44 4d 34 4e 7a 45 73 4d 6a 59 73 4d 7a 49 34 4d 79 77 31 4d 79 77 79 4e 44 67 31 4c 44 55 30 4c 44 6b 31 4e 44 6b 73 4e 54 55 73 4f 44 51 34 4d 79 77 31 4f 53 77 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_17__0__php
@@ -15926,7 +15579,7 @@ rule SHELL_SHELLDETECT_phpshell_17__0__php
 	strings:
 		$ = {41 6f 67 59 58 4a 79 59 58 6b 6f 49 6a 78 69 50 6c 74 54 55 55 78 64 50 43 39 69 50 69 49 73 4a 48 4e 31 63 6d 77 75 49 6d 46 6a 64 44 31 7a 63 57 77 6d 5a 44 30 6c 5a 43 49 70 4c 41 6f 67 59}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_10__0__php
@@ -15934,7 +15587,7 @@ rule SHELL_SHELLDETECT_c99_10__0__php
 	strings:
 		$ = {49 43 52 73 61 57 35 6c 4b 51 30 4b 49 43 41 67 65 77 30 4b 49 43 41 67 49 47 6c 6d 49 43 67 68 5a 57 31 77 64 48 6b 6f 4a 47 78 70 62 6d 55 70 4b 51 30 4b 65 77 30 4b 5a 57 4e 6f 62 79 41 69}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mrtiger_0__0__php
@@ -15942,7 +15595,7 @@ rule SHELL_SHELLDETECT_mrtiger_0__0__php
 	strings:
 		$ = {35 51 32 64 76 5a 32 46 58 57 57 39 4b 52 6a 6c 52 56 44 46 4f 56 56 64 35 5a 47 31 69 4d 30 70 30 57 44 4a 47 61 6d 52 48 62 48 5a 69 61 57 52 6b 53 55 51 77 4f 55 6c 45 52 57 64 4c 55 57 39}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_empo_0__0__php
@@ -15950,7 +15603,7 @@ rule SHELL_SHELLDETECT_empo_0__0__php
 	strings:
 		$ = {55 74 6b 64 6d 70 58 56 44 55 32 52 32 34 72 56 32 4a 4a 56 6b 56 36 55 55 70 73 4a 79 77 6e 62 33 59 35 64 6b 35 69 55 32 5a 35 4d 45 31 35 5a 6e 46 56 56 58 51 32 64 48 42 47 53 79 63 73 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_25__0__php
@@ -15958,7 +15611,7 @@ rule SHELL_SHELLDETECT_cmd_25__0__php
 	strings:
 		$ = {56 68 4f 62 45 35 71 55 6d 5a 61 52 31 5a 71 59 6a 4a 53 62 45 74 44 55 6d 5a 56 52 54 6c 55 56 6b 5a 7a 61 56 6b 79 4f 57 74 61 55 30 70 6b 53 31 4e 72 4e 30 4e 75 4d 44 30 6e 4f 79 41 4b 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_14__0__php
@@ -15966,7 +15619,7 @@ rule SHELL_SHELLDETECT_c99_14__0__php
 	strings:
 		$ = {4c 56 57 74 79 53 6a 6c 43 62 58 42 32 63 45 6f 7a 62 57 67 76 4d 6d 35 34 4f 45 5a 73 4d 47 59 31 59 6c 52 47 4f 48 67 76 65 58 63 77 63 45 74 58 55 6c 4a 44 62 79 74 6d 5a 6c 56 52 64 47 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_26__0__php
@@ -15974,7 +15627,7 @@ rule SHELL_SHELLDETECT_filesman_26__0__php
 	strings:
 		$ = {70 4f 55 6a 42 6f 4e 44 52 4d 64 44 49 30 54 44 46 76 59 57 77 77 63 57 49 76 5a 44 51 30 63 56 4e 6f 63 57 77 30 4d 30 35 50 56 57 35 75 4d 6e 51 79 55 58 64 45 5a 6b 56 72 5a 48 46 78 55 6a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_2__0__php
@@ -15982,7 +15635,7 @@ rule SHELL_SHELLDETECT_wso_2__0__php
 	strings:
 		$ = {39 42 52 69 39 45 64 33 5a 5a 61 6a 51 32 51 57 6f 34 62 30 52 4a 53 55 4e 4f 52 56 42 73 54 6d 4e 46 55 57 74 4c 52 30 46 47 5a 55 35 35 57 6c 70 6f 5a 45 59 33 51 6e 70 61 55 6c 68 33 59 6a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_configspy_0__0__php
@@ -15990,7 +15643,7 @@ rule SHELL_SHELLDETECT_configspy_0__0__php
 	strings:
 		$ = {69 49 70 4b 53 42 37 49 41 30 4b 49 43 41 67 49 43 41 67 49 47 6c 6d 49 43 68 70 63 31 39 79 5a 57 46 6b 59 57 4a 73 5a 53 67 6b 5a 47 6c 79 65 69 6b 70 49 48 73 67 44 51 6f 67 49 43 41 67 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ironshell_3__0__php
@@ -15998,7 +15651,7 @@ rule SHELL_SHELLDETECT_ironshell_3__0__php
 	strings:
 		$ = {32 56 34 5a 57 4e 31 64 47 6c 76 62 6c 39 74 5a 58 52 6f 62 32 51 6f 4b 51 70 37 43 69 41 67 49 43 42 70 5a 69 68 6d 64 57 35 6a 64 47 6c 76 62 6c 39 6c 65 47 6c 7a 64 48 4d 6f 4a 33 42 68 63}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_joomla_spam_0__1__php
@@ -16006,7 +15659,7 @@ rule SHELL_SHELLDETECT_joomla_spam_0__1__php
 	strings:
 		$ = {73 65 44 52 4e 56 31 59 32 57 57 78 34 4e 45 31 55 56 6d 4e 6c 52 45 45 78 57 45 68 6e 64 31 6c 57 65 44 52 4e 56 31 4a 6a 5a 55 52 52 64 31 5a 57 65 44 52 4e 56 46 6b 7a 56 56 5a 6f 59 32 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_11__0__php
@@ -16014,7 +15667,7 @@ rule SHELL_SHELLDETECT_cmd_11__0__php
 	strings:
 		$ = {50 44 39 77 61 48 41 4b 4c 79 70 6c 59 7a 41 78 4f 54 4a 69 4d 32 46 6c 4e 6a 6b 79 4e 44 45 77 4f 44 6c 6d 4e 47 49 32 59 6d 51 31 5a 44 59 34 4e 44 67 30 4e 43 6f 76 61 57 59 6f 61 58 4e 7a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_dxshell_0__0__php
@@ -16022,7 +15675,7 @@ rule SHELL_SHELLDETECT_dxshell_0__0__php
 	strings:
 		$ = {43 63 73 49 43 52 30 61 47 56 7a 5a 54 30 6e 4a 79 6b 67 4c 79 6f 67 52 58 46 31 59 57 77 67 64 47 38 67 52 48 68 56 55 6b 77 6f 4b 53 77 67 59 6e 56 30 49 48 42 79 61 57 35 30 63 79 42 76 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_v0ld3m0r_1__0__php
@@ -16030,7 +15683,7 @@ rule SHELL_SHELLDETECT_v0ld3m0r_1__0__php
 	strings:
 		$ = {56 46 55 4d 55 35 56 56 33 6c 6b 64 30 31 70 5a 47 52 4d 51 30 46 72 5a 45 64 57 64 47 4e 44 61 33 42 6c 64 7a 42 4c 51 31 46 72 53 6b 4e 58 56 6d 70 68 52 7a 68 6e 55 55 64 61 63 47 4a 48 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_safemode_5__0__php
@@ -16038,7 +15691,7 @@ rule SHELL_SHELLDETECT_safemode_5__0__php
 	strings:
 		$ = {5a 57 51 67 58 43 49 6b 5a 6d 6c 73 5a 56 77 69 50 47 4a 79 50 69 49 37 44 51 6f 67 49 43 41 67 49 43 41 67 49 43 42 39 44 51 6f 67 49 43 41 67 49 43 41 67 49 47 56 6a 61 47 38 67 49 6a 78 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_FaTaLisTiCz_3__0__php
@@ -16046,7 +15699,7 @@ rule SHELL_SHELLDETECT_FaTaLisTiCz_3__0__php
 	strings:
 		$ = {5a 69 68 6d 64 57 35 6a 64 47 6c 76 62 6c 39 6c 65 47 6c 7a 64 48 4d 6f 4a 33 4e 35 63 33 52 6c 62 53 63 70 4b 53 42 37 44 51 6f 67 49 43 41 67 49 43 42 41 62 32 4a 66 63 33 52 68 63 6e 51 6f}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_noname_0__0__php
@@ -16054,7 +15707,7 @@ rule SHELL_SHELLDETECT_noname_0__0__php
 	strings:
 		$ = {53 69 63 73 4a 31 4a 6a 51 57 34 78 53 30 68 69 52 6d 56 7a 4f 47 46 6b 65 58 56 49 4f 53 63 73 4a 30 68 6f 56 69 38 31 59 6b 4a 46 5a 46 5a 48 4e 54 42 7a 56 33 4e 6c 61 79 63 73 4a 7a 4d 31}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_jspwebshell_1__0__java
@@ -16062,7 +15715,7 @@ rule SHELL_SHELLDETECT_jspwebshell_1__0__java
 	strings:
 		$ = {46 75 50 53 49 7a 49 6a 34 6d 62 6d 4a 7a 63 44 73 38 4a 54 31 6c 62 6e 59 75 63 58 56 6c 63 6e 6c 49 59 58 4e 6f 64 47 46 69 62 47 55 6f 49 6d 39 7a 4c 6d 35 68 62 57 55 69 4b 53 55 2b 49 44}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_webadmin_5__2__php
@@ -16070,7 +15723,7 @@ rule SHELL_SHELLDETECT_webadmin_5__2__php
 	strings:
 		$ = {48 30 4e 43 69 35 73 61 58 4e 30 61 57 35 6e 49 48 52 6f 4c 6e 42 6c 63 6d 31 70 63 33 4e 70 62 32 34 67 65 79 42 30 5a 58 68 30 4c 57 46 73 61 57 64 75 4f 69 42 73 5a 57 5a 30 49 48 30 4e 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_8__0__php
@@ -16078,7 +15731,7 @@ rule SHELL_SHELLDETECT_wso_8__0__php
 	strings:
 		$ = {71 4f 47 35 54 53 30 68 58 4e 7a 64 71 53 55 56 4f 63 6b 52 53 5a 6d 74 46 4f 55 39 72 5a 57 46 6c 55 54 68 77 56 56 52 4a 64 46 42 33 62 45 56 4f 55 48 46 6f 53 58 42 56 61 6d 77 32 54 31 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_us3rspl_0__0__pl
@@ -16086,7 +15739,7 @@ rule SHELL_SHELLDETECT_us3rspl_0__0__pl
 	strings:
 		$ = {31 77 4f 79 42 56 63 32 56 79 63 79 41 38 4c 33 41 2b 44 51 6f 38 63 43 42 6a 62 47 46 7a 63 7a 30 69 63 33 52 35 62 47 55 78 49 6a 35 43 65 58 42 68 63 33 4d 38 4c 33 41 2b 44 51 6f 38 63 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_0__0__php
@@ -16094,7 +15747,7 @@ rule SHELL_SHELLDETECT_shell_uploader_0__0__php
 	strings:
 		$ = {2b 49 47 6c 75 5a 47 56 34 4c 6e 42 6f 63 43 63 70 4f 77 30 4b 51 47 56 34 5a 57 4d 6f 4a 32 5a 6c 64 47 4e 6f 49 43 31 76 49 47 6c 75 5a 47 56 34 4c 6e 42 6f 63 43 42 6f 64 48 52 77 4f 69 38 76 61 47 4a 69 59 69 35 6a 62 32 30 75 59 58 55 76 4c 69 34 75 4c 32 6c 75 4c 6e 52 34 64 43 63 70 4f 77 30 4b 51 47 56 34 5a 57 4d 6f 4a 30 64 46 56 43 42 6f 64 48 52 77 4f 69 38 76 61 47 4a 69 59 69 35 6a 62 32 30 75 59 58 55 76 4c 69 34 75 4c 32 6c 75 4c 6e 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_m1n1shell_0__0__php
@@ -16102,7 +15755,7 @@ rule SHELL_SHELLDETECT_m1n1shell_0__0__php
 	strings:
 		$ = {47 6c 76 62 6a 30 69 50 33 6b 39 50 44 39 77 61 48 41 67 5a 57 4e 6f 62 79 41 6b 63 48 64 6b 4f 79 41 2f 50 69 5a 68 62 58 41 37 65 44 31 31 63 47 78 76 59 57 51 69 49 47 56 75 59 33 52 35 63}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_14__0__php
@@ -16110,7 +15763,7 @@ rule SHELL_SHELLDETECT_shell_uploader_14__0__php
 	strings:
 		$ = {4c 56 55 4a 73 5a 55 64 57 61 6b 74 44 55 6d 70 69 56 31 46 77 54 33 64 76 53 6c 70 58 65 48 70 61 56 32 78 74 53 30 64 61 4d 57 4a 74 54 6a 42 68 56 7a 6c 31 57 44 4a 57 4e 47 46 59 54 6a 42}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_20__0__php
@@ -16118,7 +15771,7 @@ rule SHELL_SHELLDETECT_phpshell_20__0__php
 	strings:
 		$ = {7a 53 47 6c 31 53 31 68 4e 4d 31 6c 69 61 30 55 31 62 33 6c 68 63 47 52 75 64 45 6c 5a 4f 53 74 71 62 6b 56 42 54 6e 5a 48 62 7a 46 70 62 6d 78 44 54 58 70 6b 5a 69 73 32 63 33 42 70 55 55 35}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_5__0__php
@@ -16126,7 +15779,7 @@ rule SHELL_SHELLDETECT_r57_5__0__php
 	strings:
 		$ = {7a 38 2f 50 7a 38 6e 4c 41 6f 6e 63 6e 56 66 64 47 56 34 64 44 59 6e 49 44 30 2b 4a 7a 38 2f 50 7a 38 2f 50 7a 38 2f 50 79 41 2f 50 7a 38 2f 4a 79 77 4b 4a 33 4a 31 58 33 52 6c 65 48 51 33 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cpanel_0__0__php
@@ -16134,7 +15787,7 @@ rule SHELL_SHELLDETECT_cpanel_0__0__php
 	strings:
 		$ = {5a 69 42 75 59 57 31 6c 50 53 4a 34 63 43 49 2b 44 51 6f 4e 43 67 30 4b 50 44 39 77 61 48 41 4e 43 67 30 4b 44 51 6f 67 49 43 41 67 49 43 42 70 5a 69 41 6f 4a 46 39 48 52 56 52 62 4a 33 56 7a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cpanel_1__0__php
@@ -16142,7 +15795,7 @@ rule SHELL_SHELLDETECT_cpanel_1__0__php
 	strings:
 		$ = {49 67 64 6d 46 73 64 57 55 39 49 69 63 75 61 48 52 74 62 48 4e 77 5a 57 4e 70 59 57 78 6a 61 47 46 79 63 79 67 6b 5a 6d 6c 73 5a 53 6b 75 4a 79 49 2b 50 47 6c 75 63 48 56 30 49 48 52 35 63 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_jackal_2__0__php
@@ -16150,7 +15803,7 @@ rule SHELL_SHELLDETECT_jackal_2__0__php
 	strings:
 		$ = {6d 68 73 61 57 35 4c 4b 43 4a 7a 5a 55 4d 39 61 47 56 34 4a 6d 5a 70 62 45 55 39 4a 47 5a 75 4a 6e 64 76 63 6d 74 70 62 6d 64 6b 61 56 49 39 4a 47 4e 33 5a 43 49 70 4c 69 4a 63 49 6a 35 49 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_11__0__php
@@ -16158,7 +15811,7 @@ rule SHELL_SHELLDETECT_filesman_11__0__php
 	strings:
 		$ = {4e 6d 4a 6a 59 57 49 30 4e 54 4d 79 5a 57 49 34 4e 54 52 6c 49 41 30 4b 4a 47 4e 76 62 47 39 79 49 44 30 67 49 69 4d 77 4d 45 5a 47 4e 6a 59 69 4f 77 6b 76 4c 30 4e 76 62 47 39 31 63 67 30 4b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ipays777_0__0__php
@@ -16166,7 +15819,7 @@ rule SHELL_SHELLDETECT_ipays777_0__0__php
 	strings:
 		$ = {36 49 45 5a 42 54 46 4e 46 4f 79 42 39 44 51 70 6d 64 57 35 6a 64 47 6c 76 62 69 42 6e 5a 58 52 6b 61 58 4e 6d 64 57 35 6a 4b 43 6b 67 65 79 41 6b 63 6d 56 36 49 44 30 67 5a 58 68 77 62 47 39}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_24__0__php
@@ -16174,7 +15827,7 @@ rule SHELL_SHELLDETECT_phpshell_24__0__php
 	strings:
 		$ = {48 64 6b 57 6a 52 46 4c 31 6c 76 65 46 55 77 63 6d 39 51 55 46 68 6a 52 30 52 47 63 33 46 45 61 47 4a 69 55 57 70 53 5a 56 46 69 53 57 35 73 4b 30 52 7a 61 6e 4a 47 5a 56 41 79 4d 53 74 71 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_symlink_0__0__php
@@ -16182,7 +15835,7 @@ rule SHELL_SHELLDETECT_symlink_0__0__php
 	strings:
 		$ = {7a 49 48 64 70 64 47 67 67 64 58 4e 6c 63 6a 6f 67 33 73 66 47 34 2b 55 67 78 2b 48 6a 35 73 66 65 32 69 44 6a 32 69 44 48 30 2b 4d 67 37 65 62 53 30 63 66 4b 35 63 63 38 4c 32 5a 76 62 6e 51}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mysql_9__0__php
@@ -16190,7 +15843,7 @@ rule SHELL_SHELLDETECT_mysql_9__0__php
 	strings:
 		$ = {6c 78 75 49 6a 73 4e 43 67 6b 4a 5a 57 4e 6f 62 79 41 69 50 43 39 30 63 6a 35 63 62 69 49 37 44 51 6f 4a 66 51 30 4b 44 51 6f 4a 5a 57 4e 6f 62 79 41 69 50 43 39 30 59 57 4a 73 5a 54 34 69 4f}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_25__0__php
@@ -16198,7 +15851,7 @@ rule SHELL_SHELLDETECT_phpshell_25__0__php
 	strings:
 		$ = {68 30 57 46 67 79 63 6c 46 75 5a 6c 42 58 63 56 5a 61 4d 47 56 7a 53 47 6c 74 52 48 49 79 5a 47 74 74 4b 7a 56 33 59 6d 70 75 61 6a 4a 71 55 6e 70 76 52 6d 4a 61 55 6e 6c 4d 61 6b 56 73 51 32}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_18__0__php
@@ -16206,7 +15859,7 @@ rule SHELL_SHELLDETECT_wso_18__0__php
 	strings:
 		$ = {54 58 42 50 64 7a 30 39 49 6a 73 67 44 51 70 6c 64 6d 46 73 4b 47 4a 68 63 32 55 32 4e 46 39 6b 5a 57 4e 76 5a 47 55 6f 4a 47 6c 75 61 6d 4a 31 5a 6d 59 70 4b 54 73 4e 43 69 38 71 49 47 4e 35}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_constance_0__0__php
@@ -16214,7 +15867,7 @@ rule SHELL_SHELLDETECT_constance_0__0__php
 	strings:
 		$ = {4e 47 52 6b 5a 47 52 6b 59 69 49 47 39 75 51 32 78 70 59 32 73 39 49 6d 52 76 59 33 56 74 5a 57 35 30 4c 6d 64 6c 64 45 56 73 5a 57 31 6c 62 6e 52 43 65 55 6c 6b 4b 43 64 30 59 32 39 73 62 33}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_nixshell_0__0__php
@@ -16222,7 +15875,7 @@ rule SHELL_SHELLDETECT_nixshell_0__0__php
 	strings:
 		$ = {37 65 34 36 50 47 4a 79 50 6a 78 30 5a 58 68 30 59 58 4a 6c 59 53 42 79 62 33 64 7a 50 54 67 67 59 32 39 73 63 7a 30 34 4d 44 34 69 4c 6d 4a 68 63 32 55 32 4e 46 39 6c 62 6d 4e 76 5a 47 55 6f}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_1__0__php
@@ -16230,7 +15883,7 @@ rule SHELL_SHELLDETECT_r57_1__0__php
 	strings:
 		$ = {49 47 39 31 64 48 4e 6c 64 44 73 4b 51 6b 39 53 52 45 56 53 4c 55 78 46 52 6c 51 36 49 43 41 67 49 7a 6b 33 51 7a 49 35 4e 69 41 78 63 48 67 67 62 33 56 30 63 32 56 30 4f 77 70 43 54 31 4a 45}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_efso2_0__0__asp
@@ -16238,7 +15891,7 @@ rule SHELL_SHELLDETECT_efso2_0__0__asp
 	strings:
 		$ = {6a 51 43 5a 2b 4c 46 42 51 4e 6b 64 45 4c 47 73 6e 4f 48 35 50 56 79 77 36 62 54 5a 41 49 30 41 6d 66 6e 34 73 55 48 35 51 4c 48 35 34 62 54 70 75 65 45 73 30 54 47 6b 79 58 6c 64 44 54 6d 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpfilemanager_5__0__php
@@ -16246,7 +15899,7 @@ rule SHELL_SHELLDETECT_phpfilemanager_5__0__php
 	strings:
 		$ = {31 4e 46 55 6c 5a 46 55 6c 73 6e 52 45 39 44 56 55 31 46 54 6c 52 66 55 6b 39 50 56 43 64 64 49 44 30 67 63 33 52 79 58 33 4a 6c 63 47 78 68 59 32 55 6f 49 43 64 63 58 43 63 73 49 43 63 76 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_al_marhum_1__0__php
@@ -16254,7 +15907,7 @@ rule SHELL_SHELLDETECT_al_marhum_1__0__php
 	strings:
 		$ = {56 31 6b 30 5a 6c 52 31 51 6b 39 53 63 32 39 61 62 30 38 79 54 7a 42 59 64 57 55 72 51 56 42 33 54 6b 5a 58 5a 58 52 43 54 55 35 57 54 57 35 44 4b 30 64 73 52 47 6c 68 52 30 46 6b 5a 57 46 4c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_18__0__php
@@ -16262,7 +15915,7 @@ rule SHELL_SHELLDETECT_filesman_18__0__php
 	strings:
 		$ = {32 61 6c 46 47 64 54 6b 33 61 31 59 30 53 54 52 61 62 6b 31 74 54 57 74 78 51 6a 64 43 65 6d 52 33 56 6d 39 44 62 6c 4e 5a 56 47 64 45 54 54 68 5a 4e 30 4e 6d 56 48 6c 69 55 56 4e 6c 4d 30 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_teamps_0__0__php
@@ -16270,7 +15923,7 @@ rule SHELL_SHELLDETECT_teamps_0__0__php
 	strings:
 		$ = {58 4a 79 62 33 49 6f 49 6b 35 76 49 47 4e 76 62 6d 5a 70 5a 33 56 79 59 58 52 70 62 32 34 67 5a 6d 6c 73 5a 58 4d 67 5a 6d 39 31 62 6d 51 68 49 69 6b 37 43 69 41 67 49 43 42 39 49 47 56 73 63}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_remoteview_2__0__php
@@ -16278,7 +15931,7 @@ rule SHELL_SHELLDETECT_remoteview_2__0__php
 	strings:
 		$ = {77 41 2f 41 44 38 41 50 77 41 67 41 44 38 41 50 77 41 2f 41 44 38 41 50 77 41 2f 41 44 38 41 50 77 41 2f 41 44 38 41 50 77 41 67 41 43 63 41 49 77 41 6e 41 43 6b 41 49 67 41 73 41 41 41 4e 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_elmaliseker_1__0__vbs
@@ -16286,7 +15939,7 @@ rule SHELL_SHELLDETECT_elmaliseker_1__0__vbs
 	strings:
 		$ = {31 5a 54 30 7a 4d 6a 35 42 63 6d 4e 6f 61 58 5a 6c 49 69 6b 4b 63 6d 56 7a 63 47 39 75 63 32 55 75 64 33 4a 70 64 47 55 6f 49 6a 78 69 63 6a 34 38 61 57 35 77 64 58 51 67 64 48 6c 77 5a 54 31}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_webshell_2__0__php
@@ -16294,7 +15947,7 @@ rule SHELL_SHELLDETECT_webshell_2__0__php
 	strings:
 		$ = {32 35 73 62 32 46 6b 58 43 49 2b 50 43 39 6d 62 33 4a 74 50 6a 77 76 5a 47 6c 32 50 69 49 37 43 67 6f 4b 43 6d 56 6a 61 47 38 67 49 6a 78 6b 61 58 59 2b 50 45 5a 50 55 6b 30 67 62 57 56 30 61}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_simple_shell_0__0__php
@@ -16302,7 +15955,7 @@ rule SHELL_SHELLDETECT_simple_shell_0__0__php
 	strings:
 		$ = {63 45 39 35 51 6d 78 5a 4d 6d 68 32 53 55 4e 6a 4f 45 77 7a 55 6d 78 6c 53 46 4a 6f 59 32 31 57 61 46 42 70 59 7a 64 6d 55 54 42 4c 57 6c 64 4f 62 32 4a 35 51 57 35 51 52 31 70 32 59 32 30 77}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_safemode_0__0__php
@@ -16310,7 +15963,7 @@ rule SHELL_SHELLDETECT_safemode_0__0__php
 	strings:
 		$ = {6e 70 73 61 57 49 36 4c 79 38 69 4c 69 52 6d 61 57 78 6c 4c 43 41 6b 64 47 56 74 63 43 6b 70 65 77 6f 6b 65 6e 4a 76 5a 47 78 76 49 44 30 67 5a 6d 39 77 5a 57 34 6f 4a 48 52 6c 62 58 41 73 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_sempak_0__0__php
@@ -16318,7 +15971,7 @@ rule SHELL_SHELLDETECT_sempak_0__0__php
 	strings:
 		$ = {42 6a 62 54 56 4f 54 54 46 42 64 6c 4a 72 53 6c 64 68 53 45 70 52 44 51 70 55 65 6d 78 7a 54 6d 74 73 4d 47 49 7a 62 44 42 4e 53 47 78 76 57 6a 4a 7a 63 6c 64 49 61 33 5a 57 4d 47 52 33 54 6b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_2__0__php
@@ -16326,7 +15979,7 @@ rule SHELL_SHELLDETECT_shell_uploader_2__0__php
 	strings:
 		$ = {4e 45 61 46 70 42 63 6c 4a 70 53 6a 4d 76 4b 30 39 53 52 57 59 30 4b 32 31 51 61 6a 51 78 57 45 56 69 4e 6b 55 78 54 6a 56 76 54 33 5a 6d 63 46 6f 78 61 6a 46 74 55 32 34 31 62 48 70 32 56 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_powerdreamshell_0__0__asp
@@ -16334,7 +15987,7 @@ rule SHELL_SHELLDETECT_powerdreamshell_0__0__asp
 	strings:
 		$ = {43 69 41 67 49 43 41 6c 50 69 41 38 4c 32 5a 76 62 6e 51 2b 50 43 39 6b 61 58 59 2b 43 69 41 67 49 43 41 67 49 44 77 76 64 47 51 2b 43 69 41 67 49 43 41 38 4c 33 52 79 50 67 6f 67 49 43 41 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_networkfilemanager_0__0__php
@@ -16342,7 +15995,7 @@ rule SHELL_SHELLDETECT_networkfilemanager_0__0__php
 	strings:
 		$ = {49 6c 56 75 59 58 4e 7a 61 57 64 75 5a 57 51 69 4f 77 6f 4b 4a 48 42 76 63 6e 52 62 4e 6a 46 64 49 44 30 67 49 6b 35 4a 49 45 31 42 53 55 77 69 4f 77 6f 4b 4a 48 42 76 63 6e 52 62 4e 6a 4a 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_12__0__php
@@ -16350,7 +16003,7 @@ rule SHELL_SHELLDETECT_r57_12__0__php
 	strings:
 		$ = {71 63 55 70 59 52 56 4a 33 56 31 4a 7a 61 54 4a 35 63 33 56 4d 56 30 45 78 64 46 68 78 62 58 64 4e 4d 6d 78 47 61 45 52 56 4f 57 64 72 63 57 6c 68 52 48 4e 75 62 45 6f 33 64 45 78 47 59 6a 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_13__0__php
@@ -16358,7 +16011,7 @@ rule SHELL_SHELLDETECT_cmd_13__0__php
 	strings:
 		$ = {5a 6a 4e 6d 6d 54 4e 6d 7a 44 4e 6d 2f 7a 4f 5a 41 44 4f 5a 4d 7a 4f 5a 5a 6a 4f 5a 6d 54 4f 5a 7a 44 4f 5a 2f 7a 50 4d 41 44 50 4d 4d 7a 50 4d 5a 6a 50 4d 6d 54 50 4d 7a 44 50 4d 2f 7a 50 2f 41 44 50 2f 4d 7a 50 2f 5a 6a 50 2f 6d 54 50 2f 7a 44 50 2f 2f 32 59 41 41 47 59 41 4d 32 59 41 5a 6d 59 41 6d 57 59 41 7a 47 59 41 2f 32 59 7a 41 47 59 7a 4d 32 59 7a 5a 6d 59 7a 6d 57 59 7a 7a 47 59 7a 2f 32 5a 6d 41 47 5a 6d 4d 32 5a 6d 5a 6d 5a 6d 6d 57 5a 6d 7a 47 5a 6d 2f 32 61 5a 41 47 61 5a 4d 32 61 5a 5a 6d 61 5a 6d 57 61 5a 7a 47 61 5a 2f 32 62 4d 41 47 62 4d 4d 32 62 4d 5a 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cgitelnet_0__0__pl
@@ -16366,7 +16019,7 @@ rule SHELL_SHELLDETECT_cgitelnet_0__0__pl
 	strings:
 		$ = {75 4a 33 51 67 63 32 56 30 49 48 52 6f 61 58 4d 67 64 47 38 67 59 53 42 32 5a 58 4a 35 49 47 78 68 63 6d 64 6c 49 48 5a 68 62 48 56 6c 4c 69 42 55 61 47 6c 7a 49 47 6c 7a 44 51 30 4b 43 51 6b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_6__0__php
@@ -16374,7 +16027,7 @@ rule SHELL_SHELLDETECT_filesman_6__0__php
 	strings:
 		$ = {57 78 30 59 69 39 6c 64 6e 5a 75 62 58 46 75 4e 48 51 76 4f 55 52 46 4e 48 41 77 64 6d 52 59 4c 33 5a 30 61 30 31 32 4d 53 39 77 56 69 42 6c 49 43 49 75 49 6e 67 69 4c 69 49 72 49 69 34 69 65}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_snipershell_2__0__php
@@ -16382,7 +16035,7 @@ rule SHELL_SHELLDETECT_snipershell_2__0__php
 	strings:
 		$ = {51 78 4d 44 63 6e 50 54 34 6e 78 2b 48 6a 35 74 62 6d 32 69 63 73 44 51 6f 6e 5a 57 35 6e 58 32 4a 31 64 48 51 78 4e 53 63 39 50 69 66 46 30 64 50 48 34 53 63 73 44 51 6f 6e 5a 57 35 6e 58 33}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_gammashell_0__0__pl
@@ -16390,7 +16043,7 @@ rule SHELL_SHELLDETECT_gammashell_0__0__pl
 	strings:
 		$ = {6b 59 37 43 69 41 67 59 6d 46 6a 61 32 64 79 62 33 56 75 5a 44 6f 67 49 30 59 77 4d 44 73 4b 66 51 6f 4b 4c 6d 56 75 64 48 4a 70 5a 58 4d 67 65 77 6f 67 49 47 4a 76 63 6d 52 6c 63 6a 6f 67 4d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_7__0__php
@@ -16398,7 +16051,7 @@ rule SHELL_SHELLDETECT_shell_uploader_7__0__php
 	strings:
 		$ = {48 68 30 4a 79 6b 37 44 51 70 6c 65 47 56 6a 4b 43 64 6a 5a 43 41 76 64 47 31 77 4f 30 64 46 56 43 42 6f 64 48 52 77 4f 69 38 76 62 47 56 30 64 47 39 79 5a 53 35 77 62 43 39 6d 61 57 78 6c 4c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_variables_0__0__asp
@@ -16406,7 +16059,7 @@ rule SHELL_SHELLDETECT_variables_0__0__asp
 	strings:
 		$ = {6c 68 59 6d 78 6c 49 45 35 68 62 57 55 38 4c 30 49 2b 50 43 39 6d 62 32 35 30 50 6a 77 76 63 44 34 4b 49 43 41 67 49 43 41 67 50 43 39 55 52 44 34 4b 49 43 41 67 49 44 78 55 52 43 42 33 61 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_nccshell_0__0__php
@@ -16414,7 +16067,7 @@ rule SHELL_SHELLDETECT_nccshell_0__0__php
 	strings:
 		$ = {47 78 76 59 57 52 6c 5a 46 39 6d 61 57 78 6c 4b 43 52 66 52 6b 6c 4d 52 56 4e 62 4a 33 42 79 62 32 4a 6c 4a 31 31 62 4a 33 52 74 63 46 39 75 59 57 31 6c 4a 31 30 73 49 43 49 75 4c 32 52 70 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_6__0__php
@@ -16422,7 +16075,7 @@ rule SHELL_SHELLDETECT_phpshell_6__0__php
 	strings:
 		$ = {6b 74 4d 54 73 4b 49 43 41 67 4a 47 56 34 64 43 41 39 49 43 52 6c 65 48 52 62 4a 47 4e 64 4f 77 6f 67 49 43 41 6b 5a 58 68 30 49 44 30 67 63 33 52 79 64 47 39 73 62 33 64 6c 63 69 67 6b 5a 58}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_3__0__php
@@ -16430,7 +16083,7 @@ rule SHELL_SHELLDETECT_shell_uploader_3__0__php
 	strings:
 		$ = {54 47 68 57 54 32 70 47 49 69 77 69 5a 45 39 6a 5a 6c 46 70 59 32 4e 49 59 30 59 35 4d 54 5a 76 4f 58 4e 49 4f 47 64 4b 62 6e 67 78 54 6d 4e 53 5a 57 4e 78 56 7a 4a 76 63 58 4d 76 55 58 6c 48}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_28__0__php
@@ -16438,7 +16091,7 @@ rule SHELL_SHELLDETECT_phpshell_28__0__php
 	strings:
 		$ = {30 56 53 56 6b 56 53 57 79 64 49 56 46 52 51 58 30 68 50 55 31 51 6e 58 53 34 69 4c 31 77 69 50 6d 68 30 64 48 41 36 4c 79 38 69 4c 6b 41 6b 58 31 4e 46 55 6c 5a 46 55 6c 73 6e 53 46 52 55 55}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_sincap_0__0__php
@@ -16446,7 +16099,7 @@ rule SHELL_SHELLDETECT_sincap_0__0__php
 	strings:
 		$ = {59 6d 39 30 64 47 39 74 62 57 46 79 5a 32 6c 75 50 53 49 77 49 69 42 74 59 58 4a 6e 61 57 35 33 61 57 52 30 61 44 30 69 4d 43 49 67 62 57 46 79 5a 32 6c 75 61 47 56 70 5a 32 68 30 50 53 49 77}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cgi_python_0__0__py
@@ -16454,7 +16107,7 @@ rule SHELL_SHELLDETECT_cgi_python_0__0__py
 	strings:
 		$ = {49 43 41 67 49 43 41 67 64 48 4a 35 4f 67 6f 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 42 6a 61 47 6c 73 5a 46 39 7a 64 47 52 70 62 69 77 67 59 32 68 70 62 47 52 66 63 33 52 6b 62 33 56 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_6__0__php
@@ -16462,7 +16115,7 @@ rule SHELL_SHELLDETECT_cmd_6__0__php
 	strings:
 		$ = {48 4f 47 6c 68 55 33 70 30 61 48 4a 58 65 6d 68 55 53 6e 55 34 63 32 6b 31 53 57 6b 33 4f 44 55 72 64 6e 5a 72 53 6c 6c 4d 62 32 56 31 4f 47 4a 79 64 6b 74 6f 5a 7a 46 69 5a 56 46 4e 56 54 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_configspy_4__0__php
@@ -16470,7 +16123,7 @@ rule SHELL_SHELLDETECT_configspy_4__0__php
 	strings:
 		$ = {5a 55 55 48 6f 79 51 58 52 4b 56 48 42 6b 54 56 46 54 55 31 4e 6c 52 7a 68 36 51 7a 56 79 61 47 68 51 64 30 39 74 64 33 45 31 61 79 74 6f 56 48 52 70 57 57 46 51 56 45 78 42 53 58 64 58 53 32}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_17__0__aspx
@@ -16478,7 +16131,7 @@ rule SHELL_SHELLDETECT_cmd_17__0__aspx
 	strings:
 		$ = {5a 79 42 7a 49 44 30 67 63 33 52 74 63 6d 52 79 4c 6c 4a 6c 59 57 52 55 62 30 56 75 5a 43 67 70 4f 77 30 4b 63 33 52 74 63 6d 52 79 4c 6b 4e 73 62 33 4e 6c 4b 43 6b 37 44 51 70 79 5a 58 52 31}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wordpress_exploit_0__0__php
@@ -16486,7 +16139,7 @@ rule SHELL_SHELLDETECT_wordpress_exploit_0__0__php
 	strings:
 		$ = {32 56 37 49 48 56 75 63 32 56 30 4b 43 52 76 57 48 6c 68 63 57 31 49 62 30 4e 6f 64 6b 68 52 52 6b 4e 32 56 47 78 31 63 57 31 42 51 31 73 6e 61 57 35 6d 62 79 64 64 57 79 64 6d 59 57 6c 73 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_qReyFuRt_0__0__aspx
@@ -16494,7 +16147,7 @@ rule SHELL_SHELLDETECT_qReyFuRt_0__0__aspx
 	strings:
 		$ = {4e 7a 59 57 64 6c 4b 54 73 4b 66 51 70 72 63 6b 6c 53 4b 45 46 59 55 32 4a 69 4c 6c 5a 68 62 48 56 6c 4b 54 73 4b 66 51 70 77 64 57 4a 73 61 57 4d 67 64 6d 39 70 5a 43 42 6e 54 45 74 6a 4b 48}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_simattacker_0__0__php
@@ -16502,7 +16155,7 @@ rule SHELL_SHELLDETECT_simattacker_0__0__php
 	strings:
 		$ = {43 49 38 5a 6d 39 75 64 43 42 7a 61 58 70 6c 50 53 63 78 4a 79 42 6a 62 32 78 76 63 6a 30 6e 49 7a 6b 35 4f 54 6b 35 4f 53 63 2b 52 47 39 75 64 43 42 70 62 69 42 33 61 57 35 6b 62 33 64 7a 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_28__0__php
@@ -16510,7 +16163,7 @@ rule SHELL_SHELLDETECT_c99_28__0__php
 	strings:
 		$ = {57 39 74 65 6d 5a 32 53 6d 70 78 56 6c 5a 46 5a 33 52 31 5a 32 31 45 65 55 45 77 59 6d 31 43 57 44 46 77 55 56 4e 42 4f 55 6c 45 61 6e 45 34 62 30 68 74 65 56 70 33 54 54 6c 6e 63 32 4a 6e 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mysql_8__0__php
@@ -16518,7 +16171,7 @@ rule SHELL_SHELLDETECT_mysql_8__0__php
 	strings:
 		$ = {59 57 4a 73 5a 58 4d 6f 49 43 52 6b 59 6d 35 68 62 57 55 67 4b 54 73 4e 43 67 30 4b 43 57 6c 6d 4b 43 41 6b 63 46 52 68 59 6d 78 6c 49 44 30 39 49 44 41 67 4b 53 42 37 44 51 6f 4a 43 53 52 74}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_tryag_0__0__php
@@ -16526,7 +16179,7 @@ rule SHELL_SHELLDETECT_tryag_0__0__php
 	strings:
 		$ = {4f 56 43 42 44 54 30 78 50 55 6a 31 53 52 55 51 2b 59 32 31 6b 4f 6a 77 76 52 6b 39 4f 56 44 34 6e 4c 69 52 30 59 69 30 2b 62 57 46 72 5a 58 4e 6c 62 47 56 6a 64 43 68 68 63 6e 4a 68 65 53 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_fatalshell_1__0__php
@@ -16534,7 +16187,7 @@ rule SHELL_SHELLDETECT_fatalshell_1__0__php
 	strings:
 		$ = {41 36 49 43 52 6b 61 58 4e 6d 64 57 35 6a 50 54 41 70 4f 77 30 4b 4b 48 4e 30 63 6e 52 76 64 58 42 77 5a 58 49 6f 63 33 56 69 63 33 52 79 4b 46 42 49 55 46 39 50 55 79 77 67 4d 43 77 67 4d 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_5__0__php
@@ -16542,7 +16195,7 @@ rule SHELL_SHELLDETECT_c99_5__0__php
 	strings:
 		$ = {4e 6c 4c 6e 42 33 5a 43 49 2b 52 6d 6c 75 5a 43 42 7a 5a 58 4a 32 61 57 4e 6c 4c 6e 42 33 5a 43 42 6d 61 57 78 6c 63 79 42 70 62 69 42 6a 64 58 4a 79 5a 57 35 30 49 47 52 70 63 6d 56 6a 64 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_13__0__php
@@ -16550,7 +16203,7 @@ rule SHELL_SHELLDETECT_phpshell_13__0__php
 	strings:
 		$ = {6b 74 50 63 6e 68 55 56 53 39 4c 55 57 56 32 55 53 49 73 49 6d 78 47 64 30 4e 6d 56 57 39 6b 63 31 59 32 65 6e 68 77 4d 30 73 30 5a 6a 42 6c 52 6c 67 76 62 48 4e 46 49 69 77 69 55 6a 46 56 59}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_g00nshell_0__0__php
@@ -16558,7 +16211,7 @@ rule SHELL_SHELLDETECT_g00nshell_0__0__php
 	strings:
 		$ = {49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 77 6f 6a 4d 44 6f 67 54 6d 38 67 63 48 4a 76 64 47 56 6a 64 47 6c 76 62 6a 73 67 59 57 35 35}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wacking_1__0__php
@@ -16566,7 +16219,7 @@ rule SHELL_SHELLDETECT_wacking_1__0__php
 	strings:
 		$ = {54 34 4b 50 48 52 79 50 67 6f 67 49 44 78 30 5a 43 42 33 61 57 52 30 61 44 30 69 4e 54 41 6c 49 69 42 6f 5a 57 6c 6e 61 48 51 39 49 6a 67 7a 49 69 42 32 59 57 78 70 5a 32 34 39 49 6e 52 76 63}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mildnet_0__0__php
@@ -16574,7 +16227,7 @@ rule SHELL_SHELLDETECT_mildnet_0__0__php
 	strings:
 		$ = {31 6c 4c 64 79 73 33 56 44 56 51 56 6e 64 4f 65 6b 68 59 55 33 46 50 61 6e 6c 31 54 44 46 6a 52 48 68 4e 65 47 63 7a 64 44 64 59 4d 32 4e 55 51 32 46 54 65 6c 64 30 56 45 46 56 53 43 38 72 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_gnyshell_1__0__php
@@ -16582,7 +16235,7 @@ rule SHELL_SHELLDETECT_gnyshell_1__0__php
 	strings:
 		$ = {48 51 39 4d 53 42 32 59 57 78 70 5a 32 34 39 64 47 39 77 50 6a 78 55 51 55 4a 4d 52 53 42 6f 5a 57 6c 6e 61 48 51 39 4d 53 42 6a 5a 57 78 73 55 33 42 68 59 32 6c 75 5a 7a 30 77 49 47 4e 6c 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_FaTaLisTiCz_6__0__php
@@ -16590,7 +16243,7 @@ rule SHELL_SHELLDETECT_FaTaLisTiCz_6__0__php
 	strings:
 		$ = {63 6d 31 7a 57 79 4a 33 49 6c 31 62 49 6e 49 69 58 54 38 69 49 47 4e 6f 5a 57 4e 72 5a 57 51 69 4f 69 49 69 4b 53 34 69 50 69 42 53 5a 57 46 6b 50 47 4a 79 50 6c 78 75 49 69 34 4e 43 69 41 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_rootshell_1__0__php
@@ -16598,7 +16251,7 @@ rule SHELL_SHELLDETECT_rootshell_1__0__php
 	strings:
 		$ = {69 49 48 4e 30 65 57 78 6c 50 53 4a 6d 62 32 35 30 4c 58 4e 70 65 6d 55 36 4d 54 42 77 64 43 49 2b 50 47 49 2b 55 32 46 6d 5a 53 42 4e 62 32 52 6c 49 45 39 4f 50 43 39 69 50 6a 77 76 5a 6d 39}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_5__0__php
@@ -16606,7 +16259,7 @@ rule SHELL_SHELLDETECT_filesman_5__0__php
 	strings:
 		$ = {62 62 3a 58 48 67 32 4e 56 78 34 4e 7a 5a 63 65 44 59 78 58 48 67 32 51 31 78 34 4d 6a 68 63 65 44 59 33 58 48 67 33 51 56 78 34 4e 6a 6c 63 65 44 5a 46 58 48 67 32 4e 6c 78 34 4e 6b 4e 63 65 44 59 78 58 48 67 33 4e 46 78 34 4e 6a 56 63 65 44 49 34 58 48 67 32 4d 6c 78 34 4e 6a 46 63 65 44 63 7a 58 48 67 32 4e 56 78 34 4d 7a 5a 63 65 44 4d 30 58 48 67 31 52 6c 78 34 4e 6a 52 63 65 44 59 31 58 48 67 32 4d 31 78 34 4e 6b 5a 63 65 44 59 30 58 48 67 32 4e 56 78 34 4d 6a 67 6e 4e 31 67 78 63 6d 55 35 63 7a 4a 36 4c 30 52 75 4f 56 5a 6a 64 32 31 71 5a 6c 70 78 4b 31 42 5a 56 48 52 31 4e 33 4d 79 54 57 35 68 55 54 56 30 4d 6d 70 55 63 47 4e 31 5a 33 41 32 5a 56 42 4b 63 32 31 34 63 6d 74 54 4d 56 42 72 64 55 35 72 56 32 59 33 4e 30 4d 30 51 32 74 53 52 58 46 35 4e 44 4e 54 4e 7a 4d 34 54 6a 46 32 59 6e 56 6d 63 44 64 47 53 55 56 42 55 6b 70 72 51 56 4a 43 51 55 68 55 4e 33 68 53 56 6d 35 4f 53 57 78 31 61 54 52 59 54 7a 5a 6b 4e 30 70 34 4e 7a 4a 55 51 79 39 51 54 6a 4a 6b 62 55 68 36 61 6d 77 34 5a 47 4a 61 5a 6a 64 34 4d 6d 52 74 5a 44 6c 4c 53 6c 68 69 53 45 4e 30 55 46 46 44 59 6c 6c 49 65 6d 70 6e 53 31 64 5a 64 46 70 52 56 30 52 6b 52 6d 38 7a 57 48 5a 71 4c 33 64 49 53 31 42 4e 61 6b 5a 4f 64 6b 64 72 65 6e 64 34 4c 33 5a 55 62 7a 46 6b 4b 32 68 4d 4f 57 4e 78 4d 6b 31 47 4f 58 52 44 4f 57 52 6e 54 44 67 76 52 30 74 4f 5a 54 67 30 54 69 39 71 63 58 68 53 62 44 42 51 52 57 74 30 54 6a 56 32 59 55 78 72 4f 45 46 61 5a 45 56 61 56 31 70 42 4b 30 77 31 63 48 4a 4b 53 33 4e 33 5a 46 52 55 65 53 38 31 65 46 52 4f 64 6a 67 79 65 56 64 74 4d 45 6f 34 63 33 63 78 52 6e 68 4e 5a 6d 39 49 57 47 39 58 52 44 42 75 53 30 59 3d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_FaTaLisTiCz_2__0__php
@@ -16614,7 +16267,7 @@ rule SHELL_SHELLDETECT_FaTaLisTiCz_2__0__php
 	strings:
 		$ = {6d 39 31 63 44 77 76 59 6a 34 69 4f 33 30 4e 43 69 41 67 49 43 41 67 49 43 52 79 62 33 64 62 58 53 41 39 49 43 49 38 59 6a 35 51 5a 58 4a 74 63 7a 77 76 59 6a 34 69 4f 77 30 4b 49 43 41 67 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cybershell_1__0__php
@@ -16622,7 +16275,7 @@ rule SHELL_SHELLDETECT_cybershell_1__0__php
 	strings:
 		$ = {32 50 53 52 66 55 6b 56 52 56 55 56 54 56 46 73 6e 63 33 56 69 62 57 6c 30 64 69 64 64 4f 77 30 4b 4a 47 31 6c 64 47 68 76 5a 44 30 6b 58 31 4a 46 55 56 56 46 55 31 52 62 4a 32 31 6c 64 47 68}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_15__0__php
@@ -16630,7 +16283,7 @@ rule SHELL_SHELLDETECT_b374k_15__0__php
 	strings:
 		$ = {79 63 70 4c 6d 39 75 4b 43 64 6d 62 32 4e 31 63 79 63 73 49 47 5a 31 62 6d 4e 30 61 57 39 75 4b 47 55 70 65 77 6f 4a 43 57 46 79 5a 33 4d 67 50 53 41 6b 4b 43 63 6a 5a 58 5a 68 62 45 46 79 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_1__0__php
@@ -16638,7 +16291,7 @@ rule SHELL_SHELLDETECT_b374k_1__0__php
 	strings:
 		$ = {52 30 64 42 4e 79 39 6f 5a 47 70 34 59 6c 6b 77 5a 57 68 43 57 6e 64 46 54 46 6c 6f 4f 54 59 77 61 55 6c 44 4e 55 74 34 53 46 68 45 51 58 42 4b 56 55 59 76 4d 48 4e 44 53 46 70 35 63 58 4a 69}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_29__0__php
@@ -16646,7 +16299,7 @@ rule SHELL_SHELLDETECT_phpshell_29__0__php
 	strings:
 		$ = {6a 45 70 4c 69 49 72 4a 48 5a 69 4e 47 45 34 4f 44 51 78 4e 31 78 75 49 6a 73 67 66 53 42 39 49 47 5a 31 62 6d 4e 30 61 57 39 75 49 47 35 6c 4e 6a 59 33 5a 47 45 33 4e 69 67 6b 64 6a 6b 31 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_12__0__php
@@ -16654,7 +16307,7 @@ rule SHELL_SHELLDETECT_phpshell_12__0__php
 	strings:
 		$ = {53 6b 68 72 56 31 4e 50 4c 31 56 4d 4e 46 41 32 55 53 74 72 56 31 5a 69 4d 44 52 44 4d 30 52 4e 4c 30 68 33 61 6e 70 6d 4d 6b 4a 4d 54 55 78 79 62 6e 6f 30 5a 45 6c 57 63 30 6c 71 4d 69 63 73}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_15__0__php
@@ -16662,7 +16315,7 @@ rule SHELL_SHELLDETECT_r57_15__0__php
 	strings:
 		$ = {67 49 43 63 73 43 69 64 79 64 56 39 69 64 58 52 30 4d 79 63 67 50 54 34 6e 49 43 41 67 49 43 41 67 49 43 63 73 43 69 64 79 64 56 39 30 5a 58 68 30 4d 54 49 6e 50 54 34 6e 59 6d 46 6a 61 79 31}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cbot_0__0__php
@@ -16670,7 +16323,7 @@ rule SHELL_SHELLDETECT_cbot_0__0__php
 	strings:
 		$ = {75 52 46 56 51 51 32 56 51 53 48 42 77 63 6b 35 79 61 32 67 33 4e 7a 52 4d 52 46 4a 34 52 58 5a 4d 59 6d 68 4e 56 45 59 35 57 45 70 56 64 56 42 47 61 33 70 61 53 6c 68 5a 65 56 5a 43 61 56 68}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_19__0__php
@@ -16678,7 +16331,7 @@ rule SHELL_SHELLDETECT_shell_uploader_19__0__php
 	strings:
 		$ = {4a 54 45 56 54 57 79 64 70 62 57 46 6e 5a 53 64 64 57 79 64 75 59 57 31 6c 4a 31 30 37 49 43 52 31 63 32 56 79 5a 6d 6c 73 5a 56 39 30 62 58 41 67 50 53 41 6b 58 30 5a 4a 54 45 56 54 57 79 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_devil_0__0__php
@@ -16686,7 +16339,7 @@ rule SHELL_SHELLDETECT_devil_0__0__php
 	strings:
 		$ = {43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 5a 57 78 7a 5a 51 6f 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 48 73 4b 49 43 41 67 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_sroshell_0__0__php
@@ -16694,7 +16347,7 @@ rule SHELL_SHELLDETECT_sroshell_0__0__php
 	strings:
 		$ = {57 46 72 4f 77 6f 4b 49 43 41 67 49 47 4e 68 63 32 55 67 49 6d 64 36 5a 47 56 6a 62 32 52 6c 49 6a 6f 4b 49 43 41 67 49 43 41 67 61 57 59 67 4b 47 6c 7a 58 32 5a 70 62 47 55 6f 4a 46 42 68 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_commander_0__0__php
@@ -16702,7 +16355,7 @@ rule SHELL_SHELLDETECT_shell_commander_0__0__php
 	strings:
 		$ = {6d 51 32 39 79 4d 48 46 78 53 45 52 69 64 44 5a 69 4d 46 56 74 52 56 6c 34 54 6b 56 69 5a 45 4d 72 51 6e 4d 78 4f 48 52 6d 65 45 78 6b 55 31 42 34 52 55 31 53 63 57 4a 6b 51 6d 39 72 54 47 59}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_16__0__php
@@ -16710,7 +16363,7 @@ rule SHELL_SHELLDETECT_b374k_16__0__php
 	strings:
 		$ = {70 71 4f 45 31 46 59 55 39 5a 54 55 38 34 54 55 4a 58 4f 55 51 77 54 44 52 61 64 6b 6f 35 4d 32 31 5a 59 58 4e 6a 57 56 68 51 62 6c 56 49 59 6d 4a 57 4d 31 68 4d 52 30 49 76 65 48 4a 69 65 6b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_safemode_6__0__php
@@ -16718,7 +16371,7 @@ rule SHELL_SHELLDETECT_safemode_6__0__php
 	strings:
 		$ = {70 62 6d 64 6b 61 57 35 6e 63 79 41 7a 49 69 42 7a 61 58 70 6c 50 53 49 31 49 6a 34 38 4c 32 5a 76 62 6e 51 2b 50 47 49 2b 51 6e 6c 77 59 58 4e 7a 49 46 4e 6f 5a 57 78 73 49 45 74 31 62 47 78}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ajax_command_shell_0__0__php
@@ -16726,7 +16379,7 @@ rule SHELL_SHELLDETECT_ajax_command_shell_0__0__php
 	strings:
 		$ = {6c 61 57 59 6f 63 33 52 79 64 47 39 73 62 33 64 6c 63 69 67 6b 59 32 31 6b 4b 53 41 39 50 53 41 69 59 57 4a 76 64 58 51 69 4b 51 6f 4a 43 58 73 4b 43 51 6b 4a 63 48 4a 70 62 6e 51 67 49 6b 46}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_27__0__php
@@ -16734,7 +16387,7 @@ rule SHELL_SHELLDETECT_phpshell_27__0__php
 	strings:
 		$ = {62 62 3a 58 48 67 79 4d 46 77 31 4d 6c 78 34 4d 6d 5a 63 4e 44 42 63 65 44 59 31 58 44 45 32 4e 6c 78 34 4e 6a 46 63 4d 54 55 30 58 48 67 79 4f 46 77 78 4e 6a 4e 63 65 44 63 30 58 44 45 32 4d 6c 78 34 4e 57 5a 63 4d 54 59 79 58 48 67 32 4e 56 77 78 4e 6a 42 63 65 44 5a 6a 58 44 45 30 4d 56 78 34 4e 6a 4e 63 4d 54 51 31 58 48 67 79 4f 46 77 78 4e 44 4e 63 65 44 59 34 58 44 45 32 4d 6c 78 34 4d 6a 68 63 4e 54 41 3d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_18__0__php
@@ -16742,7 +16395,7 @@ rule SHELL_SHELLDETECT_shell_uploader_18__0__php
 	strings:
 		$ = {57 62 57 52 73 55 6a 41 31 51 32 4e 72 63 7a 4a 6b 56 55 34 31 55 32 30 77 64 31 6f 79 63 46 5a 58 61 7a 46 7a 57 6b 56 34 54 45 39 47 52 6b 4a 54 4d 30 30 79 57 6d 74 77 57 47 46 48 55 6e 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_12__0__php
@@ -16750,7 +16403,7 @@ rule SHELL_SHELLDETECT_cmd_12__0__php
 	strings:
 		$ = {69 62 74 39 4e 4e 51 71 78 77 51 41 44 73 41 50 44 39 77 61 48 41 67 5a 58 5a 68 62 43 68 69 59 58 4e 6c 4e 6a 52 66 5a 47 56 6a 62 32 52 6c 4b 43 64 4a 52 31 5a 71 59 55 63 34 5a 30 6c 75 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_buckethead_0__0__php
@@ -16758,7 +16411,7 @@ rule SHELL_SHELLDETECT_buckethead_0__0__php
 	strings:
 		$ = {6d 4e 74 55 6e 64 6a 62 56 5a 36 59 33 6b 31 4d 47 56 49 55 57 35 4c 56 48 4e 4f 51 32 6c 42 5a 30 6c 44 51 6e 70 6c 56 7a 46 7a 59 56 63 31 63 6b 74 44 59 33 5a 68 52 7a 6c 30 57 6c 4d 34 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_fuckphpshell_0__0__php
@@ -16766,7 +16419,7 @@ rule SHELL_SHELLDETECT_fuckphpshell_0__0__php
 	strings:
 		$ = {37 49 41 6f 67 49 43 41 67 49 43 41 67 49 47 5a 76 62 6e 51 74 5a 6d 46 74 61 57 78 35 4f 69 42 55 5a 58 4a 74 61 57 35 31 63 79 77 67 52 6d 6c 34 5a 57 52 7a 65 58 4d 73 49 45 5a 70 65 47 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cfexec_0__0__cfm
@@ -16774,7 +16427,7 @@ rule SHELL_SHELLDETECT_cfexec_0__0__cfm
 	strings:
 		$ = {59 32 5a 7a 59 58 5a 6c 59 32 39 75 64 47 56 75 64 44 34 4e 43 6a 78 77 63 6d 55 2b 44 51 6f 6a 62 58 6c 57 59 58 49 6a 44 51 6f 38 4c 33 42 79 5a 54 34 4e 43 6a 77 76 59 32 5a 70 5a 6a 34 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_9__0__php
@@ -16782,7 +16435,7 @@ rule SHELL_SHELLDETECT_phpshell_9__0__php
 	strings:
 		$ = {31 56 72 52 30 31 43 65 6d 4e 61 54 32 49 76 62 44 5a 45 4d 55 6b 6e 4c 43 64 77 55 31 67 79 4d 55 38 32 4c 33 63 33 61 6a 68 6c 56 7a 42 49 55 6d 64 4a 64 47 64 46 4d 30 4e 49 59 6b 56 4e 59}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpspy_0__0__php
@@ -16790,7 +16443,7 @@ rule SHELL_SHELLDETECT_phpspy_0__0__php
 	strings:
 		$ = {6e 5a 6b 56 7a 55 77 53 30 4e 53 61 32 4a 44 61 33 56 4b 65 55 4a 36 5a 46 64 4f 61 6c 70 59 54 6e 70 4a 51 32 4e 31 53 6b 68 4f 4d 56 6b 79 54 58 56 4b 65 55 4a 74 57 56 64 73 63 30 6c 44 59}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_0__0__php
@@ -16798,7 +16451,7 @@ rule SHELL_SHELLDETECT_phpshell_0__0__php
 	strings:
 		$ = {41 6d 4a 69 41 6f 51 47 6c 7a 58 33 4a 6c 59 57 52 68 59 6d 78 6c 4b 43 49 6b 5a 47 6c 79 4c 79 52 6d 61 57 78 6c 49 69 6b 70 49 43 6b 4b 49 41 6b 4a 43 51 6c 6c 59 32 68 76 49 47 4a 31 61 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ayyildiz_tim_0__0__php
@@ -16806,7 +16459,7 @@ rule SHELL_SHELLDETECT_ayyildiz_tim_0__0__php
 	strings:
 		$ = {43 6d 6c 6d 49 43 67 68 5a 57 31 77 64 48 6b 6f 4a 48 64 76 63 6d 74 66 5a 47 6c 79 4b 53 6b 67 65 77 6f 67 49 43 38 71 49 45 45 67 64 32 39 79 61 32 52 70 63 69 42 6f 59 58 4d 67 59 6d 56 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c100_2__0__php
@@ -16814,7 +16467,7 @@ rule SHELL_SHELLDETECT_c100_2__0__php
 	strings:
 		$ = {6b 63 31 61 47 52 49 53 6e 42 6c 51 30 45 35 53 55 4e 52 65 45 39 35 51 55 35 44 61 55 46 6e 53 55 4e 42 5a 30 6c 44 51 57 64 4a 51 30 46 6e 53 55 63 78 4e 55 6c 47 64 32 74 5a 57 45 70 75 53}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_simple_shell_1__0__php
@@ -16822,7 +16475,7 @@ rule SHELL_SHELLDETECT_simple_shell_1__0__php
 	strings:
 		$ = {53 67 6b 58 30 4e 50 54 30 74 4a 52 56 73 6e 64 69 64 64 4b 53 42 68 62 6d 51 67 4a 46 39 44 54 30 39 4c 53 55 56 62 4a 33 59 6e 58 54 30 39 4a 32 51 6e 4b 58 73 4b 49 43 41 4b 49 43 42 70 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_fx0_2__0__php
@@ -16830,7 +16483,7 @@ rule SHELL_SHELLDETECT_fx0_2__0__php
 	strings:
 		$ = {35 4d 57 57 31 57 55 32 4d 79 62 47 39 6b 52 55 56 35 57 6d 78 6f 4d 31 46 56 57 54 46 4f 61 7a 56 4a 5a 57 31 4b 65 6b 39 58 56 6c 5a 4e 62 45 35 48 54 6d 6c 30 54 69 63 75 43 69 64 69 56 58}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_includeshell_0__0__php
@@ -16838,7 +16491,7 @@ rule SHELL_SHELLDETECT_includeshell_0__0__php
 	strings:
 		$ = {4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 4e 43 69 4d 67 5a 48 56 74 63 43 42 32 59 58}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cocacola_shell_1__0__php
@@ -16846,7 +16499,7 @@ rule SHELL_SHELLDETECT_cocacola_shell_1__0__php
 	strings:
 		$ = {64 42 61 6c 42 35 56 6c 70 32 56 6b 4e 43 51 6d 74 5a 53 6a 49 76 4e 30 46 35 51 33 5a 69 59 32 45 30 53 45 34 33 53 44 6c 4a 52 33 46 72 59 30 4a 61 54 47 51 78 61 30 4e 43 52 30 64 44 62 31}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_13__0__php
@@ -16854,7 +16507,7 @@ rule SHELL_SHELLDETECT_r57_13__0__php
 	strings:
 		$ = {42 4f 51 32 31 73 62 55 74 48 62 48 70 6a 4d 6c 59 77 53 30 4e 53 5a 6c 49 77 56 6c 56 58 65 57 51 77 59 6c 68 42 62 6c 68 54 61 33 42 45 55 57 39 6e 5a 58 63 77 53 30 6c 44 51 57 64 52 53 46}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_dtool_0__0__php
@@ -16862,7 +16515,7 @@ rule SHELL_SHELLDETECT_dtool_0__0__php
 	strings:
 		$ = {43 39 45 53 56 59 2b 50 43 39 55 52 44 34 38 4c 31 52 53 50 67 6f 38 50 79 42 70 5a 69 67 6b 59 32 68 6b 61 58 49 68 50 57 64 6c 64 47 4e 33 5a 43 67 70 4b 58 73 2f 50 67 6f 38 56 46 49 2b 50}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_26__0__php
@@ -16870,7 +16523,7 @@ rule SHELL_SHELLDETECT_cmd_26__0__php
 	strings:
 		$ = {52 30 6c 47 4f 44 6c 68 4d 51 6f 38 50 33 42 6f 63 43 41 4b 5a 58 5a 68 62 43 68 69 59 58 4e 6c 4e 6a 52 66 5a 47 56 6a 62 32 52 6c 4b 43 64 68 56 31 6c 6e 53 30 64 73 65 6d 4d 79 56 6a 42 4c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_andr3a_0__0__php
@@ -16878,7 +16531,7 @@ rule SHELL_SHELLDETECT_andr3a_0__0__php
 	strings:
 		$ = {49 75 4a 47 64 79 62 33 56 77 58 33 64 79 61 58 52 6c 4c 69 49 2b 50 43 39 6d 62 32 35 30 50 6a 77 76 64 47 51 2b 50 48 52 6b 49 47 4a 6e 59 32 39 73 62 33 49 39 58 43 49 6a 51 30 4e 44 51 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_backup_0__2__php
@@ -16886,7 +16539,7 @@ rule SHELL_SHELLDETECT_backup_0__2__php
 	strings:
 		$ = {42 6f 63 45 31 35 51 57 52 74 61 57 34 76 49 46 78 79 58 47 34 69 4f 77 6f 6b 5a 47 46 30 59 53 41 75 50 53 49 6a 49 47 68 30 64 48 41 36 4c 79 39 33 64 33 63 75 63 47 68 77 62 58 6c 68 5a 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_safemode_2__0__php
@@ -16894,7 +16547,7 @@ rule SHELL_SHELLDETECT_safemode_2__0__php
 	strings:
 		$ = {6b 5a 53 67 6b 5a 6d 6c 73 5a 53 6b 37 43 69 41 67 49 43 41 67 61 57 59 67 4b 47 5a 31 62 6d 4e 30 61 57 39 75 58 32 56 34 61 58 4e 30 63 79 67 69 59 6d 46 7a 5a 57 35 68 62 57 55 69 4b 53 6b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_erne_1__0__php
@@ -16902,7 +16555,7 @@ rule SHELL_SHELLDETECT_erne_1__0__php
 	strings:
 		$ = {34 6e 4b 54 73 4b 43 67 6f 67 49 47 56 79 63 6d 39 79 58 33 4a 6c 63 47 39 79 64 47 6c 75 5a 79 68 46 58 31 64 42 55 6b 35 4a 54 6b 63 70 4f 77 6f 67 49 47 6c 75 61 56 39 7a 5a 58 51 6f 49 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_22__0__php
@@ -16910,7 +16563,7 @@ rule SHELL_SHELLDETECT_phpshell_22__0__php
 	strings:
 		$ = {64 6a 64 79 55 57 39 73 54 6e 59 32 4e 6d 35 69 55 45 55 35 55 48 70 74 4d 44 64 75 64 6b 51 78 53 57 49 30 4d 57 68 7a 56 54 46 57 53 6a 64 54 4d 45 56 52 62 6b 39 79 5a 48 5a 58 65 69 39 69}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_nogrodpBot_0__1__php
@@ -16918,7 +16571,7 @@ rule SHELL_SHELLDETECT_nogrodpBot_0__1__php
 	strings:
 		$ = {59 32 31 6b 57 7a 42 64 4b 54 73 4b 49 43 41 67 49 43 41 67 49 43 41 67 49 43 52 32 61 47 39 7a 64 43 41 39 49 47 56 34 63 47 78 76 5a 47 55 6f 49 6b 41 69 4c 43 52 75 61 57 4e 72 57 7a 46 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mulcishell_0__0__php
@@ -16926,7 +16579,7 @@ rule SHELL_SHELLDETECT_mulcishell_0__0__php
 	strings:
 		$ = {79 64 6a 62 33 42 35 58 32 4a 35 63 47 46 7a 63 79 64 64 4b 53 6b 4b 49 43 41 67 49 43 41 67 49 48 73 4b 49 43 41 67 49 43 41 67 49 43 41 67 43 69 41 67 49 43 41 67 49 43 41 67 49 43 42 70 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_spyshell_0__0__php
@@ -16934,7 +16587,7 @@ rule SHELL_SHELLDETECT_spyshell_0__0__php
 	strings:
 		$ = {39 43 77 30 59 44 51 73 4e 43 38 30 4c 58 52 67 74 47 41 4d 69 63 73 43 69 64 79 64 56 39 30 5a 58 68 30 4e 7a 45 6e 50 54 34 69 30 4a 4c 52 67 74 43 2b 30 59 44 51 76 74 43 35 49 4e 43 2f 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_webadmin_3__2__php
@@ -16942,7 +16595,7 @@ rule SHELL_SHELLDETECT_webadmin_3__2__php
 	strings:
 		$ = {33 52 70 62 32 34 67 62 47 6c 7a 64 47 6c 75 5a 79 41 6f 4a 47 78 70 63 33 51 70 49 48 73 4b 43 57 64 73 62 32 4a 68 62 43 41 6b 5a 47 6c 79 5a 57 4e 30 62 33 4a 35 4c 43 41 6b 61 47 39 74 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_7__0__php
@@ -16950,7 +16603,7 @@ rule SHELL_SHELLDETECT_phpshell_7__0__php
 	strings:
 		$ = {6d 6b 6e 4c 43 64 6e 54 7a 6c 54 4d 48 56 69 53 6e 6c 46 57 6d 56 49 53 57 35 59 57 55 5a 4c 64 45 45 6e 4c 43 64 68 57 6d 56 6a 59 32 31 54 55 48 64 72 55 57 46 6f 64 6b 4d 79 62 6b 39 6b 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_orbshell_0__0__php
@@ -16958,7 +16611,7 @@ rule SHELL_SHELLDETECT_orbshell_0__0__php
 	strings:
 		$ = {6d 4e 43 4d 6a 59 32 61 6c 46 61 4e 47 5a 35 63 48 68 4d 62 58 56 47 54 32 68 5a 62 56 4e 76 56 7a 46 54 54 58 5a 33 64 6e 42 31 64 7a 6c 30 4d 6e 6c 61 64 31 5a 58 65 6b 31 4c 54 45 74 4b 65}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_18__0__php
@@ -16966,7 +16619,7 @@ rule SHELL_SHELLDETECT_phpshell_18__0__php
 	strings:
 		$ = {58 55 32 67 77 55 56 46 45 64 44 67 35 5a 6b 70 6a 64 6a 68 44 4e 7a 51 72 52 44 5a 6f 54 44 52 53 59 6e 64 4f 64 6b 35 5a 4e 31 4d 31 52 30 78 73 54 30 70 68 64 47 46 35 51 7a 4a 7a 61 6a 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_9__0__php
@@ -16974,7 +16627,7 @@ rule SHELL_SHELLDETECT_b374k_9__0__php
 	strings:
 		$ = {49 69 42 32 59 57 78 31 5a 54 31 63 49 69 49 75 4a 48 4e 78 62 48 42 68 63 33 4d 75 49 6c 77 69 49 43 38 2b 44 51 6f 4a 43 51 6b 4a 43 54 78 70 62 6e 42 31 64 43 42 30 65 58 42 6c 50 56 77 69}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_17__0__php
@@ -16982,7 +16635,7 @@ rule SHELL_SHELLDETECT_filesman_17__0__php
 	strings:
 		$ = {30 52 52 62 32 64 4b 52 32 78 31 59 57 6c 42 4f 55 6c 44 55 6d 5a 56 4d 46 5a 54 56 6d 74 57 55 31 64 35 53 6c 4e 53 56 6b 5a 57 55 6c 5a 4f 56 56 67 78 56 6c 4e 54 55 30 70 6b 54 33 63 77 53}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_16__0__php
@@ -16990,7 +16643,7 @@ rule SHELL_SHELLDETECT_wso_16__0__php
 	strings:
 		$ = {30 5a 7a 53 55 51 77 5a 30 6f 77 62 45 38 4b 56 54 42 57 55 31 5a 44 51 6b 70 55 62 46 4a 51 53 55 4e 6a 64 55 70 49 55 6d 68 5a 62 58 68 73 54 47 6c 6a 5a 30 74 44 59 33 56 68 56 7a 46 33 59}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_1__0__php
@@ -16998,7 +16651,7 @@ rule SHELL_SHELLDETECT_cmd_1__0__php
 	strings:
 		$ = {62 43 41 39 49 43 52 66 52 6b 6c 4d 52 56 4e 62 4a 32 5a 70 62 47 55 6e 58 56 73 6e 62 6d 46 74 5a 53 64 64 4f 77 6f 67 49 43 41 6b 5a 47 56 36 49 44 30 67 4a 48 42 33 5a 47 52 70 63 69 34 69}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_onboomshell_0__0__php
@@ -17006,7 +16659,7 @@ rule SHELL_SHELLDETECT_onboomshell_0__0__php
 	strings:
 		$ = {67 49 43 42 6c 59 32 68 76 49 43 49 38 64 47 46 69 62 47 55 67 59 6d 39 79 5a 47 56 79 50 53 63 78 4a 79 42 33 61 57 52 30 61 44 30 6e 4e 6a 41 6c 4a 7a 34 38 64 48 49 2b 50 48 52 6b 50 69 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_fx0_0__0__php
@@ -17014,7 +16667,7 @@ rule SHELL_SHELLDETECT_fx0_0__0__php
 	strings:
 		$ = {6e 52 56 67 35 54 30 4a 75 56 6a 68 59 54 6a 64 32 55 55 5a 68 4b 33 5a 78 62 57 68 6f 51 55 78 53 61 6a 64 79 51 56 51 31 5a 45 67 72 64 6e 64 4c 62 48 52 43 63 58 64 59 4c 7a 4e 50 65 46 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_webadmin_4__2__php
@@ -17022,7 +16675,7 @@ rule SHELL_SHELLDETECT_webadmin_4__2__php
 	strings:
 		$ = {7a 61 43 67 6b 63 47 46 30 61 43 6b 37 44 51 6f 4a 66 51 30 4b 44 51 6f 4a 64 32 68 70 62 47 55 67 4b 48 4e 30 63 6e 42 76 63 79 67 6b 63 47 46 30 61 43 77 67 4a 48 42 68 64 48 52 6c 63 6d 34}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_12__0__php
@@ -17030,7 +16683,7 @@ rule SHELL_SHELLDETECT_shell_uploader_12__0__php
 	strings:
 		$ = {51 6f 2f 50 67 30 4b 50 45 5a 50 55 6b 30 67 62 57 56 30 61 47 39 6b 50 56 42 50 55 31 51 67 52 55 35 44 56 46 6c 51 52 54 30 69 62 58 56 73 64 47 6c 77 59 58 4a 30 4c 32 5a 76 63 6d 30 74 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ctt_shell_0__0__php
@@ -17038,7 +16691,7 @@ rule SHELL_SHELLDETECT_ctt_shell_0__0__php
 	strings:
 		$ = {55 46 42 51 55 46 52 51 55 4a 42 51 57 64 33 51 55 46 42 55 43 38 76 4c 79 38 76 54 57 31 6a 65 6b 31 74 5a 69 39 4e 65 6b 70 74 57 6c 70 7a 65 6b 31 36 55 43 38 76 65 6b 46 42 51 53 49 75 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_hackerps_1__0__php
@@ -17046,7 +16699,7 @@ rule SHELL_SHELLDETECT_hackerps_1__0__php
 	strings:
 		$ = {39 79 5a 57 46 6a 61 43 67 6b 63 6d 56 30 49 47 46 7a 49 43 52 7a 61 58 52 6c 4b 53 42 6c 59 32 68 76 4b 43 49 38 62 47 6b 2b 4a 48 4e 70 64 47 56 63 62 69 49 70 4f 77 30 4b 49 43 41 67 49 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_stunshell_0__0__php
@@ -17054,7 +16707,7 @@ rule SHELL_SHELLDETECT_stunshell_0__0__php
 	strings:
 		$ = {6d 52 76 56 33 41 32 57 44 68 69 56 6a 6c 36 61 30 74 33 65 6e 4e 71 55 6e 5a 31 52 46 6c 58 63 44 59 79 4d 6d 5a 77 4f 45 52 7a 56 7a 51 79 63 6e 52 73 57 55 56 6a 5a 47 67 7a 55 6e 4a 55 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_javashell_0__0__py
@@ -17062,7 +16715,7 @@ rule SHELL_SHELLDETECT_javashell_0__0__py
 	strings:
 		$ = {77 6f 4a 43 58 4e 31 63 47 56 79 4b 47 35 6c 64 79 42 43 62 33 4a 6b 5a 58 4a 4d 59 58 6c 76 64 58 51 6f 4b 53 6b 37 43 67 6b 4a 43 67 6b 4a 64 47 56 34 64 43 41 39 49 47 35 6c 64 79 42 4b 59}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpfilemanager_3__2__php
@@ -17070,7 +16723,7 @@ rule SHELL_SHELLDETECT_phpfilemanager_3__2__php
 	strings:
 		$ = {59 6e 56 30 64 47 39 75 49 47 39 75 59 32 78 70 59 32 73 39 58 43 4a 30 5a 58 4e 30 58 33 42 79 62 32 31 77 64 43 67 79 4b 56 77 69 49 48 5a 68 62 48 56 6c 50 56 77 69 49 69 35 6c 64 43 67 6e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_3__0__php
@@ -17078,7 +16731,7 @@ rule SHELL_SHELLDETECT_b374k_3__0__php
 	strings:
 		$ = {5a 33 64 5a 63 33 5a 47 51 79 74 6c 64 6d 78 6a 53 30 4e 6a 56 48 68 6e 4f 44 46 7a 64 7a 68 30 57 45 52 6a 52 44 4e 61 4f 46 46 6f 4d 45 52 61 64 6c 6b 72 62 32 6c 32 5a 6c 63 72 62 6c 42 77}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_scanner_jatimcrew_0__0__pl
@@ -17086,7 +16739,7 @@ rule SHELL_SHELLDETECT_scanner_jatimcrew_0__0__pl
 	strings:
 		$ = {77 69 59 32 38 75 61 57 51 69 4c 43 4a 70 5a 53 49 73 49 6d 4e 76 4c 6d 6c 73 49 69 77 69 59 32 38 75 61 57 30 69 4c 43 4a 6a 62 79 35 70 62 69 49 73 49 6d 6c 7a 49 69 77 69 61 58 51 69 4c 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_30__0__php
@@ -17094,7 +16747,7 @@ rule SHELL_SHELLDETECT_phpshell_30__0__php
 	strings:
 		$ = {4d 30 4e 54 59 33 4f 44 6b 77 4b 53 34 69 4b 7a 41 69 4b 54 73 67 66 53 42 6c 62 48 4e 6c 49 48 73 67 61 57 59 67 4b 45 42 74 59 57 6c 73 4b 43 52 32 4d 44 46 69 4e 6d 55 79 4d 44 4d 73 49 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_4__0__php
@@ -17102,7 +16755,7 @@ rule SHELL_SHELLDETECT_phpshell_4__0__php
 	strings:
 		$ = {39 79 62 53 35 7a 64 57 4a 74 61 58 51 6f 4b 53 49 2b 43 6a 77 2f 63 47 68 77 43 69 38 71 49 45 35 76 64 79 42 33 5a 53 42 74 59 57 74 6c 49 47 45 67 62 47 6c 7a 64 43 42 76 5a 69 42 30 61 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_11__0__php
@@ -17110,7 +16763,7 @@ rule SHELL_SHELLDETECT_r57_11__0__php
 	strings:
 		$ = {31 51 7a 5a 48 56 61 57 45 6c 32 55 6a 4e 4b 64 6d 52 59 51 54 68 4d 4d 6b 6b 72 55 45 4d 35 4d 46 70 45 4e 44 68 6b 52 31 45 72 53 55 4e 4a 4e 30 6c 44 51 57 64 4a 51 30 46 6e 52 46 46 76 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_17__0__php
@@ -17118,7 +16771,7 @@ rule SHELL_SHELLDETECT_shell_uploader_17__0__php
 	strings:
 		$ = {31 78 34 4d 44 42 63 65 44 41 77 58 48 67 77 4d 46 78 34 5a 54 6c 63 65 47 49 77 58 48 68 6d 5a 56 78 34 5a 6d 5a 63 65 47 5a 6d 58 48 68 6d 5a 6c 78 34 4d 6a 56 63 65 47 4e 68 58 48 67 31 4d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_brute_force_tool_2__0__php
@@ -17126,7 +16779,7 @@ rule SHELL_SHELLDETECT_brute_force_tool_2__0__php
 	strings:
 		$ = {46 49 33 53 55 78 68 4e 33 6f 34 65 46 46 53 65 56 4e 55 57 44 6c 54 63 6b 4e 70 65 46 46 53 65 56 4e 55 57 44 6c 53 4d 57 38 79 52 46 46 46 53 47 35 79 52 6a 4a 46 51 6a 55 79 52 46 46 75 61}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_rader_0__0__asp
@@ -17134,7 +16787,7 @@ rule SHELL_SHELLDETECT_rader_0__0__asp
 	strings:
 		$ = {46 75 59 53 77 67 53 47 56 73 64 6d 56 30 61 57 4e 68 4f 79 42 55 52 56 68 55 4c 55 52 46 51 30 39 53 51 56 52 4a 54 30 34 36 49 47 35 76 62 6d 55 4b 66 51 6f 75 59 32 39 75 64 47 56 75 64 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_8__0__php
@@ -17142,7 +16795,7 @@ rule SHELL_SHELLDETECT_shell_uploader_8__0__php
 	strings:
 		$ = {6b 4a 4a 55 55 70 55 56 56 4d 30 52 31 64 4e 51 6a 68 56 52 46 56 30 55 54 56 44 63 31 56 78 64 6b 64 75 64 7a 64 34 53 30 64 71 52 55 4e 71 52 30 4a 44 4d 6b 6c 35 51 31 4d 35 64 6a 46 54 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cybershell_2__0__php
@@ -17150,7 +16803,7 @@ rule SHELL_SHELLDETECT_cybershell_2__0__php
 	strings:
 		$ = {30 2b 4a 47 4e 35 59 6d 56 79 4d 54 63 7a 58 32 52 6c 59 32 39 6b 5a 53 67 70 4f 77 30 4b 4c 79 6f 67 64 47 46 75 61 33 4d 67 5a 6d 39 79 4f 69 42 4e 63 6c 39 48 59 57 35 45 63 6e 56 75 57 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_nexpl0rer_0__0__php
@@ -17158,7 +16811,7 @@ rule SHELL_SHELLDETECT_nexpl0rer_0__0__php
 	strings:
 		$ = {54 6f 38 61 57 35 77 64 58 51 67 64 48 6c 77 5a 54 30 69 64 47 56 34 64 43 49 67 62 6d 46 74 5a 54 30 69 62 32 78 6b 62 6d 46 74 5a 53 49 67 64 6d 46 73 64 57 55 39 49 6a 42 73 5a 43 42 75 59}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_goon_0__0__php
@@ -17166,7 +16819,7 @@ rule SHELL_SHELLDETECT_goon_0__0__php
 	strings:
 		$ = {79 63 73 4a 32 4a 7a 61 47 56 73 62 43 63 39 50 69 64 43 61 57 35 6b 63 32 68 6c 62 47 77 6e 4c 43 64 72 61 57 78 73 4a 7a 30 2b 4a 30 74 70 62 47 77 67 55 32 68 6c 62 47 77 6e 4b 54 73 4e 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cpanel_2__0__php
@@ -17174,7 +16827,7 @@ rule SHELL_SHELLDETECT_cpanel_2__0__php
 	strings:
 		$ = {41 67 49 43 41 38 5a 6d 39 75 64 43 42 7a 61 58 70 6c 50 53 49 79 49 69 42 6d 59 57 4e 6c 50 53 4a 55 59 57 68 76 62 57 45 69 50 6b 5a 30 63 43 41 38 4c 32 5a 76 62 6e 51 2b 44 51 6f 67 49 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_simple_shell_2__0__php
@@ -17182,7 +16835,7 @@ rule SHELL_SHELLDETECT_simple_shell_2__0__php
 	strings:
 		$ = {62 69 41 69 4c 69 4a 51 51 7a 6b 77 49 46 6f 67 49 69 34 69 57 43 41 69 4c 69 4a 6f 4d 43 42 5a 49 43 49 75 49 6c 68 4b 62 46 6c 55 4e 47 35 50 4d 7a 41 67 54 69 42 44 49 69 34 69 62 56 5a 71}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_fenix_0__0__php
@@ -17190,7 +16843,7 @@ rule SHELL_SHELLDETECT_fenix_0__0__php
 	strings:
 		$ = {59 57 52 36 4d 6e 4a 34 4e 48 56 6c 4e 6a 4d 79 4e 33 45 78 57 67 30 4b 55 45 77 7a 53 55 35 32 64 6c 70 34 4c 33 42 45 4c 33 70 61 5a 6b 74 45 4e 32 52 4f 53 32 59 31 4d 44 42 4a 63 47 73 7a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mysql_2__0__php
@@ -17198,7 +16851,7 @@ rule SHELL_SHELLDETECT_mysql_2__0__php
 	strings:
 		$ = {68 6a 62 32 52 6c 5a 43 42 69 65 53 42 6b 61 57 35 6e 5a 32 38 70 4c 53 30 2b 50 43 39 6d 62 32 35 30 50 6a 77 76 59 32 56 75 64 47 56 79 50 67 6f 69 4f 77 6f 4b 43 6d 6c 6d 49 43 67 68 61 58}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_itsecteam_shell_0__0__php
@@ -17206,7 +16859,7 @@ rule SHELL_SHELLDETECT_itsecteam_shell_0__0__php
 	strings:
 		$ = {69 50 67 30 4b 50 48 52 6c 65 48 52 68 63 6d 56 68 49 48 4a 76 64 33 4d 39 49 6a 45 35 49 69 42 75 59 57 31 6c 50 53 4a 54 4d 53 49 67 59 32 39 73 63 7a 30 69 4f 44 63 69 50 69 63 37 44 51 70}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ntdaddy_1__0__asp
@@ -17214,7 +16867,7 @@ rule SHELL_SHELLDETECT_ntdaddy_1__0__asp
 	strings:
 		$ = {62 47 52 6c 63 69 78 55 55 6c 56 46 44 51 70 79 5a 58 4e 77 62 32 35 7a 5a 53 35 33 63 6d 6c 30 5a 53 67 69 52 6d 39 73 5a 47 56 79 4f 69 41 69 49 43 59 67 63 32 56 73 52 6d 39 73 5a 47 56 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_0__0__php
@@ -17222,7 +16875,7 @@ rule SHELL_SHELLDETECT_b374k_0__0__php
 	strings:
 		$ = {76 57 46 4d 4b 55 56 4a 54 51 6b 59 34 64 44 5a 59 56 45 34 79 57 55 68 69 55 57 78 36 56 56 6c 72 4e 6e 46 70 64 55 6c 73 62 46 4e 7a 64 58 70 78 61 32 39 48 56 30 35 69 57 6d 68 31 64 32 59}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_nshell_1__0__php
@@ -17230,7 +16883,7 @@ rule SHELL_SHELLDETECT_nshell_1__0__php
 	strings:
 		$ = {55 30 56 4d 52 69 64 64 4c 69 49 2f 59 57 4e 30 50 57 31 68 62 6d 46 6e 5a 58 49 6d 5a 47 56 73 50 53 49 75 4a 47 52 6a 4c 69 49 2b 52 47 56 73 50 43 39 30 5a 44 34 69 4f 77 6f 6b 5a 47 6c 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phytonshell_0__0__py
@@ -17238,7 +16891,7 @@ rule SHELL_SHELLDETECT_phytonshell_0__0__py
 	strings:
 		$ = {41 69 64 47 6c 74 5a 57 39 31 64 43 49 4b 43 57 56 73 63 32 55 36 43 51 6f 4a 43 57 6c 6d 49 48 42 33 58 32 6c 75 49 44 30 39 49 46 42 58 4f 67 6b 4b 43 51 6b 4a 59 32 39 75 62 69 35 7a 5a 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_locusshell_1__0__php
@@ -17246,7 +16899,7 @@ rule SHELL_SHELLDETECT_locusshell_1__0__php
 	strings:
 		$ = {6e 42 76 63 47 56 75 49 69 6b 70 65 77 30 4b 5a 6e 56 75 59 33 52 70 62 32 34 67 62 58 6c 7a 61 47 56 73 62 47 56 34 5a 57 4d 6f 4a 47 4e 76 62 57 31 68 62 6d 51 70 49 48 73 4e 43 6d 6c 6d 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_rootshell_2__0__php
@@ -17254,7 +16907,7 @@ rule SHELL_SHELLDETECT_rootshell_2__0__php
 	strings:
 		$ = {6a 62 48 56 6b 5a 53 67 69 4c 32 56 30 59 79 39 77 59 58 4e 7a 64 32 51 69 4b 54 73 4e 43 6d 6c 75 61 56 39 79 5a 58 4e 30 62 33 4a 6c 4b 43 4a 7a 59 57 5a 6c 58 32 31 76 5a 47 55 69 4b 54 73}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_5__0__php
@@ -17262,7 +16915,7 @@ rule SHELL_SHELLDETECT_shell_uploader_5__0__php
 	strings:
 		$ = {47 31 77 56 30 46 50 51 56 64 59 55 54 42 75 4e 55 4a 52 50 54 30 6e 4b 53 6b 70 4f 79 42 39 44 51 70 6c 62 48 4e 6c 49 48 73 67 5a 58 5a 68 62 43 68 6e 65 6d 6c 75 5a 6d 78 68 64 47 55 6f 59}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_backdoor_0__0__php
@@ -17270,7 +16923,7 @@ rule SHELL_SHELLDETECT_backdoor_0__0__php
 	strings:
 		$ = {2b 50 47 4a 79 50 69 63 37 44 51 70 6c 59 32 68 76 49 43 64 54 5a 58 4a 32 5a 58 49 67 61 57 35 6d 62 33 4a 74 59 58 52 70 62 32 35 7a 50 47 4a 79 50 6a 78 69 63 6a 34 6e 4f 77 30 4b 5a 57 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_gohack_powerserver_0__0__php
@@ -17278,7 +16931,7 @@ rule SHELL_SHELLDETECT_gohack_powerserver_0__0__php
 	strings:
 		$ = {51 7a 51 34 56 6b 35 6c 65 6b 68 50 64 47 38 33 62 55 56 7a 4e 48 5a 36 56 30 68 45 63 48 46 48 64 47 78 68 4e 30 67 33 63 32 51 35 55 43 73 33 51 6a 5a 49 53 6a 42 57 63 58 67 34 64 54 64 35}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shellbot_2__0__pl
@@ -17286,7 +16939,7 @@ rule SHELL_SHELLDETECT_shellbot_2__0__pl
 	strings:
 		$ = {41 67 49 43 41 67 49 43 41 67 49 43 41 67 62 58 6b 67 4a 47 35 68 64 48 4a 70 65 43 41 39 49 43 51 78 4f 77 30 4b 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 62 58 6b 67 4a 47 46 79 5a 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_32__0__php
@@ -17294,7 +16947,7 @@ rule SHELL_SHELLDETECT_cmd_32__0__php
 	strings:
 		$ = {59 6f 49 43 52 66 55 45 39 54 56 46 73 6e 58 32 56 6b 61 58 51 6e 58 53 41 70 49 48 73 4b 43 57 56 6a 61 47 38 67 4a 7a 78 69 63 6a 34 38 5a 6d 39 79 62 53 42 75 59 57 31 6c 50 53 4a 30 5a 58}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_exploit_0__0__php
@@ -17302,7 +16955,7 @@ rule SHELL_SHELLDETECT_shell_exploit_0__0__php
 	strings:
 		$ = {47 55 77 58 48 67 32 4e 6c 78 34 4f 44 6c 63 65 44 51 31 58 48 68 6a 5a 56 78 34 5a 54 68 63 65 47 46 68 58 48 68 6d 4d 6c 78 34 5a 6d 5a 63 65 47 5a 6d 58 48 67 34 4d 31 78 34 59 7a 52 63 65}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_orbshell_1__0__php
@@ -17310,7 +16963,7 @@ rule SHELL_SHELLDETECT_orbshell_1__0__php
 	strings:
 		$ = {46 72 4f 77 6f 4a 43 57 4e 68 63 32 55 67 4e 54 6f 4b 43 51 6b 4a 5a 6d 39 79 4b 44 73 6b 58 31 42 50 55 31 52 62 4a 33 41 79 4a 31 30 67 50 44 30 67 4a 46 39 51 54 31 4e 55 57 79 64 77 4d 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_9__0__php
@@ -17318,7 +16971,7 @@ rule SHELL_SHELLDETECT_cmd_9__0__php
 	strings:
 		$ = {52 66 55 45 39 54 56 46 73 69 5a 69 4a 64 49 44 38 2b 44 51 6f 38 50 79 42 39 49 44 38 2b 44 51 6f 38 50 79 41 6b 64 47 56 7a 64 46 39 6d 64 57 35 6a 49 44 30 67 59 33 4a 6c 59 58 52 6c 58 32}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_akatsuki_0__0__php
@@ -17326,7 +16979,7 @@ rule SHELL_SHELLDETECT_akatsuki_0__0__php
 	strings:
 		$ = {52 51 57 5a 6e 61 33 4a 4e 4d 6e 64 44 63 44 56 6c 56 30 52 4e 4e 48 4a 33 65 55 4d 76 56 30 52 77 55 7a 4e 30 51 33 52 30 52 56 45 32 57 54 4a 72 59 31 70 47 54 6d 39 77 52 47 39 70 53 6a 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_gfs_1__0__php
@@ -17334,7 +16987,7 @@ rule SHELL_SHELLDETECT_gfs_1__0__php
 	strings:
 		$ = {54 52 56 4a 57 52 56 4a 66 56 6b 46 53 55 31 73 6e 53 46 52 55 55 46 39 59 58 30 5a 50 55 6c 64 42 55 6b 52 46 52 46 39 47 54 31 49 6e 58 53 6b 70 65 77 6f 67 49 47 56 6a 61 47 38 67 49 6a 78}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_10__0__php
@@ -17342,7 +16995,7 @@ rule SHELL_SHELLDETECT_b374k_10__0__php
 	strings:
 		$ = {58 54 58 68 6d 52 45 4e 33 55 30 78 48 54 58 56 77 53 55 56 34 53 30 56 75 56 58 41 76 64 32 78 6b 63 57 52 59 64 6c 4a 69 64 56 42 6f 63 47 68 5a 4d 58 45 32 63 6d 49 34 56 6d 5a 4b 5a 30 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_coderz_0__0__php
@@ -17350,7 +17003,7 @@ rule SHELL_SHELLDETECT_coderz_0__0__php
 	strings:
 		$ = {6a 41 33 51 32 6c 53 63 46 6c 58 55 6d 74 6a 61 6a 46 77 59 6d 31 57 4d 46 67 79 52 6a 42 69 4d 6a 52 76 53 6b 68 53 61 47 4e 74 5a 47 78 6b 51 32 74 6e 5a 6b 68 33 5a 31 70 48 62 47 78 4c 51}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_priv8_scr_1__0__pl
@@ -17358,7 +17011,7 @@ rule SHELL_SHELLDETECT_priv8_scr_1__0__pl
 	strings:
 		$ = {6b 4e 76 62 6e 52 6c 62 6e 51 74 64 48 6c 77 5a 54 6f 67 64 47 56 34 64 43 39 6f 64 47 31 73 58 47 35 63 62 69 49 37 44 51 70 77 63 6d 6c 75 64 43 63 38 49 55 52 50 51 31 52 5a 55 45 55 67 61}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_antichat_shell_0__0__php
@@ -17366,7 +17019,7 @@ rule SHELL_SHELLDETECT_antichat_shell_0__0__php
 	strings:
 		$ = {63 78 4a 7a 73 4b 43 6d 6c 6d 4b 43 52 66 55 30 56 54 55 30 6c 50 54 6c 73 6e 59 57 34 6e 58 54 30 39 4d 43 6c 37 43 6d 56 6a 61 47 38 67 4a 47 68 6c 59 57 52 6c 63 6a 73 4b 5a 57 4e 6f 62 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_2__0__php
@@ -17374,7 +17027,7 @@ rule SHELL_SHELLDETECT_cmd_2__0__php
 	strings:
 		$ = {77 2b 43 6a 78 6f 5a 57 46 6b 50 67 6f 38 64 47 6c 30 62 47 55 2b 55 6e 55 79 4e 46 42 76 63 33 52 58 5a 57 4a 54 61 47 56 73 62 43 41 74 49 43 49 75 4a 46 39 51 54 31 4e 55 57 79 64 6a 62 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cybershell_0__0__php
@@ -17382,7 +17035,7 @@ rule SHELL_SHELLDETECT_cybershell_0__0__php
 	strings:
 		$ = {50 4c 38 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 58 43 49 67 50 69 49 37 43 6d 56 6a 61 47 38 67 49 67 6f 38 61 48 49 67 64 32 6c 6b 64 47 67 39 58 43 49 78 4d 44 41 6c 58 43 49 67 63}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_hostdevil_1__0__php
@@ -17390,7 +17043,7 @@ rule SHELL_SHELLDETECT_hostdevil_1__0__php
 	strings:
 		$ = {45 31 55 69 74 51 52 6b 4a 52 4d 30 56 76 62 57 64 53 4e 48 52 69 62 48 70 5a 5a 55 46 57 62 6a 51 76 55 33 63 31 4e 6d 78 71 57 6b 4e 77 51 6a 56 74 57 48 42 78 62 6d 4d 35 52 6b 5a 42 4d 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_16__0__php
@@ -17398,7 +17051,7 @@ rule SHELL_SHELLDETECT_r57_16__0__php
 	strings:
 		$ = {56 39 6c 62 6d 51 78 4c 69 52 6d 5a 54 73 4b 66 51 70 70 5a 69 67 6b 62 58 6c 7a 63 57 78 66 62 32 35 38 66 43 52 74 63 33 4e 78 62 46 39 76 62 6e 78 38 4a 48 42 6e 58 32 39 75 66 48 77 6b 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_8__0__php
@@ -17406,7 +17059,7 @@ rule SHELL_SHELLDETECT_r57_8__0__php
 	strings:
 		$ = {67 6b 62 69 77 6b 64 48 68 30 50 53 63 6e 4b 51 70 37 43 6d 56 6a 61 47 38 67 4a 7a 78 30 59 57 4a 73 5a 53 42 33 61 57 52 30 61 44 30 78 4d 44 41 6c 49 47 4e 6c 62 47 78 77 59 57 52 6b 61 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_1__0__php
@@ -17414,7 +17067,7 @@ rule SHELL_SHELLDETECT_wso_1__0__php
 	strings:
 		$ = {6b 63 6d 56 7a 4f 77 30 4b 43 51 6b 4a 66 51 30 4b 43 51 6c 39 44 51 6f 4a 43 53 52 7a 64 57 4e 6a 5a 58 4e 7a 49 44 30 67 4d 44 73 4e 43 67 6b 4a 4a 47 46 30 64 47 56 74 63 48 52 7a 49 44 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ironshell_0__0__php
@@ -17422,7 +17075,7 @@ rule SHELL_SHELLDETECT_ironshell_0__0__php
 	strings:
 		$ = {57 46 75 5a 43 64 64 4b 53 6b 4e 43 67 30 4b 43 51 6b 4a 43 51 6c 37 44 51 6f 4e 43 67 6b 4a 43 51 6b 4a 43 58 42 79 61 57 35 30 49 43 49 38 63 48 4a 6c 50 69 49 37 44 51 6f 4e 43 67 6b 4a 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_spam_trustapp_1__1__php
@@ -17430,7 +17083,7 @@ rule SHELL_SHELLDETECT_spam_trustapp_1__1__php
 	strings:
 		$ = {43 41 67 49 43 41 69 4d 6a 45 34 58 43 34 78 4f 46 77 75 4d 54 63 30 58 43 34 79 4e 79 49 73 44 51 6f 67 49 43 41 67 49 43 41 67 49 43 49 32 4e 56 77 75 4d 7a 4e 63 4c 6a 67 33 58 43 34 35 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_15__0__php
@@ -17438,7 +17091,7 @@ rule SHELL_SHELLDETECT_filesman_15__0__php
 	strings:
 		$ = {6d 4d 6a 42 6d 4f 44 67 7a 5a 53 49 37 43 69 52 6a 62 32 78 76 63 69 41 39 49 43 49 6a 5a 47 59 31 49 6a 73 4b 4a 47 52 6c 5a 6d 46 31 62 48 52 66 59 57 4e 30 61 57 39 75 49 44 30 67 4a 30 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpspy_1__0__php
@@ -17446,7 +17099,7 @@ rule SHELL_SHELLDETECT_phpspy_1__0__php
 	strings:
 		$ = {53 67 6b 58 31 4e 46 55 6c 5a 46 55 6c 73 6e 53 46 52 55 55 46 39 49 54 31 4e 55 4a 31 30 75 4a 31 39 4e 65 56 4e 52 54 43 35 7a 63 57 77 6e 4b 54 73 4b 43 67 6f 4b 43 57 68 6c 59 57 52 6c 63}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_accept_language_0__0__php
@@ -17454,7 +17107,7 @@ rule SHELL_SHELLDETECT_accept_language_0__0__php
 	strings:
 		$ = {50 44 39 77 61 48 41 67 63 47 46 7a 63 33 52 6f 63 6e 55 6f 5a 32 56 30 5a 57 35 32 4b 43 4a 49 56 46 52 51 58 30 46 44 51 30 56 51 56 46 39 4d 51 55 35 48 56 55 46 48 52 53 49 70 4b 54 73 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_21__0__php
@@ -17462,7 +17115,7 @@ rule SHELL_SHELLDETECT_filesman_21__0__php
 	strings:
 		$ = {6b 58 31 42 50 55 31 52 62 4a 33 41 78 4a 31 30 67 50 54 30 67 4a 33 6c 6c 63 79 63 70 43 67 6b 4a 61 57 59 6f 51 48 56 75 62 47 6c 75 61 79 68 77 63 6d 56 6e 58 33 4a 6c 63 47 78 68 59 32 55}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_25__0__php
@@ -17470,7 +17123,7 @@ rule SHELL_SHELLDETECT_filesman_25__0__php
 	strings:
 		$ = {30 69 63 32 4e 68 62 6e 52 35 63 47 55 69 50 67 30 4b 49 43 41 67 49 43 41 67 49 43 41 67 50 47 39 77 64 47 6c 76 62 69 42 32 59 57 78 31 5a 54 30 69 4d 53 49 2b 44 51 6f 67 49 43 41 67 49 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shellatildi_1__0__php
@@ -17478,7 +17131,7 @@ rule SHELL_SHELLDETECT_shellatildi_1__0__php
 	strings:
 		$ = {77 5a 53 49 73 49 43 4a 33 49 69 6b 73 49 43 41 76 4c 79 42 7a 64 47 52 76 64 58 51 67 61 58 4d 67 59 53 42 77 61 58 42 6c 49 48 52 6f 59 58 51 67 64 47 68 6c 49 47 4e 6f 61 57 78 6b 49 48 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_1n73ction_0__0__php
@@ -17486,7 +17139,7 @@ rule SHELL_SHELLDETECT_1n73ction_0__0__php
 	strings:
 		$ = {33 4a 7a 4a 79 77 67 4d 43 6b 37 44 51 70 41 63 32 56 30 58 33 52 70 62 57 56 66 62 47 6c 74 61 58 51 6f 4d 43 6b 37 44 51 70 41 63 32 56 30 58 32 31 68 5a 32 6c 6a 58 33 46 31 62 33 52 6c 63}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cgi_shell_0__0__pl
@@ -17494,7 +17147,7 @@ rule SHELL_SHELLDETECT_cgi_shell_0__0__pl
 	strings:
 		$ = {6b 59 58 52 68 4a 33 30 75 44 51 6f 6a 49 45 39 30 61 47 56 79 49 48 5a 68 63 6d 6c 68 59 6d 78 6c 63 79 42 6a 59 57 34 67 59 6d 55 67 59 57 4e 6a 5a 58 4e 7a 5a 57 51 67 64 58 4e 70 62 6d 63}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_jspwebshell_0__0__java
@@ -17502,7 +17155,7 @@ rule SHELL_SHELLDETECT_jspwebshell_0__0__java
 	strings:
 		$ = {79 61 57 35 6e 49 47 52 7a 64 46 42 68 64 47 67 70 49 48 73 4b 43 57 4a 76 62 32 78 6c 59 57 34 67 59 6c 4a 6c 64 43 41 39 49 48 52 79 64 57 55 37 43 67 6b 4b 43 58 52 79 65 53 42 37 43 67 6b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_33__0__php
@@ -17510,7 +17163,7 @@ rule SHELL_SHELLDETECT_cmd_33__0__php
 	strings:
 		$ = {42 70 59 6a 4e 57 4d 47 4e 49 56 6a 42 4a 61 55 49 79 57 56 64 34 4d 56 70 55 4d 47 6c 4b 65 6e 4e 6e 57 6c 64 4f 62 32 4a 35 51 57 74 69 4d 31 59 77 59 30 68 57 4d 45 39 35 51 6d 78 5a 4d 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ayyildiz_tim_1__0__php
@@ -17518,7 +17171,7 @@ rule SHELL_SHELLDETECT_ayyildiz_tim_1__0__php
 	strings:
 		$ = {67 50 44 39 77 61 48 41 4e 43 69 38 71 49 45 35 76 64 79 42 33 5a 53 42 74 59 57 74 6c 49 47 45 67 62 47 6c 7a 64 43 42 76 5a 69 42 30 61 47 55 67 5a 47 6c 79 5a 57 4e 30 62 33 4a 70 5a 58 4d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_18__0__php
@@ -17526,7 +17179,7 @@ rule SHELL_SHELLDETECT_c99_18__0__php
 	strings:
 		$ = {30 4e 33 5a 57 30 34 4c 31 51 76 59 33 5a 6f 59 32 45 79 5a 45 73 7a 56 6b 74 4b 4c 32 55 33 4b 33 6b 34 57 47 52 35 4f 45 68 6c 61 54 55 33 54 55 30 35 57 58 42 56 64 79 39 49 62 79 38 7a 61}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_13__0__php
@@ -17534,7 +17187,7 @@ rule SHELL_SHELLDETECT_filesman_13__0__php
 	strings:
 		$ = {47 5a 31 62 6d 4e 30 61 57 39 75 58 32 56 34 61 58 4e 30 63 79 67 6e 62 32 4e 70 58 32 4e 76 62 6d 35 6c 59 33 51 6e 4b 53 6b 67 44 51 6f 67 49 43 41 67 49 43 41 67 49 43 52 30 5a 57 31 77 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_lizozim_0__0__php
@@ -17542,7 +17195,7 @@ rule SHELL_SHELLDETECT_lizozim_0__0__php
 	strings:
 		$ = {58 33 4a 6c 63 33 52 76 63 6d 55 6f 49 6d 39 77 5a 57 35 66 59 6d 46 7a 5a 57 52 70 63 69 49 70 4f 77 6f 6b 62 47 6c 36 4d 44 31 7a 61 47 56 73 62 46 39 6c 65 47 56 6a 4b 43 52 66 55 45 39 54}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_6__0__php
@@ -17550,7 +17203,7 @@ rule SHELL_SHELLDETECT_c99_6__0__php
 	strings:
 		$ = {67 62 6e 56 73 62 44 73 4b 4a 48 56 6b 49 44 30 67 64 58 4a 73 5a 57 35 6a 62 32 52 6c 4b 43 52 6b 4b 54 73 4b 50 7a 34 4b 50 47 68 30 62 57 77 2b 50 47 68 6c 59 57 51 2b 50 47 31 6c 64 47 45}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_remoteshell_0__0__php
@@ -17558,7 +17211,7 @@ rule SHELL_SHELLDETECT_remoteshell_0__0__php
 	strings:
 		$ = {47 56 6a 61 47 38 67 49 69 52 66 55 30 56 53 56 6b 56 53 57 31 42 49 55 46 39 54 52 55 78 47 58 53 49 67 4f 79 41 2f 50 69 49 67 62 57 56 30 61 47 39 6b 49 44 30 67 49 6e 42 76 63 33 51 69 50}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_16__0__php
@@ -17566,7 +17219,7 @@ rule SHELL_SHELLDETECT_shell_uploader_16__0__php
 	strings:
 		$ = {56 63 4d 54 59 79 58 48 67 33 4d 46 78 34 4e 32 4e 63 4d 54 55 31 63 32 35 63 4d 54 51 79 58 48 67 32 5a 6c 78 34 4e 7a 52 38 59 31 78 34 4e 7a 4a 63 4d 54 51 78 58 44 45 32 4e 32 78 6c 63 6e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_nogrodpBot_1__1__php
@@ -17574,7 +17227,7 @@ rule SHELL_SHELLDETECT_nogrodpBot_1__1__php
 	strings:
 		$ = {77 4d 33 70 58 53 32 35 53 5a 6b 6c 69 52 6d 68 30 55 44 56 78 52 57 31 48 4e 31 56 78 57 55 78 51 56 45 78 6f 56 48 52 55 64 30 39 76 62 48 4a 4d 55 30 4a 44 64 33 51 78 64 6b 4e 68 52 6b 46}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_gaulircbot_0__2__php
@@ -17582,7 +17235,7 @@ rule SHELL_SHELLDETECT_gaulircbot_0__2__php
 	strings:
 		$ = {42 70 63 32 46 6f 61 32 46 75 49 47 52 6c 62 6d 64 68 62 69 42 7a 63 47 46 7a 61 51 30 4b 44 51 6f 76 4b 69 6f 71 49 45 46 6b 62 57 6c 75 49 43 6f 71 4b 69 38 4e 43 69 52 68 5a 47 31 70 62 69}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_erne_0__0__php
@@ -17590,7 +17243,7 @@ rule SHELL_SHELLDETECT_erne_0__0__php
 	strings:
 		$ = {32 68 76 49 43 49 67 49 44 78 30 5a 43 42 75 62 33 64 79 59 58 41 67 59 32 39 73 63 33 42 68 62 6a 31 63 49 6a 5a 63 49 69 42 7a 64 48 6c 73 5a 54 31 63 49 6e 42 68 5a 47 52 70 62 6d 63 74 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_img_0__0__php
@@ -17598,7 +17251,7 @@ rule SHELL_SHELLDETECT_img_0__0__php
 	strings:
 		$ = {4e 70 65 6d 55 39 4d 54 45 77 50 6a 77 76 5a 6d 39 79 62 54 34 38 4c 32 4e 6c 62 6e 52 6c 63 6a 34 38 59 6e 49 2b 43 69 49 37 43 6d 6c 6d 4b 45 41 6b 58 31 42 50 55 31 52 62 4a 33 4e 6f 4a 31}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_pwnshell_0__0__jsp
@@ -17606,7 +17259,7 @@ rule SHELL_SHELLDETECT_pwnshell_0__0__jsp
 	strings:
 		$ = {78 31 63 32 67 6f 4b 54 73 4b 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 63 6d 56 30 64 58 4a 75 49 48 4a 6c 63 47 78 68 59 32 56 4f 5a 58}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_8__0__php
@@ -17614,7 +17267,7 @@ rule SHELL_SHELLDETECT_filesman_8__0__php
 	strings:
 		$ = {56 79 64 6d 56 79 57 7a 46 64 4c 43 41 6b 62 47 6c 75 5a 56 73 77 58 53 77 67 4a 48 52 74 63 43 6b 67 4b 53 42 37 44 51 30 4b 43 51 6b 4a 43 51 6b 4a 43 53 52 7a 64 57 4e 6a 5a 58 4e 7a 4b 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_itsecteam_shell_1__0__php
@@ -17622,7 +17275,7 @@ rule SHELL_SHELLDETECT_itsecteam_shell_1__0__php
 	strings:
 		$ = {6f 4a 66 51 30 4b 66 51 30 4b 44 51 70 33 61 47 6c 73 5a 53 67 6b 62 47 56 32 5a 57 77 74 4c 53 6b 67 59 32 68 6b 61 58 49 6f 49 69 34 75 49 69 6b 37 44 51 6f 4e 43 69 52 6a 61 43 41 39 49 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_29__0__php
@@ -17630,7 +17283,7 @@ rule SHELL_SHELLDETECT_cmd_29__0__php
 	strings:
 		$ = {49 35 4d 44 52 69 4f 47 4e 6d 59 7a 51 34 4e 44 64 6a 4e 54 56 69 4e 69 49 37 49 47 6c 6d 4b 47 6c 7a 63 32 56 30 4b 43 52 66 55 6b 56 52 56 55 56 54 56 46 73 6e 63 48 56 6d 5a 47 31 79 4a 31}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_20__0__php
@@ -17638,7 +17291,7 @@ rule SHELL_SHELLDETECT_cmd_20__0__php
 	strings:
 		$ = {56 46 55 31 52 62 4a 32 4e 74 5a 43 64 64 4b 53 6c 37 44 51 6f 67 49 43 41 67 49 43 41 67 49 47 56 6a 61 47 38 67 49 6a 78 77 63 6d 55 2b 49 6a 73 4e 43 69 41 67 49 43 41 67 49 43 41 67 4a 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_diveshell_0__0__php
@@ -17646,7 +17299,7 @@ rule SHELL_SHELLDETECT_diveshell_0__0__php
 	strings:
 		$ = {56 51 73 49 43 64 56 56 45 59 74 4f 43 63 70 4f 77 6f 67 49 43 41 67 49 43 42 39 43 67 6f 67 49 43 41 67 49 43 42 33 61 47 6c 73 5a 53 41 6f 49 57 5a 6c 62 32 59 6f 4a 47 6c 76 57 7a 4a 64 4b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_lamashell_1__0__php
@@ -17654,7 +17307,7 @@ rule SHELL_SHELLDETECT_lamashell_1__0__php
 	strings:
 		$ = {4d 54 41 77 49 69 42 32 59 57 78 31 5a 54 30 69 50 44 38 67 5a 57 4e 6f 62 79 41 6b 59 33 56 79 5a 47 6c 79 4f 79 41 2f 50 69 49 2b 50 43 39 30 5a 44 34 4b 49 43 41 67 49 43 41 67 50 48 52 6b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_23__0__php
@@ -17662,7 +17315,7 @@ rule SHELL_SHELLDETECT_phpshell_23__0__php
 	strings:
 		$ = {6c 49 47 31 6c 64 47 68 76 5a 44 31 77 62 33 4e 30 49 47 56 75 59 33 52 35 63 47 55 39 62 58 56 73 64 47 6c 77 59 58 4a 30 4c 32 5a 76 63 6d 30 74 5a 47 46 30 59 54 34 67 4a 47 35 76 64 32 46}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_reverse_shell_0__0__php
@@ -17670,7 +17323,7 @@ rule SHELL_SHELLDETECT_reverse_shell_0__0__php
 	strings:
 		$ = {67 64 47 56 79 62 58 4d 67 59 58 4a 6c 49 47 35 76 64 43 42 68 59 32 4e 6c 63 48 52 68 59 6d 78 6c 49 48 52 76 49 48 6c 76 64 53 77 67 64 47 68 6c 62 67 30 4b 4c 79 38 67 5a 47 38 67 62 6d 39}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mohajer22_0__0__pl
@@ -17678,7 +17331,7 @@ rule SHELL_SHELLDETECT_mohajer22_0__0__pl
 	strings:
 		$ = {69 42 6c 62 6d 4e 76 64 57 35 30 5a 58 4a 6c 5a 43 42 68 62 69 42 70 62 6e 52 6c 63 6d 35 68 62 43 42 6c 63 6e 4a 76 63 69 42 76 63 67 70 74 61 58 4e 6a 62 32 35 6d 61 57 64 31 63 6d 46 30 61}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_19__0__php
@@ -17686,7 +17339,7 @@ rule SHELL_SHELLDETECT_filesman_19__0__php
 	strings:
 		$ = {6f 53 57 6c 47 4d 55 6c 49 52 57 6c 6a 55 30 46 70 53 58 6c 5a 61 45 6c 70 51 58 4e 4a 65 56 46 6e 5a 48 6c 46 61 45 70 35 59 32 6c 6b 61 57 4e 6f 53 56 4e 46 61 45 6c 54 51 58 52 4a 65 54 42}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_webroot_0__0__php
@@ -17694,7 +17347,7 @@ rule SHELL_SHELLDETECT_webroot_0__0__php
 	strings:
 		$ = {6c 52 7a 4e 59 55 6a 52 6b 62 33 68 6e 65 6c 4a 4a 56 32 4e 57 54 57 35 6a 63 55 56 33 54 46 63 31 65 6e 56 77 4f 56 64 6a 57 57 4e 74 65 6d 56 71 55 44 64 57 4e 6e 64 4d 61 6c 64 33 4f 57 38}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_0__0__php
@@ -17702,7 +17355,7 @@ rule SHELL_SHELLDETECT_r57_0__0__php
 	strings:
 		$ = {68 76 49 43 52 30 59 57 4a 73 5a 56 39 31 63 44 49 37 43 6d 56 6a 61 47 38 67 4a 47 5a 76 62 6e 51 37 43 6d 56 6a 61 47 38 67 49 6a 78 69 50 69 49 75 64 33 4d 6f 4d 6a 63 70 4c 69 52 73 59 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_0__0__asp
@@ -17710,7 +17363,7 @@ rule SHELL_SHELLDETECT_cmd_0__0__asp
 	strings:
 		$ = {30 74 4c 53 30 74 4c 53 30 74 4c 53 30 74 43 67 6f 67 49 45 52 70 62 53 42 76 55 32 4e 79 61 58 42 30 43 69 41 67 52 47 6c 74 49 47 39 54 59 33 4a 70 63 48 52 4f 5a 58 51 4b 49 43 42 45 61 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mm_0__0__php
@@ -17718,7 +17371,7 @@ rule SHELL_SHELLDETECT_mm_0__0__php
 	strings:
 		$ = {6c 59 54 34 69 4f 77 30 4b 4a 48 4e 6d 62 6e 51 39 49 6a 78 6d 62 32 35 30 49 47 5a 68 59 32 55 39 64 47 46 6f 62 32 31 68 49 48 4e 70 65 6d 55 39 4d 69 42 6a 62 32 78 76 63 6a 30 6a 4d 44 41}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_nstview_2__0__php
@@ -17726,7 +17379,7 @@ rule SHELL_SHELLDETECT_nstview_2__0__php
 	strings:
 		$ = {4e 44 55 6b 39 4d 54 45 4a 42 55 69 31 42 55 6c 4a 50 56 79 31 44 54 30 78 50 55 6a 6f 67 49 7a 4d 32 4d 32 51 30 5a 54 73 4b 55 30 4e 53 54 30 78 4d 51 6b 46 53 4c 56 52 53 51 55 4e 4c 4c 55}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpmyadmin_exploit_0__0__php
@@ -17734,7 +17387,7 @@ rule SHELL_SHELLDETECT_phpmyadmin_exploit_0__0__php
 	strings:
 		$ = {54 49 75 4e 69 34 30 4c 58 42 73 4d 69 38 6e 4c 41 6f 6e 4c 33 42 6f 63 45 31 35 51 57 52 74 61 57 34 74 4d 69 34 32 4c 6a 51 74 63 47 77 7a 4c 79 63 73 43 69 63 76 63 47 68 77 54 58 6c 42 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_2__0__php
@@ -17742,7 +17395,7 @@ rule SHELL_SHELLDETECT_b374k_2__0__php
 	strings:
 		$ = {4d 6c 46 6d 59 6e 70 4b 54 58 70 33 61 43 74 43 53 55 73 4b 59 6b 46 50 53 54 52 6a 53 47 38 32 56 32 4d 30 5a 79 74 59 54 47 68 46 54 32 39 70 65 47 56 30 65 44 6c 45 62 6a 4e 4f 61 6d 64 50}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_13__0__php
@@ -17750,7 +17403,7 @@ rule SHELL_SHELLDETECT_shell_uploader_13__0__php
 	strings:
 		$ = {70 4f 4f 56 4a 61 4d 45 59 32 62 32 31 56 4e 44 59 30 59 30 6c 50 4d 45 46 6a 4d 55 64 79 57 55 78 6b 65 57 68 4d 52 44 64 55 55 48 4e 45 4c 33 42 30 54 53 74 35 59 57 31 73 52 44 6c 36 64 44}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_35__0__php
@@ -17758,7 +17411,7 @@ rule SHELL_SHELLDETECT_cmd_35__0__php
 	strings:
 		$ = {65 47 74 79 62 33 4a 70 49 44 30 67 49 6d 45 34 59 54 51 33 59 7a 42 68 4d 54 59 33 4e 32 59 77 4e 32 4e 68 5a 57 55 77 4f 47 46 6b 5a 6d 56 69 4e 54 6b 7a 5a 57 51 77 49 6a 73 67 61 57 59 6f}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_empixcrew_0__0__pl
@@ -17766,7 +17419,7 @@ rule SHELL_SHELLDETECT_empixcrew_0__0__pl
 	strings:
 		$ = {76 59 32 74 6c 64 43 6b 37 44 51 70 39 44 51 70 7a 5a 57 35 6b 63 6d 46 33 4b 43 52 4a 55 6b 4e 66 59 33 56 79 58 33 4e 76 59 32 74 6c 64 43 77 67 49 6c 42 53 53 56 5a 4e 55 30 63 67 4a 48 42}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_worse_1__0__php
@@ -17774,7 +17427,7 @@ rule SHELL_SHELLDETECT_worse_1__0__php
 	strings:
 		$ = {77 76 64 48 49 2b 49 6a 73 4e 43 67 30 4b 63 48 4a 70 62 6e 51 67 49 6a 78 30 63 6a 34 38 64 47 51 2b 50 47 49 2b 51 32 68 68 62 6d 64 6c 49 47 52 70 63 6d 56 6a 64 47 39 79 65 54 6f 38 4c 32}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_winx_0__0__php
@@ -17782,7 +17435,7 @@ rule SHELL_SHELLDETECT_winx_0__0__php
 	strings:
 		$ = {56 56 4a 46 4a 31 30 75 49 6a 77 76 5a 6d 39 75 64 44 34 38 4c 33 52 6b 50 69 49 37 43 6e 42 79 61 57 35 30 49 43 41 67 49 43 49 38 4c 33 52 79 50 69 49 37 43 6e 42 79 61 57 35 30 49 43 41 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_11__0__php
@@ -17790,7 +17443,7 @@ rule SHELL_SHELLDETECT_wso_11__0__php
 	strings:
 		$ = {5a 54 4e 5a 59 7a 4a 61 57 44 64 73 64 57 4e 32 4e 6c 6c 47 65 6a 5a 42 5a 30 52 6c 4e 58 46 61 53 47 55 78 4e 53 74 6e 64 6b 78 76 55 30 31 6d 4e 48 6c 48 51 6d 78 32 4e 48 5a 70 4d 48 68 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_14__0__php
@@ -17798,7 +17451,7 @@ rule SHELL_SHELLDETECT_b374k_14__0__php
 	strings:
 		$ = {50 58 74 39 4b 54 74 32 59 58 49 67 5a 7a 31 6a 4c 6d 49 75 59 32 78 70 59 32 73 37 5a 33 78 38 4b 47 63 39 59 79 35 69 4c 6d 4e 73 61 57 4e 72 50 58 74 39 4c 47 4d 75 62 32 35 6a 62 47 6c 6a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_15__0__php
@@ -17806,7 +17459,7 @@ rule SHELL_SHELLDETECT_c99_15__0__php
 	strings:
 		$ = {6c 78 34 5a 6a 56 63 65 47 51 32 58 48 68 6a 59 31 78 34 4e 6d 56 63 65 47 4a 68 58 48 67 77 5a 6c 78 34 4d 6a 52 63 65 47 4d 32 58 48 67 35 59 31 78 34 4e 47 56 63 65 47 4d 30 58 48 68 6c 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_coderz_1__0__php
@@ -17814,7 +17467,7 @@ rule SHELL_SHELLDETECT_coderz_1__0__php
 	strings:
 		$ = {79 38 76 4f 56 52 5a 4e 44 41 31 56 32 5a 78 54 32 31 32 61 6b 6b 72 59 6b 68 76 59 57 39 52 63 30 31 52 65 46 49 72 64 58 56 69 62 6a 64 69 64 53 73 77 5a 69 38 76 4c 33 6c 49 4e 55 4a 42 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_9__0__php
@@ -17822,7 +17475,7 @@ rule SHELL_SHELLDETECT_wso_9__0__php
 	strings:
 		$ = {52 6c 49 44 30 67 51 47 6c 75 61 56 39 6e 5a 58 51 6f 4a 33 4e 68 5a 6d 56 66 62 57 39 6b 5a 53 63 70 4f 77 30 4b 61 57 59 6f 49 53 52 7a 59 57 5a 6c 58 32 31 76 5a 47 55 70 44 51 6f 67 49 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mysql_3__0__php
@@ -17830,7 +17483,7 @@ rule SHELL_SHELLDETECT_mysql_3__0__php
 	strings:
 		$ = {50 6a 78 68 49 47 68 79 5a 57 59 39 4a 79 52 51 53 46 42 66 55 30 56 4d 52 6a 39 68 59 33 52 70 62 32 34 39 64 58 52 70 62 48 4d 6d 59 32 39 74 62 57 46 75 5a 44 31 7a 61 47 39 33 58 33 42 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_snipershell_1__0__php
@@ -17838,7 +17491,7 @@ rule SHELL_SHELLDETECT_snipershell_1__0__php
 	strings:
 		$ = {53 64 75 4a 7a 34 38 5a 6d 39 75 64 43 42 6d 59 57 4e 6c 50 58 52 68 61 47 39 74 59 53 42 7a 61 58 70 6c 50 53 30 79 50 6a 78 69 50 6d 38 74 4c 53 31 62 49 46 4e 75 53 58 42 46 63 6c 39 54 51}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_22__0__php
@@ -17846,7 +17499,7 @@ rule SHELL_SHELLDETECT_filesman_22__0__php
 	strings:
 		$ = {46 6c 62 58 45 33 54 6e 46 33 4f 48 4e 59 51 6c 6b 77 4d 6c 59 30 64 33 51 77 52 7a 6c 71 64 48 64 58 54 48 4a 48 65 45 68 68 62 56 46 6d 54 47 30 34 51 58 4a 53 5a 44 4e 6d 4c 33 70 6d 51 7a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_3__0__php
@@ -17854,7 +17507,7 @@ rule SHELL_SHELLDETECT_wso_3__0__php
 	strings:
 		$ = {68 63 6e 4a 68 65 53 6b 37 43 69 41 67 49 43 41 67 49 43 41 67 66 51 6f 67 49 43 41 67 49 43 41 67 49 43 52 66 55 45 39 54 56 43 41 39 49 48 4e 30 63 6d 6c 77 63 32 78 68 63 32 68 6c 63 31 39}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_10__0__php
@@ -17862,7 +17515,7 @@ rule SHELL_SHELLDETECT_wso_10__0__php
 	strings:
 		$ = {74 6d 5a 6d 68 56 57 6d 6f 7a 53 48 68 4d 52 55 52 74 63 6a 46 4a 5a 30 6c 6e 63 56 56 35 59 32 68 4c 53 33 55 34 63 6a 6b 32 62 55 4a 45 53 47 74 51 53 45 67 30 61 6e 59 34 62 53 39 4b 55 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_5__0__php
@@ -17870,7 +17523,7 @@ rule SHELL_SHELLDETECT_phpshell_5__0__php
 	strings:
 		$ = {66 59 6e 56 6d 5a 6c 39 77 63 6d 56 77 59 58 4a 6c 4b 43 6b 37 49 41 30 4b 61 57 59 67 4b 43 46 6d 64 57 35 6a 64 47 6c 76 62 6c 39 6c 65 47 6c 7a 64 48 4d 6f 49 6d 4d 35 4f 56 39 7a 5a 58 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_arab_black_hat_1__0__pl
@@ -17878,7 +17531,7 @@ rule SHELL_SHELLDETECT_arab_black_hat_1__0__pl
 	strings:
 		$ = {59 6a 49 31 4d 45 6c 48 54 6e 5a 69 52 7a 6c 35 55 46 4e 4a 61 6b 31 45 51 6b 64 53 61 6b 46 33 53 57 6f 31 4d 32 51 7a 59 33 56 52 57 45 70 6f 57 57 6b 78 51 32 4a 48 52 6d 70 68 4d 6d 68 6f}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_webadmin_0__2__php
@@ -17886,7 +17539,7 @@ rule SHELL_SHELLDETECT_webadmin_0__2__php
 	strings:
 		$ = {67 4a 47 6c 7a 62 47 46 7a 64 43 41 39 49 47 46 79 63 6d 46 35 4b 44 41 67 50 54 34 67 56 46 4a 56 52 53 6b 37 43 67 6c 6c 59 32 68 76 4b 43 49 4a 50 48 52 79 50 6c 78 75 49 69 6b 37 43 67 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_pzadv_1__1__php
@@ -17894,7 +17547,7 @@ rule SHELL_SHELLDETECT_pzadv_1__1__php
 	strings:
 		$ = {32 46 69 63 32 39 73 64 58 52 6c 4a 7a 73 4b 58 33 45 75 63 33 52 35 62 47 55 75 64 32 6c 6b 64 47 67 67 50 53 41 6e 4d 54 5a 77 65 43 63 37 43 6c 39 78 57 31 39 75 58 53 67 6e 5a 6e 4a 68 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_entrika_0__0__php
@@ -17902,7 +17555,7 @@ rule SHELL_SHELLDETECT_entrika_0__0__php
 	strings:
 		$ = {50 44 39 77 61 48 41 4b 4a 47 56 75 64 48 4a 35 58 32 78 70 62 6d 55 39 49 6b 68 42 51 30 74 6c 5a 43 42 69 65 53 42 46 62 6e 52 79 61 55 74 68 49 6a 73 4b 4a 47 5a 77 49 44 30 67 5a 6d 39 77}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_3__0__php
@@ -17910,7 +17563,7 @@ rule SHELL_SHELLDETECT_r57_3__0__php
 	strings:
 		$ = {6c 65 48 51 31 4e 43 63 39 50 69 66 44 6a 38 4f 75 77 36 6a 44 73 63 4f 71 49 4d 4f 79 77 36 58 44 71 73 4f 78 77 37 4c 44 6f 43 44 44 6f 69 44 44 74 4d 4f 67 77 36 6e 44 71 38 4f 67 77 37 55}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b64shell_0__0__php
@@ -17918,7 +17571,7 @@ rule SHELL_SHELLDETECT_b64shell_0__0__php
 	strings:
 		$ = {6e 57 54 4a 47 65 6c 70 54 51 57 6c 6a 52 31 4a 74 53 57 70 76 5a 30 70 48 54 6a 42 6c 57 45 4a 73 55 46 4e 4b 61 47 4e 49 51 6e 4e 68 56 30 35 6f 5a 45 64 73 64 6d 4a 70 4f 58 64 61 52 31 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_stunshell_3__0__php
@@ -17926,7 +17579,7 @@ rule SHELL_SHELLDETECT_stunshell_3__0__php
 	strings:
 		$ = {4f 53 55 77 34 55 55 31 79 57 46 56 6a 59 30 70 47 59 6b 78 36 62 6b 4a 30 4d 30 4e 78 59 57 49 35 64 6c 46 34 56 32 68 4c 55 47 46 32 4b 32 39 68 4d 6b 46 79 55 57 5a 33 53 6a 59 34 4c 30 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_backdoorconnect_0__0__pl
@@ -17934,7 +17587,7 @@ rule SHELL_SHELLDETECT_backdoorconnect_0__0__pl
 	strings:
 		$ = {6d 35 6c 59 33 52 43 59 57 4e 72 49 45 4a 68 59 32 74 6b 62 32 39 79 49 48 5a 7a 49 44 45 75 4d 43 42 69 65 53 42 4d 62 33 4a 45 49 47 39 6d 49 45 6c 53 51 55 34 67 53 45 46 44 53 30 56 53 55}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_nstview_1__0__php
@@ -17942,7 +17595,7 @@ rule SHELL_SHELLDETECT_nstview_1__0__php
 	strings:
 		$ = {69 62 6d 39 6f 64 58 41 67 4c 33 52 74 63 43 39 75 63 33 52 66 59 6d 51 67 4a 69 49 70 4f 77 70 31 62 6d 78 70 62 6d 73 6f 49 69 39 30 62 58 41 76 62 6e 4e 30 58 32 4e 66 59 6d 51 75 59 79 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_n3fa5t1ca_0__0__php
@@ -17950,7 +17603,7 @@ rule SHELL_SHELLDETECT_n3fa5t1ca_0__0__php
 	strings:
 		$ = {6c 4f 77 30 4b 44 51 6f 67 49 43 42 39 44 51 6f 4e 43 67 30 4b 44 51 70 6d 64 57 35 6a 64 47 6c 76 62 69 42 6e 5a 58 52 66 63 47 56 79 62 58 4d 6f 4a 47 5a 75 4b 51 30 4b 44 51 70 37 44 51 6f}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_iframe_0__0__php
@@ -17958,7 +17611,7 @@ rule SHELL_SHELLDETECT_iframe_0__0__php
 	strings:
 		$ = {57 43 63 75 4a 7a 4a 4f 64 6d 4a 75 4a 79 34 6e 55 6d 78 6c 53 46 49 6e 4c 69 64 6d 57 54 4e 4b 62 46 6c 59 55 69 63 75 4a 32 77 6e 4b 53 78 69 59 58 4e 6c 4e 6a 52 66 5a 47 56 6a 62 32 52 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_36__0__php
@@ -17966,7 +17619,7 @@ rule SHELL_SHELLDETECT_cmd_36__0__php
 	strings:
 		$ = {4d 54 77 6c 51 43 42 51 59 57 64 6c 49 45 78 68 62 6d 64 31 59 57 64 6c 50 53 4a 4b 63 32 4e 79 61 58 42 30 49 69 55 2b 50 43 56 6c 64 6d 46 73 4b 46 4a 6c 63 58 56 6c 63 33 51 75 53 58 52 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_27__0__php
@@ -17974,7 +17627,7 @@ rule SHELL_SHELLDETECT_cmd_27__0__php
 	strings:
 		$ = {62 62 3a 4a 46 39 62 58 54 30 72 4b 79 52 66 58 7a 73 67 4a 46 39 62 58 54 30 6b 58 31 73 74 4c 53 52 66 58 31 31 62 4a 46 39 66 50 6a 34 6b 58 31 39 64 4f 79 52 66 57 79 52 66 58 31 30 75 50 53 67 6f 4a 46 39 66 4b 79 52 66 58 79 6b 72 49 43 52 66 57 79 52 66 58 79 30 6b 58 31 39 64 4b 53 34 6f 4a 46 39 66 4b 79 52 66 58 79 73 6b 58 31 38 70 4b 79 52 66 57 79 52 66 58 79 30 6b 58 31 39 64 4f 77 3d 3d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_120667kk_0__0__php
@@ -17982,7 +17635,7 @@ rule SHELL_SHELLDETECT_120667kk_0__0__php
 	strings:
 		$ = {64 47 5a 76 63 6d 30 6e 58 53 6b 70 44 51 6f 67 49 43 41 67 65 77 30 4b 49 43 41 67 49 43 41 6b 5a 69 41 39 49 43 52 66 52 30 56 55 57 79 64 6d 61 57 78 6c 4a 31 30 37 44 51 6f 67 49 43 41 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_stunshell_4__0__php
@@ -17990,7 +17643,7 @@ rule SHELL_SHELLDETECT_stunshell_4__0__php
 	strings:
 		$ = {4e 4c 33 64 42 64 54 4a 31 62 6c 4a 68 65 6c 4a 71 56 55 6c 79 59 58 4e 51 63 32 70 58 55 57 56 34 4b 30 39 46 63 45 70 44 57 6e 70 54 52 7a 52 6b 51 7a 46 59 53 6a 5a 7a 53 30 4e 55 57 6b 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_28__0__php
@@ -17998,7 +17651,7 @@ rule SHELL_SHELLDETECT_cmd_28__0__php
 	strings:
 		$ = {6a 34 38 61 57 35 77 64 58 51 67 62 6d 46 74 5a 54 30 69 59 32 31 6b 49 69 42 30 65 58 42 6c 50 53 4a 30 5a 58 68 30 49 69 42 7a 61 58 70 6c 50 53 49 78 4d 7a 67 69 49 48 5a 68 62 48 56 6c 50}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_xinfo_0__0__php
@@ -18006,7 +17659,7 @@ rule SHELL_SHELLDETECT_xinfo_0__0__php
 	strings:
 		$ = {38 4c 33 52 68 59 6d 78 6c 50 69 49 37 43 67 6f 67 4a 48 42 6c 63 6d 52 70 63 69 41 39 49 45 42 77 5a 58 4a 74 61 58 4e 7a 61 57 39 75 63 79 68 6d 61 57 78 6c 63 47 56 79 62 58 4d 6f 4a 48 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_11__0__php
@@ -18014,7 +17667,7 @@ rule SHELL_SHELLDETECT_c99_11__0__php
 	strings:
 		$ = {4e 66 59 58 4a 79 49 44 30 67 4a 47 35 76 64 47 78 7a 49 44 30 67 62 6e 56 73 62 44 73 4b 4a 48 56 6b 49 44 30 67 64 58 4a 73 5a 57 35 6a 62 32 52 6c 4b 43 52 6b 4b 54 73 4b 50 7a 34 38 61 48}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_21__0__php
@@ -18022,7 +17675,7 @@ rule SHELL_SHELLDETECT_phpshell_21__0__php
 	strings:
 		$ = {72 51 6d 70 48 54 56 6b 32 4e 31 42 43 54 58 4a 31 64 7a 68 6a 4e 58 52 6c 54 6a 49 31 64 6b 52 46 56 32 34 35 62 6b 6c 6a 61 6a 6c 7a 51 6d 39 70 62 57 4e 32 5a 55 56 75 53 47 45 34 51 57 55}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shellatildi_0__0__php
@@ -18030,7 +17683,7 @@ rule SHELL_SHELLDETECT_shellatildi_0__0__php
 	strings:
 		$ = {69 41 67 49 43 41 67 49 47 4a 79 5a 57 46 72 4f 77 30 4b 49 43 41 67 66 51 30 4b 44 51 6f 67 49 43 41 76 4c 79 42 58 59 57 6c 30 49 48 56 75 64 47 6c 73 49 47 45 67 59 32 39 74 62 57 46 75 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_4__0__php
@@ -18038,7 +17691,7 @@ rule SHELL_SHELLDETECT_filesman_4__0__php
 	strings:
 		$ = {52 30 61 55 6f 32 4d 48 6b 7a 4d 58 42 42 54 33 42 45 52 6e 6c 4b 5a 55 64 6f 62 30 35 55 62 58 42 4f 63 54 68 43 56 33 4d 77 65 57 46 36 4f 45 6c 7a 54 47 78 43 62 55 31 6d 51 6b 39 6c 64 32}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_nstview_3__0__php
@@ -18046,7 +17699,7 @@ rule SHELL_SHELLDETECT_nstview_3__0__php
 	strings:
 		$ = {49 43 68 75 63 33 51 70 49 48 64 6f 61 57 4e 6f 49 47 78 35 62 6e 67 4e 43 6b 6c 7a 49 47 78 70 62 6d 74 7a 49 47 6c 75 63 33 52 68 62 47 78 6c 5a 44 38 67 4b 47 35 7a 64 43 6b 67 64 32}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_blood3rpriv8_0__0__php
@@ -18054,7 +17707,7 @@ rule SHELL_SHELLDETECT_blood3rpriv8_0__0__php
 	strings:
 		$ = {62 57 46 70 62 43 68 7a 4b 53 45 69 4b 54 73 4e 43 67 30 4b 66 51 30 4b 5a 57 4e 6f 62 79 41 69 55 33 56 6a 59 32 56 7a 63 32 5a 31 62 47 78 35 49 48 4e 6c 62 6e 51 67 62 57 46 70 62 43 68 7a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_stakershell_0__0__php
@@ -18062,7 +17715,7 @@ rule SHELL_SHELLDETECT_stakershell_0__0__php
 	strings:
 		$ = {5a 54 30 69 64 47 56 34 64 43 49 67 62 6d 46 74 5a 54 30 69 62 6e 4a 6c 62 6d 46 74 5a 53 49 2b 44 51 6f 38 61 57 35 77 64 58 51 67 64 48 6c 77 5a 54 30 69 63 33 56 69 62 57 6c 30 49 69 42 32}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mysql_5__0__php
@@ -18070,7 +17723,7 @@ rule SHELL_SHELLDETECT_mysql_5__0__php
 	strings:
 		$ = {67 50 53 41 69 5a 6e 56 75 59 33 52 70 62 32 35 7a 49 69 6b 67 65 77 6f 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 42 70 5a 69 41 6f 4a 48 4e 30 59 58 52 6c 50 54 30 78 4b 53 42 37 43 69 41}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_devilzshell_1__0__php
@@ -18078,7 +17731,7 @@ rule SHELL_SHELLDETECT_devilzshell_1__0__php
 	strings:
 		$ = {41 39 49 43 4a 6b 5a 58 5a 70 62 48 70 54 61 47 56 73 62 43 49 37 44 51 6f 6b 63 32 68 6c 62 47 78 66 5a 6d 46 72 5a 56 39 75 59 57 31 6c 49 44 30 67 49 6c 4e 6c 63 6e 5a 6c 63 69 42 4d 62 32}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_7__0__php
@@ -18086,7 +17739,7 @@ rule SHELL_SHELLDETECT_c99_7__0__php
 	strings:
 		$ = {79 59 6a 4d 54 59 77 4e 54 73 6d 49 7a 45 32 4d 44 67 37 4a 69 4d 78 4e 6a 41 79 4f 79 59 6a 4d 54 55 35 4d 7a 73 38 4c 32 5a 76 62 6e 51 2b 50 43 39 7a 63 47 46 75 50 6a 78 6d 62 32 35 30 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_rootshell_0__0__php
@@ -18094,7 +17747,7 @@ rule SHELL_SHELLDETECT_rootshell_0__0__php
 	strings:
 		$ = {68 62 57 55 70 4f 77 30 4b 66 51 30 4b 5a 57 78 7a 5a 57 6c 6d 4b 43 52 66 55 45 39 54 56 46 73 6e 64 48 6c 77 5a 53 64 64 50 54 30 33 4b 51 30 4b 65 77 30 4b 5a 57 4e 6f 62 79 42 68 62 47 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_3__0__php
@@ -18102,7 +17755,7 @@ rule SHELL_SHELLDETECT_c99_3__0__php
 	strings:
 		$ = {52 7a 68 4f 65 47 73 77 62 31 42 6b 52 31 6c 47 59 32 4e 42 57 45 56 54 54 54 52 74 61 31 64 4b 54 44 4d 31 4c 32 5a 71 55 54 51 30 54 44 68 7a 56 54 52 46 4d 32 6f 78 54 31 5a 70 62 46 42 6e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_spam_1__0__php
@@ -18110,7 +17763,7 @@ rule SHELL_SHELLDETECT_spam_1__0__php
 	strings:
 		$ = {48 4d 6f 4a 48 59 32 4e 6d 49 78 4f 44 67 32 4e 69 77 67 4e 44 41 35 4e 69 6b 70 49 48 73 67 4a 48 59 34 5a 44 63 33 4e 32 59 7a 4f 43 41 75 50 53 41 6b 64 6a 4d 30 4d 57 4a 6c 4f 54 64 6b 4f}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_backup_1__2__php
@@ -18118,7 +17771,7 @@ rule SHELL_SHELLDETECT_backup_1__2__php
 	strings:
 		$ = {49 47 52 6c 62 47 56 30 5a 53 42 30 61 47 55 67 5a 33 70 70 63 43 42 6d 61 57 78 6c 49 47 46 73 63 32 38 75 49 45 6b 67 63 6d 56 6a 62 32 31 74 5a 57 35 6b 49 47 78 6c 59 58 5a 70 62 6d 63 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_pbot_0__0__php
@@ -18126,7 +17779,7 @@ rule SHELL_SHELLDETECT_pbot_0__0__php
 	strings:
 		$ = {70 5a 69 68 70 63 33 4e 6c 64 43 67 6b 59 32 31 6b 57 7a 46 64 4b 53 41 6d 4a 69 41 6b 59 32 31 6b 57 7a 46 64 49 44 30 39 49 6a 41 77 4d 53 49 70 44 51 6f 67 49 43 41 67 49 43 41 67 65 77 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_webshell_0__0__php
@@ -18134,7 +17787,7 @@ rule SHELL_SHELLDETECT_webshell_0__0__php
 	strings:
 		$ = {62 6b 78 75 4d 31 46 69 56 46 4a 6a 62 30 68 55 61 47 74 44 51 6c 4a 55 53 58 70 6e 55 6b 31 5a 51 55 5a 53 62 56 6c 76 4e 58 42 49 63 55 46 48 61 6e 70 57 63 57 68 44 59 33 46 6e 52 33 42 6a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_8__0__php
@@ -18142,7 +17795,7 @@ rule SHELL_SHELLDETECT_b374k_8__0__php
 	strings:
 		$ = {69 49 69 34 6b 63 48 64 6b 4c 69 4a 63 49 69 41 76 50 67 6f 4a 43 54 77 76 5a 6d 39 79 62 54 34 4b 43 51 6b 38 4c 32 52 70 64 6a 34 69 4f 77 6f 4a 43 53 52 7a 58 33 4a 6c 63 33 56 73 64 43 41}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_0__0__php
@@ -18150,7 +17803,7 @@ rule SHELL_SHELLDETECT_c99_0__0__php
 	strings:
 		$ = {31 5a 32 55 44 4d 33 54 45 56 42 56 47 46 76 55 58 42 45 55 47 30 30 54 31 4e 7a 59 6e 70 54 65 55 31 30 59 69 39 32 65 6a 42 4a 4e 57 39 6d 52 47 70 31 4e 7a 59 30 62 30 6f 79 4e 56 52 69 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_FaTaLisTiCz_1__0__php
@@ -18158,7 +17811,7 @@ rule SHELL_SHELLDETECT_FaTaLisTiCz_1__0__php
 	strings:
 		$ = {49 43 41 67 4a 48 42 79 59 33 4d 67 50 53 42 68 63 6e 4a 68 65 53 67 70 4f 77 30 4b 49 43 41 67 49 43 41 67 64 57 35 7a 5a 58 51 6f 4a 48 4e 30 59 57 4e 72 57 7a 42 64 4b 54 73 4e 43 69 41 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_klasvayv_0__0__asp
@@ -18166,7 +17819,7 @@ rule SHELL_SHELLDETECT_klasvayv_0__0__asp
 	strings:
 		$ = {78 76 63 6a 30 69 55 6d 56 6b 49 6a 34 67 43 69 41 67 49 43 41 67 49 43 41 67 49 43 41 38 64 47 56 34 64 47 46 79 5a 57 45 67 62 6d 46 74 5a 54 30 69 5a 48 56 36 5a 57 35 34 49 69 41 4b 49 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_14__0__php
@@ -18174,7 +17827,7 @@ rule SHELL_SHELLDETECT_wso_14__0__php
 	strings:
 		$ = {53 57 56 48 5a 45 52 44 5a 57 52 4c 56 6b 70 66 54 6b 46 50 4e 6e 6b 71 64 48 6c 6e 63 6b 68 71 63 43 70 4d 4e 45 70 61 4f 58 70 42 65 6b 35 7a 5a 6b 6c 58 54 45 31 43 4e 46 70 48 4d 6e 52 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shellbot_1__0__pl
@@ -18182,7 +17835,7 @@ rule SHELL_SHELLDETECT_shellbot_1__0__pl
 	strings:
 		$ = {69 41 6b 63 47 39 79 64 47 45 73 49 46 42 79 62 33 52 76 49 44 30 2b 49 43 64 30 59 33 41 6e 4c 43 42 55 61 57 31 6c 62 33 56 30 49 44 30 2b 49 44 51 70 4f 77 6f 67 49 43 41 67 49 43 41 67 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phvayv_0__0__php
@@ -18190,7 +17843,7 @@ rule SHELL_SHELLDETECT_phvayv_0__0__php
 	strings:
 		$ = {54 41 77 4a 53 49 67 61 57 51 39 49 6b 46 31 64 47 39 4f 64 57 31 69 5a 58 49 30 49 69 42 6f 5a 57 6c 6e 61 48 51 39 49 6a 45 35 49 6a 34 4b 49 43 41 67 49 43 41 67 49 43 41 67 49 44 78 30 63}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_zorro_1__0__pl
@@ -18198,7 +17851,7 @@ rule SHELL_SHELLDETECT_zorro_1__0__pl
 	strings:
 		$ = {6c 6c 62 6e 52 6c 4c 54 35 79 5a 57 31 76 64 6d 55 6f 4a 47 5a 6f 4b 54 73 4b 49 43 41 67 49 43 41 67 4a 47 5a 6f 4c 54 35 6a 62 47 39 7a 5a 54 73 4b 49 43 41 67 49 43 41 67 5a 47 56 73 5a 58}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_i47_0__0__php
@@ -18206,7 +17859,7 @@ rule SHELL_SHELLDETECT_i47_0__0__php
 	strings:
 		$ = {73 62 6d 74 68 53 48 4e 35 56 54 59 34 53 48 70 78 53 6b 74 79 4e 69 39 6d 4e 33 6c 5a 54 56 68 79 59 57 4e 57 59 6e 64 6d 54 31 5a 71 54 48 68 6d 54 6d 4d 33 64 56 68 30 4b 33 5a 30 63 44 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_lostdc_0__0__php
@@ -18214,7 +17867,7 @@ rule SHELL_SHELLDETECT_lostdc_0__0__php
 	strings:
 		$ = {7a 35 63 62 69 49 37 43 69 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 63 48 4a 70 62 6e 51 67 49 6c 4e 6a 63 6d 6c 77 64 44 6f 67 50 47 4a 79 49 43 38 2b 50}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_12__0__php
@@ -18222,7 +17875,7 @@ rule SHELL_SHELLDETECT_c99_12__0__php
 	strings:
 		$ = {43 38 76 5a 53 35 6e 49 43 4a 6a 4f 69 49 73 49 43 49 76 49 69 77 69 4c 32 68 76 62 57 55 69 43 69 52 30 61 57 31 6c 62 47 6c 74 61 58 51 67 50 53 41 32 4d 44 73 67 4c 79 39 73 61 57 31 70 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_removexplorer_0__0__vb
@@ -18230,7 +17883,7 @@ rule SHELL_SHELLDETECT_removexplorer_0__0__vb
 	strings:
 		$ = {33 56 73 64 41 6f 67 62 48 5a 42 64 48 52 79 61 57 4a 31 64 47 56 7a 49 44 30 67 55 33 42 73 61 58 51 6f 51 32 39 75 64 6d 56 79 64 45 4a 70 62 6d 46 79 65 53 68 42 64 48 52 79 61 57 4a 31 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_ekin0x_0__0__php
@@ -18238,7 +17891,7 @@ rule SHELL_SHELLDETECT_ekin0x_0__0__php
 	strings:
 		$ = {6f 49 57 5a 31 62 6d 4e 30 61 57 39 75 58 32 56 34 61 58 4e 30 63 79 68 7a 61 47 56 73 62 46 39 6c 65 47 56 6a 4b 53 6c 37 4a 47 39 77 62 33 41 39 63 47 39 77 5a 57 34 6f 4a 47 39 6a 62 57 51}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_1n73ction_1__0__php
@@ -18246,7 +17899,7 @@ rule SHELL_SHELLDETECT_1n73ction_1__0__php
 	strings:
 		$ = {43 41 67 49 43 41 67 63 48 4a 70 62 6e 52 4d 62 32 64 70 62 69 67 70 4f 77 30 4b 43 55 42 70 62 6d 6c 66 63 32 56 30 4b 43 64 76 64 58 52 77 64 58 52 66 59 6e 56 6d 5a 6d 56 79 61 57 35 6e 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_zehir4_0__0__asp
@@ -18254,7 +17907,7 @@ rule SHELL_SHELLDETECT_zehir4_0__0__asp
 	strings:
 		$ = {49 44 77 76 64 47 51 2b 50 48 52 6b 50 6a 78 6d 62 32 35 30 49 47 4e 76 62 47 39 79 50 58 6c 6c 62 47 78 76 64 7a 35 35 59 58 70 74 59 53 42 35 5a 58 52 72 61 58 4e 70 49 48 5a 68 63 69 45 38}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_20__0__php
@@ -18262,7 +17915,7 @@ rule SHELL_SHELLDETECT_wso_20__0__php
 	strings:
 		$ = {32 59 58 49 67 63 79 78 68 4c 47 6b 73 61 69 78 79 4c 47 4d 73 62 43 78 69 50 57 52 76 59 33 56 74 5a 57 35 30 4c 6d 64 6c 64 45 56 73 5a 57 31 6c 62 6e 52 7a 51 6e 6c 55 59 57 64 4f 59 57 31}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_egyspider_1__0__php
@@ -18270,7 +17923,7 @@ rule SHELL_SHELLDETECT_egyspider_1__0__php
 	strings:
 		$ = {6b 37 44 51 6f 67 49 43 42 39 44 51 6f 67 49 43 42 70 5a 69 41 6f 58 43 52 6a 59 58 4e 6c 49 44 31 2b 49 43 39 65 62 58 4e 6e 58 48 4d 72 4b 46 78 54 4b 79 6b 67 4b 43 34 71 4b 53 38 70 49 48}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_gfs_2__0__php
@@ -18278,7 +17931,7 @@ rule SHELL_SHELLDETECT_gfs_2__0__php
 	strings:
 		$ = {54 64 79 49 37 44 51 6f 6b 63 47 39 79 64 46 73 79 4d 54 41 32 58 53 41 39 49 43 4a 4e 57 6b 46 51 49 6a 73 4e 43 69 52 77 62 33 4a 30 57 7a 49 78 4e 44 42 64 49 44 30 67 49 6b 52 6c 5a 58 42}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_9__0__php
@@ -18286,7 +17939,7 @@ rule SHELL_SHELLDETECT_shell_uploader_9__0__php
 	strings:
 		$ = {32 57 6c 55 7a 61 32 68 45 54 45 74 44 62 47 78 79 62 32 73 30 52 30 35 58 53 46 64 6e 63 31 4e 55 65 56 68 70 4d 31 64 76 64 56 6c 4c 57 44 56 6d 55 30 78 79 57 47 78 79 53 46 6c 57 53 6b 64}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shellbot_0__0__pl
@@ -18294,7 +17947,7 @@ rule SHELL_SHELLDETECT_shellbot_0__0__pl
 	strings:
 		$ = {44 65 79 52 6b 59 32 4e 7a 62 32 4e 72 66 58 74 6a 64 58 4a 69 65 58 52 6c 66 53 41 39 49 44 41 37 44 51 6f 67 49 43 52 45 51 30 4e 37 4a 47 52 6a 59 33 4e 76 59 32 74 39 65 32 46 79 63 58 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_obet_0__0__php
@@ -18302,7 +17955,7 @@ rule SHELL_SHELLDETECT_obet_0__0__php
 	strings:
 		$ = {33 67 73 4a 47 56 30 4c 43 52 6d 62 32 39 30 5a 58 49 73 4a 47 68 6a 64 32 51 37 44 51 70 6c 59 32 68 76 49 43 63 38 61 57 31 6e 49 48 4e 79 59 7a 30 69 61 48 52 30 63 44 6f 76 4c 33 63 77 62}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mysql_1__0__php
@@ -18310,7 +17963,7 @@ rule SHELL_SHELLDETECT_mysql_1__0__php
 	strings:
 		$ = {32 39 79 59 58 52 70 62 32 34 36 62 6d 39 75 5a 51 70 39 43 69 38 76 4c 53 30 2b 43 6a 77 76 63 33 52 35 62 47 55 2b 43 6a 77 76 61 47 56 68 5a 44 34 4b 50 47 4a 76 5a 48 6b 2b 43 6a 77 2f 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_22__0__php
@@ -18318,7 +17971,7 @@ rule SHELL_SHELLDETECT_cmd_22__0__php
 	strings:
 		$ = {6b 70 4b 53 6c 37 44 51 70 6c 59 32 68 76 4b 43 4a 54 59 57 5a 6c 49 45 31 76 5a 47 55 67 62 32 59 67 64 47 68 70 63 79 42 54 5a 58 4a 32 5a 58 49 67 61 58 4d 67 4f 69 41 69 4b 54 73 4e 43 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_h4ntu_0__0__php
@@ -18326,7 +17979,7 @@ rule SHELL_SHELLDETECT_h4ntu_0__0__php
 	strings:
 		$ = {46 49 2b 43 6a 77 2f 63 47 68 77 43 69 41 67 66 51 6f 2f 50 67 6f 67 49 44 78 55 55 6a 34 4b 43 69 41 67 50 46 52 45 50 6a 78 45 53 56 59 67 55 31 52 5a 54 45 55 39 49 6d 5a 76 62 6e 51 74 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_symlink_1__0__php
@@ -18334,7 +17987,7 @@ rule SHELL_SHELLDETECT_symlink_1__0__php
 	strings:
 		$ = {64 66 59 6d 78 68 62 6d 73 6e 49 47 68 79 5a 57 59 39 4a 79 52 6a 62 32 35 6d 61 57 63 6e 50 6d 4e 76 62 6d 5a 70 5a 7a 77 76 59 54 34 38 4c 33 52 6b 50 6a 78 30 5a 44 34 69 4c 69 52 79 4c 69}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_4__0__php
@@ -18342,7 +17995,7 @@ rule SHELL_SHELLDETECT_r57_4__0__php
 	strings:
 		$ = {4e 51 4d 32 4e 70 4e 45 31 54 63 6d 6c 58 64 6b 56 54 4e 54 46 56 62 32 4e 46 54 45 55 76 55 48 6c 5a 61 47 4e 5a 61 6b 64 72 62 6a 5a 52 62 57 49 7a 52 30 77 30 4f 46 41 77 57 46 70 6b 62 6b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_locusshell_0__0__php
@@ -18350,7 +18003,7 @@ rule SHELL_SHELLDETECT_locusshell_0__0__php
 	strings:
 		$ = {59 6d 73 77 64 6b 35 58 4e 48 5a 52 56 58 42 31 54 44 41 77 4d 57 4a 70 4f 57 46 6a 52 7a 52 32 59 6c 5a 77 64 55 77 7a 63 45 74 69 61 54 68 32 54 30 68 6b 51 6c 46 56 4d 54 4e 52 55 30 6c 31}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_3__0__php
@@ -18358,7 +18011,7 @@ rule SHELL_SHELLDETECT_filesman_3__0__php
 	strings:
 		$ = {4d 7a 57 6a 5a 6b 62 30 46 61 65 57 64 73 62 57 46 46 5a 46 6c 6d 64 69 39 4a 62 6d 31 75 61 56 56 49 64 47 56 6d 52 45 46 4a 61 58 4e 73 51 6d 64 43 54 32 45 32 61 6b 4a 61 4b 7a 42 61 65 55}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wacking_0__0__php
@@ -18366,7 +18019,7 @@ rule SHELL_SHELLDETECT_wacking_0__0__php
 	strings:
 		$ = {30 51 6c 52 6d 65 55 52 6d 5a 6e 64 42 52 44 51 32 63 55 46 42 51 55 46 70 4d 7a 4d 34 61 54 41 77 54 58 64 6d 4f 45 56 55 4e 44 46 4e 54 57 5a 35 52 43 39 36 4f 54 4a 42 4d 6d 38 76 57 44 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_17__0__php
@@ -18374,7 +18027,7 @@ rule SHELL_SHELLDETECT_wso_17__0__php
 	strings:
 		$ = {52 63 65 44 59 35 62 32 35 68 62 47 78 35 4c 43 42 63 65 44 59 78 49 46 78 34 4d 7a 51 77 4e 43 42 4f 58 48 67 32 5a 6e 52 63 65 44 49 77 58 48 67 30 4e 6c 78 34 4e 6d 5a 63 65 44 63 31 62 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_stunshell_1__0__php
@@ -18382,7 +18035,7 @@ rule SHELL_SHELLDETECT_stunshell_1__0__php
 	strings:
 		$ = {6b 31 76 51 55 30 77 4e 30 68 4c 56 55 39 33 53 32 4a 31 52 48 64 36 63 33 64 79 64 57 4a 4f 61 6e 4a 6c 56 55 52 47 56 32 64 45 51 6b 46 33 59 57 70 43 4d 30 46 70 59 55 68 48 64 6d 5a 31 65}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_spam_0__0__php
@@ -18390,7 +18043,7 @@ rule SHELL_SHELLDETECT_spam_0__0__php
 	strings:
 		$ = {43 52 32 4d 32 51 79 4e 6d 49 77 59 6a 45 70 49 48 73 67 5a 32 78 76 59 6d 46 73 49 43 52 32 4e 6a 45 35 5a 44 63 31 5a 6a 67 37 49 47 6c 6d 49 43 67 68 61 57 35 66 59 58 4a 79 59 58 6b 6f 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_1n73ction_2__0__php
@@ -18398,7 +18051,7 @@ rule SHELL_SHELLDETECT_1n73ction_2__0__php
 	strings:
 		$ = {46 6f 4d 47 51 35 55 30 52 53 56 7a 4a 74 54 32 4a 59 55 6a 6c 34 64 46 70 35 63 55 56 61 56 6e 70 75 65 6e 5a 32 51 55 68 61 4d 44 64 7a 65 6d 52 46 4e 7a 42 4d 54 6d 74 55 55 55 35 6b 61 33}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_safemode_4__0__php
@@ -18406,7 +18059,7 @@ rule SHELL_SHELLDETECT_safemode_4__0__php
 	strings:
 		$ = {43 41 67 49 43 41 67 4c 79 38 4e 43 69 38 76 4c 79 38 76 4c 79 38 76 4c 79 38 76 4c 79 38 76 4c 79 38 76 4c 79 38 76 4c 79 38 76 4c 79 38 76 4c 79 38 76 4c 79 38 4e 43 67 30 4b 44 51 70 70 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_lurm_0__0__cgi
@@ -18414,7 +18067,7 @@ rule SHELL_SHELLDETECT_lurm_0__0__cgi
 	strings:
 		$ = {6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 79 4d 6a 49 77 6f 4b 49 31 59 67 59 32 56 73 61 6d 46 6f 49 47 35 6c 63 32 46 75 61 32 4e 70 62 32 35 70 63 6d 39 32 59 57 35}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_7__0__php
@@ -18422,7 +18075,7 @@ rule SHELL_SHELLDETECT_filesman_7__0__php
 	strings:
 		$ = {6b 37 49 47 56 34 61 58 51 37 49 48 30 67 50 7a 34 38 50 33 42 6f 63 43 42 70 5a 69 68 70 63 33 4e 6c 64 43 67 6b 58 30 64 46 56 46 73 69 64 44 63 32 4d 6a 52 75 49 6c 30 70 4b 58 73 67 49 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_16__0__php
@@ -18430,7 +18083,7 @@ rule SHELL_SHELLDETECT_phpshell_16__0__php
 	strings:
 		$ = {76 64 48 49 2b 58 47 34 69 4f 77 6f 4b 49 43 41 4a 5a 57 4e 6f 62 79 41 69 50 43 39 30 59 57 4a 73 5a 54 34 38 4c 33 52 6b 50 69 49 37 43 67 6f 67 43 57 56 6a 61 47 38 67 49 6a 77 76 64 47 46}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_kadotshell_1__0__php
@@ -18438,7 +18091,7 @@ rule SHELL_SHELLDETECT_kadotshell_1__0__php
 	strings:
 		$ = {47 56 75 5a 43 49 37 44 51 70 69 63 6d 56 68 61 7a 73 4e 43 67 30 4b 44 51 6f 76 4c 31 42 49 55 43 42 46 64 6d 46 73 49 45 4e 76 5a 47 55 67 5a 58 68 6c 59 33 56 30 61 57 39 75 44 51 70 6a 59}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_irc_bot_1__0__pl
@@ -18446,7 +18099,7 @@ rule SHELL_SHELLDETECT_irc_bot_1__0__pl
 	strings:
 		$ = {6d 5a 76 63 6d 73 37 44 51 6f 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 48 4e 35 63 33 52 6c 62 53 41 6f 59 43 52 72 61 57 78 73 5a 47 41 70 4f 77 30 4b 49 43 41 67 49 43 41 67 49}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_2__0__php
@@ -18454,7 +18107,7 @@ rule SHELL_SHELLDETECT_r57_2__0__php
 	strings:
 		$ = {6d 49 7a 45 77 4e 7a 63 37 4a 69 4d 78 4d 44 67 31 4f 79 63 73 43 69 64 79 64 56 39 30 5a 58 68 30 4e 6a 51 6e 50 54 34 6e 4a 69 4d 78 4d 44 51 30 4f 79 59 6a 4d 54 41 34 4d 44 73 6d 49 7a 45}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_asmodeus_0__0__pl
@@ -18462,7 +18115,7 @@ rule SHELL_SHELLDETECT_asmodeus_0__0__pl
 	strings:
 		$ = {32 52 6c 64 58 4d 67 55 47 56 79 62 43 42 53 5a 57 31 76 64 47 55 67 55 32 68 6c 62 47 78 63 62 69 49 37 43 67 70 7a 65 58 4e 30 5a 57 30 6f 5a 47 46 30 5a 53 6b 37 43 67 70 7a 65 58 4e 30 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_10__0__php
@@ -18470,7 +18123,7 @@ rule SHELL_SHELLDETECT_cmd_10__0__php
 	strings:
 		$ = {50 44 39 77 61 48 41 4e 43 6d 6c 6d 4b 43 52 66 55 45 39 54 56 46 73 69 61 32 56 35 49 6c 30 67 50 54 30 67 49 6d 59 77 5a 47 56 6b 4e 44 64 6b 5a 6d 45 34 59 54 4d 34 5a 47 51 30 4e 6d 55 35}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_remoteview_0__0__php
@@ -18478,7 +18131,7 @@ rule SHELL_SHELLDETECT_remoteview_0__0__php
 	strings:
 		$ = {35 68 62 57 55 39 4d 53 4e 6a 62 32 35 32 5a 58 4a 30 50 6d 31 6b 4e 54 77 76 59 54 34 70 50 43 39 6f 4d 6a 34 38 55 44 34 69 4f 77 6f 4b 49 43 41 67 61 57 59 67 4b 43 46 70 63 33 4e 6c 64 43}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_9__0__php
@@ -18486,7 +18139,7 @@ rule SHELL_SHELLDETECT_r57_9__0__php
 	strings:
 		$ = {64 59 4b 33 56 6d 4d 46 67 72 56 55 52 75 59 30 6c 45 4d 54 46 34 52 57 6b 79 55 6b 56 51 61 44 42 6b 54 6a 46 6b 62 6e 46 6f 52 56 46 36 62 44 68 6e 64 6c 42 76 54 6c 6c 6d 53 44 46 53 63 58}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shellarchive_0__0__php
@@ -18494,7 +18147,7 @@ rule SHELL_SHELLDETECT_shellarchive_0__0__php
 	strings:
 		$ = {49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 52 6b 61 58 4a 66 62 47 6c 7a 64 43 41 39 49 47 6c 74 59 58 42 66 62 47 6c 7a 64 43 67 6b 63 33 52 79}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_priv8_scr_0__0__pl
@@ -18502,7 +18155,7 @@ rule SHELL_SHELLDETECT_priv8_scr_0__0__pl
 	strings:
 		$ = {67 6e 4c 32 68 76 62 57 55 76 4a 79 34 6b 64 58 4e 6c 63 69 34 6e 4c 33 42 31 59 6d 78 70 59 31 39 6f 64 47 31 73 4c 32 46 6a 59 32 56 7a 58 33 64 6c 59 69 39 6a 62 32 35 6d 61 57 63 75 63 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_11__0__php
@@ -18510,7 +18163,7 @@ rule SHELL_SHELLDETECT_phpshell_11__0__php
 	strings:
 		$ = {79 4f 58 46 6d 63 48 5a 45 57 6a 49 77 65 56 5a 56 57 45 46 51 49 69 77 69 4d 6b 39 35 4e 57 68 57 55 58 68 55 59 6b 39 72 51 6c 4d 72 61 54 52 61 55 45 56 45 5a 6e 4e 6d 53 6a 45 7a 52 6b 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_b374k_7__0__php
@@ -18518,7 +18171,7 @@ rule SHELL_SHELLDETECT_b374k_7__0__php
 	strings:
 		$ = {6c 58 55 6b 46 78 4f 58 42 51 55 30 4a 53 63 30 35 31 59 6e 68 6b 4f 53 74 59 59 57 68 32 64 30 35 6c 53 58 46 45 64 46 4a 59 52 48 45 76 65 46 46 4c 57 45 4e 6c 56 44 6c 78 4b 33 51 4e 43 6b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mysql_adminer_0__2__php
@@ -18526,7 +18179,7 @@ rule SHELL_SHELLDETECT_mysql_adminer_0__2__php
 	strings:
 		$ = {51 75 59 58 42 77 5a 57 35 6b 51 32 68 70 62 47 51 6f 5a 57 52 70 64 43 6b 37 5a 6d 6c 6c 62 47 51 75 63 33 52 35 62 47 55 75 5a 47 6c 7a 63 47 78 68 65 54 30 6e 62 6d 39 75 5a 53 63 37 5a 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_loadshell_0__0__php
@@ -18534,7 +18187,7 @@ rule SHELL_SHELLDETECT_loadshell_0__0__php
 	strings:
 		$ = {63 6d 52 6c 63 6a 6f 67 4d 58 42 34 49 48 4e 76 62 47 6c 6b 49 43 4e 44 51 6b 46 43 4e 7a 67 37 49 48 30 4b 49 32 4e 76 62 6e 52 6c 62 6e 51 67 65 79 42 77 59 57 52 6b 61 57 35 6e 4f 69 41 78}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_16__0__php
@@ -18542,7 +18195,7 @@ rule SHELL_SHELLDETECT_filesman_16__0__php
 	strings:
 		$ = {42 56 56 33 49 30 63 33 41 30 55 45 55 76 64 58 4e 42 51 33 70 35 53 45 35 6a 51 7a 51 35 5a 31 45 34 54 45 5a 6f 5a 6e 52 78 4f 44 42 42 4f 48 56 49 51 33 68 55 4b 30 63 72 61 57 35 43 56 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_6__0__php
@@ -18550,7 +18203,7 @@ rule SHELL_SHELLDETECT_r57_6__0__php
 	strings:
 		$ = {58 32 56 34 61 58 4e 30 63 79 67 69 62 57 46 70 62 43 49 70 4b 58 73 4e 43 6d 56 6a 61 47 38 67 4a 48 52 68 59 6d 78 6c 58 33 56 77 4d 53 34 6b 62 47 46 75 5a 31 73 6b 62 47 46 75 5a 33 56 68}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_tdshell_0__0__php
@@ -18558,7 +18211,7 @@ rule SHELL_SHELLDETECT_tdshell_0__0__php
 	strings:
 		$ = {55 31 52 46 78 62 58 53 39 6e 4c 43 41 69 57 31 30 69 4b 54 73 4b 43 51 6b 4a 43 56 52 45 63 32 68 6c 62 47 78 66 64 47 46 69 63 31 39 74 62 32 52 70 5a 6e 6c 66 64 47 46 69 4b 47 4e 31 63 6e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_r57_19__0__php
@@ -18566,7 +18219,7 @@ rule SHELL_SHELLDETECT_r57_19__0__php
 	strings:
 		$ = {4d 43 6b 37 43 51 6f 67 61 57 59 6f 49 53 52 6a 62 32 35 75 5a 57 4e 30 61 57 39 75 4b 53 42 37 49 47 5a 6c 4b 43 52 73 59 57 35 6e 64 57 46 6e 5a 53 77 77 4b 54 73 67 66 51 6f 67 5a 57 78 7a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_4__0__php
@@ -18574,7 +18227,7 @@ rule SHELL_SHELLDETECT_c99_4__0__php
 	strings:
 		$ = {49 69 52 79 5a 57 46 73 4c 33 4e 77 62 47 39 70 64 48 6f 75 65 6d 6c 77 49 6a 73 67 50 7a 34 69 50 6a 78 69 63 6a 34 38 59 6e 49 2b 49 41 6f 38 61 57 35 77 64 58 51 67 64 48 6c 77 5a 54 31 7a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_remoteview_1__0__php
@@ -18582,7 +18235,7 @@ rule SHELL_SHELLDETECT_remoteview_1__0__php
 	strings:
 		$ = {51 37 50 43 39 6d 62 32 35 30 50 69 49 70 4f 77 6f 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 38 63 32 4e 79 61 58 42 30 49 48 52 35 63 47 55 39 49 6e 52 6c 65 48 51 76 61 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_perlwebshell_0__0__pl
@@ -18590,7 +18243,7 @@ rule SHELL_SHELLDETECT_perlwebshell_0__0__pl
 	strings:
 		$ = {4a 45 5a 50 55 6b 31 37 52 45 5a 4a 54 45 56 39 4b 53 6c 62 4e 31 30 37 43 69 41 67 49 43 67 6b 5a 6d 6c 73 5a 57 35 68 62 57 55 67 50 53 41 6b 52 6b 39 53 54 58 74 45 52 6b 6c 4d 52 58 30 70}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_10__0__php
@@ -18598,7 +18251,7 @@ rule SHELL_SHELLDETECT_phpshell_10__0__php
 	strings:
 		$ = {64 54 55 79 63 73 4a 33 64 6c 65 6a 64 51 56 7a 41 35 52 6b 5a 57 63 44 64 53 5a 45 70 73 4a 79 77 6e 62 6b 6c 48 63 69 74 58 62 44 5a 43 54 33 59 34 63 6c 52 35 64 56 63 6e 4c 43 64 56 57 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_dxshell_2__0__php
@@ -18606,7 +18259,7 @@ rule SHELL_SHELLDETECT_dxshell_2__0__php
 	strings:
 		$ = {58 33 49 6f 4a 45 64 4d 54 30 4a 42 54 46 4d 70 4f 79 63 73 44 51 6f 4a 4a 33 42 6f 63 46 39 70 62 6d 6b 6e 43 54 30 2b 43 53 63 6b 53 55 35 4a 50 57 6c 75 61 56 39 6e 5a 58 52 66 59 57 78 73}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpspy_4__0__php
@@ -18614,7 +18267,7 @@ rule SHELL_SHELLDETECT_phpspy_4__0__php
 	strings:
 		$ = {47 51 67 62 6d 39 33 63 6d 46 77 50 69 30 74 50 43 39 30 5a 44 34 6e 4b 54 73 4b 43 51 6b 4a 63 43 67 6e 50 48 52 6b 49 47 35 76 64 33 4a 68 63 44 34 6e 4b 54 73 4b 43 51 6b 4a 63 43 67 6e 50}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_19__0__php
@@ -18622,7 +18275,7 @@ rule SHELL_SHELLDETECT_phpshell_19__0__php
 	strings:
 		$ = {6c 75 5a 33 4d 6e 58 56 73 6e 5a 6d 6c 73 5a 53 31 31 63 47 78 76 59 57 51 6e 58 53 6b 67 65 79 41 2f 50 67 6f 38 59 6e 49 2b 50 47 4a 79 50 67 6f 38 5a 6d 6c 6c 62 47 52 7a 5a 58 51 2b 43 69}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_jackal_4__0__php
@@ -18630,7 +18283,7 @@ rule SHELL_SHELLDETECT_jackal_4__0__php
 	strings:
 		$ = {2b 53 47 56 34 50 43 39 30 5a 44 34 38 64 47 51 67 64 32 6c 6b 64 47 67 39 4a 7a 49 31 4a 53 63 67 59 6d 64 6a 62 32 78 76 63 6a 30 6e 49 7a 49 34 4d 6a 67 79 4f 43 63 2b 50 43 39 30 5a 44 34}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mysql_0__0__php
@@ -18638,7 +18291,7 @@ rule SHELL_SHELLDETECT_mysql_0__0__php
 	strings:
 		$ = {67 58 47 34 69 4f 77 70 6c 59 32 68 76 49 43 49 38 59 53 42 6f 63 6d 56 6d 50 53 63 6b 55 45 68 51 58 31 4e 46 54 45 59 2f 59 57 4e 30 61 57 39 75 50 58 5a 70 5a 58 64 45 59 58 52 68 4a 6d 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_13__0__php
@@ -18646,7 +18299,7 @@ rule SHELL_SHELLDETECT_wso_13__0__php
 	strings:
 		$ = {59 33 6c 6d 51 57 46 59 61 56 6c 42 57 45 49 7a 51 56 4e 42 53 45 67 30 51 33 6c 42 59 55 46 59 4e 57 31 77 64 6d 46 58 4e 47 39 4b 65 47 5a 33 54 32 6c 6a 63 30 4a 44 52 58 42 47 51 6b 49 35}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_extplorer_0__2__php
@@ -18654,7 +18307,7 @@ rule SHELL_SHELLDETECT_extplorer_0__2__php
 	strings:
 		$ = {73 49 47 5a 68 62 48 4e 6c 49 43 6b 37 44 51 70 6f 5a 57 46 6b 5a 58 49 6f 49 43 64 51 63 6d 46 6e 62 57 45 36 49 47 35 76 4c 57 4e 68 59 32 68 6c 4a 79 41 70 4f 77 30 4b 44 51 70 6c 59 32 68}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_rhtool_1__0__asp
@@ -18662,7 +18315,7 @@ rule SHELL_SHELLDETECT_rhtool_1__0__asp
 	strings:
 		$ = {56 54 65 58 4e 30 5a 57 31 50 59 6d 70 6c 59 33 51 69 4b 51 6f 4a 43 56 4e 6c 64 43 42 6d 49 44 30 67 5a 6e 4e 76 4c 6b 64 6c 64 45 5a 70 62 47 55 6f 63 33 52 79 52 6d 6c 73 5a 57 35 68 62 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_fatalshell_0__0__php
@@ -18670,7 +18323,7 @@ rule SHELL_SHELLDETECT_fatalshell_0__0__php
 	strings:
 		$ = {6e 51 75 50 53 52 73 59 57 35 6e 57 79 64 31 63 47 78 76 59 57 52 76 61 79 64 64 4f 77 70 39 43 67 70 70 5a 69 68 70 63 33 4e 6c 64 43 67 6b 58 31 42 50 55 31 52 62 4a 33 56 77 62 47 39 68 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_34__0__php
@@ -18678,7 +18331,7 @@ rule SHELL_SHELLDETECT_phpshell_34__0__php
 	strings:
 		$ = {46 5a 4b 54 7a 4a 6a 57 47 39 6f 63 46 5a 6d 4e 44 6b 72 54 32 5a 32 4e 30 6f 34 57 45 59 34 64 30 52 46 4d 30 74 52 4b 32 5a 52 64 6c 70 6e 54 30 4a 45 51 6c 68 52 5a 48 46 4a 59 6a 68 6f 54}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_19__0__php
@@ -18686,7 +18339,7 @@ rule SHELL_SHELLDETECT_cmd_19__0__php
 	strings:
 		$ = {48 55 77 4d 44 59 7a 58 48 55 77 4d 44 59 31 58 48 55 77 4d 44 59 30 58 48 55 77 4d 44 59 35 58 48 55 77 4d 44 5a 44 58 48 55 77 4d 44 4e 43 58 48 55 77 4d 44 49 32 58 48 55 77 4d 44 49 7a 58}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_zehir4_1__0__php
@@ -18694,7 +18347,7 @@ rule SHELL_SHELLDETECT_zehir4_1__0__php
 	strings:
 		$ = {79 49 69 6b 75 56 6d 46 73 64 57 55 4b 43 57 31 68 65 44 31 76 59 6d 70 56 63 47 78 76 59 57 51 75 52 6d 6c 6c 62 47 52 7a 4b 43 4a 74 59 58 67 69 4b 53 35 57 59 57 78 31 5a 51 6f 4b 43 57 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_36__0__php
@@ -18702,7 +18355,7 @@ rule SHELL_SHELLDETECT_phpshell_36__0__php
 	strings:
 		$ = {76 57 55 39 72 4f 48 4e 78 4f 47 56 6a 55 6d 70 49 62 6a 46 6d 56 30 4a 34 4b 7a 4d 79 61 6e 64 6d 56 58 4a 43 65 6e 41 33 57 55 64 4a 5a 48 6c 6c 4d 6c 70 43 62 47 6c 4b 57 6e 4a 69 5a 58 51}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_24__0__php
@@ -18710,7 +18363,7 @@ rule SHELL_SHELLDETECT_c99_24__0__php
 	strings:
 		$ = {63 32 68 7a 61 47 56 34 61 58 51 6f 4b 54 74 39 43 6d 6c 6d 49 43 67 6b 59 57 4e 30 49 44 30 39 49 43 4a 7a 5a 57 4e 31 63 6d 6c 30 65 53 49 70 43 6e 73 4b 49 47 56 6a 61 47 38 67 49 6a 78 6a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_simattacker_1__0__php
@@ -18718,7 +18371,7 @@ rule SHELL_SHELLDETECT_simattacker_1__0__php
 	strings:
 		$ = {64 47 67 69 4c 43 4a 33 4b 79 49 70 4f 77 6f 4a 5a 6e 64 79 61 58 52 6c 49 43 67 6b 5a 6e 41 73 49 69 49 70 49 44 73 4b 43 57 5a 33 63 6d 6c 30 5a 53 41 6f 4a 47 5a 77 4c 43 52 7a 59 58 5a 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_15__0__php
@@ -18726,7 +18379,7 @@ rule SHELL_SHELLDETECT_wso_15__0__php
 	strings:
 		$ = {63 6c 64 35 64 47 5a 56 4d 33 4e 52 51 32 55 35 59 55 5a 59 62 56 4e 4e 5a 45 4e 53 53 45 5a 30 52 44 42 6d 4d 44 5a 55 54 44 64 4c 65 57 39 6e 4f 55 4a 5a 64 6c 70 51 52 45 56 54 4e 47 78 44}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_casus15_0__0__php
@@ -18734,7 +18387,7 @@ rule SHELL_SHELLDETECT_casus15_0__0__php
 	strings:
 		$ = {49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 6b 5a 47 39 7a 50 53 41 69 51 76 5a 35 62 47 55 67 51 6d 6c 79 49 45 52 76 63 33 6c 68 49 46 5a 68 63 6d 52 35}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_telnet_0__0__pl
@@ -18742,7 +18395,7 @@ rule SHELL_SHELLDETECT_telnet_0__0__pl
 	strings:
 		$ = {31 6c 50 53 51 78 58 47 35 63 62 69 49 37 43 69 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 42 77 63 6d 6c 75 64 43 42 33 61 47 6c 73 5a 53 67 38 55 30 56 4f 52 45 5a 4a 54 45}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cristercorp_infocollector_0__0__php
@@ -18750,7 +18403,7 @@ rule SHELL_SHELLDETECT_cristercorp_infocollector_0__0__php
 	strings:
 		$ = {79 4b 45 42 70 62 6d 6c 66 5a 32 56 30 4b 43 4a 7a 59 57 5a 6c 58 32 31 76 5a 47 55 69 4b 53 6b 67 50 54 30 67 49 6d 39 75 49 69 6b 67 65 79 41 67 4a 48 4e 68 5a 6d 56 74 62 32 52 6c 49 44 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_filesman_24__0__php
@@ -18758,7 +18411,7 @@ rule SHELL_SHELLDETECT_filesman_24__0__php
 	strings:
 		$ = {5a 70 5a 79 35 77 61 48 41 69 4c 41 30 4b 43 51 6b 69 62 47 39 6a 59 58 52 6c 49 47 4e 76 62 6d 5a 70 5a 79 35 70 62 6d 4d 69 49 44 30 2b 49 43 4a 73 62 32 4e 68 64 47 55 67 59 32 39 75 5a 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_tbdsecurity_0__0__php
@@ -18766,7 +18419,7 @@ rule SHELL_SHELLDETECT_tbdsecurity_0__0__php
 	strings:
 		$ = {6a 56 46 42 4b 54 7a 68 72 61 45 64 77 5a 32 30 31 64 31 68 61 53 6c 70 30 63 6e 46 54 62 55 35 32 4b 32 74 49 53 56 46 49 4f 55 39 72 56 55 39 69 61 43 74 43 52 56 68 44 63 57 35 53 65 54 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_wso_12__0__php
@@ -18774,7 +18427,7 @@ rule SHELL_SHELLDETECT_wso_12__0__php
 	strings:
 		$ = {46 55 53 47 68 53 55 32 35 4b 52 56 4e 48 64 33 6c 4f 4d 57 52 68 54 54 41 31 59 57 4e 59 56 54 42 4f 56 46 6b 78 56 44 46 57 61 46 70 57 51 6d 35 50 56 7a 6b 32 57 58 6b 35 53 46 51 79 56 54}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_backdoor_3__0__php
@@ -18782,7 +18435,7 @@ rule SHELL_SHELLDETECT_backdoor_3__0__php
 	strings:
 		$ = {44 56 45 31 34 61 6b 52 55 54 31 5a 55 5a 56 6c 30 53 47 46 73 63 30 64 31 62 6d 4e 49 56 47 78 32 59 33 4a 47 65 45 59 77 57 46 70 56 62 57 35 4b 54 7a 4e 70 57 45 4e 4e 4d 57 70 6d 62 45 78}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_shell_uploader_4__0__php
@@ -18790,7 +18443,7 @@ rule SHELL_SHELLDETECT_shell_uploader_4__0__php
 	strings:
 		$ = {7a 4d 76 62 30 70 4f 57 6d 31 4e 4e 30 35 51 51 6e 49 31 59 33 68 79 61 7a 42 7a 4e 55 51 72 55 33 46 71 4d 6b 68 61 59 6b 35 6e 63 47 70 4c 4b 32 68 45 4d 30 63 69 4c 43 4a 49 65 6b 35 50 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_postman_0__1__php
@@ -18798,7 +18451,7 @@ rule SHELL_SHELLDETECT_postman_0__1__php
 	strings:
 		$ = {56 78 34 4e 44 68 63 65 44 59 32 58 48 67 7a 4d 31 78 34 4e 44 6c 63 65 44 55 30 58 48 67 31 5a 56 78 34 4e 6d 4a 63 65 44 4d 31 58 48 67 30 4d 46 78 34 4d 32 4e 63 65 44 59 35 58 48 67 7a 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_coderz_2__0__php
@@ -18806,7 +18459,7 @@ rule SHELL_SHELLDETECT_coderz_2__0__php
 	strings:
 		$ = {4e 6c 59 6d 56 69 5a 57 49 6e 50 67 30 4b 50 47 4e 6c 62 6e 52 6c 63 6a 34 4e 43 6a 78 69 50 6a 78 6d 62 32 35 30 49 48 4e 70 65 6d 55 39 4a 7a 59 6e 49 47 5a 68 59 32 55 39 4a 31 64 6c 59 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_locusshell_2__0__php
@@ -18814,7 +18467,7 @@ rule SHELL_SHELLDETECT_locusshell_2__0__php
 	strings:
 		$ = {48 4f 57 74 51 56 6b 4a 51 56 54 46 52 4b 31 42 48 62 48 56 6a 53 46 59 77 53 55 68 53 4e 57 4e 48 56 54 6c 68 52 32 78 72 57 6b 64 57 64 55 6c 48 4e 57 68 69 56 31 55 35 57 56 64 4f 4d 45 6c}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_nixshell_1__0__php
@@ -18822,7 +18475,7 @@ rule SHELL_SHELLDETECT_nixshell_1__0__php
 	strings:
 		$ = {4e 70 64 47 55 73 49 44 67 77 4c 43 41 6b 5a 58 4a 79 62 6d 38 73 49 43 52 6c 63 6e 4a 7a 64 48 49 73 49 44 4d 77 4b 54 73 67 44 51 70 70 5a 69 41 6f 49 53 52 6d 63 43 6b 67 65 79 41 4e 43 69}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_webadmin_1__2__php
@@ -18830,7 +18483,7 @@ rule SHELL_SHELLDETECT_webadmin_1__2__php
 	strings:
 		$ = {56 2f 6a 5a 41 78 55 49 42 4f 30 63 38 7a 4b 63 53 6d 74 31 72 67 4e 68 4e 30 79 38 67 6d 4f 78 70 77 6c 78 64 47 34 44 5a 4c 4a 41 56 35 74 71 64 70 71 6d 4b 77 75 70 35 45 79 43 36 4a 54 32}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_telnetd_2__0__pl
@@ -18838,7 +18491,7 @@ rule SHELL_SHELLDETECT_telnetd_2__0__pl
 	strings:
 		$ = {39 6e 4f 77 6f 4b 49 43 42 70 5a 69 41 6f 4a 48 4a 6c 63 58 56 70 63 6d 55 70 49 48 73 4b 49 43 41 67 49 43 4d 67 59 57 78 73 49 47 5a 76 64 57 35 6b 49 47 64 76 62 6d 35 68 49 47 4a 6c 49 47}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_phpshell_3__0__php
@@ -18846,7 +18499,7 @@ rule SHELL_SHELLDETECT_phpshell_3__0__php
 	strings:
 		$ = {68 79 5a 57 59 39 49 69 56 7a 50 33 64 76 63 6d 74 66 5a 47 6c 79 50 53 56 7a 49 6a 34 6c 63 7a 77 76 59 54 34 76 74 43 77 4b 4a 46 42 49 55 46 39 54 52 55 78 47 4c 43 42 31 63 6d 78 6c 62 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_safemode_3__0__php
@@ -18854,7 +18507,7 @@ rule SHELL_SHELLDETECT_safemode_3__0__php
 	strings:
 		$ = {30 5a 58 49 2b 50 48 52 68 59 6d 78 6c 50 6a 78 30 63 6a 34 38 64 47 51 2b 50 47 5a 76 63 6d 30 67 59 57 4e 30 61 57 39 75 50 56 77 69 4a 46 4e 47 61 57 78 6c 54 6d 46 74 5a 54 38 6b 64 58 4a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_devilz0de_0__0__php
@@ -18862,7 +18515,7 @@ rule SHELL_SHELLDETECT_devilz0de_0__0__php
 	strings:
 		$ = {63 6d 46 75 5a 32 55 6f 49 6b 45 69 4c 43 4a 61 49 69 6b 67 59 58 4d 67 4a 47 78 6c 64 48 52 6c 63 69 6b 67 44 51 6f 4a 65 79 41 4e 43 67 6b 6b 59 6d 39 76 62 43 41 39 49 45 42 70 63 31 39 6b}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_lostdc_1__0__php
@@ -18870,7 +18523,7 @@ rule SHELL_SHELLDETECT_lostdc_1__0__php
 	strings:
 		$ = {30 5a 44 35 63 62 69 49 37 44 51 70 77 63 6d 6c 75 64 43 41 69 50 48 52 6b 50 6c 73 67 50 47 45 67 59 32 78 68 63 33 4d 67 50 53 42 63 49 6d 68 6c 59 57 52 63 49 69 42 6f 63 6d 56 6d 49 44 30}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_v0ld3m0rt_0__0__php
@@ -18878,7 +18531,7 @@ rule SHELL_SHELLDETECT_v0ld3m0rt_0__0__php
 	strings:
 		$ = {53 57 35 4d 62 57 67 77 59 6c 64 34 65 6d 4e 48 56 6d 70 68 56 30 5a 7a 57 54 4a 6f 61 47 4e 75 54 57 39 4b 52 6a 6c 52 56 44 46 4f 56 56 64 35 5a 47 68 4b 4d 54 42 77 54 47 6c 6a 61 56 42 70}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_pbot_2__0__php
@@ -18886,7 +18539,7 @@ rule SHELL_SHELLDETECT_pbot_2__0__php
 	strings:
 		$ = {63 4d 6d 4a 76 64 46 77 79 58 54 6f 67 63 47 68 77 59 6d 39 30 49 44 49 75 4d 43 42 69 65 54 73 67 49 32 4e 79 5a 58 64 41 59 32 39 79 63 43 34 69 4b 54 73 4e 43 69 41 67 49 43 41 67 49 43 41}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_kral_0__0__php
@@ -18894,7 +18547,7 @@ rule SHELL_SHELLDETECT_kral_0__0__php
 	strings:
 		$ = {51 74 59 32 39 73 62 33 49 36 49 43 4d 77 4d 44 41 77 4d 44 41 37 43 6e 30 4b 4c 6e 4e 30 65 57 78 6c 4e 43 42 37 5a 6d 39 75 64 43 31 33 5a 57 6c 6e 61 48 51 36 49 47 4a 76 62 47 52 39 43 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_hshell_0__0__php
@@ -18902,7 +18555,7 @@ rule SHELL_SHELLDETECT_hshell_0__0__php
 	strings:
 		$ = {5a 47 31 47 63 32 52 58 56 54 6c 4a 62 45 70 73 59 6d 31 47 64 46 70 55 4f 47 6c 4a 51 7a 67 72 52 46 46 76 4f 46 41 7a 51 6d 39 6a 51 30 49 35 53 55 64 57 63 32 4d 79 56 6e 42 61 61 57 64 72}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_hostdevil_0__0__php
@@ -18910,7 +18563,7 @@ rule SHELL_SHELLDETECT_hostdevil_0__0__php
 	strings:
 		$ = {4e 32 4a 43 62 6c 46 32 64 57 52 34 57 44 4a 75 5a 56 5a 74 4b 7a 52 6f 4d 7a 42 34 4e 31 41 78 55 45 68 32 57 6e 56 48 59 69 74 59 5a 6e 6f 78 56 6d 5a 68 63 6b 6c 68 61 6a 5a 69 63 57 68 5a}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_aspx_shell_0__0__aspx
@@ -18918,7 +18571,7 @@ rule SHELL_SHELLDETECT_aspx_shell_0__0__aspx
 	strings:
 		$ = {39 49 45 4e 76 62 57 31 68 62 6d 52 55 65 58 42 6c 4c 6c 52 6c 65 48 51 37 44 51 6f 67 49 43 41 67 49 43 41 67 49 43 41 67 49 43 42 6a 62 32 31 74 4c 6b 4e 76 62 57 31 68 62 6d 52 55 5a 58 68}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_itsecteam_shell_2__0__php
@@ -18926,7 +18579,7 @@ rule SHELL_SHELLDETECT_itsecteam_shell_2__0__php
 	strings:
 		$ = {43 49 76 49 69 77 67 4a 47 35 68 62 57 55 70 4f 77 6f 6b 5a 6e 49 67 50 53 41 69 58 48 67 31 4d 46 78 34 4e 47 4a 63 65 44 41 7a 58 48 67 77 4e 43 49 37 43 69 52 6d 63 69 41 75 50 53 41 69 58}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_FaTaLisTiCz_4__0__php
@@ -18934,7 +18587,7 @@ rule SHELL_SHELLDETECT_FaTaLisTiCz_4__0__php
 	strings:
 		$ = {49 48 73 67 61 57 59 67 4b 43 46 70 63 31 39 75 64 57 31 6c 63 6d 6c 6a 4b 43 52 6d 63 57 4a 66 62 47 56 75 5a 32 68 30 4b 53 6b 67 65 79 52 6d 63 57 4a 66 62 47 56 75 5a 32 68 30 49 44 30 67}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_brute_force_tool_1__0__php
@@ -18942,7 +18595,7 @@ rule SHELL_SHELLDETECT_brute_force_tool_1__0__php
 	strings:
 		$ = {6d 64 70 62 69 31 73 5a 57 5a 30 4f 69 41 31 63 48 67 37 44 51 70 39 44 51 70 70 62 6e 42 31 64 43 41 73 49 48 52 6c 65 48 52 68 63 6d 56 68 49 43 77 67 59 6e 56 30 64 47 39 75 49 43 77 67 59}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_crystal_0__0__php
@@ -18950,7 +18603,7 @@ rule SHELL_SHELLDETECT_crystal_0__0__php
 	strings:
 		$ = {67 49 44 68 77 64 43 41 67 49 43 41 67 49 43 41 68 61 57 31 77 62 33 4a 30 59 57 35 30 4f 77 70 69 59 57 4e 72 5a 33 4a 76 64 57 35 6b 4c 57 4e 76 62 47 39 79 4f 69 41 67 49 43 4d 78 4d 54 45}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_update_0__0__php
@@ -18958,7 +18611,7 @@ rule SHELL_SHELLDETECT_update_0__0__php
 	strings:
 		$ = {63 47 55 39 58 43 4a 30 5a 58 68 30 58 43 49 2b 50 47 4a 79 50 67 70 31 63 32 56 79 62 6d 46 74 5a 53 41 36 49 44 78 4a 54 6c 42 56 56 43 42 7a 61 58 70 6c 50 56 77 69 4d 54 56 63 49 69 42 32}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_FaTaLisTiCz_5__0__php
@@ -18966,7 +18619,7 @@ rule SHELL_SHELLDETECT_FaTaLisTiCz_5__0__php
 	strings:
 		$ = {58 45 33 55 31 49 76 55 48 4e 61 52 44 5a 77 57 6c 41 35 4d 57 4e 4e 56 43 39 4d 4f 46 64 58 52 58 70 4c 64 6d 4a 6d 56 45 78 4a 4f 46 68 6a 4e 6b 46 71 56 6e 70 72 64 6e 5a 32 4e 32 70 70 4e}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_jackal_5__0__php
@@ -18974,7 +18627,7 @@ rule SHELL_SHELLDETECT_jackal_5__0__php
 	strings:
 		$ = {35 6a 64 47 6c 76 62 6e 4d 73 4a 33 4e 6f 5a 57 78 73 58 32 56 34 5a 57 4d 6e 4b 53 6c 37 4a 47 56 34 5a 57 4d 39 49 48 4e 6f 5a 57 78 73 58 32 56 34 5a 57 4d 6f 4a 47 4e 76 62 57 31 68 62 6d}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_cmd_5__0__php
@@ -18982,7 +18635,7 @@ rule SHELL_SHELLDETECT_cmd_5__0__php
 	strings:
 		$ = {6a 62 6c 56 75 53 31 4e 72 5a 32 55 7a 51 6d 68 6a 4d 30 34 77 59 55 68 4b 4d 55 74 44 55 6d 5a 56 61 31 5a 53 56 6c 56 57 56 46 5a 47 63 32 35 68 52 7a 6b 78 57 6b 64 73 64 57 46 54 5a 47 52}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_c99_23__0__php
@@ -18990,7 +18643,7 @@ rule SHELL_SHELLDETECT_c99_23__0__php
 	strings:
 		$ = {31 52 6e 4e 6d 39 30 4b 33 68 45 56 6c 6c 4d 54 33 4e 44 64 69 39 61 65 6d 68 31 52 7a 46 5a 56 56 59 35 64 47 39 68 57 6d 64 58 54 55 68 6d 5a 56 46 48 54 6c 6b 33 64 55 78 33 4d 6b 4e 6b 57}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_configspy_2__0__php
@@ -18998,7 +18651,7 @@ rule SHELL_SHELLDETECT_configspy_2__0__php
 	strings:
 		$ = {31 63 48 67 67 4f 48 42 34 49 43 46 70 62 58 42 76 63 6e 52 68 62 6e 51 37 59 6d 39 79 5a 47 56 79 4f 69 42 75 62 32 35 6c 49 43 46 70 62 58 42 76 63 6e 52 68 62 6e 51 37 59 6d 39 79 5a 47 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_bogel_shell_0__0__php
@@ -19006,7 +18659,7 @@ rule SHELL_SHELLDETECT_bogel_shell_0__0__php
 	strings:
 		$ = {30 5a 6d 59 76 59 6c 56 5a 52 56 68 6b 62 47 38 77 63 31 5a 47 65 6b 55 34 51 32 45 35 51 56 52 44 4e 6c 46 77 5a 57 74 69 5a 6b 46 51 55 6c 49 32 52 56 70 71 4e 46 42 6a 64 48 63 79 65 6a 56}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_snipershell_0__0__php
@@ -19014,7 +18667,7 @@ rule SHELL_SHELLDETECT_snipershell_0__0__php
 	strings:
 		$ = {4a 46 39 51 54 31 4e 55 57 79 64 7a 62 6d 34 6e 58 54 73 4b 66 51 70 39 49 47 56 73 63 32 55 67 65 77 6f 6b 64 54 46 77 50 53 52 66 52 30 56 55 57 79 64 7a 62 6d 34 6e 58 54 73 4b 66 51 70 39}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_explore_0__0__asp
@@ -19022,7 +18675,7 @@ rule SHELL_SHELLDETECT_explore_0__0__asp
 	strings:
 		$ = {32 4e 79 61 57 4a 70 62 6d 63 67 64 47 68 6c 49 47 52 79 61 58 5a 6c 49 48 52 35 63 47 55 67 62 32 59 67 59 53 42 6e 61 58 5a 6c 62 69 42 45 63 6d 6c 32 5a 53 42 76 59 6d 70 6c 59 33 51 75 44}
 	condition:
-		 any of them
+		1 of them
 }
 
 rule SHELL_SHELLDETECT_mysql_4__0__php
@@ -19030,7 +18683,7 @@ rule SHELL_SHELLDETECT_mysql_4__0__php
 	strings:
 		$ = {67 6f 67 49 43 41 67 49 43 41 67 49 43 41 67 50 48 52 6b 49 47 46 73 61 57 64 75 50 53 4a 6a 5a 57 35 30 5a 58 49 69 49 47 4e 73 59 58 4e 7a 50 53 4a 30 61 58 52 73 5a 53 49 2b 52 47 46 30 59}
 	condition:
-		 any of them
+		1 of them
 }
 
 private rule IsPhp
