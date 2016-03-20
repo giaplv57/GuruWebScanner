@@ -10,6 +10,7 @@ import sys
 import os
 import hashlib
 import base64
+import random
 
 SIGNATURE_LENGTH = 64
 SIGNATURE_NUMBER = 5
@@ -95,7 +96,7 @@ def scanfile(filename):
         d = f.read()
     n = len(d)
     
-    if n < 50 or filename.lower()[-3:] == '.md' or "readme" in filename.lower() or "gpl" in filename.lower():             # if file is too small or readme.md, ignore ... avoid False Positive
+    if n < 50 or filename.lower()[-3:] == '.md' or "readme" in filename.lower()  or "copyright" in filename.lower() or "license" in filename.lower() or "copying" in filename.lower() or "gpl" in filename.lower():             # if file is too small or readme.md, ignore ... avoid False Positive
         print red("[+] Ignoring...\t"), red(filename), red(str(n))
         return []
 
@@ -132,12 +133,18 @@ def export(shellname, strings):
     shellname = shellname.replace('.', '_')
     shellname = shellname.replace('-', '_')
     shellname = shellname.replace('+', '_')
+    shellname = shellname.replace(',', '_')
     shellname = shellname.replace(' ', '_')
     shellname = shellname.replace('(', '_')
     shellname = shellname.replace(')', '_')
     shellname = shellname.replace(']', '_')
     shellname = shellname.replace('[', '_')
     shellname = shellname.replace('#', '_')
+    shellname = shellname.replace('$', '_')
+    shellname = shellname.replace('@', '_')
+    shellname = shellname.replace('!', '_')
+    shellname = shellname.replace('^', '_')
+    shellname = shellname.replace('*', '_')
     shellname = shellname.replace('=', '_')
     shellname = shellname.replace('{', '_')
     shellname = shellname.replace('}', '_')
@@ -145,7 +152,7 @@ def export(shellname, strings):
     shellname = shellname.replace('%', '_')
 
     if shellname in shelllib:
-        return 0
+        shellname = shellname + '_' + str(random.randint(0, 100000))
     shelllib.append(shellname)
 
     print green("[+] Exporting shell...\t"), green(shellname)
