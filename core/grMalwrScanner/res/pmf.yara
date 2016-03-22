@@ -118,8 +118,6 @@ rule PMF_DodgyStrings
         $ = "id_rsa" fullword
         $ = "backdoor" fullword nocase
         $ = "webshell" fullword nocase
-        $ = "exploit" fullword nocase
-        $ = "hacking" fullword nocase
         $ = "/proc/cpuinfo" fullword
         $ = "/bin/sh" fullword
         $ = "/bin/bash" fullword
