@@ -31,7 +31,7 @@
                         $F_LDAP,
                         $F_CONNECT,
                         $F_POP,
-                        $F_OTHERii
+                        $F_OTHER
                     );
     $info_functions = Info::$F_INTEREST;
     $source_functions = Sources::$F_OTHER_INPUT;

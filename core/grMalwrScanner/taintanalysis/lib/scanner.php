@@ -61,8 +61,6 @@ class Scanner
 		
 	function __construct($file_name, $scan_functions, $info_functions, $source_functions)
 	{
-		debug_cyan("filename: " . $file_name );
-		#debug_cyan("info_function " . var_dump($info_functions));
 		$GLOBALS['verbosity'] = 1;
 
 		$this->file_name = $file_name;
@@ -806,7 +804,6 @@ class Scanner
 	function already_scanned($i)
 	{
 		$uid = $this->tif.'_'.$this->tokens[$i][2].'_'.basename($this->file_pointer);
-		debug_green("In already_scanned: " . $i);
 		foreach($GLOBALS['output'] as $file)
 		{
 			foreach($file as $vulnBlock)
@@ -824,13 +821,8 @@ class Scanner
 	// check if securing function is listed as securing that depends on quotes	
 	function quote_analysis_needed()
 	{
-		debug_green("GOTO quote analysis");
-		debug_red($this->securedby);
-		#debug_red(var_dump($this->securedby));
-		#debug_red(var_dump($GLOBALS['F_QUOTE_ANALYSIS']));
 		foreach($this->securedby as $var=>$func)
 		{
-			#debug_red($func);
 			if(in_array($func, $GLOBALS['F_QUOTE_ANALYSIS']))
 				return true;
 		}
@@ -840,12 +832,9 @@ class Scanner
 	// parse tokens of php file, build program model, follow program flow, initiate taint analysis	
 	function parse()		//*
 	{
-		debug_yellow("Start parsing...");
-		debug_yellow("The number of tokens: " . count($this->tokens));
 		// scan all tokens
 		for($i=0,$tokencount=count($this->tokens); $i<$tokencount;  $i++, $this->tif++)
 		{		
-			debug_yellow("Token: " . $this->tokens[$i]);
 			if( is_array($this->tokens[$i]) )
 			{
 				$token_name = $this->tokens[$i][0];
@@ -1080,14 +1069,12 @@ class Scanner
 				else if( in_array($token_name, Tokens::$T_FUNCTIONS) 	
 				|| (in_array($token_name, Tokens::$T_XSS) && ($_POST['vector'] == 'client' || $_POST['vector'] == 'xss' || $_POST['vector'] == 'all')) )
 				{		
-					debug_green("Condition: OK");	
 					$class='';
 					/*************************
 							T_STRING			
 					*************************/					
 					if($token_name === T_STRING && $this->tokens[$i+1] === '(')
 					{
-						debug_green("GOTO T_STRING_1");
 						// define("FOO", $_GET['asd']);
 						if($token_value === 'define')
 						{
@@ -1593,18 +1580,13 @@ class Scanner
 					/*************************
 						TAINT ANALYSIS			
 					*************************/	
-					debug_green("Hummm");
-					debug_red(isset($this->scan_functions[$token_value]));
-					
 					if(isset($this->scan_functions[$token_value]) && $GLOBALS['verbosity'] != 5
 					// not a function of a class or a function of a vulnerable class
 					&& (empty($class) || (($this->in_function && is_array($function_obj->parameters) && in_array($classvar, $function_obj->parameters)) || @in_array($token_value, $this->vuln_classes[$class]))) )
 						// GuruWS: pass this
 					{	
-						debug_green("goto TAINT_ANALYSIS_1");						
 						if(!$this->already_scanned($i))		// GuruWS: WTF ???
 						{
-							debug_green("not already_scanned ...");
 							// build new find					 
 							$new_find = new VulnTreeNode();
 							$new_find->name = $token_value;
@@ -1795,13 +1777,10 @@ class Scanner
 								$c++;
 							}	
 							
-							debug_green("GOTO 1792");
-							debug_green($this->quote_analysis_needed());
 							// quote analysis for securing functions F_QUOTE_ANALYSIS
 							// they only protect when return value is embedded into quotes
 							if( $this->quote_analysis_needed() && substr_count($reconstructstr, '$_USERINPUT')  > 0 )
 							{
-								debug_green("GOTO 1797");
 								// idea: explode on $_USERINPUT and count quotes in SQL query before
 								// if not even, then the $_USERINPUT is in an open quote
 								$parts = explode('$_USERINPUT', $reconstructstr);
@@ -1828,7 +1807,6 @@ class Scanner
 										{
 											$has_vuln_parameters = true;
 											$parameter_has_userinput = true;
-											debug_green("HERE!!!!");
 											$new_find->title .= "Userinput reaches sensitive sink due to insecure usage of $securefunction() without quotes";
 										}
 									}
@@ -1917,8 +1895,6 @@ class Scanner
 									);							
 								}
 							
-								debug_green("GOTO 1920");
-								debug_green(var_dump($GLOBALS['user_functions']));
 								// add to output							
 								if(isset($GLOBALS['user_functions'][$this->file_name][$token_value]))
 								{										
@@ -1961,9 +1937,7 @@ class Scanner
 									}
 								} else
 								{
-									debug_green("GOTO 1963");
 									if(empty($new_find->title)) {
-										debug_green("Huhhhh");
 										$new_find->title = 'A1961 - Userinput reaches sensitive sink. For more information, press the help icon on the left side.';
 									}
 									$block = new VulnBlock($this->tif.'_'.$this->tokens[$i][2].'_'.basename($this->file_pointer), getVulnNodeTitle($token_value), $token_value);
@@ -2369,13 +2343,7 @@ class Scanner
 			if(isset($vardeclare) && $vardeclare['end'] === $i)
 				unset($vardeclare);
 
-		} // all tokens scanned.
-		
-		debug_cyan("Result:");
-		debug_cyan(var_dump($new_find));
-
-		debug_cyan("Globals output:");
-		debug_cyan(var_dump($GLOBALS['output']));		
+		} // all tokens scanned.		
 		return $this->inc_map;
 	}
 }	
