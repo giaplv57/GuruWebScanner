@@ -5,6 +5,7 @@ import subprocess
 import os
 import time
 import gc
+import json
 
 #CHANGE ON DEMAND
 WORKER_NUMBER = 10;
@@ -61,7 +62,8 @@ def welcome():
 def malwr_scan(projectID):
     def taint_analysis():
         uncompressFolder = "./../../../userProjects/" + projectID + "/"
-        command = r"""cd ./core/grMalwrScanner/taintanalysis/ ; php main.php {0}""".format(uncompressFolder)
+        outFile = "./../../../userProjects/" + projectID + ".ta"    
+        command = r"""cd ./core/grMalwrScanner/taintanalysis/ ; php main.php {0} {1}""".format(uncompressFolder, outFile)
         subprocess.call(command,shell=True)
         return 0
 

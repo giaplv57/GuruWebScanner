@@ -39,6 +39,7 @@
     $source_functions = Sources::$F_OTHER_INPUT;
     //$source_functions = array_merge(Sources::$F_OTHER_INPUT, Sources::$F_FILE_INPUT, Sources::$F_DATABASE_INPUT);
     $url = $argv[1];
+    $outfile = $argv[2];
 
     if (is_dir($url)) {
         $files = read_recursiv($url);
@@ -63,10 +64,11 @@
         $scan->parse();
     }
     debug_red("Here we gooo");
-    debug_cyan(var_dump($GLOBALS['output']));
+    //debug_cyan(var_dump($GLOBALS['output']));
     $result = json_encode($GLOBALS['output']);
     #$report = fopen("./userProjects/".$newFilename.".analytics","w");
-    $freport = fopen("./taintanalysisoutput.txt","w");
+    $freport = fopen($outfile,"w");
+    debug_cyan("Outfile: " . $outfile);
     fwrite($freport, $result);
     fclose($report);
     #print implode($scan->inc_map);

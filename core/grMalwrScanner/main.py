@@ -125,6 +125,31 @@ def write_to_DB(projectid):
         raise Exception, e
 
 
+def load_taint_analysis_result(projectid):
+    outfile = "./../../userProjects/" + projectid + ".ta"
+    with open(outfile, 'r') as f:
+        output = f.read()
+    p = json.loads(output)
+
+    
+    for key, values in p.iteritems():
+        print key
+        filename = key
+        for value in values:
+            treenodes = value['treenodes']
+            for treenode in treenodes:                
+                tshell = {
+                    "shellname": "GuruWS :: Taint Analysis :: " + treenode['title'], 
+                    "url": key[61:],
+                    "filename": key.split('/')[-1],
+                    "filesize": -1
+                }
+                _shells.append(tshell)
+    
+    print _shells
+    return True
+
+
 if __name__ == '__main__':
     options, args, QUITEMODE = gateway()
 
@@ -181,6 +206,8 @@ if __name__ == '__main__':
         else:
             print yellow("[+] Great ! Nothing found, or something went wrong :)")
         
+        load_taint_analysis_result(options.projectid)
+
         if options.outfile != None:
             export_to_outfile(options.outfile)     # just export when scan directory
         if options.projectid != None:
