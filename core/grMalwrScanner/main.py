@@ -130,8 +130,11 @@ def load_taint_analysis_result(projectid):
     with open(outfile, 'r') as f:
         output = f.read()
     p = json.loads(output)
-
     
+    if p is None:
+        print "Taint Analysis: no result"
+        return True        
+
     for key, values in p.iteritems():
         print key
         filename = key

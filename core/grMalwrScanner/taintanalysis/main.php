@@ -35,6 +35,7 @@
                     );
     $info_functions = Info::$F_INTEREST;
     $source_functions = Sources::$F_OTHER_INPUT;
+    
     $url = $argv[1];
     $outfile = $argv[2];
 
@@ -54,13 +55,12 @@
     }
     
 
-    for($fi=0; $fi < count($files); $fi++) {
-        $file_scanning = $files[$fi];
-        
-        $scan = new Scanner($file_scanning, $scan_functions, $info_functions, $source_functions);   //* call Scanner
+    for($fi=0; $fi < count($files); $fi++) {        
+        $scan = new Scanner($files[$fi], $scan_functions, $info_functions, $source_functions);   //* call Scanner
         $scan->parse();
     }
 
+    // save result to json file
     $result = json_encode($GLOBALS['output']);
     
     $freport = fopen($outfile,"w");
