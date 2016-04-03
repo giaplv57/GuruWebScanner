@@ -59,13 +59,23 @@ def welcome():
 
 
 def malwr_scan(projectID):
+    def taint_analysis():
+        uncompressFolder = "./../../../userProjects/" + projectID + "/"
+        command = r"""cd ./core/grMalwrScanner/taintanalysis/ ; php main.php {0}""".format(uncompressFolder)
+        subprocess.call(command,shell=True)
+        return 0
+
+
+    
+    taint_analysis()
+
     print cyan("[+] Scanning project...\t" + projectID)
 
     # Have to make new connection in every thread to avoid 
     # of race condition when dbName.commit() function is excuted
+    uncompressFolder = "./../../userProjects/" + projectID + "/"
     conn = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
     cursor = conn.cursor()
-    uncompressFolder = "./../../userProjects/" + projectID + "/"
     
     command = r"""cd ./core/grMalwrScanner/ ; python main.py -q -p blacklist.yara -d {0} --projectid {1}""".format(uncompressFolder, projectID)
     subprocess.call(command,shell=True)
