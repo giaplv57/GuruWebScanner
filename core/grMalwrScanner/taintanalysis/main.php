@@ -14,9 +14,7 @@
     include('lib/printer.php');             // output scan result
     include('lib/searcher.php');            // search functions
     include 'lib/debug.php';
-
-    $file_scanning = "/var/www/html/rips/simpleshell.php";
-    
+ 
     $scan_functions = array();
     $scan_functions = array_merge(
                         $F_XSS,
@@ -33,11 +31,10 @@
                         $F_LDAP,
                         $F_CONNECT,
                         $F_POP,
-                        $F_OTHER
+                        $F_OTHERii
                     );
     $info_functions = Info::$F_INTEREST;
     $source_functions = Sources::$F_OTHER_INPUT;
-    //$source_functions = array_merge(Sources::$F_OTHER_INPUT, Sources::$F_FILE_INPUT, Sources::$F_DATABASE_INPUT);
     $url = $argv[1];
     $outfile = $argv[2];
 
@@ -59,17 +56,15 @@
 
     for($fi=0; $fi < count($files); $fi++) {
         $file_scanning = $files[$fi];
-        debug_cyan($file_scanning);
+        
         $scan = new Scanner($file_scanning, $scan_functions, $info_functions, $source_functions);   //* call Scanner
         $scan->parse();
     }
-    debug_red("Here we gooo");
-    //debug_cyan(var_dump($GLOBALS['output']));
+
     $result = json_encode($GLOBALS['output']);
-    #$report = fopen("./userProjects/".$newFilename.".analytics","w");
+    
     $freport = fopen($outfile,"w");
-    debug_cyan("Outfile: " . $outfile);
     fwrite($freport, $result);
     fclose($report);
-    #print implode($scan->inc_map);
+    
 ?>
