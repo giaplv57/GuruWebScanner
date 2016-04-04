@@ -131,3 +131,54 @@ rule PMF_DodgyStrings
     condition:
         IRC or 2 of them
 }
+
+rule GuruWS_SimpleShell
+{
+    strings:
+        $ = /\<\?(.*|\n)system\(\$(.*)\]\)/
+        $ = /\<\?(.*|\n)eval\(\$(.*)\]\)/
+        $ = /\<\?(.*|\n)passthru\(\$(.*)\]\)/
+        $ = /\<\?\(.*|\n)shell_exec\(\$(.*)\]\)/
+        $ = /\<\?\(.*|\n)exec\(\$(.*)\]\)/
+        $ = /\<\?\(.*|\n)fread\(popen\(\$\_(.*)\]\, \'r\'\)\,\$\_(.*)\]\)/
+        $ = /\<\?(.*|\n)pcntl_exec\(\'(.*)'\,array\(\'\-c\'\,\$\_(.*)\]\)\)/
+        $ = /\<\?\(.*|\n)preg_replace\(\'(.*)\'\,\$\_(.*)\],(.*)/
+        $ = /\<\?\(.*|\n)call_user_func_array\(\$\_(.*)\]\, array\(\$\_(.*)\]\)\)/
+        $ = /\<\?(.*|\n)assert\(\$\_(.*)\]\)/        
+        $ = /\<\?\=\@\$(.*)\(\$(.*)/
+        $ = /\<\?\$(.*)\=str_replace\((.*)\)\;\@\$(.*)\(\$\_(.*)\]\)/
+        $ = /\<\?\$(.*)\;\@\$(.*)\(\$\_(.*)\]\)/
+        $ = /\<\?\$x\=strrev\(\"(.*)\"\)\;echo \@\$(.*)\(\$\_(.*)\]\)/
+    condition:
+        any of them
+}
+
+rule GuruWS_SimpleShell2
+{
+    strings:              
+        $ = /system\((.*)\$_(.*)\)/
+        $ = /preg_replace\((.*)\$_(.*)\)/
+        $ = /passthru\((.*)\$_(.*)\)/
+        $ = /shell_exec\((.*)\$_(.*)\)/
+        $ = /exec\((.*)\$_(.*)\)/
+        $ = /base64_decode\((.*)\$_(.*)\)/
+        $ = /eval\((.*)\$_(.*)\)/
+        $ = /system\((.*)\$_(.*)\)/
+        $ = /proc_open\((.*)\$_(.*)\)/
+        $ = /popen\((.*)\$_(.*)\)/
+        $ = /curl_exec\((.*)\$_(.*)\)/
+        $ = /curl_multi_exec\((.*)\$_(.*)\)/
+        $ = /parse_ini_file\((.*)\$_(.*)\)/
+        $ = /show_source\((.*)\$_(.*)\)/        
+    condition:
+        any of them
+}
+
+rule GuruWS_backtick
+{
+    strings:      
+        $ = /\<\?\=\@\`\$\_(.*)\`\?\>/
+        $ = /\<\?\=\@\`\$(.*)\`\?\>/
+    condition:
+        any of them
+}
