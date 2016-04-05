@@ -114,6 +114,11 @@ final class Sources
 		'import_request_variables'
 	);
 	
+	public static $SOURCES_ALL = array(
+		// all of below
+	);
+
+
 	//	'getenv' and 'apache_getenv' 
 	// will be automatically added if 'putenv' or 'apache_setenv' with userinput is found
 }
