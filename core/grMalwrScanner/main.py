@@ -32,6 +32,7 @@ dfuncs      = ["preg_replace", "passthru", "shell_exec", "exec", "base64_decode"
 
 _shells     = []
 _dfuncs     = []
+_urllist  = []
 
 def bold(text):
     return KBOLD + text + KNORM
@@ -140,14 +141,17 @@ def load_taint_analysis_result(projectid):
         filename = key
         for value in values:
             treenodes = value['treenodes']
-            for treenode in treenodes:                
-                tshell = {
-                    "shellname": "GuruWS :: Taint Analysis :: " + treenode['title'], 
-                    "url": key[61:],
-                    "filename": key.split('/')[-1],
-                    "filesize": -1
-                }
-                _shells.append(tshell)
+            for treenode in treenodes: 
+                url = key[61+4:]
+                if not url in _urllist: 
+                    _urllist.append(url)
+                    tshell = {
+                        "shellname": "GuruWS :: Taint Analysis :: " + treenode['title'], 
+                        "url": url,
+                        "filename": key.split('/')[-1],
+                        "filesize": -1
+                    }
+                    _shells.append(tshell)
     
     print _shells
     return True
@@ -190,13 +194,15 @@ if __name__ == '__main__':
                     continue
                 
                 matches = rules.match(filename)
-                if matches != []: 
+                url = filename[61:]                
+                if matches != [] and not url in _urllist: 
                     shell_count += 1
                     shellname = str(matches[0])
                     print red("[+] Found...\t"), red(shellname), red("\tin (") + red(hide(filename)) + red(")")                    
+                    _urllist.append(url);
                     tshell = {
                         "shellname": shellname,
-                        "url": filename[61:],
+                        "url": url,
                         "filename": fname,
                         "filesize": len(d)
                     }
