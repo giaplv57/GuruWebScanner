@@ -16,6 +16,7 @@
     include 'lib/debug.php';
  
     $scan_functions = array();
+    /*
     $scan_functions = array_merge(
                         $F_XSS,
                         $F_HTTP_HEADER,
@@ -32,6 +33,11 @@
                         $F_CONNECT,
                         $F_POP,
                         $F_OTHER
+                    );
+    */
+    $scan_functions = array_merge(
+                        $F_CODE,                        
+                        $F_EXEC                        
                     );
     $info_functions = Info::$F_INTEREST;
     $source_functions = Sources::$F_OTHER_INPUT;
