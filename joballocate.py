@@ -60,17 +60,7 @@ def welcome():
 
 
 def malwr_scan(projectID):
-    def taint_analysis():
-        uncompressFolder = "./../../../../userProjects/" + projectID + "/"
-        outFile = "./../../../../userProjects/" + projectID + ".ta"    
-        command = r"""cd ./core/grMalwrScanner/lib/taintanalysis/ ; php main.php {0} {1}""".format(uncompressFolder, outFile)
-        subprocess.call(command,shell=True)
-        return 0
-
-
     
-    taint_analysis()
-
     print cyan("[+] Scanning project...\t" + projectID)
 
     # Have to make new connection in every thread to avoid 
@@ -79,7 +69,7 @@ def malwr_scan(projectID):
     conn = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
     cursor = conn.cursor()
     
-    command = r"""cd ./core/grMalwrScanner/ ; python main.py -q -p blacklist.yara -d {0} --projectid {1}""".format(uncompressFolder, projectID)
+    command = r"""cd ./core/grMalwrScanner/ ; python main.py -q -p lib/patternmatching/blacklist.yara -d {0} --projectid {1}""".format(uncompressFolder, projectID)
     subprocess.call(command,shell=True)
     cursor.execute('UPDATE scanProgress SET sigStatus = "1" WHERE projectID="'+projectID+'"')
     conn.commit()

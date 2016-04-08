@@ -8,6 +8,7 @@
 import optparse
 import sys
 import os
+import subprocess
 import hashlib
 import yara
 import json
@@ -83,6 +84,15 @@ def line_reduce(linecontent):
     else:
         return linecontent
 
+def import_shell(url, shellname, filename, filesize=-1):
+    _urllist.append(url);
+    tshell = {
+        "shellname": shellname,
+        "url": url,
+        "filename": filename,
+        "filesize": filesize
+    }
+    _shells.append(tshell)
 
 def scan_dangerous_function(content, url, filename):
     lines = content.split('\n')
@@ -111,6 +121,7 @@ def export_to_outfile(outfile):
         print "Error when try to save malResult to " + outfile
         raise Exception, e
 
+
 def write_to_DB(projectid):
     try:
         dbConnection = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
@@ -127,16 +138,19 @@ def write_to_DB(projectid):
 
 
 def load_taint_analysis_result(projectid):
-    outfile = "./../../userProjects/" + projectid + ".ta"
-    with open(outfile, 'r') as f:
-        output = f.read()
-    p = json.loads(output)
+    def get_json_content():
+        outfile = "./../../userProjects/" + projectid + ".ta"
+        with open(outfile, 'r') as f:
+            output = f.read()
+        return json.loads(output)
     
-    if p is None:
+    json_content = get_json_content()
+
+    if json_content is None:
         print "Taint Analysis: no result"
         return True        
 
-    for key, values in p.iteritems():
+    for key, values in json_content.iteritems():
         print key
         filename = key
         for value in values:
@@ -144,17 +158,28 @@ def load_taint_analysis_result(projectid):
             for treenode in treenodes: 
                 url = key[61+4:]
                 if not url in _urllist: 
-                    _urllist.append(url)
-                    tshell = {
-                        "shellname": "GuruWS :: Taint Analysis :: " + treenode['title'], 
-                        "url": url,
-                        "filename": key.split('/')[-1],
-                        "filesize": -1
-                    }
-                    _shells.append(tshell)
-    
+                    shellname = "GuruWS :: Taint Analysis :: " + treenode['title']
+                    filename = key.split('/')[-1]
+                    filesize = -1
+                    import_shell(url, shellname, filename, filesize)                    
     print _shells
     return True
+
+
+def taint_analysis(projectid):    
+    uncompressFolder = "./../../../../userProjects/" + projectid + "/"
+    outFile = "./../../../../userProjects/" + projectid + ".ta"    
+    command = r"""cd lib/taintanalysis/ ; php main.php {0} {1}""".format(uncompressFolder, outFile)
+    subprocess.call(command,shell=True)
+    return 0
+
+
+def show_result(file_count, shell_count):
+    print green("[+] Analized\t: " + str(file_count) + " files ")
+    if shell_count != 0:
+        print green("[+] Found\t: " + str(shell_count) + " shells ")
+    else:
+        print yellow("[+] Great ! Nothing found, or something went wrong :)")
 
 
 if __name__ == '__main__':
@@ -170,6 +195,7 @@ if __name__ == '__main__':
 
     if options.filename != None:
         filename = options.filename
+
         if not QUITEMODE:
             print cyan("[+] Scanning...\t"), cyan(filename)
             
@@ -181,39 +207,33 @@ if __name__ == '__main__':
 
     if options.directory != None:
         rootDir = options.directory
+        taint_analysis(options.projectid)
         for dirName, subdirList, fileList in os.walk(rootDir):            
             for fname in fileList:
                 filename = dirName + '/' + fname      # get absolute filename                
-
                 file_count += 1
+                
                 if not QUITEMODE:
                     print cyan("[+] Scanning...\t"), cyan(hide(filename))
+
                 with open(filename, 'rb') as f:
-                    d = f.read()
-                if len(d) == 0:
+                    filecontent = f.read()
+
+                if len(filecontent) == 0:
                     continue
                 
                 matches = rules.match(filename)
                 url = filename[61:]                
                 if matches != [] and not url in _urllist: 
                     shell_count += 1
-                    shellname = str(matches[0])
-                    print red("[+] Found...\t"), red(shellname), red("\tin (") + red(hide(filename)) + red(")")                    
-                    _urllist.append(url);
-                    tshell = {
-                        "shellname": shellname,
-                        "url": url,
-                        "filename": fname,
-                        "filesize": len(d)
-                    }
-                    _shells.append(tshell)
+                    shellname = str(matches[0])                    
+                    filesize = len(filecontent)
+                    import_shell(url, shellname, fname, filesize)                    
+                            # print red("[+] Found...\t"), red(shellname), red("\tin (") + red(hide(filename)) + red(")")                    
                 else:
-                    scan_dangerous_function(d, filename, fname)            # just scan dangerous function with the file, which is not be detect as shellcode
-        print green("[+] Analized\t: " + str(file_count) + " files ")
-        if shell_count != 0:
-            print green("[+] Found\t: " + str(shell_count) + " shells ")
-        else:
-            print yellow("[+] Great ! Nothing found, or something went wrong :)")
+                    scan_dangerous_function(filecontent, filename, fname)            # just scan dangerous function with the file, which is not be detect as shellcode
+        
+        show_result(file_count, shell_count)
         
         load_taint_analysis_result(options.projectid)
 
