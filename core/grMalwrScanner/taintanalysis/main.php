@@ -37,7 +37,9 @@
     */
     $scan_functions = array_merge(
                         $F_CODE,                        
-                        $F_EXEC                        
+                        $F_EXEC,
+                        $F_REFLECTION,
+                        $F_XPATH                   
                     );
     $info_functions = Info::$F_INTEREST;
     $source_functions = Sources::$F_OTHER_INPUT;
