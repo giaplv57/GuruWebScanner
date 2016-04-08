@@ -116,7 +116,7 @@
 
         /* Analytics result*/
         if($vulStatus == NULL && $sigStatus == NULL){  //If project is not upload to server before then run analytic function
-          include("./core/grMalwrScanner/shellRanker.php");           
+          include("./core/grMalwrScanner/lib/shellranker/shellRanker.php");           
           shellRankerMain($projectID);
         }
 

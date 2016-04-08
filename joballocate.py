@@ -61,9 +61,9 @@ def welcome():
 
 def malwr_scan(projectID):
     def taint_analysis():
-        uncompressFolder = "./../../../userProjects/" + projectID + "/"
-        outFile = "./../../../userProjects/" + projectID + ".ta"    
-        command = r"""cd ./core/grMalwrScanner/taintanalysis/ ; php main.php {0} {1}""".format(uncompressFolder, outFile)
+        uncompressFolder = "./../../../../userProjects/" + projectID + "/"
+        outFile = "./../../../../userProjects/" + projectID + ".ta"    
+        command = r"""cd ./core/grMalwrScanner/lib/taintanalysis/ ; php main.php {0} {1}""".format(uncompressFolder, outFile)
         subprocess.call(command,shell=True)
         return 0
 

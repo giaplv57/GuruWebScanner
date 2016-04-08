@@ -153,23 +153,79 @@ rule GuruWS_SimpleShell
         any of them
 }
 
-rule GuruWS_SimpleShell2
+rule GuruWS_SimpleShell_system
 {
     strings:              
-        $ = /system\((.*)\$_(.*)\)/
-        $ = /preg_replace\((.*)\$_(.*)\)/
-        $ = /passthru\((.*)\$_(.*)\)/
-        $ = /shell_exec\((.*)\$_(.*)\)/
-        $ = /exec\((.*)\$_(.*)\)/
-        $ = /base64_decode\((.*)\$_(.*)\)/
-        $ = /eval\((.*)\$_(.*)\)/
-        $ = /system\((.*)\$_(.*)\)/
-        $ = /proc_open\((.*)\$_(.*)\)/
-        $ = /popen\((.*)\$_(.*)\)/
-        $ = /curl_exec\((.*)\$_(.*)\)/
-        $ = /curl_multi_exec\((.*)\$_(.*)\)/
-        $ = /parse_ini_file\((.*)\$_(.*)\)/
-        $ = /show_source\((.*)\$_(.*)\)/        
+        $ = /system\(\$_([A-Za-z\'\]\[]+)\)/               
+    condition:
+        any of them
+}
+
+rule GuruWS_SimpleShell_preg_replace
+{
+    strings:              
+        $ = /preg_replace\(\$_([A-Za-z\'\]\[]+)\)/
+    condition:
+        any of them
+}
+
+rule GuruWS_SimpleShell_passthru
+{
+    strings:                      
+        $ = /passthru\(\$_([A-Za-z\'\]\[]+)\)/        
+    condition:
+        any of them
+}
+
+rule GuruWS_SimpleShell_shellexec
+{
+    strings:                              
+        $ = /shell_exec\(\$_([A-Za-z\'\]\[]+)\)/
+    condition:
+        any of them
+}
+
+rule GuruWS_SimpleShell_exec
+{
+    strings:                              
+        $ = /exec\(\$_([A-Za-z\'\]\[]+)\)/
+    condition:
+        any of them
+}
+
+rule GuruWS_SimpleShell_base64_decode
+{
+    strings:                              
+        $ = /base64_decode\(\$_([A-Za-z\'\]\[]+)\)/
+    condition:
+        any of them
+}
+
+rule GuruWS_SimpleShell_eval
+{
+    strings:                              
+        $ = /eval\(\$_([A-Za-z\'\]\[]+)\)/
+    condition:
+        any of them
+}
+
+rule GuruWS_SimpleShell_proc_open
+{
+    strings:                              
+        $ = /proc_open\(\$_([A-Za-z\'\]\[]+)\)/
+    condition:
+        any of them
+}
+
+rule GuruWS_SimpleShell_other
+{
+    strings:                              
+        $ = /proc_open\(\$_([A-Za-z\'\]\[]+)\)/
+        $ = /popen\(\$_([A-Za-z\'\]\[]+)\)/
+        $ = /curl_exec\(\$_([A-Za-z\'\]\[]+)\)/
+        $ = /curl_multi_exec\(\$_([A-Za-z\'\]\[]+)\)/
+        $ = /parse_ini_file\(\$_([A-Za-z\'\]\[]+)\)/
+        $ = /show_source\(\$_([A-Za-z\'\]\[]+)\)/        
 
     condition:
         any of them
