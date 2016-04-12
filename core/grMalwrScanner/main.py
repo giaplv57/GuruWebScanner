@@ -14,11 +14,10 @@ import yara
 import json
 import MySQLdb
 import base64
+from config.general import *
 
 #CHANGE ON DEMAND
-DBServer = "localhost"
-DBUsername = "root"
-DBPassword = "root"
+
 
 KBOLD = '\033[1m'
 KRED = '\x1B[31m'
@@ -26,10 +25,6 @@ KCYAN = '\x1B[36m'
 KGREEN = '\x1B[32m'
 KYELLOW = '\x1B[33m'
 KNORM = '\033[0m'
-
-QUITEMODE   = False
-PATTERNDB   = 'blacklist.yara'
-dfuncs      = ["preg_replace", "passthru", "shell_exec", "exec", "base64_decode", "eval", "system", "proc_open", "popen", "curl_exec", "curl_multi_exec", "parse_ini_file", "show_source"]
 
 _shells     = []
 _dfuncs     = []
@@ -212,7 +207,7 @@ if __name__ == '__main__':
             for fname in fileList:
                 filename = dirName + '/' + fname      # get absolute filename                
                 file_count += 1
-                
+
                 if not QUITEMODE:
                     print cyan("[+] Scanning...\t"), cyan(hide(filename))
 
