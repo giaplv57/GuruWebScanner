@@ -555,9 +555,9 @@ class Scanner
 		} 
 		
 		// to avoid False/Positive::2b
-        if ($userinput === 2) {
-            return 0;
-        }
+        //if ($userinput === 2) {
+        //    return 0;
+        //}
 
 		return $userinput;
 	}
@@ -1819,6 +1819,7 @@ class Scanner
 							}
 							
 							// add find to output if function call has variable parameters (With userinput)
+							$parameter_func_depend = false;
 							if( ($has_vuln_parameters && ($parameter_has_userinput || $parameter_func_depend)) || $GLOBALS['verbosity'] == 4 || isset($this->scan_functions[$token_value][3]) ) 
 							{
 								
