@@ -554,6 +554,11 @@ class Scanner
 			}
 		} 
 		
+		// to avoid False/Positive::2b
+        if ($userinput === 2) {
+            return 0;
+        }
+
 		return $userinput;
 	}
 	
