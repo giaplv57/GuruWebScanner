@@ -588,6 +588,9 @@ class Scanner
 	// add function to output that triggers something by call
 	function addtriggerfunction($mainparent)
 	{
+		/*
+		avoid False/Positive :: dont know the purpose of this function
+		
 		// add dependency and mark this as interesting function
 		$mainparent->dependencies[$this->function_obj->lines[0]] = $this->function_obj->tokens;
 		$mainparent->title = "Userinput reaches sensitive sink when function <i>{$this->function_obj->name}()</i> is called.";
@@ -600,6 +603,7 @@ class Scanner
 		$GLOBALS['user_functions'][$this->file_name][$this->function_obj->name][1] = array();
 		// doesnt matter if called with userinput or not
 		$GLOBALS['user_functions'][$this->file_name][$this->function_obj->name][3] = true;
+		*/
 	}
 	
 	// add function declaration to parent and mark the block as dependend of this function calls
