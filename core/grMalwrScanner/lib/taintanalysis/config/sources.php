@@ -31,9 +31,7 @@ final class Sources
 		'$HTTP_REQUEST_VARS', 
 		'$HTTP_POST_FILES',
 		'$HTTP_SERVER_VARS',
-		'$HTTP_RAW_POST_DATA',
-		'$argc',
-		'$argv'
+		'$HTTP_RAW_POST_DATA'
 	);
 	
 	public static $V_SERVER_PARAMS = array(
