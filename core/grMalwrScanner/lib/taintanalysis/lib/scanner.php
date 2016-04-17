@@ -590,7 +590,7 @@ class Scanner
 	{
 		/*
 		avoid False/Positive :: dont know the purpose of this function
-		
+
 		// add dependency and mark this as interesting function
 		$mainparent->dependencies[$this->function_obj->lines[0]] = $this->function_obj->tokens;
 		$mainparent->title = "Userinput reaches sensitive sink when function <i>{$this->function_obj->name}()</i> is called.";
@@ -873,12 +873,16 @@ class Scanner
 					// $var()
 					if($this->tokens[$i+1][0] === '(')
 					{
+						/* GuruWS
 						$this->variable_scan($i, 0, 'eval', 'Userinput is used as dynamic function name. Arbitrary functions may be called.');
+						*/
 					}
 					// $$var = 
 					else if( ($this->tokens[$i-1] === '$' || ($this->tokens[$i-1] === '{' && $this->tokens[$i-2] === '$')) && ($this->tokens[$i+1] === '=' || in_array($this->tokens[$i+1][0], Tokens::$T_ASSIGNMENT)) )
 					{
+						/* GuruWS
 						$this->variable_scan($i, $this->tokens[$i-1] === '{' ? 2 : 1, 'extract', 'Userinput is used to build the variable name. Arbitrary variables may be overwritten/initialized which may lead to further vulnerabilities.');
+						*/
 					}
 					// foreach($var as $key => $value)
 					else if( $this->tokens[$i-1][0] === T_AS 

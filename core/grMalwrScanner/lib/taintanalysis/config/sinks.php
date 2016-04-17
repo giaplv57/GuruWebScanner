@@ -65,13 +65,14 @@ You should have received a copy of the GNU General Public License along with thi
 	// reflection injection
 	$NAME_REFLECTION = 'Reflection Injection';
 	$F_REFLECTION = array(
+		'call_user_func'				=> array(array(1,2), array()),
+		'call_user_func_array'			=> array(array(1,2), array()),
+		/*
 		'event_buffer_new'				=> array(array(2,3,4), array()),		
 		'event_set'						=> array(array(4), array()),
 		'iterator_apply'				=> array(array(2), array()),
 		'forward_static_call'			=> array(array(1), array()),
-		'forward_static_call_array'		=> array(array(1), array()),
-		'call_user_func'				=> array(array(1,2), array()),
-		'call_user_func_array'			=> array(array(1,2), array()),		
+		'forward_static_call_array'		=> array(array(1), array()),				
 		'array_diff_uassoc'				=> array(array(3), array()),
 		'array_diff_ukey'				=> array(array(3), array()),
 		'array_filter'					=> array(array(1,2), array()),
@@ -127,6 +128,7 @@ You should have received a copy of the GNU General Public License along with thi
 		'eio_fstatvfs'					=> array(array(3), array()),
 		'preg_replace_callback'			=> array(array(2), array()),
 		'dotnet_load'					=> array(array(1), array()),
+		*/
 	);
 	
 	// file inclusion functions => (parameters to scan, securing functions)
