@@ -1,4 +1,11 @@
 <?php
+
+    /**
+     * -- [ A wrapper for taint analysis module of grMalwrScanner ] -----
+     *
+     *                                                          @GuruTeam
+     **/
+
     include('../config/ta_general.php');          // general settings
     include('../config/ta_sources.php');          // tainted variables and functions
     include('../config/ta_tokens.php');           // tokens for lexical analysis
@@ -16,9 +23,9 @@
  
     $scan_functions = array(); 
     $scan_functions = array_merge(
-                        $F_CODE,                        
-                        $F_EXEC,                        
-                        $F_XPATH                   
+                        $F_CODE,        // Code Execution                 
+                        $F_EXEC,        // Command Execution
+                        $F_XPATH        // XPath Execution
                     );
     $info_functions = Info::$F_INTEREST;
     $source_functions = Sources::$F_OTHER_INPUT;

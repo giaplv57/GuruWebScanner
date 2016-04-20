@@ -69,7 +69,7 @@ def malwr_scan(projectID):
     conn = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
     cursor = conn.cursor()
     
-    command = r"""cd ./core/grMalwrScanner/ ; python main.py -q -p lib/patternmatching/blacklist.yara -d {0} --projectid {1}""".format(uncompressFolder, projectID)
+    command = r"""cd ./core/grMalwrScanner/ ; python main.py -q -p config/pm_blacklist.yara -d {0} --projectid {1}""".format(uncompressFolder, projectID)
     subprocess.call(command,shell=True)
     cursor.execute('UPDATE scanProgress SET sigStatus = "1" WHERE projectID="'+projectID+'"')
     conn.commit()

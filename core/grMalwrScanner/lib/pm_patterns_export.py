@@ -1,7 +1,7 @@
 """
-    Export signatures from found webshell to .yara file
+    -- [ Export signatures from found webshell to .yara file ] ------
 
-    @GuruTeam
+                                                            @GuruTeam
 
 """
 
@@ -22,12 +22,15 @@ KCYAN = '\x1B[36m'
 KGREEN = '\x1B[32m'
 KYELLOW = '\x1B[33m'
 KNORM = '\033[0m'
-yarafile = open('blacklist.yara', 'w')
+yarafile = None
+
 shelllib = []       # avoid duplicated shellname
 
-
 def out(s):
-    yarafile.write(s)
+    try:
+        yarafile.write(s)
+    except:
+        raise Exception, "Check --output file"
 
 def bold(text):
     return KBOLD + text + KNORM
@@ -50,15 +53,18 @@ def nocolor(text):
 
 def gateway():
     parser = optparse.OptionParser()
-    parser.add_option('--directory', '-d', type="string", help="specify directory to scan")
-    parser.add_option('--filename', '-f', type="string", help="specufy file to scan")
+    parser.add_option('--directory', '-d', type="string", help="specify directory containing Web Shell to import")
+    parser.add_option('--filename', '-f', type="string", help="specify Web Shell file to import")
+    parser.add_option('--output', '-o', type="string", help="specify .yara output file")
     
     (options, args) = parser.parse_args()
 
-    if len(sys.argv) == 1:        
+    if len(sys.argv) == 1 or options.output == None:        
         parser.print_help()
         exit()
 
+    global yarafile
+    yarafile = open(options.output, 'w')    
     return options, args
 
 
@@ -217,9 +223,13 @@ def export_from_shelldetectdb():
 
 
 def export_from_pmf():
-    with open('res/pmf.yara') as f:
-        pmf_content = f.read()
-    out(pmf_content)  
+    try:
+        with open('res/pmf.yara') as f:
+            pmf_content = f.read()
+        out(pmf_content)  
+    except:        
+        print red("[+] Can't open res/pmf.yara => Unable to export patterns from pmf content")
+        return False   
     return True
 
 def export_whitelist():
@@ -228,7 +238,7 @@ def export_whitelist():
 
 if __name__ == '__main__':
 
-    export_whitelist()
+    # export_whitelist()
 
     export_from_webshell()
     export_from_shelldetectdb()
@@ -238,5 +248,7 @@ if __name__ == '__main__':
     if export_from_pmf():
         print cyan('[+] Patterns from php-malware-finder were exported !')        
 
-
-yarafile.close()
+try:
+    yarafile.close()
+except:
+    raise Exception, "Can't close the outfile"

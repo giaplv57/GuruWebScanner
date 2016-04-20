@@ -1,5 +1,3 @@
-include "whitelist.yara"
-
 rule SHELL_cgi_python_py
 {
 	strings:
