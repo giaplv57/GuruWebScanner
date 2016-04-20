@@ -1,10 +1,43 @@
 <?php
-
+    
     /**
      * -- [ A wrapper for taint analysis module of grMalwrScanner ] -----
      *
      *                                                          @GuruTeam
      **/
+
+
+    function read_recursiv($path)
+    {  
+        $result = array(); 
+
+        $handle = opendir($path);  
+        
+        if ($handle)  
+        {  
+            while (false !== ($file = readdir($handle)))  
+            {  
+                if ($file !== '.' && $file !== '..')  
+                {  
+                    $name = $path . '/' . $file; 
+                    if (is_dir($name)) 
+                    {  
+                        $ar = read_recursiv($name, true); 
+                        foreach ($ar as $value) 
+                        { 
+                            if(in_array(substr($value, strrpos($value, '.')), $GLOBALS['FILETYPES']))
+                                $result[] = $value; 
+                        } 
+                    } else if(in_array(substr($name, strrpos($name, '.')), $GLOBALS['FILETYPES'])) 
+                    {  
+                        $result[] = $name; 
+                    }  
+                }  
+            }  
+        }  
+        closedir($handle); 
+        return $result;  
+    } 
 
     include('../config/ta_general.php');          // general settings
     include('../config/ta_sources.php');          // tainted variables and functions
@@ -14,7 +47,6 @@
     include('../config/ta_info.php');             // interesting functions    
     
     include('ta_constructer.php');         // classes  
-    include('ta_filer.php');               // read files from dirs and subdirs
     include('ta_tokenizer.php');           // prepare and fix token list
     include('ta_string_analyzer.php');     // string analyzers
     include('ta_scanner.php');             // provides class for scan
