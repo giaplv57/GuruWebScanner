@@ -162,9 +162,9 @@ def load_taint_analysis_result(projectid):
 
 
 def taint_analysis(projectid):    
-    uncompressFolder = "./../../../../userProjects/" + projectid + "/"
-    outFile = "./../../../../userProjects/" + projectid + ".ta"    
-    command = r"""cd lib/taintanalysis/ ; php main.php {0} {1}""".format(uncompressFolder, outFile)
+    uncompressFolder = "./../../../userProjects/" + projectid + "/"
+    outFile = "./../../../userProjects/" + projectid + ".ta"    
+    command = r"""cd lib/ ; php taintanalysis.php {0} {1}""".format(uncompressFolder, outFile)
     subprocess.call(command,shell=True)
     return 0
 
