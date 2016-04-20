@@ -1,23 +1,4 @@
 <?php
-/** 
-
-RIPS - A static source code analyser for vulnerabilities in PHP scripts 
-	by Johannes Dahse (johannes.dahse@rub.de)
-			
-			
-Copyright (C) 2012 Johannes Dahse
-
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>.	
-
-**/
-	
-
-	// cross-site scripting affected functions
-	// parameter = 0 means, all parameters will be traced
 	$NAME_XSS = 'Cross-Site Scripting';
 	$F_XSS = array(
 		'echo'							=> array(array(0), $F_SECURING_XSS), 
@@ -34,13 +15,11 @@ You should have received a copy of the GNU General Public License along with thi
 		'ifx_htmltbl_result'			=> array(array(2), $F_SECURING_XSS)
 	);
 	
-	// HTTP header injections
 	$NAME_HTTP_HEADER = 'HTTP Response Splitting';
     $F_HTTP_HEADER = array(
 		'header' 						=> array(array(1), array())
 	);
 	
-	// session fixation
 	$NAME_SESSION_FIXATION = 'Session Fixation';
     $F_SESSION_FIXATION = array(
 		'setcookie' 					=> array(array(2), array()),
@@ -48,8 +27,6 @@ You should have received a copy of the GNU General Public License along with thi
 		'session_id' 					=> array(array(1), array())
 	);
 	
-	// code evaluating functions  => (parameters to scan, securing functions)
-	// example parameter array(1,3) will trace only first and third parameter 
 	$NAME_CODE = 'Code Execution';
 	$F_CODE = array(
 		'assert' 						=> array(array(1), array()),
@@ -62,76 +39,12 @@ You should have received a copy of the GNU General Public License along with thi
 		'preg_replace_callback'			=> array(array(1), $F_SECURING_PREG),		
 	);
 	
-	// reflection injection
 	$NAME_REFLECTION = 'Reflection Injection';
 	$F_REFLECTION = array(
 		'call_user_func'				=> array(array(1,2), array()),
 		'call_user_func_array'			=> array(array(1,2), array()),
-		/*
-		'event_buffer_new'				=> array(array(2,3,4), array()),		
-		'event_set'						=> array(array(4), array()),
-		'iterator_apply'				=> array(array(2), array()),
-		'forward_static_call'			=> array(array(1), array()),
-		'forward_static_call_array'		=> array(array(1), array()),				
-		'array_diff_uassoc'				=> array(array(3), array()),
-		'array_diff_ukey'				=> array(array(3), array()),
-		'array_filter'					=> array(array(1,2), array()),
-		'array_intersect_uassoc'		=> array(array(3), array()),
-		'array_intersect_ukey'			=> array(array(3), array()),
-		'array_map'						=> array(array(1,2), array()),
-		'array_reduce'					=> array(array(2), array()),
-		'array_udiff'					=> array(array(3), array()),
-		'array_udiff_assoc'				=> array(array(3), array()),
-		'array_udiff_uassoc'			=> array(array(3,4), array()),
-		'array_uintersect'				=> array(array(3), array()),
-		'array_uintersect_assoc'		=> array(array(3), array()),
-		'array_uintersect_uassoc'		=> array(array(3,4), array()),		
-		'array_walk'					=> array(array(1,2), array()),
-		'array_walk_recursive'			=> array(array(1,2), array()),
-		'assert_options'				=> array(array(2), array()),
-		'ob_start'						=> array(array(1), array()),
-		'register_shutdown_function'	=> array(array(1,2), array()),
-		'register_tick_function'		=> array(array(1,2), array()),
-		'runkit_method_add'				=> array(array(1,2,3,4), array()),
-		'runkit_method_copy'			=> array(array(1,2,3), array()),
-		'runkit_method_redefine'		=> array(array(1,2,3,4), array()),	
-		'runkit_method_rename'			=> array(array(1,2,3), array()),
-		'runkit_function_add'			=> array(array(1,2,3), array()),
-		'runkit_function_copy'			=> array(array(1,2), array()),
-		'runkit_function_redefine'		=> array(array(1,2,3), array()),
-		'runkit_function_rename'		=> array(array(1,2), array()),
-		'session_set_save_handler'		=> array(array(1,2,3,4,5), array()),
-		'set_error_handler'				=> array(array(1), array()),
-		'set_exception_handler'			=> array(array(1), array()),
-		'spl_autoload'					=> array(array(1), array()),	
-		'spl_autoload_register'			=> array(array(1), array()),
-		'sqlite_create_aggregate'		=> array(array(2,3,4), array()), 
-		'sqlite_create_function'		=> array(array(2,3), array()), 
-		'stream_wrapper_register'		=> array(array(2), array()), 
-		'uasort'						=> array(array(1,2), array()),
-		'uksort'						=> array(array(1,2), array()),
-		'usort'							=> array(array(2), array()),
-		'yaml_parse'					=> array(array(4), array()),
-		'yaml_parse_file'				=> array(array(4), array()),
-		'yaml_parse_url'				=> array(array(4), array()),
-		'eio_busy'						=> array(array(3), array()),
-		'eio_chmod'						=> array(array(4), array()),
-		'eio_chown'						=> array(array(5), array()),
-		'eio_close'						=> array(array(3), array()),
-		'eio_custom'					=> array(array(1,2), array()),
-		'eio_dup2'						=> array(array(4), array()),
-		'eio_fallocate'					=> array(array(6), array()),
-		'eio_fchmod'					=> array(array(4), array()),
-		'eio_fchown'					=> array(array(5), array()),
-		'eio_fdatasync'					=> array(array(3), array()),
-		'eio_fstat'						=> array(array(3), array()),
-		'eio_fstatvfs'					=> array(array(3), array()),
-		'preg_replace_callback'			=> array(array(2), array()),
-		'dotnet_load'					=> array(array(1), array()),
-		*/
 	);
 	
-	// file inclusion functions => (parameters to scan, securing functions)
 	$NAME_FILE_INCLUDE = 'File Inclusion';
 	$F_FILE_INCLUDE = array(
 		'include' 						=> array(array(1), $F_SECURING_FILE),
@@ -145,9 +58,6 @@ You should have received a copy of the GNU General Public License along with thi
 		'virtual' 						=> array(array(1), $F_SECURING_FILE)		
 	);
 
-	// file affecting functions  => (parameters to scan, securing functions)
-	// file handler functions like fopen() are added as parameter 
-	// for functions that use them like fread() and fwrite()
 	$NAME_FILE_READ = 'File Disclosure';
 	$F_FILE_READ = array(
 		'bzread'						=> array(array(1), $F_SECURING_FILE), 
@@ -206,7 +116,6 @@ You should have received a copy of the GNU General Public License along with thi
 		'zip_open'						=> array(array(1), $F_SECURING_FILE)
 	);
 	
-	// file or file system affecting functions
 	$NAME_FILE_AFFECT = 'File Manipulation';
 	$F_FILE_AFFECT = array(
 		'bzwrite'						=> array(array(2), array()),
@@ -254,10 +163,9 @@ You should have received a copy of the GNU General Public License along with thi
 		'yaml_emit_file'				=> array(array(1,2), $F_SECURING_FILE),
 	);
 
-	// OS Command executing functions => (parameters to scan, securing functions)
 	$NAME_EXEC = 'Command Execution';
 	$F_EXEC = array(
-		'backticks'						=> array(array(1), $F_SECURING_SYSTEM), # transformed during parsing
+		'backticks'						=> array(array(1), $F_SECURING_SYSTEM),
 		'exec'							=> array(array(1), $F_SECURING_SYSTEM),
 		'expect_popen'					=> array(array(1), $F_SECURING_SYSTEM),
 		'passthru'						=> array(array(1), $F_SECURING_SYSTEM),
@@ -272,10 +180,8 @@ You should have received a copy of the GNU General Public License along with thi
 		'w32api_register_function'		=> array(array(2), array()),
 	);
 
-	// SQL executing functions => (parameters to scan, securing functions)
 	$NAME_DATABASE = 'SQL Injection';
 	$F_DATABASE = array(
-	// Abstraction Layers
 		'dba_open'						=> array(array(1), array()),
 		'dba_popen'						=> array(array(1), array()), 
 		'dba_insert'					=> array(array(1,2), array()),
@@ -284,8 +190,7 @@ You should have received a copy of the GNU General Public License along with thi
 		'dbx_query'						=> array(array(2), $F_SECURING_SQL), 
 		'odbc_do'						=> array(array(2), $F_SECURING_SQL),
 		'odbc_exec'						=> array(array(2), $F_SECURING_SQL),
-		'odbc_execute'					=> array(array(2), $F_SECURING_SQL),
-	// Vendor Specific	
+		'odbc_execute'					=> array(array(2), $F_SECURING_SQL),	
 		'db2_exec' 						=> array(array(2), $F_SECURING_SQL),
 		'db2_execute'					=> array(array(2), $F_SECURING_SQL),
 		'fbsql_db_query'				=> array(array(2), $F_SECURING_SQL),
@@ -332,16 +237,14 @@ You should have received a copy of the GNU General Public License along with thi
 		'sybase_query'					=> array(array(1), $F_SECURING_SQL), 
 		'sybase_unbuffered_query'		=> array(array(1), $F_SECURING_SQL)
 	);
-	
-	// xpath injection
+		
 	$NAME_XPATH = 'XPath Injection';
 	$F_XPATH = array(
 		'xpath_eval'					=> array(array(2), $F_SECURING_XPATH),	
 		'xpath_eval_expression'			=> array(array(2), $F_SECURING_XPATH),		
 		'xptr_eval'						=> array(array(2), $F_SECURING_XPATH)
 	);
-	
-	// ldap injection
+		
 	$NAME_LDAP = 'LDAP Injection';
 	$F_LDAP = array(
 		'ldap_add'						=> array(array(2,3), $F_SECURING_LDAP),
@@ -350,8 +253,7 @@ You should have received a copy of the GNU General Public License along with thi
 		'ldap_read'						=> array(array(3), $F_SECURING_LDAP),
 		'ldap_search'					=> array(array(3), $F_SECURING_LDAP)
 	);	
-		
-	// connection handling functions
+			
 	$NAME_CONNECT = 'Protocol Injection';
     $F_CONNECT = array(
 		'curl_setopt'					=> array(array(2,3), array()),
@@ -386,9 +288,8 @@ You should have received a copy of the GNU General Public License along with thi
 		'stream_socket_server'			=> array(array(1), array()),
 		'printer_open'					=> array(array(1), array())
 	);
-	
-	// other critical functions
-	$NAME_OTHER = 'Possible Flow Control'; // :X
+		
+	$NAME_OTHER = 'Possible Flow Control'; 
 	$F_OTHER = array(
 		'dl' 							=> array(array(1), array()),	
 		'ereg'							=> array(array(2), array()), # nullbyte injection affected		
@@ -409,18 +310,9 @@ You should have received a copy of the GNU General Public License along with thi
 		'is_a'							=> array(array(1), array()) // calls __autoload()
 	);
 	
-	// property oriented programming with unserialize
 	$NAME_POP = 'PHP Object Injection';
 	$F_POP = array(
 		'unserialize'					=> array(array(1), array()), // calls gadgets
 		'yaml_parse'					=> array(array(1), array())	 // calls unserialize
 	);
-	
-	// XML
-	//simplexml_load_string
-	
-	
-	# interruption vulnerabilities
-	# trim(), rtrim(), ltrim(), explode(), strchr(), strstr(), substr(), chunk_split(), strtok(), addcslashes(), str_repeat() htmlentities() htmlspecialchars(), unset()
-
 ?>	

@@ -1,23 +1,7 @@
 <?php
-/** 
-
-RIPS - A static source code analyser for vulnerabilities in PHP scripts 
-	by Johannes Dahse (johannes.dahse@rub.de)
-			
-			
-Copyright (C) 2012 Johannes Dahse
-
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>.	
-
-**/
 
 final class Sources
-{	
-	// userinput variables
+{		
 	public static $V_USERINPUT = array(
 		'$_GET',
 		'$_POST',
@@ -59,8 +43,7 @@ final class Sources
 		'REMOTE_HOSTNAME',
 		'PHP_SELF'
 	);
-	
-	// file content as input
+		
 	public static $F_FILE_INPUT = array(
 		'bzread',
 		'dio_read',
@@ -80,8 +63,7 @@ final class Sources
 		'scandir',
 		'zip_read'
 	);
-	
-	// database content as input
+		
 	public static $F_DATABASE_INPUT = array(
 		'mysql_fetch_array',
 		'mysql_fetch_assoc',
@@ -100,8 +82,7 @@ final class Sources
 		'sqlite_fetch_single',
 		'sqlite_fetch_string'
 	);
-	
-	// other functions as input
+		
 	public static $F_OTHER_INPUT = array(
 		'get_headers',
 		'getallheaders',
@@ -112,13 +93,6 @@ final class Sources
 		'import_request_variables'
 	);
 	
-	public static $SOURCES_ALL = array(
-		// all of below
-	);
-
-
-	//	'getenv' and 'apache_getenv' 
-	// will be automatically added if 'putenv' or 'apache_setenv' with userinput is found
 }
 	
 ?>	
