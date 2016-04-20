@@ -1,12 +1,6 @@
 
 <?php
 
-/**
- * Simple helper to debug to the console
- * 
- * @param  Array, String $data
- * @return String
- */
 function debug( $data ) {
 
     if ( is_array( $data ) ) {

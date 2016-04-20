@@ -15,7 +15,7 @@ You should have received a copy of the GNU General Public License along with thi
 
 **/
 		
-class Analyzer
+class StringAnalyzer
 {	
 	// reconstructs string from a list of tokens
 	function get_tokens_value($file_name, $tokens, $var_declares, $var_declares_global, $tokenid, $start=0, $stop=0, $source_functions=array())

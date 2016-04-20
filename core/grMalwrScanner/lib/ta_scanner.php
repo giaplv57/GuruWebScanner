@@ -97,7 +97,7 @@ class Scanner
 		
 		$this->inc_file_stack = array(realpath($this->file_name));
 		$this->inc_map = array();
-		$this->include_paths = Analyzer::get_ini_paths(ini_get("include_path"));
+		$this->include_paths = StringAnalyzer::get_ini_paths(ini_get("include_path"));
 		$this->file_pointer = end($this->inc_file_stack);
 		if(!isset($GLOBALS['file_sinks_count'][$this->file_pointer]))
 			$GLOBALS['file_sinks_count'][$this->file_pointer] = 0;
@@ -131,7 +131,7 @@ class Scanner
 	// create require tokens for auto_prepend/append_files and add to tokenlist
 	function add_auto_include($paths, $beginning)
 	{
-		$paths = Analyzer::get_ini_paths($paths);
+		$paths = StringAnalyzer::get_ini_paths($paths);
 		$addtokens = array();
 		foreach($paths as $file)
 		{
@@ -171,7 +171,7 @@ class Scanner
 				{
 					if(is_array($var_token[3][$k]))
 					{
-						$var_token[3][$k] = Analyzer::get_tokens_value(
+						$var_token[3][$k] = StringAnalyzer::get_tokens_value(
 							$this->file_pointer,
 							$var_token[3][$k], 
 							$var_declares, 
@@ -680,7 +680,7 @@ class Scanner
 					$new_var->array_keys[] = $key;	
 				else
 				{
-					$recstring = Analyzer::get_tokens_value(
+					$recstring = StringAnalyzer::get_tokens_value(
 						$this->file_pointer,
 						$key, 
 						$this->in_function ? $this->var_declares_local : $this->var_declares_global, 
@@ -766,7 +766,7 @@ class Scanner
 			if( $userinput || $GLOBALS['verbosity'] == 4 ) 
 			{
 				$new_find->filename = $this->file_pointer;
-				$new_find->value = highlightline(array_slice($this->tokens, $i-$offset, $offset+3+Analyzer::getBraceEnd($this->tokens, $i+2)), $this->comment, $this->tokens[$i][2], $this->tokens[$i][1], false, array(1));		
+				$new_find->value = highlightline(array_slice($this->tokens, $i-$offset, $offset+3+StringAnalyzer::getBraceEnd($this->tokens, $i+2)), $this->comment, $this->tokens[$i][2], $this->tokens[$i][1], false, array(1));		
 							
 				// add to output														
 				$new_find->title = $title;
@@ -796,7 +796,7 @@ class Scanner
 				{				
 					$this->variable_add(
 						'register_globals', 
-						array_merge(array_slice($this->tokens, $i-$offset, ($end=$offset+3+Analyzer::getBraceEnd($this->tokens, $i+2))),array(array(T_COMMENT,'// is like ',0),array(T_STRING,'import_request_variables',0),'(',')')), 
+						array_merge(array_slice($this->tokens, $i-$offset, ($end=$offset+3+StringAnalyzer::getBraceEnd($this->tokens, $i+2))),array(array(T_COMMENT,'// is like ',0),array(T_STRING,'import_request_variables',0),'(',')')), 
 						'see above', 
 						1, $end+2, 
 						$this->tokens[$i][2], 
@@ -902,7 +902,7 @@ class Scanner
 
 						$this->variable_add(
 							$token_value, 
-							array_slice($this->tokens, $i-$c, $c+Analyzer::getBraceEnd($this->tokens, $i)), 
+							array_slice($this->tokens, $i-$c, $c+StringAnalyzer::getBraceEnd($this->tokens, $i)), 
 							'', 
 							0, 0, 
 							$line_nr, 
@@ -1023,13 +1023,13 @@ class Scanner
 									break;	
 								}
 							}
-							$vardeclare['end'] = Analyzer::getBraceEnd($this->tokens, $i)+1;
+							$vardeclare['end'] = StringAnalyzer::getBraceEnd($this->tokens, $i)+1;
 						// $var = anything;	
 						} else
 						{
 							$this->variable_add(
 								$token_value, 
-								array_slice($this->tokens, $i, $vardeclare['end'] = Analyzer::getBraceEnd($this->tokens, $i)+1), 
+								array_slice($this->tokens, $i, $vardeclare['end'] = StringAnalyzer::getBraceEnd($this->tokens, $i)+1), 
 								'',
 								in_array($this->tokens[$i+1][0], Tokens::$T_ASSIGNMENT) ? 0 : 1, 0,
 								$line_nr, 
@@ -1055,7 +1055,7 @@ class Scanner
 							if(!is_array($this->tokens[$i][3][0]))
 								$GLOBALS['user_input'][$token_value.'['.$this->tokens[$i][3][0].']'][$this->file_pointer][] = $line_nr;
 							else
-								$GLOBALS['user_input'][$token_value.'['.Analyzer::get_tokens_value(
+								$GLOBALS['user_input'][$token_value.'['.StringAnalyzer::get_tokens_value(
 									$this->file_pointer,
 									$this->tokens[$i][3][0],
 									$this->in_function ? $this->var_declares_local : $this->var_declares_global,
@@ -1105,7 +1105,7 @@ class Scanner
 								
 							$this->variable_add(
 								str_replace(array('"',"'"), '', $this->tokens[$i+2][1]), 
-								array_slice($this->tokens, $i, Analyzer::getBraceEnd($this->tokens, $i)+1), 
+								array_slice($this->tokens, $i, StringAnalyzer::getBraceEnd($this->tokens, $i)+1), 
 								' define() ', 
 								$c, 0, 
 								$line_nr, 
@@ -1119,27 +1119,27 @@ class Scanner
 							// ini_set('include_path', 'foo/bar')
 							if ($setting === 'include_path')
 							{
-								$path = Analyzer::get_tokens_value(
+								$path = StringAnalyzer::get_tokens_value(
 									$this->file_pointer,
-									array_slice($this->tokens, $i+4,Analyzer::getBraceEnd($this->tokens, $i+4)+1), 
+									array_slice($this->tokens, $i+4,StringAnalyzer::getBraceEnd($this->tokens, $i+4)+1), 
 									$this->in_function ? $this->var_declares_local : $this->var_declares_global, 
 									$this->var_declares_global, 
 									$i
 								);
-								$this->include_paths = array_unique(array_merge($this->include_paths, Analyzer::get_ini_paths($path)));
+								$this->include_paths = array_unique(array_merge($this->include_paths, StringAnalyzer::get_ini_paths($path)));
 							}
 						}
 						// set_include_path('foo/bar')
 						else if($token_value === 'set_include_path')
 						{
-							$path = Analyzer::get_tokens_value(
+							$path = StringAnalyzer::get_tokens_value(
 								$this->file_pointer,
-								array_slice($this->tokens, $i+1,Analyzer::getBraceEnd($this->tokens, $i+1)+1), 
+								array_slice($this->tokens, $i+1,StringAnalyzer::getBraceEnd($this->tokens, $i+1)+1), 
 								$this->in_function ? $this->var_declares_local : $this->var_declares_global, 
 								$this->var_declares_global, 
 								$i
 							);
-							$this->include_paths = array_unique(array_merge($this->include_paths, Analyzer::get_ini_paths($path)));
+							$this->include_paths = array_unique(array_merge($this->include_paths, StringAnalyzer::get_ini_paths($path)));
 						}
 						// treat error handler as called function
 						else if($token_value === 'set_error_handler')
@@ -1196,7 +1196,7 @@ class Scanner
 									// fake assignment parameter so it will not get traced			
 									$this->variable_add(
 										$this->tokens[$i + $c][1], 
-										array_slice($this->tokens,$i,Analyzer::getBraceEnd($this->tokens,$i+2)+3), 
+										array_slice($this->tokens,$i,StringAnalyzer::getBraceEnd($this->tokens,$i+2)+3), 
 										' preg_match() ', 
 										0, $c-1, 
 										$this->tokens[$i + $c][2], 
@@ -1232,7 +1232,7 @@ class Scanner
 							// add register_globals implementation
 							$this->variable_add(
 								'register_globals', 
-								array_slice($this->tokens, $i, Analyzer::getBraceEnd($this->tokens, $i+1)+1), 
+								array_slice($this->tokens, $i, StringAnalyzer::getBraceEnd($this->tokens, $i+1)+1), 
 								'register_globals implementation', 
 								0, 0, 
 								$line_nr, 
@@ -1256,7 +1256,7 @@ class Scanner
 									// fake assignment parameter so it will not get traced			
 									$this->variable_add(
 										$this->tokens[$i + $c][1], 
-										array_slice($this->tokens,$i,Analyzer::getBraceEnd($this->tokens,$i+2)+3), 
+										array_slice($this->tokens,$i,StringAnalyzer::getBraceEnd($this->tokens,$i+2)+3), 
 										' parse_str() ', 
 										0, $c-1, 
 										$this->tokens[$i + $c][2], 
@@ -1378,9 +1378,9 @@ class Scanner
 						// dynamic include
 						else
 						{
-							$inc_file = Analyzer::get_tokens_value(
+							$inc_file = StringAnalyzer::get_tokens_value(
 								$this->file_pointer,
-								array_slice($this->tokens, $i+1, $c=Analyzer::getBraceEnd($this->tokens, $i+1)+1), 
+								array_slice($this->tokens, $i+1, $c=StringAnalyzer::getBraceEnd($this->tokens, $i+1)+1), 
 								$this->in_function ? $this->var_declares_local : $this->var_declares_global, 
 								$this->var_declares_global, 
 								$i
@@ -1689,7 +1689,7 @@ class Scanner
 												($this_one_is_secure || $in_securing)
 											);										
 
-											$reconstructstr.= Analyzer::get_var_value(
+											$reconstructstr.= StringAnalyzer::get_var_value(
 												$this->file_pointer,
 												$this->tokens[$i+$c], 
 												($this->in_function && $this->tokens[$i + $c][1][0] === '$') ? $this->var_declares_local : $this->var_declares_global, 
@@ -2237,7 +2237,7 @@ class Scanner
 						{
 							$this->variable_add(
 								$this->tokens[$i + $c][1], 
-								array_slice($this->tokens,$i,Analyzer::getBraceEnd($this->tokens,$i)+1), 
+								array_slice($this->tokens,$i,StringAnalyzer::getBraceEnd($this->tokens,$i)+1), 
 								' list() ', 
 								$tokenscanstart, 0, 
 								$this->tokens[$i + $c][2],
