@@ -1,10 +1,10 @@
 <?php
-    include('config/general.php');          // general settings
-    include('config/sources.php');          // tainted variables and functions
-    include('config/tokens.php');           // tokens for lexical analysis
-    include('config/securing.php');         // securing functions
-    include('config/sinks.php');            // sensitive sinks
-    include('config/info.php');             // interesting functions    
+    include('../../config/ta_general.php');          // general settings
+    include('../../config/ta_sources.php');          // tainted variables and functions
+    include('../../config/ta_tokens.php');           // tokens for lexical analysis
+    include('../../config/ta_securing.php');         // securing functions
+    include('../../config/ta_sinks.php');            // sensitive sinks
+    include('../../config/ta_info.php');             // interesting functions    
     
     include('lib/constructer.php');         // classes  
     include('lib/filer.php');               // read files from dirs and subdirs
