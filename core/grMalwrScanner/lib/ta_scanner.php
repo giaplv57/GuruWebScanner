@@ -302,8 +302,8 @@ class Scanner
 								} 
 								
 								// check for automatic typecasts by arithmetic
-								if(in_array($tokens[$i-1], Tokens::$TOKEN_OPERATOR)
-								|| in_array($tokens[$i+1], Tokens::$TOKEN_OPERATOR) )
+								if(in_array($tokens[$i-1], Tokens::$TOKEN_OPERATOR_C)
+								|| in_array($tokens[$i+1], Tokens::$TOKEN_OPERATOR_C) )
 								{
 									// mark user function as a securing user function
 									$GLOBALS['userfunction_secures'] = true;

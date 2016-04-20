@@ -112,7 +112,7 @@ final class Tokens
 		T_DEC
 	);
 	
-	public static $TOKEN_OPERATOR = array(
+	public static $TOKEN_OPERATOR_C = array(
 		'+',
 		'-',
 		'*',
@@ -120,7 +120,7 @@ final class Tokens
 		'%'
 	);
 	
-	public static $TOKEN_SPACEWRAP = array(
+	public static $TOKEN_SPACEWRAP_C = array(
 		'.',
 		'=',
 		'>',

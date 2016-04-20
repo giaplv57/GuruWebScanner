@@ -29,7 +29,7 @@
 			{	
 				if($token === ',' || $token === ';')
 					$output .= "$token ";
-				else if(in_array($token, Tokens::$TOKEN_SPACEWRAP) || in_array($token, Tokens::$TOKEN_OPERATOR))
+				else if(in_array($token, Tokens::$TOKEN_SPACEWRAP_C) || in_array($token, Tokens::$TOKEN_OPERATOR_C))
 					$output .= " $token ";
 				else	
 					$output .= $token;
@@ -66,7 +66,7 @@
 			{		
 				if($token === ',' || $token === ';')
 					$output .= "<span class=\"phps-code\">$token&nbsp;</span>";
-				else if(in_array($token, Tokens::$TOKEN_SPACEWRAP) || in_array($token, Tokens::$TOKEN_OPERATOR))
+				else if(in_array($token, Tokens::$TOKEN_SPACEWRAP_C) || in_array($token, Tokens::$TOKEN_OPERATOR_C))
 					$output .= '<span class="phps-code">&nbsp;'.$token.'&nbsp;</span>';
 				else
 					$output .= '<span class="phps-code">'.htmlentities($token, ENT_QUOTES, 'utf-8').'</span>';
