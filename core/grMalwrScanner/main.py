@@ -154,7 +154,8 @@ def load_taint_analysis_result(projectid):
                 url = key[61+4:]
                 if not url in _urllist: 
                     shellname = "GuruWS :: Taint Analysis :: " + treenode['title']
-                    filename = key.split('/')[-1]
+                    line = treenode['value'].split('>')[1].split(':')[0]
+                    filename = key.split('/')[-1] + " [" + line + "]"
                     filesize = -1
                     import_shell(url, shellname, filename, filesize)                    
     print _shells

@@ -35,8 +35,8 @@
 		'mb_ereg_replace'				=> array(array(1,2), $F_SECURING_PREG),
 		'mb_eregi_replace'				=> array(array(1,2), $F_SECURING_PREG),
 		'preg_filter'					=> array(array(1,2), $F_SECURING_PREG),
-		'preg_replace'					=> array(array(1,2), $F_SECURING_PREG),
-		'preg_replace_callback'			=> array(array(1), $F_SECURING_PREG),		
+		//'preg_replace'					=> array(array(1,2), $F_SECURING_PREG),
+		//'preg_replace_callback'			=> array(array(1), $F_SECURING_PREG),		
 	);
 	
 	$NAME_REFLECTION = 'Reflection Injection';
