@@ -3,7 +3,7 @@
 final class Tokens
 {	
 	
-	public static $T_IGNORE = array(
+	public static $TOKEN_IGNORE = array(
 		T_BAD_CHARACTER,
 		T_DOC_COMMENT,
 		T_COMMENT,	
@@ -12,13 +12,13 @@ final class Tokens
 		T_OPEN_TAG		
 	);
 	
-	public static $T_LOOP_CONTROL = array(	
+	public static $TOKEN_LOOPCONTROL = array(	
 		T_WHILE,
 		T_FOR,
 		T_FOREACH
 	);
 		
-	public static $T_FLOW_CONTROL = array(
+	public static $TOKEN_FLOWCONTROL = array(
 		T_IF, 
 		T_SWITCH, 
 		T_CASE, 
@@ -26,7 +26,7 @@ final class Tokens
 		T_ELSEIF
 	);	
 		
-	public static $T_ASSIGNMENT = array(
+	public static $TOKEN_ASSIGNMENT = array(
 		T_AND_EQUAL,
 		T_CONCAT_EQUAL,
 		T_DIV_EQUAL,
@@ -40,7 +40,7 @@ final class Tokens
 		T_XOR_EQUAL
 	);
 	
-	public static $T_ASSIGNMENT_SECURE = array(
+	public static $TOKEN_ASSIGNMENT_SECURE = array(
 		T_DIV_EQUAL,
 		T_MINUS_EQUAL,
 		T_MOD_EQUAL,
@@ -52,7 +52,7 @@ final class Tokens
 		T_XOR_EQUAL
 	);
 	
-	public static $T_OPERATOR = array(
+	public static $TOKEN_OPERATOR = array(
 		T_IS_EQUAL,
 		T_IS_GREATER_OR_EQUAL,
 		T_IS_IDENTICAL,
@@ -61,7 +61,7 @@ final class Tokens
 		T_IS_SMALLER_OR_EQUAL
 	);
 	
-	public static $T_FUNCTIONS = array(
+	public static $TOKEN_FUNCTIONS = array(
 		T_STRING,
 		T_EVAL,
 		T_INCLUDE,
@@ -70,21 +70,21 @@ final class Tokens
 		T_REQUIRE_ONCE
 	);
 	
-	public static $T_INCLUDES = array(
+	public static $TOKEN_INCLUDES = array(
 		T_INCLUDE,
 		T_INCLUDE_ONCE,
 		T_REQUIRE,
 		T_REQUIRE_ONCE
 	);
 	
-	public static $T_XSS = array(
+	public static $TOKEN_XSS = array(
 		T_PRINT,
 		T_ECHO,
 		T_OPEN_TAG_WITH_ECHO,
 		T_EXIT
 	);
 	
-	public static $T_CASTS = array(
+	public static $TOKEN_CASTS = array(
 		T_BOOL_CAST,
 		T_DOUBLE_CAST,
 		T_INT_CAST,
@@ -92,7 +92,7 @@ final class Tokens
 		T_UNSET
 	);
 	
-	public static $T_SPACE_WRAP = array(
+	public static $TOKEN_SPACEWRAP = array(
 		T_AS,
 		T_BOOLEAN_AND,
 		T_BOOLEAN_OR,
@@ -107,12 +107,12 @@ final class Tokens
 		T_NEW
 	);
 	
-	public static $T_ARITHMETIC = array(
+	public static $TOKEN_ARITHMETIC = array(
 		T_INC,
 		T_DEC
 	);
 	
-	public static $S_ARITHMETIC = array(
+	public static $TOKEN_OPERATOR = array(
 		'+',
 		'-',
 		'*',
@@ -120,7 +120,7 @@ final class Tokens
 		'%'
 	);
 	
-	public static $S_SPACE_WRAP = array(
+	public static $TOKEN_SPACEWRAP = array(
 		'.',
 		'=',
 		'>',

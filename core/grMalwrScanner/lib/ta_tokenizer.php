@@ -1,19 +1,4 @@
 <?php
-/** 
-
-RIPS - A static source code analyser for vulnerabilities in PHP scripts 
-	by Johannes Dahse (johannes.dahse@rub.de)
-			
-			
-Copyright (C) 2012 Johannes Dahse
-
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>.
-
-**/
 
 class Tokenizer
 {	
@@ -55,7 +40,7 @@ class Tokenizer
 		{
 			if( is_array($this->tokens[$i]) ) 
 			{
-				if( in_array($this->tokens[$i][0], Tokens::$T_IGNORE) )
+				if( in_array($this->tokens[$i][0], Tokens::$TOKEN_IGNORE) )
 					unset($this->tokens[$i]);
 				else if( $this->tokens[$i][0] === T_CLOSE_TAG )
 					$this->tokens[$i] = ';';	
@@ -486,7 +471,7 @@ class Tokenizer
 					
 				}
 				// condition is a check or assignment
-				else if(in_array($this->tokens[$i-2][0], Tokens::$T_ASSIGNMENT) || in_array($this->tokens[$i-2][0], Tokens::$T_OPERATOR) )
+				else if(in_array($this->tokens[$i-2][0], Tokens::$TOKEN_ASSIGNMENT) || in_array($this->tokens[$i-2][0], Tokens::$TOKEN_OPERATOR) )
 				{
 					// remove both operands
 					unset($this->tokens[$i-1]);

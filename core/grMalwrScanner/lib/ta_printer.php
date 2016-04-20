@@ -29,12 +29,12 @@
 			{	
 				if($token === ',' || $token === ';')
 					$output .= "$token ";
-				else if(in_array($token, Tokens::$S_SPACE_WRAP) || in_array($token, Tokens::$S_ARITHMETIC))
+				else if(in_array($token, Tokens::$TOKEN_SPACEWRAP) || in_array($token, Tokens::$TOKEN_OPERATOR))
 					$output .= " $token ";
 				else	
 					$output .= $token;
 			}	
-			else if(in_array($token[0], Tokens::$T_SPACE_WRAP) || in_array($token[0], Tokens::$T_OPERATOR) || in_array($token[0], Tokens::$T_ASSIGNMENT))
+			else if(in_array($token[0], Tokens::$TOKEN_SPACEWRAP) || in_array($token[0], Tokens::$TOKEN_OPERATOR) || in_array($token[0], Tokens::$TOKEN_ASSIGNMENT))
 				$output .= " {$token[1]} ";
 			else
 				$output .= $token[1];
@@ -66,7 +66,7 @@
 			{		
 				if($token === ',' || $token === ';')
 					$output .= "<span class=\"phps-code\">$token&nbsp;</span>";
-				else if(in_array($token, Tokens::$S_SPACE_WRAP) || in_array($token, Tokens::$S_ARITHMETIC))
+				else if(in_array($token, Tokens::$TOKEN_SPACEWRAP) || in_array($token, Tokens::$TOKEN_OPERATOR))
 					$output .= '<span class="phps-code">&nbsp;'.$token.'&nbsp;</span>';
 				else
 					$output .= '<span class="phps-code">'.htmlentities($token, ENT_QUOTES, 'utf-8').'</span>';
@@ -77,7 +77,7 @@
 			&& $token[0] !== T_CLOSE_TAG) 
 			{
 				
-				if(in_array($token[0], Tokens::$T_SPACE_WRAP) || in_array($token[0], Tokens::$T_OPERATOR) || in_array($token[0], Tokens::$T_ASSIGNMENT))
+				if(in_array($token[0], Tokens::$TOKEN_SPACEWRAP) || in_array($token[0], Tokens::$TOKEN_OPERATOR) || in_array($token[0], Tokens::$TOKEN_ASSIGNMENT))
 				{
 					$output.= '&nbsp;<span class="phps-'.str_replace('_', '-', strtolower(token_name($token[0])))."\">{$token[1]}</span>&nbsp;";
 				}	
@@ -162,7 +162,7 @@
 						}
 					}
 					$output .= $text;
-					if(is_array($token) && (in_array($token[0], Tokens::$T_INCLUDES) || in_array($token[0], Tokens::$T_XSS) || $token[0] === 'T_EVAL'))
+					if(is_array($token) && (in_array($token[0], Tokens::$TOKEN_INCLUDES) || in_array($token[0], Tokens::$TOKEN_XSS) || $token[0] === 'T_EVAL'))
 						$output .= '&nbsp;';
 				}		
 			}
