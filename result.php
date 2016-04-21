@@ -1,3 +1,19 @@
+<?php
+  include("connectdb.php");
+  if (isset($_COOKIE["projectID"]) && isset($_COOKIE["projectName"])) {
+    $con = ConnectDB() or die("can't connect to DB");
+    $projectID  = mysqli_escape_string($con, $_COOKIE["projectID"]);
+    if (isset($_GET["checkProgress"])){
+      $query = mysqli_query($con,"SELECT vulStatus, sigStatus FROM scanProgress WHERE projectID='$projectID'") or die(mysqli_error($con));
+      $status = mysqli_fetch_row($query);
+      $vulStatus = $status[0];
+      $sigStatus = $status[1];
+      $progressResult = array('vulStatus' => $vulStatus, 'sigStatus' => $sigStatus);
+      echo json_encode($progressResult);
+      die();
+    }
+  }
+?>
 <!doctype html>
 <html>
   <head>
@@ -82,7 +98,6 @@
   </head>
 
   <body>
-    <?php include("connectdb.php"); ?>
     <div id="navigation">
       <div class="container-fluid">
         <a href="./"><img src="assets/img/logowhite.jpg" alt="" class='retina-ready' width="200px"></a>          
@@ -94,7 +109,7 @@
     // For DEBUG purpose
     // ini_set('display_errors',1); 
     // error_reporting(E_ALL);
-    ////////////////////////////////
+    //////////////////////////////
 
     //Calculate folder size
     function dirSize($directory) {
@@ -203,7 +218,7 @@
                         <td>
                           <font face="Consolas"><b>
                             <?php if($vulStatus != 1){
-                                    echo "<div id='wait'>On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)</div>";
+                                    echo "<div id='waitVul'>On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)</div>";
                                   }else{
                                     $numberOfVul = mysqli_query($con,"SELECT count(fileName) FROM vulResult WHERE projectID='$projectID'") or die(mysqli_error($con));
                                     echo mysqli_fetch_row($numberOfVul)[0];
@@ -250,8 +265,8 @@
                           <font face="Consolas"><b>
                             <?php
                               if($sigStatus != 1){
-                                echo "<div id='wait'>On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)</div>";
-                              	echo '<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a></font>';
+                                echo "<div id='waitMal'>On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)</div>";
+                                echo '<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a></font>';
                               }
                               else {
                                 $query = mysqli_query($con,"SELECT result FROM malResult WHERE projectID='$projectID'") or die(mysqli_error($con));
@@ -317,7 +332,7 @@
                               </td>                     
                             </tr>';
                         }
-              			}
+                    }
                       ?>
 
                       <tr>
@@ -359,13 +374,23 @@
       <a href="#" class="gototop"><i class="icon-arrow-up"></i></a>
     </div>
     <script>
-      var x = document.getElementById('wait');
-      if (x != null) {        
-        document.write("<meta name='autoreload' http-equiv='refresh' content='5'>");
-      }
-      else {
-        console.log("Scan completed!");
-      }
+      var waitVul = document.getElementById('waitVul');
+      var waitMal = document.getElementById('waitMal');
+      var xhttp = new XMLHttpRequest();
+      var lockResetSign = false;
+      setInterval(function() {
+        if (lockResetSign == false){
+          xhttp.open("GET", "result.php?checkProgress=1", false);
+          xhttp.send();
+          var scanProgress = JSON.parse(xhttp.responseText);
+          if (scanProgress['sigStatus'] == 1 && scanProgress['vulStatus'] == 0 && waitMal != null){
+            location.reload();
+          }else if (scanProgress['sigStatus'] == 1 && scanProgress['vulStatus'] == 1 && waitVul != null){
+            location.reload();
+            lockResetSign = true;
+          }
+        }
+      }, 4000); //4 seconds 
     </script>
   </body>
 

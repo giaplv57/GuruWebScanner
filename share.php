@@ -163,7 +163,7 @@
 													<font face="Consolas"><b>
                             <?php
                                 if($vulStatus != 1) {
-                                    echo "On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)";
+                                    echo "<div id='waitVul'>On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)</div>";
                                 }else{
                                   $numberOfVul = mysqli_query($con,"SELECT count(fileName) FROM vulResult WHERE projectID='$projectID'") or die(mysqli_error($con));
                                   echo mysqli_fetch_row($numberOfVul)[0];
@@ -210,7 +210,7 @@
                               <font face="Consolas"><b>
                                 <?php
                                   if($sigStatus != 1){
-                                    echo "<div id='wait'>On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)</div>";
+                                    echo "<div id='waitMal'>On scanning progress, comeback later to see your result.<br>(Keep the share link below to view result later)</div>";
                                     echo '<a style="cursor:pointer;" onclick="eModal.ajax(options);">More advanced analytics</a></font>';
                                   }
                                   else {
@@ -315,7 +315,25 @@
 			</div>
 			<a href="#" class="gototop"><i class="icon-arrow-up"></i></a>
 		</div>
-		
+		<script>
+      var waitVul = document.getElementById('waitVul');
+      var waitMal = document.getElementById('waitMal');
+      var xhttp = new XMLHttpRequest();
+      var lockResetSign = false;
+      setInterval(function() {
+        if (lockResetSign == false){
+          xhttp.open("GET", "result.php?checkProgress=1", false);
+          xhttp.send();
+          var scanProgress = JSON.parse(xhttp.responseText);
+          if (scanProgress['sigStatus'] == 1 && scanProgress['vulStatus'] == 0 && waitMal != null){
+            location.reload();
+          }else if (scanProgress['sigStatus'] == 1 && scanProgress['vulStatus'] == 1 && waitVul != null){
+            location.reload();
+            lockResetSign = true;
+          }
+        }
+      }, 4000); //4 seconds 
+    </script>
 	</body>
 
 </html>
