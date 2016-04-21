@@ -53,6 +53,15 @@ abstract class PHPParser_NodeAbstract implements PHPParser_Node, IteratorAggrega
     }
 
     /**
+     * Gets $subNodes.
+     *
+     * @return int Line
+     */
+    public function getsubNodes() {
+        return $this->subNodes;
+    }
+
+    /**
      * Gets filename the node started in.
      *
      * @return string Filename

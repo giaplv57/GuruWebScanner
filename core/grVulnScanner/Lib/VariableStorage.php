@@ -4,14 +4,13 @@ class VariableValue {
      * @var bool
      */
     public $userInput;
-    /**
-     * @var bool
-     */
     public $xss;
-    /**
-     * @var bool
-     */
     public $sql;
+    public $command;    #command injection
+    public $lfi;        #local file include
+    public $poi;        #PHP object injection
+    public $xpath;      #xpath injection
+    public $code;       #Arbitrary Eval Code Injection
 
     /**
      * @var array
@@ -31,8 +30,13 @@ class VariableValue {
         $this->userInput = $defaultTaint;
         $this->xss = $defaultTaint;
         $this->sql = $defaultTaint;
+        $this->command = $defaultTaint;
+        $this->lfi = $defaultTaint;
+        $this->poi = $defaultTaint;
+        $this->xpath = $defaultTaint;
+        $this->code = $defaultTaint;
         if ($defaultTaint == true) {
-            $this->value = "{USERINPUT_XSS_SQL}";
+            $this->value = "{USERINPUT_XSS_SQL_COMMAND_LFI_POI_XPATH_CODE}";
         }
     }
 
@@ -363,6 +367,11 @@ class VariableStorage {
                             !($valTwo instanceof VariableValue) ||
                             $val->xss != $valTwo->xss ||
                             $val->sql != $valTwo->sql ||
+                            $val->command != $valTwo->command ||
+                            $val->lfi != $valTwo->lfi ||
+                            $val->poi != $valTwo->poi ||
+                            $val->xpath != $valTwo->xpath ||
+                            $val->code != $valTwo->code ||
                             $val->userInput != $valTwo->userInput ||
                             (!self::$ignoreFlow && $candOneSerialized != serialize($candTwo))) {
                             $same = false;
@@ -400,7 +409,6 @@ class VariableStorage {
 function printVariableValue($varName, $item, $spacer = 0) {
     if (is_array($item) || $item instanceof Traversable) {
         foreach ($item as $v) {
-            //var_dump($v);
             printVariableValue($varName, $v, $spacer+1);
         }
     } else {
