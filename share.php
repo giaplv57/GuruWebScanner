@@ -227,8 +227,9 @@
                               <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
                               <font face="Consolas">';                     
                             echo '<b>Webshell was found in: <a>' . $grShell['filename'] . '</a></b><br>';
-                            echo 'Full path: ' . $grShell['url'] . '</b><br>';                      
-                            echo 'Filesize: ' . round($grShell['filesize']/1024, 2) . ' KB <br>';  
+                            echo 'Full path: ' . $grShell['url'] . '</b><br>';           
+                            if ($grShell['filesize'] !== 0) {           
+                                echo 'Filesize: ' . round($grShell['filesize']/1024, 2) . ' KB <br>';  }
                             echo 'Fingerprint: <b style="color:red">'. $grShell['shellname'] .'</b>';
                           
                             echo '</font>

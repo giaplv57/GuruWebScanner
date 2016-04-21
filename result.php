@@ -263,9 +263,11 @@
                             <td></td>
                             <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
                             <font face="Consolas">';                     
-                          echo '<b>Webshell found: <a>' . $grShell['filename'] . '</a></b><br>';
-                          echo '<b>Full path:</b> ' . $grShell['url'] . '</b><br>';                      
-                          echo '<b>Filesize:</b> ' . round($grShell['filesize']/1024, 2) . ' KB <br>';  
+                          echo '<b>Webshell found: <a>' . $grShell['filename'] . '</a></b><br>';                          
+                          echo '<b>Full path:</b> ' . $grShell['url'] . '</b><br>';       
+                          if ($grShell['filesize'] !== 0) {
+                            echo '<b>Filesize:</b> ' . round($grShell['filesize']/1024, 2) . ' KB <br>';  
+                          }
                           echo '<b>Fingerprint:</b> <b style="color:red">'. $grShell['shellname'] .'</b>';
                         
                           echo '</font>

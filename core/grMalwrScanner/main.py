@@ -79,7 +79,7 @@ def line_reduce(linecontent):
     else:
         return linecontent
 
-def import_shell(url, shellname, filename, filesize=-1):
+def import_shell(url, shellname, filename, filesize=0):
     _urllist.append(url);
     tshell = {
         "shellname": shellname,
@@ -156,7 +156,7 @@ def load_taint_analysis_result(projectid):
                     shellname = "GuruWS :: Taint Analysis :: " + treenode['title']
                     line = treenode['value'].split('>')[1].split(':')[0]
                     filename = key.split('/')[-1] + " [" + line + "]"
-                    filesize = -1
+                    filesize = 0
                     import_shell(url, shellname, filename, filesize)                    
     print _shells
     return True
