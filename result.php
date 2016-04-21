@@ -279,7 +279,7 @@
                             <td></td>
                             <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
                             <font face="Consolas">';                     
-                          echo '<b>Suspicious behavior found in: ' . $firstArrayElement['filename'] . '</b><br>';
+                          echo '<b>Dangerous function was found in: ' . $firstArrayElement['filename'] . '</b><br>';
                           echo '<b>Full path:</b> ' . $firstArrayElement['url']. '<br>';              
                           echo '<b>Filesize:</b> ' . round($firstArrayElement['filesize']/1024, 2) . ' KB <br>';
                           echo '<b>Function:</b> ';

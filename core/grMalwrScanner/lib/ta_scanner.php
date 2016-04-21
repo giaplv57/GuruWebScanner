@@ -1937,7 +1937,7 @@ class Scanner
 								} else
 								{
 									if(empty($new_find->title)) {
-										$new_find->title = 'A1961 - Userinput reaches sensitive sink.';
+										$new_find->title = 'Found suspicious behavior';
 									}
 									$block = new VulnBlock($this->tif.'_'.$this->tokens[$i][2].'_'.basename($this->file_pointer), getVulnNodeTitle($token_value), $token_value);
 									$block->treenodes[] = $new_find;
