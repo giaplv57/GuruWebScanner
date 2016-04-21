@@ -136,10 +136,13 @@ def write_to_DB(projectid):
 
 def load_taint_analysis_result(projectid):
     def get_json_content():
-        outfile = "./../../userProjects/" + projectid + ".ta"
-        with open(outfile, 'r') as f:
-            output = f.read()
-        return json.loads(output)
+        try:
+            outfile = "./../../userProjects/" + projectid + ".ta"
+            with open(outfile, 'r') as f:
+                output = f.read()
+            return json.loads(output)
+        except:
+            return None
     
     json_content = get_json_content()
 

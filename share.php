@@ -41,6 +41,20 @@
 	        $('[data-toggle="popover"]').popover({animation: true, placement: "top", delay: {show: 100, hide: 100}});   
 	        // $("html").niceScroll();
 	      });
+          $(document).ready(function(){
+                $("#showdfunc").click(function(){
+                    $(".dfunc").slideDown("slow");                    
+                    $("#showdfunc").hide();
+                    $("#hidedfunc").show();
+                });
+          });
+          $(document).ready(function(){
+                $("#hidedfunc").click(function(){
+                    $(".dfunc").slideUp("fast");                    
+                    $("#showdfunc").show();
+                    $("#hidedfunc").hide();
+                });
+          });
 	    </script>
 		<!--[if lte IE 9]>
 			<script src="assets/js/plugins/placeholder/jquery.placeholder.min.js"></script>
@@ -236,9 +250,13 @@
                               </tr>';
                           }
 
+                                        
+                          echo '<tr id="showdfunc" style="color:green"><td></td><td>[+] Show dangerous functions...</td></tr>';
+                          echo '<tr id="hidedfunc" style="color:green; display:none"><td></td><td>[+] Hide dangerous functions...</td></tr>';
+
                           foreach ($dangerousFunctionByFile as $urlAsKey => $dangerousFile) {
                             $firstArrayElement = array_shift(array_values($dangerousFile)); 
-                            echo '<tr>
+                            echo '<tr class=dfunc style=display:none;>
                               <td></td>
                               <td style="word-wrap: break-word;min-width: 40px;max-width: 40px;">
                               <font face="Consolas">';                     
@@ -258,9 +276,9 @@
                             echo '</font>
                                 </td>                     
                               </tr>';
-                          }
-                          }
-                      ?>
+                          }                          
+                          }                        
+                      ?>                      
                       <tr>
                         <td>[+] Link to share:</td>                     
                         <td>
