@@ -244,7 +244,10 @@
                             echo 'Full path: ' . $grShell['url'] . '</b><br>';           
                             if ($grShell['filesize'] !== 0) {           
                                 echo 'Filesize: ' . round($grShell['filesize']/1024, 2) . ' KB <br>';  }
-                            echo '<b>Fingerprint:</b> <b style="color:red">'. $grShell['shellname'] .'</b> <a tabindex="0" style="cursor:pointer;" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="'. $grShell['sink'] . ' [' . $grShell['line'] .']" data-original-title="GuruWS Malware Scanner Helper">(More information)</a>';
+                            echo '<b>Fingerprint:</b> <b style="color:red">'. $grShell['shellname'] .'</b> ';
+                            if ($grShell['line'] !== '?') {
+                                echo '<a tabindex="0" style="cursor:pointer;" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="'. $grShell['sink'] . ' [' . $grShell['line'] .']" data-original-title="GuruWS Malware Scanner Helper">(More information)</a>';
+                            }
                             echo '</font>
                                 </td>                     
                               </tr>';

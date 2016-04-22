@@ -46,7 +46,7 @@
     <!-- Bootstrap -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- font-awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-aweg247some/4.4.0/css/font-awesome.min.css">
     <!-- Easy Modal for bootstrap -->
     <script src="assets/js/eModal.min.js"></script>
 
@@ -300,7 +300,11 @@
                           if ($grShell['filesize'] !== 0) {
                             echo '<b>Filesize:</b> ' . round($grShell['filesize']/1024, 2) . ' KB <br>';  
                           }
-                          echo '<b>Fingerprint:</b> <b style="color:red">'. $grShell['shellname'] .'</b> <a tabindex="0" style="cursor:pointer;" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="'. $grShell['sink'] . ' [' . $grShell['line'] .']" data-original-title="GuruWS Malware Scanner Helper">(More information)</a>';
+
+                          echo '<b>Fingerprint:</b> <b style="color:red">'. $grShell['shellname'] .'</b> ';
+                          if ($grShell['line'] !== '?') {
+                            echo '<a tabindex="0" style="cursor:pointer;" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="'. $grShell['sink'] . ' [' . $grShell['line'] .']" data-original-title="GuruWS Malware Scanner Helper">(More information)</a>';
+                          }
                         
                           echo '</font>
                               </td>                     
