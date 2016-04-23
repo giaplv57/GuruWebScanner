@@ -44,7 +44,6 @@
     include('../config/ta_tokens.php');           // tokens for lexical analysis
     include('../config/ta_securing.php');         // securing functions
     include('../config/ta_sinks.php');            // sensitive sinks
-    include('../config/ta_info.php');             // interesting functions    
     
     include('ta_constructer.php');         // classes  
     include('ta_tokenizer.php');           // prepare and fix token list
