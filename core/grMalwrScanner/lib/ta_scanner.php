@@ -136,7 +136,7 @@ class Scanner
 	// traces recursivly parameters and adds them as child to parent
 	// returns true if a parameter is tainted by userinput (1=directly tainted, 2=function param)
 	function scan_parameter($mainparent, $parent, $var_token, $var_keys=array(), $last_token_id, $var_declares, $var_declares_global=array(), $userinput, $F_SECURES=array(), $return_scan=false, $ignore_securing=false, $secured=false)
-	{	
+	{
 		#print_r(func_get_args());echo "\n----------------\n";
 		$vardependent = false;
 		
@@ -184,7 +184,7 @@ class Scanner
 			}
 		
 			// if a register_globals implementation is present shift it to the beginning of the var_declare array
-			if(isset($var_declares['register_globals']) && !in_array($var_name, Sources::$V_USERINPUT)
+			if(isset($var_declares['register_globals']) && !in_array($var_name, Sources::$SRC_USERINPUT)
 			&& (!$this->in_function || in_array($var_name, $this->put_in_global_scope)))
 			{		
 				if(!isset($var_declares[$var_name]))
@@ -204,7 +204,7 @@ class Scanner
 
 		// check if var declaration could be found for this var
 		// and if the latest var_declares id is smaller than the last_token_id, otherwise continue with function parameters		
-#echo "trying: $var_name, isset: ".(int)(isset($var_declares[$var_name])).", ".end($var_declares[$var_name])->id." < ".$last_token_id."?\n";		
+		# echo "trying: $var_name, isset: ".(int)(isset($var_declares[$var_name])).", ".end($var_declares[$var_name])->id." < ".$last_token_id."?\n";		
 		if( isset($var_declares[$var_name]) && (end($var_declares[$var_name])->id < $last_token_id || $userinput) )
 		{		
 			foreach($var_declares[$var_name] as $var_declare)
@@ -214,10 +214,10 @@ class Scanner
 				if( !empty($var_token[3]) && !empty($var_declare->array_keys) )	
 					$array_key_diff = array_diff_assoc($var_token[3], $var_declare->array_keys); 
 				
-#print_r($var_declares[$var_name]);		
-#echo "<br>var:".$var_name; echo " varkeys:";print_r($var_token[3]); echo " declarekeys:";print_r($var_declare->array_keys); echo " diff:"; print_r($array_key_diff); echo " |||";
+					#print_r($var_declares[$var_name]);		
+					#echo "<br>var:".$var_name; echo " varkeys:";print_r($var_token[3]); echo " declarekeys:";print_r($var_declare->array_keys); echo " diff:"; print_r($array_key_diff); echo " |||";
 
-#if(!empty($var_declare->array_keys)) die(print_r($var_declare->array_keys) . print_r($var_keys));
+					#if(!empty($var_declare->array_keys)) die(print_r($var_declare->array_keys) . print_r($var_keys));
 
 				if( $var_declare->id < $last_token_id && (empty($array_key_diff) || in_array('*', $array_key_diff) || in_array('*', $var_declare->array_keys)) /* && (empty($var_declare->array_keys) || empty($var_keys) || $var_declare->array_keys == $var_keys || in_array('*', $var_keys) || in_array('*', $array_key_diff) || in_array('*', $var_declare->array_keys) ) */  )
 				{	
@@ -463,7 +463,7 @@ class Scanner
 			$userinput = 2;
 		} 
 		// register globals
-		else if(SCAN_REGISTER_GLOBALS && $var_token[0] === T_VARIABLE && !in_array($var_name, Sources::$V_USERINPUT) && (!$this->in_function || (in_array($var_name, $this->put_in_global_scope) && !in_array($var_name, $this->function_obj->parameters))) && empty($secured))
+		else if(SCAN_REGISTER_GLOBALS && $var_token[0] === T_VARIABLE && !in_array($var_name, Sources::$SRC_USERINPUT) && (!$this->in_function || (in_array($var_name, $this->put_in_global_scope) && !in_array($var_name, $this->function_obj->parameters))) && empty($secured))
 		{
 			// add highlighted line to output, mark tainted vars
 			$var_trace = new VarDeclare('');
@@ -477,7 +477,7 @@ class Scanner
 		
 		
 		// if var is userinput, return true directly	
-		if( in_array($var_name, Sources::$V_USERINPUT) && empty($secured) )
+		if( in_array($var_name, Sources::$SRC_USERINPUT) && empty($secured) )
 		{
 			// check if userinput variable has been overwritten
 			$overwritten = false;
@@ -506,7 +506,7 @@ class Scanner
 				
 				// mark tainted, but only specific $_SERVER parameters
 				if($var_name !== '$_SERVER'
-				|| in_array($parameter_name, Sources::$V_SERVER_PARAMS) 
+				|| in_array($parameter_name, Sources::$SRC_SERVER_PARAMS) 
 				|| substr($parameter_name,0,5) === 'HTTP_')
 				{
 					$userinput = true;
@@ -521,7 +521,7 @@ class Scanner
 						{
 							for($t=0;$t<count($dtokens);$t++)
 							{						
-								if($dtokens[$t][0] === T_VARIABLE && in_array($dtokens[$t][1], Sources::$V_USERINPUT) && ($dtokens[$t][1] !== '$_SERVER' || in_array($dtokens[$t][3][0], Sources::$V_SERVER_PARAMS)
+								if($dtokens[$t][0] === T_VARIABLE && in_array($dtokens[$t][1], Sources::$SRC_USERINPUT) && ($dtokens[$t][1] !== '$_SERVER' || in_array($dtokens[$t][3][0], Sources::$SRC_SERVER_PARAMS)
 								|| substr($dtokens[$t][3][0],0,5) === 'HTTP_'))
 								{
 									$this->addexploitparameter($mainparent, $dtokens[$t][1], str_replace(array('"',"'"), '', $dtokens[$t][3][0]));		
@@ -827,7 +827,7 @@ class Scanner
 	function parse()		//*
 	{
 		// scan all tokens
-		for($i=0,$tokencount=count($this->tokens); $i<$tokencount;  $i++, $this->tif++)
+		for($i = 0, $tokencount = count($this->tokens); $i < $tokencount;  $i++, $this->tif++)
 		{		
 			if( is_array($this->tokens[$i]) )
 			{
@@ -843,16 +843,8 @@ class Scanner
 					flush();
 				}
 
-				# debug
-				#echo "array token: i:" . i;
-				#echo "file:".$file_name.",line:".$line_nr.",token:".token_name($token_name).",";
-				#echo "value:".htmlentities($token_value).",";
-				#echo "in_function:".$in_function.",in_class:".$in_class."<br>";
-				#echo "\n";	
 
-				/*************************
-						T_VARIABLE			
-				*************************/		
+				// --- [ T_VARIABLE ] ------------------------------------------
 				if($token_name === T_VARIABLE)
 				{
 					// $var()
@@ -1033,7 +1025,7 @@ class Scanner
 					//else if ($token_name === T_STRING && $tokens[$i-1][0] === T_OBJECTOKEN_OPERATOR && $tokens[$i-2][0] === T_VARIABLE)	
 					
 					// add user input variables to global finding list
-					if( in_array($token_value, Sources::$V_USERINPUT) )
+					if( in_array($token_value, Sources::$SRC_USERINPUT) )
 					{
 						if(isset($this->tokens[$i][3]))
 						{
@@ -1068,9 +1060,9 @@ class Scanner
 				|| (in_array($token_name, Tokens::$TOKEN_XSS) && ($_POST['vector'] == 'client' || $_POST['vector'] == 'xss' || $_POST['vector'] == 'all')) )
 				{		
 					$class='';
-					/*************************
-							T_STRING			
-					*************************/					
+
+					// --- [ T_STRING ] ------------------------------------------					
+
 					if($token_name === T_STRING && $this->tokens[$i+1] === '(')
 					{
 						// define("FOO", $_GET['asd']);
@@ -1331,9 +1323,9 @@ class Scanner
 							}
 						}
 					} 
-					/*************************
-						FILE INCLUSION		
-					*************************/
+
+					// --- [ FILE INCLUSION ] ------------------------------------------					
+
 					// include tokens from included files
 					else if( in_array($token_name, Tokens::$TOKEN_INCLUDES) && !$this->in_function)
 					{						
@@ -1574,10 +1566,9 @@ class Scanner
 					}	
 
 					//*
+					
+					// --- [ Taint analysis ] ------------------------------------------
 
-					/*************************
-						TAINT ANALYSIS			
-					*************************/	
 					if(isset($this->scan_functions[$token_value]) && $GLOBALS['verbosity'] != 5
 					// not a function of a class or a function of a vulnerable class
 					&& (empty($class) || (($this->in_function && is_array($function_obj->parameters) && in_array($classvar, $function_obj->parameters)) || @in_array($token_value, $this->vuln_classes[$class]))) )
@@ -1696,7 +1687,7 @@ class Scanner
 										} 
 										
 										// mark userinput for quote analysis
-										if(in_array($this->tokens[$i + $c][1], Sources::$V_USERINPUT))
+										if(in_array($this->tokens[$i + $c][1], Sources::$SRC_USERINPUT))
 										{
 											$reconstructstr.='$_USERINPUT';
 										}
@@ -1965,10 +1956,9 @@ class Scanner
 						} 
 					} // taint analysis		
 				}	
-				
-				/*************************
-					CONTROL STRUCTURES		
-				*************************/
+
+				// --- [ Control Structures ] ------------------------------------------
+
 				else if( in_array($token_name, Tokens::$TOKEN_LOOPCONTROL) ) 
 				{
 					// ignore in requirements output: while, for, foreach	
@@ -2008,10 +1998,7 @@ class Scanner
 					$this->dependencytokens = array_slice($this->tokens,$i,$c);
 				}
 				
-				/*************************
-					FUNCTIONS		
-				*************************/
-				// check if token is a function declaration
+				// --- [ T_FUNCTION ] ------------------------------------------
 				else if($token_name === T_FUNCTION)
 				{
 					if($this->in_function)
@@ -2171,9 +2158,8 @@ class Scanner
 					}
 				}				
 				
-				/*************************
-					CLASSES		
-				*************************/
+				// --- [ T_CLASS ] ------------------------------------------
+
 				// check if token is a class declaration
 				else if($token_name === T_CLASS)
 				{
@@ -2195,9 +2181,9 @@ class Scanner
 					$this->vuln_classes[$this->class_name] = $this->vuln_classes[ $this->tokens[$i+1][1] ];
 				}
 				
-				/*************************
-					OTHER		
-				*************************/
+				
+				// --- [ OTHERS ] ------------------------------------------
+				
 				// list($drink, $color, $power) = $info;
 				else if($token_name === T_LIST)
 				{		

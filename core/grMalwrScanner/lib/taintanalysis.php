@@ -60,7 +60,7 @@
                         $F_XPATH        // XPath Execution
                     );
     $info_functions = Info::$F_INTEREST;
-    $source_functions = Sources::$F_OTHER_INPUT;
+    $source_functions = Sources::$SRC_OTHER_INPUT;
     
     $url = $argv[1];
     $outfile = $argv[2];

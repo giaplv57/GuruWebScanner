@@ -32,7 +32,7 @@ class StringAnalyzer
 				|| ($tokens[$i][0] === T_STRING 
 				&& $tokens[$i+1] !== '(' ) )
 				{
-					if(!in_array($tokens[$i][1], Sources::$V_USERINPUT))
+					if(!in_array($tokens[$i][1], Sources::$SRC_USERINPUT))
 					{						
 						// constant CONSTANTS
 						if ($tokens[$i][1] === 'DIRECTORY_SEPARATOR')
@@ -53,7 +53,7 @@ class StringAnalyzer
 							$parameter_name = '';
 							
 						// mark userinput for quote analysis
-						if( ($tokens[$i][1] !== '$_SERVER' || (empty($parameter_name) || in_array($parameter_name, Sources::$V_SERVER_PARAMS) || substr($parameter_name,0,5) === 'HTTP_'))
+						if( ($tokens[$i][1] !== '$_SERVER' || (empty($parameter_name) || in_array($parameter_name, Sources::$SRC_SERVER_PARAMS) || substr($parameter_name,0,5) === 'HTTP_'))
 						&& !((is_array($tokens[$i-1]) 
 						&& in_array($tokens[$i-1][0], Tokens::$TOKEN_CASTS))
 						|| (is_array($tokens[$i+1]) 
@@ -97,7 +97,7 @@ class StringAnalyzer
 				else if($tokens[$i][0] === T_STRING && $tokens[$i+1] === '(')
 				{
 					// stop if strings are fetched from database/file (otherwise SQL query will be added)
-					if (in_array($tokens[$i][1], Sources::$F_DATABASE_INPUT) || in_array($tokens[$i][1], Sources::$F_FILE_INPUT) || isset(Info::$F_INTEREST[$tokens[$i][1]]))
+					if (in_array($tokens[$i][1], Sources::$SRC_DATABASE_INPUT) || in_array($tokens[$i][1], Sources::$SRC_FILE_INPUT) || isset(Info::$F_INTEREST[$tokens[$i][1]]))
 					{
 						break;
 					}

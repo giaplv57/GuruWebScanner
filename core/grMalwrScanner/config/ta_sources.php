@@ -2,7 +2,8 @@
 
 final class Sources
 {		
-	public static $V_USERINPUT = array(
+	// Userinput in HTTP package
+	public static $SRC_USERINPUT = array(
 		'$_GET',
 		'$_POST',
 		'$_COOKIE',
@@ -18,7 +19,8 @@ final class Sources
 		'$HTTP_RAW_POST_DATA'
 	);
 	
-	public static $V_SERVER_PARAMS = array(
+
+	public static $SRC_SERVER_PARAMS = array(
 		'HTTP_ACCEPT',
 		'HTTP_ACCEPT_LANGUAGE',
 		'HTTP_ACCEPT_ENCODING',
@@ -44,7 +46,8 @@ final class Sources
 		'PHP_SELF'
 	);
 		
-	public static $F_FILE_INPUT = array(
+	// File interaction
+	public static $SRC_FILE_INPUT = array(
 		'bzread',
 		'dio_read',
 		'exif_imagetype',
@@ -64,7 +67,8 @@ final class Sources
 		'zip_read'
 	);
 		
-	public static $F_DATABASE_INPUT = array(
+	// Database interaction
+	public static $SRC_DATABASE_INPUT = array(
 		'mysql_fetch_array',
 		'mysql_fetch_assoc',
 		'mysql_fetch_field',
@@ -83,7 +87,8 @@ final class Sources
 		'sqlite_fetch_string'
 	);
 		
-	public static $F_OTHER_INPUT = array(
+	// others
+	public static $SRC_OTHER_INPUT = array(
 		'get_headers',
 		'getallheaders',
 		'get_browser',
