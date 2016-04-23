@@ -4,7 +4,6 @@ class Scanner
 {
 	public $file_name;
 	public $scan_functions;
-	public $info_functions;
 	public $source_functions;
 
 	public $var_declares_global;	
@@ -44,13 +43,12 @@ class Scanner
 	
 	public $tokens;
 		
-	function __construct($file_name, $scan_functions, $info_functions, $source_functions)
+	function __construct($file_name, $scan_functions, $source_functions)
 	{
 		$GLOBALS['verbosity'] = 1;
 
 		$this->file_name = $file_name;
-		$this->scan_functions = $scan_functions;
-		$this->info_functions = $info_functions;
+		$this->scan_functions = $scan_functions;		
 		$this->source_functions = $source_functions;
 		
 		$this->var_declares_global = array();	
@@ -1265,10 +1263,12 @@ class Scanner
 						}						
 
 						//add interesting function calls to info gathering	
+						/* TODO: remove						
 						if( isset($this->info_functions[$token_value]) )
 						{
 							$GLOBALS['info'][] = $this->info_functions[$token_value];
-						}	
+						}
+						*/	
 						// watch constructor calls $var = Classname($constructor_param);
 						else if( $this->tokens[$i-1][0] !== T_NEW && isset($this->vuln_classes[$token_value]) )
 						{
@@ -2015,6 +2015,7 @@ class Scanner
 						$ref_name = ($this->in_class ? $this->class_name.'::' : '') . $function_name;
 											
 						// add POP gadgets to info
+						/* TODO remove
 						if(isset($this->info_functions[$function_name]))
 						{
 							$GLOBALS['info'][] = $ref_name;
@@ -2038,6 +2039,7 @@ class Scanner
 							}
 								
 						} 
+						*/
 						
 						$c=3;
 						while($this->tokens[$i+$c] !== '{' && $this->tokens[$i+$c] !== ';')

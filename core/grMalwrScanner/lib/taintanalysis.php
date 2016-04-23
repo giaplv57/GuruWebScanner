@@ -59,7 +59,7 @@
                         $F_EXEC,        // Command Execution
                         $F_XPATH        // XPath Execution
                     );
-    $info_functions = Info::$F_INTEREST;
+    $info_functions = array();
     $source_functions = Sources::$SRC_OTHER_INPUT;
     
     $url = $argv[1];
@@ -81,7 +81,7 @@
     }
 
     for($fi=0; $fi < count($files); $fi++) {        
-        $scan = new Scanner($files[$fi], $scan_functions, $info_functions, $source_functions);   
+        $scan = new Scanner($files[$fi], $scan_functions, $source_functions);   
         $scan->parse();
     }
 
