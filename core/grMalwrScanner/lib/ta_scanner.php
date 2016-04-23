@@ -275,7 +275,7 @@ class Scanner
 					$tainted_vars = array();
 					$var_count = 1;
 
-					for($i=$var_declare->tokenscanstart; $i<$var_declare->tokenscanstop; $i++)
+					for($i = $var_declare->tokenscanstart; $i < $var_declare->tokenscanstop; $i++)
 					{
 						$this_one_is_secure = false;
 						if( is_array($tokens[$i]) )
