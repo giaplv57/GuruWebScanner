@@ -97,7 +97,7 @@ class StringAnalyzer
 				else if($tokens[$i][0] === T_STRING && $tokens[$i+1] === '(')
 				{
 					// stop if strings are fetched from database/file (otherwise SQL query will be added)
-					if (in_array($tokens[$i][1], Sources::$SRC_DATABASE_INPUT) || in_array($tokens[$i][1], Sources::$SRC_FILE_INPUT) || isset(Info::$F_INTEREST[$tokens[$i][1]]))
+					if (in_array($tokens[$i][1], Sources::$SRC_DATABASE_INPUT) || in_array($tokens[$i][1], Sources::$SRC_FILE_INPUT))
 					{
 						break;
 					}

@@ -62,7 +62,7 @@
 		public $name;
 		public $marker;
 		public $lines;
-		public $filename;
+		public $fileName;
 		public $children;
 		public $funcdepend;
 		public $funcparamdepend;
@@ -98,7 +98,7 @@
 		public $name;
 		public $lines;
 		public $title;
-		public $filename;
+		public $fileName;
 
 		function __construct($value = null) 
 		{

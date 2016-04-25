@@ -45,7 +45,7 @@
 			}
 			$this->ic_total_results = $ic_total;
 		}
-		function calculate($filename,$data){
+		function calculate($fileName,$data){
 			// """Calculate the Index of Coincidence for a file and append to self.ic_results array"""
 			if (!$data){
 			   return 0;
@@ -59,7 +59,7 @@
 			   	$total_char_count += $charcount;
 			}
 			$ic = $char_count/($total_char_count * ($total_char_count - 1));
-			$this->results[$filename] = $ic;
+			$this->results[$fileName] = $ic;
 			# Call method to calculate_char_count and append to total_char_count
 			$this->calculate_char_count($data);
 			return $ic;
@@ -72,7 +72,7 @@
 	}
 	class Entropy{
 		var $results = array();
-		function calculate($filename, $data){
+		function calculate($fileName, $data){
 			if (!$data) {
           		return 0;
 			}
@@ -86,7 +86,7 @@
 	           	}
 	        }
 	       	// self.results.append({"filename":filename, "value":entropy})
-	       	$this->results[$filename] = $entropy;
+	       	$this->results[$fileName] = $entropy;
 	       	// $this->results[] = $entropy;
 	       	// return $entropy;
 		}
@@ -98,7 +98,7 @@
 	class LongestWord{
 		// """Class that determines the longest word for a particular file."""
 		var $results = array();
-		function calculate($filename, $data){
+		function calculate($fileName, $data){
 			// """Find the longest word in a string and append to longestword_results array"""
 			if (!$data){
 			   return 0;
@@ -115,7 +115,7 @@
 			       	}
 			    }
 			}
-			$this->results[$filename] = $longest;
+			$this->results[$fileName] = $longest;
 			return $longest;
 		}
 		function sort(){
@@ -126,13 +126,13 @@
 	class SignatureNasty{
 		// """Generator that searches a given file for nasty expressions"""
 		var $results = array();
-		function calculate($filename, $data){
+		function calculate($fileName, $data){
 			if(!$data){
 				return "";
 			}
 			$matches = array();
 			preg_match_all('/(eval\(|file_put_contents|base64_decode|python_eval|exec\(|passthru|popen|proc_open|pcntl|assert\(|system\(|shell)/i', $data, $matches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array
-			$this->results[$filename] = count($matches);	
+			$this->results[$fileName] = count($matches);	
 		}
 		function sort(){
 			arsort($this->results);
@@ -141,13 +141,13 @@
 	}
 	class SignatureSuperNasty{
 		var $results = array();
-		function calculate($filename, $data){
+		function calculate($fileName, $data){
 			if(!$data){
 				return "";
 			}
 			$matches = array();
 			preg_match_all('/(@\$_\[\]=|\$_=@\$_GET|\$_\[\+""\]=)/i', $data, $matches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array , i flag to perform case-insensitive
-			$this->results[$filename] = count($matches);				
+			$this->results[$fileName] = count($matches);				
 		}
 		function sort(){
 			arsort($this->results);
@@ -157,13 +157,13 @@
 	class UsesEval{
 	   // """Generator that searches a given file for nasty eval with variable"""
 		var $results = array();
-		function calculate($filename, $data){
+		function calculate($fileName, $data){
 			if(!$data){
 				return "";
 			}
 			$matches = array();
 			preg_match_all('/(eval\(\$(\w|\d))/i', $data, $matches, PREG_SET_ORDER);	//The PREG_SET_ORDER flag to ensure result appropriately distribute to array , i flag to perform case-insensitive
-			$this->results[$filename] = count($matches);				
+			$this->results[$fileName] = count($matches);				
 		}
 		function sort(){
 			arsort($this->results);
@@ -171,13 +171,13 @@
 	}
 	class Compression{
 		var $results = array();
-		function calculate($filename, $data){
+		function calculate($fileName, $data){
 			if(!$data){
 				return "";
 			}
 			$compressed = zlib_encode($data, 15);
 			$ratio = strlen($compressed)/strlen($data);
-			$this->results[$filename] = $ratio;
+			$this->results[$fileName] = $ratio;
 		}
 		function sort(){
 			arsort($this->results);
@@ -221,15 +221,15 @@
 	    // $UsesEvalTest = new UsesEval();
 	    // $CompressionTest = new Compression();
 	    
-		foreach ($fileList as $filename){
-			$data = file_get_contents($filename);
-			$EntropyTest->calculate($filename, $data);
-			$LanguageICTest->calculate($filename, $data);
-			$LongestWordTest->calculate($filename, $data);
-			$SignatureNastyTest->calculate($filename, $data);
-	        $SignatureSuperNastyTest->calculate($filename, $data);
-	        // $UsesEvalTest->calculate($filename, $data);
-	        // $CompressionTest->calculate($filename, $data);
+		foreach ($fileList as $fileName){
+			$data = file_get_contents($fileName);
+			$EntropyTest->calculate($fileName, $data);
+			$LanguageICTest->calculate($fileName, $data);
+			$LongestWordTest->calculate($fileName, $data);
+			$SignatureNastyTest->calculate($fileName, $data);
+	        $SignatureSuperNastyTest->calculate($fileName, $data);
+	        // $UsesEvalTest->calculate($fileName, $data);
+	        // $CompressionTest->calculate($fileName, $data);
 		}
 		$EntropyTest->sort();
 		$LanguageICTest->sort();

@@ -2,12 +2,12 @@
 
 class Tokenizer
 {	
-	public $filename;
+	public $fileName;
 	public $tokens;
 
-	function __construct($filename)
+	function __construct($fileName)
 	{
-		$this->filename = $filename;
+		$this->filename = $fileName;
 	}
 
 	// main
@@ -64,7 +64,7 @@ class Tokenizer
 					$f++;
 					if(!isset($this->tokens[$i+$f]))
 					{
-						addError('Could not find closing brace of '.$this->tokens[$i-1][1].'{}.', array_slice($this->tokens, $i-1, 2), $this->tokens[$i-1][2], $this->filename);
+						add_error('Could not find closing brace of '.$this->tokens[$i-1][1].'{}.', array_slice($this->tokens, $i-1, 2), $this->tokens[$i-1][2], $this->filename);
 						break;	
 					}
 				}
@@ -94,7 +94,7 @@ class Tokenizer
 					$f++;
 					if(!isset($this->tokens[$i+$f]) || $this->tokens[$i+$f] === ';')
 					{
-						addError('Could not find closing backtick `.', array_slice($this->tokens, $i, 5), $this->tokens[$i+1][2], $this->filename);
+						add_error('Could not find closing backtick `.', array_slice($this->tokens, $i, 5), $this->tokens[$i+1][2], $this->filename);
 						break;	
 					}
 				}
@@ -131,7 +131,7 @@ class Tokenizer
 
 						if(!isset($this->tokens[$i+$f]))
 						{
-							addError('Could not find closing parenthesis of '.$this->tokens[$i][1].'-statement.', array_slice($this->tokens, $i, 5), $this->tokens[$i][2], $this->filename);
+							add_error('Could not find closing parenthesis of '.$this->tokens[$i][1].'-statement.', array_slice($this->tokens, $i, 5), $this->tokens[$i][2], $this->filename);
 							break;	
 						}
 					}	
@@ -155,7 +155,7 @@ class Tokenizer
 							$c++;
 							if(!isset($this->tokens[$i+$f+$c]))
 							{
-								addError('Could not find end'.$this->tokens[$i][1].'; of alternate '.$this->tokens[$i][1].'-statement.', array_slice($this->tokens, $i, $f+1), $this->tokens[$i][2], $this->filename);
+								add_error('Could not find end'.$this->tokens[$i][1].'; of alternate '.$this->tokens[$i][1].'-statement.', array_slice($this->tokens, $i, $f+1), $this->tokens[$i][2], $this->filename);
 								break;	
 							}
 						}
@@ -202,7 +202,7 @@ class Tokenizer
 						}					
 						else if(!isset($this->tokens[$i+$c]) || $this->tokens[$i + $c] === ';')
 						{
-							addError('Could not find closing parenthesis of switch-statement.', array_slice($this->tokens, $i, 10), $this->tokens[$i][2], $this->filename);
+							add_error('Could not find closing parenthesis of switch-statement.', array_slice($this->tokens, $i, 10), $this->tokens[$i][2], $this->filename);
 							break;	
 						}
 						$c++;
@@ -216,7 +216,7 @@ class Tokenizer
 							$f++;
 							if(!isset($this->tokens[$i+$c+$f]))
 							{
-								addError('Could not find endswitch; of alternate switch-statement.', array_slice($this->tokens, $i, $c+1), $this->tokens[$i][2], $this->filename);
+								add_error('Could not find endswitch; of alternate switch-statement.', array_slice($this->tokens, $i, $c+1), $this->tokens[$i][2], $this->filename);
 								break;	
 							}
 						}
@@ -233,7 +233,7 @@ class Tokenizer
 						
 						if(!isset($this->tokens[$i+$e]))
 						{
-							addError('Could not find : or ; after '.$this->tokens[$i][1].'-statement.', array_slice($this->tokens, $i, 5), $this->tokens[$i][2], $this->filename);
+							add_error('Could not find : or ; after '.$this->tokens[$i][1].'-statement.', array_slice($this->tokens, $i, 5), $this->tokens[$i][2], $this->filename);
 							break;	
 						}
 					}
@@ -256,7 +256,7 @@ class Tokenizer
 							
 							if(!isset($this->tokens[$i+$f]))
 							{
-								addError('Could not find ending of '.$this->tokens[$i][1].'-statement.', array_slice($this->tokens, $i, $e+5), $this->tokens[$i][2], $this->filename);
+								add_error('Could not find ending of '.$this->tokens[$i][1].'-statement.', array_slice($this->tokens, $i, $e+5), $this->tokens[$i][2], $this->filename);
 								break;	
 							}
 						}
@@ -291,7 +291,7 @@ class Tokenizer
 						
 						if(!isset($this->tokens[$i+$f]))
 						{
-							addError('Could not find ending of '.$this->tokens[$i][1].'-statement.', array_slice($this->tokens, $i, 5), $this->tokens[$i][2], $this->filename);
+							add_error('Could not find ending of '.$this->tokens[$i][1].'-statement.', array_slice($this->tokens, $i, 5), $this->tokens[$i][2], $this->filename);
 							break;	
 						}
 					}
@@ -323,7 +323,7 @@ class Tokenizer
 						
 						if(!isset($this->tokens[$i+$f]))
 						{
-							addError('Could not find WHILE of DO-WHILE-statement.', array_slice($this->tokens, $i, 5), $this->tokens[$i][2], $this->filename);
+							add_error('Could not find WHILE of DO-WHILE-statement.', array_slice($this->tokens, $i, 5), $this->tokens[$i][2], $this->filename);
 							break;	
 						}
 					}
@@ -407,7 +407,7 @@ class Tokenizer
 							
 							if(!isset($this->tokens[$i+$c]))
 							{
-								addError('Could not find closing bracket of '.$this->tokens[$i][1].'[].', array_slice($this->tokens, $i, 5), $this->tokens[$i][2], $this->filename);
+								add_error('Could not find closing bracket of '.$this->tokens[$i][1].'[].', array_slice($this->tokens, $i, 5), $this->tokens[$i][2], $this->filename);
 								break;	
 							}
 						}
@@ -457,7 +457,7 @@ class Tokenizer
 						
 						if(($i-$f)<0)
 						{
-							addError('Could not find opening parenthesis in ternary operator (1).', array_slice($this->tokens, $i-5, 10), $this->tokens[$i+1][2], $this->filename);
+							add_error('Could not find opening parenthesis in ternary operator (1).', array_slice($this->tokens, $i-5, 10), $this->tokens[$i+1][2], $this->filename);
 							break;	
 						}
 					}
@@ -497,7 +497,7 @@ class Tokenizer
 							
 							if(($i-$f)<0 || $this->tokens[$i - $f] === ';')
 							{
-								addError('Could not find opening parenthesis in ternary operator (2).', array_slice($this->tokens, $i-8, 6), $this->tokens[$i+1][2], $this->filename);
+								add_error('Could not find opening parenthesis in ternary operator (2).', array_slice($this->tokens, $i-8, 6), $this->tokens[$i+1][2], $this->filename);
 								break;	
 							}
 						}

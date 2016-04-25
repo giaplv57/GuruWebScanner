@@ -1,21 +1,8 @@
 <?php
 	// add parsing error to output
-	function addError($message, $tokens, $line_nr, $filename)
+	function add_error($message)
 	{
-		$GLOBALS['info'][] = '<font color="red">Parsing error occured. Use verbosity level=debug for details.</font>';
-		if($GLOBALS['verbosity'] == 5)
-		{
-			$value = highlightline($tokens, '', $line_nr);
-			$new_find = new InfoTreeNode($value);
-			$new_find->title = 'Parse error: '.$message;
-			$new_find->lines[] = $line_nr;
-			$new_find->filename = $filename;
-								
-			$new_block = new VulnBlock('error', 'Debug');
-			$new_block->treenodes[] = $new_find;
-			$new_block->vuln = true;
-			$GLOBALS['output'][$filename]['error'] = $new_block;
-		}	
+		$GLOBALS['info'][] = '<font color="red">' . $message . '</font>';
 	}
 	
 	// tokens to string for comments
@@ -43,7 +30,7 @@
 	}
 	
 	// prepare output to style with CSS
-	function highlightline($tokens=array(), $comment='', $line_nr, $title=false, $udftitle=false, $tainted_vars=array())
+	function highlightline($tokens=array(), $comment='', $line_nr, $title=false, $udftitle=false, $taintedVars=array())
 	{
 		$reference = true;
 		$output = "<span class=\"linenr\">$line_nr:</span>&nbsp;";
@@ -114,7 +101,7 @@
 							$span.= 'onmouseover="markVariable(\''.$cssname.'\')" onmouseout="markVariable(\''.$cssname.'\')" ';
 						}	
 						
-						if($token[0] === T_VARIABLE && @in_array($var_count, $tainted_vars))
+						if($token[0] === T_VARIABLE && @in_array($var_count, $taintedVars))
 							$span.= "class=\"phps-tainted-var\">$text</span>";	
 						else
 							$span.= 'class="phps-'.str_replace('_', '-', strtolower(token_name($token[0])))."\">$text</span>";
@@ -595,7 +582,7 @@
 	
 			// get vuln files
 			$vulnfiles = array();
-			foreach($GLOBALS['output'] as $filename => $blocks)
+			foreach($GLOBALS['output'] as $fileName => $blocks)
 			{		
 				foreach($blocks as $block)
 				{
@@ -641,8 +628,8 @@
 					
 					$file = realpath($file);
 
-					$filename = is_dir($_POST['loc']) ? str_replace(realpath($_POST['loc']), '', $file) : str_replace(realpath(str_replace(basename($_POST['loc']),'', $_POST['loc'])),'',$file);
-					$varname = preg_replace('/[^A-Za-z0-9]/', '', $filename); 
+					$fileName = is_dir($_POST['loc']) ? str_replace(realpath($_POST['loc']), '', $file) : str_replace(realpath(str_replace(basename($_POST['loc']),'', $_POST['loc'])),'',$file);
+					$varname = preg_replace('/[^A-Za-z0-9]/', '', $fileName); 
 
 					$userinput = 0;
 					foreach($GLOBALS['user_input'] as $inputname)
@@ -652,7 +639,7 @@
 					}			
 					
 					if($GLOBALS['file_amount'] <= WARNFILES)
-						$js.= "var e$varname = graph.addElement($style, { x:$x, y:$y }, '".htmlentities($filename, ENT_QUOTES)."', '', '".$userinput."', '".htmlentities($file_sinks[$file], ENT_QUOTES)."', ".(in_array($file, $vulnfiles) ? 1 : 0).");\n";
+						$js.= "var e$varname = graph.addElement($style, { x:$x, y:$y }, '".htmlentities($fileName, ENT_QUOTES)."', '', '".$userinput."', '".htmlentities($file_sinks[$file], ENT_QUOTES)."', ".(in_array($file, $vulnfiles) ? 1 : 0).");\n";
 
 				} else
 				{
@@ -669,19 +656,19 @@
 			{				
 				$file = realpath($file);
 
-				$filename = is_dir($_POST['loc']) ? str_replace(realpath($_POST['loc']), '', $file) : str_replace(realpath(str_replace(basename($_POST['loc']),'', $_POST['loc'])),'',$file);
-				$varname = preg_replace('/[^A-Za-z0-9]/', '', $filename); 
+				$fileName = is_dir($_POST['loc']) ? str_replace(realpath($_POST['loc']), '', $file) : str_replace(realpath(str_replace(basename($_POST['loc']),'', $_POST['loc'])),'',$file);
+				$varname = preg_replace('/[^A-Za-z0-9]/', '', $fileName); 
 
 				if(empty($includes))
 				{
 					echo '<tr><td><div class="funclistline" title="',htmlentities($file),'" ',
-					'onClick="openCodeViewer(3, \'',htmlentities($file, ENT_QUOTES),'\', \'0\')">',htmlentities($filename),'</div></td></tr>',"\n";
+					'onClick="openCodeViewer(3, \'',htmlentities($file, ENT_QUOTES),'\', \'0\')">',htmlentities($fileName),'</div></td></tr>',"\n";
 				}	
 				else
 				{
 					$parent = $varname;
 					echo '<tr><td><div class="funclistline" title="',htmlentities($file),'" ',
-					'onClick="openCodeViewer(3, \'',htmlentities($file, ENT_QUOTES),'\', \'0\')">',htmlentities($filename),'</div><ul style="margin-top:0px;">',"\n";
+					'onClick="openCodeViewer(3, \'',htmlentities($file, ENT_QUOTES),'\', \'0\')">',htmlentities($fileName),'</div><ul style="margin-top:0px;">',"\n";
 					foreach($includes as $include)
 					{
 						$include = realpath($include);
