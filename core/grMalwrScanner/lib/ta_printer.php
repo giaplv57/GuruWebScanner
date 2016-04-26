@@ -2,11 +2,11 @@
 	// add parsing error to output
 	function add_error($message)
 	{
-		$GLOBALS['info'][] = '<font color="red">' . $message . '</font>';
+		$GLOBALS['info'][] = $message;
 	}
 	
 	// tokens to string for comments
-	function tokenstostring($tokens)
+	function tokens2string($tokens)
 	{
 		$output = '';
 		for($i=0;$i<count($tokens);$i++)
@@ -30,159 +30,27 @@
 	}
 	
 	// prepare output to style with CSS
-	function highlightline($tokens=array(), $comment='', $line_nr, $title=false, $udftitle=false, $taintedVars=array())
+	function print_line_no($tokens=array(), $comment='', $line_nr, $title=false, $udftitle=false, $taintedVars=array())
 	{
-		$reference = true;
-		$output = "<span class=\"linenr\">$line_nr:</span>&nbsp;";
-		if($title)
-		{
-			$output.='<a class="link" href="'.PHPDOC.$title.'" title="open php documentation" target=_blank>';
-			$output.="$title</a>&nbsp;";
-		} 
-		else if($udftitle)
-		{
-			$output.='<a class="link" style="text-decoration:none;" href="#'.$udftitle.'_declare" title="jump to declaration">&uArr;</a>&nbsp;';
-		}
-		
-		$var_count = 0;
-		
-		for($i=0;$i<count($tokens);$i++)
-		{
-			$token = $tokens[$i];
-			if (is_string($token))
-			{		
-				if($token === ',' || $token === ';')
-					$output .= "<span class=\"phps-code\">$token&nbsp;</span>";
-				else if(in_array($token, Tokens::$TOKEN_SPACEWRAP_C) || in_array($token, Tokens::$TOKEN_OPERATOR_C))
-					$output .= '<span class="phps-code">&nbsp;'.$token.'&nbsp;</span>';
-				else
-					$output .= '<span class="phps-code">'.htmlentities($token, ENT_QUOTES, 'utf-8').'</span>';
-					
-			} 
-			else if (is_array($token) 
-			&& $token[0] !== T_OPEN_TAG
-			&& $token[0] !== T_CLOSE_TAG) 
-			{
-				
-				if(in_array($token[0], Tokens::$TOKEN_SPACEWRAP) || in_array($token[0], Tokens::$TOKEN_OPERATOR) || in_array($token[0], Tokens::$TOKEN_ASSIGNMENT))
-				{
-					$output.= '&nbsp;<span class="phps-'.str_replace('_', '-', strtolower(token_name($token[0])))."\">{$token[1]}</span>&nbsp;";
-				}	
-				else
-				{
-					if($token[0] === T_FUNCTION)
-					{
-						$reference = false;
-						$funcname = $tokens[$i+1][0] === T_STRING ? $tokens[$i+1][1] : $tokens[$i+2][1];
-						$output .= '<A NAME="'.$funcname.'_declare" class="jumplink"></A>';
-						$output .= '<a class="link" style="text-decoration:none;" href="#'.$funcname.'_call" title="jump to call">&dArr;</a>&nbsp;';
-					}	
-					
-					$text = htmlentities($token[1], ENT_QUOTES, 'utf-8');
-					$text = str_replace(array(' ', "\n"), '&nbsp;', $text);
-
-					if($token[0] === T_FUNCTION)
-						$text.='&nbsp;';
-						
-					if($token[0] === T_STRING && $reference 
-					&& isset($GLOBALS['user_functions_offset'][strtolower($text)]))
-					{				
-						$text = @'<span onmouseover="getFuncCode(this,\''.addslashes($GLOBALS['user_functions_offset'][strtolower($text)][0]).'\',\''.$GLOBALS['user_functions_offset'][strtolower($text)][1].'\',\''.$GLOBALS['user_functions_offset'][strtolower($text)][2].'\')" style="text-decoration:underline" class="phps-'.str_replace('_', '-', strtolower(token_name($token[0])))."\">$text</span>\n";
-					}	
-					else 
-					{
-						$span = '<span ';
-					
-						if($token[0] === T_VARIABLE)
-						{
-							$var_count++;
-							$cssname = str_replace('$', '', $token[1]);
-							$span.= 'style="cursor:pointer;" name="phps-var-'.$cssname.'" onClick="markVariable(\''.$cssname.'\')" ';
-							$span.= 'onmouseover="markVariable(\''.$cssname.'\')" onmouseout="markVariable(\''.$cssname.'\')" ';
-						}	
-						
-						if($token[0] === T_VARIABLE && @in_array($var_count, $taintedVars))
-							$span.= "class=\"phps-tainted-var\">$text</span>";	
-						else
-							$span.= 'class="phps-'.str_replace('_', '-', strtolower(token_name($token[0])))."\">$text</span>";
-							
-						$text = $span;	
-						
-						// rebuild array keys
-						if(isset($token[3]))
-						{
-							foreach($token[3] as $key)
-							{
-								if($key != '*')
-								{
-									$text .= '<span class="phps-code">[</span>';
-									if(!is_array($key))
-									{
-										if(is_numeric($key))
-											$text .= '<span class="phps-t-lnumber">' . $key . '</span>';
-										else
-											$text .= '<span class="phps-t-constant-encapsed-string">\'' . htmlentities($key, ENT_QUOTES, 'utf-8') . '\'</span>';
-									} else
-									{
-										foreach($key as $token)
-										{
-											if(is_array($token))
-											{
-												$text .= '<span ';
-												
-												if($token[0] === T_VARIABLE)
-												{
-													$cssname = str_replace('$', '', $token[1]);
-													$text.= 'style="cursor:pointer;" name="phps-var-'.$cssname.'" onClick="markVariable(\''.$cssname.'\')" ';
-													$text.= 'onmouseover="markVariable(\''.$cssname.'\')" onmouseout="markVariable(\''.$cssname.'\')" ';
-												}	
-												
-												$text .= 'class="phps-'.str_replace('_', '-', strtolower(token_name($token[0]))).'">'.htmlentities($token[1], ENT_QUOTES, 'utf-8').'</span>';
-											}	
-											else
-												$text .= "<span class=\"phps-code\">{$token}</span>";
-										}
-									}
-									$text .= '<span class="phps-code">]</span>';
-								}
-							}
-						}
-					}
-					$output .= $text;
-					if(is_array($token) && (in_array($token[0], Tokens::$TOKEN_INCLUDES) || in_array($token[0], Tokens::$TOKEN_XSS) || $token[0] === 'T_EVAL'))
-						$output .= '&nbsp;';
-				}		
-			}
-		}
-		
-		if(!empty($comment))
-			$output .= '&nbsp;<span class="phps-t-comment">// '.htmlentities($comment, ENT_QUOTES, 'utf-8').'</span>';
-
+		$output = "linenr: ";
+		$output .= $line_nr;
 		return $output;
 	}
 	
 	// detect vulnerability type given by the PVF name
 	// note: same names are used in help.php!
-	function getVulnNodeTitle($func_name)
+	function get_vuln_node_title($func_name)
 	{
-		if(isset($GLOBALS['F_XSS'][$func_name])) 
-		{	$vulnname = $GLOBALS['NAME_XSS'];  }
-		else if(isset($GLOBALS['F_HTTP_HEADER'][$func_name])) 
-		{	$vulnname = $GLOBALS['NAME_HTTP_HEADER'];  }	
-		else if(isset($GLOBALS['F_SESSION_FIXATION'][$func_name])) 
-		{	$vulnname = $GLOBALS['NAME_SESSION_FIXATION'];  }
-		else if(isset($GLOBALS['F_DATABASE'][$func_name])) 
-		{	$vulnname = $GLOBALS['NAME_DATABASE'];  }	
-		else if(isset($GLOBALS['F_FILE_READ'][$func_name])) 
-		{	$vulnname = $GLOBALS['NAME_FILE_READ'];  }
-		else if(isset($GLOBALS['F_FILE_AFFECT'][$func_name])) 
-		{	$vulnname = $GLOBALS['NAME_FILE_AFFECT']; }		
-		else if(isset($GLOBALS['F_FILE_INCLUDE'][$func_name])) 
-		{	$vulnname = $GLOBALS['NAME_FILE_INCLUDE'];  }	
-		else if(isset($GLOBALS['F_CONNECT'][$func_name])) 
+		if(isset($GLOBALS['F_CONNECT'][$func_name])) 
 		{	$vulnname = $GLOBALS['NAME_CONNECT']; }		
 		else if(isset($GLOBALS['F_EXEC'][$func_name])) 
 		{	$vulnname = $GLOBALS['NAME_EXEC'];  }
+		else if(isset($GLOBALS['F_XSS'][$func_name])) 
+		{	$vulnname = $GLOBALS['NAME_XSS'];  }
+		else if(isset($GLOBALS['F_FILE_AFFECT'][$func_name])) 
+		{	$vulnname = $GLOBALS['NAME_FILE_AFFECT']; }		
+		else if(isset($GLOBALS['F_FILE_INCLUDE'][$func_name])) 
+		{	$vulnname = $GLOBALS['NAME_FILE_INCLUDE'];  }		
 		else if(isset($GLOBALS['F_CODE'][$func_name])) 
 		{	$vulnname = $GLOBALS['NAME_CODE']; }
 		else if(isset($GLOBALS['F_REFLECTION'][$func_name])) 
@@ -193,16 +61,24 @@
 		{	$vulnname = $GLOBALS['NAME_LDAP'];}
 		else if(isset($GLOBALS['F_POP'][$func_name])) 
 		{	$vulnname = $GLOBALS['NAME_POP'];  }
+		else if(isset($GLOBALS['F_FILE_READ'][$func_name])) 
+		{	$vulnname = $GLOBALS['NAME_FILE_READ'];  }			
+		else if(isset($GLOBALS['F_HTTP_HEADER'][$func_name])) 
+		{	$vulnname = $GLOBALS['NAME_HTTP_HEADER'];  }	
+		else if(isset($GLOBALS['F_SESSION_FIXATION'][$func_name])) 
+		{	$vulnname = $GLOBALS['NAME_SESSION_FIXATION'];  }
+		else if(isset($GLOBALS['F_DATABASE'][$func_name])) 
+		{	$vulnname = $GLOBALS['NAME_DATABASE'];  }					
 		else if(isset($GLOBALS['F_OTHER'][$func_name])) 
 		{	$vulnname = $GLOBALS['NAME_OTHER']; } // :X			 			
 		else 
-			$vulnname = "unknown";
+			$vulnname = "unknown vuln name";
 		return $vulnname;	
 	}
 	
 	// detect vulnerability type given by the PVF name
 	// note: same names are used in help.php!
-	function increaseVulnCounter($func_name)
+	function inc_vuln_counter($func_name)
 	{
 		if(isset($GLOBALS['F_XSS'][$func_name])) 
 		{	$GLOBALS['count_xss']++; }	
@@ -237,7 +113,8 @@
 	}	
 		
 	// traced parameter output bottom-up
-	function traverseBottomUp($tree) 
+	/*
+	function traverse_bottom_up($tree) 
 	{
 		echo '<ul';
 		switch($tree->marker) 
@@ -253,84 +130,77 @@
 		{
 			foreach ($tree->children as $child) 
 			{
-				traverseBottomUp($child);
+				traverse_bottom_up($child);
 			}
 		}
 		echo '</li></ul>',"\n";
 	}
+	*/
 	
 	// traced parameter output top-down
-	function traverseTopDown($tree, $start=true, $lines=array()) 
+	/*
+	function traverse_top_down($tree, $start=true, $lines=array()) 
 	{
-		if($start) echo '<ul>';
-	
+
 		foreach ($tree->children as $child) 
 		{
-			$lines = traverseTopDown($child, false, $lines);
+			$lines = traverse_top_down($child, false, $lines);
 		}
 		
 		// do not display a line twice
 		// problem: different lines in different files with equal line number
 		if(!isset($lines[$tree->line]))
-		{
-			echo '<li';
-			switch($tree->marker) 
-			{
-				case 1: echo ' class="userinput"'; break;
-				case 2: echo ' class="validated"'; break;
-				case 3: echo ' class="functioninput"'; break;
-				case 4: echo ' class="persistent"'; break;
-			}
-			echo '>',$tree->value,'</li>',"\n";
+		{	
 			// add to array to ignore next time
 			$lines[$tree->line] = 1;
 		}	
-			
-		if($start) echo '</ul>';
 		
 		return $lines;
-	}	
+	}
+	*/	
 
 	// requirements output
-	function dependenciesTraverse($tree) 
+	/*
+	function dependencies_traverse($tree) 
 	{
 		if(!empty($tree->dependencies))
-		{
-			echo '<ul><li><span class="requires">requires:</span>';
+		{			
 
 			foreach ($tree->dependencies as $linenr=>$dependency) 
 			{
 				if(!empty($dependency))
 				{
-					echo '<ul><li>'.highlightline($dependency, '', $linenr).'</li></ul>';
+					echo print_line_no($dependency, '', $linenr);
 				}
 			}
-
-			echo '</li></ul>',"\n";
 		}
 	}
-	
+	*/
+	/*
 	// check for vulns found in file
-	function fileHasVulns($blocks)
+	function file_has_vulns($blocks)
 	{
 		foreach($blocks as $block)
 		{
-			if($block->vuln)
+			if ($block->vuln)
 				return true;
 		}
 		return false;
-	}	
+	}
+	*/	
 	
+	/*
 	// print the scanresult
 	function printoutput($output, $treestyle=1)
 	{
-		if(!empty($output))
+
+		if (!empty($output))
 		{
 			$nr=0;
 			reset($output);
 			do
 			{				
-				if(key($output) != "" && !empty($output[key($output)]) && fileHasVulns($output[key($output)]))
+				if(key($output) != "" && !empty($output[key($output)]) && file_has_vulns($output[key($output)]))
 				{		
 					echo '<div class="filebox">',
 					'<span class="filename">File: ',key($output),'</span><br>',
@@ -397,15 +267,7 @@
 									if(!empty($tree->get) || !empty($tree->post) 
 									|| !empty($tree->cookie) || !empty($tree->files)
 									|| !empty($tree->server) )
-									{
-										/*echo '<div class="hotpatch" title="hotpatch" ',
-										'onClick="openHotpatch(this, \'',
-										addslashes($tree->filename),
-										'\',\'',implode(',',array_unique($tree->get)),
-										'\',\'',implode(',',array_unique($tree->post)),
-										'\',\'',implode(',',array_unique($tree->cookie)),
-										'\',\'',implode(',',array_unique($tree->files)),
-										'\',\'',implode(',',array_unique($tree->server)),'\');"></div>',"\n",*/
+									{										
 										
 										echo '<div class="exploit" title="generate exploit" ',
 										'onClick="openExploitCreator(this, \'',
@@ -421,12 +283,12 @@
 									'<div class="code" id="',key($output),$tree->lines[0],'">',"\n";
 
 									if($treestyle == 1)
-										traverseBottomUp($tree);
+										traverse_bottom_up($tree);
 									else if($treestyle == 2)
-										traverseTopDown($tree);
+										traverse_top_down($tree);
 
 										echo '<ul><li>',"\n";
-									dependenciesTraverse($tree);
+									dependencies_traverse($tree);
 									echo '</li></ul>',"\n",	'</div>',"\n", '</td></tr></table></div>',"\n";
 								}
 							}	
@@ -467,7 +329,9 @@
 		}
 		
 	}
+	*/
 	
+	/*
 	// build list of available functions
 	function createFunctionList($user_functions_offset)
 	{
@@ -542,7 +406,9 @@
 			echo "<div id='functiongraph_code' style='display:none'>document.getElementById('windowcontent3').innerHTML='No user defined functions found.'</div>\n";
 		}
 	}
+	*/
 	
+	/*
 	// build list of all entry points (user input)
 	function createUserinputList($user_input)
 	{
@@ -569,7 +435,9 @@
 			echo 'No userinput found.';
 		}
 	}
-	
+	*/
+
+	/*	
 	// build list of all scanned files
 	function createFileList($files, $file_sinks)
 	{
@@ -691,11 +559,13 @@
 			echo '</table></div>',"\n<div id='filegraph_code' style='display:none'>$js</div>\n";
 		}
 	}
-	
+	*/
+	/*
 	function statsRow($nr, $name, $amount, $all)
 	{
 		echo '<tr><td nowrap onmouseover="this.style.color=\'white\';" onmouseout="this.style.color=\'#DFDFDF\';" onClick="catshow(\'',$name,'\')" style="cursor:pointer;" title="show only vulnerabilities of this category">',$name,':</td><td nowrap><div id="chart'.$nr.'" class="chart" style="width:',
 			round(($amount/$all)*100,0),'"></div><div id="vuln'.$nr.'">',$amount,'</div></td></tr>';
 	}
+	*/
 	
 ?>	

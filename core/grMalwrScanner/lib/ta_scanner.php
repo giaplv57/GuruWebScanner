@@ -232,7 +232,7 @@ class Scanner
 								if( !isset($mainParent->dependencies[$deplinenr]) && $deplinenr != $varDeclare->line )
 								{	
 									$vardependent = true;
-									$comment.= tokenstostring($dependency).', ';
+									$comment.= tokens2string($dependency).', ';
 									// if dependencie has an ELSE clause, same vars before are definetely overwritten
 									if($dependency[count($dependency)-1][0] === T_ELSE)
 										$clean_vars_before_ifelse = true;
@@ -387,7 +387,7 @@ class Scanner
 							&& !isset($GLOBALS['F_REFLECTION'][$tokens[$i][1]]) 
 							&& !isset($GLOBALS['F_OTHER'][$tokens[$i][1]]))
 							{
-								$varTrace->value = highlightline($tokens, $comment.$varDeclare->comment.', trace stopped', $varDeclare->line);
+								$varTrace->value = print_line_no($tokens, $comment.$varDeclare->comment.', trace stopped', $varDeclare->line);
 								$varTrace->line = $varDeclare->line;
 								return $userInput;
 							}
@@ -441,7 +441,7 @@ class Scanner
 					}
 
 					// add highlighted line to output, mark tainted vars
-					$varTrace->value = highlightline($tokens, $varDeclare->comment.$comment, $varDeclare->line, false, false, $taintedVars);
+					$varTrace->value = print_line_no($tokens, $varDeclare->comment.$comment, $varDeclare->line, false, false, $taintedVars);
 					$varTrace->line = $varDeclare->line;
 		
 					// we only need the last var declaration, other declarations have been overwritten
@@ -583,7 +583,7 @@ class Scanner
 		$mainParent->lines[] = $this->function_obj->lines[0];
 		if($this->function_obj->marker !== 3)
 		{
-			$this->function_obj->value = highlightline($this->function_obj->tokens, '', $this->function_obj->lines[0]);
+			$this->function_obj->value = print_line_no($this->function_obj->tokens, '', $this->function_obj->lines[0]);
 			// mark as potential userinput
 			$this->function_obj->marker = 3;
 		}
@@ -748,17 +748,17 @@ class Scanner
 			if( $userInput || $GLOBALS['verbosity'] == 4 ) 
 			{
 				$new_find->filename = $this->file_pointer;
-				$new_find->value = highlightline(array_slice($this->tokens, $i-$offset, $offset+3+StringAnalyzer::getBraceEnd($this->tokens, $i+2)), $this->comment, $this->tokens[$i][2], $this->tokens[$i][1], false, array(1));		
+				$new_find->value = print_line_no(array_slice($this->tokens, $i-$offset, $offset+3+StringAnalyzer::getBraceEnd($this->tokens, $i+2)), $this->comment, $this->tokens[$i][2], $this->tokens[$i][1], false, array(1));		
 							
 				// add to output														
 				$new_find->title = $title;
-				$block = new VulnBlock($this->tif.'_'.$this->tokens[$i][2].'_'.basename($this->file_pointer), getVulnNodeTitle($category), $this->tokens[$i][1]);
+				$block = new VulnBlock($this->tif.'_'.$this->tokens[$i][2].'_'.basename($this->file_pointer), get_vuln_node_title($category), $this->tokens[$i][1]);
 				$block->treenodes[] = $new_find;
 								
 				if($userInput == 1 || $GLOBALS['verbosity'] == 4)
 				{
 					$block->vuln = true;
-					increaseVulnCounter($category);
+					inc_vuln_counter($category);
 				}
 								
 				$GLOBALS['output'][$this->file_name][] = $block;
@@ -859,7 +859,7 @@ class Scanner
 							
 							if(($i-$c)<0 || $this->tokens[$i-$c] === ';')
 							{
-								add_error('Syntax error !!! GR152');
+								add_error('Syntax error !!! (GR152)');
 								break;	
 							}
 						}
@@ -901,7 +901,7 @@ class Scanner
 							
 							if(!isset($this->tokens[$i+$c]))
 							{
-								add_error('Syntax error !!! GR122');
+								add_error('Syntax error !!! (GR122)');
 								break;	
 							}
 						}
@@ -1532,7 +1532,7 @@ class Scanner
 							if( $GLOBALS['verbosity'] == 5 )
 							{
 								// add include command to output
-								$found_value = highlightline(array_slice($this->tokens,$i,$skip), $this->comment, $lineNr, $tokenValue);
+								$found_value = print_line_no(array_slice($this->tokens,$i,$skip), $this->comment, $lineNr, $tokenValue);
 								$new_find = new InfoTreeNode($found_value);
 								$new_find->lines[] = $lineNr;
 								$new_find->filename = $this->file_pointer;
@@ -1820,10 +1820,10 @@ class Scanner
 								if(isset($GLOBALS['user_functions'][$this->file_name][$tokenValue]))
 								{
 									$found_line = '<A NAME="'.$tokenValue.'_call" class="jumplink"></A>';
-									$found_line.= highlightline(array_slice($this->tokens,$vulnstart,$c+$vulnadd),$this->comment, $lineNr, false, $tokenValue);
+									$found_line.= print_line_no(array_slice($this->tokens,$vulnstart,$c+$vulnadd),$this->comment, $lineNr, false, $tokenValue);
 								} else
 								{
-									$found_line = highlightline(array_slice($this->tokens,$vulnstart,$c+$vulnadd),$this->comment, $lineNr, $tokenValue, false, $taintedVars);
+									$found_line = print_line_no(array_slice($this->tokens,$vulnstart,$c+$vulnadd),$this->comment, $lineNr, $tokenValue, false, $taintedVars);
 								}
 								
 								$new_find->value = $found_line;
@@ -1904,7 +1904,7 @@ class Scanner
 													if(!$block->vuln && ($parameter_has_userinput || isset($this->scan_functions[$tokenValue][3]) || $GLOBALS['verbosity'] == 4))
 													{
 														$block->vuln = true;
-														increaseVulnCounter($block->sink);
+														inc_vuln_counter($block->sink);
 													}	
 													
 													$tree->foundcallee = true;
@@ -1919,12 +1919,12 @@ class Scanner
 									if(empty($new_find->title)) {
 										$new_find->title = 'Found suspicious behavior';
 									}
-									$block = new VulnBlock($this->tif.'_'.$this->tokens[$i][2].'_'.basename($this->file_pointer), getVulnNodeTitle($tokenValue), $tokenValue);
+									$block = new VulnBlock($this->tif.'_'.$this->tokens[$i][2].'_'.basename($this->file_pointer), get_vuln_node_title($tokenValue), $tokenValue);
 									$block->treenodes[] = $new_find;
 									if($parameter_has_userinput || $GLOBALS['verbosity'] == 4)
 									{
 										$block->vuln = true;
-										increaseVulnCounter($tokenValue);
+										inc_vuln_counter($tokenValue);
 									}	
 									// if sink in var declare, offer a data leak scan - save infos for that
 									if(isset($vardeclare))
@@ -2010,7 +2010,7 @@ class Scanner
 							$GLOBALS['info'][] = $ref_name;
 							
 							// add gadget to output
-							$found_line = highlightline(array_slice($this->tokens,$i-1,4),$this->comment, 
+							$found_line = print_line_no(array_slice($this->tokens,$i-1,4),$this->comment, 
 														$lineNr, $function_name, false, $function_name);
 							$new_find = new InfoTreeNode($found_line);
 							$new_find->title = "POP gadget $ref_name"; 
