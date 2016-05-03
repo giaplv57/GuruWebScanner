@@ -82,7 +82,7 @@
 				</div>				
 				<div class="desc" align="center">
 					<font size="3px">
-						Free online greybox web scanner
+						SCAN VULNERABILITY &#149; DETECT WEBSHELL/BACKDOOR
 					</font>
 				</div>
 				<hr/>
