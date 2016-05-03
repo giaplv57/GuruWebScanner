@@ -8,7 +8,7 @@
 		<!-- Apple devices fullscreen -->
 		<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		
-		<title>GuruWS :: Free online greybox web scanner</title>
+		<title>GuruWS :: Free online greybox web scanner :: Scan Vulnerability and Detect WebShell/Backdoor</title>
 
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -78,12 +78,12 @@
 		<div class="container-fluid" id="content">
 			<div class="wrapper">		
 				<div class="code" align="center">
-					<img src="assets/img/logo.png" alt="" class='retina-ready' width="380">
+					<img src="assets/img/logo.png" alt="" class='retina-ready' width="420">
 				</div>				
 				<div class="desc" align="center">
-					<font size="3px">
-						SCAN VULNERABILITY &#149; DETECT WEBSHELL/BACKDOOR
-					</font>
+					<p style="font-size:0.8em">
+				SCAN VULNERABILITY &#149; DETECT WEBSHELL/BACKDOOR
+					</p>
 				</div>
 				<hr/>
 				<form action="upload.php" class='form-horizontal' method="post" enctype="multipart/form-data">
