@@ -282,10 +282,8 @@ try {
 }
 
 function ConnectDB(){
-    $db_username="root";
-    $db_password="root";
-    $database="guruWS";
-    $con=mysqli_connect('localhost', $db_username, $db_password, $database);
+    include("../../connectdb.php");  
+    $con = ConnectDB() or die("can't connect to DB");
     return $con;
 }
 
