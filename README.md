@@ -6,7 +6,7 @@ Scan Vulnerability • Detect WebShell/Backdoor
 
 ## Key Features
 * Detect following the vulnebilities: XSS, SQLInjection, File Inclusion...
-* Detect WebShell
+* Detect WebShell/Backdoor
 
 ## Requirements:
 `php 5.6.12` , `mysql`, `Apache/2.4.16`, `unzip`, `unrar`, `7z`, `python-mysqldb`, `yara`, `python-yara`
@@ -18,7 +18,7 @@ Scan Vulnerability • Detect WebShell/Backdoor
 $ mysql -uUSERNAME -pPASSWORD
 (mysql) CREATE database guruWS
 (mysql) exit
-$ mysql -uUSERNAME -pPASSWORD DATABASE < database/guruWS.sql
+$ mysql -uUSERNAME -pPASSWORD DATABASE < dbconfig/import-me-first.sql
 ```
 * Change user and password of mysql in `config\db.cfg` files and `./core/grVulnScanner/Main.php` file (in ConnectDB function)
 * chmod upload directory

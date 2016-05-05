@@ -7,15 +7,8 @@ import time
 import gc
 import json
 
-#CHANGE ON DEMAND
-WORKER_NUMBER = 10;
-DBserver = "localhost"
-DBusername = "root"
-DBpassword = "root"
-
-DBCONFIGFILE = "dbconfig/db.cfg"   
-
 try:
+    DBCONFIGFILE = "dbconfig/db.cfg"   
     with open(DBCONFIGFILE) as configfile:    
         dbconf = json.load(configfile)
     DBserver = dbconf['server']
@@ -23,7 +16,7 @@ try:
     DBpassword = dbconf['password']
     DBname = dbconf['name']    
 except:    
-    raise Exception, DBCONFIGFILE + " not found !"
+    raise Exception, DBCONFIGFILE + " is not found or could be damaged !"
 
 
 KBOLD = '\033[1m'
