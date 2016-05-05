@@ -1,9 +1,15 @@
 <?php
+    
+    
     function ConnectDB(){
-        $db_username="root";
-        $db_password="root";
-        $database="guruWS";
-        $con=mysqli_connect('localhost', $db_username, $db_password, $database);
+        $dbfile = file_get_contents("dbconfig/db.cfg");
+        $dbinfo = json_decode($dbfile, true);
+        $server     = $dbinfo['server'];
+        $username   = $dbinfo['username'];
+        $password   = $dbinfo['password'];
+        $dbname     = $dbinfo['name'];
+        $con    = mysqli_connect($server, $username, $password, $dbname);        
         return $con;
     }
+    ConnectDB();
 ?>

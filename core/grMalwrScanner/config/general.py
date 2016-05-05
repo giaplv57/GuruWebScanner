@@ -1,9 +1,17 @@
+import json
+
 #:: Database information
-DBServer = "localhost"
+DBCONFIGFILE = '/var/www/html/guruws/dbconfig/db.cfg'
+try:
+    with open(DBCONFIGFILE) as configfile:         
+        dbconf = json.load(configfile)        
+    DBServer = dbconf['server']
+    DBUsername = dbconf['username']
+    DBPassword = dbconf['password']
+    DBname = dbconf['name']    
+except:    
+    raise Exception, DBCONFIGFILE + " not found or coule be damaged !"
 
-DBUsername = "root"
-
-DBPassword = "root"
 
 #:: Display
 QUITEMODE   = False

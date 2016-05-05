@@ -343,7 +343,7 @@
                         <td>[+] Link to share:</td>                     
                         <td>
                           <font face="Consolas"><b>
-                            <a href="./share.php?id=<?php echo $shareID ?> " >http://guru.ws/share.php?id=<?php echo $shareID ?>
+                            <a href="./share.php?id=<?php echo $shareID ?> " >http://guruws.tech/share.php?id=<?php echo $shareID ?>
                           </b></font>
                         </td>                     
 

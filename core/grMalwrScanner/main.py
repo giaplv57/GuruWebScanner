@@ -124,7 +124,7 @@ def export_to_outfile(outfile):
 
 def write_to_DB(projectid):
     try:
-        dbConnection = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
+        dbConnection = MySQLdb.connect(DBServer, DBUsername, DBPassword, DBname)
         cursor = dbConnection.cursor()
         query = "INSERT INTO malResult (projectID, result) VALUES (%s, %s)"
         cursor.execute(query, (projectid, json.dumps({"webshell":_shells, "dfunc":_dfuncs}, ensure_ascii=False)))

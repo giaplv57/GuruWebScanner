@@ -9,9 +9,22 @@ import json
 
 #CHANGE ON DEMAND
 WORKER_NUMBER = 10;
-DBServer = "localhost"
-DBUsername = "root"
-DBPassword = "root"
+DBserver = "localhost"
+DBusername = "root"
+DBpassword = "root"
+
+DBCONFIGFILE = "dbconfig/db.cfg"   
+
+try:
+    with open(DBCONFIGFILE) as configfile:    
+        dbconf = json.load(configfile)
+    DBserver = dbconf['server']
+    DBusername = dbconf['username']
+    DBpassword = dbconf['password']
+    DBname = dbconf['name']    
+except:    
+    raise Exception, DBCONFIGFILE + " not found !"
+
 
 KBOLD = '\033[1m'
 KRED = '\x1B[31m'
@@ -41,7 +54,7 @@ def nocolor(text):
 
 def try_connect():
     try:
-        conn = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
+        conn = MySQLdb.connect(DBserver, DBusername, DBpassword, DBname)
     except:
         return False
 
@@ -66,7 +79,7 @@ def malwr_scan(projectID):
     # Have to make new connection in every thread to avoid 
     # of race condition when dbName.commit() function is excuted
     uncompressFolder = "./../../userProjects/" + projectID + "/"
-    conn = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
+    conn = MySQLdb.connect(DBserver, DBusername, DBpassword, DBname)
     cursor = conn.cursor()
     
     command = r"""cd ./core/grMalwrScanner/ ; python main.py -q -p config/pm_blacklist.yara -d {0} --projectid {1}""".format(uncompressFolder, projectID)
@@ -83,7 +96,7 @@ def vuln_scan(projectID):
 
     # Have to make new connection in every thread to avoid 
     # of race condition when dbName.commit() function is excuted
-    conn = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
+    conn = MySQLdb.connect(DBserver, DBusername, DBpassword, DBname)
     cursor = conn.cursor()
     uncompressFolder = "./../../userProjects/" + projectID + "/"
     
@@ -104,7 +117,7 @@ def scan_func(projectID):
 def get_project_to_scan():
     # Have to make new connection in every while loop because
     # of the connection time limitation of DBMS
-    conn = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
+    conn = MySQLdb.connect(DBserver, DBusername, DBpassword, DBname)
     cursor = conn.cursor()
 
     # execute SQL query using execute() method.
@@ -118,7 +131,7 @@ def get_project_to_scan():
 
 
 def update_project_status(projectID):
-    conn = MySQLdb.connect(DBServer, DBUsername, DBPassword, "guruWS")
+    conn = MySQLdb.connect(DBserver, DBusername, DBpassword, DBname)
     cursor = conn.cursor()
     cursor.execute('UPDATE scanProgress SET vulStatus = "0", sigStatus = "0" WHERE projectID="'+projectID+'"')
     conn.commit()
