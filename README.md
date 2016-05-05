@@ -20,7 +20,7 @@ $ mysql -uUSERNAME -pPASSWORD
 (mysql) exit
 $ mysql -uUSERNAME -pPASSWORD DATABASE < dbconfig/import-me-first.sql
 ```
-* Change user and password of mysql in `config\db.cfg` files and `./core/grVulnScanner/Main.php` file (in ConnectDB function)
+* Change user and password of mysql in `config/db.cfg` files and `./core/grVulnScanner/Main.php` file (in ConnectDB function)
 * chmod upload directory
 ```
 chmod 777 -R userProjects/
