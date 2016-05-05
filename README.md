@@ -13,14 +13,14 @@ Scan Vulnerability • Detect WebShell/Backdoor
 
 ## Usage:
 * Install [requirements](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu)
-* Create a database named guruWS and import guruWS.sql
+* Create a database named `guruWS` and import `import-me-first.sql`
 ```
 $ mysql -uUSERNAME -pPASSWORD
 (mysql) CREATE database guruWS
 (mysql) exit
 $ mysql -uUSERNAME -pPASSWORD DATABASE < dbconfig/import-me-first.sql
 ```
-* Change user and password of mysql in `config/db.cfg` file (in ConnectDB function)
+* Change user and password of mysql in `config/db.cfg` file
 * chmod upload directory
 ```
 chmod 777 -R userProjects/
