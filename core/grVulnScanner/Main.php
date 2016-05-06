@@ -281,14 +281,14 @@ try {
     echo 'Parse Error: ',$e->getMessage();
 }
 
-function ConnectDB(){
+function ConnectToDB(){
     include("../../connectdb.php");  
     $con = ConnectDB() or die("can't connect to DB");
     return $con;
 }
 
 function resultToDB($projectID, $fileName, $description, $flowpath, $dependencies){
-    $conaa = ConnectDB() or die("can't connect to DB");
+    $conaa = ConnectToDB() or die("can't connect to DB");
     mysqli_query($conaa,"INSERT INTO vulResult (projectID, fileName, description, flowpath, dependencies) VALUES ('$projectID', '$fileName', '$description', '$flowpath', '$dependencies' )") or die(mysqli_error($conaa));
 }
 
