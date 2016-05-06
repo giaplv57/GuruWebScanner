@@ -35,6 +35,7 @@ sudo python jobAllocate.py &
 upload_max_filesize = 200M
 post_max_size = 800M
 ```
+restart the `httpd` service
 
 ## Screenshot
 ![home page](https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/assets/img/home.JPG?token=AE0vQonRB5ES6wzWbgg3qCO7zMsHWgc6ks5W54lLwA%3D%3D)
