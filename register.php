@@ -74,45 +74,45 @@
 		</style>
 
 	</head>
-	<body class='error'>		
+	<body class='error'>						
+
 		<div class="container-fluid" id="content">
-			<div class="wrapper">		
+			<div class="wrapper">
 				<div class="code" align="center">
 					<img src="assets/img/logo.png" alt="" class='retina-ready' width="420">
-				</div>				
-				<div class="desc" align="center">
-					<p style="font-size:0.8em">
-				SCAN VULNERABILITY &#149; DETECT WEBSHELL/BACKDOOR
+					<div class="desc" align="left">
+					<p style="font-size:1.0em">
+						Chúng tôi sẽ liên tụp kiểm tra hoạt động của trang web của bạn. Trong trường hợp Website của bạn có những dấu hiệu bất thường như bị tấn công ngừng hoạt động hoặc bị hack... chúng tôi sẽ thông báo ngay lập tức cho bạn qua email !
 					</p>
 				</div>
-				<hr/>
-				<form action="upload.php" class='form-horizontal' method="post" enctype="multipart/form-data">
-					<div class="input-append">
-						<input type="text" name="search" id="uploadPreview" placeholder="Select a compressed file...">						
-						<span class="btn btn-file">
-							<span class="fileupload-new">
-								<i class="icon-folder-close"></i>
-							</span>
-							<input type="file" name="userFile" id="sourcecode" onchange="PreviewImage();" />
-						</span>
-					</div>
-					<br><br>
-					<div class="buttons" align="center">
-						<div class="pull-center">
-							<button class="btn btn-success btn hidden" onclick="showUploadBar()" id="scanbutton" type="submit" name="submit">SCAN <i class="icon-search"></i></button>
+				</div>			
+				<div class="login-body">					
+					<form action="index.html" method='get' class='form-validate' id="test">
+						<div class="control-group">
+							<div class="pw controls">
+								<input type="text" name="uname" placeholder="Your name" class='input-block-level' data-rule-required="true">
+							</div>
 						</div>
-					</div>
-				</form>			
-				<div class="progress hidden" id="uploadBar" style="margin-top:-20px;"> <!-- hidden -->
-			        <div class="bar"></div >
-			        <div class="percent">0%</div >
-			  	</div>
-			 	<p id="errorMessage" class="hidden"></p>
+						<div class="control-group">
+							<div class="email controls">
+								<input type="text" name='uemail' placeholder="Email address" class='input-block-level' data-rule-required="true" data-rule-email="true">
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="pw controls">
+								<input type="text" name="uwebsite" placeholder="Your Website" class='input-block-level' data-rule-required="true">
+							</div>
+						</div>						
+						<div class="submit">							
+							<input type="submit" value="ĐĂNG KÝ" class='btn btn-primary'>
+						</div>
+					</form>					
+				</div>
 			</div>
 		</div>
 		<div id="footer">			
 			<div class="container">
-			<p>Powered by Guru Team<span class="font-grey-4">|</span> <a href="register.php">Đăng ký kiểm tra trạng thái website </a><span class="font-grey-4">|</span> <a href="contact">Contact</a> <span class="font-grey-4">|</span> <a href="donate">Donate</a> 
+			<p>Powered by Guru Team<span class="font-grey-4">|</span> <a href="register.php">Đăng ký kiểm tra trạng thái website</a><span class="font-grey-4">|</span> <a href="contact">Contact</a> <span class="font-grey-4">|</span> <a href="donate">Donate</a> 
 			</p>
 			</div>
 			<a href="#" class="gototop"><i class="icon-arrow-up"></i></a>
