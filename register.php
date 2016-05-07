@@ -41,22 +41,7 @@
 		<!-- Apple devices Homescreen icon -->
 		<link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-precomposed.png" />
 
-		<script type="text/javascript">
-		    function PreviewImage() {
-		        var oFReader = new FileReader();
-		        oFReader.readAsDataURL(document.getElementById("sourcecode").files[0]);
 
-		        oFReader.onload = function (oFREvent) {
-		            document.getElementById("uploadPreview").value = "Press scan button..."; //oFREvent.target.result;
-		            $("#scanbutton").removeClass('hidden'); //oFREvent.target.result;
-		        };
-		    };
-
-		    function showUploadBar(){
-		    	$("#scanbutton").addClass('hidden');
-		    	$("#uploadBar").removeClass('hidden');
-		    }
-		</script>
 		<style type="text/css">
 			#footer {
 				position: fixed;
@@ -87,25 +72,48 @@
 				</div>
 				</div>			
 				<div class="login-body">					
-					<form action="index.html" method='get' class='form-validate' id="test">
+					<form action="" method='POST' class='form-validate' id="test">
 						<div class="control-group">
 							<div class="pw controls">
-								<input type="text" name="uname" placeholder="Your name" class='input-block-level' data-rule-required="true">
+								<input type="text" name="uname" placeholder="Your name" class='input-block-level' data-rule-required="true" required>
 							</div>
 						</div>
 						<div class="control-group">
 							<div class="email controls">
-								<input type="text" name='uemail' placeholder="Email address" class='input-block-level' data-rule-required="true" data-rule-email="true">
+								<input name='uemail' type='email' placeholder="Email address" class='input-block-level' data-rule-required="true" data-rule-email="true" required>
 							</div>
 						</div>
 						<div class="control-group">
 							<div class="pw controls">
-								<input type="text" name="uwebsite" placeholder="Your Website" class='input-block-level' data-rule-required="true">
+								<input name="uwebsite" type='url' placeholder="Your Website" class='input-block-level' data-rule-required="true" required>
 							</div>
 						</div>						
 						<div class="submit">							
 							<input type="submit" value="ĐĂNG KÝ" class='btn btn-primary'>
 						</div>
+            </br>
+            <?php
+            // For DEBUG purpose
+            ini_set('display_errors',1); 
+            error_reporting(E_ALL);
+            ////////////////////////////
+              if (isset($_POST['uwebsite']) && isset($_POST['uemail']) && isset($_POST['uname'])){
+                include("connectdb.php");
+                $con = ConnectDB() or die("can't connect to DB");
+                $uwebsite = mysqli_real_escape_string($con, $_POST['uwebsite']);
+                $uemail = mysqli_real_escape_string($con, $_POST['uemail']);
+                $uname = mysqli_real_escape_string($con, $_POST['uname']);
+                $checkExistingWebsite = mysqli_query($con,"SELECT * FROM webChecker WHERE uwebsite='$uwebsite'") or die(mysqli_error($con));
+                $status = mysqli_fetch_row($checkExistingWebsite);
+                // var_dump($status);
+                if ($status == null){
+                  mysqli_query($con,"INSERT INTO webChecker (uwebsite, uemail, uname) VALUES ('$uwebsite', '$uemail', '$uname')") or die(mysqli_error($con));
+                  echo '<div class="alert alert-warning col-md-4" role="alert">Success!</div>';  
+                }else{
+                  echo '<div class="alert alert-warning col-md-4" role="alert">Website already being in checking status!</div>';  
+                }
+              }
+            ?>
 					</form>					
 				</div>
 			</div>
@@ -118,47 +126,4 @@
 			<a href="#" class="gototop"><i class="icon-arrow-up"></i></a>
 		</div>
 	</body>
-
-	<!-- FOR UPLOAD BAR -->
-	<script src="assets/js/jquery.form.js"></script>
-	<script>
-		(function() {
-		var bar = $('.bar');
-		var percent = $('.percent');
-		var status = $('#status');
-		   
-		$('form').ajaxForm({
-		    beforeSend: function() {
-		        status.empty();
-		        var percentVal = '0%';
-		        bar.width(percentVal)
-		        percent.html(percentVal);
-		    },
-		    uploadProgress: function(event, position, total, percentComplete) {
-		        var percentVal = percentComplete + '%';
-		        bar.width(percentVal)
-		        percent.html(percentVal);
-		    //console.log(percentVal, position, total);
-		    },
-		    success: function() {
-		        var percentVal = '100%';
-		        bar.width(percentVal)
-		        percent.html(percentVal);
-		        // window.location.href = "/376"; 
-		    },
-		  complete: function(xhr) {
-		  	// console.log(xhr.responseText);
-		    if ($.trim(xhr.responseText) == "1") {
-		    	window.location.href = "./result.php";
-		    }else{
-		    	// $("#uploadBar").addClass('hidden');
-		    	$("#errorMessage").removeClass('hidden');
-		    	document.getElementById("errorMessage").innerHTML = xhr.responseText;
-		    }
-		    // console.log(xhr.responseText);
-		  }
-		}); 
-
-		})();       
-	</script>
 </html>
