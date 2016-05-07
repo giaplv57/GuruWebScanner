@@ -41,7 +41,7 @@ def check_website_status():
         except Exception, e:
             print "[+] Error ! " + str(e)
             continue
-        if r.status_code != 200:
+        if r.status_code == 200:
             print '[+] ' + url + " : OK"
         else:
             save_status_code = r.status_code
