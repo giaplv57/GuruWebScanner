@@ -132,10 +132,9 @@ def update_project_status(projectID):
     conn.close()
     return True
 
-
 if __name__ == '__main__':
     welcome()
-    while(True):
+    while(True):        
         if threading.activeCount() > 10:
             time.sleep(30) #sleep for 1/2 minute
             continue
