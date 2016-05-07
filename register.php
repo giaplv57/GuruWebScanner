@@ -82,7 +82,7 @@
 					<img src="assets/img/logo.png" alt="" class='retina-ready' width="420">
 					<div class="desc" align="left">
 					<p style="font-size:1.0em">
-						Chúng tôi sẽ liên tụp tự động kiểm tra hoạt động của trang web của bạn. Trong trường hợp Website của bạn có những dấu hiệu bất thường như bị tấn công ngừng hoạt động hoặc bị hack... chúng tôi sẽ thông báo ngay lập tức cho bạn qua email !
+						Chúng tôi sẽ liên tục tự động kiểm tra hoạt động của trang web của bạn. Trong trường hợp Website của bạn có những dấu hiệu bất thường như bị tấn công ngừng hoạt động hoặc bị hack... chúng tôi sẽ thông báo ngay lập tức cho bạn qua email !
 					</p>
 				</div>
 				</div>			
