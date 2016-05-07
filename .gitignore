@@ -2,3 +2,4 @@ userProjects
 .idea
 sample-test
 data/
+dbconfig/db.cfg
