@@ -4,6 +4,19 @@ from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
 import datetime
 import time
+import json
+import MySQLdb
+
+try:
+    DBCONFIGFILE = "dbconfig/db.cfg"   
+    with open(DBCONFIGFILE) as configfile:    
+        dbconf = json.load(configfile)
+    DBserver = dbconf['server']
+    DBusername = dbconf['username']
+    DBpassword = dbconf['password']
+    DBname = dbconf['name']    
+except Exception, e:    
+    raise Exception, e
 
 def notify(toemail, url, r):
     datatime = datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p")
@@ -33,27 +46,70 @@ def notify(toemail, url, r):
         print "[+] Gui mail loi: " . str(e)
 
 
+def get_urllist():
+
+    # Have to make new connection in every while loop because
+    # of the connection time limitation of DBMS
+    conn = MySQLdb.connect(DBserver, DBusername, DBpassword, DBname)
+    cursor = conn.cursor()
+
+    # execute SQL query using execute() method.
+    cursor.execute("SELECT * FROM webChecker")
+
+    # Fetch a single row using fetchone() method.
+    rows = cursor.fetchall()
+    
+    cursor.close()
+    conn.close()
+
+    weblist = []
+    for row in rows:
+        web = {
+            'url': row[0],
+            'email': row[1],
+            'name': row[2]
+        }
+        weblist.append(web)
+    return weblist
+
+
 def check_website_status():    
-    urllist = ['http://guruws.tech']
-    for url in urllist:
+    weblist = get_urllist()
+    
+    for web in weblist:    
         try:        
-            r = requests.get(url)
+            r = requests.get(web['url'])
         except Exception, e:
             print "[+] Error ! " + str(e)
             continue
         if r.status_code == 200:
-            print '[+] ' + url + " : OK"
+            print '[+] ' + web['url'] + " : OK"
         else:
             save_status_code = r.status_code
 
             # recheck
-            r = requests.get(url)
+            r = requests.get(web['url'])
             if r.status_code == save_status_code:
-                email = 'htung.nht@gmail.com'
+                email = web['email']
                 #email = 'giaplvk57@gmail.com'                        
-                notify(email, url, r)
+                notify(email, web['url'], r)
 
-if __name__ == '__main__':
+def try_connect():
+    try:
+        conn = MySQLdb.connect(DBserver, DBusername, DBpassword, DBname)
+    except:
+        return False
+
+    return True;
+
+def welcome():
+    if try_connect():
+        print green("[+] Connected to database !\n\n")
+    else:
+        print red("[+] Can't connect to database !")
+        exit(0)
+
+if __name__ == '__main__':    
     cnt = 0
     while True:
         print "[+] ", cnt
