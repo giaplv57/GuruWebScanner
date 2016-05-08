@@ -18,10 +18,12 @@ try:
 except Exception, e:    
     raise Exception, e
 
-def notify(toemail, url, r):
+def notify(name, toemail, url, r, lang):
     datatime = datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p")
-    message = "GuruWS xin thong bao:\nTrang web " + url + " hien khong the truy cap duoc vao thoi diem " + datatime + "\r\n"
-    message += "More information:\r\nGET " + url + " (" + str(r.status_code) + ")" + "\r\n" + str(r.headers)
+    if lang != 'vi':
+        return False    
+    message = "Chao " + name + ",\r\nGuruWS xin thong bao:\nTrang web " + url + " hien khong the truy cap duoc vao thoi diem " + datatime + "\r\n"
+    message += "Chi tiet:\r\nGET " + url + " (" + str(r.status_code) + ")" + "\r\n" + str(r.headers)
 
     print message
  
@@ -67,7 +69,8 @@ def get_urllist():
         web = {
             'url': row[0],
             'email': row[1],
-            'name': row[2]
+            'name': row[2],
+            'lang': row[3]
         }
         weblist.append(web)
     return weblist
@@ -75,7 +78,7 @@ def get_urllist():
 
 def check_website_status():    
     weblist = get_urllist()
-    
+    print weblist  
     for web in weblist:    
         try:        
             r = requests.get(web['url'])
@@ -92,7 +95,7 @@ def check_website_status():
             if r.status_code == save_status_code:
                 email = web['email']
                 #email = 'giaplvk57@gmail.com'                        
-                notify(email, web['url'], r)
+                notify(web['name'], email, web['url'], r, web['lang'])
 
 def try_connect():
     try:

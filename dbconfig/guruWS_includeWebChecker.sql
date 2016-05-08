@@ -81,6 +81,7 @@ CREATE TABLE IF NOT EXISTS `webChecker` (
   `uwebsite` varchar(128) NOT NULL,
   `uemail` varchar(128) NOT NULL,
   `uname` varchar(128) NOT NULL,
+  `ulang` varchar(128) NOT NULL,
   UNIQUE KEY `uwebsite` (`uwebsite`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
