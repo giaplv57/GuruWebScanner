@@ -125,8 +125,7 @@ def check_website_status():
                 update_status(web, 'up')
         else:
             print '[+] ' + web['url'] + " : Down"
-            if web['status'] == 'up':                        
-                email = web['email']
+            if web['status'] == 'up':                                      
                 notify(web, 'down', r)
                 update_status(web, 'down')
 
