@@ -81,28 +81,34 @@
 					<img src="assets/img/logo.png" alt="" class='retina-ready' width="420">
 				</div>				
 				<div class="desc" align="center">
-					<p style="font-size:0.8em">
-				SCAN VULNERABILITY &#149; DETECT WEBSHELL/BACKDOOR
+					<p style="font-size:2em">
+				Guru Team
 					</p>
+					<p style="font-size:1.2em">
+				guruws.tech@gmail.com
+					</p>
+
 				</div>
 				<hr/>
-				<form action="upload.php" class='form-horizontal' method="post" enctype="multipart/form-data">
-					<div class="input-append">
-						<input type="text" name="search" id="uploadPreview" placeholder="Select a compressed file...">						
-						<span class="btn btn-file">
-							<span class="fileupload-new">
-								<i class="icon-folder-close"></i>
-							</span>
-							<input type="file" name="userFile" id="sourcecode" onchange="PreviewImage();" />
-						</span>
-					</div>
-					<br><br>
-					<div class="buttons" align="center">
-						<div class="pull-center">
-							<button class="btn btn-success btn hidden" onclick="showUploadBar()" id="scanbutton" type="submit" name="submit">SCAN <i class="icon-search"></i></button>
-						</div>
-					</div>
-				</form>			
+				<div class="desc" align="left">
+					<p style="font-size:2em">
+					
+					</p>
+					<p style="font-size:1.2em">
+						Nguyễn Hữu Tùng<br/>
+						Twitter: @tungpun_<br/>				
+						Email: htung.nht@gmail.com<br/>
+					</p>
+				</div>
+				<div class="desc" align="right">
+					<p style="font-size:1.2em">
+						Lê Văn Giáp<br/>
+						Twitter: @Hawking131<br/>				
+						Email: giaplvk57@gmail.com<br/>
+					</p>
+
+				</div>					
+				
 				<div class="progress hidden" id="uploadBar" style="margin-top:-20px;"> <!-- hidden -->
 			        <div class="bar"></div >
 			        <div class="percent">0%</div >
@@ -112,7 +118,7 @@
 		</div>
 		<div id="footer">			
 			<div class="container">
-			<p>Powered by Guru Team<span class="font-grey-4">|</span> <a href="register.php"><b>Đăng ký kiểm tra trạng thái website </b></a><span class="font-grey-4">|</span> <a href="contact.php">Contact</a> <span class="font-grey-4">|</span> <a href="donate">Donate</a> 
+			<p>Powered by Guru Team<span class="font-grey-4">|</span> <a href="register.php"><b>Đăng ký kiểm tra trạng thái website </b></a><span class="font-grey-4">|</span> <a href="contact">Contact</a> <span class="font-grey-4">|</span> <a href="donate">Donate</a> 
 			</p>
 			</div>
 			<a href="#" class="gototop"><i class="icon-arrow-up"></i></a>
