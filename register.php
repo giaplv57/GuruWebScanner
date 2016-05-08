@@ -103,15 +103,18 @@
                 $uwebsite = mysqli_real_escape_string($con, $_POST['uwebsite']);
                 $uemail = mysqli_real_escape_string($con, $_POST['uemail']);
                 $uname = mysqli_real_escape_string($con, $_POST['uname']);
-                $checkExistingWebsite = mysqli_query($con,"SELECT * FROM webChecker WHERE uwebsite='$uwebsite'") or die(mysqli_error($con));
-                $status = mysqli_fetch_row($checkExistingWebsite);
+                //
+                // Se co truong hop 1 site nhung nhieu thang cung quan tri ma dai ca :D
+                //
+                //$checkExistingWebsite = mysqli_query($con,"SELECT * FROM webChecker WHERE uwebsite='$uwebsite'") or die(mysqli_error($con));
+                //$status = mysqli_fetch_row($checkExistingWebsite);
                 // var_dump($status);
-                if ($status == null){
-                  mysqli_query($con,"INSERT INTO webChecker (uwebsite, uemail, uname, ulang) VALUES ('$uwebsite', '$uemail', '$uname', 'vi')") or die(mysqli_error($con));
-                  echo '<div class="alert alert-warning col-md-4" role="alert">Cảm ơn bạn đã sử dụng dịch vụ !</div>';  
-                }else{
-                  echo '<div class="alert alert-warning col-md-4" role="alert">Website already being in checking status!</div>';  
-                }
+                //if ($status == null){
+                mysqli_query($con,"INSERT INTO webChecker (uwebsite, uemail, uname, ulang) VALUES ('$uwebsite', '$uemail', '$uname', 'vi')") or die(mysqli_error($con));
+                echo '<div class="alert alert-warning col-md-4" role="alert">Cảm ơn ' . $uname . ' đã sử dụng dịch vụ !</div>';  
+                //}else{
+                //  echo '<div class="alert alert-warning col-md-4" role="alert">Website already being in checking status!</div>';  
+                //}
               }
             ?>
 					</form>					
