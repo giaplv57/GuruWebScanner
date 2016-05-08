@@ -372,7 +372,7 @@
     <hr/>
     <div id="footer">
       <div class="container">
-      <p>Powered by Guru Team<span class="font-grey-4">|</span> <a href="register.php"><b>Đăng ký kiểm tra trạng thái website </b></a><span class="font-grey-4">|</span> <a href="contact">Contact</a> <span class="font-grey-4">|</span> <a href="donate">Donate</a> 
+      <p>Powered by Guru Team<span class="font-grey-4">|</span> <a href="register.php"><b>Đăng ký kiểm tra trạng thái website </b></a><span class="font-grey-4">|</span> <a href="contact.php">Contact</a> <span class="font-grey-4">|</span> <a href="donate">Donate</a> 
       </p>
       </div>
       <a href="#" class="gototop"><i class="icon-arrow-up"></i></a>
