@@ -79,7 +79,7 @@ def get_urllist():
 
 def check_website_status():    
     weblist = get_urllist()
-    print weblist  
+    
     for web in weblist:    
         try:        
             r = requests.get(web['url'])
