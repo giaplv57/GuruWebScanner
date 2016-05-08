@@ -282,8 +282,15 @@ try {
 }
 
 function ConnectToDB(){
-    include("../../connectdb.php");  
-    $con = ConnectDB() or die("can't connect to DB");
+    $dbfile = file_get_contents("../../dbconfig/db.cfg");
+    $dbinfo = json_decode($dbfile, true);
+    $server     = $dbinfo['server'];
+    $username   = $dbinfo['username'];
+    $password   = $dbinfo['password'];
+    $dbname     = $dbinfo['name'];        
+    $con    = mysqli_connect($server, $username, $password, $dbname);     
+    //include("../../connectdb.php");  
+    //$con = ConnectDB() or die("Vuln.... can't connect to DB");
     return $con;
 }
 
