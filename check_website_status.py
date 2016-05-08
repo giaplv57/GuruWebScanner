@@ -54,7 +54,8 @@ def notify(web, status, r):
         server.sendmail(fromaddr, toemail, text)
         server.quit()
     except Exception, e:
-        print "[+] Gui mail loi: " . str(e)
+        print "[+] Gui mail loi: " + str(e)
+        pass
 
     print "Sent notification to " + web['email']
 
@@ -108,6 +109,8 @@ def check_website_status():
     weblist = get_urllist()
     
     for web in weblist:    
+        if not '@' in web['email']:
+            continue
         up = True
         try:        
             r = requests.get(web['url'])
@@ -117,6 +120,7 @@ def check_website_status():
             #print "[+] Error ! " + str(e)
             up = False
             pass
+
         if up:
             print '[+] ' + web['url'] + " : Up"
 
