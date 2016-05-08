@@ -18,22 +18,30 @@ try:
 except Exception, e:    
     raise Exception, e
 
-def notify(name, toemail, url, r, lang):
+def notify(web, status, r):
+    name = web['name']
+    toemail = web['email']
+    url = web['url']
+    lang = web['lang']    
     datatime = datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p")
     if lang != 'vi':
         return False    
-    message = "Chao " + name + ",\r\nGuruWS xin thong bao:\nTrang web " + url + " hien khong the truy cap duoc vao thoi diem " + datatime + "\r\n"
+    if status == 'down':
+        message = "Chao " + name + ",\r\nGuruWS xin thong bao:\nTrang web " + url + " hien khong the truy cap duoc vao thoi diem " + datatime + "\r\n"
+    else:
+        message = "Chao " + name + ",\r\nGuruWS xin thong bao:\nTrang web " + url + " hien da co the truy cap duoc vao thoi diem " + datatime + "\r\n"    
     message += "Chi tiet:\r\nGET " + url + " (" + str(r.status_code) + ")" + "\r\n" + str(r.headers)
     message += "\r\n\r\n\r\n--\r\nBan nhan duoc thu nay vi da dang ky cap nhat trang thai Website tai guruws.tech.\r\nCam on ban da su dung dich vu\r\nNeu can ho tro gi them (vi du nhu khac phuc su co, tim kiem ho hong website) cac ban co the lien he voi chung toi qua email htung.nht@gmail.com hoac duong day nong: 01646543714\r\nGuruTeam"
-
-    print message
  
     try:
         fromaddr = "guruws.tech@gmail.com"
         msg = MIMEMultipart()
         msg['From'] = "Guru Team"
         msg['To'] = toemail
-        msg['Subject'] = "GuruWS: " + url + " khong truy cap duoc"
+        if status == 'down':
+            msg['Subject'] = "GuruWS: " + url + " khong truy cap duoc"
+        else:
+            msg['Subject'] = "GuruWS: " + url + " da co the truy cap duoc"
 
         body = message
         msg.attach(MIMEText(body, 'plain'))
@@ -48,22 +56,28 @@ def notify(name, toemail, url, r, lang):
     except Exception, e:
         print "[+] Gui mail loi: " . str(e)
 
+    print "Sent notification to " + web['email']
+
 
 def get_urllist():
 
     # Have to make new connection in every while loop because
     # of the connection time limitation of DBMS
-    conn = MySQLdb.connect(DBserver, DBusername, DBpassword, DBname)
-    cursor = conn.cursor()
+    try:
+        conn = MySQLdb.connect(DBserver, DBusername, DBpassword, DBname)
+        cursor = conn.cursor()
 
-    # execute SQL query using execute() method.
-    cursor.execute("SELECT * FROM webChecker")
+        # execute SQL query using execute() method.
+        cursor.execute("SELECT * FROM webChecker")
 
-    # Fetch a single row using fetchone() method.
-    rows = cursor.fetchall()
-    
-    cursor.close()
-    conn.close()
+        # Fetch a single row using fetchone() method.
+        rows = cursor.fetchall()
+        
+        cursor.close()
+        conn.close()
+    except Exception, e:
+        print e
+        raise Exception, e
 
     weblist = []
     for row in rows:
@@ -71,32 +85,50 @@ def get_urllist():
             'url': row[0],
             'email': row[1],
             'name': row[2],
-            'lang': row[3]
+            'lang': row[3],
+            'status': row[4]
         }
         weblist.append(web)
     return weblist
 
+def update_status(web, status):
+    try:
+        conn = MySQLdb.connect(DBserver, DBusername, DBpassword, DBname)
+        cursor = conn.cursor()
+        cursor.execute('UPDATE webChecker SET ustatus = \"' + status + '\" WHERE uwebsite = \"' + web['url'] + '\"')
+        conn.commit()
+        cursor.close()
+        conn.close()
+    except Exception, e:
+        print e
+        raise Exception, e
+    return True    
 
 def check_website_status():    
     weblist = get_urllist()
     
     for web in weblist:    
+        up = True
         try:        
             r = requests.get(web['url'])
+            if r.status_code != 200:
+                up = False
         except Exception, e:
-            print "[+] Error ! " + str(e)
-            continue
-        if r.status_code == 200:
-            print '[+] ' + web['url'] + " : OK"
-        else:
-            save_status_code = r.status_code
+            #print "[+] Error ! " + str(e)
+            up = False
+            pass
+        if up:
+            print '[+] ' + web['url'] + " : Up"
 
-            # recheck
-            r = requests.get(web['url'])
-            if r.status_code == save_status_code:
+            if web['status'] == 'down':
+                notify(web, 'up', r)
+                update_status(web, 'up')
+        else:
+            print '[+] ' + web['url'] + " : Down"
+            if web['status'] == 'up':                        
                 email = web['email']
-                #email = 'giaplvk57@gmail.com'                        
-                notify(web['name'], email, web['url'], r, web['lang'])
+                notify(web, 'down', r)
+                update_status(web, 'down')
 
 def try_connect():
     try:

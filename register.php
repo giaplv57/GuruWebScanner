@@ -110,7 +110,7 @@
                 //$status = mysqli_fetch_row($checkExistingWebsite);
                 // var_dump($status);
                 //if ($status == null){
-                mysqli_query($con,"INSERT INTO webChecker (uwebsite, uemail, uname, ulang) VALUES ('$uwebsite', '$uemail', '$uname', 'vi')") or die(mysqli_error($con));
+                mysqli_query($con,"INSERT INTO webChecker (uwebsite, uemail, uname, ulang, ustatus) VALUES ('$uwebsite', '$uemail', '$uname', 'vi', 'up')") or die(mysqli_error($con));
                 echo '<div class="alert alert-warning col-md-4" role="alert">Cảm ơn ' . $uname . ' đã sử dụng dịch vụ !</div>';  
                 //}else{
                 //  echo '<div class="alert alert-warning col-md-4" role="alert">Website already being in checking status!</div>';  
