@@ -102,7 +102,7 @@ def update_status(web, status):
     try:
         conn = MySQLdb.connect(DBserver, DBusername, DBpassword, DBname)
         cursor = conn.cursor()
-        cursor.execute('UPDATE webChecker SET ustatus = \"' + status + '\" WHERE uwebsite = \"' + web['url'] + '\"')
+        cursor.execute('UPDATE webChecker SET ustatus = \"' + status + '\" WHERE uwebsite = \"' + web['url'] + '\" and uemail = \"' + web['email'] + '\" ' )
         conn.commit()
         cursor.close()
         conn.close()
