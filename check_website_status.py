@@ -31,10 +31,10 @@ def notify(web, status, r):
     else:
         message = "Chao " + name + ",\r\nGuruWS xin thong bao:\nTrang web " + url + " hien da co the truy cap duoc vao thoi diem " + datatime + "\r\n"    
 
-    try:
-        message += "Chi tiet:\r\nGET " + url + " (" + str(r.status_code) + ")" + "\r\n" + str(r.headers)
-    except Exception, e:        
-        pass
+    #try:
+        # message += "Chi tiet:\r\nGET " + url + " (" + str(r.status_code) + ")" + "\r\n" + str(r.headers)
+    #except Exception, e:        
+    #    pass
 
     message += "\r\n\r\n\r\n--\r\nBan nhan duoc thu nay vi da dang ky cap nhat trang thai Website tai guruws.tech.\r\nCam on ban da su dung dich vu\r\nNeu can ho tro gi them (vi du nhu khac phuc su co, tim kiem ho hong website) cac ban co the lien he voi chung toi qua email nay hoac duong day nong: 01646543714\r\nGuruTeam"
  
