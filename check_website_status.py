@@ -21,7 +21,7 @@ except Exception, e:
 def notify(web, status, r):
     name = web['name'].strip()
     toemail = web['email'].strip()
-    url = web['url'].strip()
+    url = web['url'].strip().split('//')[1]
     lang = web['lang'].strip()
     datatime = datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p")
     if lang != 'vi':
