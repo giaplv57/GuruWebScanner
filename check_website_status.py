@@ -119,7 +119,7 @@ def check_website_status():
             continue
         up = True
         try:        
-            r = requests.get(web['url'], verify=False, timeout=10)
+            r = requests.get(web['url'], verify=False, timeout=5)
             if r.status_code != 200:
                 up = False
         except Exception, e:
