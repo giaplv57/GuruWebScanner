@@ -18,7 +18,7 @@ try:
 except Exception, e:    
     raise Exception, e
 
-def notify(web, status, r):
+def notify(web, status):
     name = web['name'].strip()
     toemail = web['email'].strip()
     url = web['url'].strip().split('//')[1]
@@ -119,7 +119,7 @@ def check_website_status():
             continue
         up = True
         try:        
-            r = requests.get(web['url'])
+            r = requests.get(web['url'], verify=False, timeout=10)
             if r.status_code != 200:
                 up = False
         except Exception, e:
@@ -131,12 +131,12 @@ def check_website_status():
             print '[+] ' + web['url'] + " : Up"
 
             if web['status'] == 'down':
-                notify(web, 'up', r)
+                notify(web, 'up')
                 update_status(web, 'up')
         else:
             print '[+] ' + web['url'] + " : Down"
             if web['status'] == 'up':                                      
-                notify(web, 'down', r)
+                notify(web, 'down')
                 update_status(web, 'down')
 
 def try_connect():
