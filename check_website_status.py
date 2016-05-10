@@ -118,8 +118,11 @@ def check_website_status():
         if not '@' in web['email']:
             continue
         up = True
+
+        start = time.time()
         try:        
-            r = requests.get(web['url'], verify=False, timeout=12)
+            r = requests.get(web['url'], verify=False, timeout=12)            
+            roundtrip = int((time.time() - start) // 0.001)
             if r.status_code != 200:
                 up = False
         except Exception, e:
@@ -128,7 +131,7 @@ def check_website_status():
             pass
 
         if up:
-            print '[+] ' + web['url'] + " : Up"
+            print '[+] ' + web['url'] + " : Up (" + str(roundtrip) + " ms)"
 
             if web['status'] == 'down':
                 notify(web, 'up')
