@@ -157,7 +157,8 @@ def welcome():
 if __name__ == '__main__':    
     cnt = 0
     while True:
-        print "[+] ", cnt
+        dt = datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p")
+        print "[+] ", dt
         cnt += 1
         check_website_status()
         time.sleep(2)
