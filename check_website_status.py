@@ -131,13 +131,13 @@ def check_website_status():
             pass
 
         if up:
-            print '[+] ' + web['url'] + " : Up (" + str(roundtrip) + " ms)"
+            print '[+] ' + web['url'] + "\t: Up (" + str(roundtrip) + " ms)"
 
             if web['status'] == 'down':
                 notify(web, 'up')
                 update_status(web, 'up')
         else:
-            print '[+] ' + web['url'] + " : Down"
+            print '[+] ' + web['url'] + "\t: Down"
             if web['status'] == 'up':                                      
                 notify(web, 'down')
                 update_status(web, 'down')
