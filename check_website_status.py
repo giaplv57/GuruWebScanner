@@ -59,7 +59,7 @@ def notify(web, status):
         server.login("guruws.tech@gmail.com", "where.are.you.now?")
          
         text = msg.as_string()
-        #server.sendmail(fromaddr, toemail, text)
+        server.sendmail(fromaddr, toemail, text)
         server.quit()
     except Exception, e:
         print "[+] Gui mail loi: " + str(e)
