@@ -78,11 +78,13 @@ CREATE TABLE IF NOT EXISTS `vulResult` (
 --
 
 CREATE TABLE IF NOT EXISTS `webChecker` (
+  `id` INT(6) AUTO_INCREMENT PRIMARY KEY,
   `uwebsite` varchar(128) NOT NULL,
   `uemail` varchar(128) NOT NULL,
   `uname` varchar(128) NOT NULL,
   `ulang` varchar(128) NOT NULL,
-  `ustatus` varchar(128) NOT NULL  
+  `ustatus` varchar(128) NOT NULL,
+  `utime` INT(6)  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
