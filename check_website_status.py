@@ -25,7 +25,7 @@ def notify(web, status):
     toemail = web['email'].strip()
     url = web['url'].strip().split('//')[1]
     lang = web['lang'].strip()
-    datatime = datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p")
+    datatime = datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M:%S %p")
     if lang != 'vi':
         return False    
     if status == 'down':
@@ -187,7 +187,7 @@ def welcome():
 if __name__ == '__main__':    
     cnt = 0
     while True:
-        dt = datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p")
+        dt = datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M:%S %p")
         print "[+] ", dt
         cnt += 1
         check_website_status()
