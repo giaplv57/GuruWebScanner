@@ -1,7 +1,8 @@
 import json
 
 #:: Database information
-DBCONFIGFILE = '/var/www/html/guruws/dbconfig/db.cfg'
+# DBCONFIGFILE = '/var/www/html/guruws/dbconfig/db.cfg'
+DBCONFIGFILE = '../../dbconfig/db.cfg'
 try:
     with open(DBCONFIGFILE) as configfile:         
         dbconf = json.load(configfile)        
