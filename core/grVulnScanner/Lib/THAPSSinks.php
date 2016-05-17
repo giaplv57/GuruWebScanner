@@ -10,18 +10,18 @@
 // parameter = 0 means, all parameters will be traced
 $NAME_XSS = 'Cross-Site Scripting';
 $F_XSS = array(
-    'echo'							, #=> array(array(0), $F_SECURING_XSS),
-    'print'							, #=> array(array(1), $F_SECURING_XSS),
+//    'echo'							, #=> array(array(0), $F_SECURING_XSS),
+//    'print'							, #=> array(array(1), $F_SECURING_XSS),
     'print_r'						, #=> array(array(1), $F_SECURING_XSS),
-    'exit'							, #=> array(array(1), $F_SECURING_XSS),
-    'die'							, #=> array(array(1), $F_SECURING_XSS),
+//    'exit'							, #=> array(array(1), $F_SECURING_XSS),
+//    'die'							, #=> array(array(1), $F_SECURING_XSS),
     'printf'						, #=> array(array(0), $F_SECURING_XSS),
     'vprintf'						, #=> array(array(0), $F_SECURING_XSS),
     'trigger_error'					, #=> array(array(1), $F_SECURING_XSS),
     'user_error'					, #=> array(array(1), $F_SECURING_XSS),
-    'odbc_result_all'				, #=> array(array(2), $F_SECURING_XSS),
-    'ovrimos_result_all'			, #=> array(array(2), $F_SECURING_XSS),
-    'ifx_htmltbl_result'			, #=> array(array(2), $F_SECURING_XSS)
+//    'odbc_result_all'				, #=> array(array(2), $F_SECURING_XSS),
+//    'ovrimos_result_all'			, #=> array(array(2), $F_SECURING_XSS),
+//    'ifx_htmltbl_result'			, #=> array(array(2), $F_SECURING_XSS)
 );
 
 // file inclusion functions => (parameters to scan, securing functions)
