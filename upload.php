@@ -16,7 +16,7 @@
       $uploadOk = 0;
     }
     // Check file size
-    if ($_FILES["userFile"]["size"] > 104857600) { //100MB limited
+    if ($_FILES["userFile"]["size"] > 10485760000) { //100MB limited
       echo '<div class="alert alert-warning col-md-4" role="alert">Error! Your file is too large.</div>';
       $uploadOk = 0;
     }
