@@ -27,6 +27,7 @@ KYELLOW = '\x1B[33m'
 KNORM = '\033[0m'
 
 PATTERNDB = 'config/pm_blacklist.yara'      # default value
+PATTERNDB = 'config/new-full.yara'      # default value
 
 _shells     = []
 _dfuncs     = []
@@ -62,10 +63,10 @@ def gateway():
     parser.add_option('--filename', '-f', type="string", help="specify file to scan")
     parser.add_option('--outfile', '-o', type="string", help="specify outfile to write result using JSON")
     parser.add_option('--patterndb', '-p', type="string", help="specify patterndb file")
-    parser.add_option('--projectid', '-i', type="string", help="specify project ID")
+    parser.add_option('--projectid', '-i', default=None, type="string", help="specify project ID")
     parser.add_option('--dispm', '-n', default=False, action="store_true", help="disable patterm matching module")
     parser.add_option('--quite', '-q', default=False, action="store_true", help="enable quite mode")
-    
+    projectid = None
     (options, args) = parser.parse_args()
 
     if len(sys.argv) == 1:        
@@ -82,6 +83,7 @@ def line_reduce(linecontent):
     else:
         return linecontent
 
+
 def check_php_lib():
     try:
         process = subprocess.Popen(['php', '-v'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -90,10 +92,11 @@ def check_php_lib():
         print e
         return False
 
-    if "PHP 5." in stdout[:10]:
+    if "PHP 5." in stdout[:10] or "PHP 7." in stdout[:10]:
         return True
     else:
         return False
+
 
 def import_shell(url, shellname, filename, filesize=0, line='?', sink='????'):
     _urllist.append(url);
@@ -151,6 +154,8 @@ def write_to_DB(projectid):
 
 
 def load_taint_analysis_result(projectid):
+    
+
     def get_json_content():
         try:
             if projectid != None:
@@ -159,22 +164,19 @@ def load_taint_analysis_result(projectid):
                 outfile = '.taintanalysis-output.ta'
             with open(outfile, 'r') as f:
                 output = f.read()
-            return json.loads(output)
+            return json.loads(output), outfile
         except:
-            return None
-    
-    print green('\n\n[ ----- Taint Analysis result ----- ]')
+            return None, None
 
-    json_content = get_json_content()
+#    print green('\n\n[ ----- Taint Analysis result ----- ]')
+    outfile = ''
+    json_content, outfile = get_json_content()
 
     if json_content is None:
         print "Taint Analysis: no result"
         return True            
 
     for key, values in json_content.iteritems():
-        #key = key.replace('//', '/')
-        #print key
-
         filename = key
         for value in values:
             treenodes = value['treenodes']
@@ -183,7 +185,7 @@ def load_taint_analysis_result(projectid):
                     url = key[61+4:]                
                 else:
                     url = key
-                    print cyan("Url: " + url[3:])                    
+                    #print green("Url: " + url)                    
                 if not url in _urllist:                     
                     shellname = "GuruWS :: Taint Analysis :: " + treenode['title']
                     #line = treenode['value'].split('>')[1].split(':')[0]
@@ -192,19 +194,21 @@ def load_taint_analysis_result(projectid):
                     filesize = 0
                     sink = treenode['name']                                   
                     import_shell(url, shellname, filename, filesize, line, sink)                    
-    print _shells
+    #print _shells
+
     return True
 
 
 def taint_analysis(projectid, directory):    
 
-    if not directory[0] == '/':
-        directory = '../' + directory
-
     if projectid == None:
+        if not directory[0] == '/':
+            directory = '../' + directory
+
         outFile = "../.taintanalysis-output.ta"    
+        subprocess.call("truncate -s 0 {0}".format(outFile), shell=True)             # clean taint analysis outputfile
         command = r"""cd lib/ ; php taintanalysis.php {0} {1}""".format(directory, outFile)
-        subprocess.call(command,shell=True)
+        subprocess.call(command, shell=True)
         return 0
     else:
         uncompress_folder = "./../../../userProjects/" + projectid + "/"
@@ -214,21 +218,29 @@ def taint_analysis(projectid, directory):
         return 0
 
 
-def show_result(file_count, shell_count):
-    print green("\n\n[ -----  Pattern matching result  ----- ]")
+def show_result(file_count):
+    shell_count = len(_shells)
+    print green("\n\n[ -----  Reports  ----- ]")
     print yellow("[+] Analized\t: " + str(file_count) + " files ")
     if shell_count != 0:
-        print yellow("[+] Found\t: " + str(shell_count) + " shells ")
+        print yellow("[+] Found\t: " + str(shell_count) + " issues ")
     else:
         print yellow("[+] Great ! Nothing found, or something went wrong :)")
-
+    
     for shell in _shells:
         print shell
-        print cyan("[+] Found...\t" + shell['shellname'] + " " + "\tin (" + shell['filename'] + ")")                    
+        print cyan("[+] Found...\t" + shell['shellname'] + " " + "\tin (" + shell['filename'] + ")")   
 
 
 if __name__ == '__main__':
+    print "[+] Start scanning for malwares"
+    if not check_php_lib():
+        print "You should install php5 first"
+        exit(0)
+
     options, args, QUITEMODE = gateway()
+    
+    projectid = options.projectid
 
     if options.patterndb != None:
         PATTERNDB = options.patterndb
@@ -236,9 +248,13 @@ if __name__ == '__main__':
     rules = yara.compile(PATTERNDB)
     
     file_count = 0
-    shell_count = 0
+    #shell_count = 0
 
     if options.filename != None:
+        """
+            For independent file
+        """
+
         filename = options.filename
 
         if not QUITEMODE:
@@ -251,15 +267,20 @@ if __name__ == '__main__':
             print yellow("[+] Great ! Nothing found, or something went wrong :)")
 
     if options.directory != None:
+        """
+            For a directory
+        """
+
         rootDir = options.directory
         if rootDir[-1] != '/':
             rootDir += '/'
-        taint_analysis(options.projectid, options.directory)
+        taint_analysis(projectid, options.directory)
 
         if not options.dispm:
-            for dirName, subdirList, fileList in os.walk(rootDir):    
+            for dirName, subdirList, fileList in os.walk(rootDir):            
                 if dirName[-1] != '/':
-                    dirName += '/'        
+                    dirName += '/'      
+
                 for fname in fileList:
                     filename = dirName + fname      # get absolute filename                
                     file_count += 1
@@ -272,12 +293,13 @@ if __name__ == '__main__':
 
                     if len(filecontent) == 0:
                         continue
-                    
                     matches = rules.match(filename)
-                    url = filename[61:] 
-                    url = filename               
+                    #url = filename[61:]          
+                    url = filename   
+   
                     if matches != [] and not url in _urllist: 
-                        shell_count += 1
+                        print "-----"
+                        #shell_count += 1
                         shellname = str(matches[0])                    
                         filesize = len(filecontent)
                         import_shell(url, shellname, fname, filesize)                    
@@ -285,14 +307,15 @@ if __name__ == '__main__':
                     else:
                         scan_dangerous_function(filecontent, filename, fname)            # just scan dangerous function with the file, which is not be detect as shellcode
             
-            show_result(file_count, shell_count)        
+            #show_result(file_count)        
 
-        load_taint_analysis_result(options.projectid)
+        load_taint_analysis_result(projectid)
+        show_result(file_count) 
 
         if options.outfile != None:
             export_to_outfile(options.outfile)     # just export when scan directory
-        if options.projectid != None:
-            write_to_DB(options.projectid)
+        if projectid != None:
+            write_to_DB(projectid)
 
 """ JSON struct:
 

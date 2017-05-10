@@ -75,7 +75,7 @@
     }
 
     if (count($files) == 0) {
-        debug_red('Something wrong. The number of scanned files: ' . count($files) . ' at ' . $url);
+        debug_red('Taint Analysis : The number of scanned files: ' . count($files) . ' at ' . $url);
         die();
     }
 
