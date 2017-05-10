@@ -11,7 +11,7 @@ a small part of Guru Project
 
 ## Usage:
 ```
-$ python main.py                                 20:00:25
+$ python main.py                              
 Usage: main.py [options]
 
 Options:

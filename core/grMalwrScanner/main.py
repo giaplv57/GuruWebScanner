@@ -82,6 +82,19 @@ def line_reduce(linecontent):
     else:
         return linecontent
 
+def check_php_lib():
+    try:
+        process = subprocess.Popen(['php', '-v'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = process.communicate()
+    except Exception, e:
+        print e
+        return False
+
+    if "PHP 5." in stdout[:10]:
+        return True
+    else:
+        return False
+
 def import_shell(url, shellname, filename, filesize=0, line='?', sink='????'):
     _urllist.append(url);
     tshell = {
@@ -150,6 +163,8 @@ def load_taint_analysis_result(projectid):
         except:
             return None
     
+    print green('\n\n[ ----- Taint Analysis result ----- ]')
+
     json_content = get_json_content()
 
     if json_content is None:
@@ -157,7 +172,9 @@ def load_taint_analysis_result(projectid):
         return True            
 
     for key, values in json_content.iteritems():
-        print key
+        #key = key.replace('//', '/')
+        #print key
+
         filename = key
         for value in values:
             treenodes = value['treenodes']
@@ -166,7 +183,7 @@ def load_taint_analysis_result(projectid):
                     url = key[61+4:]                
                 else:
                     url = key
-                    print green("Url: " + url)                    
+                    print cyan("Url: " + url[3:])                    
                 if not url in _urllist:                     
                     shellname = "GuruWS :: Taint Analysis :: " + treenode['title']
                     #line = treenode['value'].split('>')[1].split(':')[0]
@@ -181,8 +198,10 @@ def load_taint_analysis_result(projectid):
 
 def taint_analysis(projectid, directory):    
 
-    if projectid == None:
+    if not directory[0] == '/':
         directory = '../' + directory
+
+    if projectid == None:
         outFile = "../.taintanalysis-output.ta"    
         command = r"""cd lib/ ; php taintanalysis.php {0} {1}""".format(directory, outFile)
         subprocess.call(command,shell=True)
@@ -196,11 +215,16 @@ def taint_analysis(projectid, directory):
 
 
 def show_result(file_count, shell_count):
-    print green("[+] Analized\t: " + str(file_count) + " files ")
+    print green("\n\n[ -----  Pattern matching result  ----- ]")
+    print yellow("[+] Analized\t: " + str(file_count) + " files ")
     if shell_count != 0:
-        print green("[+] Found\t: " + str(shell_count) + " shells ")
+        print yellow("[+] Found\t: " + str(shell_count) + " shells ")
     else:
         print yellow("[+] Great ! Nothing found, or something went wrong :)")
+
+    for shell in _shells:
+        print shell
+        print cyan("[+] Found...\t" + shell['shellname'] + " " + "\tin (" + shell['filename'] + ")")                    
 
 
 if __name__ == '__main__':
@@ -228,12 +252,16 @@ if __name__ == '__main__':
 
     if options.directory != None:
         rootDir = options.directory
+        if rootDir[-1] != '/':
+            rootDir += '/'
         taint_analysis(options.projectid, options.directory)
 
         if not options.dispm:
-            for dirName, subdirList, fileList in os.walk(rootDir):            
+            for dirName, subdirList, fileList in os.walk(rootDir):    
+                if dirName[-1] != '/':
+                    dirName += '/'        
                 for fname in fileList:
-                    filename = dirName + '/' + fname      # get absolute filename                
+                    filename = dirName + fname      # get absolute filename                
                     file_count += 1
 
                     if not QUITEMODE:
@@ -252,7 +280,7 @@ if __name__ == '__main__':
                         shellname = str(matches[0])                    
                         filesize = len(filecontent)
                         import_shell(url, shellname, fname, filesize)                    
-                                # print red("[+] Found...\t"), red(shellname), red("\tin (") + red(hide(filename)) + red(")")                    
+                        #print cyan("[+] Found...\t"), red(shellname), red("\tin (") + red(hide(filename)) + red(")")                    
                     else:
                         scan_dangerous_function(filecontent, filename, fname)            # just scan dangerous function with the file, which is not be detect as shellcode
             
