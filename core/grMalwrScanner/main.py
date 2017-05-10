@@ -274,7 +274,8 @@ if __name__ == '__main__':
                         continue
                     
                     matches = rules.match(filename)
-                    url = filename[61:]                
+                    url = filename[61:] 
+                    url = filename               
                     if matches != [] and not url in _urllist: 
                         shell_count += 1
                         shellname = str(matches[0])                    

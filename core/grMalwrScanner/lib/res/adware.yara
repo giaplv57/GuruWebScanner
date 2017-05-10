@@ -11,8 +11,8 @@ rule GuruWS_adware_regex
 rule GuruWS_adware_strings
 {
     strings:                              
-        $ = "\x3C\x73\x63\x72\x69\x70"
-        $ = "\x77\x72\x69\x74\x65"
+        $ = {5c 78 33 43 5c 78 37 33 5c 78 36 33 5c 78 37 32 5c 78 36 39 5c 78 37 30}
+        $ = {5c 78 37 37 5c 78 37 32 5c 78 36 39 5c 78 37 34 5c 78 36 35}
         
     condition:
         any of them
