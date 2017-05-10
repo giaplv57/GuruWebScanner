@@ -27,7 +27,7 @@ KYELLOW = '\x1B[33m'
 KNORM = '\033[0m'
 
 PATTERNDB = 'config/pm_blacklist.yara'      # default value
-PATTERNDB = 'config/new-full.yara'      # default value
+PATTERNDB = 'config/new-train.yara'      # default value
 
 _shells     = []
 _dfuncs     = []
