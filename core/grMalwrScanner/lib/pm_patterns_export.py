@@ -225,12 +225,24 @@ def export_from_shelldetectdb():
 def export_from_pmf():
     try:
         with open('res/pmf.yara') as f:
-            pmf_content = f.read()
+            pmf_content = f.read() + "\n\n"
         out(pmf_content)  
     except:        
         print red("[+] Can't open res/pmf.yara => Unable to export patterns from pmf content")
         return False   
     return True
+
+
+def export_adware_filter():
+    try:
+        with open('res/adware.yara') as f:
+            adware_content = f.read() + "\n\n"
+        out(adware_content)  
+    except:        
+        print red("[+] Can't open res/adware.yara => Unable to export patterns from adware content")
+        return False   
+    return True
+
 
 def export_whitelist():
     out('include "whitelist.yara"\n\n')
@@ -247,6 +259,10 @@ if __name__ == '__main__':
 
     if export_from_pmf():
         print cyan('[+] Patterns from php-malware-finder were exported !')        
+
+    if export_adware_filter():
+        print cyan('[+] Patterns from adware filter were exported !')        
+
 
 try:
     yarafile.close()
