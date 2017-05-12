@@ -3,6 +3,10 @@
 
                                                             @GuruTeam
 
+    eg,
+    $ python pm_patterns_export.py -d ../../../data/webshell/train/ -o ../config/new-train.yara
+
+
 """
 
 import optparse
