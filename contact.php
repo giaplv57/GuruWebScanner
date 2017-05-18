@@ -90,16 +90,6 @@
 
 				</div>
 				<hr/>
-				<div class="desc" align="left">
-					<p style="font-size:2em">
-					
-					</p>
-					<p style="font-size:1.2em">
-						Nguyễn Hữu Tùng<br/>
-						Twitter: @tungpun_<br/>				
-						Email: htung.nht@gmail.com<br/>
-					</p>
-				</div>
 				<div class="desc" align="right">
 					<p style="font-size:1.2em">
 						Lê Văn Giáp<br/>
