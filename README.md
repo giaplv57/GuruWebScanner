@@ -38,15 +38,15 @@ post_max_size = 800M
 restart the `httpd` service
 
 ## Screenshot
-![home page](https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/assets/img/home.JPG?token=AE0vQonRB5ES6wzWbgg3qCO7zMsHWgc6ks5W54lLwA%3D%3D)
+![home page](./assets/img/home.JPG?raw=true)
 
 -+-
 
-![result page](https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/assets/img/result.JPG?token=AE0vQiTk7nwSGXAObfl5ApJZvlBucPZxks5W54lUwA%3D%3D)
+![result page](./assets/img/result.JPG?raw=true)
 
 -+-
 
-![result page](https://raw.githubusercontent.com/giaplv57/GuruWebScanner/master/assets/img/result-shell.JPG?token=AE0vQjkzbmkw32oQMPzXbCoDv0_SZ0I9ks5W6iQZwA%3D%3D)
+![result page](./assets/img/result-shell.JPG?raw=true)
 
 ## Changelog
 * Not yet released
