@@ -50,3 +50,11 @@ restart the `httpd` service
 
 ## Changelog
 * Not yet released
+
+## Thanks to
+* https://github.com/nbs-system/php-malware-finder
+* https://github.com/emposha/Shell-Detector
+* https://github.com/robocoder/rips-scanner
+* https://github.com/Neohapsis/NeoPI
+* Web Shell repositories: https://github.com/tennc/webshell, https://github.com/shiqiaomu/webshell-collector, https://github.com/tdifg/WebShell, https://github.com/BlackArch/webshells, https://github.com/JohnTroony/other-webshells,
+https://github.com/lhlsec/webshell, https://github.com/fuzzdb-project/fuzzdb, https://github.com/JohnTroony/php-webshells
