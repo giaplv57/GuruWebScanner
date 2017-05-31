@@ -1,0 +1,214 @@
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:42:58 - 1/9
+Progress @ 02:42:58 - 3/9
+Progress @ 02:42:58 - 4/9
+Progress @ 02:42:58 - 6/9
+Progress @ 02:42:58 - 7/9
+Progress @ 02:42:58 - 9/9
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0048940181732178
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:42:58 - 2/161
+Progress @ 02:42:58 - 4/161
+Progress @ 02:42:58 - 8/161
+Progress @ 02:42:58 - 10/161
+Progress @ 02:42:58 - 12/161
+Progress @ 02:42:58 - 22/161
+Progress @ 02:42:58 - 24/161
+Progress @ 02:42:58 - 26/161
+Progress @ 02:42:58 - 24/161
+Progress @ 02:42:58 - 26/161
+Progress @ 02:42:58 - 32/161
+Progress @ 02:42:58 - 34/161
+Progress @ 02:42:58 - 36/161
+Progress @ 02:42:58 - 34/161
+Progress @ 02:42:58 - 36/161
+Progress @ 02:42:58 - 38/161
+Progress @ 02:42:58 - 40/161
+Progress @ 02:42:58 - 46/161
+Progress @ 02:42:58 - 52/161
+Progress @ 02:42:58 - 54/161
+Progress @ 02:42:58 - 46/161
+Progress @ 02:42:58 - 52/161
+Progress @ 02:42:58 - 54/161
+Progress @ 02:42:58 - 46/161
+Progress @ 02:42:58 - 52/161
+Progress @ 02:42:58 - 54/161
+Progress @ 02:42:58 - 46/161
+Progress @ 02:42:58 - 52/161
+Progress @ 02:42:58 - 54/161
+Progress @ 02:42:58 - 60/161
+Progress @ 02:42:58 - 62/161
+Progress @ 02:42:58 - 60/161
+Progress @ 02:42:58 - 62/161
+Progress @ 02:42:58 - 70/161
+Progress @ 02:42:58 - 72/161
+Progress @ 02:42:58 - 70/161
+Progress @ 02:42:58 - 72/161
+Progress @ 02:42:58 - 78/161
+Progress @ 02:42:58 - 80/161
+Progress @ 02:42:58 - 82/161
+Progress @ 02:42:58 - 88/161
+Progress @ 02:42:58 - 90/161
+Progress @ 02:42:58 - 94/161
+Progress @ 02:42:58 - 96/161
+Progress @ 02:42:58 - 98/161
+Progress @ 02:42:58 - 100/161
+Progress @ 02:42:58 - 102/161
+Progress @ 02:42:58 - 104/161
+Progress @ 02:42:58 - 106/161
+Progress @ 02:42:58 - 108/161
+Progress @ 02:42:58 - 110/161
+Progress @ 02:42:58 - 112/161
+Progress @ 02:42:58 - 116/161
+Progress @ 02:42:58 - 120/161
+Progress @ 02:42:58 - 124/161
+Progress @ 02:42:58 - 126/161
+Progress @ 02:42:58 - 138/161
+Progress @ 02:42:58 - 140/161
+Progress @ 02:42:58 - 144/161
+Progress @ 02:42:58 - 146/161
+----------------------------------
+-----------------------------------------------------------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signIn.php LINE 66
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signIn.php:66:echo ((((('<div class="alert alert-info col-md-6 col-md-offset-3" role="alert">
+                        <center>
+                            <strong>' . $username) . ' ::') . $row['fullname']) . ':: (') . $row['age']) . ' years old)</strong>
+                            <br>
+                            <strong>You must know that you don\'t have enough power to capture the flag!!!</strong>
+                        </center>
+                    </div>'
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signIn.php:45:$username = mysqli_real_escape_string($con, $_POST['username'])
+
+DEPENDENCIES:
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signIn.php:42:if (isset($_POST['username']) && isset($_POST['password']))
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signIn.php:48:if ($username != '' && $password != '')
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signIn.php:55:if (!empty($row['fullname']) && !empty($row['age']))
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signIn.php:65:else
+
+PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'guruWS' in /var/www/E-THAPS/Main.php on line 291
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. vulnerabiltyPrinter() /var/www/E-THAPS/Main.php:276
+PHP   3. resultToDB() /var/www/E-THAPS/Main.php:329
+PHP   4. ConnectDB() /var/www/E-THAPS/Main.php:296
+PHP   5. mysqli_connect() /var/www/E-THAPS/Main.php:291
+can't connect to DBIncludes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:42:58 - 1/1
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0075490474700928
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:42:58 - 2/194
+Progress @ 02:42:58 - 4/194
+Progress @ 02:42:58 - 8/194
+Progress @ 02:42:58 - 10/194
+Progress @ 02:42:58 - 12/194
+Progress @ 02:42:58 - 22/194
+Progress @ 02:42:58 - 24/194
+Progress @ 02:42:58 - 26/194
+Progress @ 02:42:58 - 24/194
+Progress @ 02:42:58 - 26/194
+Progress @ 02:42:58 - 32/194
+Progress @ 02:42:58 - 34/194
+Progress @ 02:42:58 - 36/194
+Progress @ 02:42:58 - 34/194
+Progress @ 02:42:58 - 36/194
+Progress @ 02:42:58 - 42/194
+Progress @ 02:42:58 - 44/194
+Progress @ 02:42:58 - 46/194
+Progress @ 02:42:58 - 44/194
+Progress @ 02:42:58 - 46/194
+Progress @ 02:42:58 - 52/194
+Progress @ 02:42:58 - 54/194
+Progress @ 02:42:58 - 56/194
+Progress @ 02:42:58 - 54/194
+Progress @ 02:42:58 - 56/194
+Progress @ 02:42:58 - 62/194
+Progress @ 02:42:58 - 68/194
+Progress @ 02:42:58 - 70/194
+Progress @ 02:42:58 - 68/194
+Progress @ 02:42:58 - 70/194
+Progress @ 02:42:58 - 62/194
+Progress @ 02:42:58 - 68/194
+Progress @ 02:42:58 - 70/194
+Progress @ 02:42:58 - 68/194
+Progress @ 02:42:58 - 70/194
+Progress @ 02:42:58 - 74/194
+Progress @ 02:42:58 - 76/194
+Progress @ 02:42:58 - 80/194
+Progress @ 02:42:58 - 82/194
+Progress @ 02:42:58 - 90/194
+Progress @ 02:42:58 - 92/194
+Progress @ 02:42:58 - 100/194
+Progress @ 02:42:58 - 102/194
+Progress @ 02:42:58 - 104/194
+Progress @ 02:42:58 - 100/194
+Progress @ 02:42:58 - 102/194
+Progress @ 02:42:58 - 104/194
+Progress @ 02:42:58 - 106/194
+Progress @ 02:42:58 - 108/194
+Progress @ 02:42:58 - 114/194
+Progress @ 02:42:58 - 116/194
+Progress @ 02:42:58 - 124/194
+Progress @ 02:42:58 - 126/194
+Progress @ 02:42:58 - 128/194
+Progress @ 02:42:58 - 130/194
+Progress @ 02:42:58 - 134/194
+Progress @ 02:42:58 - 136/194
+Progress @ 02:42:58 - 138/194
+Progress @ 02:42:58 - 144/194
+Progress @ 02:42:58 - 146/194
+Progress @ 02:42:58 - 154/194
+Progress @ 02:42:58 - 158/194
+Progress @ 02:42:58 - 160/194
+Progress @ 02:42:58 - 176/194
+----------------------------------
+-----------------------------------------------------------------------------------
+SQL VULNERABILITY FOUND AT mysqli_query WITH MISSING QUOTING IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php LINE 66
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php:66:mysqli_query($con, "INSERT INTO users (username, fullname, age, RSApass, hashPass, role) VALUES ('{$username}', '{$fullname}', {$age}, '{$RSApass}', '{$hashPass}', '0')")
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php:57:$username = mysqli_real_escape_string($con, $_POST['username'])
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php:55:$fullname = mysqli_real_escape_string($con, $_POST['fullname'])
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php:56:$age = mysqli_real_escape_string($con, $_POST['age'])
+
+DEPENDENCIES:
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php:52:if (((isset($_POST['username']) && isset($_POST['password'])) && isset($_POST['fullname'])) && isset($_POST['age']))
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php:63:if ((($username != '' && $password != '') && $fullname != '') && $age != '')
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php:65:if (mysqli_num_rows($check) == 0)
+
+PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'guruWS' in /var/www/E-THAPS/Main.php on line 291
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. vulnerabiltyPrinter() /var/www/E-THAPS/Main.php:276
+PHP   3. resultToDB() /var/www/E-THAPS/Main.php:329
+PHP   4. ConnectDB() /var/www/E-THAPS/Main.php:296
+PHP   5. mysqli_connect() /var/www/E-THAPS/Main.php:291
+can't connect to DBIncludes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:42:58 - 1/2
+Progress @ 02:42:58 - 2/2
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0077071189880371
+----------------------------------

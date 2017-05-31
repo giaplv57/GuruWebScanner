@@ -1,0 +1,688 @@
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:40 - 1/64
+Progress @ 02:50:40 - 2/64
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1205
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1206
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1207
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+Progress @ 02:50:40 - 4/64
+Progress @ 02:50:40 - 5/64
+Progress @ 02:50:40 - 6/64
+Progress @ 02:50:40 - 7/64
+Progress @ 02:50:40 - 8/64
+Progress @ 02:50:40 - 10/64
+Progress @ 02:50:40 - 12/64
+Progress @ 02:50:40 - 13/64
+Progress @ 02:50:40 - 15/64
+Progress @ 02:50:40 - 18/64
+Progress @ 02:50:40 - 19/64
+Progress @ 02:50:40 - 20/64
+Progress @ 02:50:40 - 21/64
+Progress @ 02:50:40 - 22/64
+Progress @ 02:50:40 - 23/64
+Progress @ 02:50:40 - 24/64
+Progress @ 02:50:40 - 25/64
+Progress @ 02:50:40 - 26/64
+Progress @ 02:50:40 - 28/64
+Progress @ 02:50:40 - 29/64
+Progress @ 02:50:40 - 30/64
+Progress @ 02:50:40 - 31/64
+Progress @ 02:50:40 - 32/64
+Progress @ 02:50:40 - 34/64
+Progress @ 02:50:40 - 36/64
+Progress @ 02:50:40 - 34/64
+Progress @ 02:50:40 - 36/64
+Progress @ 02:50:40 - 37/64
+Progress @ 02:50:40 - 38/64
+Progress @ 02:50:40 - 39/64
+Progress @ 02:50:40 - 41/64
+Progress @ 02:50:40 - 42/64
+Progress @ 02:50:40 - 51/64
+Progress @ 02:50:40 - 52/64
+Progress @ 02:50:40 - 53/64
+Progress @ 02:50:40 - 54/64
+Progress @ 02:50:40 - 55/64
+Progress @ 02:50:40 - 56/64
+Progress @ 02:50:40 - 58/64
+Progress @ 02:50:40 - 59/64
+Progress @ 02:50:40 - 64/64
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.031756162643433
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:40 - 1/25
+Progress @ 02:50:40 - 2/25
+Progress @ 02:50:40 - 3/25
+Progress @ 02:50:40 - 4/25
+Progress @ 02:50:40 - 6/25
+Progress @ 02:50:40 - 8/25
+Progress @ 02:50:40 - 9/25
+Progress @ 02:50:40 - 11/25
+Progress @ 02:50:40 - 14/25
+Progress @ 02:50:40 - 15/25
+Progress @ 02:50:40 - 16/25
+Progress @ 02:50:40 - 17/25
+Progress @ 02:50:40 - 18/25
+Progress @ 02:50:40 - 19/25
+Progress @ 02:50:40 - 20/25
+Progress @ 02:50:40 - 21/25
+Progress @ 02:50:40 - 22/25
+Progress @ 02:50:40 - 24/25
+Progress @ 02:50:40 - 25/25
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.01064920425415
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:40 - 2/130
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1205
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1206
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1207
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+Progress @ 02:50:40 - 4/130
+Progress @ 02:50:40 - 6/130
+Progress @ 02:50:40 - 8/130
+Progress @ 02:50:40 - 12/130
+Progress @ 02:50:40 - 14/130
+Progress @ 02:50:40 - 20/130
+Progress @ 02:50:40 - 22/130
+Progress @ 02:50:40 - 24/130
+Progress @ 02:50:40 - 26/130
+Progress @ 02:50:40 - 28/130
+Progress @ 02:50:40 - 36/130
+Progress @ 02:50:40 - 42/130
+Progress @ 02:50:40 - 44/130
+Progress @ 02:50:40 - 50/130
+Progress @ 02:50:40 - 52/130
+Progress @ 02:50:40 - 54/130
+Progress @ 02:50:40 - 56/130
+Progress @ 02:50:40 - 50/130
+Progress @ 02:50:40 - 52/130
+Progress @ 02:50:40 - 54/130
+Progress @ 02:50:40 - 56/130
+Progress @ 02:50:40 - 58/130
+Progress @ 02:50:40 - 60/130
+Progress @ 02:50:40 - 66/130
+Progress @ 02:50:40 - 68/130
+Progress @ 02:50:40 - 70/130
+Progress @ 02:50:40 - 66/130
+Progress @ 02:50:40 - 68/130
+Progress @ 02:50:40 - 70/130
+Progress @ 02:50:40 - 72/130
+Progress @ 02:50:40 - 78/130
+Progress @ 02:50:40 - 80/130
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1205
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   6. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   7. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:70
+PHP   8. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   9. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP  10. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP  11. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1206
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   6. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   7. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:70
+PHP   8. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   9. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP  10. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP  11. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1207
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   6. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   7. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:70
+PHP   8. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   9. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP  10. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP  11. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+Progress @ 02:50:40 - 82/130
+Progress @ 02:50:40 - 86/130
+Progress @ 02:50:40 - 88/130
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1205
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   6. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   7. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:70
+PHP   8. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   9. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP  10. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP  11. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1206
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   6. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   7. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:70
+PHP   8. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   9. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP  10. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP  11. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1207
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   6. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   7. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:70
+PHP   8. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   9. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP  10. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP  11. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+Progress @ 02:50:40 - 94/130
+Progress @ 02:50:40 - 96/130
+Progress @ 02:50:40 - 98/130
+Progress @ 02:50:40 - 104/130
+Progress @ 02:50:40 - 112/130
+Progress @ 02:50:40 - 114/130
+Progress @ 02:50:40 - 118/130
+Progress @ 02:50:40 - 122/130
+Progress @ 02:50:40 - 124/130
+Progress @ 02:50:40 - 126/130
+Progress @ 02:50:40 - 128/130
+Progress @ 02:50:40 - 130/130
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.032411098480225
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:40 - 1/1
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0035128593444824
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0043148994445801
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:41 - 2/166
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1205
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1206
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1207
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+Progress @ 02:50:41 - 4/166
+Progress @ 02:50:41 - 6/166
+Progress @ 02:50:41 - 8/166
+Progress @ 02:50:41 - 10/166
+Progress @ 02:50:41 - 12/166
+Progress @ 02:50:41 - 14/166
+Progress @ 02:50:41 - 16/166
+Progress @ 02:50:41 - 18/166
+Progress @ 02:50:41 - 20/166
+Progress @ 02:50:41 - 34/166
+Progress @ 02:50:41 - 38/166
+Progress @ 02:50:41 - 40/166
+Progress @ 02:50:41 - 42/166
+Progress @ 02:50:41 - 44/166
+Progress @ 02:50:41 - 46/166
+Progress @ 02:50:41 - 52/166
+Progress @ 02:50:41 - 56/166
+Progress @ 02:50:41 - 58/166
+Progress @ 02:50:41 - 62/166
+Progress @ 02:50:41 - 64/166
+Progress @ 02:50:41 - 66/166
+Progress @ 02:50:41 - 68/166
+Progress @ 02:50:41 - 74/166
+Progress @ 02:50:41 - 76/166
+Progress @ 02:50:41 - 78/166
+Progress @ 02:50:41 - 80/166
+Progress @ 02:50:41 - 74/166
+Progress @ 02:50:41 - 76/166
+Progress @ 02:50:41 - 78/166
+Progress @ 02:50:41 - 80/166
+Progress @ 02:50:41 - 82/166
+Progress @ 02:50:41 - 84/166
+Progress @ 02:50:41 - 90/166
+Progress @ 02:50:41 - 92/166
+Progress @ 02:50:41 - 90/166
+Progress @ 02:50:41 - 92/166
+Progress @ 02:50:41 - 94/166
+Progress @ 02:50:41 - 96/166
+Progress @ 02:50:41 - 100/166
+Progress @ 02:50:41 - 102/166
+Progress @ 02:50:41 - 104/166
+Progress @ 02:50:41 - 106/166
+Progress @ 02:50:41 - 114/166
+Progress @ 02:50:41 - 116/166
+Progress @ 02:50:41 - 118/166
+Progress @ 02:50:41 - 120/166
+Progress @ 02:50:41 - 122/166
+Progress @ 02:50:41 - 124/166
+Progress @ 02:50:41 - 126/166
+Progress @ 02:50:41 - 128/166
+Progress @ 02:50:41 - 130/166
+Progress @ 02:50:41 - 136/166
+Progress @ 02:50:41 - 138/166
+Progress @ 02:50:41 - 142/166
+Progress @ 02:50:41 - 144/166
+Progress @ 02:50:41 - 146/166
+Progress @ 02:50:41 - 148/166
+Progress @ 02:50:41 - 152/166
+Progress @ 02:50:41 - 154/166
+Progress @ 02:50:41 - 156/166
+Progress @ 02:50:41 - 158/166
+Progress @ 02:50:41 - 162/166
+Progress @ 02:50:41 - 166/166
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.036865949630737
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:41 - 1/3
+Progress @ 02:50:41 - 3/3
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0031130313873291
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:41 - 1/25
+Progress @ 02:50:41 - 2/25
+Progress @ 02:50:41 - 3/25
+Progress @ 02:50:41 - 4/25
+Progress @ 02:50:41 - 6/25
+Progress @ 02:50:41 - 8/25
+Progress @ 02:50:41 - 9/25
+Progress @ 02:50:41 - 11/25
+Progress @ 02:50:41 - 14/25
+Progress @ 02:50:41 - 15/25
+Progress @ 02:50:41 - 16/25
+Progress @ 02:50:41 - 17/25
+Progress @ 02:50:41 - 18/25
+Progress @ 02:50:41 - 19/25
+Progress @ 02:50:41 - 20/25
+Progress @ 02:50:41 - 21/25
+Progress @ 02:50:41 - 22/25
+Progress @ 02:50:41 - 24/25
+Progress @ 02:50:41 - 25/25
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.011781930923462
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:41 - 1/3
+Progress @ 02:50:41 - 3/3
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0027551651000977
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:41 - 2/108
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1205
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1206
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1207
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+Progress @ 02:50:41 - 4/108
+Progress @ 02:50:41 - 6/108
+Progress @ 02:50:41 - 8/108
+Progress @ 02:50:41 - 12/108
+Progress @ 02:50:41 - 14/108
+Progress @ 02:50:41 - 20/108
+Progress @ 02:50:41 - 22/108
+Progress @ 02:50:41 - 24/108
+Progress @ 02:50:41 - 26/108
+Progress @ 02:50:41 - 28/108
+Progress @ 02:50:41 - 30/108
+Progress @ 02:50:41 - 36/108
+Progress @ 02:50:41 - 38/108
+Progress @ 02:50:41 - 40/108
+Progress @ 02:50:41 - 42/108
+Progress @ 02:50:41 - 36/108
+Progress @ 02:50:41 - 38/108
+Progress @ 02:50:41 - 40/108
+Progress @ 02:50:41 - 42/108
+Progress @ 02:50:41 - 44/108
+Progress @ 02:50:41 - 50/108
+Progress @ 02:50:41 - 56/108
+Progress @ 02:50:41 - 62/108
+Progress @ 02:50:41 - 64/108
+Progress @ 02:50:41 - 62/108
+Progress @ 02:50:41 - 64/108
+Progress @ 02:50:41 - 66/108
+Progress @ 02:50:41 - 70/108
+Progress @ 02:50:41 - 72/108
+Progress @ 02:50:41 - 74/108
+Progress @ 02:50:41 - 76/108
+Progress @ 02:50:41 - 78/108
+Progress @ 02:50:41 - 80/108
+Progress @ 02:50:41 - 86/108
+Progress @ 02:50:41 - 90/108
+Progress @ 02:50:41 - 92/108
+Progress @ 02:50:41 - 96/108
+Progress @ 02:50:41 - 100/108
+Progress @ 02:50:41 - 102/108
+Progress @ 02:50:41 - 104/108
+Progress @ 02:50:41 - 106/108
+Progress @ 02:50:41 - 108/108
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.030179977416992
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:41 - 1/9
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1205
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1206
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1207
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+Progress @ 02:50:41 - 3/9
+Progress @ 02:50:41 - 4/9
+Progress @ 02:50:41 - 7/9
+Progress @ 02:50:41 - 8/9
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1205
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1206
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1207
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0038399696350098
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:41 - 3/247
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1205
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1206
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1207
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:61
+Progress @ 02:50:41 - 6/247
+Progress @ 02:50:41 - 12/247
+Progress @ 02:50:41 - 15/247
+Progress @ 02:50:41 - 18/247
+Progress @ 02:50:41 - 21/247
+Progress @ 02:50:41 - 24/247
+Progress @ 02:50:41 - 30/247
+Progress @ 02:50:41 - 33/247
+Progress @ 02:50:41 - 36/247
+Progress @ 02:50:41 - 39/247
+Progress @ 02:50:41 - 42/247
+Progress @ 02:50:41 - 57/247
+Progress @ 02:50:41 - 60/247
+Progress @ 02:50:41 - 69/247
+Progress @ 02:50:41 - 72/247
+Progress @ 02:50:41 - 75/247
+Progress @ 02:50:41 - 78/247
+Progress @ 02:50:41 - 81/247
+Progress @ 02:50:41 - 84/247
+Progress @ 02:50:41 - 81/247
+Progress @ 02:50:41 - 84/247
+Progress @ 02:50:41 - 81/247
+Progress @ 02:50:41 - 84/247
+Progress @ 02:50:41 - 78/247
+Progress @ 02:50:41 - 81/247
+Progress @ 02:50:41 - 84/247
+Progress @ 02:50:41 - 81/247
+Progress @ 02:50:41 - 84/247
+Progress @ 02:50:41 - 81/247
+Progress @ 02:50:41 - 84/247
+Progress @ 02:50:41 - 87/247
+Progress @ 02:50:41 - 93/247
+Progress @ 02:50:41 - 99/247
+Progress @ 02:50:41 - 102/247
+Progress @ 02:50:41 - 105/247
+Progress @ 02:50:41 - 108/247
+Progress @ 02:50:41 - 111/247
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1205
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:70
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   7. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   8. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:70
+PHP   9. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP  10. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP  11. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP  12. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1206
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:70
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   7. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   8. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:70
+PHP   9. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP  10. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP  11. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP  12. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1207
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   5. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:70
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP   7. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP   8. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:70
+PHP   9. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP  10. PHPParser_NodeTraverser->traverseNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:100
+PHP  11. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:58
+PHP  12. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+Progress @ 02:50:41 - 120/247
+Progress @ 02:50:41 - 123/247
+Progress @ 02:50:41 - 126/247
+Progress @ 02:50:41 - 129/247
+Progress @ 02:50:41 - 132/247
+Progress @ 02:50:41 - 135/247
+Progress @ 02:50:41 - 132/247
+Progress @ 02:50:41 - 135/247
+Progress @ 02:50:41 - 132/247
+Progress @ 02:50:41 - 135/247
+Progress @ 02:50:41 - 129/247
+Progress @ 02:50:41 - 132/247
+Progress @ 02:50:41 - 135/247
+Progress @ 02:50:41 - 132/247
+Progress @ 02:50:41 - 135/247
+Progress @ 02:50:41 - 132/247
+Progress @ 02:50:41 - 135/247
+Progress @ 02:50:41 - 138/247
+Progress @ 02:50:41 - 141/247
+Progress @ 02:50:41 - 144/247
+Progress @ 02:50:41 - 141/247
+Progress @ 02:50:41 - 144/247
+Progress @ 02:50:41 - 147/247
+Progress @ 02:50:41 - 150/247
+Progress @ 02:50:41 - 147/247
+Progress @ 02:50:41 - 150/247
+Progress @ 02:50:41 - 153/247
+Progress @ 02:50:41 - 162/247
+Progress @ 02:50:41 - 165/247
+Progress @ 02:50:41 - 171/247
+Progress @ 02:50:41 - 174/247
+Progress @ 02:50:41 - 177/247
+Progress @ 02:50:41 - 180/247
+Progress @ 02:50:41 - 183/247
+Progress @ 02:50:41 - 186/247
+Progress @ 02:50:41 - 189/247
+Progress @ 02:50:41 - 195/247
+Progress @ 02:50:41 - 201/247
+Progress @ 02:50:41 - 204/247
+Progress @ 02:50:41 - 207/247
+Progress @ 02:50:41 - 216/247
+Progress @ 02:50:41 - 222/247
+Progress @ 02:50:41 - 225/247
+Progress @ 02:50:41 - 228/247
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.060977220535278
+----------------------------------

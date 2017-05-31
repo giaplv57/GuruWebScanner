@@ -1,0 +1,535 @@
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/13 - POI.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:47:52 - 1/15
+Progress @ 02:47:52 - 4/15
+Progress @ 02:47:52 - 6/15
+Progress @ 02:47:52 - 7/15
+Progress @ 02:47:52 - 10/15
+Progress @ 02:47:52 - 13/15
+Progress @ 02:47:52 - 15/15
+----------------------------------
+-----------------------------------------------------------------------------------
+OBJECT INJECTION VULNERABILITY FOUND IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/13 - POI.php LINE 2
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/13 - POI.php:2:unserialize($_GET['1'])
+
+DEPENDENCIES:
+
+PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'guruWS' in /var/www/E-THAPS/Main.php on line 291
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. vulnerabiltyPrinter() /var/www/E-THAPS/Main.php:276
+PHP   3. resultToDB() /var/www/E-THAPS/Main.php:329
+PHP   4. ConnectDB() /var/www/E-THAPS/Main.php:296
+PHP   5. mysqli_connect() /var/www/E-THAPS/Main.php:291
+can't connect to DB
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/9 - LFI.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:47:52 - 1/18
+Progress @ 02:47:52 - 2/18
+Progress @ 02:47:52 - 4/18
+Progress @ 02:47:52 - 5/18
+Progress @ 02:47:52 - 6/18
+Progress @ 02:47:52 - 9/18
+Progress @ 02:47:52 - 11/18
+Progress @ 02:47:52 - 12/18
+Progress @ 02:47:52 - 13/18
+Progress @ 02:47:52 - 16/18
+Progress @ 02:47:52 - 18/18
+----------------------------------
+-----------------------------------------------------------------------------------
+LOCAL FILE INCLUSION VULNERABILITY FOUND IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/9 - LFI.php LINE 2
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/9 - LFI.php:2:require_once $_GET['1']
+
+DEPENDENCIES:
+
+PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'guruWS' in /var/www/E-THAPS/Main.php on line 291
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. vulnerabiltyPrinter() /var/www/E-THAPS/Main.php:276
+PHP   3. resultToDB() /var/www/E-THAPS/Main.php:329
+PHP   4. ConnectDB() /var/www/E-THAPS/Main.php:296
+PHP   5. mysqli_connect() /var/www/E-THAPS/Main.php:291
+can't connect to DB
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/11 - Object.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:47:52 - 1/15
+Progress @ 02:47:52 - 5/15
+Progress @ 02:47:52 - 7/15
+Progress @ 02:47:52 - 10/15
+Progress @ 02:47:52 - 12/15
+Progress @ 02:47:52 - 13/15
+Progress @ 02:47:52 - 14/15
+PHP Notice:  Undefined variable: vulnParm in /var/www/E-THAPS/Lib/VulnerabilityScanner.php on line 1987
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/E-THAPS/Main.php:231
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   5. PHPParser_NodeTraverser->traverse() /var/www/E-THAPS/Lib/VulnerabilityScanner.php:2392
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   7. BodyVisitor->enterNode() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Notice:  Trying to get property of non-object in /var/www/E-THAPS/Lib/VulnerabilityScanner.php on line 1987
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/E-THAPS/Main.php:231
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   5. PHPParser_NodeTraverser->traverse() /var/www/E-THAPS/Lib/VulnerabilityScanner.php:2392
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   7. BodyVisitor->enterNode() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Warning:  array_merge(): Argument #1 is not an array in /var/www/E-THAPS/Lib/VulnerabilityScanner.php on line 1987
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/E-THAPS/Main.php:231
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   5. PHPParser_NodeTraverser->traverse() /var/www/E-THAPS/Lib/VulnerabilityScanner.php:2392
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   7. BodyVisitor->enterNode() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   8. array_merge() /var/www/E-THAPS/Lib/VulnerabilityScanner.php:1987
+PHP Warning:  Creating default object from empty value in /var/www/E-THAPS/Lib/VulnerabilityScanner.php on line 1987
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/E-THAPS/Main.php:231
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   5. PHPParser_NodeTraverser->traverse() /var/www/E-THAPS/Lib/VulnerabilityScanner.php:2392
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   7. BodyVisitor->enterNode() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Notice:  Undefined property: stdClass::$dependencies in /var/www/E-THAPS/Lib/VulnerabilityScanner.php on line 1988
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/E-THAPS/Main.php:231
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   5. PHPParser_NodeTraverser->traverse() /var/www/E-THAPS/Lib/VulnerabilityScanner.php:2392
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   7. BodyVisitor->enterNode() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Warning:  array_merge(): Argument #1 is not an array in /var/www/E-THAPS/Lib/VulnerabilityScanner.php on line 1988
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/E-THAPS/Main.php:231
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   5. PHPParser_NodeTraverser->traverse() /var/www/E-THAPS/Lib/VulnerabilityScanner.php:2392
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   7. BodyVisitor->enterNode() /var/www/E-THAPS/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   8. array_merge() /var/www/E-THAPS/Lib/VulnerabilityScanner.php:1988
+----------------------------------
+-----------------------------------------------------------------------------------
+SQL VULNERABILITY FOUND AT mysqli_query IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/11 - Object.php LINE 9
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/11 - Object.php:9:mysqli_query($con, "SELECT * from reports where shareID={$this->a}")
+
+DEPENDENCIES:
+
+PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'guruWS' in /var/www/E-THAPS/Main.php on line 291
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. vulnerabiltyPrinter() /var/www/E-THAPS/Main.php:276
+PHP   3. resultToDB() /var/www/E-THAPS/Main.php:329
+PHP   4. ConnectDB() /var/www/E-THAPS/Main.php:296
+PHP   5. mysqli_connect() /var/www/E-THAPS/Main.php:291
+can't connect to DB
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/6 - FunctionBehindCall - II.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:47:52 - 1/10
+Progress @ 02:47:52 - 3/10
+Progress @ 02:47:52 - 5/10
+Progress @ 02:47:52 - 6/10
+Progress @ 02:47:52 - 7/10
+Progress @ 02:47:52 - 10/10
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.004162073135376
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/18 - XSS.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:47:52 - 1/18
+Progress @ 02:47:52 - 2/18
+Progress @ 02:47:52 - 4/18
+Progress @ 02:47:52 - 5/18
+Progress @ 02:47:52 - 6/18
+Progress @ 02:47:52 - 9/18
+Progress @ 02:47:52 - 11/18
+Progress @ 02:47:52 - 12/18
+Progress @ 02:47:52 - 13/18
+Progress @ 02:47:52 - 16/18
+Progress @ 02:47:52 - 18/18
+----------------------------------
+-----------------------------------------------------------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/18 - XSS.php LINE 2
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/18 - XSS.php:2:echo $_GET['1']
+
+DEPENDENCIES:
+
+PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'guruWS' in /var/www/E-THAPS/Main.php on line 291
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. vulnerabiltyPrinter() /var/www/E-THAPS/Main.php:276
+PHP   3. resultToDB() /var/www/E-THAPS/Main.php:329
+PHP   4. ConnectDB() /var/www/E-THAPS/Main.php:296
+PHP   5. mysqli_connect() /var/www/E-THAPS/Main.php:291
+can't connect to DB
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/17 - XSS - II.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:47:52 - 1/24
+Progress @ 02:47:52 - 4/24
+Progress @ 02:47:52 - 6/24
+Progress @ 02:47:52 - 7/24
+Progress @ 02:47:52 - 10/24
+Progress @ 02:47:52 - 13/24
+Progress @ 02:47:52 - 15/24
+Progress @ 02:47:52 - 16/24
+Progress @ 02:47:52 - 19/24
+Progress @ 02:47:52 - 22/24
+Progress @ 02:47:52 - 24/24
+----------------------------------
+-----------------------------------------------------------------------------------
+XSS INJECTION VULNERABILITY FOUND IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/17 - XSS - II.php LINE 2
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/17 - XSS - II.php:2:print_r($_GET['1'])
+
+DEPENDENCIES:
+
+PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'guruWS' in /var/www/E-THAPS/Main.php on line 291
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. vulnerabiltyPrinter() /var/www/E-THAPS/Main.php:276
+PHP   3. resultToDB() /var/www/E-THAPS/Main.php:329
+PHP   4. ConnectDB() /var/www/E-THAPS/Main.php:296
+PHP   5. mysqli_connect() /var/www/E-THAPS/Main.php:291
+can't connect to DB
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/14 - SQL - II.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:47:52 - 1/26
+Progress @ 02:47:52 - 3/26
+Progress @ 02:47:52 - 5/26
+Progress @ 02:47:52 - 6/26
+Progress @ 02:47:52 - 8/26
+Progress @ 02:47:52 - 11/26
+Progress @ 02:47:52 - 12/26
+Progress @ 02:47:52 - 15/26
+Progress @ 02:47:52 - 16/26
+Progress @ 02:47:52 - 17/26
+Progress @ 02:47:52 - 20/26
+Progress @ 02:47:52 - 21/26
+Progress @ 02:47:52 - 22/26
+Progress @ 02:47:52 - 25/26
+Progress @ 02:47:52 - 26/26
+----------------------------------
+-----------------------------------------------------------------------------------
+SQL VULNERABILITY FOUND AT mysql_query IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/14 - SQL - II.php LINE 4
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/14 - SQL - II.php:4:mysql_query("SELECT * FROM reports WHERE name='{$x}'")
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/14 - SQL - II.php:2:$x = $_POST['x']
+
+DEPENDENCIES:
+
+PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'guruWS' in /var/www/E-THAPS/Main.php on line 291
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. vulnerabiltyPrinter() /var/www/E-THAPS/Main.php:276
+PHP   3. resultToDB() /var/www/E-THAPS/Main.php:329
+PHP   4. ConnectDB() /var/www/E-THAPS/Main.php:296
+PHP   5. mysqli_connect() /var/www/E-THAPS/Main.php:291
+can't connect to DB
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/10 - Object - II.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:47:52 - 1/20
+Progress @ 02:47:52 - 5/20
+Progress @ 02:47:52 - 7/20
+Progress @ 02:47:52 - 8/20
+Progress @ 02:47:52 - 11/20
+Progress @ 02:47:52 - 13/20
+Progress @ 02:47:52 - 14/20
+Progress @ 02:47:52 - 15/20
+Progress @ 02:47:52 - 18/20
+Progress @ 02:47:52 - 20/20
+----------------------------------
+-----------------------------------------------------------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/10 - Object - II.php LINE 17
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/10 - Object - II.php:17:echo $test->sanitizer1($_GET['1'])
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/10 - Object - II.php:10:return TestClass::sanitizerCommandInjection($arg)
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/10 - Object - II.php:4:return escapeshellarg($arg)
+
+DEPENDENCIES:
+
+PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'guruWS' in /var/www/E-THAPS/Main.php on line 291
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. vulnerabiltyPrinter() /var/www/E-THAPS/Main.php:276
+PHP   3. resultToDB() /var/www/E-THAPS/Main.php:329
+PHP   4. ConnectDB() /var/www/E-THAPS/Main.php:296
+PHP   5. mysqli_connect() /var/www/E-THAPS/Main.php:291
+can't connect to DB
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/7 - FunctionBehindCall.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:47:53 - 1/13
+Progress @ 02:47:53 - 2/13
+Progress @ 02:47:53 - 4/13
+Progress @ 02:47:53 - 6/13
+Progress @ 02:47:53 - 7/13
+Progress @ 02:47:53 - 10/13
+Progress @ 02:47:53 - 13/13
+----------------------------------
+-----------------------------------------------------------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/7 - FunctionBehindCall.php LINE 6
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/7 - FunctionBehindCall.php:6:echo $arg
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/7 - FunctionBehindCall.php:3:testFunc($a)
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/7 - FunctionBehindCall.php:2:$a = $_GET['a']
+
+DEPENDENCIES:
+
+PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'guruWS' in /var/www/E-THAPS/Main.php on line 291
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. vulnerabiltyPrinter() /var/www/E-THAPS/Main.php:276
+PHP   3. resultToDB() /var/www/E-THAPS/Main.php:329
+PHP   4. ConnectDB() /var/www/E-THAPS/Main.php:296
+PHP   5. mysqli_connect() /var/www/E-THAPS/Main.php:291
+can't connect to DB
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/16 - UserSanitizeDefinedFunction.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:47:53 - 1/21
+Progress @ 02:47:53 - 2/21
+Progress @ 02:47:53 - 5/21
+Progress @ 02:47:53 - 7/21
+Progress @ 02:47:53 - 8/21
+Progress @ 02:47:53 - 9/21
+Progress @ 02:47:53 - 12/21
+Progress @ 02:47:53 - 14/21
+Progress @ 02:47:53 - 15/21
+Progress @ 02:47:53 - 16/21
+Progress @ 02:47:53 - 19/21
+Progress @ 02:47:53 - 21/21
+----------------------------------
+-----------------------------------------------------------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/16 - UserSanitizeDefinedFunction.php LINE 11
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/16 - UserSanitizeDefinedFunction.php:11:print NotSanitized($_GET['1'])
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/16 - UserSanitizeDefinedFunction.php:3:return $string
+
+DEPENDENCIES:
+
+PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'guruWS' in /var/www/E-THAPS/Main.php on line 291
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. vulnerabiltyPrinter() /var/www/E-THAPS/Main.php:276
+PHP   3. resultToDB() /var/www/E-THAPS/Main.php:329
+PHP   4. ConnectDB() /var/www/E-THAPS/Main.php:296
+PHP   5. mysqli_connect() /var/www/E-THAPS/Main.php:291
+can't connect to DB
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/1 - Branch.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:47:53 - 1/30
+Progress @ 02:47:53 - 2/30
+Progress @ 02:47:53 - 4/30
+Progress @ 02:47:53 - 6/30
+Progress @ 02:47:53 - 7/30
+Progress @ 02:47:53 - 8/30
+Progress @ 02:47:53 - 10/30
+Progress @ 02:47:53 - 12/30
+Progress @ 02:47:53 - 13/30
+Progress @ 02:47:53 - 15/30
+Progress @ 02:47:53 - 16/30
+Progress @ 02:47:53 - 18/30
+Progress @ 02:47:53 - 21/30
+Progress @ 02:47:53 - 18/30
+Progress @ 02:47:53 - 21/30
+Progress @ 02:47:53 - 22/30
+Progress @ 02:47:53 - 23/30
+Progress @ 02:47:53 - 25/30
+Progress @ 02:47:53 - 26/30
+Progress @ 02:47:53 - 27/30
+Progress @ 02:47:53 - 28/30
+Progress @ 02:47:53 - 29/30
+Progress @ 02:47:53 - 30/30
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0099730491638184
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/15 - SQLI.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:47:53 - 1/46
+Progress @ 02:47:53 - 3/46
+Progress @ 02:47:53 - 6/46
+Progress @ 02:47:53 - 8/46
+Progress @ 02:47:53 - 10/46
+Progress @ 02:47:53 - 12/46
+Progress @ 02:47:53 - 13/46
+Progress @ 02:47:53 - 15/46
+Progress @ 02:47:53 - 17/46
+Progress @ 02:47:53 - 18/46
+Progress @ 02:47:53 - 20/46
+Progress @ 02:47:53 - 23/46
+Progress @ 02:47:53 - 25/46
+Progress @ 02:47:53 - 26/46
+Progress @ 02:47:53 - 31/46
+Progress @ 02:47:53 - 32/46
+Progress @ 02:47:53 - 33/46
+Progress @ 02:47:53 - 38/46
+Progress @ 02:47:53 - 39/46
+Progress @ 02:47:53 - 40/46
+Progress @ 02:47:53 - 45/46
+Progress @ 02:47:53 - 46/46
+----------------------------------
+-----------------------------------------------------------------------------------
+SQL VULNERABILITY FOUND AT mysqli_query IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/15 - SQLI.php LINE 5
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/15 - SQLI.php:5:mysqli_query($con, "SELECT * FROM reports WHERE name='{$a}'")
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/15 - SQLI.php:3:$a = $_GET['a']
+
+DEPENDENCIES:
+
+PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'guruWS' in /var/www/E-THAPS/Main.php on line 291
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. vulnerabiltyPrinter() /var/www/E-THAPS/Main.php:276
+PHP   3. resultToDB() /var/www/E-THAPS/Main.php:329
+PHP   4. ConnectDB() /var/www/E-THAPS/Main.php:296
+PHP   5. mysqli_connect() /var/www/E-THAPS/Main.php:291
+can't connect to DB
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/5 - Eval.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:47:53 - 1/13
+Progress @ 02:47:53 - 2/13
+Progress @ 02:47:53 - 4/13
+Progress @ 02:47:53 - 5/13
+Progress @ 02:47:53 - 8/13
+Progress @ 02:47:53 - 11/13
+Progress @ 02:47:53 - 13/13
+----------------------------------
+-----------------------------------------------------------------------------------
+ARBITRARY EVAL CODE INJECTION VULNERABILITY FOUND IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/5 - Eval.php LINE 2
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/5 - Eval.php:2:eval($_GET['1'])
+
+DEPENDENCIES:
+
+PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'guruWS' in /var/www/E-THAPS/Main.php on line 291
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. vulnerabiltyPrinter() /var/www/E-THAPS/Main.php:276
+PHP   3. resultToDB() /var/www/E-THAPS/Main.php:329
+PHP   4. ConnectDB() /var/www/E-THAPS/Main.php:296
+PHP   5. mysqli_connect() /var/www/E-THAPS/Main.php:291
+can't connect to DB
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/3 - CommandInjection.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:47:53 - 1/24
+Progress @ 02:47:53 - 4/24
+Progress @ 02:47:53 - 6/24
+Progress @ 02:47:53 - 7/24
+Progress @ 02:47:53 - 10/24
+Progress @ 02:47:53 - 13/24
+Progress @ 02:47:53 - 15/24
+Progress @ 02:47:53 - 16/24
+Progress @ 02:47:53 - 19/24
+Progress @ 02:47:53 - 22/24
+Progress @ 02:47:53 - 24/24
+----------------------------------
+-----------------------------------------------------------------------------------
+COMMAND INJECTION VULNERABILITY FOUND IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/3 - CommandInjection.php LINE 2
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/3 - CommandInjection.php:2:system($_GET['1'])
+
+DEPENDENCIES:
+
+PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'guruWS' in /var/www/E-THAPS/Main.php on line 291
+PHP Stack trace:
+PHP   1. {main}() /var/www/E-THAPS/Main.php:0
+PHP   2. vulnerabiltyPrinter() /var/www/E-THAPS/Main.php:276
+PHP   3. resultToDB() /var/www/E-THAPS/Main.php:329
+PHP   4. ConnectDB() /var/www/E-THAPS/Main.php:296
+PHP   5. mysqli_connect() /var/www/E-THAPS/Main.php:291
+can't connect to DB

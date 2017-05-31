@@ -1,0 +1,406 @@
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/13 - POI.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:52:01 - 1/15
+Progress @ 02:52:01 - 4/15
+Progress @ 02:52:01 - 6/15
+Progress @ 02:52:01 - 7/15
+Progress @ 02:52:01 - 10/15
+Progress @ 02:52:01 - 13/15
+Progress @ 02:52:01 - 15/15
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0062589645385742
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/9 - LFI.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:52:01 - 1/18
+Progress @ 02:52:01 - 2/18
+Progress @ 02:52:01 - 4/18
+Progress @ 02:52:01 - 5/18
+Progress @ 02:52:01 - 6/18
+Progress @ 02:52:01 - 9/18
+Progress @ 02:52:01 - 11/18
+Progress @ 02:52:01 - 12/18
+Progress @ 02:52:01 - 13/18
+Progress @ 02:52:01 - 16/18
+Progress @ 02:52:01 - 18/18
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0058109760284424
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/11 - Object.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:52:01 - 1/15
+Progress @ 02:52:01 - 5/15
+Progress @ 02:52:01 - 7/15
+Progress @ 02:52:01 - 10/15
+Progress @ 02:52:01 - 12/15
+Progress @ 02:52:01 - 13/15
+Progress @ 02:52:01 - 14/15
+----------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/11 - Object.php LINE 15
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/11 - Object.php:15:echo $test->push()
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/11 - Object.php:14:$test->set($_POST['a'])
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/11 - Object.php:10:return 'Pushed ' . $this->a
+
+DEPENDENCIES:
+
+-----------------------------------
+Vulnerabilities: 1
+Seconds: 0.010515213012695
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/6 - FunctionBehindCall - II.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:52:02 - 1/10
+Progress @ 02:52:02 - 3/10
+Progress @ 02:52:02 - 5/10
+Progress @ 02:52:02 - 6/10
+Progress @ 02:52:02 - 7/10
+Progress @ 02:52:02 - 10/10
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.004317045211792
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/18 - XSS.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:52:02 - 1/18
+Progress @ 02:52:02 - 2/18
+Progress @ 02:52:02 - 4/18
+Progress @ 02:52:02 - 5/18
+Progress @ 02:52:02 - 6/18
+Progress @ 02:52:02 - 9/18
+Progress @ 02:52:02 - 11/18
+Progress @ 02:52:02 - 12/18
+Progress @ 02:52:02 - 13/18
+Progress @ 02:52:02 - 16/18
+Progress @ 02:52:02 - 18/18
+----------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/18 - XSS.php LINE 2
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/18 - XSS.php:2:echo $_GET['1']
+
+DEPENDENCIES:
+
+-----------------------------------
+Vulnerabilities: 1
+Seconds: 0.0040562152862549
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/17 - XSS - II.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:52:02 - 1/24
+Progress @ 02:52:02 - 4/24
+Progress @ 02:52:02 - 6/24
+Progress @ 02:52:02 - 7/24
+Progress @ 02:52:02 - 10/24
+Progress @ 02:52:02 - 13/24
+Progress @ 02:52:02 - 15/24
+Progress @ 02:52:02 - 16/24
+Progress @ 02:52:02 - 19/24
+Progress @ 02:52:02 - 22/24
+Progress @ 02:52:02 - 24/24
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0058810710906982
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/14 - SQL - II.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:52:02 - 1/26
+Progress @ 02:52:02 - 3/26
+Progress @ 02:52:02 - 5/26
+Progress @ 02:52:02 - 6/26
+Progress @ 02:52:02 - 8/26
+Progress @ 02:52:02 - 11/26
+Progress @ 02:52:02 - 12/26
+Progress @ 02:52:02 - 15/26
+Progress @ 02:52:02 - 16/26
+Progress @ 02:52:02 - 17/26
+Progress @ 02:52:02 - 20/26
+Progress @ 02:52:02 - 21/26
+Progress @ 02:52:02 - 22/26
+Progress @ 02:52:02 - 25/26
+Progress @ 02:52:02 - 26/26
+----------------------------------
+SQL VULNERABILITY FOUND AT mysql_query IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/14 - SQL - II.php LINE 4
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/14 - SQL - II.php:4:mysql_query("SELECT * FROM reports WHERE name='{$x}'")
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/14 - SQL - II.php:2:$x = $_POST['x']
+
+DEPENDENCIES:
+
+-----------------------------------
+SQL VULNERABILITY FOUND AT mysql_query WITH MISSING QUOTING IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/14 - SQL - II.php LINE 6
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/14 - SQL - II.php:6:mysql_query("SELECT * FROM reports WHERE id={$y}")
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/14 - SQL - II.php:3:$y = mysql_real_escape_string($x)
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/14 - SQL - II.php:2:$x = $_POST['x']
+
+DEPENDENCIES:
+
+-----------------------------------
+Vulnerabilities: 2
+Seconds: 0.0058431625366211
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/10 - Object - II.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:52:02 - 1/20
+Progress @ 02:52:02 - 5/20
+Progress @ 02:52:02 - 7/20
+Progress @ 02:52:02 - 8/20
+Progress @ 02:52:02 - 11/20
+Progress @ 02:52:02 - 13/20
+Progress @ 02:52:02 - 14/20
+Progress @ 02:52:02 - 15/20
+Progress @ 02:52:02 - 18/20
+Progress @ 02:52:02 - 20/20
+----------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/10 - Object - II.php LINE 17
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/10 - Object - II.php:17:echo $test->sanitizer1($_GET['1'])
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/10 - Object - II.php:10:return TestClass::sanitizerCommandInjection($arg)
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/10 - Object - II.php:4:return escapeshellarg($arg)
+
+DEPENDENCIES:
+
+-----------------------------------
+Vulnerabilities: 1
+Seconds: 0.01031494140625
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/7 - FunctionBehindCall.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:52:02 - 1/13
+Progress @ 02:52:02 - 2/13
+Progress @ 02:52:02 - 4/13
+Progress @ 02:52:02 - 6/13
+Progress @ 02:52:02 - 7/13
+Progress @ 02:52:02 - 10/13
+Progress @ 02:52:02 - 13/13
+----------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/7 - FunctionBehindCall.php LINE 6
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/7 - FunctionBehindCall.php:6:echo $arg
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/7 - FunctionBehindCall.php:3:testFunc($a)
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/7 - FunctionBehindCall.php:2:$a = $_GET['a']
+
+DEPENDENCIES:
+
+-----------------------------------
+Vulnerabilities: 1
+Seconds: 0.0045130252838135
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/16 - UserSanitizeDefinedFunction.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:52:02 - 1/21
+Progress @ 02:52:02 - 2/21
+Progress @ 02:52:02 - 5/21
+Progress @ 02:52:02 - 7/21
+Progress @ 02:52:02 - 8/21
+Progress @ 02:52:02 - 9/21
+Progress @ 02:52:02 - 12/21
+Progress @ 02:52:02 - 14/21
+Progress @ 02:52:02 - 15/21
+Progress @ 02:52:02 - 16/21
+Progress @ 02:52:02 - 19/21
+Progress @ 02:52:02 - 21/21
+----------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/16 - UserSanitizeDefinedFunction.php LINE 11
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/16 - UserSanitizeDefinedFunction.php:11:print NotSanitized($_GET['1'])
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/16 - UserSanitizeDefinedFunction.php:3:return $string
+
+DEPENDENCIES:
+
+-----------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/16 - UserSanitizeDefinedFunction.php LINE 13
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/16 - UserSanitizeDefinedFunction.php:13:print ProperSanitized($_GET['3'])
+/var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/16 - UserSanitizeDefinedFunction.php:9:return escapeshellcmd($string)
+
+DEPENDENCIES:
+
+-----------------------------------
+Vulnerabilities: 2
+Seconds: 0.0073449611663818
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/1 - Branch.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:52:02 - 1/30
+Progress @ 02:52:02 - 2/30
+Progress @ 02:52:02 - 4/30
+Progress @ 02:52:02 - 6/30
+Progress @ 02:52:02 - 7/30
+Progress @ 02:52:02 - 8/30
+Progress @ 02:52:02 - 10/30
+Progress @ 02:52:02 - 12/30
+Progress @ 02:52:02 - 13/30
+Progress @ 02:52:02 - 15/30
+Progress @ 02:52:02 - 16/30
+Progress @ 02:52:02 - 18/30
+Progress @ 02:52:02 - 21/30
+Progress @ 02:52:02 - 18/30
+Progress @ 02:52:02 - 21/30
+Progress @ 02:52:02 - 22/30
+Progress @ 02:52:02 - 23/30
+Progress @ 02:52:02 - 25/30
+Progress @ 02:52:02 - 26/30
+Progress @ 02:52:02 - 27/30
+Progress @ 02:52:02 - 28/30
+Progress @ 02:52:02 - 29/30
+Progress @ 02:52:02 - 30/30
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0074958801269531
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/15 - SQLI.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:52:02 - 1/46
+Progress @ 02:52:02 - 3/46
+Progress @ 02:52:02 - 6/46
+Progress @ 02:52:02 - 8/46
+Progress @ 02:52:02 - 10/46
+Progress @ 02:52:02 - 12/46
+Progress @ 02:52:02 - 13/46
+Progress @ 02:52:02 - 15/46
+Progress @ 02:52:02 - 17/46
+Progress @ 02:52:02 - 18/46
+Progress @ 02:52:02 - 20/46
+Progress @ 02:52:02 - 23/46
+Progress @ 02:52:02 - 25/46
+Progress @ 02:52:02 - 26/46
+Progress @ 02:52:02 - 29/46
+Progress @ 02:52:02 - 31/46
+Progress @ 02:52:02 - 32/46
+Progress @ 02:52:02 - 33/46
+Progress @ 02:52:02 - 36/46
+Progress @ 02:52:02 - 38/46
+Progress @ 02:52:02 - 39/46
+Progress @ 02:52:02 - 40/46
+Progress @ 02:52:02 - 43/46
+Progress @ 02:52:02 - 45/46
+Progress @ 02:52:02 - 46/46
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0080561637878418
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/5 - Eval.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:52:02 - 1/13
+Progress @ 02:52:02 - 2/13
+Progress @ 02:52:02 - 4/13
+Progress @ 02:52:02 - 5/13
+Progress @ 02:52:02 - 8/13
+Progress @ 02:52:02 - 11/13
+Progress @ 02:52:02 - 13/13
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0036628246307373
+----------------------------------
+
+
+
+-------------------------Processing file /var/www/GuruWebScanner/corpus/grVulnScanner/TestCases/3 - CommandInjection.php-------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:52:02 - 1/24
+Progress @ 02:52:02 - 4/24
+Progress @ 02:52:02 - 6/24
+Progress @ 02:52:02 - 7/24
+Progress @ 02:52:02 - 10/24
+Progress @ 02:52:02 - 13/24
+Progress @ 02:52:02 - 15/24
+Progress @ 02:52:02 - 16/24
+Progress @ 02:52:02 - 19/24
+Progress @ 02:52:02 - 22/24
+Progress @ 02:52:02 - 24/24
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0057470798492432
+----------------------------------
+

@@ -1,0 +1,219 @@
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:51:14 - 1/9
+Progress @ 02:51:14 - 3/9
+Progress @ 02:51:14 - 4/9
+Progress @ 02:51:14 - 6/9
+Progress @ 02:51:14 - 7/9
+Progress @ 02:51:14 - 9/9
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0037400722503662
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:51:15 - 2/161
+Progress @ 02:51:15 - 4/161
+Progress @ 02:51:15 - 8/161
+Progress @ 02:51:15 - 10/161
+Progress @ 02:51:15 - 12/161
+Progress @ 02:51:15 - 22/161
+Progress @ 02:51:15 - 24/161
+Progress @ 02:51:15 - 26/161
+Progress @ 02:51:15 - 24/161
+Progress @ 02:51:15 - 26/161
+Progress @ 02:51:15 - 32/161
+Progress @ 02:51:15 - 34/161
+Progress @ 02:51:15 - 36/161
+Progress @ 02:51:15 - 34/161
+Progress @ 02:51:15 - 36/161
+Progress @ 02:51:15 - 38/161
+Progress @ 02:51:15 - 40/161
+Progress @ 02:51:15 - 46/161
+Progress @ 02:51:15 - 52/161
+Progress @ 02:51:15 - 54/161
+Progress @ 02:51:15 - 46/161
+Progress @ 02:51:15 - 52/161
+Progress @ 02:51:15 - 54/161
+Progress @ 02:51:15 - 46/161
+Progress @ 02:51:15 - 52/161
+Progress @ 02:51:15 - 54/161
+Progress @ 02:51:15 - 46/161
+Progress @ 02:51:15 - 52/161
+Progress @ 02:51:15 - 54/161
+Progress @ 02:51:15 - 60/161
+Progress @ 02:51:15 - 62/161
+Progress @ 02:51:15 - 60/161
+Progress @ 02:51:15 - 62/161
+Progress @ 02:51:15 - 68/161
+Progress @ 02:51:15 - 70/161
+Progress @ 02:51:15 - 72/161
+Progress @ 02:51:15 - 68/161
+Progress @ 02:51:15 - 70/161
+Progress @ 02:51:15 - 72/161
+Progress @ 02:51:15 - 78/161
+Progress @ 02:51:15 - 80/161
+Progress @ 02:51:15 - 82/161
+Progress @ 02:51:15 - 88/161
+Progress @ 02:51:15 - 90/161
+Progress @ 02:51:15 - 94/161
+Progress @ 02:51:15 - 96/161
+Progress @ 02:51:15 - 98/161
+Progress @ 02:51:15 - 100/161
+Progress @ 02:51:15 - 102/161
+Progress @ 02:51:15 - 104/161
+Progress @ 02:51:15 - 106/161
+Progress @ 02:51:15 - 108/161
+Progress @ 02:51:15 - 110/161
+Progress @ 02:51:15 - 112/161
+Progress @ 02:51:15 - 116/161
+Progress @ 02:51:15 - 120/161
+Progress @ 02:51:15 - 124/161
+Progress @ 02:51:15 - 126/161
+Progress @ 02:51:15 - 138/161
+Progress @ 02:51:15 - 140/161
+Progress @ 02:51:15 - 144/161
+Progress @ 02:51:15 - 146/161
+----------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signIn.php LINE 66
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signIn.php:66:echo ((((('<div class="alert alert-info col-md-6 col-md-offset-3" role="alert">
+                        <center>
+                            <strong>' . $username) . ' ::') . $row['fullname']) . ':: (') . $row['age']) . ' years old)</strong>
+                            <br>
+                            <strong>You must know that you don\'t have enough power to capture the flag!!!</strong>
+                        </center>
+                    </div>'
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signIn.php:45:$username = mysqli_real_escape_string($con, $_POST['username'])
+
+DEPENDENCIES:
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signIn.php:42:if (isset($_POST['username']) && isset($_POST['password']))
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signIn.php:48:if ($username != '' && $password != '')
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signIn.php:55:if (!empty($row['fullname']) && !empty($row['age']))
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signIn.php:65:else
+
+-----------------------------------
+Vulnerabilities: 1
+Seconds: 0.030987024307251
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:51:15 - 1/1
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0048649311065674
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:51:15 - 2/194
+Progress @ 02:51:15 - 4/194
+Progress @ 02:51:15 - 8/194
+Progress @ 02:51:15 - 10/194
+Progress @ 02:51:15 - 12/194
+Progress @ 02:51:15 - 22/194
+Progress @ 02:51:15 - 24/194
+Progress @ 02:51:15 - 26/194
+Progress @ 02:51:15 - 24/194
+Progress @ 02:51:15 - 26/194
+Progress @ 02:51:15 - 32/194
+Progress @ 02:51:15 - 34/194
+Progress @ 02:51:15 - 36/194
+Progress @ 02:51:15 - 34/194
+Progress @ 02:51:15 - 36/194
+Progress @ 02:51:15 - 42/194
+Progress @ 02:51:15 - 44/194
+Progress @ 02:51:15 - 46/194
+Progress @ 02:51:15 - 44/194
+Progress @ 02:51:15 - 46/194
+Progress @ 02:51:15 - 52/194
+Progress @ 02:51:15 - 54/194
+Progress @ 02:51:15 - 56/194
+Progress @ 02:51:15 - 54/194
+Progress @ 02:51:15 - 56/194
+Progress @ 02:51:15 - 62/194
+Progress @ 02:51:15 - 68/194
+Progress @ 02:51:15 - 70/194
+Progress @ 02:51:15 - 68/194
+Progress @ 02:51:15 - 70/194
+Progress @ 02:51:15 - 62/194
+Progress @ 02:51:15 - 68/194
+Progress @ 02:51:15 - 70/194
+Progress @ 02:51:15 - 68/194
+Progress @ 02:51:15 - 70/194
+Progress @ 02:51:15 - 74/194
+Progress @ 02:51:15 - 76/194
+Progress @ 02:51:15 - 80/194
+Progress @ 02:51:15 - 82/194
+Progress @ 02:51:15 - 88/194
+Progress @ 02:51:15 - 90/194
+Progress @ 02:51:15 - 88/194
+Progress @ 02:51:15 - 90/194
+Progress @ 02:51:15 - 92/194
+Progress @ 02:51:15 - 98/194
+Progress @ 02:51:15 - 100/194
+Progress @ 02:51:15 - 102/194
+Progress @ 02:51:15 - 104/194
+Progress @ 02:51:15 - 98/194
+Progress @ 02:51:15 - 100/194
+Progress @ 02:51:15 - 102/194
+Progress @ 02:51:15 - 104/194
+Progress @ 02:51:15 - 106/194
+Progress @ 02:51:15 - 108/194
+Progress @ 02:51:15 - 114/194
+Progress @ 02:51:15 - 116/194
+Progress @ 02:51:15 - 124/194
+Progress @ 02:51:15 - 126/194
+Progress @ 02:51:15 - 128/194
+Progress @ 02:51:15 - 130/194
+Progress @ 02:51:15 - 134/194
+Progress @ 02:51:15 - 136/194
+Progress @ 02:51:15 - 138/194
+Progress @ 02:51:15 - 144/194
+Progress @ 02:51:15 - 146/194
+Progress @ 02:51:15 - 154/194
+Progress @ 02:51:15 - 158/194
+Progress @ 02:51:15 - 160/194
+Progress @ 02:51:15 - 176/194
+----------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php LINE 71
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php:71:echo ((('<div class="alert alert-success col-md-5 col-md-offset-3" role="alert">
+								  	<center>
+								  		<strong>Success!</strong>
+								  	 	 \'' . $username) . '\' (') . $row['fullname']) . ')
+								  	 	 <br>
+								  	 	 You can now login to enjoy our service now!!!
+								  	</center>
+								  </div>'
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php:57:$username = mysqli_real_escape_string($con, $_POST['username'])
+
+DEPENDENCIES:
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php:52:if (((isset($_POST['username']) && isset($_POST['password'])) && isset($_POST['fullname'])) && isset($_POST['age']))
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php:63:if ((($username != '' && $password != '') && $fullname != '') && $age != '')
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php:65:if (mysqli_num_rows($check) == 0)
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest10/Web300/MyCharm/signUp.php:69:if (mysqli_num_rows($query) != 0)
+
+-----------------------------------
+Vulnerabilities: 1
+Seconds: 0.03600811958313
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:51:15 - 1/2
+Progress @ 02:51:15 - 2/2
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0074429512023926
+----------------------------------

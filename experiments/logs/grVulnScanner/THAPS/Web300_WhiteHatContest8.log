@@ -1,0 +1,546 @@
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:56 - 1/2
+Progress @ 02:50:56 - 2/2
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0038521289825439
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:56 - 1/1
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.002838134765625
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:56 - 2/126
+Progress @ 02:50:56 - 4/126
+Progress @ 02:50:56 - 8/126
+Progress @ 02:50:56 - 14/126
+Progress @ 02:50:56 - 16/126
+Progress @ 02:50:56 - 20/126
+Progress @ 02:50:56 - 22/126
+Progress @ 02:50:56 - 24/126
+Progress @ 02:50:56 - 26/126
+Progress @ 02:50:56 - 28/126
+Progress @ 02:50:56 - 32/126
+Progress @ 02:50:56 - 34/126
+Progress @ 02:50:56 - 40/126
+Progress @ 02:50:56 - 46/126
+Progress @ 02:50:56 - 48/126
+Progress @ 02:50:56 - 50/126
+Progress @ 02:50:56 - 56/126
+Progress @ 02:50:56 - 62/126
+Progress @ 02:50:56 - 64/126
+Progress @ 02:50:56 - 68/126
+Progress @ 02:50:56 - 74/126
+Progress @ 02:50:56 - 76/126
+Progress @ 02:50:56 - 80/126
+Progress @ 02:50:56 - 82/126
+Progress @ 02:50:56 - 92/126
+Progress @ 02:50:56 - 94/126
+Progress @ 02:50:56 - 96/126
+Progress @ 02:50:56 - 98/126
+Progress @ 02:50:56 - 102/126
+Progress @ 02:50:56 - 106/126
+Progress @ 02:50:56 - 108/126
+Progress @ 02:50:56 - 110/126
+Progress @ 02:50:56 - 124/126
+Progress @ 02:50:56 - 112/126
+Progress @ 02:50:56 - 114/126
+Progress @ 02:50:56 - 116/126
+Progress @ 02:50:56 - 118/126
+Progress @ 02:50:56 - 120/126
+Progress @ 02:50:56 - 122/126
+Progress @ 02:50:56 - 124/126
+Progress @ 02:50:56 - 126/126
+----------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest8/images.php LINE 41
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest8/images.php:41:echo ((('</ol>
+							<div class="carousel-inner">
+								<div class="item active">
+									<img src="' . $imgList[0]) . '" alt="..." class="img-responsive"">
+									<div class="carousel-caption">
+										<h3>Picure in ') . $_GET['album']) . ' album.</h3>
+										<p>Have a fun time!</p>
+									</div>
+								</div>'
+
+DEPENDENCIES:
+
+-----------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest8/images.php LINE 52
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest8/images.php:52:echo ((('<div class="item">
+										<img src="' . $imgLink) . '" alt="..." class="img-responsive"">
+										<div class="carousel-caption">
+											<h3>Picure in ') . $_GET['album']) . ' album.</h3>
+											<p>Have a fun time!</p>
+										</div>
+									</div>'
+
+DEPENDENCIES:
+
+-----------------------------------
+Vulnerabilities: 2
+Seconds: 0.017264127731323
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:56 - 1/2
+Progress @ 02:50:56 - 2/2
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0025589466094971
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:56 - 1/1
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0020427703857422
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.00014901161193848
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.00010800361633301
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:56 - 2/155
+Progress @ 02:50:56 - 4/155
+Progress @ 02:50:56 - 6/155
+Progress @ 02:50:56 - 10/155
+Progress @ 02:50:56 - 12/155
+Progress @ 02:50:56 - 18/155
+Progress @ 02:50:56 - 20/155
+Progress @ 02:50:56 - 22/155
+Progress @ 02:50:56 - 24/155
+Progress @ 02:50:56 - 26/155
+Progress @ 02:50:56 - 28/155
+Progress @ 02:50:56 - 34/155
+Progress @ 02:50:56 - 36/155
+Progress @ 02:50:56 - 38/155
+Progress @ 02:50:56 - 40/155
+Progress @ 02:50:56 - 34/155
+Progress @ 02:50:56 - 36/155
+Progress @ 02:50:56 - 38/155
+Progress @ 02:50:56 - 40/155
+Progress @ 02:50:56 - 42/155
+Progress @ 02:50:56 - 44/155
+Progress @ 02:50:56 - 50/155
+Progress @ 02:50:56 - 52/155
+Progress @ 02:50:56 - 54/155
+Progress @ 02:50:56 - 58/155
+Progress @ 02:50:56 - 50/155
+Progress @ 02:50:56 - 52/155
+Progress @ 02:50:56 - 54/155
+Progress @ 02:50:56 - 58/155
+Progress @ 02:50:56 - 60/155
+Progress @ 02:50:56 - 62/155
+Progress @ 02:50:56 - 64/155
+Progress @ 02:50:56 - 68/155
+Progress @ 02:50:56 - 70/155
+Progress @ 02:50:56 - 76/155
+Progress @ 02:50:56 - 78/155
+Progress @ 02:50:56 - 80/155
+Progress @ 02:50:56 - 76/155
+Progress @ 02:50:56 - 78/155
+Progress @ 02:50:56 - 80/155
+Progress @ 02:50:56 - 82/155
+Progress @ 02:50:56 - 88/155
+Progress @ 02:50:56 - 90/155
+Progress @ 02:50:56 - 92/155
+Progress @ 02:50:56 - 94/155
+Progress @ 02:50:56 - 100/155
+Progress @ 02:50:56 - 102/155
+Progress @ 02:50:56 - 104/155
+Progress @ 02:50:56 - 110/155
+Progress @ 02:50:56 - 112/155
+Progress @ 02:50:56 - 118/155
+Progress @ 02:50:56 - 124/155
+Progress @ 02:50:56 - 128/155
+Progress @ 02:50:56 - 130/155
+Progress @ 02:50:56 - 132/155
+Progress @ 02:50:56 - 142/155
+Progress @ 02:50:56 - 146/155
+Progress @ 02:50:56 - 148/155
+Progress @ 02:50:56 - 150/155
+Progress @ 02:50:56 - 152/155
+Progress @ 02:50:56 - 154/155
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.0605628490448
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.025331020355225
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:57 - 1/20
+Progress @ 02:50:57 - 3/20
+Progress @ 02:50:57 - 4/20
+Progress @ 02:50:57 - 6/20
+Progress @ 02:50:57 - 9/20
+Progress @ 02:50:57 - 12/20
+Progress @ 02:50:57 - 15/20
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1205
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   5. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1719
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   7. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   8. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1200
+PHP   9. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  10. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP  11. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1200
+PHP  12. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  13. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP  14. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:818
+PHP  15. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  16. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1206
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   5. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1719
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   7. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   8. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1200
+PHP   9. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  10. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP  11. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1200
+PHP  12. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  13. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP  14. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:818
+PHP  15. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  16. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1207
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   5. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1719
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   7. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   8. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1200
+PHP   9. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  10. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP  11. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1200
+PHP  12. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  13. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP  14. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:818
+PHP  15. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  16. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+Progress @ 02:50:57 - 18/20
+Progress @ 02:50:57 - 20/20
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.00534987449646
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:57 - 2/130
+Progress @ 02:50:57 - 4/130
+Progress @ 02:50:57 - 10/130
+Progress @ 02:50:57 - 16/130
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1205
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   5. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1719
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   7. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   8. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1200
+PHP   9. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  10. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP  11. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1200
+PHP  12. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  13. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP  14. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:818
+PHP  15. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  16. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1206
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   5. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1719
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   7. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   8. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1200
+PHP   9. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  10. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP  11. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1200
+PHP  12. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  13. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP  14. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:818
+PHP  15. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  16. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP Notice:  Trying to get property of non-object in /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php on line 1207
+PHP Stack trace:
+PHP   1. {main}() /var/www/THAPS/scanner/Main.php:0
+PHP   2. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Main.php:230
+PHP   3. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   4. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   5. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1719
+PHP   6. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP   7. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP   8. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1200
+PHP   9. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  10. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP  11. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:1200
+PHP  12. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  13. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+PHP  14. PHPParser_NodeTraverser->traverse() /var/www/THAPS/scanner/Lib/VulnerabilityScanner.php:818
+PHP  15. PHPParser_NodeTraverser->traverseArray() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:40
+PHP  16. BodyVisitor->enterNode() /var/www/THAPS/scanner/PHP-Parser/lib/PHPParser/NodeTraverser.php:91
+Progress @ 02:50:57 - 22/130
+Progress @ 02:50:57 - 24/130
+Progress @ 02:50:57 - 26/130
+Progress @ 02:50:57 - 30/130
+Progress @ 02:50:57 - 32/130
+Progress @ 02:50:57 - 36/130
+Progress @ 02:50:57 - 38/130
+Progress @ 02:50:57 - 40/130
+Progress @ 02:50:57 - 42/130
+Progress @ 02:50:57 - 44/130
+Progress @ 02:50:57 - 46/130
+Progress @ 02:50:57 - 52/130
+Progress @ 02:50:57 - 54/130
+Progress @ 02:50:57 - 56/130
+Progress @ 02:50:57 - 58/130
+Progress @ 02:50:57 - 52/130
+Progress @ 02:50:57 - 54/130
+Progress @ 02:50:57 - 56/130
+Progress @ 02:50:57 - 58/130
+Progress @ 02:50:57 - 60/130
+Progress @ 02:50:57 - 66/130
+Progress @ 02:50:57 - 72/130
+Progress @ 02:50:57 - 78/130
+Progress @ 02:50:57 - 80/130
+Progress @ 02:50:57 - 78/130
+Progress @ 02:50:57 - 80/130
+Progress @ 02:50:57 - 82/130
+Progress @ 02:50:57 - 86/130
+Progress @ 02:50:57 - 88/130
+Progress @ 02:50:57 - 90/130
+Progress @ 02:50:57 - 92/130
+Progress @ 02:50:57 - 94/130
+Progress @ 02:50:57 - 96/130
+Progress @ 02:50:57 - 98/130
+Progress @ 02:50:57 - 100/130
+Progress @ 02:50:57 - 102/130
+Progress @ 02:50:57 - 104/130
+Progress @ 02:50:57 - 110/130
+Progress @ 02:50:57 - 112/130
+Progress @ 02:50:57 - 116/130
+Progress @ 02:50:57 - 118/130
+Progress @ 02:50:57 - 126/130
+Progress @ 02:50:57 - 130/130
+----------------------------------
+XSS VULNERABILITY FOUND AT echo IN FILE /var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest8/adminwww/register.php LINE 47
+
+FLOWPATH:
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest8/adminwww/register.php:47:echo ((('<div class="alert alert-success col-md-8 col-md-offset-2" role="alert">
+					  	<center>
+					  		<strong>Success!</strong>
+					  	 	 Your username is: \'' . $username) . '\', your password is: \'') . $admin_password) . '\', meet me to active your account before using.
+					  	</center>
+					  </div>'
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest8/adminwww/register.php:41:$username = add_addition_noti($username)
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest8/adminwww/register.php:28:$username = $_POST['username']
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest8/adminwww/validate.php:33:return $input
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest8/adminwww/validate.php:30:$input = str_replace($char, $char . '$', $input)
+
+DEPENDENCIES:
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest8/adminwww/register.php:23:if (isset($_POST['username']))
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest8/adminwww/register.php:38:else
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest8/adminwww/register.php:45:if (mysqli_num_rows($check) == 0)
+/var/www/GuruWebScanner/corpus/grVulnScanner/WhitehatContest/Web300_WhiteHatContest8/adminwww/validate.php:29:if (strpos($input, $char) !== false)
+
+-----------------------------------
+Vulnerabilities: 1
+Seconds: 0.058807134628296
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:57 - 1/79
+Progress @ 02:50:57 - 2/79
+Progress @ 02:50:57 - 4/79
+Progress @ 02:50:57 - 5/79
+Progress @ 02:50:57 - 7/79
+Progress @ 02:50:57 - 8/79
+Progress @ 02:50:57 - 10/79
+Progress @ 02:50:57 - 11/79
+Progress @ 02:50:57 - 13/79
+Progress @ 02:50:57 - 16/79
+Progress @ 02:50:57 - 18/79
+Progress @ 02:50:57 - 20/79
+Progress @ 02:50:57 - 22/79
+Progress @ 02:50:57 - 23/79
+Progress @ 02:50:57 - 25/79
+Progress @ 02:50:57 - 28/79
+Progress @ 02:50:57 - 30/79
+Progress @ 02:50:57 - 31/79
+Progress @ 02:50:57 - 32/79
+Progress @ 02:50:57 - 33/79
+Progress @ 02:50:57 - 35/79
+Progress @ 02:50:57 - 36/79
+Progress @ 02:50:57 - 38/79
+Progress @ 02:50:57 - 41/79
+Progress @ 02:50:57 - 42/79
+Progress @ 02:50:57 - 43/79
+Progress @ 02:50:57 - 44/79
+Progress @ 02:50:57 - 45/79
+Progress @ 02:50:57 - 46/79
+Progress @ 02:50:57 - 47/79
+Progress @ 02:50:57 - 49/79
+Progress @ 02:50:57 - 50/79
+Progress @ 02:50:57 - 51/79
+Progress @ 02:50:57 - 52/79
+Progress @ 02:50:57 - 54/79
+Progress @ 02:50:57 - 55/79
+Progress @ 02:50:57 - 56/79
+Progress @ 02:50:57 - 57/79
+Progress @ 02:50:57 - 58/79
+Progress @ 02:50:57 - 59/79
+Progress @ 02:50:57 - 60/79
+Progress @ 02:50:57 - 61/79
+Progress @ 02:50:57 - 62/79
+Progress @ 02:50:57 - 63/79
+Progress @ 02:50:57 - 64/79
+Progress @ 02:50:57 - 65/79
+Progress @ 02:50:57 - 66/79
+Progress @ 02:50:57 - 67/79
+Progress @ 02:50:57 - 69/79
+Progress @ 02:50:57 - 70/79
+Progress @ 02:50:57 - 71/79
+Progress @ 02:50:57 - 73/79
+Progress @ 02:50:57 - 74/79
+Progress @ 02:50:57 - 75/79
+Progress @ 02:50:57 - 76/79
+Progress @ 02:50:57 - 77/79
+Progress @ 02:50:57 - 78/79
+Progress @ 02:50:57 - 79/79
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.013534069061279
+----------------------------------
+Includes done
+Classes done
+Functions done
+Preprocessing done
+Progress @ 02:50:57 - 1/97
+Progress @ 02:50:57 - 2/97
+Progress @ 02:50:57 - 4/97
+Progress @ 02:50:57 - 5/97
+Progress @ 02:50:57 - 7/97
+Progress @ 02:50:57 - 8/97
+Progress @ 02:50:57 - 10/97
+Progress @ 02:50:57 - 11/97
+Progress @ 02:50:57 - 12/97
+Progress @ 02:50:57 - 14/97
+Progress @ 02:50:57 - 17/97
+Progress @ 02:50:57 - 19/97
+Progress @ 02:50:57 - 21/97
+Progress @ 02:50:57 - 23/97
+Progress @ 02:50:57 - 24/97
+Progress @ 02:50:57 - 25/97
+Progress @ 02:50:57 - 26/97
+Progress @ 02:50:57 - 28/97
+Progress @ 02:50:57 - 31/97
+Progress @ 02:50:57 - 33/97
+Progress @ 02:50:57 - 34/97
+Progress @ 02:50:57 - 36/97
+Progress @ 02:50:57 - 37/97
+Progress @ 02:50:57 - 44/97
+Progress @ 02:50:57 - 47/97
+Progress @ 02:50:57 - 48/97
+Progress @ 02:50:57 - 49/97
+Progress @ 02:50:57 - 51/97
+Progress @ 02:50:57 - 52/97
+Progress @ 02:50:57 - 95/97
+Progress @ 02:50:57 - 53/97
+Progress @ 02:50:57 - 54/97
+Progress @ 02:50:57 - 55/97
+Progress @ 02:50:57 - 56/97
+Progress @ 02:50:57 - 61/97
+Progress @ 02:50:57 - 62/97
+Progress @ 02:50:57 - 63/97
+Progress @ 02:50:57 - 64/97
+Progress @ 02:50:57 - 65/97
+Progress @ 02:50:57 - 66/97
+Progress @ 02:50:57 - 67/97
+Progress @ 02:50:57 - 68/97
+Progress @ 02:50:57 - 69/97
+Progress @ 02:50:57 - 71/97
+Progress @ 02:50:57 - 72/97
+Progress @ 02:50:57 - 73/97
+Progress @ 02:50:57 - 75/97
+Progress @ 02:50:57 - 76/97
+Progress @ 02:50:57 - 77/97
+Progress @ 02:50:57 - 79/97
+Progress @ 02:50:57 - 80/97
+Progress @ 02:50:57 - 81/97
+Progress @ 02:50:57 - 82/97
+Progress @ 02:50:57 - 83/97
+Progress @ 02:50:57 - 84/97
+Progress @ 02:50:57 - 85/97
+Progress @ 02:50:57 - 86/97
+Progress @ 02:50:57 - 93/97
+Progress @ 02:50:57 - 95/97
+Progress @ 02:50:57 - 96/97
+Progress @ 02:50:57 - 97/97
+----------------------------------
+Vulnerabilities: 0
+Seconds: 0.014098882675171
+----------------------------------
