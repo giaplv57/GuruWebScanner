@@ -1,0 +1,20 @@
+{% spaceless %}
+<form action="#">
+ <div class="episode_downloads">
+    {% if podcast.setting("tracking", "mode") in ["ptm", "ptm_analytics"] %}
+        <input type="hidden" name="ptm_source" value="download" />
+        <input type="hidden" name="ptm_context" value="select-button" />
+    {% endif %}
+    <select name="download_media_file">
+    {% for file in episode.files %}
+        {% set asset = file.asset %}
+        {% if asset.downloadable %}
+            <option value="{{ file.id }}" data-raw-url="{{ file.publicUrl("download", "select-show") }}">{{ asset.title }} [{{ file.size|formatBytes }}]</option>
+        {% endif %}
+    {% endfor %}
+    </select>
+    <button class="podlove-download-primary">Download</button>
+    <button class="podlove-download-secondary">Show URL</button>
+ </div>
+</form>
+{% endspaceless %}

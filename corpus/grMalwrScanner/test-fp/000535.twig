@@ -1,0 +1,20 @@
+<ul class="podcast_services">
+{% for service in podcast.services({category: "donation"}) %}
+	<li>
+    	<a href="{{ service.profileUrl }}" title="{{ service.description }}">
+			{{
+				service.image.html({
+					width: 16,
+					alt: service.title ~ " Icon"
+				}) 
+			}} {{ service.title }}
+        </a>
+    </li>
+{% endfor %}
+</ul>
+
+<style>
+.podcast_services li {
+	list-style: none;
+}
+</style>

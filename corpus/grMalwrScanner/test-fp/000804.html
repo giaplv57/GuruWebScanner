@@ -1,0 +1,17 @@
+<div class="taxonomy-drilldown-lists">
+	{{#taxonomy}}
+	<div id="terms-{{taxonomy}}">
+		<h4>
+			{{title}}
+			{{#clear}} <a href="{{url}}" title="{{title}}">(-)</a>{{/clear}}
+		</h4>
+		<ul>
+			{{{term-list}}}
+		</ul>
+	</div>
+	{{/taxonomy}}
+
+	<p>
+		<a class="taxonomy-drilldown-reset" href="{{reset-url}}">{{reset-text}}</a>
+	</p>
+</div>

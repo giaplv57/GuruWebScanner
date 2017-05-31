@@ -1,0 +1,15 @@
+<table class="podlove-contributors-table">
+	<tbody>
+		{% for contributor in podcast.contributors({group: option.group, role: option.role, scope: 'podcast'}) %}
+			{% if contributor.visible %}
+				{% include '@contributors/_contributor-table-row.twig' %}
+			{% endif %}
+		{% endfor %}
+	</tbody>
+</table>
+
+{% if option.flattr == "yes" %}
+	{% include '@contributors/_contributor-table-flattr.twig' %}
+{% endif %}
+
+{% include '@contributors/_contributor-table-css.twig' %}

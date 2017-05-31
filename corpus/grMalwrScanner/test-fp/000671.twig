@@ -1,0 +1,66 @@
+<tr>
+	{% if option.avatars == "yes" %}
+		<td class="avatar_cell">
+			{{ contributor.image.html({width: size|default(50), height: size|default(50), class: "avatar avatar-" ~ size|default(50) ~  " photo", alt: "avatar" }) }}
+		</td>
+	{% endif %}
+	<td class="title_cell">
+		{{ contributor.name }}
+		{% if contributor.comment %}
+			<br><em>{{ contributor.comment }}</em>
+		{% endif %}
+	</td>
+	{% if option.groups == "yes" %}
+		<td class="group_cell">
+			{{ contributor.group }}
+		</td>
+	{% endif %}
+	{% if option.roles == "yes" %}
+		<td class="role_cell">
+			{{ contributor.role }}
+		</td>
+	{% endif %}
+	<td class="social_cell">
+		{% for service in contributor.services({category: "social"}) %}
+			<a target="_blank" title="{{ service.title }}" href="{{ service.profileUrl }}">
+				{{
+					service.image.html({
+						width: 20, 
+						class: "podlove-contributor-button",
+						alt: service.title ~ " Icon"
+					}) 
+				}}
+			</a>
+		{% endfor %}
+	</td>
+	{% if option.donations == "yes" %}
+		<td class="donation_cell">
+		{% for service in contributor.services({category: "donation"}) %}
+			<a target="_blank" title="{{ service.title }}" href="{{ service.profileUrl }}">
+				{{
+					service.image.html({
+						width: 20, 
+						class: "podlove-contributor-button",
+						alt: service.title ~ " Icon"
+					}) 
+				}}
+			</a>
+		{% endfor %}
+		</td>
+	{% endif %}
+	{% if option.flattr == "yes" %}
+		<td class="flattr_cell">
+			{% if contributor.flattr %}
+				{% set cTitle = contributor.name ~ (episode ? " @ " ~ episode.title : "" ) %}
+				<a target="_blank"
+					class="FlattrButton"
+					style="display:none;"
+					title="Flattr {{ cTitle }}"
+					rel="flattr;uid:{{ contributor.flattr }};button:compact;popout:0"
+					href="{{ contributor.flattr_url }}">
+						{{ cTitle }}
+				</a>
+			{% endif %}
+		</td>
+	{% endif %}
+</tr>

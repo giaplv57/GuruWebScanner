@@ -1,0 +1,101 @@
+# Travis CI Configuration File
+
+# Tell Travis CI we're using PHP
+language: php
+
+# Setup a global environemnt and overide as needed
+env:
+  global:
+    - WP_TRAVISCI=phpunit
+
+cache:
+  - yarn: true
+  - apt: true
+
+# Next we define our matrix of additional build configurations to test against.
+# The versions listed above will automatically create our first configuration,
+# so it doesn't need to be re-defined below.
+
+# Test WP trunk/master and two latest versions on minimum (5.2).
+# Test WP latest two versions (4.5, 4.3) on most popular (5.5, 5.6).
+# Test WP latest stable (4.5) on other supported PHP (5.3, 5.4).
+# Test WP trunk/master on edge platforms (7.0, PHP nightly).
+
+# WP_VERSION specifies the tag to use. The way these tests are configured to run
+# requires at least WordPress 3.8. Specify "master" to test against SVN trunk.
+
+matrix:
+  include:
+  - env: WP_TRAVISCI="yarn lint"
+  - env: WP_TRAVISCI="yarn test-client"
+  - env: WP_TRAVISCI="yarn test-gui"
+  - php: "5.2"
+  - php: "5.3"
+  - php: "5.5"
+  - php: "5.6"
+  - php: "7.0"
+  - php: "7.1"
+
+  allow_failures:
+  - php: "7.1"
+#  - php: "nightly"
+
+# whitelist branches for the "push" build check.
+branches:
+  only:
+    - master
+    - master-stable
+    - /^branch-.*$/
+    - feature/settings-overhaul
+
+# Clones WordPress and configures our testing environment.
+before_script:
+    - phpenv config-rm xdebug.ini
+    - source ~/.nvm/nvm.sh && nvm install 5
+    - export PLUGIN_SLUG=$(basename $(pwd))
+    - source ~/.nvm/nvm.sh
+    - export PATH="$HOME/.composer/vendor/bin:$PATH" 
+    - |
+        if [[ ${TRAVIS_PHP_VERSION:0:2} == "7." ]]; then 
+            composer global require "phpunit/phpunit=5.7.*" 
+        elif [[ ${TRAVIS_PHP_VERSION:0:3} != "5.2" ]]; then 
+            composer global require "phpunit/phpunit=4.8.*" 
+        fi 
+    - nvm install 6
+    - nvm use 6
+    - ./tests/prepare-wordpress.sh
+    - mysql -e "set global wait_timeout = 3600;"
+
+script:
+    - ./tests/run-travis.sh
+
+sudo: false
+
+# We need notifications for successful builds
+
+notifications:
+   webhooks: https://betadownload.jetpack.me/travis.php
+   email:
+       - enej.bajgoric@automattic.com
+       - georgestephanis@automattic.com
+       - jeremy@automattic.com
+       - miguel@automattic.com
+       - rocco@automattic.com
+       - smart@automattic.com
+       - eric.binnion@automattic.com
+       - allendav@automattic.com
+       - beau@automattic.com
+       - kraft@automattic.com
+       # Encrypted Slack notification address.
+       - secure: "WQdTdmYuifSW0hiJGXpQGKystMASC50QvxHlyUL5SM3h5GP8aCgeSsHuXvKPe3dT3Pffhk0dSHBfDtdWFwSHW/upURhg0vs4dm7+nxxvGZiTPzKcuAIjgvCoqWM7teyda/XqFGNSnv+XsT34uoyPhhFgd45T3oS+QQ3aNCruFak="
+
+addons:
+  addons:
+  apt:
+    sources:
+      - sourceline: 'deb https://dl.yarnpkg.com/debian/ stable main'
+        key_url: 'https://dl.yarnpkg.com/debian/pubkey.gpg'
+    packages:
+      - yarn
+  code_climate:
+    repo_token: 683bd559e5214ca3b721092af177893f05765ba90d2589fcf35d7e85c6ea01e8

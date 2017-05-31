@@ -1,0 +1,12 @@
+<ul class="episode_download_list">
+	<li>Download:</li>
+	{% for file in episode.files %}
+	    {% set asset = file.asset %}
+	    {% if asset.downloadable %}
+			<li>
+				<a href="{{ file.publicUrl("download", "buttonlist") }}">{{ asset.title }}<span class="size">{{ file.size|formatBytes }}</span></a>
+			</li>
+	    {% endif %}
+	{% endfor %}
+</ul>
+<div style="clear: both"></div>

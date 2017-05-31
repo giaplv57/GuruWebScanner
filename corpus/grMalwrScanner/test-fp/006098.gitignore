@@ -1,0 +1,15 @@
+.DS_Store
+.tags*
+.wordpress_release
+podlove.sublime-*
+wprelease.yml
+composer.phar
+node_modules/*
+vendor/*
+test/config.yml
+bower_components
+doc
+.htaccess
+Mix.json
+mix-manifest.json
+*.log
